@@ -1,0 +1,870 @@
+/* Neo-Brutalist Landing Page Styles */
+/* CSS variables are defined in globals.css */
+
+/* =================================================================
+   TYPOGRAPHY
+   ================================================================= */
+
+.h1 {
+    font-weight: 800;
+    font-size: clamp(3rem, 6vw, 5rem); 
+    margin-bottom: 2rem; 
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--bleu-nuit);
+}
+
+.h3 {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--bleu-nuit);
+}
+
+/* =================================================================
+   TEXT STYLES
+   ================================================================= */
+
+.textLargeNarrative {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.trapBoxText {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.bentoIntro {
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.bentoText {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.stepTitle {
+    font-weight: 800;
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    color: var(--bleu-nuit);
+}
+
+/* =================================================================
+   LAYOUT UTILITIES
+   ================================================================= */
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.sectionPadding { 
+    padding: 6rem 0; 
+}
+
+.bgFumee {
+    background-color: var(--bleu-fumee);
+    border-top: var(--border-thick);
+    border-bottom: var(--border-thick);
+}
+
+.textCenter { 
+    text-align: center; 
+}
+
+.maxW800 { 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+/* =================================================================
+   BUTTONS
+   ================================================================= */
+
+.btnCta {
+    display: inline-block;
+    background-color: var(--bleu-nuit);
+    color: var(--white);
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 2px solid var(--bleu-nuit);
+    border-radius: 0px; 
+    transition: var(--transition);
+    cursor: pointer;
+    text-align: center;
+}
+
+.btnCta:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--bleu-charron);
+    background-color: var(--bleu-marine);
+}
+
+.btnCta.navSize {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    box-shadow: 3px 3px 0px var(--bleu-charron);
+}
+
+.btnCta.pageSize {
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    box-shadow: var(--shadow-rest);
+}
+
+/* =================================================================
+   NAVIGATION
+   ================================================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+    border-bottom: var(--border-thick);
+    padding: 1rem 0;
+    z-index: 1000;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navLinks { 
+    display: flex; 
+    gap: 2.5rem; 
+}
+
+.navLinks a, 
+.navLink {
+    text-decoration: none;
+    color: var(--bleu-nuit);
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navLinks a:hover, 
+.navLink:hover { 
+    text-decoration: underline; 
+    text-decoration-thickness: 2px; 
+}
+
+/* =================================================================
+   HERO SECTION
+   ================================================================= */
+
+.hero {
+    padding: 8rem 0 6rem 0;
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroSub { 
+    font-size: 1.5rem; 
+    max-width: 800px; 
+    margin-bottom: 2.5rem; 
+    font-weight: 400; 
+    color: var(--bleu-marine); 
+}
+
+.heroNote { 
+    font-size: 0.9rem; 
+    margin-top: 1rem; 
+    font-style: normal; 
+    color: var(--bleu-charron); 
+    opacity: 0.8; 
+}
+
+.heroCtaContainer {
+    margin-top: 2rem;
+}
+
+.trustLogos {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.trustLogosTitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--grey-light);
+    margin-bottom: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.logoGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.trustLogo {
+    height: 24px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%) contrast(1.2) brightness(1.05); 
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.trustLogo:hover {
+    opacity: 1;
+}
+
+/* =================================================================
+   CARD SYSTEMS
+   ================================================================= */
+
+.bentoCard {
+    background: var(--white);
+    border: var(--border-thick);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-rest);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+}
+
+.bentoCard:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--shadow-hover);
+    z-index: 2;
+    border-color: var(--bleu-marine);
+}
+
+.bentoCard h3 {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 4px solid var(--bleu-fumee);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.trapBox {
+    background: var(--white);
+    border: var(--border-thick);
+    padding: 2rem;
+    box-shadow: var(--shadow-rest);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: var(--transition);
+}
+
+.trapBox:hover { 
+    transform: translateY(-5px); 
+    box-shadow: var(--shadow-hover); 
+}
+
+.trapBox h3 {
+    background: var(--bleu-nuit);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    margin: -2rem -2rem 1.5rem -2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: var(--border-thick);
+}
+
+.trapBoxFooter {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+    color: #2c3e50;
+}
+
+/* =================================================================
+   LISTS & ICONS
+   ================================================================= */
+
+.checkList li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.125rem;
+    color: #2c3e50;
+}
+
+.checkList li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--bleu-nuit);
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+.checkListCross li::before {
+    content: "✗";
+}
+
+.checkListLarge {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+}
+
+.featureTitle {
+    font-weight: 800;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--bleu-nuit);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.featureTitle::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--bleu-nuit);
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+/* =================================================================
+   GRIDS
+   ================================================================= */
+
+.grid3 { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2rem; 
+    align-items: stretch; 
+}
+
+.grid2 { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem; 
+    align-items: stretch; 
+}
+
+/* =================================================================
+   MEDIA ELEMENTS
+   ================================================================= */
+
+.transformationImage {
+    height: 400px;
+    width: auto;
+    object-fit: contain;
+    border: 2px solid var(--bleu-nuit);
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+}
+
+.videoEmbed {
+    border: 2px solid var(--bleu-nuit);
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+}
+
+/* =================================================================
+   HORIZONTAL SCROLL SECTIONS
+   ================================================================= */
+
+.scrollSectionWrapper { 
+    position: relative; 
+    margin-bottom: 4rem; 
+}
+
+.scrollSectionTitle {
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 4px solid var(--bleu-nuit);
+}
+
+.scrollContainer {
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    padding: 1rem 0.5rem 2rem 0.5rem; 
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.scrollContainer::-webkit-scrollbar { 
+    display: none; 
+}
+
+.scrollItem { 
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.scrollItemDm { 
+    flex: 0 0 auto; 
+    display: flex;
+    align-items: center;
+}
+
+.scrollItemDm img {
+    width: auto;
+    height: 500px;
+    object-fit: contain;
+    border: 2px solid var(--bleu-nuit);
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+    display: block;
+}
+
+.scrollItemTransformation { 
+    flex: 0 0 auto; 
+    display: flex;
+    align-items: center;
+}
+
+.scrollBtn {
+    position: absolute;
+    top: 55%; 
+    transform: translateY(-50%);
+    background: var(--white);
+    border: var(--border-thick);
+    color: var(--bleu-nuit);
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+    box-shadow: var(--shadow-rest);
+    transition: all 0.2s ease;
+}
+
+.scrollBtn:hover {
+    background: var(--bleu-marine);
+    color: var(--white);
+    box-shadow: 2px 2px 0px var(--bleu-charron);
+}
+
+.scrollBtn.left { 
+    left: -1.5rem; 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: opacity 0.3s; 
+}
+
+.scrollBtn.right { 
+    right: -1.5rem; 
+}
+
+.scrollBtn.left.visible { 
+    opacity: 1; 
+    pointer-events: auto; 
+}
+
+.scrollBtn.right.hidden { 
+    opacity: 0; 
+    pointer-events: none; 
+}
+
+/* =================================================================
+   SYSTEM STEPS
+   ================================================================= */
+
+.systemStep {
+    border: var(--border-thick);
+    margin-bottom: 2rem;
+    background: var(--white);
+    box-shadow: var(--shadow-rest);
+}
+
+.systemStep.stage1 {
+    margin-bottom: 4rem;
+}
+
+.stepHeader {
+    background: var(--bleu-fumee);
+    color: var(--bleu-nuit);
+    padding: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-bottom: var(--border-thick);
+    letter-spacing: 0.05em;
+}
+
+.stepBody { 
+    padding: 2rem; 
+}
+
+.stepMeta { 
+    border-top: 1px solid #ddd; 
+    margin-top: 1.5rem; 
+    padding-top: 1rem; 
+}
+
+.stepMeta p { 
+    font-size: 0.875rem; 
+    color: var(--grey-light); 
+    font-weight: 500; 
+    margin-bottom: 0.25rem; 
+}
+
+.stepMeta strong { 
+    color: var(--bleu-charron); 
+}
+
+/* =================================================================
+   FAQ ACCORDION
+   ================================================================= */
+
+.faqContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.accordionItem {
+    border: var(--border-thick);
+    box-shadow: var(--shadow-rest);
+    background: var(--white);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.accordionItem:hover { 
+    transform: translate(-2px, -2px); 
+    box-shadow: 6px 6px 0px var(--bleu-nuit); 
+}
+
+.accordionHeader {
+    background-color: var(--bleu-fumee);
+    color: var(--bleu-nuit);
+    padding: 1.5rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordionHeader:hover { 
+    background-color: #DCE5EE; 
+}
+
+.accordionHeader::after { 
+    content: '+'; 
+    font-size: 1.5rem; 
+    font-weight: 400; 
+}
+
+.accordionHeader.active::after { 
+    content: '-'; 
+}
+
+.accordionContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: var(--white);
+    border-top: 0px solid transparent;
+}
+
+.accordionContent.active { 
+    border-top: var(--border-thick); 
+}
+
+.accordionBody { 
+    padding: 1.5rem; 
+}
+
+/* =================================================================
+   SPECIAL SECTION MODIFIERS
+   ================================================================= */
+
+.checklistIntroSection {
+    font-weight: 800;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.problemSectionIntro {
+    margin-bottom: 4rem;
+}
+
+.problemOutcome {
+    margin-top: 4rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.solutionCtaSection {
+    margin-top: 4rem;
+}
+
+.resultsIntro {
+    margin-bottom: 4rem;
+}
+
+.systemCtaSection {
+    margin-top: 3rem;
+}
+
+.faqSectionTitle {
+    margin-bottom: 3rem;
+}
+
+.ctaFinalButton {
+    margin-top: 2rem;
+}
+
+/* =================================================================
+   FOOTER
+   ================================================================= */
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: var(--border-thick);
+    font-weight: 700;
+    background: var(--white);
+}
+
+.footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* =================================================================
+   BOOK PAGE
+   ================================================================= */
+
+.bookH3Spacing {
+    margin-top: 3rem;
+}
+
+.calEmbed {
+    min-height: 600px;
+    width: 100%;
+    overflow: auto;
+    border: var(--border-thick);
+    box-shadow: var(--shadow-rest);
+    background: var(--white);
+    padding: 1rem;
+}
+
+.calIframe {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* =================================================================
+   RESPONSIVE: MOBILE & TABLET
+   ================================================================= */
+
+/* Tablet: 601px - 900px */
+@media (max-width: 900px) and (min-width: 601px) {
+    .navContainer {
+        padding: 0 1.5rem;
+    }
+    
+    .navLinks { 
+        gap: 1.5rem;
+    }
+    
+    .navLinks a, 
+    .navLink {
+        font-size: 0.95rem;
+    }
+    
+    .btnCta.navSize {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Hero Section - Match desktop proportion: similar padding top and bottom */
+    .hero {
+        padding: 6rem 0 6rem 0;
+        min-height: auto;
+    }
+}
+
+/* Mobile: 0 - 900px */
+@media (max-width: 900px) {
+    /* Typography */
+    .h1 {
+        font-size: clamp(3rem, 11vw, 4rem);
+        margin-bottom: 0.5rem;
+        line-height: 1;
+    }
+    
+    .h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    /* Layout */
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    .grid3, 
+    .grid2 { 
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Hero Section - Symmetric padding relative to trust logos */
+    .hero { 
+        min-height: auto; 
+        text-align: left; 
+    }
+
+    .heroSub {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .heroCtaContainer {
+        margin-top: 1.5rem;
+    }
+    
+    .trustLogos {
+        margin-top: 3rem;
+    }
+    
+    /* Cards */
+    .bentoCard, 
+    .trapBox { 
+        padding: 1.5rem;
+    }
+    
+    .bentoCard h3,
+    .trapBox h3 {
+        font-size: 1.2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .trapBox h3 {
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+    
+    /* Text wrapping */
+    .textLargeNarrative,
+    .trapBoxText,
+    .bentoIntro,
+    .bentoText {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    
+    /* Scroll controls */
+    .scrollBtn { 
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .scrollBtn.left { 
+        left: 0.5rem; 
+    }
+    
+    .scrollBtn.right { 
+        right: 0.5rem; 
+    }
+    
+    .scrollContainer { 
+        padding-bottom: 1rem; 
+    }
+    
+    /* Calendar */
+    .calEmbed { 
+        min-height: 500px; 
+    }
+}
+
+/* Mobile: 0 - 600px */
+@media (max-width: 600px) {
+    .navContainer { 
+        flex-direction: column; 
+        gap: 1.5rem; 
+        padding: 1rem; 
+    }
+    
+    .navLinks {
+        display: none;
+    }
+
+    .hero { 
+        padding: 5rem 0 5rem 0;
+    }
+
+    .sectionPadding {
+        padding: 5rem 0;
+    }
+
+    .h1 {
+        font-size: clamp(2.25rem, 9.5vw, 3.25rem);
+    }
+
+    .btnCta.pageSize {
+        padding: 1rem 1rem;
+        font-size: 0.95rem;
+        width: 100%;
+    }
+}
