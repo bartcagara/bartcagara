@@ -7,17 +7,25 @@ import styles from "@/components/home/homepage.module.css";
 export default function ContactPage() {
     const [status, setStatus] = useState<string | null>(null);
 
+    const encode = (data: any) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    }
+
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const form = e.currentTarget;
-        const formData = new FormData(form);
-        formData.append("form-name", "contact");
 
         try {
             const response = await fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                body: new URLSearchParams(formData as any).toString(),
+                body: encode({
+                    "form-name": "contact",
+                    name: (e.currentTarget.elements.namedItem('name') as HTMLInputElement).value,
+                    email: (e.currentTarget.elements.namedItem('email') as HTMLInputElement).value,
+                    message: (e.currentTarget.elements.namedItem('message') as HTMLTextAreaElement).value
+                })
             });
 
             if (response.ok) {
