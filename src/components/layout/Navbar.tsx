@@ -3,7 +3,7 @@
 import { memo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import styles from "./homepage.module.css";
+import styles from "../home/homepage.module.css";
 
 export const Navbar = memo(() => {
   const pathname = usePathname();

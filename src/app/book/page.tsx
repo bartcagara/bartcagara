@@ -1,4 +1,4 @@
-import { Navbar, Footer } from "@/components/home";
+import { Navbar, Footer } from "@/components/layout";
 import styles from "@/components/home/homepage.module.css";
 
 export default function BookPage() {
@@ -76,7 +76,7 @@ export default function BookPage() {
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
               Lock In Your Nutrition Blueprint
             </h2>
-            
+
             <div className={styles.calEmbed}>
               <iframe
                 src="https://app.cal.com/bartcagara/blueprint-call?layout=column_view"

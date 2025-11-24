@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import ErrorReporter from "@/components/ErrorReporter";
+import ErrorReporter from "@/components/ui/ErrorReporter";
 import Script from "next/script";
 import { PostHogProviderClient } from "./providers";
-import { PostHogPageView } from "@/components/PostHogPageView";
+import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -87,7 +87,7 @@ export default function RootLayout({
             <PostHogPageView />
           </Suspense>
           <ErrorReporter />
-          
+
           {/* RB2B Tracking Script */}
           <Script id="rb2b-tracking" strategy="afterInteractive">
             {`
@@ -101,7 +101,7 @@ export default function RootLayout({
               }("EN4M0H1QG9OM");
             `}
           </Script>
-          
+
           {/* LinkedIn Insight Tag */}
           <Script id="linkedin-insight-tag-init" strategy="afterInteractive">
             {`
@@ -128,8 +128,8 @@ export default function RootLayout({
           </noscript>
 
           {/* Senja Widget Script */}
-          <Script 
-            src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js" 
+          <Script
+            src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js"
             strategy="lazyOnload"
             async
           />

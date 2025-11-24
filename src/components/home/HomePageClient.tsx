@@ -49,6 +49,7 @@ export default function HomePageClient() {
                   className={styles.trustLogo}
                   width={logo.width}
                   height={logo.height}
+                  priority
                 />
               ))}
             </div>

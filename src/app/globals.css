@@ -10,7 +10,7 @@
 /* Updated: 2025-11-22T08:02:37.130Z */
 /* Updated: 2025-11-22T07:35:07.767Z */
 @import "tailwindcss";
-@import "tw-animate-css";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -52,6 +52,12 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  /* Semantic Colors */
+  --color-background-primary: var(--background-primary);
+  --color-text-main: var(--text-main);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-primary: var(--accent-primary);
 }
 
 :root {
@@ -87,7 +93,7 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  
+
   /* Global Design Tokens - Neo-Brutalist Style */
   --bleu-nuit: #09071D;
   --bleu-marine: #0A1A32;
@@ -95,11 +101,17 @@
   --bleu-fumee: #E8EFF5;
   --white: #FFFFFF;
   --grey-light: #64748b;
-  
+
+  /* Semantic Design System */
+  --background-primary: var(--white);
+  --text-main: var(--bleu-nuit);
+  --text-secondary: var(--grey-light);
+  --accent-primary: var(--bleu-nuit);
+
   --border-thick: 2px solid var(--bleu-nuit);
   --shadow-rest: 4px 4px 0px var(--bleu-nuit);
   --shadow-hover: 8px 8px 0px var(--bleu-nuit);
-  --font-main: 'Inter', sans-serif;
+  --font-main: var(--font-inter), sans-serif;
   --max-width: 1200px;
   --transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -145,6 +157,7 @@
     margin: 0;
     padding: 0;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-main);

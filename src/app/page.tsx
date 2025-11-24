@@ -1,4 +1,4 @@
-import { Navbar, Footer } from "@/components/home";
+import { Navbar, Footer } from "@/components/layout";
 import HomePageClient from "@/components/home/HomePageClient";
 
 export default function HomePage() {

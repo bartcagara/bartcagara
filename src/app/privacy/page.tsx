@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Footer } from "@/components/home";
+import { Navbar, Footer } from "@/components/layout";
 
 export default function PrivacyPage() {
     return (

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Navbar, Footer } from "@/components/home";
+import { Navbar, Footer } from "@/components/layout";
 import styles from "@/components/home/homepage.module.css";
 
 export default function ContactPage() {
@@ -11,7 +11,7 @@ export default function ContactPage() {
             <main className={`${styles.sectionPadding} min-h-screen bg-white`}>
                 <div className="max-w-xl mx-auto px-6">
                     <div className="text-center mb-12">
-                        <h1 className="text-4xl font-bold mb-6 text-[#09071D]">Contact Us</h1>
+                        <h1 className="text-4xl font-bold mb-6 text-text-main">Contact Us</h1>
                         <p className="text-lg text-gray-600">
                             Ready to adapt fitness to your schedule? Fill out the form below.
                         </p>
@@ -36,7 +36,7 @@ export default function ContactPage() {
                                 id="name"
                                 name="name"
                                 required
-                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09071D] focus:border-[#09071D] outline-none transition-colors"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
                                 placeholder="Your name"
                             />
                         </div>
@@ -50,7 +50,7 @@ export default function ContactPage() {
                                 id="email"
                                 name="email"
                                 required
-                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09071D] focus:border-[#09071D] outline-none transition-colors"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
                                 placeholder="your@email.com"
                             />
                         </div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                                 name="message"
                                 required
                                 rows={5}
-                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#09071D] focus:border-[#09071D] outline-none transition-colors"
+                                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
                                 placeholder="How can we help you?"
                             ></textarea>
                         </div>

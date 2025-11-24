@@ -1,5 +1,4 @@
-export { Navbar } from "./Navbar";
-export { Footer } from "./Footer";
+
 export { AccordionItem } from "./AccordionItem";
 export { ScrollSection } from "./ScrollSection";
 export { FAQ_ITEMS } from "./faq-data";
