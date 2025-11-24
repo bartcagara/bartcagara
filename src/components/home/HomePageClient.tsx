@@ -34,7 +34,7 @@ export default function HomePageClient() {
             </Link>
             <p className={styles.heroNote}>
               <em>(Includes your free personalized Nutrition Blueprint — built live
-              on the call)</em>
+                on the call)</em>
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export default function HomePageClient() {
                   <strong>The Spiral:</strong> "Diet is blown." The weekend
                   binge begins.
                 </p>
-                </div>
+              </div>
               <p className={styles.trapBoxFooter}>
                 <strong>Every minor slip = full reset.</strong>
               </p>
@@ -591,7 +591,7 @@ export default function HomePageClient() {
       </section>
 
       {/* CTA SECTION */}
-      <section id="cta" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
+      <section id="cta" className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ borderBottom: 'none' }}>
         <div className={`${styles.container} ${styles.textCenter}`}>
           <div className={styles.maxW800}>
             <h3 className={styles.h3}>Most calls are just sales pitches. This one isn't.</h3>
