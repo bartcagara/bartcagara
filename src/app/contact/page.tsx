@@ -11,6 +11,7 @@ export default function ContactPage() {
         e.preventDefault();
         const form = e.currentTarget;
         const formData = new FormData(form);
+        formData.append("form-name", "contact");
 
         try {
             const response = await fetch("/", {
