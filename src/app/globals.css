@@ -9,6 +9,7 @@
 /* Updated: 2025-11-22T08:53:37.221Z */
 /* Updated: 2025-11-22T08:02:37.130Z */
 /* Updated: 2025-11-22T07:35:07.767Z */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -87,29 +88,33 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
-  
+
   /* Global Design Tokens - High-End Executive Style */
   --bleu-nuit: #09071D;
   --bleu-marine: #0A1A32;
   --bleu-charron: #1B415D;
-  --bleu-fumee: #F5F7FA; /* Lighter, cleaner background */
+  --bleu-fumee: #F5F7FA;
+  /* Lighter, cleaner background */
   --white: #FFFFFF;
   --grey-light: #64748b;
-  
+
   /* Softened Borders & Shadows */
-  --border-thick: 1px solid rgba(9, 7, 29, 0.1); /* Subtle border */
-  --shadow-rest: 0px 4px 20px rgba(9, 7, 29, 0.05); /* Soft diffuse shadow */
-  --shadow-hover: 0px 10px 30px rgba(9, 7, 29, 0.1); /* Deeper soft shadow */
-  
+  --border-thick: 1px solid rgba(9, 7, 29, 0.1);
+  /* Subtle border */
+  --shadow-rest: 0px 4px 20px rgba(9, 7, 29, 0.05);
+  /* Soft diffuse shadow */
+  --shadow-hover: 0px 10px 30px rgba(9, 7, 29, 0.1);
+  /* Deeper soft shadow */
+
   /* Typography */
   --font-main: 'Inter', sans-serif;
   --font-serif: 'Playfair Display', serif;
-  
+
   --max-width: 1200px;
   --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
 
 .dark {
   --background: oklch(0.145 0 0);
@@ -152,6 +157,7 @@
     margin: 0;
     padding: 0;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-main);
