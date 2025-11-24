@@ -12,8 +12,8 @@ export default function ContactPage() {
                 <div className="max-w-xl mx-auto px-6">
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-bold mb-6 text-text-main">Contact Us</h1>
-                        <p className="text-lg text-gray-600">
-                            Ready to adapt fitness to your schedule? Fill out the form below.
+                        <p className="text-xl text-text-secondary mb-12">
+                            Not ready to book a call yet? Ask your question below.
                         </p>
                     </div>
 

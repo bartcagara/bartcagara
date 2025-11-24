@@ -11,14 +11,14 @@ export default function PrivacyPage() {
 
                 <h2>1. Introduction</h2>
                 <p>
-                    Dad with Style ÖU ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
+                    Dad with Style OÜ ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
                 </p>
                 <p>
                     We are the Data Controller of your personal data.
                 </p>
                 <p>
                     <strong>Company Details:</strong><br />
-                    Dad with Style ÖU<br />
+                    Dad with Style OÜ<br />
                     Sepapaja 6, 15551 Tallinn, Estonia
                 </p>
 

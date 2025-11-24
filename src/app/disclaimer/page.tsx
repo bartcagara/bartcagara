@@ -11,7 +11,7 @@ export default function DisclaimerPage() {
 
                 <h2>1. Website Disclaimer</h2>
                 <p>
-                    The information provided by Dad with Style ÖU ("we", "us", or "our") on this website (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
+                    The information provided by Dad with Style OÜ ("we", "us", or "our") on this website (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
                 </p>
 
                 <h2>2. Professional Disclaimer</h2>

@@ -14,7 +14,7 @@ export const Footer = memo(() => (
             <p className="text-gray-600 text-sm group-hover:opacity-80 transition-opacity">Convenience-First Fitness</p>
           </Link>
           <p className="text-gray-500 text-xs mt-4">
-            &copy; {new Date().getFullYear()} Dad with Style ÖU
+            &copy; {new Date().getFullYear()} Dad with Style OÜ
           </p>
         </div>
 

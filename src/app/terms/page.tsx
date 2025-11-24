@@ -11,11 +11,11 @@ export default function TermsPage() {
 
                 <h2>1. Agreement to Terms</h2>
                 <p>
-                    These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Dad with Style ÖU ("we", "us", or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").
+                    These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Dad with Style OÜ ("we", "us", or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").
                 </p>
                 <p>
                     <strong>Company Details:</strong><br />
-                    Dad with Style ÖU<br />
+                    Dad with Style OÜ<br />
                     Sepapaja 6, 15551 Tallinn, Estonia
                 </p>
 
@@ -31,7 +31,7 @@ export default function TermsPage() {
 
                 <h2>4. Governing Law</h2>
                 <p>
-                    These Terms shall be governed by and defined following the laws of Estonia. Dad with Style ÖU and yourself irrevocably consent that the courts of Estonia shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
+                    These Terms shall be governed by and defined following the laws of Estonia. Dad with Style OÜ and yourself irrevocably consent that the courts of Estonia shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
                 </p>
 
                 <h2>5. Contact Us</h2>
