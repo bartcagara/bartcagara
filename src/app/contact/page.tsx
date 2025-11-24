@@ -1,4 +1,3 @@
-```javascript
 "use client";
 
 import React from "react";
@@ -9,7 +8,7 @@ export default function ContactPage() {
     return (
         <>
             <Navbar />
-            <main className={`${ styles.sectionPadding } min - h - screen bg - white`}>
+            <main className={`${styles.sectionPadding} min-h-screen bg-white`}>
                 <div className="max-w-xl mx-auto px-6">
                     <div className="text-center mb-12">
                         <h1 className="text-4xl font-bold mb-6 text-[#09071D]">Contact Us</h1>
@@ -73,7 +72,7 @@ export default function ContactPage() {
                         <div className="text-center">
                             <button
                                 type="submit"
-                                className={`${ styles.btnCta } px - 8 py - 4 uppercase font - bold`}
+                                className={`${styles.btnCta} px-8 py-4 uppercase font-bold`}
                             >
                                 Send Message
                             </button>
@@ -85,4 +84,3 @@ export default function ContactPage() {
         </>
     );
 }
-```
