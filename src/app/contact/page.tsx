@@ -25,7 +25,7 @@ export default function ContactPage() {
                         {/* FormSubmit Configuration */}
                         <input type="hidden" name="_subject" value="New Website Lead!" />
                         <input type="hidden" name="_captcha" value="false" />
-                        <input type="hidden" name="_next" value="https://bartcagara.netlify.app/contact" />
+                        <input type="hidden" name="_next" value="https://bartcagara.com/contact" />
 
                         <div>
                             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
