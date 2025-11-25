@@ -24,9 +24,9 @@ export const Navbar = memo(() => {
         ) : (
           <>
             <div className={styles.navLinks}>
-              <a href="#problem">The Problem</a>
-              <a href="#solution">The Solution</a>
-              <a href="#system">The System</a>
+              <Link href="/#problem">The Problem</Link>
+              <Link href="/#solution">The Solution</Link>
+              <Link href="/#system">The System</Link>
             </div>
             <Link href="/book" className={`${styles.btnCta} ${styles.navSize}`}>
               Book Nutrition Blueprint Call
