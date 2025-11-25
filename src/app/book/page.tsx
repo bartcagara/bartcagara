@@ -1,11 +1,8 @@
-import { Navbar, Footer } from "@/components/layout";
 import styles from "@/components/home/homepage.module.css";
 
 export default function BookPage() {
   return (
     <>
-      <Navbar />
-
       {/* SECTION 1: Book Your Nutrition Blueprint Call */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
@@ -91,8 +88,6 @@ export default function BookPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

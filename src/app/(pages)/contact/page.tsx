@@ -1,0 +1,80 @@
+"use client";
+
+import styles from "@/components/home/homepage.module.css";
+import type { Metadata } from "next";
+
+export default function ContactPage() {
+    return (
+        <section className={`${styles.sectionPadding} min-h-screen bg-white`}>
+            <div className="max-w-xl mx-auto px-6">
+                <div className="text-center mb-12">
+                    <h1 className="text-4xl font-bold mb-6 text-text-main">Contact Us</h1>
+                    <p className="text-xl text-text-secondary mb-12">
+                        Not ready to book a call yet? Ask your question below.
+                    </p>
+                </div>
+
+                <form
+                    action="https://formsubmit.co/bart@bartcagara.com"
+                    method="POST"
+                    className="space-y-6"
+                >
+                    <input type="hidden" name="_subject" value="New Website Lead!" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://bartcagara.com/contact" />
+
+                    <div>
+                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                            Name
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
+                            placeholder="Your name"
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                            Email
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
+                            placeholder="your@email.com"
+                        />
+                    </div>
+
+                    <div>
+                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                            Message
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            required
+                            rows={5}
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-accent-primary focus:border-accent-primary outline-none transition-colors"
+                            placeholder="How can we help you?"
+                        ></textarea>
+                    </div>
+
+                    <div className="text-center">
+                        <button
+                            type="submit"
+                            className={`${styles.btnCta} px-8 py-4 uppercase font-bold`}
+                        >
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    );
+}

@@ -23,13 +23,19 @@ export const Navbar = memo(() => {
           </>
         ) : (
           <>
-            <div className={styles.navLinks}>
+            {/* Desktop Navigation Links - Hidden on Mobile */}
+            <div className={`${styles.navLinks} hidden md:flex`}>
               <Link href="/#problem">The Problem</Link>
               <Link href="/#solution">The Solution</Link>
               <Link href="/#system">The System</Link>
             </div>
-            <Link href="/book" className={`${styles.btnCta} ${styles.navSize}`}>
-              Book Nutrition Blueprint Call
+
+            {/* CTA Button - Centered on Mobile, Right-aligned on Desktop */}
+            <Link
+              href="/book"
+              className={`${styles.btnCta} ${styles.navSize} text-[10px] px-3 py-2 md:text-sm md:px-6 md:py-3 whitespace-nowrap mx-auto md:mx-0`}
+            >
+              BOOK NUTRITION BLUEPRINT CALL
             </Link>
           </>
         )}
