@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Footer } from "@/components/layout";
 
+import Link from "next/link";
+
 export default function TermsPage() {
     return (
         <>
@@ -36,7 +38,7 @@ export default function TermsPage() {
 
                 <h2>5. Contact Us</h2>
                 <p>
-                    In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us at our address provided above.
+                    In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us via the form on our <Link href="/contact" className="text-accent-primary hover:underline">contact page</Link>.
                 </p>
             </main>
             <Footer />

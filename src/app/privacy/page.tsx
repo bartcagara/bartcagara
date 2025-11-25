@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar, Footer } from "@/components/layout";
 
+import Link from "next/link";
+
 export default function PrivacyPage() {
     return (
         <>
@@ -65,7 +67,7 @@ export default function PrivacyPage() {
 
                 <h2>6. Contact Us</h2>
                 <p>
-                    If you have questions or comments about this Privacy Policy, please contact us at our address provided above.
+                    If you have questions or comments about this Privacy Policy, please contact us by filling out the form on our <Link href="/contact" className="text-accent-primary hover:underline">contact page</Link>.
                 </p>
             </main>
             <Footer />
