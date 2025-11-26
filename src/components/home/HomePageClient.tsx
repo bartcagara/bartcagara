@@ -131,13 +131,10 @@ export default function HomePageClient() {
               <h3><strong>THE "PERFECTIONIST" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Rule:</strong> You think you need to be 100% "on" or you've failed.
+                  <strong>The Trigger:</strong> One client dinner goes off-script. You eat something "bad."
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Reality:</strong> One client dinner hits. You can't control the menu. You eat something "bad."
-                </p>
-                <p className={styles.trapBoxText}>
-                  <strong>The Spiral:</strong> "One bad meal turns into a bad day. A bad day turns into a lost week." You restart Monday. Again.
+                  <strong>The Spiral:</strong> You feel like you ruined the week. Guilt sets in. You say "screw it" and binge until Monday. The cycle restarts.
                 </p>
               </div>
             </div>
@@ -146,13 +143,10 @@ export default function HomePageClient() {
               <h3><strong>THE "STARVATION" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Effort:</strong> You rely on willpower. You go to bed hungry. You sneak snacks when stress hits.
+                  <strong>The Effort:</strong> You white-knuckle through hunger and skip meals.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Frustration:</strong> You wake up the next morning, step on the scale, and you're the same weight.
-                </p>
-                <p className={styles.trapBoxText}>
-                  <strong>The Result:</strong> You feel like you're working hard for nothing. Eventually, your body quits on you.
+                  <strong>The Reality:</strong> You wake up, step on the scale, and the number hasn't moved. You feel like you're suffering for nothing. Eventually, your body (and patience) quits.
                 </p>
               </div>
             </div>
@@ -161,13 +155,10 @@ export default function HomePageClient() {
               <h3><strong>THE "CHAOS" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Plan:</strong> Works great when you're at home with a routine.
+                  <strong>The Plan:</strong> Works perfectly... when you're at home.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Reality:</strong> Travel hits. A deal closes. You get chained to your desk. Randomization takes over.
-                </p>
-                <p className={styles.trapBoxText}>
-                  <strong>The Outcome:</strong> Your fitness routine collapses because it requires a perfect schedule that doesn't exist.
+                  <strong>The Reality:</strong> A deal closes. You fly to Chicago. You're chained to a desk for 12 hours. The routine shatters because it wasn't built for your actual life.
                 </p>
               </div>
             </div>
@@ -304,10 +295,10 @@ export default function HomePageClient() {
             <div className={styles.bentoCard}>
               <h3><strong>BUILDING PRINCIPLES</strong></h3>
               <ul className={styles.checkList}>
-                <li>Intuition: You know exactly what to order at the airport, the gala, or UberEats.</li>
+                <li>COMMAND: You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
                 <li>Presence: You have the energy to hike with your kids, not just watch them.</li>
                 <li>Confidence: You look good in your clothes, not just fit into them.</li>
-                <li>Automatic: You maintain your weight without thinking about it.</li>
+                <li>LIBERATION: You stop thinking about food 24/7. It runs in the background while you focus on your empire.</li>
               </ul>
             </div>
           </div>
@@ -321,7 +312,7 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800}`}>
             <h2 className={styles.h2}>
-              Results from execs who work like hell and still get it done
+              THEY DIDN'T "FIND MORE TIME." THEY BUILT A BETTER SYSTEM.
             </h2>
             <p className={`${styles.textLargeNarrative} ${styles.resultsIntro}`}>
               These guys didn't "find time." They've mastered Convenience-First
@@ -400,7 +391,7 @@ export default function HomePageClient() {
                 </p>
                 <div className={styles.stepMeta}>
                   <ul className={styles.checkList}>
-                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                    <li>Deliverable: Your custom Nutrition Protocol & Training Foundation.</li>
                   </ul>
                 </div>
               </div>
@@ -414,7 +405,7 @@ export default function HomePageClient() {
                 </p>
                 <div className={styles.stepMeta}>
                   <ul className={styles.checkList}>
-                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                    <li>Deliverable: Your "Travel-Proof" Routine & Momentum.</li>
                   </ul>
                 </div>
               </div>
@@ -428,7 +419,7 @@ export default function HomePageClient() {
                 </p>
                 <div className={styles.stepMeta}>
                   <ul className={styles.checkList}>
-                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                    <li>Deliverable: Total Lifestyle Integration & Energy Reclamation.</li>
                   </ul>
                 </div>
               </div>
@@ -442,7 +433,7 @@ export default function HomePageClient() {
                 </p>
                 <div className={styles.stepMeta}>
                   <ul className={styles.checkList}>
-                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                    <li>Deliverable: Full Autonomy. You fire me because you no longer need me.</li>
                   </ul>
                 </div>
               </div>
