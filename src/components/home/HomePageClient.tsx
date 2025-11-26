@@ -324,11 +324,11 @@ export default function HomePageClient() {
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
               THE "CONVENIENCE-FIRST" OPERATING SYSTEM
             </h2>
-            <p className={`${styles.textLargeNarrative}`}>
+            <p className={`${styles.textLargeNarrative} ${styles.systemIntroMargin}`}>
               We don't give you a diet. We build your freedom from them.
             </p>
 
-            <div className={`${styles.systemStep} ${styles.stage1}`}>
+            <div className={`${styles.systemStep} ${styles.stage1}`} style={{ textAlign: 'left' }}>
               <div className={styles.stepHeader}>STAGE 1: THE RESET</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
@@ -340,13 +340,13 @@ export default function HomePageClient() {
                   <li>Immediate fix for energy crashes and brain fog.</li>
                 </ul>
                 <div className={styles.stepMeta}>
-                  <p>Deliverable: Full control over your energy and hunger.</p>
-                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
+                  <p><strong>Deliverable:</strong> Full control over your energy and hunger.</p>
+                  <p><strong>Rhythm:</strong> Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
 
-            <div className={styles.systemStep}>
+            <div className={styles.systemStep} style={{ textAlign: 'left' }}>
               <div className={styles.stepHeader}>STAGE 2: THE BUILD</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
@@ -354,17 +354,17 @@ export default function HomePageClient() {
                 </p>
                 <ul className={styles.checkList}>
                   <li>Hypertrophy training designed for the executive schedule.</li>
-                  <li>Fixing your metabolism so you burn fat at your desk.</li>
-                  <li>Solving the "Travel Gap" (Airport/Hotel protocols).</li>
+                  <li>Building the lean muscle that keeps you lean long-term.</li>
+                  <li>Solving the &apos;Travel Gap&apos; (Airport/Hotel protocols).</li>
                 </ul>
                 <div className={styles.stepMeta}>
-                  <p>Deliverable: Visible physical changes and better fitting clothes.</p>
-                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
+                  <p><strong>Deliverable:</strong> Visible physical changes and better fitting clothes.</p>
+                  <p><strong>Rhythm:</strong> Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
 
-            <div className={styles.systemStep}>
+            <div className={styles.systemStep} style={{ textAlign: 'left' }}>
               <div className={styles.stepHeader}>STAGE 3: THE STRESS-TEST</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
@@ -372,30 +372,30 @@ export default function HomePageClient() {
                 </p>
                 <ul className={styles.checkList}>
                   <li>Navigating heavy travel weeks without gaining weight.</li>
-                  <li>Managing back-to-back client dinners with zero guilt.</li>
+                  <li>Handling back-to-back client dinners with zero guilt.</li>
                   <li>Advanced recovery protocols for high-stress periods.</li>
                 </ul>
                 <div className={styles.stepMeta}>
-                  <p>Deliverable: Total confidence that you can handle any schedule.</p>
-                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
+                  <p><strong>Deliverable:</strong> Total confidence that you can handle any schedule.</p>
+                  <p><strong>Rhythm:</strong> Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
 
-            <div className={styles.systemStep}>
+            <div className={styles.systemStep} style={{ textAlign: 'left' }}>
               <div className={styles.stepHeader}>STAGE 4: THE EXIT</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  You master the system so you don't need to pay me anymore.
+                  You master the system so you don&apos;t need to pay me anymore.
                 </p>
                 <ul className={styles.checkList}>
                   <li>Internalizing the principles (Intuition vs. Rules).</li>
-                  <li>Transitioning from "Coached" to "Autonomous".</li>
+                  <li>Transitioning from &apos;Coached&apos; to &apos;Autonomous&apos;.</li>
                   <li>Final optimization for longevity and bloodwork.</li>
                 </ul>
                 <div className={styles.stepMeta}>
-                  <p>Deliverable: Full Autonomy. You fire me because you've mastered it.</p>
-                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
+                  <p><strong>Deliverable:</strong> Full Autonomy. You fire me because you&apos;ve mastered it.</p>
+                  <p><strong>Rhythm:</strong> Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>

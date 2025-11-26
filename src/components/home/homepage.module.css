@@ -508,9 +508,13 @@
 
 .systemStep {
     border: var(--border-thick);
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     background: var(--white);
     box-shadow: var(--shadow-rest);
+}
+
+.systemIntroMargin {
+    margin-bottom: 4rem !important;
 }
 
 .systemStep.stage1 {
