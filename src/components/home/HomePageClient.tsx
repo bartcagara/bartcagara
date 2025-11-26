@@ -342,11 +342,11 @@ export default function HomePageClient() {
       {/* SYSTEM SECTION */}
       <section id="system" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
-          <div className={styles.maxW800}>
+          <div className={`${styles.maxW800} ${styles.textCenter} ${styles.problemSectionIntro}`}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
               THE "CONVENIENCE-FIRST" OPERATING SYSTEM
             </h2>
-            <p className={`${styles.textLargeNarrative} ${styles.textCenter} ${styles.problemSectionIntro}`}>
+            <p className={`${styles.textLargeNarrative}`}>
               We don't give you a diet. We build your freedom from them.
             </p>
 
