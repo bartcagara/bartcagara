@@ -82,7 +82,7 @@ export default function HomePageClient() {
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               The gap between the athlete you used to be and the man you are today is getting wider.
             </p>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
+            <p className={styles.textLargeNarrative}>
               And deep down, you know the truth: If you don't fix this now, you aren't going to enjoy your success. You are just going to manage your decline.
             </p>
           </div>
