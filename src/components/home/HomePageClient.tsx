@@ -332,12 +332,16 @@ export default function HomePageClient() {
               <div className={styles.stepHeader}>STAGE 1: THE RESET</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  We analyze your schedule and build a nutrition protocol that works with your client dinners, not against them. We also install an efficient strength foundation to kickstart body recomposition. We stop the bleeding.
+                  We fix your nutrition and training immediately so you stop spinning your wheels.
                 </p>
+                <ul className={styles.checkList}>
+                  <li>Your custom Nutrition Protocol (no starvation).</li>
+                  <li>Efficient Strength Foundation (30-min sessions).</li>
+                  <li>Immediate fix for energy crashes and brain fog.</li>
+                </ul>
                 <div className={styles.stepMeta}>
-                  <ul className={styles.checkList}>
-                    <li>Deliverable: Your custom Nutrition Protocol & Training Foundation.</li>
-                  </ul>
+                  <p>Deliverable: Full control over your energy and hunger.</p>
+                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
@@ -346,12 +350,16 @@ export default function HomePageClient() {
               <div className={styles.stepHeader}>STAGE 2: THE BUILD</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  We install flexible training that fits your "randomized" schedule. 20 minutes in a hotel gym? We make it effective. No more treating workouts as a chore.
+                  We build the muscle and metabolism you need to look the part.
                 </p>
+                <ul className={styles.checkList}>
+                  <li>Hypertrophy training designed for the executive schedule.</li>
+                  <li>Fixing your metabolism so you burn fat at your desk.</li>
+                  <li>Solving the "Travel Gap" (Airport/Hotel protocols).</li>
+                </ul>
                 <div className={styles.stepMeta}>
-                  <ul className={styles.checkList}>
-                    <li>Deliverable: Your "Travel-Proof" Routine & Momentum.</li>
-                  </ul>
+                  <p>Deliverable: Visible physical changes and better fitting clothes.</p>
+                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
@@ -360,12 +368,16 @@ export default function HomePageClient() {
               <div className={styles.stepHeader}>STAGE 3: THE STRESS-TEST</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  We guide you through real-life chaos—mergers, holidays, crunch time. We prove that your results stick even when life gets crazy.
+                  We make sure the results stick even when your schedule goes to hell.
                 </p>
+                <ul className={styles.checkList}>
+                  <li>Navigating heavy travel weeks without gaining weight.</li>
+                  <li>Managing back-to-back client dinners with zero guilt.</li>
+                  <li>Advanced recovery protocols for high-stress periods.</li>
+                </ul>
                 <div className={styles.stepMeta}>
-                  <ul className={styles.checkList}>
-                    <li>Deliverable: Total Lifestyle Integration & Energy Reclamation.</li>
-                  </ul>
+                  <p>Deliverable: Total confidence that you can handle any schedule.</p>
+                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
@@ -374,12 +386,16 @@ export default function HomePageClient() {
               <div className={styles.stepHeader}>STAGE 4: THE EXIT</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  You develop "Fitness Intuition." You stop needing me. You stay fit, sharp, and energetic on autopilot for the rest of your career.
+                  You master the system so you don't need to pay me anymore.
                 </p>
+                <ul className={styles.checkList}>
+                  <li>Internalizing the principles (Intuition vs. Rules).</li>
+                  <li>Transitioning from "Coached" to "Autonomous".</li>
+                  <li>Final optimization for longevity and bloodwork.</li>
+                </ul>
                 <div className={styles.stepMeta}>
-                  <ul className={styles.checkList}>
-                    <li>Deliverable: Full Autonomy. You fire me because you no longer need me.</li>
-                  </ul>
+                  <p>Deliverable: Full Autonomy. You fire me because you've mastered it.</p>
+                  <p>Rhythm: Unlimited Async Access (WhatsApp) + Strategic Check-ins</p>
                 </div>
               </div>
             </div>
