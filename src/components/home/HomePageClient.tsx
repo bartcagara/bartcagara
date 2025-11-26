@@ -65,7 +65,7 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <p className={styles.textLargeNarrative} style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '2.5rem' }}>
-              You are successful. But let's be honest — your body doesn't reflect that anymore.
+              You are successful. But let's be honest—your body doesn't reflect that anymore.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               You feel sharp when you walk into a meeting... until you catch your reflection in the glass. You don't look like a leader. You look like the "heavy guy at the table."
@@ -77,7 +77,7 @@ export default function HomePageClient() {
               So the stress wins. Your diet is a mess, so you raid the fridge at night. Your training? Non-existent.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
-              You should be enjoying life at this stage of your career, but you don't have the energy to actually do it. Hell, you're too tired to even play with your kids.
+              You should be enjoying life at this stage of your career, but you don't have the energy to actually do it. Hell, you're too worn out to even play with your kids.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               The gap between the athlete you used to be and the man you are today is getting wider.
