@@ -20,21 +20,18 @@ export default function HomePageClient() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            You don't need more discipline. You need fitness that adapts to your
-            schedule.
+            THE "CONVENIENCE-FIRST" SYSTEM THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
           </h1>
           <p className={styles.heroSub}>
-            Convenience-First Fitness for executives with schedules too chaotic
-            for conventional weight loss.
+            You don't need more discipline. You need a system designed for executives with schedules too chaotic for conventional diets.
           </p>
 
           <div className={styles.heroCtaContainer}>
             <Link href="/book" className={`${styles.btnCta} ${styles.pageSize}`}>
-              Book Nutrition Blueprint Call
+              BOOK A 15-MIN RAPID AUDIT
             </Link>
             <p className={styles.heroNote}>
-              <em>(Includes your free personalized Nutrition Blueprint — built live
-                on the call)</em>
+              <em>No meal prep. No tracking. We just find the leak in your current approach.</em>
             </p>
           </div>
 
@@ -591,23 +588,17 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* CTA SECTION */}
+      {/* PRICING SECTION */}
       <section id="cta" className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ borderBottom: 'none' }}>
         <div className={`${styles.container} ${styles.textCenter}`}>
           <div className={styles.maxW800}>
-            <h3 className={styles.h3}>Most calls are just sales pitches. This one isn't.</h3>
+            <h3 className={styles.h3}>STOP GUESSING. GET DIAGNOSED.</h3>
             <p className={styles.textLargeNarrative}>
-              You'll walk away with a personalized Nutrition Blueprint — built
-              live on the call — showing exactly how to eat without rigid rules or
-              meal prep.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              Whether we work together or not, you'll leave with something real to
-              kick-start your next chapter.
+              You don't need another generic diet plan. We audit your schedule, spot the leak, and decide the fix.
             </p>
           </div>
           <Link href="/book" className={`${styles.btnCta} ${styles.pageSize} ${styles.ctaFinalButton}`}>
-            Book Nutrition Blueprint Call
+            BOOK A 15-MIN RAPID AUDIT
           </Link>
         </div>
       </section>
