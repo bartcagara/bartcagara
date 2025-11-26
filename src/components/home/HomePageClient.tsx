@@ -108,10 +108,10 @@ export default function HomePageClient() {
               <h3><strong>THE "PERFECTIONIST" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Trigger:</strong> One client dinner goes off-script. You eat something "bad."
+                  <strong>The Trigger:</strong> One client dinner goes off-script. You eat something "bad." You feel like you failed.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Spiral:</strong> You feel like you ruined the week. Guilt sets in. You say "screw it" and binge until Monday. The cycle restarts.
+                  <strong>The Spiral:</strong> Guilt kicks in. You say "screw it" and binge until Monday. You restart the cycle, feeling defeated before you even begin.
                 </p>
               </div>
             </div>
@@ -120,10 +120,10 @@ export default function HomePageClient() {
               <h3><strong>THE "STARVATION" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Effort:</strong> You are disciplined Monday through Thursday. You white-knuckle through hunger. But by Friday, your willpower is gone. You binge all weekend, erasing 4 days of progress in 4 hours.
+                  <strong>The Effort:</strong> You white-knuckle Monday through Thursday. But by Friday, your willpower is gone. You binge all weekend.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Reality:</strong> You wake up, step on the scale, and the number hasn't moved. You feel like you're suffering for nothing. Eventually, your body (and patience) quits.
+                  <strong>The Reality:</strong> You step on the scale. Nothing changed. You erased 4 days of progress in 4 hours. Eventually, your patience quits.
                 </p>
               </div>
             </div>
@@ -132,10 +132,10 @@ export default function HomePageClient() {
               <h3><strong>THE "CHAOS" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Plan:</strong> Works perfectly... when you're at home.
+                  <strong>The Plan:</strong> Works perfectly... when you are home. But then travel hits. A deal closes. The routine collapses.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Outcome:</strong> Your routine collapses. You lose your athletic taper. The weight starts accumulating on your hips and chest because the plan requires a perfect schedule that doesn't exist.
+                  <strong>The Reality:</strong> You lose your athletic taper. The weight piles on because the plan requires a perfect schedule that doesn't exist.
                 </p>
               </div>
             </div>
