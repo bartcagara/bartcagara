@@ -62,7 +62,13 @@ export default function HomePageClient() {
               YOU ARE WINNING AT WORK, BUT LOSING YOUR BODY.
             </h2>
             <p className={styles.textLargeNarrative}>
-              You are successful in every area of life, but this one thing keeps slipping. You feel it. You're masking a lack of energy. You're avoiding photos. The gap between the athlete you used to be and the man you are today is getting wider.
+              You are successful in every area of life, but your health keeps slipping.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              You feel it. You're masking a lack of energy. You're avoiding photos.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              The gap between the athlete you used to be and the man you are today is getting wider.
             </p>
             <p className={styles.textLargeNarrative}>
               If you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
@@ -264,7 +270,7 @@ export default function HomePageClient() {
       <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
-            <h2 className={`${styles.h2} ${styles.textCenter}`}>
+            <h2 className={`${styles.h2} ${styles.textCenter} ${styles.problemSectionIntro}`}>
               THE SHIFT
             </h2>
           </div>
@@ -371,7 +377,7 @@ export default function HomePageClient() {
               <div className={styles.stepHeader}>STAGE 1: THE RESET</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  We analyze your schedule and build a nutrition protocol that works with your client dinners and travel, not against them. We stop the bleeding.
+                  We analyze your schedule and build a nutrition protocol that works with your client dinners, not against them. We also install an efficient strength foundation to kickstart body recomposition. We stop the bleeding.
                 </p>
                 <div className={styles.stepMeta}>
                   <ul className={styles.checkList}>
@@ -456,20 +462,20 @@ export default function HomePageClient() {
       <section id="cta" className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ borderBottom: 'none' }}>
         <div className={`${styles.container} ${styles.textCenter}`}>
           <div className={styles.maxW800}>
-            <h3 className={styles.h3}>STOP GUESSING. GET DIAGNOSED.</h3>
+            <h3 className={`${styles.h3} ${styles.problemSectionIntro}`}>STOP GUESSING. GET DIAGNOSED.</h3>
             <p className={styles.textLargeNarrative}>
               You don't need another generic plan. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.
             </p>
             <p className={styles.textLargeNarrative}>
               <strong>What happens on this 15-minute Audit?</strong>
             </p>
-            <p className={styles.textLargeNarrative}>
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
               1. <strong>We Audit Your Chaos:</strong> I look at your actual schedule constraints and "friction points."
             </p>
-            <p className={styles.textLargeNarrative}>
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
               2. <strong>We Spot The Leak:</strong> I tell you exactly which "Trap" is killing your progress.
             </p>
-            <p className={styles.textLargeNarrative}>
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
               3. <strong>We Build The Fix:</strong> If I can help, I'll show you how. If not, you leave with clarity.
             </p>
           </div>
