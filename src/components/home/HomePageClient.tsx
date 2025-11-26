@@ -65,22 +65,25 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <p className={styles.textLargeNarrative} style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '2.5rem' }}>
-              You are successful. You are disciplined. But let's be honest—your body doesn't reflect that anymore.
+              You are successful. But let's be honest — your body doesn't reflect that anymore.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
-              You feel it when you walk into a meeting. You're sharp and commanding... until you catch your reflection in the glass. You don't look like a leader. You look like the "heavy guy at the table."
+              You feel sharp when you walk into a meeting... until you catch your reflection in the glass. You don't look like a leader. You look like the "heavy guy at the table."
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It drives you crazy.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
-              So the stress wins. You start sneaking snacks. You feel the brain fog hitting at 3 PM. You have the money to enjoy life, but you don't have the energy to actually do it. You're too tired to hike with your kids or be present with your wife.
+              So the stress wins. Your diet is a mess, so you raid the fridge at night. Your training? Non-existent.
+            </p>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
+              You should be enjoying life at this stage of your career, but you don't have the energy to actually do it. Hell, you're too tired to even play with your kids.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               The gap between the athlete you used to be and the man you are today is getting wider.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
-              And deep down, you know the truth: If you don't fix this system now, you aren't going to enjoy your success. You are just going to manage your decline.
+              And deep down, you know the truth: If you don't fix this now, you aren't going to enjoy your success. You are just going to manage your decline.
             </p>
           </div>
         </div>
