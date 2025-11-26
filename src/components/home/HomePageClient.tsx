@@ -38,7 +38,7 @@ export default function HomePageClient() {
       </section>
 
       {/* TRUSTED BY SECTION */}
-      <section className={styles.bgFumee} style={{ paddingTop: '3rem', paddingBottom: '3rem', borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)' }}>
+      <section className={styles.bgFumee} style={{ paddingTop: '2rem', paddingBottom: '4rem', borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)' }}>
         <div className={styles.container}>
           <div className={styles.trustLogos} style={{ marginTop: 0 }}>
             <p className={styles.trustLogosTitle}>Trusted by executives from:</p>
@@ -61,7 +61,7 @@ export default function HomePageClient() {
 
 
       {/* INTRO */}
-      <section style={{ paddingTop: '5rem', paddingBottom: '2.5rem' }}>
+      <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <p className={styles.textLargeNarrative} style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '2.5rem' }}>
@@ -88,7 +88,7 @@ export default function HomePageClient() {
 
 
       {/* PROBLEM SECTION */}
-      <section id="problem" className={styles.bgFumee} style={{ paddingTop: '2.5rem', paddingBottom: '5rem' }}>
+      <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>
