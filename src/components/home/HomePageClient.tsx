@@ -54,30 +54,18 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* TARGET AUDIENCE */}
+      {/* REALITY CHECK */}
       <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h3} ${styles.textCenter}`}>
-              If you're an executive and you say YES to any of the following...
+              YOU ARE WINNING AT WORK, BUT LOSING YOUR BODY.
             </h2>
-            <ul className={`${styles.checkList} ${styles.checkListLarge}`}>
-              <li>
-                You've tried meal prep, strict diets, and tracking apps but every
-                client dinner or trip destroys your progress so you restart
-                Monday.
-              </li>
-              <li>
-                You eat out constantly and have no idea how to make smart
-                decisions without rigid rules you can't actually follow.
-              </li>
-              <li>
-                Your colleagues eat out just as much but somehow stay lean while
-                you keep restarting and getting softer.
-              </li>
-            </ul>
-            <p className={styles.checklistIntroSection}>
-              then what follows was built for you.
+            <p className={styles.textLargeNarrative}>
+              You are successful in every area of life, but this one thing keeps slipping. You feel it. You're masking a lack of energy. You're avoiding photos. The gap between the athlete you used to be and the man you are today is getting wider.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              If you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
             </p>
           </div>
         </div>
@@ -125,6 +113,14 @@ export default function HomePageClient() {
       <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
+            <h2 className={styles.h2}>
+              The #1 reason executives fail to get fit? Perfect-Conditions
+              Fitness
+            </h2>
+            <p className={styles.textLargeNarrative}>
+              Whether it's meal prep, strict tracking, or all-or-nothing
+              thinking these approaches break the moment life gets messy.
+            </p>
             <p className={styles.textLargeNarrative}>
               <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS IS KILLING YOUR MOMENTUM:</strong>
             </p>
@@ -213,7 +209,7 @@ export default function HomePageClient() {
                 or progress.
               </p>
               <div className={styles.featureTitle}>
-                Stop relying on meal prep that dies when you travel
+                STOP RELYING ON MEAL PREP. YOU CAN'T FLY WITH TUPPERWARE.
               </div>
               <p className={styles.bentoText}>
                 You can't fly with Tupperware. But you can learn principles for
@@ -230,7 +226,7 @@ export default function HomePageClient() {
                 or Subway.
               </p>
               <div className={styles.featureTitle}>
-                Make eating out work FOR your goals, not against them
+                MAKE CLIENT DINNERS WORK FOR YOU, NOT AGAINST YOU.
               </div>
               <p className={styles.bentoText}>
                 Eating out doesn't equal restart anymore. It's where you
@@ -291,13 +287,13 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
-              OLD WAY VS. NEW WAY
+              THE SHIFT
             </h2>
           </div>
 
           <div className={styles.grid2}>
             <div className={styles.bentoCard}>
-              <h3><strong>OLD WAY (PAIN)</strong></h3>
+              <h3><strong>FOLLOWING RULES</strong></h3>
               <ul className={`${styles.checkList} ${styles.checkListCross}`}>
                 <li>Anxiety: Sweating every menu choice at a steakhouse.</li>
                 <li>Isolation: Declining invites because you're "being good."</li>
@@ -306,7 +302,7 @@ export default function HomePageClient() {
               </ul>
             </div>
             <div className={styles.bentoCard}>
-              <h3><strong>NEW WAY (GAIN)</strong></h3>
+              <h3><strong>BUILDING PRINCIPLES</strong></h3>
               <ul className={styles.checkList}>
                 <li>Intuition: You know exactly what to order at the airport, the gala, or UberEats.</li>
                 <li>Presence: You have the energy to hike with your kids, not just watch them.</li>
@@ -403,12 +399,9 @@ export default function HomePageClient() {
                   We analyze your schedule and build a nutrition protocol that works with your client dinners and travel, not against them. We stop the bleeding.
                 </p>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Duration:</strong> 4 weeks
-                  </p>
-                  <p>
-                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
-                  </p>
+                  <ul className={styles.checkList}>
+                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -420,12 +413,9 @@ export default function HomePageClient() {
                   We install flexible training that fits your "randomized" schedule. 20 minutes in a hotel gym? We make it effective. No more treating workouts as a chore.
                 </p>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Duration:</strong> 4 weeks
-                  </p>
-                  <p>
-                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
-                  </p>
+                  <ul className={styles.checkList}>
+                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -437,12 +427,9 @@ export default function HomePageClient() {
                   We guide you through real-life chaos—mergers, holidays, crunch time. We prove that your results stick even when life gets crazy.
                 </p>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Duration:</strong> 4 weeks
-                  </p>
-                  <p>
-                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
-                  </p>
+                  <ul className={styles.checkList}>
+                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -454,12 +441,9 @@ export default function HomePageClient() {
                   You develop "Fitness Intuition." You stop needing me. You stay fit, sharp, and energetic on autopilot for the rest of your career.
                 </p>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Duration:</strong> 12 weeks
-                  </p>
-                  <p>
-                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
-                  </p>
+                  <ul className={styles.checkList}>
+                    <li>2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins</li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -511,7 +495,7 @@ export default function HomePageClient() {
               2. <strong>We Spot The Leak:</strong> I tell you exactly which "Trap" is killing your progress.
             </p>
             <p className={styles.textLargeNarrative}>
-              3. <strong>We Decide The Fix:</strong> If I can help, I'll show you how. If not, you leave with clarity.
+              3. <strong>We Build The Fix:</strong> If I can help, I'll show you how. If not, you leave with clarity.
             </p>
           </div>
           <Link href="/book" className={`${styles.btnCta} ${styles.pageSize} ${styles.ctaFinalButton}`}>
