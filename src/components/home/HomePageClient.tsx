@@ -120,7 +120,7 @@ export default function HomePageClient() {
               <h3><strong>THE "STARVATION" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Effort:</strong> You white-knuckle through hunger and skip meals.
+                  <strong>The Effort:</strong> You are disciplined Monday through Thursday. You white-knuckle through hunger. But by Friday, your willpower is gone. You binge all weekend, erasing 4 days of progress in 4 hours.
                 </p>
                 <p className={styles.trapBoxText}>
                   <strong>The Reality:</strong> You wake up, step on the scale, and the number hasn't moved. You feel like you're suffering for nothing. Eventually, your body (and patience) quits.
@@ -135,7 +135,7 @@ export default function HomePageClient() {
                   <strong>The Plan:</strong> Works perfectly... when you're at home.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Reality:</strong> A deal closes. You fly to Chicago. You're chained to a desk for 12 hours. The routine shatters because it wasn't built for your actual life.
+                  <strong>The Outcome:</strong> Your routine collapses. You lose your athletic taper. The weight starts accumulating on your hips and chest because the plan requires a perfect schedule that doesn't exist.
                 </p>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function HomePageClient() {
                 <li><strong>Anxiety:</strong> You sweat every menu choice at a steakhouse.</li>
                 <li><strong>Isolation:</strong> You decline invites because you're "being good."</li>
                 <li><strong>Confusion:</strong> You have "no idea how to eat anymore."</li>
-                <li><strong>Lethargy:</strong> You feel sloppy and "soft" even in a suit.</li>
+                <li><strong>Lethargy:</strong> You feel frumpy and soft, even in a tailored suit.</li>
               </ul>
             </div>
             <div className={styles.bentoCard}>
