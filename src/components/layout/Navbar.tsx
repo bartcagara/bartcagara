@@ -35,7 +35,7 @@ export const Navbar = memo(() => {
               href="/book"
               className={`${styles.btnCta} ${styles.navSize} text-[10px] px-3 py-2 md:text-sm md:px-6 md:py-3 whitespace-nowrap mx-auto md:mx-0`}
             >
-              BOOK NUTRITION BLUEPRINT CALL
+              BOOK 15-MIN AUDIT
             </Link>
           </>
         )}

@@ -319,7 +319,7 @@ export default function HomePageClient() {
 
           <div className={`${styles.textCenter} ${styles.solutionCtaSection}`}>
             <Link href="/book" className={`${styles.btnCta} ${styles.pageSize}`}>
-              Book Nutrition Blueprint Call
+              BOOK A 15-MIN RAPID AUDIT
             </Link>
           </div>
         </div>
@@ -471,8 +471,7 @@ export default function HomePageClient() {
                     <strong>Duration:</strong> 4 weeks
                   </p>
                   <p>
-                    <strong>Time commitment:</strong> 2-3h training + 30min-1h
-                    coaching per week (+unlimited WhatsApp)
+                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
                   </p>
                 </div>
               </div>
@@ -498,8 +497,7 @@ export default function HomePageClient() {
                     <strong>Duration:</strong> 4 weeks
                   </p>
                   <p>
-                    <strong>Time commitment:</strong> 2-3h training + 30min-1h
-                    coaching per week (+unlimited WhatsApp)
+                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
                   </p>
                 </div>
               </div>
@@ -524,8 +522,7 @@ export default function HomePageClient() {
                     <strong>Duration:</strong> 4 weeks
                   </p>
                   <p>
-                    <strong>Time commitment:</strong> 2-3h training + 30min-1h
-                    coaching per week (+unlimited WhatsApp)
+                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
                   </p>
                 </div>
               </div>
@@ -552,8 +549,7 @@ export default function HomePageClient() {
                     <strong>Duration:</strong> 12 weeks
                   </p>
                   <p>
-                    <strong>Time commitment:</strong> 2-3h training + 30min-1h
-                    coaching per week (+unlimited WhatsApp)
+                    <strong>Time commitment:</strong> 2-3h training + Unlimited Async Access (WhatsApp) + Strategic Check-ins
                   </p>
                 </div>
               </div>
@@ -561,7 +557,7 @@ export default function HomePageClient() {
 
             <div className={`${styles.textCenter} ${styles.systemCtaSection}`}>
               <Link href="/book" className={`${styles.btnCta} ${styles.pageSize}`}>
-                Book Nutrition Blueprint Call
+                BOOK A 15-MIN RAPID AUDIT
               </Link>
             </div>
           </div>
