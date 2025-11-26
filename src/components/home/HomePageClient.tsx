@@ -164,20 +164,7 @@ export default function HomePageClient() {
             </div>
           </div>
 
-          <div className={`${styles.maxW800} ${styles.problemOutcome}`}>
-            <h3 className={`${styles.h3} ${styles.textCenter}`}>
-              THE "DECLINING EXECUTIVE" PARADOX
-            </h3>
-            <p className={styles.textLargeNarrative}>
-              You are successful in every area of life, but this one thing keeps slipping. You feel it. You're masking a lack of energy. You're avoiding photos. You worry that you're losing your "edge."
-            </p>
-            <p className={styles.textLargeNarrative}>
-              The gap between the man you are and the athlete you used to be is widening.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              If you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -284,21 +271,21 @@ export default function HomePageClient() {
 
           <div className={styles.grid2}>
             <div className={styles.bentoCard}>
-              <h3><strong>FOLLOWING RULES</strong></h3>
+              <h3><strong>STOP FOLLOWING RULES</strong></h3>
               <ul className={`${styles.checkList} ${styles.checkListCross}`}>
-                <li>Anxiety: Sweating every menu choice at a steakhouse.</li>
-                <li>Isolation: Declining invites because you're "being good."</li>
-                <li>Confusion: "I have no idea how to eat anymore."</li>
-                <li>Heavy: Feeling sluggish and "soft" even in a suit.</li>
+                <li><strong>Anxiety:</strong> Sweating every menu choice at a steakhouse.</li>
+                <li><strong>Isolation:</strong> Declining invites because you're "being good."</li>
+                <li><strong>Confusion:</strong> "I have no idea how to eat anymore."</li>
+                <li><strong>Lethargy:</strong> Feeling sluggish and "soft" even in a suit.</li>
               </ul>
             </div>
             <div className={styles.bentoCard}>
-              <h3><strong>BUILDING PRINCIPLES</strong></h3>
+              <h3><strong>START BUILDING PRINCIPLES</strong></h3>
               <ul className={styles.checkList}>
-                <li>COMMAND: You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
-                <li>Presence: You have the energy to hike with your kids, not just watch them.</li>
-                <li>Confidence: You look good in your clothes, not just fit into them.</li>
-                <li>LIBERATION: You stop thinking about food 24/7. It runs in the background while you focus on your empire.</li>
+                <li><strong>Command:</strong> You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
+                <li><strong>Presence:</strong> You have the energy to hike with your kids, not just watch them.</li>
+                <li><strong>Confidence:</strong> You look good in your clothes, not just fit into them.</li>
+                <li><strong>Liberation:</strong> You stop thinking about food 24/7. It runs in the background while you focus on your empire.</li>
               </ul>
             </div>
           </div>
@@ -314,10 +301,7 @@ export default function HomePageClient() {
             <h2 className={styles.h2}>
               THEY DIDN'T "FIND MORE TIME." THEY BUILT A BETTER SYSTEM.
             </h2>
-            <p className={`${styles.textLargeNarrative} ${styles.resultsIntro}`}>
-              These guys didn't "find time." They've mastered Convenience-First
-              Fitness.
-            </p>
+
           </div>
 
           <ScrollSection title="Client Transformations">
@@ -380,11 +364,11 @@ export default function HomePageClient() {
               THE "CONVENIENCE-FIRST" OPERATING SYSTEM
             </h2>
             <p className={`${styles.textLargeNarrative} ${styles.textCenter} ${styles.problemSectionIntro}`}>
-              We don't give you a diet. We install a protocol.
+              We don't give you a diet. We build your freedom from them.
             </p>
 
             <div className={`${styles.systemStep} ${styles.stage1}`}>
-              <div className={styles.stepHeader}>Stage 1: The Audit & Reset</div>
+              <div className={styles.stepHeader}>STAGE 1: THE RESET</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
                   We analyze your schedule and build a nutrition protocol that works with your client dinners and travel, not against them. We stop the bleeding.
@@ -398,7 +382,7 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 2: The Momentum Build</div>
+              <div className={styles.stepHeader}>STAGE 2: THE BUILD</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
                   We install flexible training that fits your "randomized" schedule. 20 minutes in a hotel gym? We make it effective. No more treating workouts as a chore.
@@ -412,7 +396,7 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 3: The Stress Test</div>
+              <div className={styles.stepHeader}>STAGE 3: THE STRESS-TEST</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
                   We guide you through real-life chaos—mergers, holidays, crunch time. We prove that your results stick even when life gets crazy.
@@ -426,7 +410,7 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 4: Mastery (The Exit)</div>
+              <div className={styles.stepHeader}>STAGE 4: THE EXIT</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
                   You develop "Fitness Intuition." You stop needing me. You stay fit, sharp, and energetic on autopilot for the rest of your career.
