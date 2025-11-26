@@ -125,9 +125,6 @@ export default function HomePageClient() {
       <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
-            <p className={styles.textLargeNarrative}>
-              <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS YOU ARE STUCK IN:</strong>
-            </p>
             <h2 className={styles.h2}>
               The #1 reason executives fail to get fit? Perfect-Conditions
               Fitness
@@ -135,6 +132,9 @@ export default function HomePageClient() {
             <p className={styles.textLargeNarrative}>
               Whether it's meal prep, strict tracking, or all-or-nothing
               thinking these approaches break the moment life gets messy.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS YOU ARE STUCK IN:</strong>
             </p>
           </div>
 
