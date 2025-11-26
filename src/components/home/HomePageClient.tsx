@@ -54,28 +54,43 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* EXECUTIVE REALITY CHECK */}
+
+      {/* DIVIDER */}
+      <section style={{
+        borderTop: '4px solid var(--bleu-fumee)',
+        margin: '0',
+        padding: '0'
+      }} />
+
+      {/* REALITY CHECK */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h3} ${styles.textCenter}`}>
-              THE EXECUTIVE REALITY CHECK
+              THE REALITY CHECK
             </h2>
-            <p className={styles.textLargeNarrative}>
-              You are winning the game of business, but you are losing the vessel. You feel it when you walk into a boardroom. You’re successful, sharp, and commanding... until you catch your reflection in the glass. Suddenly, you aren't the CEO. You’re the "heavy guy at the table."
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+              <strong>You are crushing it at work. But let's be honest—your body is falling behind.</strong>
+            </p>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+              You feel it when you walk into a meeting. You're sharp and commanding... until you catch your reflection in the glass. You don't look like a leader. You look like the "heavy guy at the table."
+            </p>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+              You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It drives you crazy.
+            </p>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+              So the stress wins. You start sneaking snacks. You feel the brain fog hitting at 3 PM. You have the money to enjoy life, but you don't have the energy to actually do it. You're too tired to hike with your kids or be present with your wife.
+            </p>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+              The gap between the athlete you used to be and the man you are today is getting wider.
             </p>
             <p className={styles.textLargeNarrative}>
-              You try to fix it. You white-knuckle through hunger. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It’s demoralizing.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              So the "low-frequency tension" sets in. You start sneaking snacks when the stress peaks. You feel the brain fog creeping in during afternoon meetings. You have the money to enjoy life, but you don't have the energy to hike with your kids or be present with your wife.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              The gap between the athlete you used to be and the man you are today is getting wider. And deep down, you know that if you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
+              And deep down, you know that if you don't fix this, you aren't going to enjoy the prime of your life. You're just going to feel old.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* PROBLEM SECTION */}
       <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
