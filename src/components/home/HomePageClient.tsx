@@ -125,6 +125,9 @@ export default function HomePageClient() {
       <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
+            <p className={styles.textLargeNarrative}>
+              <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS YOU ARE STUCK IN:</strong>
+            </p>
             <h2 className={styles.h2}>
               The #1 reason executives fail to get fit? Perfect-Conditions
               Fitness
@@ -236,6 +239,9 @@ export default function HomePageClient() {
             <p className={styles.textLargeNarrative}>
               A system that adapts to your life instead of demanding your life
               adapt to it.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              Because every executive schedule is unique, we can not just give you a template. We have to build this around your specific constraints.
             </p>
             <p className={styles.textLargeNarrative}>
               Principles that work at any restaurant, any gym, any event — built
@@ -444,11 +450,10 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
-              The Convenience-First Fitness Coaching Program
+              THE "CONVENIENCE-FIRST" OPERATING SYSTEM
             </h2>
             <p className={`${styles.textLargeNarrative} ${styles.textCenter} ${styles.problemSectionIntro}`}>
-              6 months to get you in the best shape of your life and program you
-              to stay there intuitively.
+              We don't just give you a diet. We install a 4-stage protocol designed to run in the background of your demanding schedule.
             </p>
 
             <div className={`${styles.systemStep} ${styles.stage1}`}>
