@@ -274,7 +274,7 @@ export default function HomePageClient() {
       {/* RESULTS SECTION */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
-          <div className={`${styles.textCenter} ${styles.maxW800}`}>
+          <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>
               THEY DIDN'T "FIND MORE TIME." THEY BUILT A BETTER SYSTEM.
             </h2>
@@ -433,7 +433,7 @@ export default function HomePageClient() {
       <section id="cta" className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ borderBottom: 'none' }}>
         <div className={`${styles.container} ${styles.textCenter}`}>
           <div className={styles.maxW800}>
-            <h3 className={`${styles.h3} ${styles.problemSectionIntro}`}>STOP GUESSING. GET DIAGNOSED.</h3>
+            <h3 className={styles.h3}>STOP GUESSING. GET DIAGNOSED.</h3>
             <p className={styles.textLargeNarrative}>
               You don't need another generic plan. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.
             </p>
