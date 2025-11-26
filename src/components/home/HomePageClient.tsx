@@ -20,7 +20,7 @@ export default function HomePageClient() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
+            THE PROTOCOL THAT ENDS YOUR WEIGHT LOSS RESTART CYCLE FOR GOOD
           </h1>
           <p className={styles.heroSub}>
             You don&apos;t need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for &apos;perfect&apos; diets.
