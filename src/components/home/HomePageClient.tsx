@@ -62,30 +62,27 @@ export default function HomePageClient() {
         padding: '0'
       }} />
 
-      {/* REALITY CHECK */}
+      {/* INTRO */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
-            <h2 className={`${styles.h3} ${styles.textCenter}`}>
-              THE REALITY CHECK
-            </h2>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
-              <strong>You are crushing it at work. But let's be honest—your body is falling behind.</strong>
+            <p className={styles.textLargeNarrative} style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '2.5rem' }}>
+              You are successful. You are disciplined. But let's be honest—your body doesn't reflect that anymore.
             </p>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               You feel it when you walk into a meeting. You're sharp and commanding... until you catch your reflection in the glass. You don't look like a leader. You look like the "heavy guy at the table."
             </p>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It drives you crazy.
             </p>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               So the stress wins. You start sneaking snacks. You feel the brain fog hitting at 3 PM. You have the money to enjoy life, but you don't have the energy to actually do it. You're too tired to hike with your kids or be present with your wife.
             </p>
-            <p className={styles.textLargeNarrative} style={{ marginBottom: '2rem' }}>
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               The gap between the athlete you used to be and the man you are today is getting wider.
             </p>
-            <p className={styles.textLargeNarrative}>
-              And deep down, you know that if you don't fix this, you aren't going to enjoy the prime of your life. You're just going to feel old.
+            <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
+              And deep down, you know the truth: If you don't fix this system now, you aren't going to enjoy your success. You are just going to manage your decline.
             </p>
           </div>
         </div>
@@ -101,8 +98,7 @@ export default function HomePageClient() {
               Fitness
             </h2>
             <p className={styles.textLargeNarrative}>
-              Whether it's meal prep, strict tracking, or all-or-nothing
-              thinking these approaches break the moment life gets messy.
+              You didn't fail because you lack discipline. You failed because you are using "Perfect World" tools in a chaotic executive life.
             </p>
             <p className={styles.textLargeNarrative}>
               <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS IS KILLING YOUR MOMENTUM:</strong>
@@ -157,7 +153,7 @@ export default function HomePageClient() {
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>THE SOLUTION? CONVENIENCE-FIRST FITNESS.</h2>
             <p className={styles.textLargeNarrative}>
-              A system that runs in the background of your life.
+              A system that works no matter what your schedule throws at you.
             </p>
           </div>
 
@@ -170,7 +166,7 @@ export default function HomePageClient() {
                 or progress.
               </p>
               <div className={styles.featureTitle}>
-                STOP RELYING ON MEAL PREP. YOU CAN'T FLY WITH TUPPERWARE.
+                STOP RELYING ON MEAL PREP.
               </div>
               <p className={styles.bentoText}>
                 You can't fly with Tupperware. But you can learn principles for
@@ -268,7 +264,7 @@ export default function HomePageClient() {
                 <li><strong>Command:</strong> You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
                 <li><strong>Presence:</strong> You have the energy to hike with your kids, not just watch them.</li>
                 <li><strong>Confidence:</strong> You look good in your clothes, not just fit into them.</li>
-                <li><strong>Liberation:</strong> You stop thinking about food 24/7. It runs in the background while you focus on your empire.</li>
+                <li><strong>Liberation:</strong> You stop thinking about food 24/7. It runs in the background while you focus on your life.</li>
               </ul>
             </div>
           </div>
