@@ -63,7 +63,7 @@ export default function HomePageClient() {
       }} />
 
       {/* INTRO */}
-      <section className={styles.sectionPadding}>
+      <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <p className={styles.textLargeNarrative} style={{ fontWeight: 'bold', fontSize: '1.25rem', marginBottom: '2.5rem' }}>
@@ -90,7 +90,7 @@ export default function HomePageClient() {
 
 
       {/* PROBLEM SECTION */}
-      <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
+      <section id="problem" className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>
@@ -148,7 +148,7 @@ export default function HomePageClient() {
       </section>
 
       {/* SOLUTION SECTION */}
-      <section id="solution" className={styles.sectionPadding}>
+      <section id="solution" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>THE SOLUTION? CONVENIENCE-FIRST FITNESS.</h2>
@@ -240,7 +240,7 @@ export default function HomePageClient() {
       </section>
 
       {/* TRANSFORMATION PROMISE */}
-      <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
+      <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h2} ${styles.textCenter} ${styles.problemSectionIntro}`}>
