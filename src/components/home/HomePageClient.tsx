@@ -260,7 +260,7 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
             <h2 className={styles.h2}>
-              THEY DIDN'T "FIND MORE TIME." THEY BUILT A BETTER SYSTEM.
+              THESE GUYS DIDN&apos;T &quot;FIND MORE TIME.&quot; THEY BUILT A BETTER SYSTEM.
             </h2>
 
           </div>
