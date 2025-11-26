@@ -38,7 +38,7 @@ export default function HomePageClient() {
       </section>
 
       {/* TRUSTED BY SECTION */}
-      <section className={styles.bgFumee} style={{ paddingTop: '2rem', paddingBottom: '4rem', borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)' }}>
+      <section className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)' }}>
         <div className={styles.container}>
           <div className={styles.trustLogos}>
             <p className={styles.trustLogosTitle}>Trusted by executives from:</p>

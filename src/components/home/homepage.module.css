@@ -7,8 +7,8 @@
 
 .h1 {
     font-weight: 800;
-    font-size: clamp(3rem, 6vw, 5rem); 
-    margin-bottom: 2rem; 
+    font-size: clamp(3rem, 6vw, 5rem);
+    margin-bottom: 2rem;
     line-height: 1.1;
     text-transform: uppercase;
 }
@@ -16,7 +16,7 @@
 .h2 {
     font-weight: 800;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     line-height: 1.2;
     text-transform: uppercase;
     color: var(--bleu-nuit);
@@ -77,8 +77,8 @@
     padding: 0 2rem;
 }
 
-.sectionPadding { 
-    padding: 6rem 0; 
+.sectionPadding {
+    padding: 5rem 0;
 }
 
 .bgFumee {
@@ -87,14 +87,14 @@
     border-bottom: var(--border-thick);
 }
 
-.textCenter { 
-    text-align: center; 
+.textCenter {
+    text-align: center;
 }
 
-.maxW800 { 
-    max-width: 800px; 
-    margin-left: auto; 
-    margin-right: auto; 
+.maxW800 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* =================================================================
@@ -109,7 +109,7 @@
     text-transform: uppercase;
     text-decoration: none;
     border: 2px solid var(--bleu-nuit);
-    border-radius: 0px; 
+    border-radius: 0px;
     transition: var(--transition);
     cursor: pointer;
     text-align: center;
@@ -155,12 +155,12 @@
     padding: 0 2rem;
 }
 
-.navLinks { 
-    display: flex; 
-    gap: 2.5rem; 
+.navLinks {
+    display: flex;
+    gap: 2.5rem;
 }
 
-.navLinks a, 
+.navLinks a,
 .navLink {
     text-decoration: none;
     color: var(--bleu-nuit);
@@ -170,10 +170,10 @@
     position: relative;
 }
 
-.navLinks a:hover, 
-.navLink:hover { 
-    text-decoration: underline; 
-    text-decoration-thickness: 2px; 
+.navLinks a:hover,
+.navLink:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 }
 
 /* =================================================================
@@ -188,20 +188,20 @@
     justify-content: center;
 }
 
-.heroSub { 
-    font-size: 1.5rem; 
-    max-width: 800px; 
-    margin-bottom: 2.5rem; 
-    font-weight: 400; 
-    color: var(--bleu-marine); 
+.heroSub {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+    color: var(--bleu-marine);
 }
 
-.heroNote { 
-    font-size: 0.9rem; 
-    margin-top: 1rem; 
-    font-style: normal; 
-    color: var(--bleu-charron); 
-    opacity: 0.8; 
+.heroNote {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: normal;
+    color: var(--bleu-charron);
+    opacity: 0.8;
 }
 
 .heroCtaContainer {
@@ -218,7 +218,7 @@
     font-weight: 700;
     text-transform: uppercase;
     color: var(--grey-light);
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     letter-spacing: 0.05em;
 }
 
@@ -234,7 +234,7 @@
     height: 24px;
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%) contrast(1.2) brightness(1.05); 
+    filter: grayscale(100%) contrast(1.2) brightness(1.05);
     mix-blend-mode: multiply;
     opacity: 0.7;
     transition: var(--transition);
@@ -288,9 +288,9 @@
     transition: var(--transition);
 }
 
-.trapBox:hover { 
-    transform: translateY(-5px); 
-    box-shadow: var(--shadow-hover); 
+.trapBox:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
 }
 
 .trapBox h3 {
@@ -365,18 +365,18 @@
    GRIDS
    ================================================================= */
 
-.grid3 { 
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 2rem; 
-    align-items: stretch; 
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
 }
 
-.grid2 { 
-    display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem; 
-    align-items: stretch; 
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: stretch;
 }
 
 /* =================================================================
@@ -400,9 +400,9 @@
    HORIZONTAL SCROLL SECTIONS
    ================================================================= */
 
-.scrollSectionWrapper { 
-    position: relative; 
-    margin-bottom: 4rem; 
+.scrollSectionWrapper {
+    position: relative;
+    margin-bottom: 4rem;
 }
 
 .scrollSectionTitle {
@@ -419,24 +419,24 @@
     display: flex;
     gap: 2rem;
     overflow-x: auto;
-    padding: 1rem 0.5rem 2rem 0.5rem; 
+    padding: 1rem 0.5rem 2rem 0.5rem;
     scroll-behavior: smooth;
-    scrollbar-width: none; 
-    -ms-overflow-style: none; 
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-.scrollContainer::-webkit-scrollbar { 
-    display: none; 
+.scrollContainer::-webkit-scrollbar {
+    display: none;
 }
 
-.scrollItem { 
+.scrollItem {
     flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
 
-.scrollItemDm { 
-    flex: 0 0 auto; 
+.scrollItemDm {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
@@ -450,15 +450,15 @@
     display: block;
 }
 
-.scrollItemTransformation { 
-    flex: 0 0 auto; 
+.scrollItemTransformation {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
 }
 
 .scrollBtn {
     position: absolute;
-    top: 55%; 
+    top: 55%;
     transform: translateY(-50%);
     background: var(--white);
     border: var(--border-thick);
@@ -481,25 +481,25 @@
     box-shadow: 2px 2px 0px var(--bleu-charron);
 }
 
-.scrollBtn.left { 
-    left: -1.5rem; 
-    opacity: 0; 
-    pointer-events: none; 
-    transition: opacity 0.3s; 
+.scrollBtn.left {
+    left: -1.5rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
 }
 
-.scrollBtn.right { 
-    right: -1.5rem; 
+.scrollBtn.right {
+    right: -1.5rem;
 }
 
-.scrollBtn.left.visible { 
-    opacity: 1; 
-    pointer-events: auto; 
+.scrollBtn.left.visible {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-.scrollBtn.right.hidden { 
-    opacity: 0; 
-    pointer-events: none; 
+.scrollBtn.right.hidden {
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* =================================================================
@@ -528,25 +528,25 @@
     letter-spacing: 0.05em;
 }
 
-.stepBody { 
-    padding: 2rem; 
+.stepBody {
+    padding: 2rem;
 }
 
-.stepMeta { 
-    border-top: 1px solid #ddd; 
-    margin-top: 1.5rem; 
-    padding-top: 1rem; 
+.stepMeta {
+    border-top: 1px solid #ddd;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
 }
 
-.stepMeta p { 
-    font-size: 0.875rem; 
-    color: var(--grey-light); 
-    font-weight: 500; 
-    margin-bottom: 0.25rem; 
+.stepMeta p {
+    font-size: 0.875rem;
+    color: var(--grey-light);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
 }
 
-.stepMeta strong { 
-    color: var(--bleu-charron); 
+.stepMeta strong {
+    color: var(--bleu-charron);
 }
 
 /* =================================================================
@@ -569,9 +569,9 @@
     cursor: pointer;
 }
 
-.accordionItem:hover { 
-    transform: translate(-2px, -2px); 
-    box-shadow: 6px 6px 0px var(--bleu-nuit); 
+.accordionItem:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--bleu-nuit);
 }
 
 .accordionHeader {
@@ -592,18 +592,18 @@
     transition: background-color 0.3s;
 }
 
-.accordionHeader:hover { 
-    background-color: #DCE5EE; 
+.accordionHeader:hover {
+    background-color: #DCE5EE;
 }
 
-.accordionHeader::after { 
-    content: '+'; 
-    font-size: 1.5rem; 
-    font-weight: 400; 
+.accordionHeader::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
-.accordionHeader.active::after { 
-    content: '-'; 
+.accordionHeader.active::after {
+    content: '-';
 }
 
 .accordionContent {
@@ -614,12 +614,12 @@
     border-top: 0px solid transparent;
 }
 
-.accordionContent.active { 
-    border-top: var(--border-thick); 
+.accordionContent.active {
+    border-top: var(--border-thick);
 }
 
-.accordionBody { 
-    padding: 1.5rem; 
+.accordionBody {
+    padding: 1.5rem;
 }
 
 /* =================================================================
@@ -657,7 +657,7 @@
 }
 
 .faqSectionTitle {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .ctaFinalButton {
@@ -714,21 +714,21 @@
     .navContainer {
         padding: 0 1.5rem;
     }
-    
-    .navLinks { 
+
+    .navLinks {
         gap: 1.5rem;
     }
-    
-    .navLinks a, 
+
+    .navLinks a,
     .navLink {
         font-size: 0.95rem;
     }
-    
+
     .btnCta.navSize {
         padding: 0.65rem 1.25rem;
         font-size: 0.85rem;
     }
-    
+
     /* Hero Section - Match desktop proportion: similar padding top and bottom */
     .hero {
         padding: 6rem 0 6rem 0;
@@ -738,38 +738,39 @@
 
 /* Mobile: 0 - 900px */
 @media (max-width: 900px) {
+
     /* Typography */
     .h1 {
         font-size: clamp(3rem, 11vw, 4rem);
         margin-bottom: 0.5rem;
         line-height: 1;
     }
-    
+
     .h2 {
         font-size: 2rem;
         margin-bottom: 1.5rem;
     }
-    
+
     .h3 {
         font-size: 1.5rem;
         margin-bottom: 1.25rem;
     }
-    
+
     /* Layout */
     .container {
         padding: 0 1.25rem;
     }
-    
-    .grid3, 
-    .grid2 { 
+
+    .grid3,
+    .grid2 {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     /* Hero Section - Symmetric padding relative to trust logos */
-    .hero { 
-        min-height: auto; 
-        text-align: left; 
+    .hero {
+        min-height: auto;
+        text-align: left;
     }
 
     .heroSub {
@@ -781,17 +782,17 @@
     .heroCtaContainer {
         margin-top: 1.5rem;
     }
-    
+
     .trustLogos {
         margin-top: 3rem;
     }
-    
+
     /* Cards */
-    .bentoCard, 
-    .trapBox { 
+    .bentoCard,
+    .trapBox {
         padding: 1.5rem;
     }
-    
+
     .bentoCard h3,
     .trapBox h3 {
         font-size: 1.2rem;
@@ -799,11 +800,11 @@
         overflow-wrap: break-word;
         hyphens: auto;
     }
-    
+
     .trapBox h3 {
         margin: -1.5rem -1.5rem 1.5rem -1.5rem;
     }
-    
+
     /* Text wrapping */
     .textLargeNarrative,
     .trapBoxText,
@@ -812,45 +813,45 @@
         word-wrap: break-word;
         overflow-wrap: break-word;
     }
-    
+
     /* Scroll controls */
-    .scrollBtn { 
+    .scrollBtn {
         width: 2.5rem;
         height: 2.5rem;
         font-size: 1.2rem;
     }
-    
-    .scrollBtn.left { 
-        left: 0.5rem; 
+
+    .scrollBtn.left {
+        left: 0.5rem;
     }
-    
-    .scrollBtn.right { 
-        right: 0.5rem; 
+
+    .scrollBtn.right {
+        right: 0.5rem;
     }
-    
-    .scrollContainer { 
-        padding-bottom: 1rem; 
+
+    .scrollContainer {
+        padding-bottom: 1rem;
     }
-    
+
     /* Calendar */
-    .calEmbed { 
-        min-height: 500px; 
+    .calEmbed {
+        min-height: 500px;
     }
 }
 
 /* Mobile: 0 - 600px */
 @media (max-width: 600px) {
-    .navContainer { 
-        flex-direction: column; 
-        gap: 1.5rem; 
-        padding: 1rem; 
+    .navContainer {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem;
     }
-    
+
     .navLinks {
         display: none;
     }
 
-    .hero { 
+    .hero {
         padding: 5rem 0 5rem 0;
     }
 
