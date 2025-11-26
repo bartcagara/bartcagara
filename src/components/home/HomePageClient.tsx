@@ -54,62 +54,24 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* REALITY CHECK */}
-      <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
-        <div className={styles.container}>
-          <div className={styles.maxW800}>
-            <h2 className={`${styles.h3} ${styles.textCenter}`}>
-              YOU ARE WINNING AT WORK, BUT LOSING YOUR BODY.
-            </h2>
-            <p className={styles.textLargeNarrative}>
-              You are successful in every area of life, but your health keeps slipping.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              You feel it. You're masking a lack of energy. You're avoiding photos.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              The gap between the athlete you used to be and the man you are today is getting wider.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              If you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* NARRATIVE */}
+      {/* EXECUTIVE REALITY CHECK */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
-            <h3 className={styles.h3}>You wanted to get back in shape for a while now...</h3>
+            <h2 className={`${styles.h3} ${styles.textCenter}`}>
+              THE EXECUTIVE REALITY CHECK
+            </h2>
             <p className={styles.textLargeNarrative}>
-              You've tried restrictive diets, meal prep, fitness challenges. "This
-              time will be different." energy.
+              You are winning the game of business, but you are losing the vessel. You feel it when you walk into a boardroom. You’re successful, sharp, and commanding... until you catch your reflection in the glass. Suddenly, you aren't the CEO. You’re the "heavy guy at the table."
             </p>
             <p className={styles.textLargeNarrative}>
-              It all worked... for two weeks.
+              You try to fix it. You white-knuckle through hunger. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It’s demoralizing.
             </p>
             <p className={styles.textLargeNarrative}>
-              Then client dinner Thursday. Weekend plans. Travel next week.
-            </p>
-            <p className={styles.textLargeNarrative}>The plan died.</p>
-            <p className={styles.textLargeNarrative}>
-              Monday morning? Another restart.
-            </p>
-            <p className={styles.textLargeNarrative}>You started thinking...</p>
-            <p className={styles.textLargeNarrative}>
-              "Is it my discipline? Do I need a better diet? More willpower?"
-            </p>
-            <p className={styles.textLargeNarrative}>But the real problem?</p>
-            <p className={styles.textLargeNarrative}>
-              <strong>
-                You're stuck in Perfect-Conditions Fitness — rigid approaches that
-                only work when your life is perfectly controlled.
-              </strong>
+              So the "low-frequency tension" sets in. You start sneaking snacks when the stress peaks. You feel the brain fog creeping in during afternoon meetings. You have the money to enjoy life, but you don't have the energy to hike with your kids or be present with your wife.
             </p>
             <p className={styles.textLargeNarrative}>
-              And your life is constant chaos — dinners with clients, packed
-              calendar, no breathing room.
+              The gap between the athlete you used to be and the man you are today is getting wider. And deep down, you know that if you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
             </p>
           </div>
         </div>
