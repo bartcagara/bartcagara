@@ -1,10 +1,7 @@
 import type { FAQItems } from "./types";
 
 export const FAQ_ITEMS: FAQItems = [
-  {
-    q: "What's the investment?",
-    a: "<p><strong>Stage 1: €1,800 (4 weeks)</strong><br>Your entry into the program. We build your operating system — nutrition, training, and full support through the first month.</p><br><p><strong>Stages 2-4: €1,080/month (5 months)</strong><br>We refine based on what's working, solve roadblocks, and stress-test everything through real life — travel, dinners, schedule chaos.</p>",
-  },
+
   {
     q: "How is this different from other programs?",
     a: "<p>Most programs are built for perfect conditions — meal prep, strict tracking, rigid schedules. This is built for chaos. You're not following a diet. You're learning principles that work in any restaurant, any gym, any situation. The goal isn't to give you rules. It's to make fitness intuitive.</p>",
