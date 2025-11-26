@@ -240,29 +240,32 @@ export default function HomePageClient() {
       {/* TRANSFORMATION PROMISE */}
       <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
-          <div className={styles.maxW800}>
-            <h2 className={`${styles.h2} ${styles.textCenter} ${styles.problemSectionIntro}`}>
+          <div className={`${styles.maxW800} ${styles.textCenter} ${styles.problemSectionIntro}`}>
+            <h2 className={styles.h2}>
               THE SHIFT
             </h2>
+            <p className={styles.textLargeNarrative}>
+              You are no longer trapped in a rigid system designed for someone else. You gain the freedom to build a flexible protocol that works for you.
+            </p>
           </div>
 
           <div className={styles.grid2}>
             <div className={styles.bentoCard}>
               <h3><strong>STOP FOLLOWING RULES</strong></h3>
               <ul className={`${styles.checkList} ${styles.checkListCross}`}>
-                <li><strong>Anxiety:</strong> Sweating every menu choice at a steakhouse.</li>
-                <li><strong>Isolation:</strong> Declining invites because you're "being good."</li>
-                <li><strong>Confusion:</strong> "I have no idea how to eat anymore."</li>
-                <li><strong>Lethargy:</strong> Feeling sluggish and "soft" even in a suit.</li>
+                <li><strong>Anxiety:</strong> You sweat every menu choice at a steakhouse.</li>
+                <li><strong>Isolation:</strong> You decline invites because you're "being good."</li>
+                <li><strong>Confusion:</strong> You have "no idea how to eat anymore."</li>
+                <li><strong>Lethargy:</strong> You feel sloppy and "soft" even in a suit.</li>
               </ul>
             </div>
             <div className={styles.bentoCard}>
               <h3><strong>START BUILDING PRINCIPLES</strong></h3>
               <ul className={styles.checkList}>
-                <li><strong>Command:</strong> You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
-                <li><strong>Presence:</strong> You have the energy to hike with your kids, not just watch them.</li>
+                <li><strong>Control:</strong> You walk into a steakhouse or airport lounge and know exactly how to eat without stress.</li>
+                <li><strong>Presence:</strong> You have the energy to get silly with your kids, not just watch them.</li>
                 <li><strong>Confidence:</strong> You look good in your clothes, not just fit into them.</li>
-                <li><strong>Liberation:</strong> You stop thinking about food 24/7. It runs in the background while you focus on your life.</li>
+                <li><strong>Freedom:</strong> You stop thinking about food 24/7. You focus on your life and make intuitive choices by default.</li>
               </ul>
             </div>
           </div>
