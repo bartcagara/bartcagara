@@ -20,10 +20,10 @@ export default function HomePageClient() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            THE "CONVENIENCE-FIRST" SYSTEM THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
+            THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
           </h1>
           <p className={styles.heroSub}>
-            You don't need more discipline. You need a protocol designed for the executive reality: fluctuating schedules, client dinners, and zero bandwidth for "perfect" diets.
+            You don&apos;t need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for &apos;perfect&apos; diets.
           </p>
 
           <div className={styles.heroCtaContainer}>
@@ -435,19 +435,19 @@ export default function HomePageClient() {
           <div className={styles.maxW800}>
             <h3 className={styles.h3}>STOP GUESSING. GET DIAGNOSED.</h3>
             <p className={styles.textLargeNarrative}>
-              You don't need another generic plan. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.
+              You don&apos;t need another PDF diet. You need to know exactly <em>why</em> your previous attempts failed so you can stop repeating the cycle.
             </p>
             <p className={styles.textLargeNarrative}>
               <strong>What happens on this 15-minute Audit?</strong>
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              1. <strong>We Audit Your Chaos:</strong> I look at your actual schedule constraints and "friction points."
+              1. <strong>We Audit Your Reality:</strong> I look at your actual calendar—your travel load, client dinners, and stress peaks.
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              2. <strong>We Spot The Leak:</strong> I tell you exactly which "Trap" is killing your progress.
+              2. <strong>We Spot The Leak:</strong> I tell you exactly which &quot;Trap&quot; is killing your progress.
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              3. <strong>We Build The Fix:</strong> If I can help, I'll show you how. If not, you leave with clarity.
+              3. <strong>We Build The Fix:</strong> You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate strategy call.
             </p>
           </div>
           <Link href="/book" className={`${styles.btnCta} ${styles.pageSize} ${styles.ctaFinalButton}`}>
