@@ -160,74 +160,52 @@ export default function HomePageClient() {
 
           <div className={styles.grid2}>
             <div className={styles.bentoCard}>
-              <h3><strong>SMART FOOD DECISIONS ANYWHERE</strong></h3>
+              <h3><strong>TOTAL NUTRITIONAL COMMAND</strong></h3>
               <p className={styles.bentoIntro}>
-                You eat out constantly. We'll teach you how to make smart
-                decisions in any restaurant — without sacrificing the experience
-                or progress.
+                You eat out constantly. You travel. You have a life. We build a protocol that absorbs these realities instead of breaking under them.
               </p>
               <div className={styles.featureTitle}>
-                STOP RELYING ON MEAL PREP.
+                NO MEAL PREP. NO TUPPERWARE.
               </div>
               <p className={styles.bentoText}>
-                You can't fly with Tupperware. But you can learn principles for
-                making smart calls anywhere — airports, client dinners, family
-                events. You'll finally understand what works.
+                You can't bring plastic boxes to a board meeting. We build a system based on principles, not prep. You will know exactly how to fuel your body in an airport lounge, a gas station, or a Michelin-star restaurant.
               </p>
               <div className={styles.featureTitle}>
-                Build intuition instead of following rigid diets
+                OWN THE MENU
               </div>
               <p className={styles.bentoText}>
-                Strict diets work at home. Then you go out and everything
-                breaks. You'll learn to optimize your orders and make smart
-                nutrition intuitive — whether it's steakhouse, Italian, Indian,
-                or Subway.
+                Stop stressing over the bread basket. You will learn to navigate client dinners with zero anxiety—ordering meals that satisfy you and respect your goals, without looking like the "diet guy" at the table.
               </p>
               <div className={styles.featureTitle}>
-                MAKE CLIENT DINNERS WORK FOR YOU, NOT AGAINST YOU.
+                ELIMINATE THE BRAIN FOG
               </div>
               <p className={styles.bentoText}>
-                Eating out doesn't equal restart anymore. It's where you
-                actually learn nutrition — in real restaurants, being with
-                people, not from diets. You'll enjoy yourself and never let diet
-                culture guilt-trip you again.
+                Most executives run on caffeine and stress. We fix your nutrition to stabilize your energy. No more 3 PM crash. No more tension headaches. Just steady, lethal focus all day.
               </p>
             </div>
 
             <div className={styles.bentoCard}>
-              <h3><strong>EFFICIENT TRAINING IN ANY GYM</strong></h3>
+              <h3><strong>HIGH-ROI PHYSIQUE CONSTRUCTION</strong></h3>
               <p className={styles.bentoIntro}>
-                This isn't another workout plan that breaks when you get busy.
-                It's a training system designed to work when perfect conditions
-                disappear.
+                You don't have 90 minutes to waste in the gym. We strip away the junk volume and focus on the 20% of movements that drive 80% of the result.
               </p>
               <div className={styles.featureTitle}>
-                Train efficiently with any equipment
+                RECLAIM THE ATHLETIC TAPER
               </div>
               <p className={styles.bentoText}>
-                Hotel gym only has dumbbells up to 50lbs? You learn how to make
-                that work. No leg press machine? Goblet squats get the job done.
-                You're never stuck thinking "I can't train today because the gym
-                doesn't have X."
+                We don't train to "burn calories." We train to build the V-shape physique that commands respect. Broad shoulders. Lean waist. You will look as sharp in a t-shirt as you do in a suit.
               </p>
               <div className={styles.featureTitle}>
-                Build muscle and avoid injuries by mastering exercise form
+                THE "HOTEL GYM" PROTOCOL
               </div>
               <p className={styles.bentoText}>
-                No more going to the gym and seeing no results. You'll master
-                exercise form through detailed video feedback — learning to
-                challenge your muscles instead of beating up your joints. We
-                pick exercises that fit your structure and keep you safe.
+                Gym closed? Only have 30lb dumbbells? No problem. You will learn how to get a world-class workout anywhere. Your progress never stops just because you changed time zones.
               </p>
               <div className={styles.featureTitle}>
-                Get coached through the chaos and stay consistent
+                FIX THE JOINT PAIN
               </div>
               <p className={styles.bentoText}>
-                You're never guessing what to do. Flight delayed and you miss
-                your workout? We adjust. Hotel gym closed? Here's your room
-                workout. Tweaked your shoulder? We modify the program. When
-                disruptions hit, you know exactly how to adapt and keep
-                progressing.
+                We fix the knee pain and back aches that come from sitting at a desk for 12 hours. We build a body that is durable, pain-free, and ready to play with your kids on the weekend.
               </p>
             </div>
           </div>
