@@ -23,7 +23,7 @@ export default function HomePageClient() {
             THE "CONVENIENCE-FIRST" SYSTEM THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
           </h1>
           <p className={styles.heroSub}>
-            You don't need more discipline. You need a system designed for executives with schedules too chaotic for conventional diets.
+            You don't need more discipline. You need a protocol designed for the executive reality: fluctuating schedules, client dinners, and zero bandwidth for "perfect" diets.
           </p>
 
           <div className={styles.heroCtaContainer}>
@@ -125,107 +125,70 @@ export default function HomePageClient() {
       <section id="problem" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
-            <h2 className={styles.h2}>
-              The #1 reason executives fail to get fit? Perfect-Conditions
-              Fitness
-            </h2>
             <p className={styles.textLargeNarrative}>
-              Whether it's meal prep, strict tracking, or all-or-nothing
-              thinking these approaches break the moment life gets messy.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS YOU ARE STUCK IN:</strong>
+              <strong>WE WILL IDENTIFY WHICH OF THESE 3 TRAPS IS KILLING YOUR MOMENTUM:</strong>
             </p>
           </div>
 
           <div className={styles.grid3}>
             <div className={styles.trapBox}>
-              <h3><strong>THE MEAL PREP TRAP</strong></h3>
+              <h3><strong>THE "PERFECTIONIST" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>Sunday:</strong> Tupperware stacked high. You feel in
-                  control.
+                  <strong>The Rule:</strong> You think you need to be 100% "on" or you've failed.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>Wednesday:</strong> Client dinner hits. You can't
-                  bring your plastic box.
+                  <strong>The Reality:</strong> One client dinner hits. You can't control the menu. You eat something "bad."
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>Friday:</strong> The prep dies in the fridge. You
-                  order takeout.
+                  <strong>The Spiral:</strong> "One bad meal turns into a bad day. A bad day turns into a lost week." You restart Monday. Again.
                 </p>
               </div>
-              <p className={styles.trapBoxFooter}>
-                <strong>"Guess I'll restart Monday."</strong>
-              </p>
             </div>
 
             <div className={styles.trapBox}>
-              <h3><strong>THE TRACKING TRAP</strong></h3>
+              <h3><strong>THE "STARVATION" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>At Home:</strong> You count every macro religiously.
+                  <strong>The Effort:</strong> You rely on willpower. You go to bed hungry. You sneak snacks when stress hits.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>Steakhouse:</strong> Hidden oils. Unknown sauce. You
-                  panic.
+                  <strong>The Frustration:</strong> You wake up the next morning, step on the scale, and you're the same weight.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Choice:</strong> Order sad dry chicken or say
-                  "f*ck it" and eat everything.
+                  <strong>The Result:</strong> You feel like you're working hard for nothing. Eventually, your body quits on you.
                 </p>
               </div>
-              <p className={styles.trapBoxFooter}>
-                <strong>"I'll get back on track next week."</strong>
-              </p>
             </div>
 
             <div className={styles.trapBox}>
-              <h3><strong>THE ALL-OR-NOTHING TRAP</strong></h3>
+              <h3><strong>THE "CHAOS" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Rule:</strong> You're either 100% perfect or
-                  completely off.
+                  <strong>The Plan:</strong> Works great when you're at home with a routine.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Trigger:</strong> One missed workout. One
-                  unplanned drink.
+                  <strong>The Reality:</strong> Travel hits. A deal closes. You get chained to your desk. Randomization takes over.
                 </p>
                 <p className={styles.trapBoxText}>
-                  <strong>The Spiral:</strong> "Diet is blown." The weekend
-                  binge begins.
+                  <strong>The Outcome:</strong> Your fitness routine collapses because it requires a perfect schedule that doesn't exist.
                 </p>
               </div>
-              <p className={styles.trapBoxFooter}>
-                <strong>Every minor slip = full reset.</strong>
-              </p>
             </div>
           </div>
 
           <div className={`${styles.maxW800} ${styles.problemOutcome}`}>
+            <h3 className={`${styles.h3} ${styles.textCenter}`}>
+              THE "DECLINING EXECUTIVE" PARADOX
+            </h3>
             <p className={styles.textLargeNarrative}>
-              <strong>
-                The outcome? You become Physically Unfit and Mentally Trapped.
-              </strong>
+              You are successful in every area of life, but this one thing keeps slipping. You feel it. You're masking a lack of energy. You're avoiding photos. You worry that you're losing your "edge."
             </p>
             <p className={styles.textLargeNarrative}>
-              Always restarting. Always getting softer. Watching other
-              executives who figured it out.
+              The gap between the man you are and the athlete you used to be is widening.
             </p>
             <p className={styles.textLargeNarrative}>
-              You have the means. You have the discipline.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              But forcing rigid nutrition rules and 20-year-old training logic
-              on a 40+ body doesn't work anymore...
-            </p>
-            <p className={styles.textLargeNarrative}>
-              So you get more tired, not more energized. Too exhausted to be
-              active with your kids.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              You're disciplined everywhere else but here? You're the only one
-              who can't crack this...
+              If you don't fix the system, you will spend your 40s managing decline instead of maximizing vitality.
             </p>
           </div>
         </div>
@@ -235,17 +198,9 @@ export default function HomePageClient() {
       <section id="solution" className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemSectionIntro}`}>
-            <h2 className={styles.h2}>The solution? Convenience-First Fitness</h2>
+            <h2 className={styles.h2}>THE SOLUTION? CONVENIENCE-FIRST FITNESS.</h2>
             <p className={styles.textLargeNarrative}>
-              A system that adapts to your life instead of demanding your life
-              adapt to it.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              Because every executive schedule is unique, we can not just give you a template. We have to build this around your specific constraints.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              Principles that work at any restaurant, any gym, any event — built
-              for execs who eat out constantly because that's their reality.
+              A system that runs in the background of your life.
             </p>
           </div>
 
@@ -336,47 +291,32 @@ export default function HomePageClient() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
-              Become Physically Fit and Mentally Free
+              OLD WAY VS. NEW WAY
             </h2>
           </div>
 
           <div className={styles.grid2}>
             <div className={styles.bentoCard}>
-              <h3><strong>WHAT YOU GAIN</strong></h3>
-              <ul className={styles.checkList}>
-                <li>Eating at any restaurant without anxiety</li>
-                <li>Traveling without destroying progress</li>
-                <li>Making smart decisions without tracking</li>
-                <li>Maintaining healthy body weight intuitively</li>
-                <li>Escaping the restart cycle for good</li>
+              <h3><strong>OLD WAY (PAIN)</strong></h3>
+              <ul className={`${styles.checkList} ${styles.checkListCross}`}>
+                <li>Anxiety: Sweating every menu choice at a steakhouse.</li>
+                <li>Isolation: Declining invites because you're "being good."</li>
+                <li>Confusion: "I have no idea how to eat anymore."</li>
+                <li>Heavy: Feeling sluggish and "soft" even in a suit.</li>
               </ul>
             </div>
             <div className={styles.bentoCard}>
-              <h3><strong>WHAT YOU ESCAPE</strong></h3>
-              <ul className={`${styles.checkList} ${styles.checkListCross}`}>
-                <li>Declining invitations (afraid of going off-plan)</li>
-                <li>Gaining weight with every trip</li>
-                <li>Sweating every bite at a restaurant</li>
-                <li>Struggling to stay lean without rigid rules</li>
-                <li>Restarting every Monday</li>
+              <h3><strong>NEW WAY (GAIN)</strong></h3>
+              <ul className={styles.checkList}>
+                <li>Intuition: You know exactly what to order at the airport, the gala, or UberEats.</li>
+                <li>Presence: You have the energy to hike with your kids, not just watch them.</li>
+                <li>Confidence: You look good in your clothes, not just fit into them.</li>
+                <li>Automatic: You maintain your weight without thinking about it.</li>
               </ul>
             </div>
           </div>
 
-          <div className={`${styles.textCenter} ${styles.maxW800} ${styles.problemOutcome}`}>
-            <p className={styles.textLargeNarrative}>
-              <strong>
-                You're Physically Fit because you finally know how your body
-                works.
-              </strong>
-            </p>
-            <p className={styles.textLargeNarrative}>
-              <strong>
-                You're Mentally Free because you're making intuitive choices
-                that feel good.
-              </strong>
-            </p>
-          </div>
+
         </div>
       </section>
 
@@ -453,25 +393,16 @@ export default function HomePageClient() {
               THE "CONVENIENCE-FIRST" OPERATING SYSTEM
             </h2>
             <p className={`${styles.textLargeNarrative} ${styles.textCenter} ${styles.problemSectionIntro}`}>
-              We don't just give you a diet. We install a 4-stage protocol designed to run in the background of your demanding schedule.
+              We don't give you a diet. We install a protocol.
             </p>
 
             <div className={`${styles.systemStep} ${styles.stage1}`}>
-              <div className={styles.stepHeader}>Stage 1: Foundation (Weeks 1-4)</div>
+              <div className={styles.stepHeader}>Stage 1: The Audit & Reset</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  Build your operating system:
+                  We analyze your schedule and build a nutrition protocol that works with your client dinners and travel, not against them. We stop the bleeding.
                 </p>
-                <ul className={styles.checkList}>
-                  <li>Your go-to meals at any restaurant</li>
-                  <li>Strength training fundamentals</li>
-                  <li>Proper exercise form for injury-free progress</li>
-                </ul>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Outcome:</strong> Clear plan + confidence to execute
-                    anywhere.
-                  </p>
                   <p>
                     <strong>Duration:</strong> 4 weeks
                   </p>
@@ -483,21 +414,12 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 2: Momentum (Weeks 5-8)</div>
+              <div className={styles.stepHeader}>Stage 2: The Momentum Build</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  Refine and adapt:
+                  We install flexible training that fits your "randomized" schedule. 20 minutes in a hotel gym? We make it effective. No more treating workouts as a chore.
                 </p>
-                <ul className={styles.checkList}>
-                  <li>Optimize nutrition and training based on results</li>
-                  <li>Solve roadblocks (travel, sickness, schedule changes)</li>
-                  <li>Build consistency without perfect conditions</li>
-                </ul>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Outcome:</strong> Steady progress without stopping and
-                    starting.
-                  </p>
                   <p>
                     <strong>Duration:</strong> 4 weeks
                   </p>
@@ -509,20 +431,12 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 3: Optimization (Weeks 9-12)</div>
+              <div className={styles.stepHeader}>Stage 3: The Stress Test</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  Dial in the details:
+                  We guide you through real-life chaos—mergers, holidays, crunch time. We prove that your results stick even when life gets crazy.
                 </p>
-                <ul className={styles.checkList}>
-                  <li>Sleep quality and recovery</li>
-                  <li>Daily energy and mental clarity</li>
-                  <li>Stress management</li>
-                </ul>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Outcome:</strong> Fitness stops feeling like work.
-                  </p>
                   <p>
                     <strong>Duration:</strong> 4 weeks
                   </p>
@@ -534,22 +448,12 @@ export default function HomePageClient() {
             </div>
 
             <div className={styles.systemStep}>
-              <div className={styles.stepHeader}>Stage 4: Mastery (Weeks 12-24)</div>
+              <div className={styles.stepHeader}>Stage 4: Mastery (The Exit)</div>
               <div className={styles.stepBody}>
                 <p className={styles.stepTitle}>
-                  Stress-test everything:
+                  You develop "Fitness Intuition." You stop needing me. You stay fit, sharp, and energetic on autopilot for the rest of your career.
                 </p>
-                <ul className={styles.checkList}>
-                  <li>Heavy travel weeks</li>
-                  <li>Back-to-back dinners</li>
-                  <li>Real-life chaos</li>
-                </ul>
                 <div className={styles.stepMeta}>
-                  <p>
-                    <strong>Outcome:</strong> You're eating and training
-                    intuitively. Physically Fit. Mentally Free.
-                  </p>
-                  <p>(My goal? To make myself obsolete.)</p>
                   <p>
                     <strong>Duration:</strong> 12 weeks
                   </p>
@@ -595,11 +499,23 @@ export default function HomePageClient() {
           <div className={styles.maxW800}>
             <h3 className={styles.h3}>STOP GUESSING. GET DIAGNOSED.</h3>
             <p className={styles.textLargeNarrative}>
-              You don't need another generic diet plan. We audit your schedule, spot the leak, and decide the fix.
+              You don't need another generic plan. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              <strong>What happens on this 15-minute Audit?</strong>
+            </p>
+            <p className={styles.textLargeNarrative}>
+              1. <strong>We Audit Your Chaos:</strong> I look at your actual schedule constraints and "friction points."
+            </p>
+            <p className={styles.textLargeNarrative}>
+              2. <strong>We Spot The Leak:</strong> I tell you exactly which "Trap" is killing your progress.
+            </p>
+            <p className={styles.textLargeNarrative}>
+              3. <strong>We Decide The Fix:</strong> If I can help, I'll show you how. If not, you leave with clarity.
             </p>
           </div>
           <Link href="/book" className={`${styles.btnCta} ${styles.pageSize} ${styles.ctaFinalButton}`}>
-            BOOK A 15-MIN RAPID AUDIT
+            BOOK YOUR 15-MIN AUDIT
           </Link>
         </div>
       </section>
