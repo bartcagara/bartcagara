@@ -20,7 +20,7 @@ export default function HomePageClient() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
+            THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD
           </h1>
           <p className={styles.heroSub}>
             You don&apos;t need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for &apos;perfect&apos; diets.
@@ -38,7 +38,7 @@ export default function HomePageClient() {
       </section>
 
       {/* TRUSTED BY SECTION */}
-      <section className={styles.bgFumee} style={{ paddingTop: '3rem', paddingBottom: '3rem', borderTop: '1px solid var(--grey-light)', borderBottom: '1px solid var(--grey-light)' }}>
+      <section style={{ padding: '3rem 0' }}>
         <div className={styles.container}>
           <div className={styles.trustLogos} style={{ marginTop: 0 }}>
             <p className={styles.trustLogosTitle}>Trusted by executives from:</p>
@@ -77,7 +77,7 @@ export default function HomePageClient() {
               So the stress wins. Your diet is a mess, so you raid the fridge at night. Your training? Non-existent.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
-              You should be enjoying life at this stage of your career, but you don't have the energy to actually do it. Hell, you're too worn out to even play with your kids.
+              You should be enjoying life at this stage, but you don't have the energy to actually do it. Hell, you're too worn out to even play with your kids.
             </p>
             <p className={styles.textLargeNarrative} style={{ marginBottom: '2.5rem' }}>
               The gap between the athlete you used to be and the man you are today is getting wider.
@@ -235,8 +235,8 @@ export default function HomePageClient() {
               <h3><strong>STOP FOLLOWING RULES</strong></h3>
               <ul className={`${styles.checkList} ${styles.checkListCross}`}>
                 <li><strong>Anxiety:</strong> You sweat every menu choice at a steakhouse.</li>
-                <li><strong>Isolation:</strong> You decline invites because you're "being good."</li>
-                <li><strong>Confusion:</strong> You have "no idea how to eat anymore."</li>
+                <li><strong>Isolation:</strong> You decline invites because you're "being disciplined."</li>
+                <li><strong>Confusion:</strong> You have tried so many diets and programs, you have "no idea how to eat anymore."</li>
                 <li><strong>Lethargy:</strong> You feel frumpy and soft, even in a tailored suit.</li>
               </ul>
             </div>
@@ -318,7 +318,7 @@ export default function HomePageClient() {
       </section>
 
       {/* SYSTEM SECTION */}
-      <section id="system" className={`${styles.sectionPadding} ${styles.bgFumee}`}>
+      <section id="system" className={`${styles.sectionPadding} ${styles.bgFumee}`} style={{ paddingBottom: '3rem' }}>
         <div className={styles.container}>
           <div className={`${styles.maxW800} ${styles.textCenter} ${styles.problemSectionIntro}`}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
