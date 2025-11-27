@@ -3,64 +3,34 @@ import styles from "@/components/home/homepage.module.css";
 export default function BookPage() {
   return (
     <>
-      {/* SECTION 1: Book Your Nutrition Blueprint Call */}
+      {/* SECTION 1: Header */}
       <section className={styles.sectionPadding}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h1 className={`${styles.h1} ${styles.textCenter}`}>
-              Book Your Nutrition Blueprint Call
+              SCHEDULE YOUR 15-MIN EXECUTIVE AUDIT
             </h1>
+            <p className={`${styles.textLargeNarrative} ${styles.textCenter}`} style={{ marginTop: '1.5rem' }}>
+              No sales pitch. No fluff. A rapid diagnostic to identify exactly why your previous attempts have failed.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* SECTION 2: Make sure this fits you */}
-      <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
+      {/* SECTION 2: What to Expect */}
+      <section className={`${styles.sectionPadding} bg-slate-50`}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
-            <h2 className={styles.h3}>Make sure this fits you before booking:</h2>
-            <ul className={`${styles.checkList} ${styles.checkListLarge}`}>
-              <li>
-                You're an executive with a chaotic schedule — and you're done
-                restarting every Monday.
-              </li>
-              <li>
-                You've outgrown Perfect-Conditions Fitness and want an approach that
-                survives your actual life.
-              </li>
-              <li>
-                You used to be in good shape — and you're done watching yourself get
-                softer.
-              </li>
-              <li>
-                You're serious about making a change — not just casually curious.
-              </li>
-            </ul>
+            <h2 className={styles.h3}>What happens on this 15-minute Audit?</h2>
 
-            <h3 className={`${styles.h3} ${styles.bookH3Spacing}`}>The call:</h3>
-            <p className={styles.textLargeNarrative}>
-              We'll talk for 30 minutes so I can understand your situation and goals.
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left', marginTop: '2rem' }}>
+              <strong>1. We Audit Your Reality:</strong> I look at your actual calendar—your travel load, client dinners, and stress peaks.
             </p>
-            <p className={styles.textLargeNarrative}>
-              If it's a strong fit, I'll show you how we can build your transformation
-              together.
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
+              <strong>2. We Spot The Leak:</strong> I tell you exactly which "Trap" is killing your momentum.
             </p>
-            <p className={styles.textLargeNarrative}>
-              Either way, you'll leave with total clarity on what's been holding you
-              back — and how to fix it.
-            </p>
-
-            <h3 className={`${styles.h3} ${styles.bookH3Spacing}`}>
-              What you get — regardless:
-            </h3>
-            <p className={styles.textLargeNarrative}>
-              Your personalized Nutrition Blueprint created live on the call. You walk
-              away with a plan that fits your lifestyle — no meal prep, no tracking,
-              just principles that work anywhere.
-            </p>
-            <p className={styles.textLargeNarrative}>
-              Even if we don't work together, you leave with something tangible to
-              kick-start your comeback.
+            <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
+              <strong>3. We Build The Fix:</strong> You leave with one immediate, high-impact adjustment you can use tonight.
             </p>
           </div>
         </div>
@@ -71,19 +41,26 @@ export default function BookPage() {
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={`${styles.h2} ${styles.textCenter}`}>
-              Lock In Your Nutrition Blueprint
+              Lock In Your Audit
             </h2>
 
             <div className={styles.calEmbed}>
-              <iframe
-                src="https://app.cal.com/bartcagara/blueprint-call?layout=column_view"
-                width="100%"
-                height="800"
-                frameBorder="0"
-                className={styles.calIframe}
-                title="Book a Nutrition Blueprint Call"
-                loading="lazy"
-              />
+              {/* Cal inline embed code begins */}
+              <div style={{ width: '100%', height: '100%', overflow: 'scroll' }} id="my-cal-inline-audit-call"></div>
+              <script type="text/javascript" dangerouslySetInnerHTML={{
+                __html: `
+                (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+                Cal("init", "audit-call", {origin:"https://app.cal.com"});
+
+                Cal.ns["audit-call"]("inline", {
+                  elementOrSelector:"#my-cal-inline-audit-call",
+                  config: {"layout":"column_view"},
+                  calLink: "bartcagara/audit-call",
+                });
+
+                Cal.ns["audit-call"]("ui", {"hideEventTypeDetails":false,"layout":"column_view"});
+              `}} />
+              {/* Cal inline embed code ends */}
             </div>
           </div>
         </div>
