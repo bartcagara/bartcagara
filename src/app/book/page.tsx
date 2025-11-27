@@ -18,7 +18,7 @@ export default function BookPage() {
       </section>
 
       {/* SECTION 2: What to Expect */}
-      <section className={`${styles.sectionPadding} bg-slate-50`}>
+      <section className={`${styles.sectionPadding} ${styles.bgFumee}`}>
         <div className={styles.container}>
           <div className={styles.maxW800}>
             <h2 className={styles.h3}>What happens on this 15-minute Audit?</h2>
