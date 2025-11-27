@@ -441,13 +441,13 @@ export default function HomePageClient() {
               <strong>What happens on this 15-minute Audit?</strong>
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              1. <strong>We Audit Your Reality:</strong> I look at your actual calendar—your travel load, client dinners, and stress peaks.
+              <strong>1. We Audit Your Reality:</strong> I look at your actual calendar—your travel load, client dinners, and stress peaks.
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              2. <strong>We Spot The Leak:</strong> I tell you exactly which &quot;Trap&quot; is killing your progress.
+              <strong>2. We Spot The Leak:</strong> I tell you exactly which &quot;Trap&quot; is killing your progress.
             </p>
             <p className={styles.textLargeNarrative} style={{ textAlign: 'left' }}>
-              3. <strong>We Build The Fix:</strong> You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate strategy call.
+              <strong>3. We Build The Fix:</strong> You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate strategy call.
             </p>
           </div>
           <Link href="/book" className={`${styles.btnCta} ${styles.pageSize} ${styles.ctaFinalButton}`}>
