@@ -20,7 +20,7 @@ export default function HomePageClient() {
       <section className={styles.hero}>
         <div className={styles.container}>
           <h1 className={styles.h1}>
-            THE PROTOCOL THAT ENDS YOUR WEIGHT LOSS RESTART CYCLE FOR GOOD
+            THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD.
           </h1>
           <p className={styles.heroSub}>
             You don&apos;t need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for &apos;perfect&apos; diets.
@@ -123,7 +123,7 @@ export default function HomePageClient() {
               <h3><strong>THE "STARVATION" TRAP</strong></h3>
               <div>
                 <p className={styles.trapBoxText}>
-                  <strong>The Effort:</strong> You white-knuckle Monday through Thursday. But by Friday, your willpower is gone. You binge all weekend.
+                  <strong>The Effort:</strong> You white-knuckle Monday through Thursday. But by Friday, your willpower is gone. Your weekend is a disaster.
                 </p>
                 <p className={styles.trapBoxText}>
                   <strong>The Reality:</strong> You step on the scale. Nothing changed. You erased 4 days of progress in 4 hours. Eventually, your patience quits.
