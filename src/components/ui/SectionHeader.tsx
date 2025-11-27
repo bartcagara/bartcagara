@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import styles from "@/components/home/homepage.module.css";
 
 interface SectionHeaderProps {
@@ -18,7 +18,7 @@ export function SectionHeader({
     className = "",
     centered = false,
 }: SectionHeaderProps) {
-    const Tag = `h${level}` as keyof JSX.IntrinsicElements;
+    const Tag = `h${level}` as "h1" | "h2" | "h3";
     const styleClass = level === 1 ? styles.h1 : level === 2 ? styles.h2 : styles.h3;
     const centerClass = centered ? styles.textCenter : "";
 
