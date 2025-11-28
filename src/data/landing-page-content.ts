@@ -57,7 +57,7 @@ export const LANDING_CONTENT = {
 
     solution: {
         sectionId: "solution",
-        headline: "THE SOLUTION? CONVENIENCE-FIRST FITNESS.",
+        headline: "THE SOLUTION? CONVENIENCE-FIRST FITNESS",
         intro: "A system that works no matter what your schedule throws at you.",
         pillars: [
             {
