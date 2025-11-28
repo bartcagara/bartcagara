@@ -391,6 +391,14 @@
     box-shadow: 4px 4px 0px var(--bleu-nuit);
 }
 
+.mattStoryImage {
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    border: 2px solid var(--bleu-nuit);
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+}
+
 .videoEmbed {
     border: 2px solid var(--bleu-nuit);
     box-shadow: 4px 4px 0px var(--bleu-nuit);
@@ -873,7 +881,7 @@
         width: 100%;
     }
 
-    /* Transformation images - constrain to container width */
+    /* Transformation images in Results section - keep compact */
     .transformationImage {
         max-width: 100% !important;
         width: 100% !important;
@@ -881,4 +889,14 @@
         max-height: 300px !important;
         object-fit: contain !important;
     }
+
+    /* Matt's story images in intro - full width like text */
+    .mattStoryImage {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
 }
+
+```

@@ -16,7 +16,7 @@ export function RealityCheck() {
                     alt="Matt Before Transformation"
                     width={400}
                     height={533}
-                    className={styles.transformationImage}
+                    className={styles.mattStoryImage}
                     style={{ width: "auto", height: "auto", maxWidth: "400px" }}
                     priority
                 />
@@ -60,7 +60,7 @@ export function RealityCheck() {
                     alt="Matt After Transformation - 14 months later"
                     width={800}
                     height={533}
-                    className={styles.transformationImage}
+                    className={styles.mattStoryImage}
                     style={{ width: "auto", height: "auto", maxWidth: "600px" }}
                 />
             </div>
