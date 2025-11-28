@@ -28,23 +28,23 @@ export function RealityCheck() {
                     This is Matt. He is a successful Sales Executive. But let's be honest—his body didn't reflect that anymore.
                 </p>
 
-                <p className="mb-6">
+                <p className="text-xl mb-6">
                     Matt felt sharp walking into a meeting... until he caught his reflection in the glass. He didn't see a leader. He saw the "heavy guy at the table."
                 </p>
 
-                <p className="mb-6">
+                <p className="text-xl mb-6">
                     He tried to fix it. He ordered the salad while everyone else ate steak. He went to bed hungry. But when he stepped on the scale the next morning, the number hasn't moved. It drove him crazy.
                 </p>
 
-                <p className="mb-6">
+                <p className="text-xl mb-6">
                     Eventually, the stress won. He starved himself Monday through Thursday, but the moment he slowed down, he lost control. The weekend became a blur of mindless eating. His training? Non-existent.
                 </p>
 
-                <p className="mb-6">
+                <p className="text-xl mb-6">
                     He had built an incredible life, but he didn't have the energy to actually live it. Hell, he couldn't even keep up with his kids.
                 </p>
 
-                <p className="mb-6">
+                <p className="text-xl mb-6">
                     The gap between the athlete he used to be and the man he was becoming was widening. And deep down, he knew the truth: If he didn't fix this, he was just going to manage his decline.
                 </p>
 
