@@ -33,7 +33,7 @@ export function RealityCheck() {
                 </p>
 
                 <p className="mb-6">
-                    He tried to fix it. He ordered the salad while everyone else ate steak. He went to bed hungry. But when he stepped on the scale the next morning, the number hadn't moved. It drove him crazy.
+                    He tried to fix it. He ordered the salad while everyone else ate steak. He went to bed hungry. But when he stepped on the scale the next morning, the number hasn't moved. It drove him crazy.
                 </p>
 
                 <p className="mb-6">

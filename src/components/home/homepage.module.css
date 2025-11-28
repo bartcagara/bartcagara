@@ -872,4 +872,11 @@
         font-size: 0.95rem;
         width: 100%;
     }
+
+    /* Transformation images - constrain to container width */
+    .transformationImage {
+        max-width: 100% !important;
+        width: 100% !important;
+        height: auto !important;
+    }
 }
