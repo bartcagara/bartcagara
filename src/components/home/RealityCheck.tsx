@@ -25,15 +25,15 @@ export function RealityCheck() {
             {/* Story */}
             <div className="max-w-3xl mx-auto">
                 <p className="font-bold text-xl mb-6">
-                    This is Matt. He is a successful Sales Executive. But let's be honest—his body didn't reflect that anymore.
+                    This is Matt. A successful Sales Exec whose body stopped reflecting his success.
                 </p>
 
                 <p className="text-xl mb-6">
-                    Matt felt sharp walking into a meeting... until he caught his reflection in the glass. He didn't see a leader. He saw the "heavy guy at the table."
+                    He felt sharp in meetings... until he caught his reflection in the glass. He didn't see a leader. He saw the "heavy guy at the table."
                 </p>
 
                 <p className="text-xl mb-6">
-                    He tried to fix it. He ordered the salad while everyone else ate steak. He went to bed hungry. But when he stepped on the scale the next morning, the number hasn't moved. It drove him crazy.
+                    He tried to fix it. He ordered salads and went to bed hungry. But the scale never moved. It drove him crazy.
                 </p>
 
                 <p className="text-xl mb-6">
@@ -41,15 +41,11 @@ export function RealityCheck() {
                 </p>
 
                 <p className="text-xl mb-6">
-                    He had built an incredible life, but he didn't have the energy to actually live it.
-                </p>
-
-                <p className="text-xl mb-6">
-                    The gap between the athlete he used to be and the man he was becoming was widening. And deep down, he knew the truth: If he didn't fix this, he was just going to manage his decline.
+                    The gap between the athlete he used to be and the man he was becoming was widening. He realized he was just managing his decline.
                 </p>
 
                 <p className="font-bold text-xl mb-4">
-                    So we fixed the system. Here is Matt 14 months later:
+                    So we fixed the system. Here is Matt 14 months and 87 pounds later:
                 </p>
             </div>
 
