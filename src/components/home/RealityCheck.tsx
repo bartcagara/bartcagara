@@ -41,7 +41,7 @@ export function RealityCheck() {
                 </p>
 
                 <p className="text-xl mb-6">
-                    He had built an incredible life, but he didn't have the energy to actually live it. Hell, he couldn't even keep up with his kids.
+                    He had built an incredible life, but he didn't have the energy to actually live it.
                 </p>
 
                 <p className="text-xl mb-6">
