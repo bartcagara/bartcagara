@@ -19,12 +19,12 @@ export const LANDING_CONTENT = {
 
     intro: {
         paragraphs: [
-            "You are successful. But let's be honest—your body doesn't reflect that anymore.",
-            "You feel sharp when you walk into a meeting... until you catch your reflection in the glass. You don't look like a leader. You look like the \"heavy guy at the table.\"",
-            "You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But then you wake up, step on the scale, and the number hasn't moved. It drives you crazy.",
-            "So the stress wins. Your diet is a mess, so you raid the fridge at night. Your training? Non-existent.",
-            "You should be enjoying life at this stage, but you don't have the energy to actually do it. Hell, you're too worn out to even play with your kids.",
-            "The gap between the athlete you used to be and the man you are today is getting wider.",
+            "You are successful. But let's be honest—your body doesn't show it.",
+            "You feel sharp walking into a meeting... until you catch your reflection in the glass. You don't see a leader. You see the \"heavy guy at the table.\"",
+            "You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But when you step on the scale the next morning, the number hasn't moved. It drives you crazy.",
+            "Eventually, the stress wins. You starve yourself Monday through Thursday, but the moment you slow down, you lose control. The weekend becomes a blur of mindless eating. Your training? Non-existent.",
+            "You've built an incredible life, but you don't have the energy to actually live it. Hell, you can't even keep up with your kids.",
+            "The gap between the athlete you used to be and the man you are today is widening.",
             "And deep down, you know the truth: If you don't fix this now, you aren't going to enjoy your success. You are just going to manage your decline.",
         ],
     },

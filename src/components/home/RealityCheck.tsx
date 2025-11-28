@@ -21,9 +21,9 @@ export function RealityCheck() {
                             key={index}
                             className={styles.textLargeNarrative}
                             style={{
-                                fontWeight: isFirst ? "bold" : "normal",
+                                fontWeight: isFirst ? "bold" : isLast ? 500 : "normal",
                                 fontSize: isFirst ? "1.25rem" : undefined,
-                                marginBottom: isLast ? 0 : "2.5rem",
+                                marginBottom: isLast ? "1.5rem" : "1.5rem",
                             }}
                         >
                             {paragraph}
