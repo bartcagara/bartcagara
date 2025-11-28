@@ -11,7 +11,7 @@ export function TrustedBy() {
     const { trustedBy } = LANDING_CONTENT;
 
     return (
-        <section style={{ padding: "3rem 0" }}>
+        <section style={{ padding: "1.5rem 0" }}>
             <div className={styles.container}>
                 <div className={styles.trustLogos} style={{ marginTop: 0 }}>
                     <p className={styles.trustLogosTitle}>{trustedBy.title}</p>

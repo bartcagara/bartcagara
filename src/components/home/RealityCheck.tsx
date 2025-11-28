@@ -15,9 +15,9 @@ export function RealityCheck() {
                     src="/fat.jpg"
                     alt="Matt Before Transformation"
                     width={400}
-                    height={400}
+                    height={533}
                     className={styles.transformationImage}
-                    style={{ width: "auto", maxWidth: "400px" }}
+                    style={{ width: "auto", height: "auto", maxWidth: "400px" }}
                     priority
                 />
             </div>
@@ -58,10 +58,10 @@ export function RealityCheck() {
                 <Image
                     src="/fit.jpg"
                     alt="Matt After Transformation - 14 months later"
-                    width={400}
-                    height={400}
+                    width={800}
+                    height={533}
                     className={styles.transformationImage}
-                    style={{ width: "auto", maxWidth: "400px" }}
+                    style={{ width: "auto", height: "auto", maxWidth: "600px" }}
                 />
             </div>
         </SectionWrapper>
