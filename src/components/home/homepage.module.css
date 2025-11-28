@@ -878,5 +878,7 @@
         max-width: 100% !important;
         width: 100% !important;
         height: auto !important;
+        max-height: 500px !important;
+        object-fit: contain !important;
     }
 }
