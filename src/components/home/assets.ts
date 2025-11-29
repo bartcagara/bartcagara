@@ -39,16 +39,8 @@ export const TRUST_LOGOS = [
 
 export const TRANSFORMATIONS = [
   {
-    alt: "Client Transformation: 3 weeks progress",
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_4-1763739441227.webp?width=8000&height=8000&resize=contain"
-  },
-  {
     alt: "Client Transformation: 24 weeks progress",
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_3-1763739441230.webp?width=8000&height=8000&resize=contain"
-  },
-  {
-    alt: "Client Transformation: 4 weeks progress",
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_2-1763739441220.webp?width=8000&height=8000&resize=contain"
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_7-1763739441227.webp?width=8000&height=8000&resize=contain"
   },
   {
     alt: "Client Transformation: 15 weeks progress",
@@ -59,12 +51,20 @@ export const TRANSFORMATIONS = [
     src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_5-1763739441212.webp?width=8000&height=8000&resize=contain"
   },
   {
-    alt: "Client Transformation: 12 weeks progress",
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_6-1763739441232.webp?width=8000&height=8000&resize=contain"
+    alt: "Client Transformation: 4 weeks progress",
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_2-1763739441220.webp?width=8000&height=8000&resize=contain"
   },
   {
     alt: "Client Transformation: 24 weeks progress",
-    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_7-1763739441227.webp?width=8000&height=8000&resize=contain"
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_3-1763739441230.webp?width=8000&height=8000&resize=contain"
+  },
+  {
+    alt: "Client Transformation: 3 weeks progress",
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_4-1763739441227.webp?width=8000&height=8000&resize=contain"
+  },
+  {
+    alt: "Client Transformation: 12 weeks progress",
+    src: "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/image_6-1763739441232.webp?width=8000&height=8000&resize=contain"
   }
 ];
 
