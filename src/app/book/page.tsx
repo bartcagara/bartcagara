@@ -11,7 +11,7 @@ export default function BookPage() {
               SCHEDULE YOUR 15-MIN AUDIT
             </h1>
             <p className={`${styles.textLargeNarrative} ${styles.textCenter}`} style={{ marginTop: '1.5rem' }}>
-              No sales pitch. No fluff. A rapid diagnostic to identify exactly why your previous attempts have failed.
+              A rapid diagnostic to identify exactly why your previous attempts have failed.
             </p>
           </div>
         </div>
