@@ -25,7 +25,7 @@ export function RealityCheck() {
             {/* Story */}
             <div className="max-w-3xl mx-auto">
                 <p className="font-bold text-xl mb-6">
-                    This is Matt. A successful Sales Exec whose body stopped reflecting his success.
+                    This is Matt. He's a successful Sales Exec but let's be honest—his body didn't show it.
                 </p>
 
                 <p className="text-xl mb-6">
