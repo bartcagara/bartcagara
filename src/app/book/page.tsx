@@ -54,11 +54,11 @@ export default function BookPage() {
 
                 Cal.ns["audit-call"]("inline", {
                   elementOrSelector:"#my-cal-inline-audit-call",
-                  config: {"layout":"column_view"},
+                  config: {"layout":"month_view"},
                   calLink: "bartcagara/audit-call",
                 });
 
-                Cal.ns["audit-call"]("ui", {"hideEventTypeDetails":false,"layout":"column_view"});
+                Cal.ns["audit-call"]("ui", {"hideEventTypeDetails":false,"layout":"month_view"});
               `}} />
               {/* Cal inline embed code ends */}
             </div>
