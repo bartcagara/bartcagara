@@ -15,6 +15,6 @@ export const FAQ_ITEMS: FAQItems = [
   },
   {
     q: "What happens after the Audit?",
-    a: "<p>You'll get an email from me with a detailed summary of what we discussed and the exact low-friction, high-impact fix you should implement immediately.</p><p>The email will also have a link to book a Strategy Call. So when you are ready to explore what working together looks like to build the full system, you can go ahead and schedule it.</p>",
+    a: "<p>You'll get an email from me with a detailed summary of what we discussed and the exact low-friction, high-ROI fix you should implement immediately.</p><p>The email will also have a link to book a Strategy Call. So when you are ready to explore what working together looks like to build the full system, you can go ahead and schedule it.</p>",
   },
 ] as const;
