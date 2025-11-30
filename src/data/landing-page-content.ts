@@ -198,7 +198,7 @@ export const LANDING_CONTENT = {
         sectionId: "cta",
         headline: "STOP GUESSING. GET DIAGNOSED.",
         intro: "You don't need another PDF diet. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.",
-        processTitle: "What happens on this 15-minute Audit?",
+        processTitle: "WHAT HAPPENS ON THIS 15-MINUTE AUDIT?",
         steps: [
             {
                 number: 1,
