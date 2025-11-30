@@ -3,7 +3,7 @@ import type { FAQItems } from "./types";
 export const FAQ_ITEMS: FAQItems = [
   {
     q: "Is the 15-Min Audit really free? What's the catch?",
-    a: "<p>Yes, it is free. The catch is that I only work with executives I can actually help. This call is how I determine if you are a fit for my system. If you are, I'll show you what working together looks like. If not, you leave with a clear diagnosis of your problem.</p>",
+    a: "<p>Yes, it is free. I have met many amazing people through these audits over the years. Many went on to become clients; many didn't.</p><p>Here is the reality: If we are a good fit, we will both know it by the end of the call, and we can schedule a time to talk about working together. If not, you walk away with a diagnosis and a fix you can use immediately. No pitch. No pressure. Just clarity.</p>",
   },
   {
     q: "Do I need to prepare anything for this call?",
