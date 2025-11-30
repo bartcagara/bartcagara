@@ -9,7 +9,7 @@ export const LANDING_CONTENT = {
         headline: "THE PROTOCOL THAT ENDS THE WEIGHT LOSS RESTART CYCLE FOR GOOD",
         subheadline: "You don't need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for 'perfect' diets.",
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "/book",
+        ctaLink: "https://cal.com/bartcagara/audit-call",
         ctaNote: "No meal prep. No tracking. We just find the leak in your current approach.",
     },
 
@@ -98,7 +98,7 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "/book",
+        ctaLink: "https://cal.com/bartcagara/audit-call",
     },
 
     shift: {
@@ -191,7 +191,7 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "/book",
+        ctaLink: "https://cal.com/bartcagara/audit-call",
     },
 
     finalCta: {
@@ -217,6 +217,6 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK YOUR 15-MIN AUDIT",
-        ctaLink: "/book",
+        ctaLink: "https://cal.com/bartcagara/audit-call",
     },
 } as const;

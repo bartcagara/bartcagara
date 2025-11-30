@@ -32,7 +32,9 @@ export const Navbar = memo(() => {
 
             {/* CTA Button - Centered on Mobile, Right-aligned on Desktop */}
             <Link
-              href="/book"
+              href="https://cal.com/bartcagara/audit-call"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${styles.btnCta} ${styles.navSize} text-[10px] px-3 py-2 md:text-sm md:px-6 md:py-3 whitespace-nowrap mx-auto md:mx-0`}
             >
               BOOK 15-MIN AUDIT
