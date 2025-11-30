@@ -634,6 +634,14 @@
     padding: 1.5rem;
 }
 
+.accordionBody p {
+    margin-bottom: 1rem;
+}
+
+.accordionBody p:last-child {
+    margin-bottom: 0;
+}
+
 /* =================================================================
    SPECIAL SECTION MODIFIERS
    ================================================================= */
@@ -898,4 +906,3 @@
         object-fit: contain !important;
     }
 }
-
