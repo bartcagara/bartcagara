@@ -1,9 +1,32 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import styles from "@/components/home/homepage.module.css";
 import type { Metadata } from "next";
 
 export default function ContactPage() {
+    const [honeypot, setHoneypot] = useState("");
+    const [formStartTime] = useState(Date.now());
+
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+        // Check honeypot - if filled, it's a bot
+        if (honeypot) {
+            e.preventDefault();
+            console.log("Bot detected via honeypot");
+            return;
+        }
+
+        // Check if form was filled too quickly (less than 3 seconds = likely bot)
+        const timeElapsed = Date.now() - formStartTime;
+        if (timeElapsed < 3000) {
+            e.preventDefault();
+            console.log("Bot detected via timing");
+            return;
+        }
+
+        // If all checks pass, allow form submission to continue
+    };
+
     return (
         <section className={`${styles.sectionPadding} min-h-screen bg-white`}>
             <div className="max-w-xl mx-auto px-6">
@@ -17,11 +40,30 @@ export default function ContactPage() {
                 <form
                     action="https://formsubmit.co/bart@bartcagara.com"
                     method="POST"
+                    onSubmit={handleSubmit}
                     className="space-y-6"
                 >
                     <input type="hidden" name="_subject" value="New Website Lead!" />
-                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_captcha" value="true" />
                     <input type="hidden" name="_next" value="https://bartcagara.com/contact" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'll get back to you within 24 hours. - Bart" />
+                    <input type="hidden" name="_blacklist" value="crypto,bitcoin,forex,casino,viagra,cialis,lottery,prize,winner,congratulations,click here,buy now,limited offer,act now,SEO services,backlinks,web traffic,make money,work from home" />
+
+                    {/* FormSubmit's native honeypot - server-side spam filter */}
+                    <input type="text" name="_honey" style={{ display: "none" }} />
+
+                    {/* Custom honeypot field - client-side spam filter */}
+                    <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+                        <input
+                            type="text"
+                            name="honeypot"
+                            tabIndex={-1}
+                            autoComplete="off"
+                            value={honeypot}
+                            onChange={(e) => setHoneypot(e.target.value)}
+                        />
+                    </div>
 
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
