@@ -213,7 +213,7 @@ export const LANDING_CONTENT = {
             {
                 number: 3,
                 title: "We Build The Fix:",
-                description: "You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate strategy call.",
+                description: "You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate call.",
             },
         ],
         ctaText: "BOOK YOUR 15-MIN AUDIT",
