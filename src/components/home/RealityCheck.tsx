@@ -33,11 +33,11 @@ export function RealityCheck() {
                 </p>
 
                 <p className="text-xl mb-6">
-                    He tried to fix it. He went strict Paleo Monday through Thursday. But one client dinner would destroy a week of progress.
+                    He tried to fix it. He went strict Paleo Monday through Thursday. But one client dinner would destroy two weeks of progress.
                 </p>
 
                 <p className="text-xl mb-6">
-                    And even without the dinners, the stress won by Friday. The weekends became a blur of mindless eating.
+                    Even with no dinners, the stress won by Friday. The weekends became a blur of mindless eating.
                 </p>
 
                 <p className="text-xl mb-6">
@@ -45,7 +45,11 @@ export function RealityCheck() {
                 </p>
 
                 <p className="text-xl mb-6">
-                    The gap between the athlete he used to be and the man he was becoming was widening. He realized he was just managing his decline.
+                    The gap between the athlete he used to be and the man he was becoming was widening.
+                </p>
+
+                <p className="text-xl mb-6">
+                    He realized he was just managing his decline.
                 </p>
 
                 <p className="font-bold text-xl mb-4">
