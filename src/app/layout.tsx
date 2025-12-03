@@ -15,8 +15,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Bart Cagara | Convenience-First Fitness for Busy Executives",
-  description: "Stop restarting Monday. Learn how to stay fit while eating out constantly, traveling, and operating in chaos. 6-month coaching program for executives who refuse to choose between career and fitness.",
+  title: "The Health & Physique Protocol for Executives | Bart Cagara",
+  description: "End the weight loss restart cycle. A protocol built for travel, client dinners, and chaotic schedules. No meal prep. No tracking. Book your 15-Min Audit.",
   keywords: [
     "executive fitness coaching",
     "convenience-first fitness",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Bart Cagara | Convenience-First Fitness",
-    title: "Convenience-First Fitness for Busy Executives",
-    description: "You don't need more discipline. You need fitness that adapts to your schedule.",
+    siteName: "Convenience-First Fitness",
+    title: "You are winning at work, but losing your body.",
+    description: "Stop managing your decline. The Convenience-First Protocol for executives.",
     images: [
       {
         url: "/og-image.jpg",
