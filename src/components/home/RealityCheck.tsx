@@ -25,7 +25,7 @@ export function RealityCheck() {
             {/* Story */}
             <div className="max-w-3xl mx-auto">
                 <p className="font-bold text-xl mb-6">
-                    This is Matt. He's a successful Sales Exec but let's be honest—his body didn't show it.
+                    This is Matt. A successful Sales Exec but let's be honest—his body didn't show it.
                 </p>
 
                 <p className="text-xl mb-6">
@@ -33,11 +33,15 @@ export function RealityCheck() {
                 </p>
 
                 <p className="text-xl mb-6">
-                    He tried to fix it. He ordered salads and went to bed hungry. But the scale never moved. It drove him crazy.
+                    He tried to fix it. He went strict Paleo Monday through Thursday. But one client dinner would destroy a week of progress.
                 </p>
 
                 <p className="text-xl mb-6">
-                    Eventually, the stress won. He starved himself Monday through Thursday, but the moment he slowed down, he lost control. The weekend became a blur of mindless eating. His training? Non-existent.
+                    And even without the dinners, the stress won by Friday. The weekends became a blur of mindless eating.
+                </p>
+
+                <p className="text-xl mb-6">
+                    His training? He told himself he was "too busy."
                 </p>
 
                 <p className="text-xl mb-6">
