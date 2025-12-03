@@ -6,7 +6,7 @@
 
 export const LANDING_CONTENT = {
     hero: {
-        headline: "READ THIS IF YOU ARE WINNING AT WORK BUT LOSING YOUR BODY",
+        headline: "YOU ARE WINNING AT WORK. BUT YOUR BODY DOESN'T SHOW IT.",
         subheadline: "You don't need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for 'perfect' diets.",
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
         ctaLink: "https://cal.com/bartcagara/audit-call",
