@@ -82,6 +82,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        {/* Font Preloading */}
+        <link
+          rel="preload"
+          href="/_next/static/css/app/layout.css"
+          as="style"
+        />
+
+        {/* Resource Hints for External Services */}
+        <link rel="preconnect" href="https://b2bjsstore.s3.us-west-2.amazonaws.com" />
+        <link rel="preconnect" href="https://snap.licdn.com" />
+        <link rel="dns-prefetch" href="https://widget.senja.io" />
+      </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>
           <Suspense fallback={null}>
