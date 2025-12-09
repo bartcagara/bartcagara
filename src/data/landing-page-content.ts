@@ -138,7 +138,7 @@ export const LANDING_CONTENT = {
 
     system: {
         sectionId: "system",
-        headline: "THE \"CONVENIENCE-FIRST\" OPERATING SYSTEM",
+        headline: "THE FIT EXEC OS",
         intro: "We don't give you a diet. We build your freedom from them.",
         stages: [
             {
