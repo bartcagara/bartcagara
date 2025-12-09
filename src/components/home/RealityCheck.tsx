@@ -18,7 +18,6 @@ export function RealityCheck() {
                     height={533}
                     className={styles.mattStoryImage}
                     style={{ width: "auto", height: "auto", maxWidth: "400px" }}
-                    priority
                 />
             </div>
 

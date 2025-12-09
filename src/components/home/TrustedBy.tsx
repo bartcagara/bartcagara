@@ -24,7 +24,6 @@ export function TrustedBy() {
                                 className={styles.trustLogo}
                                 width={logo.width}
                                 height={logo.height}
-                                priority
                             />
                         ))}
                     </div>

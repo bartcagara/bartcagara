@@ -90,7 +90,7 @@ export default function RootLayout({
           <ErrorReporter />
 
           {/* RB2B Tracking Script */}
-          <Script id="rb2b-tracking" strategy="afterInteractive">
+          <Script id="rb2b-tracking" strategy="lazyOnload">
             {`
               !function(key) {
                 if (window.reb2b) return;
@@ -104,14 +104,14 @@ export default function RootLayout({
           </Script>
 
           {/* LinkedIn Insight Tag */}
-          <Script id="linkedin-insight-tag-init" strategy="afterInteractive">
+          <Script id="linkedin-insight-tag-init" strategy="lazyOnload">
             {`
               _linkedin_partner_id = "8890513";
               window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
               window._linkedin_data_partner_ids.push(_linkedin_partner_id);
             `}
           </Script>
-          <Script id="linkedin-insight-tag" strategy="afterInteractive">
+          <Script id="linkedin-insight-tag" strategy="lazyOnload">
             {`
               (function(l) {
                 if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
