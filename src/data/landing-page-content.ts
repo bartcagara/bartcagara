@@ -139,7 +139,7 @@ export const LANDING_CONTENT = {
     system: {
         sectionId: "system",
         headline: "THE FIT EXEC OS",
-        intro: "We don't give you a diet. We build your freedom from them.",
+        intro: "Reclaim your athletic body without slowing down at work.",
         stages: [
             {
                 number: 1,
