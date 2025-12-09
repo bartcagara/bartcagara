@@ -12,11 +12,12 @@ export function RealityCheck() {
             {/* Before Image */}
             <div className="flex justify-center my-12">
                 <Image
-                    src="/fat.jpg"
+                    src="/fat.webp"
                     alt="Matt Before Transformation"
                     width={400}
                     height={533}
                     className={styles.mattStoryImage}
+                    loading="lazy"
                     style={{ width: "auto", height: "auto", maxWidth: "400px" }}
                 />
             </div>
@@ -59,11 +60,12 @@ export function RealityCheck() {
             {/* After Image */}
             <div className="flex justify-center mt-8 mb-16">
                 <Image
-                    src="/fit.jpg"
+                    src="/fit.webp"
                     alt="Matt After Transformation - 14 months later"
                     width={800}
                     height={533}
                     className={styles.mattStoryImage}
+                    loading="lazy"
                     style={{ width: "auto", height: "auto", maxWidth: "600px" }}
                 />
             </div>

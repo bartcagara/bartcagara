@@ -12,6 +12,7 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -91,9 +92,13 @@ export default function RootLayout({
         />
 
         {/* Resource Hints for External Services */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://b2bjsstore.s3.us-west-2.amazonaws.com" />
         <link rel="preconnect" href="https://snap.licdn.com" />
+        <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
         <link rel="dns-prefetch" href="https://widget.senja.io" />
+        <link rel="dns-prefetch" href="https://www.youtube.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>

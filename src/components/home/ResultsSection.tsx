@@ -4,11 +4,13 @@ import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { ScrollSection } from "./ScrollSection";
 import { TRANSFORMATIONS, CLIENT_INTERVIEWS, CLIENT_DMS } from "./assets";
+import { YouTubeLite } from "./YouTubeLite";
 import styles from "./homepage.module.css";
 
 /**
  * ResultsSection - Client transformations and testimonials
  * Displays transformation photos, interviews, DMs, and testimonials
+ * Optimized with lazy loading for images and YouTube embeds
  */
 export function ResultsSection() {
     const { results } = LANDING_CONTENT;
@@ -28,6 +30,7 @@ export function ResultsSection() {
                             className={styles.transformationImage}
                             width={400}
                             height={400}
+                            loading="lazy"
                             style={{ width: "auto", height: "400px" }}
                         />
                     </div>
@@ -37,15 +40,9 @@ export function ResultsSection() {
             <ScrollSection title={results.sections.interviews}>
                 {CLIENT_INTERVIEWS.map((id) => (
                     <div key={id} className={styles.scrollItem}>
-                        <iframe
-                            width="445"
-                            height="250"
-                            src={`https://www.youtube.com/embed/${id}`}
+                        <YouTubeLite
+                            videoId={id}
                             title={`Client Interview video ${id}`}
-                            style={{ border: 0 }}
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                            className={styles.videoEmbed}
                         />
                     </div>
                 ))}
@@ -59,6 +56,7 @@ export function ResultsSection() {
                             alt={`Client testimonial direct message ${index + 1}`}
                             width={300}
                             height={500}
+                            loading="lazy"
                             style={{ width: "auto", height: "500px" }}
                         />
                     </div>
@@ -70,7 +68,7 @@ export function ResultsSection() {
                     className="senja-embed"
                     data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
                     data-mode="shadow"
-                    data-lazyload="false"
+                    data-lazyload="true"
                     style={{ display: "block", width: "100%" }}
                 />
             </ScrollSection>

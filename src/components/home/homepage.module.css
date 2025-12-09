@@ -404,6 +404,22 @@
     box-shadow: 4px 4px 0px var(--bleu-nuit);
 }
 
+.youtubeLite {
+    position: relative;
+    width: 445px;
+    height: 250px;
+    cursor: pointer;
+    border: 2px solid var(--bleu-nuit);
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+    transition: var(--transition);
+}
+
+.youtubeLite:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--bleu-nuit);
+}
+
+
 /* =================================================================
    HORIZONTAL SCROLL SECTIONS
    ================================================================= */
