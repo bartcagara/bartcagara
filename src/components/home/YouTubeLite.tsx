@@ -27,7 +27,6 @@ export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLitePro
                 height="250"
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                 title={title}
-                style={{ border: 0 }}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className={styles.videoEmbed}
@@ -45,7 +44,6 @@ export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLitePro
                 width: "445px",
                 height: "250px",
                 cursor: "pointer",
-                border: "none",
                 padding: 0,
                 background: "none",
             }}
