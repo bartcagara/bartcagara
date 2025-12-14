@@ -204,10 +204,10 @@ export default function Home() {
               The Program
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
-              The Executive<br />Athlete OS
+              Executive<br />Athlete OS
             </h2>
             <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
-              A 4-phase protocol to rebuild your infrastructure without pausing your career.
+              A 4-phase program to rebuild your infrastructure without pausing your career.
             </p>
           </div>
 
