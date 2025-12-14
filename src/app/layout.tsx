@@ -17,19 +17,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "The Health & Physique Protocol for Executives | Bart Cagara",
-  description: "End the weight loss restart cycle. A protocol built for travel, client dinners, and chaotic schedules. No meal prep. No tracking. Book your 15-Min Audit.",
+  title: "Executive Athlete OS™ | Bart Cagara",
+  description: "Stop the physical decline. High-performance health infrastructure for the 40+ executive. Reclaim the athlete without pausing your career.",
   keywords: [
-    "executive fitness coaching",
-    "convenience-first fitness",
-    "fitness for busy professionals",
-    "nutrition coaching for executives",
-    "weight loss without meal prep",
-    "fitness while traveling",
-    "restaurant nutrition",
-    "sustainable fitness for executives"
+    "Executive Coaching",
+    "Weight Loss for Executives",
+    "High Performance Health",
+    "Bart Cagara",
+    "Executive Athlete"
   ],
-  authors: [{ name: "Bart Cagara" }],
+  authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
   publisher: "Bart Cagara",
   metadataBase: new URL("https://bartcagara.com"),
@@ -40,23 +37,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Convenience-First Fitness",
-    title: "You are winning at work, but losing your body.",
-    description: "Stop managing your decline. The Convenience-First Protocol for executives.",
+    siteName: "Executive Athlete OS",
+    title: "Executive Athlete OS™",
+    description: "We don't manage the decline. We stop it. Engineered for the former athlete turned executive who is winning at work but losing the physical battle.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Bart Cagara - Convenience-First Fitness Coaching"
+        alt: "Executive Athlete OS™ - Bart Cagara"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Convenience-First Fitness for Busy Executives | Bart Cagara",
-    description: "Learn to stay fit while eating out, traveling, and operating in chaos. 6-month coaching program for executives.",
-    images: ["/og-image.jpg"],
+    title: "Executive Athlete OS™",
+    description: "We don't manage the decline. We stop it. Engineered for the former athlete turned executive who is winning at work but losing the physical battle.",
+    images: ["/opengraph-image.png"],
     creator: "@bartcagara"
   },
   robots: {
