@@ -4,7 +4,6 @@ import { memo, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
-import styles from "../home/homepage.module.css";
 
 export const Navbar = memo(() => {
   const pathname = usePathname();

@@ -1,6 +1,6 @@
 /**
- * Landing Page Content - The Golden Copy
- * All text, headlines, and copy for the landing page
+ * Homepage Content - The Golden Copy
+ * All text, headlines, and copy for the homepage
  * This ensures content integrity and makes updates instant
  */
 
@@ -127,9 +127,9 @@ export const HOMEPAGE_CONTENT = {
     },
 
     results: {
-        headline: "THESE GUYS DIDN’T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
+        headline: "THESE GUYS DIDN'T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
         sections: {
-            transformations: "Client Transformations",
+            transformations: "Client Photos",
             interviews: "Client Interviews",
             dms: "Client DMs",
             testimonials: "Client Testimonials",

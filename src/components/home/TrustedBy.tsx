@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LANDING_CONTENT } from "@/data/landing-page-content";
+import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import { TRUST_LOGOS } from "./assets";
 
 /**
@@ -7,7 +7,7 @@ import { TRUST_LOGOS } from "./assets";
  * Shows social proof from executive clients
  */
 export function TrustedBy() {
-    const { trustedBy } = LANDING_CONTENT;
+    const { trustedBy } = HOMEPAGE_CONTENT;
 
     return (
         <section className="py-8 bg-[#F3F4F6]">

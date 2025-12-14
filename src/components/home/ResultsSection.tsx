@@ -1,17 +1,17 @@
 import Image from "next/image";
-import { LANDING_CONTENT } from "@/data/landing-page-content";
+import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import { ScrollSection } from "./ScrollSection";
 import { TRANSFORMATIONS, CLIENT_INTERVIEWS, CLIENT_DMS } from "./assets";
 import { YouTubeLite } from "./YouTubeLite";
 import styles from "./homepage.module.css";
 
 /**
- * ResultsSection - Client transformations and testimonials
- * Displays transformation photos, interviews, DMs, and testimonials
+ * ResultsSection - Client social proof
+ * Displays transformation photos, client interviews, DMs, and testimonials
  * Optimized with lazy loading for images and YouTube embeds
  */
 export function ResultsSection() {
-    const { results } = LANDING_CONTENT;
+    const { results } = HOMEPAGE_CONTENT;
 
     return (
         <div id="results" className="py-24 md:py-32 bg-white">

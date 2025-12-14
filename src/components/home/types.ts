@@ -1,14 +1,7 @@
-export interface FAQItem {
-  readonly q: string;
-  readonly a: string;
-}
-
-export interface AccordionItemProps {
-  question: string;
-  answer: string;
-  isOpen: boolean;
-  onClick: () => void;
-}
+/**
+ * Homepage Component Types
+ * Type definitions for homepage components
+ */
 
 export interface ScrollSectionProps {
   title: string;
@@ -18,5 +11,3 @@ export interface ScrollSectionProps {
 export interface NavbarProps {
   pathname?: string;
 }
-
-export type FAQItems = readonly FAQItem[];

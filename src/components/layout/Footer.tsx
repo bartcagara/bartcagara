@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { memo } from "react";
 import { Linkedin, Youtube } from "lucide-react";
-import styles from "../home/homepage.module.css";
 
 export const Footer = memo(() => (
   <footer className="bg-white border-t-2 border-accent-primary pt-16 pb-8" role="contentinfo">
