@@ -6,10 +6,10 @@
 
 export const LANDING_CONTENT = {
     hero: {
-        headline: "YOU ARE WINNING AT WORK. BUT YOUR BODY DOESN'T SHOW IT.",
+        headline: "Your 40s are the decade that decides",
         subheadline: "You don't need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for \"perfect\" diets.",
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/audit-call",
+        ctaLink: "https://cal.com/bartcagara/discovery-call",
         ctaNote: "No meal prep. No tracking. We just find the leak in your current approach.",
     },
 
@@ -98,7 +98,7 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/audit-call",
+        ctaLink: "https://cal.com/bartcagara/discovery-call",
     },
 
     shift: {
@@ -127,7 +127,7 @@ export const LANDING_CONTENT = {
     },
 
     results: {
-        headline: "THESE GUYS DIDN'T \"FIND MORE TIME.\" THEY BUILT A BETTER SYSTEM.",
+        headline: "THESE GUYS DIDN’T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
         sections: {
             transformations: "Client Transformations",
             interviews: "Client Interviews",
@@ -191,7 +191,7 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/audit-call",
+        ctaLink: "https://cal.com/bartcagara/discovery-call",
     },
 
     finalCta: {
@@ -217,6 +217,6 @@ export const LANDING_CONTENT = {
             },
         ],
         ctaText: "BOOK YOUR 15-MIN AUDIT",
-        ctaLink: "https://cal.com/bartcagara/audit-call",
+        ctaLink: "https://cal.com/bartcagara/discovery-call",
     },
 } as const;

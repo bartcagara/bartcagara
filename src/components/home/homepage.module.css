@@ -530,6 +530,12 @@
    SYSTEM STEPS
    ================================================================= */
 
+.systemStepsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .systemStep {
     border: var(--border-thick);
     margin-bottom: 1.5rem;

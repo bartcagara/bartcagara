@@ -11,7 +11,7 @@ export const Footer = memo(() => (
         <div className="space-y-4">
           <Link href="/" className="block group">
             <h3 className="text-xl font-bold text-gray-900 group-hover:opacity-80 transition-opacity">Bart Cagara</h3>
-            <p className="text-gray-600 text-sm group-hover:opacity-80 transition-opacity">Fit Exec OS</p>
+            <p className="text-gray-600 text-sm group-hover:opacity-80 transition-opacity">Executive Athlete OS</p>
           </Link>
           <p className="text-gray-500 text-xs mt-4">
             &copy; {new Date().getFullYear()} Dad with Style OÜ
@@ -22,9 +22,18 @@ export const Footer = memo(() => (
         <div>
           <h4 className="font-semibold text-gray-900 mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-gray-600">
-            <li><Link href="/#problem" className="hover:text-blue-600 transition-colors">The Problem</Link></li>
-            <li><Link href="/#solution" className="hover:text-blue-600 transition-colors">The Solution</Link></li>
-            <li><Link href="/#system" className="hover:text-blue-600 transition-colors">The System</Link></li>
+            <li><Link href="/#results" className="hover:text-blue-600 transition-colors">Client Wins</Link></li>
+            <li><Link href="/#program" className="hover:text-blue-600 transition-colors">Coaching</Link></li>
+            <li>
+              <a
+                href="https://bartcagara.kit.com/subscribe"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-600 transition-colors"
+              >
+                Executive Athlete Briefing
+              </a>
+            </li>
           </ul>
         </div>
 

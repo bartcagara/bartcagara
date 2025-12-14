@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { LANDING_CONTENT } from "@/data/landing-page-content";
 import { TRUST_LOGOS } from "./assets";
-import styles from "./homepage.module.css";
 
 /**
  * TrustedBy Section - Displays client company logos
@@ -11,21 +10,23 @@ export function TrustedBy() {
     const { trustedBy } = LANDING_CONTENT;
 
     return (
-        <section style={{ padding: "1.5rem 0" }}>
-            <div className={styles.container}>
-                <div className={styles.trustLogos} style={{ marginTop: 0 }}>
-                    <p className={styles.trustLogosTitle}>{trustedBy.title}</p>
-                    <div className={styles.logoGrid}>
+        <section className="py-8 bg-[#F3F4F6]">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="mt-0">
+                    <p className="text-center font-bold uppercase text-[var(--bleu-nuit)]/60 tracking-wider mb-8 text-sm">
+                        {trustedBy.title}
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
                         {TRUST_LOGOS.map((logo) => (
-                            <Image
-                                key={logo.name}
-                                src={logo.src}
-                                alt={`${logo.name} company logo`}
-                                className={styles.trustLogo}
-                                width={logo.width}
-                                height={logo.height}
-                                loading="lazy"
-                            />
+                            <div key={logo.name} className="relative h-8 w-24 md:h-10 md:w-32">
+                                <Image
+                                    src={logo.src}
+                                    alt={`${logo.name} company logo`}
+                                    fill
+                                    className="object-contain"
+                                    sizes="(max-width: 768px) 96px, 128px"
+                                />
+                            </div>
                         ))}
                     </div>
                 </div>

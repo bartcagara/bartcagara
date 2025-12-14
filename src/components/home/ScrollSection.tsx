@@ -2,7 +2,7 @@
 
 import { memo, useRef, useState, useEffect, useCallback } from "react";
 import type { ScrollSectionProps } from "./types";
-import styles from "./homepage.module.css";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -22,10 +22,10 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
     if (el) {
       el.addEventListener("scroll", checkScroll);
       checkScroll();
-      
+
       const handleResize = () => checkScroll();
       window.addEventListener("resize", handleResize);
-      
+
       return () => {
         el.removeEventListener("scroll", checkScroll);
         window.removeEventListener("resize", handleResize);
@@ -44,32 +44,39 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
   }, []);
 
   return (
-    <div className={styles.scrollSectionWrapper}>
-      <h3 className={styles.scrollSectionTitle}>{title}</h3>
-      <button
-        className={`${styles.scrollBtn} ${styles.left} ${showLeft ? styles.visible : ""}`}
-        onClick={() => scroll(-1)}
-        aria-label={`Scroll ${title} left`}
-        type="button"
-      >
-        &#8592;
-      </button>
-      <div 
-        className={styles.scrollContainer} 
+    <div className="mb-20">
+      <div className="flex justify-between items-end mb-8 px-4 md:px-0">
+        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
+          <span className="text-[#456D8B] mr-2">/</span>
+          {title}
+        </h3>
+        <div className="flex gap-2">
+          <button
+            onClick={() => scroll(-1)}
+            className={`w-12 h-12 border-2 border-[#09071D] flex items-center justify-center transition-all hover:bg-[#09071D] hover:text-white ${!showLeft ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
+            disabled={!showLeft}
+            aria-label="Scroll left"
+          >
+            <ArrowLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={() => scroll(1)}
+            className={`w-12 h-12 border-2 border-[#09071D] flex items-center justify-center transition-all hover:bg-[#09071D] hover:text-white ${!showRight ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
+            disabled={!showRight}
+            aria-label="Scroll right"
+          >
+            <ArrowRight className="w-6 h-6" />
+          </button>
+        </div>
+      </div>
+
+      <div
+        className="flex gap-6 overflow-x-auto pb-8 px-4 md:px-0 scrollbar-hide snap-x"
         ref={scrollRef}
-        role="region"
-        aria-label={`${title} horizontal scroll container`}
+        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {children}
       </div>
-      <button
-        className={`${styles.scrollBtn} ${styles.right} ${!showRight ? styles.hidden : ""}`}
-        onClick={() => scroll(1)}
-        aria-label={`Scroll ${title} right`}
-        type="button"
-      >
-        &#8594;
-      </button>
     </div>
   );
 });

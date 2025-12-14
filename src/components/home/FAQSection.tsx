@@ -3,7 +3,8 @@
 import { useState, useCallback } from "react";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { AccordionItem, FAQ_ITEMS } from "@/components/home";
+import { AccordionItem } from "./AccordionItem";
+import { FAQ_ITEMS } from "./faq-data";
 import styles from "./homepage.module.css";
 
 /**

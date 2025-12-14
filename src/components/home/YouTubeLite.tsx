@@ -6,6 +6,7 @@ import styles from "./homepage.module.css";
 interface YouTubeLiteProps {
     videoId: string;
     title?: string;
+    className?: string; // Add className prop support
 }
 
 /**
@@ -13,7 +14,7 @@ interface YouTubeLiteProps {
  * Displays thumbnail initially, loads full iframe only on user click
  * Saves ~300KB per video on initial page load
  */
-export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLiteProps) {
+export function YouTubeLite({ videoId, title = "YouTube video", className = "" }: YouTubeLiteProps) {
     const [isLoaded, setIsLoaded] = useState(false);
 
     const handleClick = () => {
@@ -23,13 +24,11 @@ export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLitePro
     if (isLoaded) {
         return (
             <iframe
-                width="445"
-                height="250"
                 src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
                 title={title}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className={styles.videoEmbed}
+                className={`w-full h-full object-cover ${className}`}
             />
         );
     }
@@ -37,62 +36,27 @@ export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLitePro
     return (
         <button
             onClick={handleClick}
-            className={styles.youtubeLite}
+            className={`relative w-full h-full block p-0 bg-transparent cursor-pointer group ${className}`}
             aria-label={`Play ${title}`}
-            style={{
-                position: "relative",
-                width: "445px",
-                height: "250px",
-                cursor: "pointer",
-                padding: 0,
-                background: "none",
-            }}
         >
             {/* YouTube thumbnail */}
             <img
                 src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
                 alt={title}
-                width={445}
-                height={250}
+                className="w-full h-full object-cover"
                 loading="lazy"
-                style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                }}
             />
 
             {/* Play button overlay */}
-            <div
-                style={{
-                    position: "absolute",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                    width: "68px",
-                    height: "48px",
-                    background: "rgba(255, 0, 0, 0.9)",
-                    borderRadius: "12px",
-                    transition: "background 0.2s",
-                }}
-                onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "rgba(255, 0, 0, 1)";
-                }}
-                onMouseLeave={(e) => {
-                    e.currentTarget.style.background = "rgba(255, 0, 0, 0.9)";
-                }}
-            >
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[68px] h-[48px] bg-red-600/90 rounded-xl transition-colors group-hover:bg-red-600">
                 {/* YouTube play icon */}
                 <svg
                     viewBox="0 0 68 48"
-                    style={{
-                        width: "100%",
-                        height: "100%",
-                    }}
+                    className="w-full h-full text-white"
                 >
                     <path
                         d="M 27,18 36,24 27,30 Z"
-                        fill="#fff"
+                        fill="currentColor"
                     />
                 </svg>
             </div>
