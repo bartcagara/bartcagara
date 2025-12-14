@@ -45,12 +45,12 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
 
   return (
     <div className="mb-20">
-      <div className="flex justify-between items-end mb-8 px-4 md:px-0">
-        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight">
+      <div className="flex justify-between items-center gap-4 mb-8">
+        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight flex-shrink min-w-0">
           <span className="text-[#456D8B] mr-2">/</span>
           {title}
         </h3>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-shrink-0">
           <button
             onClick={() => scroll(-1)}
             className={`w-12 h-12 border-2 border-[#09071D] flex items-center justify-center transition-all hover:bg-[#09071D] hover:text-white ${!showLeft ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
@@ -71,7 +71,7 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
       </div>
 
       <div
-        className="flex gap-6 overflow-x-auto pb-8 px-4 md:px-0 scrollbar-hide snap-x"
+        className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x"
         ref={scrollRef}
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >

@@ -23,20 +23,22 @@ export function YouTubeLite({ videoId, title = "YouTube video", className = "" }
 
     if (isLoaded) {
         return (
-            <iframe
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                title={title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className={`w-full h-full object-cover ${className}`}
-            />
+            <div className={styles.youtubeLite}>
+                <iframe
+                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                    title={title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full border-0"
+                />
+            </div>
         );
     }
 
     return (
         <button
             onClick={handleClick}
-            className={`relative w-full h-full block p-0 bg-transparent cursor-pointer group ${className}`}
+            className={`${styles.youtubeLite} relative block p-0 bg-black cursor-pointer group overflow-hidden ${className}`}
             aria-label={`Play ${title}`}
         >
             {/* YouTube thumbnail */}
