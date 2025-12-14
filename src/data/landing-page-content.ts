@@ -127,9 +127,9 @@ export const LANDING_CONTENT = {
     },
 
     results: {
-        headline: "THESE GUYS DIDN’T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
+        headline: "THESE GUYS DIDN'T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
         sections: {
-            transformations: "Client Transformations",
+            transformations: "Client Photos",
             interviews: "Client Interviews",
             dms: "Client DMs",
             testimonials: "Client Testimonials",
