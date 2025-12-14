@@ -1,5 +1,16 @@
+# Dependencies
 node_modules
 
+# Next.js
 .next
+out
+
+# System
 .DS_Store
+
+# TypeScript
 tsconfig.tsbuildinfo
+
+# IDE
+.vscode
+.idea

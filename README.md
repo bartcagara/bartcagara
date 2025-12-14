@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Executive Athlete OS™
+
+High-performance health infrastructure for the 40+ executive. Built with Next.js 15, TypeScript, and Tailwind CSS.
+
+## About
+
+Executive Athlete OS™ is designed for former athletes turned executives who are winning at work but facing physical decline. The system is engineered to work with heavy travel, client dinners, and chaotic schedules—no meal prep, no rigid rules.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/              # Next.js app router pages
+├── components/       # React components
+│   ├── home/        # Homepage-specific components
+│   ├── layout/      # Navigation & Footer
+│   ├── analytics/   # PostHog tracking
+│   └── ui/          # Shared UI components
+├── data/            # Content source of truth
+└── lib/             # Utility functions
+```
 
-## Learn More
+## Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Analytics**: PostHog
+- **Deployment**: Netlify
+- **Font**: Inter (Google Fonts)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ✅ Fully responsive design (mobile-first)
+- ✅ SEO optimized with complete metadata
+- ✅ Performance optimized (lazy loading, Next.js Image)
+- ✅ Accessibility compliant (WCAG 2.1)
+- ✅ Social share optimization (Open Graph)
+- ✅ Clean, maintainable codebase
 
-## Deploy on Vercel
+## Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Node version: 18.x or higher recommended
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+© 2024 Dad with Style OÜ. All rights reserved.
