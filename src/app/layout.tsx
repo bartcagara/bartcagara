@@ -82,19 +82,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
-        {/* Font Preloading */}
-        <link
-          rel="preload"
-          href="/_next/static/css/app/layout.css"
-          as="style"
-        />
-
         {/* Resource Hints for External Services */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="https://b2bjsstore.s3.us-west-2.amazonaws.com" />
-
-
         <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
+        <link rel="preconnect" href="https://b2bjsstore.s3.us-west-2.amazonaws.com" />
         <link rel="dns-prefetch" href="https://widget.senja.io" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />

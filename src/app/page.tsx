@@ -372,6 +372,7 @@ export default function Home() {
                   src="/images/home/bart-and-son.jpg"
                   alt="Bart Cagara and son flexing"
                   fill
+                  priority
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
