@@ -82,6 +82,7 @@ export const CLIENT_INTERVIEWS = [
 
 export const CLIENT_DMS = [
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00002-1763749393671.jpg?width=8000&height=8000&resize=contain",
+  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00012-1763749485245.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00001-1763749393635.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00003-1763749393641.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00004-1763749393664.jpg?width=8000&height=8000&resize=contain",
@@ -92,7 +93,6 @@ export const CLIENT_DMS = [
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00009-1763749393843.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00010-1763749393855.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00011-1763749485163.jpg?width=8000&height=8000&resize=contain",
-  "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00012-1763749485245.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00013-1763749485133.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00014-1763749485150.jpg?width=8000&height=8000&resize=contain",
   "https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/render/image/public/document-uploads/dm-screenshot-00015-1763749485145.jpg?width=8000&height=8000&resize=contain",
