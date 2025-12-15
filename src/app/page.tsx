@@ -62,7 +62,7 @@ export default function Home() {
                 <li className="group">
                   <div className="flex items-start gap-4 mb-2">
                     <X className="w-8 h-8 text-red-500 flex-shrink-0" strokeWidth={3} />
-                    <span className="text-2xl font-bold text-[#09071D]">Frustration leading to restrictive and unsustainable diets.</span>
+                    <span className="text-2xl font-bold text-[#09071D]">Frustration leading to restrictive restrictive diets you can't maintain.</span>
                   </div>
                 </li>
                 <li className="group">
