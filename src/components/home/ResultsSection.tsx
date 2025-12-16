@@ -17,7 +17,7 @@ export function ResultsSection() {
         <div id="results" className="py-24 md:py-32 bg-white">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-20">
-                    <div className={styles.sectionLabel}>
+                    <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
                         The Results
                     </div>
                     <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-[var(--bleu-nuit)] mb-8">
