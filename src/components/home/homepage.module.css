@@ -2,6 +2,27 @@
 /* CSS variables are defined in globals.css */
 
 /* =================================================================
+   SECTION LABELS
+   ================================================================= */
+
+.sectionLabel {
+    display: inline-block;
+    background-color: var(--bleu-accent);
+    color: var(--white);
+    font-family: monospace;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 0px var(--bleu-nuit);
+}
+
+.sectionLabelLight {
+    box-shadow: 4px 4px 0px var(--white);
+}
+
+/* =================================================================
    TYPOGRAPHY
    ================================================================= */
 

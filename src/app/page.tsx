@@ -41,7 +41,7 @@ export default function Home() {
       <section className="py-24 md:py-32 border-b-2 border-[#09071D] bg-[#F3F4F6]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-[#456D8B] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_#09071D]">
+            <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
               The Diagnosis
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-[#09071D] mb-8">
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="py-24 md:py-32 border-b-2 border-[#09071D] bg-[#09071D] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-[#456D8B] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
+            <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
               The Solution
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
@@ -200,7 +200,7 @@ export default function Home() {
       <section id="program" className="py-24 md:py-32 border-b-2 border-[#09071D] bg-[#09071D] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-[#456D8B] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
+            <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
               The Program
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           {/* NEW: Top Level Header */}
           <div className="mb-20">
-            <div className="inline-block bg-[#456D8B] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_#09071D]">
+            <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
               The Coach
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-[#09071D]">
