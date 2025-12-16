@@ -9,8 +9,10 @@
     display: inline-block;
     background-color: var(--bleu-accent);
     color: var(--white);
-    font-family: monospace;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
     font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     padding: 0.25rem 0.75rem;
