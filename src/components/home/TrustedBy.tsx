@@ -13,7 +13,7 @@ export function TrustedBy() {
         <section className="py-8 bg-[#F3F4F6]">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="mt-0">
-                    <p className="text-center font-bold uppercase text-[var(--bleu-nuit)]/60 tracking-wider mb-8 text-sm">
+                    <p className="text-center font-bold uppercase text-bleu-nuit/60 tracking-wider mb-8 text-sm">
                         {trustedBy.title}
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center opacity-70 grayscale hover:grayscale-0 transition-all duration-500">

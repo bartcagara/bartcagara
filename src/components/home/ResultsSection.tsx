@@ -72,11 +72,10 @@ export function ResultsSection() {
 
                 <ScrollSection title={results.sections.testimonials}>
                     <div
-                        className="senja-embed"
+                        className="senja-embed block-full"
                         data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
                         data-mode="shadow"
                         data-lazyload="true"
-                        style={{ display: "block", width: "100%" }}
                     />
                 </ScrollSection>
             </div>
