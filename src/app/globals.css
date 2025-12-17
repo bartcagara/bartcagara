@@ -47,6 +47,14 @@
   --color-text-main: var(--text-main);
   --color-text-secondary: var(--text-secondary);
   --color-accent-primary: var(--accent-primary);
+
+  /* Neo-Brutalist Custom Colors for Tailwind */
+  --color-bleu-nuit: var(--bleu-nuit);
+  --color-bleu-marine: var(--bleu-marine);
+  --color-bleu-charron: var(--bleu-charron);
+  --color-bleu-accent: var(--bleu-accent);
+  --color-bleu-fumee: var(--bleu-fumee);
+  --color-grey-light: var(--grey-light);
 }
 
 :root {
@@ -109,6 +117,22 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Custom scrollbar hiding utility */
+  .scrollbar-hide {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Full width block display utility */
+  .block-full {
+    display: block;
+    width: 100%;
   }
 }
 
