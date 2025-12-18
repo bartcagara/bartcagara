@@ -38,10 +38,10 @@ export const Navbar = memo(() => {
         {/* DESKTOP LINKS - Center */}
         {/* Hidden on mobile */}
         {!isBookPage && (
-          <div className="hidden md:flex gap-8 absolute left-1/2 -translate-x-1/2">
-            <Link href="/#results" className="text-bleu-nuit font-bold uppercase text-sm tracking-wider hover:underline decoration-2 underline-offset-4">Client Wins</Link>
-            <Link href="/#program" className="text-bleu-nuit font-bold uppercase text-sm tracking-wider hover:underline decoration-2 underline-offset-4">Coaching</Link>
-            <Link href="/#about" className="text-bleu-nuit font-bold uppercase text-sm tracking-wider hover:underline decoration-2 underline-offset-4">About Me</Link>
+          <div className="hidden md:flex gap-10 absolute left-1/2 -translate-x-1/2">
+            <Link href="/#results" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Client Wins</Link>
+            <Link href="/#program" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Coaching</Link>
+            <Link href="/#about" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">About Me</Link>
           </div>
         )}
 

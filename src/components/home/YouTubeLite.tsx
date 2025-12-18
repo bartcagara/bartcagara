@@ -24,13 +24,13 @@ export function YouTubeLite({ videoId, title = "YouTube video", className = "" }
     if (isLoaded) {
         return (
             <div className={styles.youtubeLite}>
-                <iframe
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
-                    title={title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+            <iframe
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+                title={title}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
                     className="w-full h-full border-0"
-                />
+            />
             </div>
         );
     }
