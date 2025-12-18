@@ -269,7 +269,7 @@ export default function Home() {
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
                   <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Hypertrophy Training</strong> (Building the V-Taper).</span></li>
                   <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Travel-Proofing</strong> (Airport & Hotel systems).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Athletic Movement</strong> (Re-introducing flow).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Anti-Fragility</strong> (Injury prevention & mobility).</span></li>
                 </ul>
 
                 {/* THE WIN */}
@@ -302,7 +302,7 @@ export default function Home() {
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
                   <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Restaurant Protocols</strong> (Navigating dinners & alcohol).</span></li>
                   <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Bloodwork Analysis</strong> (Data-driven optimization).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Anti-Fragility</strong> (Injury prevention & mobility).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Athletic Integration</strong> (Optimizing movement for your sport).</span></li>
                 </ul>
 
                 {/* THE WIN */}
