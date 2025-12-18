@@ -55,7 +55,7 @@ export const Navbar = memo(() => {
               href="https://cal.com/bartcagara/discovery-call"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-bleu-nuit text-white font-bold uppercase text-xs md:text-sm px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[3px_3px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+              className="bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[3px_3px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] tracking-tighter transition-all"
             >
               Book Call
             </Link>

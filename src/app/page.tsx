@@ -24,7 +24,7 @@ export default function Home() {
 
           <Link
             href="https://cal.com/bartcagara/discovery-call"
-            className="inline-flex items-center gap-3 bg-bleu-nuit text-white px-6 py-4 text-base md:px-10 md:py-6 md:text-xl font-bold uppercase tracking-wider border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] md:shadow-[6px_6px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
+            className="inline-flex items-center gap-3 bg-bleu-nuit text-white px-6 py-4 text-base md:px-10 md:py-6 md:text-xl font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] md:shadow-[6px_6px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
           >
             Book Discovery Call
             <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />
@@ -41,7 +41,7 @@ export default function Home() {
       <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-[#F3F4F6]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
+            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
               The Diagnosis
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
@@ -118,7 +118,7 @@ export default function Home() {
       <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
+            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
               The Solution
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
@@ -200,7 +200,7 @@ export default function Home() {
       <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-24">
-            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
+            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
               The Program
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
@@ -222,12 +222,12 @@ export default function Home() {
               <div className="border-b-2 border-white/10 pb-12">
                 <h3 className="text-4xl font-black uppercase mb-4 text-white leading-none">
                   The Reset
-                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-wider">(Weeks 1-4)</span>
+                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-tighter">(Weeks 1-4)</span>
                 </h3>
 
                 {/* FOCUS */}
                 <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-widest uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+                  <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
                           // FOCUS: IMMEDIATE CONTROL
                   </span>
                 </div>
@@ -241,8 +241,8 @@ export default function Home() {
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
-                  <span className="font-black text-white uppercase tracking-wider block mb-1 text-sm opacity-70">THE WIN:</span>
-                  <span className="font-black text-white uppercase tracking-wider text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
+                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
                     YOU DROP THE FIRST 10-15 LBS AND WAKE UP WITH ENERGY.
                   </span>
                 </div>
@@ -255,12 +255,12 @@ export default function Home() {
               <div className="border-b-2 border-white/10 pb-12">
                 <h3 className="text-4xl font-black uppercase mb-4 text-white leading-none">
                   The Build
-                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-wider">(Weeks 5-8)</span>
+                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-tighter">(Weeks 5-8)</span>
                 </h3>
 
                 {/* FOCUS */}
                 <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-widest uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+                  <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
                           // FOCUS: PHYSIQUE CONSTRUCTION
                   </span>
                 </div>
@@ -274,8 +274,8 @@ export default function Home() {
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
-                  <span className="font-black text-white uppercase tracking-wider block mb-1 text-sm opacity-70">THE WIN:</span>
-                  <span className="font-black text-white uppercase tracking-wider text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
+                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
                     THE SHIRT GETS TIGHTER IN THE SHOULDERS, LOOSER IN THE WAIST.
                   </span>
                 </div>
@@ -288,12 +288,12 @@ export default function Home() {
               <div className="border-b-2 border-white/10 pb-12">
                 <h3 className="text-4xl font-black uppercase mb-4 text-white leading-none">
                   The Armor
-                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-wider">(Weeks 9-12)</span>
+                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-tighter">(Weeks 9-12)</span>
                 </h3>
 
                 {/* FOCUS */}
                 <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-widest uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+                  <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
                           // FOCUS: SOCIAL COMMAND
                   </span>
                 </div>
@@ -307,8 +307,8 @@ export default function Home() {
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
-                  <span className="font-black text-white uppercase tracking-wider block mb-1 text-sm opacity-70">THE WIN:</span>
-                  <span className="font-black text-white uppercase tracking-wider text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
+                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
                     YOU NAVIGATE HIGH-STAKES DINNERS WITHOUT BREAKING STRIDE.
                   </span>
                 </div>
@@ -321,12 +321,12 @@ export default function Home() {
               <div>
                 <h3 className="text-4xl font-black uppercase mb-4 text-white leading-none">
                   The Exit
-                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-wider">(Weeks 13-24)</span>
+                  <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-tighter">(Weeks 13-24)</span>
                 </h3>
 
                 {/* FOCUS */}
                 <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-widest uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+                  <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
                           // FOCUS: FULL AUTONOMY
                   </span>
                 </div>
@@ -340,8 +340,8 @@ export default function Home() {
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
-                  <span className="font-black text-white uppercase tracking-wider block mb-1 text-sm opacity-70">THE WIN:</span>
-                  <span className="font-black text-white uppercase tracking-wider text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
+                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
                     YOU FIRE ME. YOU OWN THE SYSTEM FOR LIFE.
                   </span>
                 </div>
@@ -356,7 +356,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           {/* NEW: Top Level Header */}
           <div className="mb-20">
-            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-widest px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
+            <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
               The Coach
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
@@ -407,13 +407,13 @@ export default function Home() {
                   <div className="p-1 bg-bleu-accent rounded-full text-white">
                     <Check className="w-5 h-5" strokeWidth={4} />
                   </div>
-                  <span className="font-bold uppercase tracking-wider text-lg">Sports Nutritionist</span>
+                  <span className="font-bold uppercase tracking-tighter text-lg">Sports Nutritionist</span>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="p-1 bg-bleu-accent rounded-full text-white">
                     <Check className="w-5 h-5" strokeWidth={4} />
                   </div>
-                  <span className="font-bold uppercase tracking-wider text-lg">Executive Coach</span>
+                  <span className="font-bold uppercase tracking-tighter text-lg">Executive Coach</span>
                 </div>
               </div>
             </div>
@@ -432,7 +432,7 @@ export default function Home() {
           </p>
           <Link
             href="https://cal.com/bartcagara/discovery-call"
-            className="inline-flex items-center gap-3 bg-white text-bleu-nuit px-6 py-4 text-base md:px-12 md:py-8 md:text-2xl font-bold uppercase tracking-wider border-2 border-white shadow-[4px_4px_0px_0px_var(--bleu-accent)] md:shadow-[6px_6px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
+            className="inline-flex items-center gap-3 bg-white text-bleu-nuit px-6 py-4 text-base md:px-12 md:py-8 md:text-2xl font-black uppercase tracking-tighter border-2 border-white shadow-[4px_4px_0px_0px_var(--bleu-accent)] md:shadow-[6px_6px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] transition-all"
           >
             Book Discovery Call
             <ArrowRight className="w-5 h-5 md:w-8 md:h-8" />
