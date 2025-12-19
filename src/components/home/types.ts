@@ -26,12 +26,12 @@ export interface HeroContent {
  * Program/System Phase
  */
 export interface ProgramPhase {
-  number: string;
-  title: string;
-  weeks: string;
-  focus: string;
-  items: string[];
-  win: string;
+  readonly number: string;
+  readonly title: string;
+  readonly weeks: string;
+  readonly focus: string;
+  readonly items: readonly string[];
+  readonly win: string;
 }
 
 /**
@@ -79,9 +79,9 @@ export interface HeroSectionProps {
 export interface DiagnosisSectionProps {
   title: string;
   subtitle: string;
-  pillars: {
-    title: string;
-    items: string[];
+  pillars: readonly {
+    readonly title: string;
+    readonly items: readonly string[];
   }[];
   outcome: string;
 }
@@ -89,9 +89,9 @@ export interface DiagnosisSectionProps {
 export interface SolutionSectionProps {
   title: string;
   subtitle: string;
-  pillars: {
-    title: string;
-    items: string[];
+  pillars: readonly {
+    readonly title: string;
+    readonly items: readonly string[];
   }[];
   outcome: string;
 }
@@ -99,7 +99,7 @@ export interface SolutionSectionProps {
 export interface ProgramSectionProps {
   title: string;
   subtitle: string;
-  phases: ProgramPhase[];
+  phases: readonly ProgramPhase[];
 }
 
 export interface AboutSectionProps {
@@ -107,8 +107,8 @@ export interface AboutSectionProps {
   subtitle: string;
   imageSrc: string;
   imageAlt: string;
-  paragraphs: string[];
-  credentials: string[];
+  paragraphs: readonly string[];
+  credentials: readonly string[];
 }
 
 export interface FinalCTASectionProps {
