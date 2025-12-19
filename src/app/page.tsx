@@ -387,18 +387,16 @@ export default function Home() {
                   I was an athletic kid like you. Just not gifted enough to go pro. But the obsession never left.
                 </p>
                 <p>
-                  I spent years mastering Sports Nutrition and Strength Training because I refused to be average.<br />
-                  (And because I want this little guy to be proud of his old man.)
+                  I spent years mastering Sports Nutrition and Strength Training because I refused to be average. And because I want this little guy to be proud of his old man.
                 </p>
                 <p>
-                  As I built my practice, former athletes started gravitating toward me.<br />
-                  (One client told me it's the Nick Saban in me.)
+                  As I built my practice, former athletes started gravitating toward me. One client told me it's the Nick Saban in me.
                 </p>
                 <p>
-                  But looking at their lives, I saw a pattern: too many great guys trading their health for their career.
+                  But I kept seeing the same pattern - great guys trading their health for their career.
                 </p>
                 <p className="text-bleu-nuit font-bold">
-                  So, I built a system that translates physique and performance optimization into an executive lifestyle: high-stakes dinners, heavy travel, and zero space for "perfect world" routines.
+                  So I built a system that translates physique and performance optimization into an executive lifestyle. High-stakes dinners. Heavy travel. Zero room for "perfect world" routines.
                 </p>
               </div>
 
