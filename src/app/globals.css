@@ -134,6 +134,84 @@
     display: block;
     width: 100%;
   }
+
+  /* Neo-Brutalist Shadow Utilities */
+  .shadow-brutal-sm {
+    box-shadow: 4px 4px 0px 0px var(--bleu-accent);
+  }
+
+  .shadow-brutal-md {
+    box-shadow: 6px 6px 0px 0px var(--bleu-accent);
+  }
+
+  .shadow-brutal-lg {
+    box-shadow: 12px 12px 0px 0px var(--bleu-nuit);
+  }
+
+  .shadow-brutal-nuit-sm {
+    box-shadow: 4px 4px 0px 0px var(--bleu-nuit);
+  }
+
+  .shadow-brutal-white-sm {
+    box-shadow: 4px 4px 0px 0px white;
+  }
+
+  /* Hover Shadow Utilities */
+  .hover-shadow-none:hover {
+    box-shadow: none;
+  }
+
+  /* Section Badge Utility */
+  .section-badge {
+    display: inline-block;
+    background-color: var(--bleu-accent);
+    color: white;
+    font-family: var(--font-mono, ui-monospace, monospace);
+    font-size: 0.75rem;
+    line-height: 1rem;
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 0px 0px var(--bleu-nuit);
+  }
+
+  .section-badge-light {
+    box-shadow: 4px 4px 0px 0px white;
+  }
+
+  /* Transition Utilities */
+  .transition-brutal {
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .hover-translate-brutal:hover {
+    transform: translate(3px, 3px);
+  }
+
+  /* Screen Reader Only - Accessibility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: fixed;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
 }
 
 @layer base {
