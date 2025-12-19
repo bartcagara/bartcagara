@@ -28,13 +28,13 @@ export default function Home() {
 
       <main
         id="main-content"
-        className="min-h-screen bg-bleu-fumee text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white"
+        className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white"
       >
         {/* 1. HERO SECTION */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
         {/* TRUSTED BY */}
-        <div className="border-b-2 border-bleu-nuit bg-bleu-fumee">
+        <div className="border-b-2 border-bleu-nuit bg-gray-50">
           <TrustedBy />
         </div>
 

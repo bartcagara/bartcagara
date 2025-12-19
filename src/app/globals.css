@@ -55,6 +55,7 @@
   --color-bleu-accent: var(--bleu-accent);
   --color-bleu-fumee: var(--bleu-fumee);
   --color-grey-light: var(--grey-light);
+  --color-gray-50: var(--gray-50);
 }
 
 :root {
@@ -99,6 +100,7 @@
   --bleu-fumee: #E8EFF5;
   --white: #FFFFFF;
   --grey-light: #64748b;
+  --gray-50: #F3F4F6;
 
   /* Semantic Design System */
   --background-primary: var(--white);

@@ -8,7 +8,7 @@ import type { DiagnosisSectionProps } from "@/components/home/types";
  */
 export function DiagnosisSection({ title, subtitle, pillars, outcome }: DiagnosisSectionProps) {
   return (
-    <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-fumee" aria-labelledby="diagnosis-title">
+    <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-gray-50" aria-labelledby="diagnosis-title">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge>The Diagnosis</SectionBadge>
