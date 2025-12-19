@@ -426,7 +426,7 @@ export default function Home() {
             Get Back In<br /><span className="text-bleu-accent">The Game.</span>
           </h2>
           <p className="text-2xl md:text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
-            The best athletes get smarter with age. Let's build a system that works for the man you are today.
+            The best athletes get smarter with age. Let's build a system for the man you are today.
           </p>
           <Link
             href="https://cal.com/bartcagara/discovery-call"
