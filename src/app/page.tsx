@@ -390,7 +390,7 @@ export default function Home() {
                   I spent years mastering Sports Nutrition and Strength Training because I refused to be average. And because I want this little guy to be proud of his old man.
                 </p>
                 <p>
-                  As I built my practice, former athletes started gravitating toward me. One client told me it's the Nick Saban in me.
+                  As I built my practice, former athletes started gravitating toward me. (One client told me it's the Nick Saban in me.)
                 </p>
                 <p>
                   But I kept seeing the same pattern - great guys trading their health for their career.
