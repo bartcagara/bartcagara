@@ -5,218 +5,153 @@
  */
 
 export const HOMEPAGE_CONTENT = {
-    hero: {
-        headline: "Your 40s are the decade that decides",
-        subheadline: "You don't need more discipline. You need a system built for the executive reality: heavy travel, high-stakes dinners, and zero space for \"perfect\" diets.",
-        ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/discovery-call",
-        ctaNote: "No meal prep. No tracking. We just find the leak in your current approach.",
-    },
+  hero: {
+    headline: "Stop The Decline.",
+    highlightedText: "Reclaim The Athlete.",
+    subheadline: "For the former-athlete executive whose physical decline just got real. You can't afford to run the old playbook anymore.",
+    ctaText: "Book Discovery Call",
+    ctaLink: "https://cal.com/bartcagara/discovery-call",
+  },
 
-    trustedBy: {
-        title: "Trusted by executives from:",
-    },
+  trustedBy: {
+    title: "Trusted by executives from:",
+  },
 
-    intro: {
-        paragraphs: [
-            "You are successful. But let's be honest—your body doesn't show it.",
-            "You feel sharp walking into a meeting... until you catch your reflection in the glass. You don't see a leader. You see the \"heavy guy at the table.\"",
-            "You try to fix it. You order the salad while everyone else eats steak. You go to bed hungry. But when you step on the scale the next morning, the number hasn't moved. It drives you crazy.",
-            "Eventually, the stress wins. You starve yourself Monday through Thursday, but the moment you slow down, you lose control. The weekend becomes a blur of mindless eating. Your training? Non-existent.",
-            "You've built an incredible life, but you don't have the energy to actually live it. Hell, you can't even keep up with your kids.",
-            "The gap between the athlete you used to be and the man you are today is widening.",
-            "And deep down, you know the truth: If you don't fix this now, you aren't going to enjoy your success. You are just going to manage your decline.",
+  diagnosis: {
+    title: "YOU ARE GRINDING\nLIKE A ROOKIE.",
+    subtitle: "Fighting your physiology.\nRelying on willpower.\nForcing the game.",
+    pillars: [
+      {
+        title: "Diet",
+        items: [
+          "Frustration leading to restrictive diets you can't maintain.",
+          "White-knuckling Mon-Thu. Collapsing on the weekend.",
+          "One business trip destroys weeks of progress.",
         ],
-    },
-
-    traps: {
-        sectionId: "problem",
-        headline: "The #1 reason executives fail to get fit? Perfect-Conditions Fitness",
-        intro: [
-            "You didn't fail because you lack discipline. You failed because you are using \"Perfect World\" tools in a chaotic executive life.",
-            "WE WILL IDENTIFY WHICH OF THESE 3 TRAPS IS KILLING YOUR MOMENTUM:",
+      },
+      {
+        title: "Training",
+        items: [
+          "Using \"College Athlete\" logic on a 40-year-old body.",
+          "The \"All-or-Nothing\" loop: 2 weeks on, 2 months off.",
+          "Burning calories, but never building muscle.",
         ],
-        traps: [
-            {
-                title: "THE \"PERFECTIONIST\" TRAP",
-                trigger: "One client dinner goes off-script. You eat something \"bad.\" You feel like you failed.",
-                spiral: "Guilt kicks in. You say \"screw it\" and binge until Monday. You restart the cycle, feeling defeated before you even begin.",
-            },
-            {
-                title: "THE \"STARVATION\" TRAP",
-                effort: "You white-knuckle Monday through Thursday. But by Friday, your willpower is gone. Your weekend is a disaster.",
-                reality: "You step on the scale. Nothing changed. You erased 4 days of progress in 4 hours. Eventually, your patience quits.",
-            },
-            {
-                title: "THE \"CHAOS\" TRAP",
-                plan: "Works perfectly... when you are home. But then travel hits. A deal closes. The routine collapses.",
-                reality: "You lose your athletic taper. The weight piles on because the plan requires a perfect schedule that doesn't exist.",
-            },
+      },
+    ],
+    outcome: "The outcome? You stay trapped in the restart cycle, managing a physical decline instead of reversing it.",
+  },
+
+  solution: {
+    title: "START OPERATING\nLIKE A VETERAN.",
+    subtitle: "Picking your spots.\nManaging your energy.\nLetting the game come to you.",
+    pillars: [
+      {
+        title: "Diet",
+        items: [
+          "Nutrition without the starvation.",
+          "Dining out without looking like the \"diet guy.\"",
+          "Traveling without losing momentum.",
         ],
-    },
-
-    solution: {
-        sectionId: "solution",
-        headline: "THE SOLUTION? CONVENIENCE-FIRST FITNESS",
-        intro: "A system that works no matter what your schedule throws at you.",
-        pillars: [
-            {
-                title: "TOTAL NUTRITIONAL COMMAND",
-                intro: "You eat out constantly. You travel. You have a life. We build a protocol that absorbs these realities instead of breaking under them.",
-                features: [
-                    {
-                        title: "NO MEAL PREP. NO TUPPERWARE.",
-                        description: "You can't bring plastic boxes to a board meeting. We build a system based on principles, not prep. You will know exactly how to fuel your body in an airport lounge, a gas station, or a Michelin-star restaurant.",
-                    },
-                    {
-                        title: "OWN THE MENU",
-                        description: "Stop stressing over the bread basket. You will learn to navigate client dinners with zero anxiety—ordering meals that satisfy you and respect your goals, without looking like the \"diet guy\" at the table.",
-                    },
-                    {
-                        title: "ELIMINATE THE BRAIN FOG",
-                        description: "Most executives run on caffeine and stress. We fix your nutrition to stabilize your energy. No more 3 PM crash. No more tension headaches. Just steady, lethal focus all day.",
-                    },
-                ],
-            },
-            {
-                title: "HIGH-ROI PHYSIQUE CONSTRUCTION",
-                intro: "You don't have 90 minutes to waste in the gym. We strip away the junk volume and focus on the 20% of movements that drive 80% of the result.",
-                features: [
-                    {
-                        title: "RECLAIM THE ATHLETIC TAPER",
-                        description: "We don't train to \"burn calories.\" We train to build the V-shape physique that commands respect. Broad shoulders. Lean waist. You will look as sharp in a t-shirt as you do in a suit.",
-                    },
-                    {
-                        title: "THE \"HOTEL GYM\" PROTOCOL",
-                        description: "Gym closed? Only have 30lb dumbbells? No problem. You will learn how to get a world-class workout anywhere. Your progress never stops just because you changed time zones.",
-                    },
-                    {
-                        title: "FIX THE JOINT PAIN",
-                        description: "We fix the knee pain and back aches that come from sitting at a desk for 12 hours. We build a body that is durable, pain-free, and ready to play with your kids on the weekend.",
-                    },
-                ],
-            },
+      },
+      {
+        title: "Training",
+        items: [
+          "Short, targeted sessions. Zero wasted effort.",
+          "Building muscle with hotel gym dumbbells.",
+          "Injury prevention built into every session.",
         ],
-        ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/discovery-call",
-    },
+      },
+    ],
+    outcome: "The outcome? A system that absorbs the chaos. You look athletic and feel dangerous, no matter where the job takes you.",
+  },
 
-    shift: {
-        headline: "THE SHIFT",
-        intro: "You are no longer trapped in a rigid system designed for someone else. You gain the freedom to build a flexible protocol that works for you.",
-        comparison: {
-            old: {
-                title: "STOP FOLLOWING RULES",
-                items: [
-                    { label: "Anxiety", description: "You sweat every menu choice at a steakhouse." },
-                    { label: "Isolation", description: "You decline invites because you're \"being disciplined.\"" },
-                    { label: "Confusion", description: "You have tried so many diets and programs, you have \"no idea how to eat anymore.\"" },
-                    { label: "Lethargy", description: "You feel frumpy and soft, even in a tailored suit." },
-                ],
-            },
-            new: {
-                title: "START BUILDING PRINCIPLES",
-                items: [
-                    { label: "Control", description: "You walk into a steakhouse or airport lounge and know exactly how to eat without stress." },
-                    { label: "Presence", description: "You have the energy to get silly with your kids, not just watch them." },
-                    { label: "Confidence", description: "You look good in your clothes, not just fit into them." },
-                    { label: "Freedom", description: "You stop thinking about food 24/7. You focus on your life and make intuitive choices by default." },
-                ],
-            },
-        },
+  results: {
+    headline: "THESE GUYS DIDN'T\nFIND MORE TIME.",
+    subheadline: "They built a better system.",
+    sections: {
+      transformations: "Client Photos",
+      interviews: "Client Interviews",
+      dms: "Client DMs",
+      testimonials: "Client Testimonials",
     },
+  },
 
-    results: {
-        headline: "THESE GUYS DIDN'T SLOW DOWN. THEY BUILT A BETTER SYSTEM.",
-        sections: {
-            transformations: "Client Photos",
-            interviews: "Client Interviews",
-            dms: "Client DMs",
-            testimonials: "Client Testimonials",
-        },
-    },
-
-    system: {
-        sectionId: "program",
-        headline: "EXECUTIVE ATHLETE OS",
-        intro: "Six months to reclaim the athlete. Built for your schedule, your travel, your life.",
-        stages: [
-            {
-                number: 1,
-                title: "THE RESET",
-                description: "(WEEKS 1-4) // FOCUS: IMMEDIATE CONTROL",
-                items: [
-                    "Metabolic Repair - Eat more, burn more, stop starving",
-                    "30-Minute Baseline - Build your strength foundation",
-                    "Energy Systems - Kill the afternoon crash",
-                ],
-                deliverable: "YOU DROP 10-15 LBS. ENERGY RETURNS. YOU'RE BACK.",
-                rhythm: "Unlimited Async Access (WhatsApp) + Strategic Check-ins",
-            },
-            {
-                number: 2,
-                title: "THE BUILD",
-                description: "(WEEKS 5-8) // FOCUS: PHYSIQUE CONSTRUCTION",
-                items: [
-                    "Hypertrophy Training - Building the V-Taper back",
-                    "Travel-Proofing - Airport & hotel systems",
-                    "Anti-Fragility - Injury prevention & mobility",
-                ],
-                deliverable: "THE SHIRT GETS TIGHTER IN THE SHOULDERS, LOOSER IN THE WAIST.",
-                rhythm: "Unlimited Async Access (WhatsApp) + Strategic Check-ins",
-            },
-            {
-                number: 3,
-                title: "THE ARMOR",
-                description: "(WEEKS 9-12) // FOCUS: SOCIAL COMMAND",
-                items: [
-                    "Restaurant Protocols - Dominate client dinners without breaking stride",
-                    "Bloodwork Intel - Optimize from data, not guesswork",
-                    "Athletic Integration - Get back in your sport without breaking down",
-                ],
-                deliverable: "YOU HIT A NEW BASELINE. YOU'RE NOT GOING BACK.",
-                rhythm: "Unlimited Async Access (WhatsApp) + Strategic Check-ins",
-            },
-            {
-                number: 4,
-                title: "THE EXIT",
-                description: "(WEEKS 13-24) // FOCUS: FULL AUTONOMY",
-                items: [
-                    "Intuitive Operation - Decisions without rules or tracking",
-                    "Longevity Protocols - Healthspan extension beyond the program",
-                    "Life Integration - Weddings, vacations, celebrations - nothing derails you",
-                ],
-                deliverable: "YOU FIRE ME. YOU OWN THE SYSTEM.",
-                rhythm: "Unlimited Async Access (WhatsApp) + Strategic Check-ins",
-            },
+  program: {
+    title: "EXECUTIVE\nATHLETE OS",
+    subtitle: "Six months to reclaim the athlete. Built for your schedule, your travel, your life.",
+    phases: [
+      {
+        number: "01",
+        title: "The Reset",
+        weeks: "Weeks 1-4",
+        focus: "IMMEDIATE CONTROL",
+        items: [
+          "**Metabolic Repair** - Eat more, burn more, stop starving",
+          "**30-Minute Baseline** - Build your strength foundation",
+          "**Energy Systems** - Kill the afternoon crash",
         ],
-        ctaText: "BOOK A 15-MIN RAPID AUDIT",
-        ctaLink: "https://cal.com/bartcagara/discovery-call",
-    },
-
-    finalCta: {
-        sectionId: "cta",
-        headline: "STOP GUESSING. GET DIAGNOSED.",
-        intro: "You don't need another PDF diet. You need to know exactly why your previous attempts failed so you can stop repeating the cycle.",
-        processTitle: "WHAT HAPPENS ON THIS 15-MINUTE AUDIT?",
-        steps: [
-            {
-                number: 1,
-                title: "We Audit Your Reality:",
-                description: "I look at your actual calendar—your travel load, client dinners, and stress peaks.",
-            },
-            {
-                number: 2,
-                title: "We Spot The Leak:",
-                description: "I tell you exactly which \"Trap\" is killing your progress.",
-            },
-            {
-                number: 3,
-                title: "We Build The Fix:",
-                description: "You leave with one immediate, high-impact adjustment you can use tonight. If you want to implement the full system, we schedule a separate call.",
-            },
+        win: "YOU DROP 10-15 LBS. ENERGY RETURNS. YOU'RE BACK.",
+      },
+      {
+        number: "02",
+        title: "The Build",
+        weeks: "Weeks 5-8",
+        focus: "PHYSIQUE CONSTRUCTION",
+        items: [
+          "**Hypertrophy Training** - Building the V-Taper back",
+          "**Travel-Proofing** - Airport & hotel systems",
+          "**Anti-Fragility** - Injury prevention & mobility",
         ],
-        ctaText: "BOOK YOUR 15-MIN AUDIT",
-        ctaLink: "https://cal.com/bartcagara/discovery-call",
-    },
+        win: "THE SHIRT GETS TIGHTER IN THE SHOULDERS, LOOSER IN THE WAIST.",
+      },
+      {
+        number: "03",
+        title: "The Armor",
+        weeks: "Weeks 9-12",
+        focus: "SOCIAL COMMAND",
+        items: [
+          "**Restaurant Protocols** - Dominate client dinners without breaking stride",
+          "**Bloodwork Intel** - Optimize from data, not guesswork",
+          "**Athletic Integration** - Get back in your sport without breaking down",
+        ],
+        win: "YOU HIT A NEW BASELINE. YOU'RE NOT GOING BACK.",
+      },
+      {
+        number: "04",
+        title: "The Exit",
+        weeks: "Weeks 13-24",
+        focus: "FULL AUTONOMY",
+        items: [
+          "**Intuitive Operation** - Decisions without rules or tracking",
+          "**Longevity Protocols** - Healthspan extension beyond the program",
+          "**Life Integration** - Weddings, vacations, celebrations - nothing derails you",
+        ],
+        win: "YOU FIRE ME. YOU OWN THE SYSTEM.",
+      },
+    ],
+  },
+
+  about: {
+    title: "Who The FUCK",
+    subtitle: "Is Bart?",
+    imageSrc: "/images/home/bart-and-son.jpg",
+    imageAlt: "Bart Cagara and son flexing",
+    paragraphs: [
+      "Fair question.",
+      "I was an athletic kid like you. Just not gifted enough to go pro. But the obsession never left.",
+      "I spent years mastering Sports Nutrition and Strength Training because I refused to be average. And because I want this little guy to be proud of his old man.",
+      "As I built my practice, former athletes started gravitating toward me. (One client told me it's the Nick Saban in me.)",
+      "But I kept seeing the same pattern - great guys trading their health for their career.",
+      "So I built a system that translates physique and performance optimization into an executive lifestyle. High-stakes dinners. Heavy travel. Zero room for \"perfect world\" routines.",
+    ],
+    credentials: ["Sports Nutritionist", "Performance Coach"],
+  },
+
+  finalCta: {
+    headline: "Get Back In",
+    highlightedText: "The Game.",
+    subheadline: "The best athletes get smarter with age. Let's build a system for the man you are today.",
+    ctaText: "Book Discovery Call",
+    ctaLink: "https://cal.com/bartcagara/discovery-call",
+  },
 } as const;
