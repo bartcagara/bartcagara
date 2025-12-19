@@ -411,7 +411,7 @@ export default function Home() {
                   <div className="p-1 bg-bleu-accent rounded-full text-white">
                     <Check className="w-5 h-5" strokeWidth={4} />
                   </div>
-                  <span className="font-bold uppercase tracking-tighter text-lg">Executive Coach</span>
+                  <span className="font-bold uppercase tracking-tighter text-lg">Performance Coach</span>
                 </div>
               </div>
             </div>
