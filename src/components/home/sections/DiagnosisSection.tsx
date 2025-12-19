@@ -12,7 +12,7 @@ export function DiagnosisSection({ title, subtitle, pillars, outcome }: Diagnosi
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge>The Diagnosis</SectionBadge>
-          <h2 id="diagnosis-title" className="text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
+          <h2 id="diagnosis-title" className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
             {title.split('\n').map((line, i) => (
               <span key={i}>
                 {line}
@@ -20,7 +20,7 @@ export function DiagnosisSection({ title, subtitle, pillars, outcome }: Diagnosi
               </span>
             ))}
           </h2>
-          <h3 className="text-xl md:text-2xl lg:text-3xl font-medium text-bleu-nuit/60 max-w-3xl leading-tight">
+          <h3 className="text-2xl md:text-3xl font-medium text-bleu-nuit/60 max-w-3xl leading-tight">
             {subtitle.split('\n').map((line, i) => (
               <span key={i}>
                 {line}
