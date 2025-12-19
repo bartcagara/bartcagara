@@ -17,19 +17,7 @@ import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
  */
 export default function Home() {
   return (
-    <>
-      {/* Skip to main content - Accessibility */}
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-6 focus:py-3 focus:bg-bleu-nuit focus:text-white focus:font-bold focus:uppercase focus:shadow-brutal-sm"
-      >
-        Skip to main content
-      </a>
-
-      <main
-        id="main-content"
-        className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white"
-      >
+    <main className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
         {/* 1. HERO SECTION */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
@@ -84,7 +72,6 @@ export default function Home() {
           ctaText={HOMEPAGE_CONTENT.finalCta.ctaText}
           ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
         />
-      </main>
-    </>
+    </main>
   );
 }
