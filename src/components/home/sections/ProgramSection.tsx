@@ -12,7 +12,12 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
         <div className="mb-24">
           <SectionBadge variant="light">The Program</SectionBadge>
           <h2 id="program-title" className="text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
-            {title}
+            {title.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < title.split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h2>
           <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
             {subtitle}

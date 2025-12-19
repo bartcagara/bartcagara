@@ -13,10 +13,20 @@ export function SolutionSection({ title, subtitle, pillars, outcome }: SolutionS
         <div className="mb-24">
           <SectionBadge variant="light">The Solution</SectionBadge>
           <h2 id="solution-title" className="text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] mb-8">
-            {title}
+            {title.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < title.split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h2>
           <h3 className="text-xl md:text-2xl lg:text-3xl font-medium text-white/60 max-w-3xl leading-tight">
-            {subtitle}
+            {subtitle.split('\n').map((line, i) => (
+              <span key={i}>
+                {line}
+                {i < subtitle.split('\n').length - 1 && <br />}
+              </span>
+            ))}
           </h3>
         </div>
 
