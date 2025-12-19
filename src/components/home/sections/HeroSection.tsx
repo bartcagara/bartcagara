@@ -9,7 +9,7 @@ export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className="border-b-2 border-bleu-nuit" role="banner">
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
-        <h1 className="text-6xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-bleu-nuit max-w-5xl">
+        <h1 className="text-7xl md:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-bleu-nuit max-w-5xl">
           {content.headline}<br />
           <span className="text-bleu-accent">{content.highlightedText}</span>
         </h1>
