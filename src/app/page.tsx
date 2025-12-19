@@ -204,10 +204,10 @@ export default function Home() {
               The Program
             </div>
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
-              Executive<br />Athlete OS
+              EXECUTIVE<br />ATHLETE OS
             </h2>
             <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
-              A 4-phase program to rebuild your infrastructure without pausing your career.
+              Six months to reclaim the athlete. Built for your schedule, your travel, your life.
             </p>
           </div>
 
@@ -234,16 +234,16 @@ export default function Home() {
 
                 {/* PROTOCOL */}
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Metabolic Repair</strong> (Eat more, burn more).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">The 30-Minute Baseline</strong> (Strength foundation).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Energy Systems</strong> (Eliminating the afternoon crash).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Metabolic Repair</strong> - Eat more, burn more, stop starving</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">30-Minute Baseline</strong> - Build your strength foundation</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Energy Systems</strong> - Kill the afternoon crash</span></li>
                 </ul>
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
                   <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
                   <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
-                    YOU DROP THE FIRST 10-15 LBS AND WAKE UP WITH ENERGY.
+                    YOU DROP 10-15 LBS. ENERGY RETURNS. YOU'RE BACK.
                   </span>
                 </div>
               </div>
@@ -267,9 +267,9 @@ export default function Home() {
 
                 {/* PROTOCOL */}
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Hypertrophy Training</strong> (Building the V-Taper).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Travel-Proofing</strong> (Airport & Hotel systems).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Anti-Fragility</strong> (Injury prevention & mobility).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Hypertrophy Training</strong> - Building the V-Taper back</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Travel-Proofing</strong> - Airport & hotel systems</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Anti-Fragility</strong> - Injury prevention & mobility</span></li>
                 </ul>
 
                 {/* THE WIN */}
@@ -300,16 +300,16 @@ export default function Home() {
 
                 {/* PROTOCOL */}
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Restaurant Protocols</strong> (Navigating dinners & alcohol).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Bloodwork Analysis</strong> (Data-driven optimization).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Athletic Integration</strong> (Optimizing movement for your sport).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Restaurant Protocols</strong> - Dominate client dinners without breaking stride</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Bloodwork Intel</strong> - Optimize from data, not guesswork</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Athletic Integration</strong> - Get back in your sport without breaking down</span></li>
                 </ul>
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
                   <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
                   <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
-                    YOU NAVIGATE HIGH-STAKES DINNERS WITHOUT BREAKING STRIDE.
+                    YOU HIT A NEW BASELINE. YOU'RE NOT GOING BACK.
                   </span>
                 </div>
               </div>
@@ -333,16 +333,16 @@ export default function Home() {
 
                 {/* PROTOCOL */}
                 <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Intuitive Transition</strong> (From "coached" to "autonomous").</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Longevity Protocols</strong> (Healthspan extension).</span></li>
-                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">The System Handoff</strong> (You become the captain).</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Intuitive Operation</strong> - Decisions without rules or tracking</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Longevity Protocols</strong> - Healthspan extension beyond the program</span></li>
+                  <li className="flex items-start"><span className="text-bleu-accent mr-4 font-black">/</span><span><strong className="text-white">Life Integration</strong> - Weddings, vacations, celebrations - nothing derails you</span></li>
                 </ul>
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-[4px_4px_0px_0px_white]">
                   <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">THE WIN:</span>
                   <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
-                    YOU FIRE ME. YOU OWN THE SYSTEM FOR LIFE.
+                    YOU FIRE ME. YOU OWN THE SYSTEM.
                   </span>
                 </div>
               </div>
