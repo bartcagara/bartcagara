@@ -1,18 +1,23 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { usePostHog } from "posthog-js/react";
 import styles from "@/components/home/homepage.module.css";
 import type { Metadata } from "next";
 
 export default function ContactPage() {
     const [honeypot, setHoneypot] = useState("");
     const [formStartTime] = useState(Date.now());
+    const posthog = usePostHog();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         // Check honeypot - if filled, it's a bot
         if (honeypot) {
             e.preventDefault();
-            console.log("Bot detected via honeypot");
+            posthog?.capture('spam_detected', {
+                method: 'honeypot',
+                honeypot_value: honeypot
+            });
             return;
         }
 
@@ -20,9 +25,15 @@ export default function ContactPage() {
         const timeElapsed = Date.now() - formStartTime;
         if (timeElapsed < 3000) {
             e.preventDefault();
-            console.log("Bot detected via timing");
+            posthog?.capture('spam_detected', {
+                method: 'timing',
+                time_elapsed_ms: timeElapsed
+            });
             return;
         }
+
+        // Track successful form submission
+        posthog?.capture('contact_form_submitted');
 
         // If all checks pass, allow form submission to continue
     };
