@@ -1,0 +1,11 @@
+name = "posthog-proxy"
+main = "posthog-worker.js"
+compatibility_date = "2024-01-01"
+
+# Route configuration
+routes = [
+  { pattern = "e.bartcagara.com/*", zone_name = "bartcagara.com" }
+]
+
+# Worker type
+workers_dev = true
