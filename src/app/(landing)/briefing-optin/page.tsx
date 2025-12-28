@@ -3,8 +3,56 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Executive Athlete Briefing | Bart Cagara",
-    description: "Every Sunday, get one client-tested insight to absorb chaos, reverse aging, and stay dangerous.",
+    title: "Executive Athlete Briefing | Weekly Newsletter for Former Athletes",
+    description: "Every Sunday, get one client-tested insight to win the road game, own the menu, and operate like a veteran. Join 400+ former-athlete executives who read it in 2 minutes.",
+    keywords: [
+        "Executive Newsletter",
+        "Business Travel Fitness",
+        "Executive Health",
+        "Former Athletes",
+        "Executive Performance",
+        "Bart Cagara Newsletter"
+    ],
+    authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
+    creator: "Bart Cagara",
+    publisher: "Bart Cagara",
+    alternates: {
+        canonical: "/briefing-optin"
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "/briefing-optin",
+        siteName: "Executive Athlete OS",
+        title: "Executive Athlete Briefing | Weekly Newsletter",
+        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight to stay dangerous.",
+        images: [
+            {
+                url: "/opengraph-briefing.png",
+                width: 1200,
+                height: 630,
+                alt: "Executive Athlete Briefing - Weekly Newsletter by Bart Cagara"
+            }
+        ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Executive Athlete Briefing | Weekly Newsletter",
+        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight.",
+        images: ["/opengraph-briefing.png"],
+        creator: "@bartcagara"
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-video-preview": -1,
+            "max-image-preview": "large",
+            "max-snippet": -1
+        }
+    }
 };
 
 export default function BriefingOptinPage() {
@@ -89,9 +137,12 @@ export default function BriefingOptinPage() {
                             <div key={i} className="break-inside-avoid">
                                 <Image
                                     src={`/images/briefing/dm${i}.jpg`}
-                                    alt="Client result"
+                                    alt={`Client transformation result ${i} - Executive Athlete coaching testimonial`}
                                     width={400}
                                     height={500}
+                                    loading={i <= 3 ? "eager" : "lazy"}
+                                    quality={85}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     className="w-full h-auto shadow-[4px_4px_0px_0px_var(--bleu-nuit)] md:shadow-[8px_8px_0px_0px_var(--bleu-nuit)] border-2 border-bleu-nuit hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--bleu-nuit)] transition-all duration-200"
                                 />
                             </div>

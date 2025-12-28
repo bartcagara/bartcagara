@@ -2,17 +2,22 @@
 
 import { useState, FormEvent } from "react";
 import { usePostHog } from "posthog-js/react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
+
+type SubmitState = "idle" | "submitting" | "success" | "error";
 
 export function OptinForm() {
   const [honeypot, setHoneypot] = useState("");
   const [formStartTime] = useState(Date.now());
+  const [submitState, setSubmitState] = useState<SubmitState>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
   const posthog = usePostHog();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
     // Check honeypot
     if (honeypot) {
-      e.preventDefault();
       posthog?.capture('newsletter_spam_detected', {
         method: 'honeypot',
         honeypot_value: honeypot
@@ -23,7 +28,6 @@ export function OptinForm() {
     // Check timing
     const timeElapsed = Date.now() - formStartTime;
     if (timeElapsed < 3000) {
-      e.preventDefault();
       posthog?.capture('newsletter_spam_detected', {
         method: 'timing',
         time_elapsed_ms: timeElapsed
@@ -31,16 +35,52 @@ export function OptinForm() {
       return;
     }
 
+    setSubmitState("submitting");
     posthog?.capture('newsletter_signup_started');
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch('https://app.kit.com/forms/7134584/subscriptions', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors', // ConvertKit doesn't support CORS
+      });
+
+      // With no-cors, we can't read the response, so we assume success
+      setSubmitState("success");
+      posthog?.capture('newsletter_signup_completed');
+    } catch (error) {
+      setSubmitState("error");
+      setErrorMessage("Something went wrong. Please try again.");
+      posthog?.capture('newsletter_signup_error', {
+        error: error instanceof Error ? error.message : 'Unknown error'
+      });
+    }
   };
+
+  // Success state
+  if (submitState === "success") {
+    return (
+      <div className="w-full py-12 text-center">
+        <div className="inline-flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full">
+          <CheckCircle2 className="w-10 h-10 text-white" />
+        </div>
+        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-bleu-nuit mb-3">
+          You're In!
+        </h3>
+        <p className="text-lg text-bleu-nuit/80 font-medium">
+          Check your email to confirm your subscription.
+        </p>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full">
       <form
-        action="https://app.kit.com/forms/7134584/subscriptions"
-        method="POST"
         onSubmit={handleSubmit}
         className="space-y-6"
+        noValidate
       >
         {/* Hidden Kit Fields */}
         <input type="hidden" name="id" value="7134584" />
@@ -59,31 +99,52 @@ export function OptinForm() {
 
         <div className="space-y-6">
           <div className="relative group">
+            <label htmlFor="first_name" className="sr-only">
+              First Name
+            </label>
             <input
+              id="first_name"
               type="text"
               name="fields[first_name]"
               placeholder="FIRST NAME"
               required
-              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
+              disabled={submitState === "submitting"}
+              autoComplete="given-name"
+              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
           <div className="relative group">
+            <label htmlFor="email_address" className="sr-only">
+              Email Address
+            </label>
             <input
+              id="email_address"
               type="email"
               name="email_address"
               placeholder="EMAIL ADDRESS"
               required
-              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
+              disabled={submitState === "submitting"}
+              autoComplete="email"
+              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
         </div>
 
+        {/* Error Message */}
+        {submitState === "error" && (
+          <div className="flex items-start gap-3 p-4 bg-red-50 border-2 border-red-500" role="alert">
+            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
+            <p className="text-sm font-bold text-red-700">{errorMessage}</p>
+          </div>
+        )}
+
         <div className="pt-6">
           <button
             type="submit"
-            className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover-shadow-none hover-translate-brutal"
+            disabled={submitState === "submitting"}
+            className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover-shadow-none hover-translate-brutal disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-brutal-sm disabled:hover:translate-x-0 disabled:hover:translate-y-0"
           >
-            <span>Get The Briefing</span>
+            <span>{submitState === "submitting" ? "Subscribing..." : "Get The Briefing"}</span>
             <ArrowRight className="w-6 h-6" />
           </button>
         </div>
