@@ -15,11 +15,7 @@ if (typeof window !== 'undefined') {
         person_profiles: 'identified_only',
         capture_pageview: false,
         persistence: 'localStorage',
-        loaded: (ph) => {
-          // Disable session recording by default for better performance
-          if (process.env.NODE_ENV === 'production') ph.opt_out_capturing();
-          ph.opt_in_capturing(); // Only capture events, not recordings
-        },
+        // Session recording, heatmaps, and toolbar all enabled by default
       });
     }
   };
