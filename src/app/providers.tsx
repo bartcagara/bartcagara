@@ -15,8 +15,10 @@ if (typeof window !== 'undefined') {
         person_profiles: 'identified_only',
         capture_pageview: false,
         persistence: 'localStorage',
+        disable_session_recording: true, // Disable heavy session recording
+        disable_toolbar: process.env.NODE_ENV === 'production', // Disable 1.3MB toolbar in production
         loaded: (ph) => {
-          // Disable session recording by default for better performance
+          // Ensure only events are captured, not recordings
           if (process.env.NODE_ENV === 'production') ph.opt_out_capturing();
           ph.opt_in_capturing(); // Only capture events, not recordings
         },
