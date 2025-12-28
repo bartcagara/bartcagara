@@ -18,6 +18,20 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: false,
   },
+  // Performance optimizations
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'],
+    } : false,
+  },
+  // Optimize for production builds
+  productionBrowserSourceMaps: false,
+  // Enable SWC minification for better performance
+  swcMinify: true,
+  // Reduce bundle size
+  experimental: {
+    optimizePackageImports: ['posthog-js', 'posthog-js/react'],
+  },
 };
 
 export default nextConfig;
