@@ -11,6 +11,16 @@ if (typeof window !== 'undefined') {
     capture_pageview: false,
     persistence: 'localStorage',
   });
+
+  // Manual toolbar loader for static sites - handles URL hash parameters
+  const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get('__posthog');
+  if (toolbarJSON) {
+    try {
+      posthog.loadToolbar(JSON.parse(toolbarJSON));
+    } catch (e) {
+      console.error('Failed to load PostHog toolbar:', e);
+    }
+  }
 }
 
 export function PostHogProviderClient({ children }: { children: React.ReactNode }) {
