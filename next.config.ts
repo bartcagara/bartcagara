@@ -26,12 +26,6 @@ const nextConfig: NextConfig = {
   },
   // Optimize for production builds
   productionBrowserSourceMaps: false,
-  // Enable SWC minification for better performance
-  swcMinify: true,
-  // Reduce bundle size
-  experimental: {
-    optimizePackageImports: ['posthog-js', 'posthog-js/react'],
-  },
 };
 
 export default nextConfig;
