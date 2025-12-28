@@ -6,8 +6,6 @@ import Script from "next/script";
 import { PostHogProviderClient } from "./providers";
 import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { Suspense } from "react";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -122,11 +120,9 @@ export default function RootLayout({
             async
           />
 
-          <Navbar />
           <main className="min-h-screen flex flex-col">
             {children}
           </main>
-          <Footer />
         </PostHogProviderClient>
       </body>
     </html>

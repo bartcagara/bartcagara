@@ -24,14 +24,12 @@ export const Footer = memo(() => (
             <li><Link href="/#results" className="hover:text-blue-600 transition-colors">Client Wins</Link></li>
             <li><Link href="/#program" className="hover:text-blue-600 transition-colors">Coaching</Link></li>
             <li>
-              <a
-                href="https://bartcagara.kit.com/subscribe"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/briefing-optin"
                 className="hover:text-blue-600 transition-colors"
               >
                 Executive Athlete Briefing
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

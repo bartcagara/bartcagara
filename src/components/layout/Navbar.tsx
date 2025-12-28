@@ -42,6 +42,7 @@ export const Navbar = memo(() => {
             <Link href="/#results" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Client Wins</Link>
             <Link href="/#program" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Coaching</Link>
             <Link href="/#about" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">About Me</Link>
+            <Link href="/briefing-optin" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">The Briefing</Link>
           </div>
         )}
 
@@ -87,6 +88,13 @@ export const Navbar = memo(() => {
               className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
             >
               About Me
+            </Link>
+            <Link
+              href="/briefing-optin"
+              onClick={() => setIsMenuOpen(false)}
+              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
+            >
+              The Briefing
             </Link>
 
             <div className="mt-8">
