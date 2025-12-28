@@ -91,7 +91,6 @@ export default function RootLayout({
         {/* Resource Hints - Only critical for initial load */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://slelguoygbfzlpylpxfs.supabase.co" />
-        <link rel="dns-prefetch" href="https://e.bartcagara.com" />
         <link rel="dns-prefetch" href="https://us.i.posthog.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
