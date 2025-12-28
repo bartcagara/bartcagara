@@ -6,6 +6,8 @@ import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
+const MIN_FORM_SUBMIT_TIME_MS = 3000;
+
 export function OptinForm() {
   const [honeypot, setHoneypot] = useState("");
   const [formStartTime] = useState(Date.now());
@@ -27,7 +29,7 @@ export function OptinForm() {
 
     // Check timing
     const timeElapsed = Date.now() - formStartTime;
-    if (timeElapsed < 3000) {
+    if (timeElapsed < MIN_FORM_SUBMIT_TIME_MS) {
       posthog?.capture('newsletter_spam_detected', {
         method: 'timing',
         time_elapsed_ms: timeElapsed

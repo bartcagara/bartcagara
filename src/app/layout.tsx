@@ -116,7 +116,7 @@ export default function RootLayout({
                 s.async = true;
                 s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";
                 document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
-              }("EN4M0H1QG9OM");
+              }("${process.env.NEXT_PUBLIC_RB2B_KEY}");
             `}
           </Script>
 

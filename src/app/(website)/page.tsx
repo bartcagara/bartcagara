@@ -1,5 +1,5 @@
+import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/home/TrustedBy";
-import { ResultsSection } from "@/components/home/ResultsSection";
 import {
   HeroSection,
   DiagnosisSection,
@@ -9,6 +9,12 @@ import {
   FinalCTASection,
 } from "@/components/home/sections";
 import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
+
+// Dynamic import for heavy ResultsSection (YouTube embeds, images, Senja widget)
+const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
+  loading: () => <div className="min-h-[600px] bg-gray-50" />,
+  ssr: false
+});
 
 /**
  * Home Page

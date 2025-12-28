@@ -54,7 +54,14 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                   {phase.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
                       <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
-                      <span dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white">$1</strong>') }} />
+                      <span>
+                        {item.split(/(\*\*.*?\*\*)/).map((part, i) => {
+                          if (part.startsWith('**') && part.endsWith('**')) {
+                            return <strong key={i} className="text-white">{part.slice(2, -2)}</strong>;
+                          }
+                          return part;
+                        })}
+                      </span>
                     </li>
                   ))}
                 </ul>

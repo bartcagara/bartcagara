@@ -4,6 +4,8 @@ import { memo, useRef, useState, useEffect, useCallback } from "react";
 import type { ScrollSectionProps } from "./types";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
+const SCROLL_AMOUNT_PX = 350;
+
 export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showLeft, setShowLeft] = useState(false);
@@ -35,9 +37,8 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
 
   const scroll = useCallback((direction: number) => {
     if (scrollRef.current) {
-      const scrollAmount = 350;
       scrollRef.current.scrollBy({
-        left: direction * scrollAmount,
+        left: direction * SCROLL_AMOUNT_PX,
         behavior: "smooth",
       });
     }
