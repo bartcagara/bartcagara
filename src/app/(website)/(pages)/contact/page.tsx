@@ -3,7 +3,6 @@
 import { useState, FormEvent } from "react";
 import { usePostHog } from "posthog-js/react";
 import styles from "@/components/home/homepage.module.css";
-import type { Metadata } from "next";
 
 export default function ContactPage() {
     const [honeypot, setHoneypot] = useState("");
