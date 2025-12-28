@@ -60,7 +60,6 @@ export default function BriefingOptinPage() {
         <main className="min-h-screen bg-white flex flex-col">
             <div className="flex flex-col md:flex-row min-h-screen">
                 {/* Left Column: Heading Only */}
-                {/* FIX: Consistent padding with right column (px-6 mobile, p-12 desktop) without forcing different vertical centering alignment */}
                 <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[url('/noise.png')]"></div>
                     <div className="relative z-10 max-w-xl">

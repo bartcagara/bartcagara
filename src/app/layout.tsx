@@ -67,11 +67,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1
     }
-  },
-  verification: {
-    // Add your verification codes here when you have them
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
   }
 };
 
