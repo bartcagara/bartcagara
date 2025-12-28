@@ -102,23 +102,32 @@ export default function RootLayout({
           <ErrorReporter />
 
           {/* RB2B Tracking Script - Deferred to reduce initial load */}
-          <Script id="rb2b-tracking" strategy="afterInteractive">
+          <Script id="rb2b-tracking" strategy="lazyOnload">
             {`
-              setTimeout(() => {
-                if (window.reb2b) return;
-                window.reb2b = {loaded: true};
-                var s = document.createElement("script");
-                s.async = true;
-                s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/${process.env.NEXT_PUBLIC_RB2B_KEY}/${process.env.NEXT_PUBLIC_RB2B_KEY}.js.gz";
-                document.head.appendChild(s);
-              }, 3000);
+              (function() {
+                const loadRB2B = () => {
+                  if (window.reb2b) return;
+                  window.reb2b = {loaded: true};
+                  var s = document.createElement("script");
+                  s.async = true;
+                  s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/${process.env.NEXT_PUBLIC_RB2B_KEY}/${process.env.NEXT_PUBLIC_RB2B_KEY}.js.gz";
+                  document.head.appendChild(s);
+                };
+
+                // Use requestIdleCallback for better performance
+                if ('requestIdleCallback' in window) {
+                  requestIdleCallback(loadRB2B, { timeout: 5000 });
+                } else {
+                  setTimeout(loadRB2B, 5000);
+                }
+              })();
             `}
           </Script>
 
           {/* Senja Widget Script - Deferred to reduce initial load */}
           <Script
             src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
           />
 
           <main className="min-h-screen flex flex-col">
