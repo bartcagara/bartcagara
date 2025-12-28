@@ -28,7 +28,7 @@ export const Footer = memo(() => (
                 href="/briefing-optin"
                 className="hover:text-blue-600 transition-colors"
               >
-                Executive Athlete Briefing
+                The Briefing
               </Link>
             </li>
           </ul>
