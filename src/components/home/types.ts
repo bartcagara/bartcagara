@@ -8,10 +8,6 @@ export interface ScrollSectionProps {
   children: React.ReactNode;
 }
 
-export interface NavbarProps {
-  pathname?: string;
-}
-
 /**
  * Hero Section
  */
@@ -32,22 +28,6 @@ export interface ProgramPhase {
   readonly focus: string;
   readonly items: readonly string[];
   readonly win: string;
-}
-
-/**
- * Diagnosis/Solution Item
- */
-export interface DiagnosisSolutionItem {
-  title: string;
-  description: string;
-}
-
-/**
- * Pillar (Diet/Training)
- */
-export interface Pillar {
-  title: string;
-  items: DiagnosisSolutionItem[];
 }
 
 /**
