@@ -4,7 +4,7 @@ export default function StandardPageLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className="max-w-3xl mx-auto px-6 pt-12 pb-24">
+        <div className="max-w-3xl mx-auto px-6 pt-24 md:pt-32 pb-24">
             {children}
         </div>
     );
