@@ -15,7 +15,7 @@ if (typeof window !== 'undefined') {
         person_profiles: 'identified_only',
         capture_pageview: false,
         persistence: 'localStorage',
-        // Session recording, heatmaps, and toolbar all enabled by default
+        opt_in_site_apps: true, // CRITICAL: Enable toolbar, session recording, and heatmaps
       });
     }
   };
