@@ -12,6 +12,7 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
   preload: true,
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
@@ -87,17 +88,11 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-        {/* Resource Hints for External Services */}
+        {/* Resource Hints - Only critical for initial load */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
-        <link rel="preconnect" href="https://b2bjsstore.s3.us-west-2.amazonaws.com" />
-        <link rel="preconnect" href="https://e.bartcagara.com" />
-        <link rel="preconnect" href="https://us.i.posthog.com" />
-        <link rel="preconnect" href="https://us-assets.i.posthog.com" />
-        <link rel="dns-prefetch" href="https://widget.senja.io" />
-        <link rel="dns-prefetch" href="https://www.youtube.com" />
-        <link rel="dns-prefetch" href="https://i.ytimg.com" />
-        <link rel="dns-prefetch" href="https://app.kit.com" />
+        <link rel="dns-prefetch" href="https://slelguoygbfzlpylpxfs.supabase.co" />
+        <link rel="dns-prefetch" href="https://e.bartcagara.com" />
+        <link rel="dns-prefetch" href="https://us.i.posthog.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>
@@ -106,29 +101,24 @@ export default function RootLayout({
           </Suspense>
           <ErrorReporter />
 
-          {/* RB2B Tracking Script */}
-          <Script id="rb2b-tracking" strategy="lazyOnload">
+          {/* RB2B Tracking Script - Deferred to reduce initial load */}
+          <Script id="rb2b-tracking" strategy="afterInteractive">
             {`
-              !function(key) {
+              setTimeout(() => {
                 if (window.reb2b) return;
                 window.reb2b = {loaded: true};
                 var s = document.createElement("script");
                 s.async = true;
-                s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/" + key + "/" + key + ".js.gz";
-                document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);
-              }("${process.env.NEXT_PUBLIC_RB2B_KEY}");
+                s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/${process.env.NEXT_PUBLIC_RB2B_KEY}/${process.env.NEXT_PUBLIC_RB2B_KEY}.js.gz";
+                document.head.appendChild(s);
+              }, 3000);
             `}
           </Script>
 
-
-
-
-
-          {/* Senja Widget Script */}
+          {/* Senja Widget Script - Deferred to reduce initial load */}
           <Script
             src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js"
-            strategy="lazyOnload"
-            async
+            strategy="afterInteractive"
           />
 
           <main className="min-h-screen flex flex-col">

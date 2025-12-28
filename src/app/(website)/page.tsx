@@ -1,18 +1,34 @@
 import dynamic from "next/dynamic";
-import { TrustedBy } from "@/components/home/TrustedBy";
-import {
-  HeroSection,
-  DiagnosisSection,
-  SolutionSection,
-  ProgramSection,
-  AboutSection,
-  FinalCTASection,
-} from "@/components/home/sections";
+import { HeroSection } from "@/components/home/sections";
 import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 
-// Dynamic import for heavy ResultsSection (YouTube embeds, images, Senja widget)
-const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
+// Lazy load heavy below-the-fold sections to improve initial page load
+const TrustedBy = dynamic(() => import("@/components/home/TrustedBy").then(mod => ({ default: mod.TrustedBy })), {
+  loading: () => <div className="min-h-[100px] bg-gray-50" />
+});
+
+const DiagnosisSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.DiagnosisSection })), {
+  loading: () => <div className="min-h-[600px] bg-white" />
+});
+
+const SolutionSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.SolutionSection })), {
   loading: () => <div className="min-h-[600px] bg-gray-50" />
+});
+
+const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
+  loading: () => <div className="min-h-[600px] bg-white" />
+});
+
+const ProgramSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProgramSection })), {
+  loading: () => <div className="min-h-[600px] bg-white" />
+});
+
+const AboutSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.AboutSection })), {
+  loading: () => <div className="min-h-[600px] bg-gray-50" />
+});
+
+const FinalCTASection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FinalCTASection })), {
+  loading: () => <div className="min-h-[400px] bg-white" />
 });
 
 /**
