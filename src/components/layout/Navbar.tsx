@@ -21,6 +21,7 @@ export const Navbar = memo(() => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 -ml-2 text-bleu-nuit hover:opacity-70 transition-opacity"
             aria-label="Toggle menu"
+            aria-expanded={isMenuOpen}
           >
             {isMenuOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
           </button>
