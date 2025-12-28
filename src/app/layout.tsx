@@ -31,6 +31,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/"
   },
+  category: "Health & Fitness",
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -52,7 +53,8 @@ export const metadata: Metadata = {
     title: "Executive Athlete OS™",
     description: "We don't manage the decline. We stop it. Engineered for the former athlete turned executive who is winning at work but losing the physical battle.",
     images: ["/opengraph-image.png"],
-    creator: "@bartcagara"
+    creator: "@bartcagara",
+    site: "@bartcagara"
   },
   robots: {
     index: true,
@@ -80,6 +82,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <head>
+        {/* Theme Color for Mobile Browsers */}
+        <meta name="theme-color" content="#09071D" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
         {/* Resource Hints for External Services */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="preconnect" href="https://slelguoygbfzlpylpxfs.supabase.co" />
@@ -87,6 +94,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://widget.senja.io" />
         <link rel="dns-prefetch" href="https://www.youtube.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://app.kit.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>
