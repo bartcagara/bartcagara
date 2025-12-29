@@ -17,7 +17,9 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
     const inIframe = window.parent !== window;
     if (!inIframe) return;
 
-    const send = (payload: unknown) => window.parent.postMessage(payload, "*");
+    // Use specific origin for security (avoid "*" which allows any origin)
+    const targetOrigin = window.location.origin;
+    const send = (payload: unknown) => window.parent.postMessage(payload, targetOrigin);
 
     const onError = (e: ErrorEvent) =>
       send({
@@ -75,6 +77,7 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
   /* ─ extra postMessage when on the global-error route ─ */
   useEffect(() => {
     if (!error) return;
+    const targetOrigin = window.location.origin;
     window.parent.postMessage(
       {
         type: "global-error-reset",
@@ -87,7 +90,7 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
         timestamp: Date.now(),
         userAgent: navigator.userAgent,
       },
-      "*"
+      targetOrigin
     );
   }, [error]);
 

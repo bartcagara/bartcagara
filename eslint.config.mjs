@@ -12,11 +12,21 @@ const eslintConfig = [
   }),
   {
     rules: {
+      // Allow apostrophes in JSX text
       'react/no-unescaped-entities': 'off',
+      // Allow img tag for external images (YouTube thumbnails)
       '@next/next/no-img-element': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',
-      '@typescript-eslint/no-explicit-any': 'off',
-      'react-hooks/exhaustive-deps': 'off',
+      // Re-enabled: catch unused variables (prefix with _ to ignore)
+      '@typescript-eslint/no-unused-vars': ['warn', {
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_'
+      }],
+      // Re-enabled: prevent unsafe any types
+      '@typescript-eslint/no-explicit-any': 'warn',
+      // Re-enabled: ensure hooks have proper dependencies
+      'react-hooks/exhaustive-deps': 'warn',
+      // Import rules
       'import/no-unresolved': 'error',
       'import/named': 'error',
       'import/default': 'error',
