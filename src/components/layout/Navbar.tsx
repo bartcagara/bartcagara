@@ -1,6 +1,6 @@
 "use client";
 
-import { memo, useState } from "react";
+import { memo, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
@@ -9,6 +9,37 @@ export const Navbar = memo(() => {
   const pathname = usePathname();
   const isBookPage = pathname === "/book";
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
+
+  // Close menu on ESC key
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === "Escape" && isMenuOpen) {
+      setIsMenuOpen(false);
+      menuButtonRef.current?.focus();
+    }
+  }, [isMenuOpen]);
+
+  // Close menu on route change
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
+  // Add/remove ESC key listener
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("keydown", handleKeyDown);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, handleKeyDown]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white border-b-2 border-bleu-nuit z-50">
@@ -18,10 +49,12 @@ export const Navbar = memo(() => {
         {/* Hidden on desktop */}
         <div className="md:hidden z-50">
           <button
+            ref={menuButtonRef}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="p-2 -ml-2 text-bleu-nuit hover:opacity-70 transition-opacity"
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
           >
             {isMenuOpen ? <X size={32} strokeWidth={2.5} /> : <Menu size={32} strokeWidth={2.5} />}
           </button>
@@ -67,33 +100,40 @@ export const Navbar = memo(() => {
 
       {/* MOBILE MENU OVERLAY */}
       {isMenuOpen && !isBookPage && (
-        <div className="fixed inset-0 top-[72px] bg-white z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit">
-          <div className="flex flex-col gap-8 text-center -mt-20">
+        <div
+          ref={menuRef}
+          id="mobile-menu"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Navigation menu"
+          className="fixed inset-0 top-[72px] bg-white z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
+        >
+          <nav className="flex flex-col gap-8 text-center -mt-20" aria-label="Mobile navigation">
             <Link
               href="/#results"
               onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
+              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
             >
               Client Wins
             </Link>
             <Link
               href="/#program"
               onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
+              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
             >
               Coaching
             </Link>
             <Link
               href="/#about"
               onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
+              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
             >
               About Me
             </Link>
             <Link
               href="/briefing-optin"
               onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
+              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
             >
               The Briefing
             </Link>
@@ -103,12 +143,12 @@ export const Navbar = memo(() => {
                 href="https://cal.com/bartcagara/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)]"
+                className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
               >
                 Book Call
               </Link>
             </div>
-          </div>
+          </nav>
         </div>
       )}
     </nav>

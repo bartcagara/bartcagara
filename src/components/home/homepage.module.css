@@ -42,11 +42,25 @@
    ================================================================= */
 
 .transformationImage {
+    /* Desktop: fixed height, auto width */
     height: 400px;
     width: auto;
+    max-width: 100%;
     object-fit: contain;
     border: 2px solid var(--bleu-nuit);
     box-shadow: 4px 4px 0px var(--bleu-nuit);
+}
+
+/* Mobile override - uses container query approach */
+@media (max-width: 600px) {
+    .transformationImage {
+        /* Mobile: constrained to viewport with auto sizing */
+        max-width: calc(100vw - 3rem);
+        width: auto;
+        height: auto;
+        max-height: 300px;
+        object-fit: contain;
+    }
 }
 
 .youtubeLite {
@@ -102,14 +116,5 @@
         padding: 1rem 1rem;
         font-size: 0.95rem;
         width: 100%;
-    }
-
-    /* Transformation images in Results section - keep compact */
-    .transformationImage {
-        max-width: calc(100vw - 3rem) !important;
-        width: auto !important;
-        height: auto !important;
-        max-height: 300px !important;
-        object-fit: contain !important;
     }
 }
