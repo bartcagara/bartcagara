@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Executive Athlete Briefing | Weekly Newsletter for Former Athletes",
-    description: "Every Sunday, get one client-tested insight to win the road game, own the menu, and operate like a veteran. Join 400+ former-athlete executives who read it in 2 minutes.",
+    title: "Executive Athlete Briefing | Weekly Newsletter for Former-Athlete Executives",
+    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 400+ former-athlete executives. Read it in 2 minutes.",
     keywords: [
         "Executive Newsletter",
         "Business Travel Fitness",
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: "/briefing-optin",
         siteName: "Executive Athlete OS",
-        title: "Executive Athlete Briefing | Weekly Newsletter",
-        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight to stay dangerous.",
+        title: "Executive Athlete Briefing",
+        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on an executive schedule.",
         images: [
             {
                 url: "/opengraph-briefing.png",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     },
     twitter: {
         card: "summary_large_image",
-        title: "Executive Athlete Briefing | Weekly Newsletter",
+        title: "Executive Athlete Briefing",
         description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight.",
         images: ["/opengraph-briefing.png"],
         creator: "@bartcagara"

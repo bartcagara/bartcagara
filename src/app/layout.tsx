@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Executive Athlete OS™ | Bart Cagara",
-  description: "Stop the physical decline. High-performance health infrastructure for the 40+ executive. Reclaim the athlete without pausing your career.",
+  description: "For the former athlete turned executive. Stop grinding like a rookie. Build a chaos-proof physical operating system without pausing your career.",
   keywords: [
     "Executive Coaching",
     "Weight Loss for Executives",
