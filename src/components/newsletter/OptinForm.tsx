@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
 const MIN_FORM_SUBMIT_TIME_MS = 3000;
+const FETCH_TIMEOUT_MS = 10000; // 10 second timeout for form submission
 
 export function OptinForm() {
   const [honeypot, setHoneypot] = useState("");
@@ -22,7 +23,7 @@ export function OptinForm() {
     if (honeypot) {
       posthog?.capture('newsletter_spam_detected', {
         method: 'honeypot',
-        honeypot_value: honeypot
+        // Don't log the actual honeypot value for privacy
       });
       return;
     }
@@ -40,12 +41,17 @@ export function OptinForm() {
     setSubmitState("submitting");
     posthog?.capture('newsletter_signup_started');
 
+    // Create abort controller for timeout
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
+
     try {
       const formData = new FormData(e.currentTarget);
-      const response = await fetch('https://app.kit.com/forms/7134584/subscriptions', {
+      await fetch('https://app.kit.com/forms/7134584/subscriptions', {
         method: 'POST',
         body: formData,
         mode: 'no-cors', // ConvertKit doesn't support CORS
+        signal: controller.signal,
       });
 
       // With no-cors, we can't read the response, so we assume success
@@ -53,10 +59,16 @@ export function OptinForm() {
       posthog?.capture('newsletter_signup_completed');
     } catch (error) {
       setSubmitState("error");
-      setErrorMessage("Something went wrong. Please try again.");
+      if (error instanceof Error && error.name === 'AbortError') {
+        setErrorMessage("Request timed out. Please try again.");
+      } else {
+        setErrorMessage("Something went wrong. Please try again.");
+      }
       posthog?.capture('newsletter_signup_error', {
         error: error instanceof Error ? error.message : 'Unknown error'
       });
+    } finally {
+      clearTimeout(timeoutId);
     }
   };
 
