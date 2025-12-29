@@ -124,12 +124,21 @@ export default function RootLayout({
 
           {/* Senja Widget Script - Deferred to reduce initial load */}
           <Script
-            src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js"
+            id="senja-widget"
             strategy="lazyOnload"
-            onError={() => {
-              console.warn('Senja widget script failed to load');
-            }}
-          />
+          >
+            {`
+              (function() {
+                const s = document.createElement("script");
+                s.src = "https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js";
+                s.async = true;
+                s.onerror = () => {
+                  console.warn('Senja widget script failed to load');
+                };
+                document.head.appendChild(s);
+              })();
+            `}
+          </Script>
 
           <main className="min-h-screen flex flex-col">
             {children}
