@@ -15,7 +15,7 @@ export default function ContactPage() {
             e.preventDefault();
             posthog?.capture('spam_detected', {
                 method: 'honeypot',
-                honeypot_value: honeypot
+                // Don't log the actual honeypot value for privacy
             });
             return;
         }
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 </div>
 
                 <form
-                    action="https://formsubmit.co/bart@bartcagara.com"
+                    action={`https://formsubmit.co/${['bart', 'bartcagara.com'].join('@')}`}
                     method="POST"
                     onSubmit={handleSubmit}
                     className="space-y-6"

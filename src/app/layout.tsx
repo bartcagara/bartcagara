@@ -85,9 +85,8 @@ export default function RootLayout({
 
         {/* Resource Hints - Only critical for initial load */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://slelguoygbfzlpylpxfs.supabase.co" />
         <link rel="dns-prefetch" href="https://e.bartcagara.com" />
-        <link rel="dns-prefetch" href="https://us.i.posthog.com" />
+        <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>
@@ -103,9 +102,13 @@ export default function RootLayout({
                 const loadRB2B = () => {
                   if (window.reb2b) return;
                   window.reb2b = {loaded: true};
-                  var s = document.createElement("script");
+                  const s = document.createElement("script");
                   s.async = true;
                   s.src = "https://b2bjsstore.s3.us-west-2.amazonaws.com/b/${process.env.NEXT_PUBLIC_RB2B_KEY}/${process.env.NEXT_PUBLIC_RB2B_KEY}.js.gz";
+                  s.onerror = () => {
+                    console.warn('RB2B tracking script failed to load');
+                    window.reb2b = {loaded: false, error: true};
+                  };
                   document.head.appendChild(s);
                 };
 
@@ -121,9 +124,21 @@ export default function RootLayout({
 
           {/* Senja Widget Script - Deferred to reduce initial load */}
           <Script
-            src="https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js"
+            id="senja-widget"
             strategy="lazyOnload"
-          />
+          >
+            {`
+              (function() {
+                const s = document.createElement("script");
+                s.src = "https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js";
+                s.async = true;
+                s.onerror = () => {
+                  console.warn('Senja widget script failed to load');
+                };
+                document.head.appendChild(s);
+              })();
+            `}
+          </Script>
 
           <main className="min-h-screen flex flex-col">
             {children}
