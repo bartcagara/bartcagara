@@ -124,7 +124,7 @@ export function OptinForm() {
               required
               disabled={submitState === "submitting"}
               autoComplete="given-name"
-              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
           <div className="relative group">
@@ -139,7 +139,7 @@ export function OptinForm() {
               required
               disabled={submitState === "submitting"}
               autoComplete="email"
-              className="w-full px-0 py-4 bg-transparent border-b-2 border-bleu-nuit/20 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
         </div>
