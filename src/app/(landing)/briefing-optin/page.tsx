@@ -82,39 +82,26 @@ export default function BriefingOptinPage() {
                 </div>
 
                 {/* Right Column: Content & Form */}
-                <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
-                    <div className="max-w-md w-full">
-                        {/* INTRO COPY */}
-                        <p className="text-lg md:text-xl text-bleu-nuit font-medium mb-10 leading-relaxed">
-                            Every Sunday, get one client-tested insight to:
-                        </p>
-
-                        {/* BULLETS - Tighter vertical rhythm */}
-                        <div className="space-y-5 mb-12">
-                            <div className="flex gap-4 items-start group">
-                                <span className="text-bleu-accent font-black text-xl leading-none mt-1 group-hover:translate-x-1 transition-transform">//</span>
-                                <div>
-                                    <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">WIN THE ROAD GAME:</span>
-                                    <span className="text-bleu-nuit/80 font-medium text-base leading-snug">Travel without regression. Maintain peak condition in any time zone.</span>
-                                </div>
+                <div className="w-full md:w-1/2 bg-[#0d0b1f] flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-5 bg-[url('/noise.png')]"></div>
+                    <div className="relative z-10 max-w-md w-full">
+                        {/* COMPACT BENEFITS - Single line each */}
+                        <div className="space-y-3 mb-10">
+                            <div className="flex gap-3 items-center">
+                                <span className="text-bleu-accent font-black text-sm">//</span>
+                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Win the road game</span>
                             </div>
-                            <div className="flex gap-4 items-start group">
-                                <span className="text-bleu-accent font-black text-xl leading-none mt-1 group-hover:translate-x-1 transition-transform">//</span>
-                                <div>
-                                    <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">OWN THE MENU:</span>
-                                    <span className="text-bleu-nuit/80 font-medium text-base leading-snug">Master the business dinner. Stay lean without being "the diet guy."</span>
-                                </div>
+                            <div className="flex gap-3 items-center">
+                                <span className="text-bleu-accent font-black text-sm">//</span>
+                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Own the menu</span>
                             </div>
-                            <div className="flex gap-4 items-start group">
-                                <span className="text-bleu-accent font-black text-xl leading-none mt-1 group-hover:translate-x-1 transition-transform">//</span>
-                                <div>
-                                    <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">OPERATE LIKE A VETERAN:</span>
-                                    <span className="text-bleu-nuit/80 font-medium text-base leading-snug">Stop the "Rookie Grind." Execute with precision.</span>
-                                </div>
+                            <div className="flex gap-3 items-center">
+                                <span className="text-bleu-accent font-black text-sm">//</span>
+                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Operate like a veteran</span>
                             </div>
                         </div>
 
-                        <OptinForm />
+                        <OptinForm variant="dark" />
                     </div>
                 </div>
             </div>
