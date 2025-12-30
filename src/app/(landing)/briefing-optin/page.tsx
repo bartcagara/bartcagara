@@ -85,23 +85,40 @@ export default function BriefingOptinPage() {
                 <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                     <div className="max-w-md w-full">
                         {/* INTRO COPY */}
-                        <p className="text-lg md:text-xl text-bleu-nuit font-medium mb-8 leading-relaxed">
-                            Every Sunday, steal the exact protocols I build for private clients to:
-                        </p>
+                        {/* INTRO COPY - Direct Value Proposition */}
+                        <div className="mb-10">
+                            <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
+                                Every Sunday, steal the exact protocols I build for private clients to:
+                            </p>
+                        </div>
 
-                        {/* BENEFITS - Left border accent */}
-                        <div className="space-y-6 mb-10">
-                            <div className="border-l-4 border-bleu-accent pl-4">
-                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Own The Menu</span>
-                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Master the business dinner. Stay lean without being "the diet guy".</span>
+                        {/* BULLETS - Clean, High-Contrast */}
+                        <div className="space-y-8 mb-12">
+                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
+                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
+                                    Own The Menu
+                                </span>
+                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
+                                    Master the business dinner. Stay lean without becoming "the diet guy".
+                                </span>
                             </div>
-                            <div className="border-l-4 border-bleu-accent pl-4">
-                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Win The Road Game</span>
-                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Travel without regression. Maintain peak condition in any time zone.</span>
+
+                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
+                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
+                                    Win The Road Game
+                                </span>
+                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
+                                    Travel without regression. Maintain peak condition in any time zone.
+                                </span>
                             </div>
-                            <div className="border-l-4 border-bleu-accent pl-4">
-                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Operate Like A Veteran</span>
-                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Stop the "Rookie Grind". Execute with precision.</span>
+
+                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
+                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
+                                    Operate Like A Veteran
+                                </span>
+                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
+                                    Stop the "Rookie Grind". Execute with precision.
+                                </span>
                             </div>
                         </div>
 
