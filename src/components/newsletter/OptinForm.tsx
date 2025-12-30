@@ -106,7 +106,7 @@ export function OptinForm({ variant = "light" }: OptinFormProps) {
         <input type="hidden" name="id" value="7134584" />
 
         {/* Custom Honeypot */}
-        <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+        <div className="absolute -left-[9999px]" aria-hidden="true">
           <input
             type="text"
             name="honeypot"
@@ -118,7 +118,7 @@ export function OptinForm({ variant = "light" }: OptinFormProps) {
         </div>
 
         <div className="space-y-6">
-          <div className="relative group">
+          <div>
             <label htmlFor="first_name" className="sr-only">
               First Name
             </label>
@@ -137,7 +137,7 @@ export function OptinForm({ variant = "light" }: OptinFormProps) {
               }`}
             />
           </div>
-          <div className="relative group">
+          <div>
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
