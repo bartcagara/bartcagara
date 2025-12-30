@@ -100,7 +100,7 @@ export function OptinForm() {
         <input type="hidden" name="id" value="7134584" />
 
         {/* Custom Honeypot */}
-        <div style={{ position: "absolute", left: "-5000px" }} aria-hidden="true">
+        <div className="absolute -left-[5000px]" aria-hidden="true">
           <input
             type="text"
             name="honeypot"
@@ -112,7 +112,7 @@ export function OptinForm() {
         </div>
 
         <div className="space-y-6">
-          <div className="relative group">
+          <div>
             <label htmlFor="first_name" className="sr-only">
               First Name
             </label>
@@ -127,7 +127,7 @@ export function OptinForm() {
               className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
-          <div className="relative group">
+          <div>
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
