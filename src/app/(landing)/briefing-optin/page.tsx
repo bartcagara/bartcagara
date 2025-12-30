@@ -82,26 +82,30 @@ export default function BriefingOptinPage() {
                 </div>
 
                 {/* Right Column: Content & Form */}
-                <div className="w-full md:w-1/2 bg-[#0d0b1f] flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
-                    <div className="absolute inset-0 opacity-5 bg-[url('/noise.png')]"></div>
-                    <div className="relative z-10 max-w-md w-full">
-                        {/* COMPACT BENEFITS - Single line each */}
-                        <div className="space-y-3 mb-10">
-                            <div className="flex gap-3 items-center">
-                                <span className="text-bleu-accent font-black text-sm">//</span>
-                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Win the road game</span>
+                <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
+                    <div className="max-w-md w-full">
+                        {/* INTRO COPY */}
+                        <p className="text-lg md:text-xl text-bleu-nuit font-medium mb-8 leading-relaxed">
+                            Every Sunday, steal the exact protocols I build for private clients to:
+                        </p>
+
+                        {/* BENEFITS - Left border accent */}
+                        <div className="space-y-6 mb-10">
+                            <div className="border-l-4 border-bleu-accent pl-4">
+                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Own The Menu</span>
+                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Master the business dinner. Stay lean without being "the diet guy".</span>
                             </div>
-                            <div className="flex gap-3 items-center">
-                                <span className="text-bleu-accent font-black text-sm">//</span>
-                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Own the menu</span>
+                            <div className="border-l-4 border-bleu-accent pl-4">
+                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Win The Road Game</span>
+                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Travel without regression. Maintain peak condition in any time zone.</span>
                             </div>
-                            <div className="flex gap-3 items-center">
-                                <span className="text-bleu-accent font-black text-sm">//</span>
-                                <span className="text-white/90 font-bold uppercase tracking-tight text-sm">Operate like a veteran</span>
+                            <div className="border-l-4 border-bleu-accent pl-4">
+                                <span className="text-bleu-nuit font-black uppercase tracking-tight text-base block mb-1">Operate Like A Veteran</span>
+                                <span className="text-bleu-nuit/70 font-medium text-sm leading-snug">Stop the "Rookie Grind". Execute with precision.</span>
                             </div>
                         </div>
 
-                        <OptinForm variant="dark" />
+                        <OptinForm />
                     </div>
                 </div>
             </div>
