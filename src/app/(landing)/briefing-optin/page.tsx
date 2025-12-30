@@ -84,7 +84,6 @@ export default function BriefingOptinPage() {
                 {/* Right Column: Content & Form */}
                 <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                     <div className="max-w-md w-full">
-                        {/* INTRO COPY */}
                         {/* INTRO COPY - Direct Value Proposition */}
                         <div className="mb-10">
                             <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
