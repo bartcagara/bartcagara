@@ -9,6 +9,13 @@ export function OptinForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const posthog = usePostHog();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [referrer, setReferrer] = useState("");
+
+  // Capture referrer (full page URL with UTM params) on mount
+  useEffect(() => {
+    // Use full page URL as referrer so Kit can parse UTM params from it
+    setReferrer(window.location.href);
+  }, []);
 
   // Handle mutual exclusivity for checkboxes (radio button behavior)
   const handleTagChange = (value: string) => {
@@ -102,6 +109,9 @@ export function OptinForm() {
           data-element="errors"
           data-group="alert"
         ></ul>
+
+        {/* Hidden referrer field with full page URL for UTM tracking */}
+        <input type="hidden" name="referrer" value={referrer} />
 
         <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-6">
           {/* First Name */}
