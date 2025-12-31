@@ -156,13 +156,13 @@ export function OptinForm() {
         {/* Hidden Kit Fields */}
         <input type="hidden" name="id" value="7134584" />
 
-        {/* UTM Tracking Fields for Kit (using fields[] syntax for custom subscriber fields) */}
+        {/* UTM Tracking Fields for Kit */}
         <input type="hidden" name="referrer" value={utmParams.referrer} />
-        <input type="hidden" name="fields[utm_source]" value={utmParams.utm_source} />
-        <input type="hidden" name="fields[utm_medium]" value={utmParams.utm_medium} />
-        <input type="hidden" name="fields[utm_campaign]" value={utmParams.utm_campaign} />
-        <input type="hidden" name="fields[utm_term]" value={utmParams.utm_term} />
-        <input type="hidden" name="fields[utm_content]" value={utmParams.utm_content} />
+        <input type="hidden" name="utm_source" value={utmParams.utm_source} />
+        <input type="hidden" name="utm_medium" value={utmParams.utm_medium} />
+        <input type="hidden" name="utm_campaign" value={utmParams.utm_campaign} />
+        <input type="hidden" name="utm_term" value={utmParams.utm_term} />
+        <input type="hidden" name="utm_content" value={utmParams.utm_content} />
 
         {/* Custom Honeypot */}
         <div className="absolute -left-[5000px]" aria-hidden="true">
