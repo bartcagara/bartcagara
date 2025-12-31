@@ -1,12 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { ArrowRight } from "lucide-react";
 import Script from "next/script";
 
 export function OptinForm() {
-  const formRef = useRef<HTMLFormElement>(null);
   const posthog = usePostHog();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [referrer, setReferrer] = useState("");
@@ -93,7 +92,6 @@ export function OptinForm() {
       />
 
       <form
-        ref={formRef}
         action="https://app.kit.com/forms/8922850/subscriptions"
         method="post"
         data-sv-form="8922850"
@@ -281,14 +279,6 @@ export function OptinForm() {
         /* Hide form fields on success */
         .formkit-form[data-uid="8a3adb8456"][data-state="success"] .formkit-fields {
           display: none !important;
-        }
-
-        /* Checkbox checked state */
-        .formkit-form[data-uid="8a3adb8456"] input[type="checkbox"]:checked + label span:first-child {
-          border-color: var(--bleu-accent);
-        }
-        .formkit-form[data-uid="8a3adb8456"] input[type="checkbox"]:checked + label span:first-child span {
-          display: block !important;
         }
 
         /* Loading state */
