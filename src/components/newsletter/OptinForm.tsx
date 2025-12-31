@@ -1,202 +1,122 @@
 "use client";
 
-import { useState, useEffect, FormEvent } from "react";
+import { useEffect, useRef } from "react";
 import { usePostHog } from "posthog-js/react";
-import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
-
-type SubmitState = "idle" | "submitting" | "success" | "error";
-
-interface UTMParams {
-  referrer: string;
-  utm_source: string;
-  utm_medium: string;
-  utm_campaign: string;
-  utm_term: string;
-  utm_content: string;
-}
-
-const MIN_FORM_SUBMIT_TIME_MS = 3000;
-const FETCH_TIMEOUT_MS = 10000; // 10 second timeout for form submission
+import { ArrowRight } from "lucide-react";
+import Script from "next/script";
 
 export function OptinForm() {
-  const [honeypot, setHoneypot] = useState("");
-  const [formStartTime] = useState(Date.now());
-  const [submitState, setSubmitState] = useState<SubmitState>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState("");
-  const [utmParams, setUtmParams] = useState<UTMParams>({
-    referrer: "",
-    utm_source: "",
-    utm_medium: "",
-    utm_campaign: "",
-    utm_term: "",
-    utm_content: "",
-  });
+  const formRef = useRef<HTMLFormElement>(null);
   const posthog = usePostHog();
 
-  // Capture UTM parameters and referrer on mount
+  // Track form submission via Kit's custom event
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    // Use full page URL as referrer so Kit can parse UTM params from it
-    // Fall back to document.referrer if no UTM params present
-    const hasUtmParams = params.has("utm_source") || params.has("utm_medium") || params.has("utm_campaign");
-    setUtmParams({
-      referrer: hasUtmParams ? window.location.href : (document.referrer || window.location.href),
-      utm_source: params.get("utm_source") || "",
-      utm_medium: params.get("utm_medium") || "",
-      utm_campaign: params.get("utm_campaign") || "",
-      utm_term: params.get("utm_term") || "",
-      utm_content: params.get("utm_content") || "",
-    });
-  }, []);
+    const handleKitSuccess = () => {
+      posthog?.capture("newsletter_signup_completed");
+    };
 
-  const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+    // Kit fires this event on successful submission
+    window.addEventListener("ck:form:success", handleKitSuccess);
+    return () => {
+      window.removeEventListener("ck:form:success", handleKitSuccess);
+    };
+  }, [posthog]);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    // Check honeypot
-    if (honeypot) {
-      posthog?.capture('newsletter_spam_detected', {
-        method: 'honeypot',
-      });
-      return;
-    }
-
-    // Check timing
-    const timeElapsed = Date.now() - formStartTime;
-    if (timeElapsed < MIN_FORM_SUBMIT_TIME_MS) {
-      posthog?.capture('newsletter_spam_detected', {
-        method: 'timing',
-        time_elapsed_ms: timeElapsed
-      });
-      return;
-    }
-
-    // Validate first name
-    const trimmedFirstName = firstName.trim();
-    if (!trimmedFirstName || trimmedFirstName.length < 2) {
-      setSubmitState("error");
-      setErrorMessage("Please enter your first name (at least 2 characters).");
-      return;
-    }
-
-    // Validate email
-    const trimmedEmail = email.trim();
-    if (!trimmedEmail) {
-      setSubmitState("error");
-      setErrorMessage("Please enter your email address.");
-      return;
-    }
-    if (!validateEmail(trimmedEmail)) {
-      setSubmitState("error");
-      setErrorMessage("Please enter a valid email address.");
-      return;
-    }
-
-    setSubmitState("submitting");
-    posthog?.capture('newsletter_signup_started');
-
-    // Create abort controller for timeout
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
-
-    try {
-      const formData = new FormData(e.currentTarget);
-
-      await fetch('https://app.kit.com/forms/7134584/subscriptions', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors', // ConvertKit doesn't support CORS
-        signal: controller.signal,
-      });
-
-      // With no-cors, we can't read the response, so we assume success
-      setSubmitState("success");
-      posthog?.capture('newsletter_signup_completed');
-    } catch (error) {
-      setSubmitState("error");
-      if (error instanceof Error && error.name === 'AbortError') {
-        setErrorMessage("Request timed out. Please try again.");
-      } else {
-        setErrorMessage("Something went wrong. Please try again.");
-      }
-      posthog?.capture('newsletter_signup_error', {
-        error: error instanceof Error ? error.message : 'Unknown error'
-      });
-    } finally {
-      clearTimeout(timeoutId);
-    }
-  };
-
-  // Success state
-  if (submitState === "success") {
-    return (
-      <div className="w-full py-12 text-center">
-        <div className="inline-flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full">
-          <CheckCircle2 className="w-10 h-10 text-white" />
-        </div>
-        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tighter text-bleu-nuit mb-3">
-          You're In!
-        </h3>
-        <p className="text-lg text-bleu-nuit/80 font-medium">
-          Check your email to confirm your subscription.
-        </p>
-      </div>
-    );
-  }
+  const dataOptions = JSON.stringify({
+    settings: {
+      after_subscribe: {
+        action: "message",
+        success_message: "Success! Now check your email to confirm your subscription.",
+        redirect_url: "",
+      },
+      analytics: {
+        google: null,
+        fathom: null,
+        facebook: null,
+        segment: null,
+        pinterest: null,
+        sparkloop: null,
+        googletagmanager: null,
+      },
+      modal: {
+        trigger: "timer",
+        scroll_percentage: null,
+        timer: 5,
+        devices: "all",
+        show_once_every: 15,
+      },
+      powered_by: {
+        show: false,
+        url: "https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic",
+      },
+      recaptcha: { enabled: false },
+      return_visitor: { action: "show", custom_content: "" },
+      slide_in: {
+        display_in: "bottom_right",
+        trigger: "timer",
+        scroll_percentage: null,
+        timer: 5,
+        devices: "all",
+        show_once_every: 15,
+      },
+      sticky_bar: {
+        display_in: "top",
+        trigger: "timer",
+        scroll_percentage: null,
+        timer: 5,
+        devices: "all",
+        show_once_every: 15,
+      },
+    },
+    version: "5",
+  });
 
   return (
     <div className="w-full">
+      {/* Kit's form script - handles UTM tracking automatically */}
+      <Script
+        src="https://f.convertkit.com/ckjs/ck.5.js"
+        strategy="lazyOnload"
+      />
+
       <form
-        onSubmit={handleSubmit}
-        className="space-y-6"
-        noValidate
+        ref={formRef}
+        action="https://app.kit.com/forms/8922850/subscriptions"
+        method="post"
+        data-sv-form="8922850"
+        data-uid="8a3adb8456"
+        data-format="inline"
+        data-version="5"
+        data-options={dataOptions}
+        className="seva-form formkit-form space-y-6"
       >
-        {/* Hidden Kit Fields */}
-        <input type="hidden" name="id" value="7134584" />
+        {/* Kit's error container */}
+        <ul
+          className="formkit-alert formkit-alert-error hidden"
+          data-element="errors"
+          data-group="alert"
+        ></ul>
 
-        {/* Referrer field for Kit */}
-        <input type="hidden" name="referrer" value={utmParams.referrer} />
-
-        {/* Custom Honeypot */}
-        <div className="absolute -left-[5000px]" aria-hidden="true">
-          <input
-            type="text"
-            name="honeypot"
-            tabIndex={-1}
-            autoComplete="off"
-            value={honeypot}
-            onChange={(e) => setHoneypot(e.target.value)}
-          />
-        </div>
-
-        <div className="space-y-6">
-          <div>
-            <label htmlFor="first_name" className="sr-only">
+        <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-6">
+          {/* First Name */}
+          <div className="formkit-field">
+            <label htmlFor="fields_first_name" className="sr-only">
               First Name
             </label>
             <input
-              id="first_name"
+              id="fields_first_name"
               type="text"
               name="fields[first_name]"
+              aria-label="First Name"
               placeholder="FIRST NAME"
               required
-              disabled={submitState === "submitting"}
               autoComplete="given-name"
-              value={firstName}
-              onChange={(e) => {
-                setFirstName(e.target.value);
-                if (submitState === "error") setSubmitState("idle");
-              }}
-              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="formkit-input w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
             />
           </div>
-          <div>
+
+          {/* Email */}
+          <div className="formkit-field">
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
@@ -204,44 +124,187 @@ export function OptinForm() {
               id="email_address"
               type="email"
               name="email_address"
+              aria-label="Email Address"
               placeholder="EMAIL ADDRESS"
               required
-              disabled={submitState === "submitting"}
               autoComplete="email"
-              value={email}
-              onChange={(e) => {
-                setEmail(e.target.value);
-                if (submitState === "error") setSubmitState("idle");
-              }}
-              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
+              className="formkit-input w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
             />
           </div>
-        </div>
 
-        {/* Error Message */}
-        {submitState === "error" && (
-          <div className="flex items-start gap-3 p-4 bg-red-50 border-2 border-red-500" role="alert">
-            <AlertCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
-            <p className="text-sm font-bold text-red-700">{errorMessage}</p>
+          {/* Qualifying Question */}
+          <div className="formkit-field pt-2">
+            <fieldset data-group="checkboxes" className="formkit-5778">
+              <legend className="text-sm font-black uppercase tracking-tighter text-bleu-nuit mb-4">
+                Are you a former-athlete exec?
+              </legend>
+              <div className="flex gap-6">
+                {/* Yes Option */}
+                <div
+                  className="formkit-checkboxes flex items-center gap-3 cursor-pointer group"
+                  data-element="tags-checkboxes"
+                  data-group="checkbox"
+                >
+                  <input
+                    className="formkit-checkbox peer sr-only"
+                    id="tag-yes"
+                    type="checkbox"
+                    name="tags[]"
+                    value="13912459"
+                  />
+                  <label
+                    htmlFor="tag-yes"
+                    className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
+                  >
+                    <span className="w-6 h-6 border-4 border-bleu-nuit/40 bg-transparent flex items-center justify-center transition-all peer-checked:border-bleu-accent group-hover:border-bleu-nuit/60">
+                      <span className="hidden peer-checked:block w-3 h-3 bg-bleu-accent"></span>
+                    </span>
+                    Yes
+                  </label>
+                </div>
+
+                {/* No Option */}
+                <div
+                  className="formkit-checkboxes flex items-center gap-3 cursor-pointer group"
+                  data-element="tags-checkboxes"
+                  data-group="checkbox"
+                >
+                  <input
+                    className="formkit-checkbox peer sr-only"
+                    id="tag-no"
+                    type="checkbox"
+                    name="tags[]"
+                    value="13912460"
+                  />
+                  <label
+                    htmlFor="tag-no"
+                    className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
+                  >
+                    <span className="w-6 h-6 border-4 border-bleu-nuit/40 bg-transparent flex items-center justify-center transition-all peer-checked:border-bleu-accent group-hover:border-bleu-nuit/60">
+                      <span className="hidden peer-checked:block w-3 h-3 bg-bleu-accent"></span>
+                    </span>
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
           </div>
-        )}
 
-        <div className="pt-6">
-          <button
-            type="submit"
-            disabled={submitState === "submitting"}
-            className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover-shadow-none hover-translate-brutal disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:shadow-brutal-sm disabled:hover:translate-x-0 disabled:hover:translate-y-0"
-          >
-            <span>{submitState === "submitting" ? "Subscribing..." : "Get The Briefing"}</span>
-            <ArrowRight className="w-6 h-6" />
-          </button>
+          {/* Submit Button */}
+          <div className="pt-6">
+            <button
+              type="submit"
+              data-element="submit"
+              className="formkit-submit w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {/* Kit's loading spinner */}
+              <div className="formkit-spinner hidden">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <span>Get The Briefing</span>
+              <ArrowRight className="w-6 h-6" />
+            </button>
+          </div>
         </div>
 
         <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-          Join 400+ Former-Athlete Executives.<br />
+          Join 400+ Former-Athlete Executives.
+          <br />
           Read in 2 minutes.
         </p>
       </form>
+
+      {/* Custom styles for Kit form states */}
+      <style jsx global>{`
+        /* Success message styling */
+        .formkit-form[data-uid="8a3adb8456"] .formkit-alert-success {
+          display: flex !important;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 3rem 1.5rem;
+          text-align: center;
+          background: transparent;
+          border: none;
+        }
+        .formkit-form[data-uid="8a3adb8456"] .formkit-alert-success::before {
+          content: "✓";
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 4rem;
+          height: 4rem;
+          margin-bottom: 1.5rem;
+          background: var(--bleu-accent);
+          border-radius: 50%;
+          color: white;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        /* Error message styling */
+        .formkit-form[data-uid="8a3adb8456"] .formkit-alert-error:not(:empty) {
+          display: flex !important;
+          align-items: flex-start;
+          gap: 0.75rem;
+          padding: 1rem;
+          background: rgb(254 242 242);
+          border: 2px solid rgb(239 68 68);
+          color: rgb(185 28 28);
+          font-size: 0.875rem;
+          font-weight: 700;
+          list-style: none;
+        }
+
+        /* Hide form fields on success */
+        .formkit-form[data-uid="8a3adb8456"][data-state="success"] .formkit-fields {
+          display: none !important;
+        }
+
+        /* Checkbox checked state */
+        .formkit-form[data-uid="8a3adb8456"] input[type="checkbox"]:checked + label span:first-child {
+          border-color: var(--bleu-accent);
+        }
+        .formkit-form[data-uid="8a3adb8456"] input[type="checkbox"]:checked + label span:first-child span {
+          display: block !important;
+        }
+
+        /* Loading state */
+        .formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] {
+          opacity: 0.7;
+          cursor: not-allowed;
+        }
+        .formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] .formkit-spinner {
+          display: flex !important;
+          gap: 0.25rem;
+          margin-right: 0.5rem;
+        }
+        .formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div {
+          width: 8px;
+          height: 8px;
+          background: white;
+          border-radius: 50%;
+          animation: formkit-bounce 1.4s infinite ease-in-out both;
+        }
+        .formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div:nth-child(1) {
+          animation-delay: -0.32s;
+        }
+        .formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div:nth-child(2) {
+          animation-delay: -0.16s;
+        }
+
+        @keyframes formkit-bounce {
+          0%, 80%, 100% { transform: scale(0); }
+          40% { transform: scale(1); }
+        }
+
+        /* Hide powered by */
+        .formkit-form[data-uid="8a3adb8456"] .formkit-powered-by-convertkit-container {
+          display: none !important;
+        }
+      `}</style>
     </div>
   );
 }
