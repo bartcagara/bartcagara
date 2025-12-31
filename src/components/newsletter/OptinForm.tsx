@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { ArrowRight } from "lucide-react";
 import Script from "next/script";
@@ -8,6 +8,12 @@ import Script from "next/script";
 export function OptinForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const posthog = usePostHog();
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
+
+  // Handle mutual exclusivity for checkboxes (radio button behavior)
+  const handleTagChange = (value: string) => {
+    setSelectedTag(selectedTag === value ? null : value);
+  };
 
   // Track form submission via Kit's custom event
   useEffect(() => {
@@ -141,23 +147,25 @@ export function OptinForm() {
               <div className="flex gap-6">
                 {/* Yes Option */}
                 <div
-                  className="formkit-checkboxes flex items-center gap-3 cursor-pointer group"
+                  className="formkit-checkboxes flex items-center cursor-pointer group"
                   data-element="tags-checkboxes"
                   data-group="checkbox"
                 >
                   <input
-                    className="formkit-checkbox peer sr-only"
+                    className="formkit-checkbox sr-only"
                     id="tag-yes"
                     type="checkbox"
                     name="tags[]"
                     value="13912459"
+                    checked={selectedTag === "13912459"}
+                    onChange={() => handleTagChange("13912459")}
                   />
                   <label
                     htmlFor="tag-yes"
                     className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
                   >
-                    <span className="w-6 h-6 border-4 border-bleu-nuit/40 bg-transparent flex items-center justify-center transition-all peer-checked:border-bleu-accent group-hover:border-bleu-nuit/60">
-                      <span className="hidden peer-checked:block w-3 h-3 bg-bleu-accent"></span>
+                    <span className={`w-6 h-6 border-4 bg-transparent flex items-center justify-center transition-all ${selectedTag === "13912459" ? "border-bleu-accent" : "border-bleu-nuit/40 group-hover:border-bleu-nuit/60"}`}>
+                      {selectedTag === "13912459" && <span className="w-3 h-3 bg-bleu-accent"></span>}
                     </span>
                     Yes
                   </label>
@@ -165,23 +173,25 @@ export function OptinForm() {
 
                 {/* No Option */}
                 <div
-                  className="formkit-checkboxes flex items-center gap-3 cursor-pointer group"
+                  className="formkit-checkboxes flex items-center cursor-pointer group"
                   data-element="tags-checkboxes"
                   data-group="checkbox"
                 >
                   <input
-                    className="formkit-checkbox peer sr-only"
+                    className="formkit-checkbox sr-only"
                     id="tag-no"
                     type="checkbox"
                     name="tags[]"
                     value="13912460"
+                    checked={selectedTag === "13912460"}
+                    onChange={() => handleTagChange("13912460")}
                   />
                   <label
                     htmlFor="tag-no"
                     className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
                   >
-                    <span className="w-6 h-6 border-4 border-bleu-nuit/40 bg-transparent flex items-center justify-center transition-all peer-checked:border-bleu-accent group-hover:border-bleu-nuit/60">
-                      <span className="hidden peer-checked:block w-3 h-3 bg-bleu-accent"></span>
+                    <span className={`w-6 h-6 border-4 bg-transparent flex items-center justify-center transition-all ${selectedTag === "13912460" ? "border-bleu-accent" : "border-bleu-nuit/40 group-hover:border-bleu-nuit/60"}`}>
+                      {selectedTag === "13912460" && <span className="w-3 h-3 bg-bleu-accent"></span>}
                     </span>
                     No
                   </label>
