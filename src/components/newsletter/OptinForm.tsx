@@ -8,11 +8,11 @@ type SubmitState = "idle" | "submitting" | "success" | "error";
 
 interface UTMParams {
   referrer: string;
-  referrer_source: string;
-  referrer_medium: string;
-  referrer_campaign: string;
-  referrer_term: string;
-  referrer_content: string;
+  utm_source: string;
+  utm_medium: string;
+  utm_campaign: string;
+  utm_term: string;
+  utm_content: string;
 }
 
 const MIN_FORM_SUBMIT_TIME_MS = 3000;
@@ -27,11 +27,11 @@ export function OptinForm() {
   const [email, setEmail] = useState("");
   const [utmParams, setUtmParams] = useState<UTMParams>({
     referrer: "",
-    referrer_source: "",
-    referrer_medium: "",
-    referrer_campaign: "",
-    referrer_term: "",
-    referrer_content: "",
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+    utm_content: "",
   });
   const posthog = usePostHog();
 
@@ -40,11 +40,11 @@ export function OptinForm() {
     const params = new URLSearchParams(window.location.search);
     setUtmParams({
       referrer: document.referrer || "",
-      referrer_source: params.get("utm_source") || "",
-      referrer_medium: params.get("utm_medium") || "",
-      referrer_campaign: params.get("utm_campaign") || "",
-      referrer_term: params.get("utm_term") || "",
-      referrer_content: params.get("utm_content") || "",
+      utm_source: params.get("utm_source") || "",
+      utm_medium: params.get("utm_medium") || "",
+      utm_campaign: params.get("utm_campaign") || "",
+      utm_term: params.get("utm_term") || "",
+      utm_content: params.get("utm_content") || "",
     });
   }, []);
 
@@ -158,11 +158,11 @@ export function OptinForm() {
 
         {/* UTM Tracking Fields for Kit */}
         <input type="hidden" name="referrer" value={utmParams.referrer} />
-        <input type="hidden" name="referrer_source" value={utmParams.referrer_source} />
-        <input type="hidden" name="referrer_medium" value={utmParams.referrer_medium} />
-        <input type="hidden" name="referrer_campaign" value={utmParams.referrer_campaign} />
-        <input type="hidden" name="referrer_term" value={utmParams.referrer_term} />
-        <input type="hidden" name="referrer_content" value={utmParams.referrer_content} />
+        <input type="hidden" name="utm_source" value={utmParams.utm_source} />
+        <input type="hidden" name="utm_medium" value={utmParams.utm_medium} />
+        <input type="hidden" name="utm_campaign" value={utmParams.utm_campaign} />
+        <input type="hidden" name="utm_term" value={utmParams.utm_term} />
+        <input type="hidden" name="utm_content" value={utmParams.utm_content} />
 
         {/* Custom Honeypot */}
         <div className="absolute -left-[5000px]" aria-hidden="true">
