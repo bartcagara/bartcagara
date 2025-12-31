@@ -1,10 +1,19 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useEffect, FormEvent } from "react";
 import { usePostHog } from "posthog-js/react";
 import { ArrowRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
+
+interface UTMParams {
+  referrer: string;
+  referrer_source: string;
+  referrer_medium: string;
+  referrer_campaign: string;
+  referrer_term: string;
+  referrer_content: string;
+}
 
 const MIN_FORM_SUBMIT_TIME_MS = 3000;
 const FETCH_TIMEOUT_MS = 10000; // 10 second timeout for form submission
@@ -14,7 +23,35 @@ export function OptinForm() {
   const [formStartTime] = useState(Date.now());
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState("");
+  const [utmParams, setUtmParams] = useState<UTMParams>({
+    referrer: "",
+    referrer_source: "",
+    referrer_medium: "",
+    referrer_campaign: "",
+    referrer_term: "",
+    referrer_content: "",
+  });
   const posthog = usePostHog();
+
+  // Capture UTM parameters and referrer on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setUtmParams({
+      referrer: document.referrer || "",
+      referrer_source: params.get("utm_source") || "",
+      referrer_medium: params.get("utm_medium") || "",
+      referrer_campaign: params.get("utm_campaign") || "",
+      referrer_term: params.get("utm_term") || "",
+      referrer_content: params.get("utm_content") || "",
+    });
+  }, []);
+
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -23,7 +60,6 @@ export function OptinForm() {
     if (honeypot) {
       posthog?.capture('newsletter_spam_detected', {
         method: 'honeypot',
-        // Don't log the actual honeypot value for privacy
       });
       return;
     }
@@ -35,6 +71,27 @@ export function OptinForm() {
         method: 'timing',
         time_elapsed_ms: timeElapsed
       });
+      return;
+    }
+
+    // Validate first name
+    const trimmedFirstName = firstName.trim();
+    if (!trimmedFirstName || trimmedFirstName.length < 2) {
+      setSubmitState("error");
+      setErrorMessage("Please enter your first name (at least 2 characters).");
+      return;
+    }
+
+    // Validate email
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail) {
+      setSubmitState("error");
+      setErrorMessage("Please enter your email address.");
+      return;
+    }
+    if (!validateEmail(trimmedEmail)) {
+      setSubmitState("error");
+      setErrorMessage("Please enter a valid email address.");
       return;
     }
 
@@ -99,6 +156,14 @@ export function OptinForm() {
         {/* Hidden Kit Fields */}
         <input type="hidden" name="id" value="7134584" />
 
+        {/* UTM Tracking Fields for Kit */}
+        <input type="hidden" name="referrer" value={utmParams.referrer} />
+        <input type="hidden" name="referrer_source" value={utmParams.referrer_source} />
+        <input type="hidden" name="referrer_medium" value={utmParams.referrer_medium} />
+        <input type="hidden" name="referrer_campaign" value={utmParams.referrer_campaign} />
+        <input type="hidden" name="referrer_term" value={utmParams.referrer_term} />
+        <input type="hidden" name="referrer_content" value={utmParams.referrer_content} />
+
         {/* Custom Honeypot */}
         <div className="absolute -left-[5000px]" aria-hidden="true">
           <input
@@ -124,6 +189,11 @@ export function OptinForm() {
               required
               disabled={submitState === "submitting"}
               autoComplete="given-name"
+              value={firstName}
+              onChange={(e) => {
+                setFirstName(e.target.value);
+                if (submitState === "error") setSubmitState("idle");
+              }}
               className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
@@ -139,6 +209,11 @@ export function OptinForm() {
               required
               disabled={submitState === "submitting"}
               autoComplete="email"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                if (submitState === "error") setSubmitState("idle");
+              }}
               className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
