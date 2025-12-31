@@ -9,6 +9,7 @@ export function OptinForm() {
   const posthog = usePostHog();
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [referrer, setReferrer] = useState("");
+  const [tagError, setTagError] = useState(false);
 
   // Capture referrer (full page URL with UTM params) on mount
   useEffect(() => {
@@ -19,6 +20,17 @@ export function OptinForm() {
   // Handle mutual exclusivity for checkboxes (radio button behavior)
   const handleTagChange = (value: string) => {
     setSelectedTag(selectedTag === value ? null : value);
+    setTagError(false); // Clear error when user selects an option
+  };
+
+  // Validate before allowing Kit to submit
+  const handleSubmit = (e: React.FormEvent) => {
+    if (!selectedTag) {
+      e.preventDefault();
+      setTagError(true);
+      return false;
+    }
+    return true;
   };
 
   // Track form submission via Kit's custom event
@@ -100,6 +112,7 @@ export function OptinForm() {
         data-version="5"
         data-options={dataOptions}
         className="seva-form formkit-form space-y-6"
+        onSubmit={handleSubmit}
       >
         {/* Kit's error container */}
         <ul
@@ -150,8 +163,11 @@ export function OptinForm() {
           <div className="formkit-field pt-2">
             <fieldset data-group="checkboxes" className="formkit-5778">
               <legend className="text-sm font-black uppercase tracking-tighter text-bleu-nuit mb-4">
-                Are you a former-athlete exec?
+                Are you a former-athlete exec? <span className="text-red-500">*</span>
               </legend>
+              {tagError && (
+                <p className="text-red-500 text-sm font-bold mb-3">Please select an option</p>
+              )}
               <div className="flex gap-6">
                 {/* Yes Option */}
                 <div
