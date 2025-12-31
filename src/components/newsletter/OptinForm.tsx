@@ -38,8 +38,11 @@ export function OptinForm() {
   // Capture UTM parameters and referrer on mount
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    // Use full page URL as referrer so Kit can parse UTM params from it
+    // Fall back to document.referrer if no UTM params present
+    const hasUtmParams = params.has("utm_source") || params.has("utm_medium") || params.has("utm_campaign");
     setUtmParams({
-      referrer: document.referrer || "",
+      referrer: hasUtmParams ? window.location.href : (document.referrer || window.location.href),
       utm_source: params.get("utm_source") || "",
       utm_medium: params.get("utm_medium") || "",
       utm_campaign: params.get("utm_campaign") || "",
@@ -105,17 +108,7 @@ export function OptinForm() {
     try {
       const formData = new FormData(e.currentTarget);
 
-      // Build URL with UTM params as query parameters
-      const baseUrl = 'https://app.kit.com/forms/7134584/subscriptions';
-      const urlParams = new URLSearchParams();
-      if (utmParams.utm_source) urlParams.set('utm_source', utmParams.utm_source);
-      if (utmParams.utm_medium) urlParams.set('utm_medium', utmParams.utm_medium);
-      if (utmParams.utm_campaign) urlParams.set('utm_campaign', utmParams.utm_campaign);
-      if (utmParams.utm_term) urlParams.set('utm_term', utmParams.utm_term);
-      if (utmParams.utm_content) urlParams.set('utm_content', utmParams.utm_content);
-      const url = urlParams.toString() ? `${baseUrl}?${urlParams.toString()}` : baseUrl;
-
-      await fetch(url, {
+      await fetch('https://app.kit.com/forms/7134584/subscriptions', {
         method: 'POST',
         body: formData,
         mode: 'no-cors', // ConvertKit doesn't support CORS
