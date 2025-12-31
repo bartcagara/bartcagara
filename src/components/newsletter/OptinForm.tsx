@@ -104,7 +104,18 @@ export function OptinForm() {
 
     try {
       const formData = new FormData(e.currentTarget);
-      await fetch('https://app.kit.com/forms/7134584/subscriptions', {
+
+      // Build URL with UTM params as query parameters
+      const baseUrl = 'https://app.kit.com/forms/7134584/subscriptions';
+      const urlParams = new URLSearchParams();
+      if (utmParams.utm_source) urlParams.set('utm_source', utmParams.utm_source);
+      if (utmParams.utm_medium) urlParams.set('utm_medium', utmParams.utm_medium);
+      if (utmParams.utm_campaign) urlParams.set('utm_campaign', utmParams.utm_campaign);
+      if (utmParams.utm_term) urlParams.set('utm_term', utmParams.utm_term);
+      if (utmParams.utm_content) urlParams.set('utm_content', utmParams.utm_content);
+      const url = urlParams.toString() ? `${baseUrl}?${urlParams.toString()}` : baseUrl;
+
+      await fetch(url, {
         method: 'POST',
         body: formData,
         mode: 'no-cors', // ConvertKit doesn't support CORS
@@ -156,13 +167,8 @@ export function OptinForm() {
         {/* Hidden Kit Fields */}
         <input type="hidden" name="id" value="7134584" />
 
-        {/* UTM Tracking Fields for Kit */}
+        {/* Referrer field for Kit */}
         <input type="hidden" name="referrer" value={utmParams.referrer} />
-        <input type="hidden" name="utm_source" value={utmParams.utm_source} />
-        <input type="hidden" name="utm_medium" value={utmParams.utm_medium} />
-        <input type="hidden" name="utm_campaign" value={utmParams.utm_campaign} />
-        <input type="hidden" name="utm_term" value={utmParams.utm_term} />
-        <input type="hidden" name="utm_content" value={utmParams.utm_content} />
 
         {/* Custom Honeypot */}
         <div className="absolute -left-[5000px]" aria-hidden="true">
