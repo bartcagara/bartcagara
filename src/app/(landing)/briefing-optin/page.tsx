@@ -95,28 +95,28 @@ export default function BriefingOptinPage() {
                         <div className="space-y-8 mb-12">
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Own The Menu
+                                    Stop The Physical Decline
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Master the business dinner. Stay lean without becoming "the diet guy".
+                                    The mirror starts matching the athlete inside again.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Win The Road Game
+                                    End The Energy Crash
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Travel without regression. Maintain peak condition in any time zone.
+                                    No more running on fumes by dinner.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Operate Like A Veteran
+                                    Win When Life Gets Chaotic
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Stop the "Rookie Grind". Execute with precision.
+                                    Travel, dining out, stress - their system absorbs it all.
                                 </span>
                             </div>
                         </div>
