@@ -98,7 +98,7 @@ export default function BriefingOptinPage() {
                                     Stop The Physical Decline
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    The mirror starts matching the athlete inside again.
+                                    From avoiding photos to seeing an athlete in the mirror again.
                                 </span>
                             </div>
 
@@ -107,7 +107,7 @@ export default function BriefingOptinPage() {
                                     End The Energy Crash
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    No more running on fumes by dinner.
+                                    From running on fumes by 6pm to having energy left for their kids.
                                 </span>
                             </div>
 
@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
                                     Win When Life Gets Chaotic
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Travel, dining out, stress - their system absorbs it all.
+                                    From blaming travel to staying lean on the road.
                                 </span>
                             </div>
                         </div>
