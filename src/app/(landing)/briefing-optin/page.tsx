@@ -87,7 +87,7 @@ export default function BriefingOptinPage() {
                         {/* INTRO COPY - Direct Value Proposition */}
                         <div className="mb-10">
                             <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                Every Sunday, steal the exact protocols I build for private clients to:
+                                Every Sunday, see exactly how I help private clients:
                             </p>
                         </div>
 
