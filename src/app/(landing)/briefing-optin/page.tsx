@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
                                     Win When Life Gets Chaotic
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From blaming travel to staying lean on the road.
+                                    From blaming the schedule to owning the travel and the menu.
                                 </span>
                             </div>
                         </div>
