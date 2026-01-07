@@ -98,7 +98,7 @@ export default function BriefingOptinPage() {
                                     Stop The Physical Decline
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From avoiding photos to seeing an athlete in the mirror again.
+                                    From avoiding photos to seeing the athlete in the mirror again.
                                 </span>
                             </div>
 
