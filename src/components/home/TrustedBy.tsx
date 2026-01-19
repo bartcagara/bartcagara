@@ -10,7 +10,7 @@ export function TrustedBy() {
     const { trustedBy } = HOMEPAGE_CONTENT;
 
     return (
-        <section className="py-8 bg-bleu-nuit border-b-2 border-white/10">
+        <section className="py-8 bg-bleu-nuit">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="mt-0">
                     <p className="text-center font-bold uppercase text-white/50 tracking-tighter mb-8 text-sm">
