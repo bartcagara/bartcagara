@@ -9,16 +9,6 @@ export interface ScrollSectionProps {
 }
 
 /**
- * Hero Section
- */
-export interface HeroContent {
-  headline: string;
-  subheadline: string;
-  ctaText: string;
-  ctaLink: string;
-}
-
-/**
  * Program/System Phase
  */
 export interface ProgramPhase {
