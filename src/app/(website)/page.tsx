@@ -45,11 +45,9 @@ export default function Home() {
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
         {/* TRUSTED BY */}
-        <div className="border-b-2 border-bleu-nuit bg-gray-50">
-          <ErrorBoundary>
-            <TrustedBy />
-          </ErrorBoundary>
-        </div>
+        <ErrorBoundary>
+          <TrustedBy />
+        </ErrorBoundary>
 
         {/* 2. THE DIAGNOSIS */}
         <ErrorBoundary>
