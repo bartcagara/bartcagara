@@ -62,7 +62,7 @@ export const Navbar = memo(() => {
 
         {/* LOGO - Center on Mobile, Left on Desktop */}
         <div className="absolute left-1/2 -translate-x-1/2 md:translate-x-0 md:static md:left-auto flex items-center h-full z-20">
-          <Link href="/" onClick={() => setIsMenuOpen(false)} className="block relative hover:opacity-70 transition-opacity">
+          <Link href="/" onClick={() => { setIsMenuOpen(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="block relative hover:opacity-70 transition-opacity">
             <div className="font-black text-4xl md:text-5xl tracking-tighter text-bleu-nuit leading-none">
               BC
             </div>
