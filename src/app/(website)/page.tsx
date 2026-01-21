@@ -6,7 +6,7 @@ import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 // Lazy load heavy below-the-fold sections to improve initial page load
 const TrustedBy = dynamic(() => import("@/components/home/TrustedBy").then(mod => ({ default: mod.TrustedBy })), {
-  loading: () => <SectionSkeleton minHeight="100px" bgColor="bg-gray-50" />
+  loading: () => <SectionSkeleton minHeight="100px" bgColor="bg-bleu-nuit" />
 });
 
 const DiagnosisSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.DiagnosisSection })), {
