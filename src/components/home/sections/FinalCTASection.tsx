@@ -15,7 +15,7 @@ export function FinalCTASection({
   return (
     <section className="py-24 md:py-48 bg-bleu-nuit" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 id="final-cta-title" className="text-6xl md:text-7xl font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white">
+        <h2 id="final-cta-title" className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white">
           {headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
