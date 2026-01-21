@@ -19,7 +19,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
               </span>
             ))}
           </h2>
-          <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-2xl font-medium text-white/70 max-w-3xl leading-relaxed">
             {subtitle}
           </p>
         </div>
