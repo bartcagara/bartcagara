@@ -17,7 +17,7 @@ export function FinalCTASection({
       <div className="max-w-7xl mx-auto px-6">
         <h2 id="final-cta-title" className="text-6xl md:text-[8rem] font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white">
           {headline}<br />
-          <span className="text-bleu-accent">{highlightedText}</span>
+          <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
         <p className="text-2xl md:text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
           {subheadline}

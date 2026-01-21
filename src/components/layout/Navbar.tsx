@@ -42,7 +42,7 @@ export const Navbar = memo(() => {
   }, [isMenuOpen, handleKeyDown]);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white border-b-2 border-bleu-nuit z-50">
+    <nav className="fixed top-0 left-0 right-0 bg-gray-50 border-b-2 border-bleu-nuit z-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-[72px] md:h-[88px] flex justify-between items-center relative">
 
         {/* MOBILE HAMBURGER - Left */}
@@ -106,7 +106,7 @@ export const Navbar = memo(() => {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className="fixed inset-0 top-[72px] bg-white z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
+          className="fixed inset-0 top-[72px] bg-gray-50 z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
         >
           <nav className="flex flex-col gap-8 text-center -mt-20" aria-label="Mobile navigation">
             <Link

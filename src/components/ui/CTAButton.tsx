@@ -17,7 +17,7 @@ export function CTAButton({
 
   const variantClasses = variant === 'dark'
     ? "bg-bleu-nuit text-white border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md"
-    : "bg-white text-bleu-nuit border-white shadow-brutal-sm md:shadow-brutal-md";
+    : "bg-gray-50 text-bleu-nuit border-gray-50 shadow-brutal-sm md:shadow-brutal-md";
 
   return (
     <Link
