@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Executive Athlete Briefing | Weekly Newsletter for Former-Athlete Executives",
-    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 400+ former-athlete executives. Read it in 2 minutes.",
+    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete executives. Read it in 2 minutes.",
     keywords: [
         "Executive Newsletter",
         "Business Travel Fitness",
