@@ -7,31 +7,13 @@ import Script from "next/script";
 
 export function OptinForm() {
   const posthog = usePostHog();
-  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [referrer, setReferrer] = useState("");
-  const [tagError, setTagError] = useState(false);
 
   // Capture referrer (full page URL with UTM params) on mount
   useEffect(() => {
     // Use full page URL as referrer so Kit can parse UTM params from it
     setReferrer(window.location.href);
   }, []);
-
-  // Handle mutual exclusivity for checkboxes (radio button behavior)
-  const handleTagChange = (value: string) => {
-    setSelectedTag(selectedTag === value ? null : value);
-    setTagError(false); // Clear error when user selects an option
-  };
-
-  // Validate before allowing Kit to submit
-  const handleSubmit = (e: React.FormEvent) => {
-    if (!selectedTag) {
-      e.preventDefault();
-      setTagError(true);
-      return false;
-    }
-    return true;
-  };
 
   // Track form submission via Kit's custom event
   useEffect(() => {
@@ -112,7 +94,6 @@ export function OptinForm() {
         data-version="5"
         data-options={dataOptions}
         className="seva-form formkit-form space-y-6"
-        onSubmit={handleSubmit}
       >
         {/* Kit's error container */}
         <ul
@@ -157,71 +138,6 @@ export function OptinForm() {
               autoComplete="email"
               className="formkit-input w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
             />
-          </div>
-
-          {/* Qualifying Question */}
-          <div className="formkit-field pt-2">
-            <fieldset data-group="checkboxes" className="formkit-5778">
-              <legend className="text-sm font-black uppercase tracking-tighter text-bleu-nuit mb-4">
-                Are you a former-athlete exec? <span className="text-red-500">*</span>
-              </legend>
-              {tagError && (
-                <p className="text-red-500 text-sm font-bold mb-3">Please select an option</p>
-              )}
-              <div className="flex gap-6">
-                {/* Yes Option */}
-                <div
-                  className="formkit-checkboxes flex items-center cursor-pointer group"
-                  data-element="tags-checkboxes"
-                  data-group="checkbox"
-                >
-                  <input
-                    className="formkit-checkbox sr-only"
-                    id="tag-yes"
-                    type="checkbox"
-                    name="tags[]"
-                    value="13912459"
-                    checked={selectedTag === "13912459"}
-                    onChange={() => handleTagChange("13912459")}
-                  />
-                  <label
-                    htmlFor="tag-yes"
-                    className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
-                  >
-                    <span className={`w-6 h-6 border-4 bg-transparent flex items-center justify-center transition-all ${selectedTag === "13912459" ? "border-bleu-accent" : "border-bleu-nuit/40 group-hover:border-bleu-nuit/60"}`}>
-                      {selectedTag === "13912459" && <span className="w-3 h-3 bg-bleu-accent"></span>}
-                    </span>
-                    Yes
-                  </label>
-                </div>
-
-                {/* No Option */}
-                <div
-                  className="formkit-checkboxes flex items-center cursor-pointer group"
-                  data-element="tags-checkboxes"
-                  data-group="checkbox"
-                >
-                  <input
-                    className="formkit-checkbox sr-only"
-                    id="tag-no"
-                    type="checkbox"
-                    name="tags[]"
-                    value="13912460"
-                    checked={selectedTag === "13912460"}
-                    onChange={() => handleTagChange("13912460")}
-                  />
-                  <label
-                    htmlFor="tag-no"
-                    className="relative flex items-center gap-3 cursor-pointer text-lg font-bold text-bleu-nuit uppercase tracking-tight"
-                  >
-                    <span className={`w-6 h-6 border-4 bg-transparent flex items-center justify-center transition-all ${selectedTag === "13912460" ? "border-bleu-accent" : "border-bleu-nuit/40 group-hover:border-bleu-nuit/60"}`}>
-                      {selectedTag === "13912460" && <span className="w-3 h-3 bg-bleu-accent"></span>}
-                    </span>
-                    No
-                  </label>
-                </div>
-              </div>
-            </fieldset>
           </div>
 
           {/* Submit Button */}
