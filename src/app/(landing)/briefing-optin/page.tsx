@@ -75,8 +75,7 @@ export default function BriefingOptinPage() {
                         </h1>
                         {/* SUBHEAD - Lighter weight, cleaner size */}
                         <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                            Most fitness advice assumes you have time. <br className="hidden md:block" />
-                            <span className="text-white block mt-1 md:inline md:mt-0">This briefing assumes you don't.</span>
+                            For the former athlete who traded his health for a career.
                         </p>
                     </div>
                 </div>
@@ -87,7 +86,8 @@ export default function BriefingOptinPage() {
                         {/* INTRO COPY - Direct Value Proposition */}
                         <div className="mb-10">
                             <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                Every Sunday, see exactly how I help private clients:
+                                <span className="block text-bleu-nuit/40 mb-2 font-medium">No basic fitness tips. No 5-minute workouts. No high-protein recipes.</span>
+                                <span className="block text-bleu-nuit">Just real stories and insights from coaching former athletes like:</span>
                             </p>
                         </div>
 
@@ -95,30 +95,32 @@ export default function BriefingOptinPage() {
                         <div className="space-y-8 mb-12">
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Stop The Physical Decline
+                                    Ryan, Sales Executive
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From avoiding photos to seeing the athlete in the mirror again.
+                                    Flies 3 days a week. Lost 120 lbs. Calls it the most sustainable thing he's ever done.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    End The Energy Crash
+                                    Adrian, CFO
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From running on fumes by 6pm to having energy left for their kids.
+                                    Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit handicap.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Win When Life Gets Chaotic
+                                    Drew, Entrepreneur
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From blaming the schedule to owning the travel and the menu.
+                                    2 little kids. Down 34 lbs. Rebuilt his body, his stress response, and his identity.
                                 </span>
                             </div>
+
+
                         </div>
 
                         <OptinForm />
@@ -134,7 +136,7 @@ export default function BriefingOptinPage() {
                             These guys didn't <br className="md:hidden" /> find more time.
                         </h3>
                         <p className="text-xl md:text-3xl font-bold text-bleu-accent uppercase tracking-tighter">
-                            They built a better system.
+                            They finally fixed a broken system.
                         </p>
                     </div>
                     {/* Masonry Grid */}

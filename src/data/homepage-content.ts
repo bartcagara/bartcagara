@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "Stop The Decline.",
     highlightedText: "Reclaim The Athlete.",
-    subheadline: "For the former-athlete executive whose physical decline just got real. You didn't come this far to look like you gave up.",
+    subheadline: "For the former athlete who traded his health for a career. You didn't come this far to look like you gave up.",
     ctaText: "Book Discovery Call",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
