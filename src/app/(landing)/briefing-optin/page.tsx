@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Executive Athlete Briefing | Weekly Newsletter for Former-Athlete Executives",
-    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete executives. Read it in 2 minutes.",
+    description: "No basic fitness tips. Just real stories from coaching former-athlete execs. One raw, unfiltered email every Sunday. Read in 5 minutes.",
     keywords: [
         "Executive Newsletter",
         "Business Travel Fitness",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         url: "/briefing-optin",
         siteName: "Executive Athlete OS",
         title: "Executive Athlete Briefing",
-        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on an executive schedule.",
+        description: "For former athletes who traded their health for a career. Real stories and insights from coaching former-athlete execs. Every Sunday.",
         images: [
             {
                 url: "/opengraph-briefing.png",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Executive Athlete Briefing",
-        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight.",
+        description: "For former athletes who traded their health for a career. Real stories from coaching former-athlete execs. Every Sunday.",
         images: ["/opengraph-briefing.png"],
         creator: "@bartcagara"
     },
@@ -67,60 +67,45 @@ export default function BriefingOptinPage() {
                         <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
                             The Newsletter
                         </div>
-                        {/* HEADLINE - Optical alignment tweaks */}
+                        {/* HEADLINE */}
                         <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-8">
                             Executive <br />
                             Athlete <br />
                             <span className="text-bleu-accent">Briefing</span>
                         </h1>
-                        {/* SUBHEAD - Lighter weight, cleaner size */}
-                        <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                            Most fitness advice assumes you have time. <br className="hidden md:block" />
-                            <span className="text-white block mt-1 md:inline md:mt-0">This briefing assumes you don't.</span>
+                        {/* SUBHEAD */}
+                        <p className="text-lg md:text-xl text-bleu-fumee/90 font-medium leading-relaxed mb-8 md:mb-10">
+                            For former athletes who traded their health for a career.
+                        </p>
+                        {/* BODY COPY */}
+                        <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed mb-4">
+                            No basic fitness tips. No 5-minute workouts. No high-protein recipes.
+                        </p>
+                        <p className="text-base md:text-lg text-white/80 font-medium leading-relaxed mb-6 md:mb-8">
+                            Just real stories and insights from coaching former-athlete execs like:
+                        </p>
+                        {/* CLIENT STORIES */}
+                        <ul className="space-y-4 mb-8 md:mb-10">
+                            <li className="text-sm md:text-base text-white/70 leading-relaxed pl-4 border-l-2 border-bleu-accent/50">
+                                <span className="text-white font-bold">Ryan, Sales Executive,</span> flies 3 days a week. Lost 120 lbs. Calls it the most sustainable thing he&apos;s ever done.
+                            </li>
+                            <li className="text-sm md:text-base text-white/70 leading-relaxed pl-4 border-l-2 border-bleu-accent/50">
+                                <span className="text-white font-bold">Adrian, CFO.</span> Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit handicap.
+                            </li>
+                            <li className="text-sm md:text-base text-white/70 leading-relaxed pl-4 border-l-2 border-bleu-accent/50">
+                                <span className="text-white font-bold">Drew, entrepreneur.</span> Rebuilt his body, his identity, and completely rewired his stress response.
+                            </li>
+                        </ul>
+                        {/* CLOSING LINE */}
+                        <p className="text-lg md:text-xl text-white font-bold">
+                            One raw, unfiltered email. Every Sunday.
                         </p>
                     </div>
                 </div>
 
-                {/* Right Column: Content & Form */}
+                {/* Right Column: Form */}
                 <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                     <div className="max-w-md w-full">
-                        {/* INTRO COPY - Direct Value Proposition */}
-                        <div className="mb-10">
-                            <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                Every Sunday, see exactly how I help private clients:
-                            </p>
-                        </div>
-
-                        {/* BULLETS - Clean, High-Contrast */}
-                        <div className="space-y-8 mb-12">
-                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Stop The Physical Decline
-                                </span>
-                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From avoiding photos to seeing the athlete in the mirror again.
-                                </span>
-                            </div>
-
-                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    End The Energy Crash
-                                </span>
-                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From running on fumes by 6pm to having energy left for their kids.
-                                </span>
-                            </div>
-
-                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Win When Life Gets Chaotic
-                                </span>
-                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    From blaming the schedule to owning the travel and the menu.
-                                </span>
-                            </div>
-                        </div>
-
                         <OptinForm />
                     </div>
                 </div>

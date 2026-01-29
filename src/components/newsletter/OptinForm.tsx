@@ -160,9 +160,7 @@ export function OptinForm() {
         </div>
 
         <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-          Join 200+ Former-Athlete Executives.
-          <br />
-          Read in 2 minutes.
+          Read in 5 minutes.
         </p>
       </form>
 
