@@ -24,7 +24,7 @@ export function ResultsSection() {
                         THESE GUYS DIDN’T<br />FIND MORE TIME.
                     </h2>
                     <p className="text-xl md:text-3xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
-                        They built a better system.
+                        {results.subheadline}
                     </p>
                 </div>
 
