@@ -67,7 +67,7 @@ export const HOMEPAGE_CONTENT = {
 
   results: {
     headline: "THESE GUYS DIDN'T\nFIND MORE TIME.",
-    subheadline: "They built a better system.",
+    subheadline: "They fixed a broken system.",
     sections: {
       transformations: "Client Photos",
       interviews: "Client Interviews",
