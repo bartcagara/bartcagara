@@ -107,7 +107,7 @@ export default function BriefingOptinPage() {
                                     Adrian, CFO
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit handicap.
+                                    Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit golf handicap.
                                 </span>
                             </div>
 
