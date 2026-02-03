@@ -18,7 +18,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "YOUR APPROACH IS DISCONNECTED.\nYOUR BODY PAYS THE PRICE.",
+    title: "DIFFERENT SIGNALS.\nNOTHING CONNECTS.",
     subtitle: "Three experts. None of them seeing the full picture.",
     items: [
       "Your therapist is clueless about your nutrition or training.",
@@ -30,7 +30,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   solution: {
-    title: "NUTRITION, TRAINING, MENTAL SUPPORT -\nFINALLY INTEGRATED.",
+    title: "BODY. MIND. SCHEDULE.\nINTEGRATED.",
     subtitle: "One coach who sees the full picture.",
     items: [
       "Your nutrition adapts to travel and dining out.",
