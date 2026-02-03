@@ -18,51 +18,27 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "YOU ARE GRINDING\nLIKE A ROOKIE.",
-    subtitle: "Fighting your physiology.\nRelying on willpower.\nForcing the game.",
-    pillars: [
-      {
-        title: "Diet",
-        items: [
-          "Frustration leading to restrictive diets you can't maintain.",
-          "White-knuckling Mon-Thu. Collapsing on the weekend.",
-          "One business trip destroys weeks of progress.",
-        ],
-      },
-      {
-        title: "Training",
-        items: [
-          "Using \"College Athlete\" logic on a 40-year-old body.",
-          "The \"All-or-Nothing\" loop: 2 weeks on, 2 months off.",
-          "Burning calories, but never building muscle.",
-        ],
-      },
+    title: "YOUR APPROACH IS DISCONNECTED.\nYOUR BODY PAYS THE PRICE.",
+    subtitle: "Three experts. None of them seeing the full picture.",
+    items: [
+      "Your therapist is clueless about your nutrition or training.",
+      "Your PT doesn't understand your stress or your schedule.",
+      "Your nutritionist has no idea how to adjust it for training, or travel.",
     ],
-    outcome: "The outcome? You stay trapped in the restart cycle, managing a physical decline instead of reversing it.",
+    afterText: "So you try to piece it together yourself. And every time your schedule gets heavy, the whole thing collapses.",
+    outcome: "The outcome? More tired, more fat, more isolated - slowly suffocating the athlete in you. Dependent on protocols that were never designed for you.",
   },
 
   solution: {
-    title: "START OPERATING\nLIKE A VETERAN.",
-    subtitle: "Picking your spots.\nManaging your energy.\nLetting the game come to you.",
-    pillars: [
-      {
-        title: "Diet",
-        items: [
-          "Nutrition without the starvation.",
-          "Dining out without looking like the \"diet guy.\"",
-          "Traveling without losing momentum.",
-        ],
-      },
-      {
-        title: "Training",
-        items: [
-          "Short, targeted sessions. Zero wasted effort.",
-          "Building muscle with hotel gym dumbbells.",
-          "Injury prevention built into every session.",
-        ],
-      },
+    title: "NUTRITION, TRAINING, MENTAL SUPPORT -\nFINALLY INTEGRATED.",
+    subtitle: "One coach who sees the full picture.",
+    items: [
+      "Your nutrition adapts to travel and dining out.",
+      "Your training adjusts to your changing schedule.",
+      "Your stress response changes because you finally recover.",
     ],
-    outcome: "The outcome? A system that absorbs the chaos. You look athletic and feel dangerous, no matter where the job takes you.",
+    afterText: "You enter a relationship where you can dump the weight, understand the patterns, regroup, and keep moving.",
+    outcome: "The outcome? You get fit, feel sharp, and travel without losing momentum. You feel like yourself again - without rigid protocols holding you hostage.",
   },
 
   results: {

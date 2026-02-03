@@ -5,9 +5,9 @@ import type { DiagnosisSectionProps } from "@/components/home/types";
 
 /**
  * DiagnosisSection - "The Problem" section
- * Displays what's going wrong with diet and training
+ * Displays what's going wrong with the disconnected approach
  */
-export function DiagnosisSection({ title, subtitle, pillars, outcome }: DiagnosisSectionProps) {
+export function DiagnosisSection({ title, subtitle, items, afterText, outcome }: DiagnosisSectionProps) {
   return (
     <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white" aria-labelledby="diagnosis-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -18,24 +18,21 @@ export function DiagnosisSection({ title, subtitle, pillars, outcome }: Diagnosi
           </div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-16 md:gap-32">
-          {pillars.map((pillar) => (
-            <div key={pillar.title}>
-              <h4 className="text-3xl font-black uppercase mb-8 text-bleu-nuit border-b-2 border-bleu-nuit pb-4 inline-block">
-                {pillar.title}
-              </h4>
-              <ul className="space-y-8">
-                {pillar.items.map((item, index) => (
-                  <li key={index} className="group">
-                    <div className="flex items-start gap-4 mb-2">
-                      <X className="w-8 h-8 text-red-500 flex-shrink-0" strokeWidth={3} aria-hidden="true" />
-                      <span className="text-2xl font-bold text-bleu-nuit">{item}</span>
-                    </div>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div className="max-w-4xl">
+          <ul className="space-y-8">
+            {items.map((item, index) => (
+              <li key={index} className="group">
+                <div className="flex items-start gap-4 mb-2">
+                  <X className="w-8 h-8 text-red-500 flex-shrink-0" strokeWidth={3} aria-hidden="true" />
+                  <span className="text-2xl font-bold text-bleu-nuit">{item}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-xl md:text-2xl text-bleu-nuit/80 mt-12 leading-relaxed">
+            {afterText}
+          </p>
         </div>
 
         <div className="mt-24 pt-12 border-t-2 border-bleu-nuit/20">
