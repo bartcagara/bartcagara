@@ -94,6 +94,7 @@ export default function Home() {
             subtitle={HOMEPAGE_CONTENT.about.subtitle}
             imageSrc={HOMEPAGE_CONTENT.about.imageSrc}
             imageAlt={HOMEPAGE_CONTENT.about.imageAlt}
+            subhead={HOMEPAGE_CONTENT.about.subhead}
             paragraphs={HOMEPAGE_CONTENT.about.paragraphs}
             credentials={HOMEPAGE_CONTENT.about.credentials}
           />

@@ -73,6 +73,7 @@ export interface AboutSectionProps {
   subtitle: string;
   imageSrc: string;
   imageAlt: string;
+  subhead: string;
   paragraphs: readonly string[];
   credentials: readonly string[];
 }
