@@ -23,10 +23,10 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Your therapist is clueless about your nutrition or training.",
       "Your PT doesn't understand your stress or your schedule.",
-      "Your nutritionist has no idea how to adjust it for training, or travel.",
+      "Your nutritionist doesn't know how to accelerate training results.",
     ],
     afterText: "So you try to piece it together yourself. And every time your schedule gets heavy, the whole thing collapses.",
-    outcome: "The outcome? More tired, more fat, more isolated - slowly suffocating the athlete in you. Dependent on protocols that were never designed for you.",
+    outcome: "The outcome? More tired, more fat, more isolated - dependent on protocols that were never designed for you.",
   },
 
   solution: {
@@ -35,10 +35,10 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Your nutrition adapts to travel and dining out.",
       "Your training adjusts to your changing schedule.",
-      "Your stress response changes because you finally recover.",
+      "Your stress response improves because you finally recover.",
     ],
-    afterText: "You enter a relationship where you can dump the weight, understand the patterns, regroup, and keep moving.",
-    outcome: "The outcome? You get fit, feel sharp, and travel without losing momentum. You feel like yourself again - without rigid protocols holding you hostage.",
+    afterText: "You get to work with someone where you can dump the weight, understand the patterns, regroup, and keep moving.",
+    outcome: "The outcome? You get fit, feel sharp, and adapt to chaos intuitively - without rigid protocols holding you hostage.",
   },
 
   results: {

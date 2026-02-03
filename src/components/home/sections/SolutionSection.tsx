@@ -30,7 +30,7 @@ export function SolutionSection({ title, subtitle, items, afterText, outcome }: 
             ))}
           </ul>
 
-          <p className="text-xl md:text-2xl text-white/80 mt-12 leading-relaxed">
+          <p className="text-xl md:text-2xl font-bold text-white/80 mt-12 leading-relaxed">
             {afterText}
           </p>
         </div>
