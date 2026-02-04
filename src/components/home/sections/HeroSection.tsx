@@ -15,7 +15,7 @@ export function HeroSection({ content }: HeroSectionProps) {
         </h1>
 
         <div className="border-l-4 border-bleu-accent pl-8 max-w-2xl mb-12">
-          <p className="text-3xl font-medium text-white/80 leading-relaxed">
+          <p className="text-xl md:text-2xl font-medium text-white/80 leading-relaxed">
             {content.subheadline}
           </p>
         </div>

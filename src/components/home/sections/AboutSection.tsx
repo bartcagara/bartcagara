@@ -24,7 +24,7 @@ export function AboutSection({
           <h2 id="about-title" className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
             {title}<br />{subtitle}
           </h2>
-          <p className="text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
+          <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
             {subhead}
           </p>
         </div>
@@ -46,7 +46,7 @@ export function AboutSection({
 
           {/* Content (Right) */}
           <div>
-            <div className="space-y-8 text-2xl font-medium leading-relaxed text-bleu-nuit/80">
+            <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith("So I built something different.");
                 return (
