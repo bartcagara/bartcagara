@@ -11,7 +11,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge variant="light">The Program</SectionBadge>
-          <h2 id="program-title" className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
+          <h2 id="program-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
             {title.split('\n').map((line, i) => (
               <span key={i}>
                 {line}
@@ -19,7 +19,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
               </span>
             ))}
           </h2>
-          <p className="text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
             {subtitle}
           </p>
         </div>
@@ -50,7 +50,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                 </div>
 
                 {/* PROTOCOL */}
-                <ul className="text-2xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
+                <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
                   {phase.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
                       <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
