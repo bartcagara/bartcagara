@@ -36,7 +36,7 @@ export function DiagnosisSection({ title, subtitle, items, afterText, outcome }:
         </div>
 
         <div className="mt-24 pt-12 border-t-2 border-bleu-nuit/20">
-          <p className="text-2xl md:text-4xl font-black text-bleu-nuit leading-tight max-w-4xl">
+          <p className="text-2xl md:text-3xl font-bold text-bleu-nuit leading-tight max-w-4xl">
             {outcome}
           </p>
         </div>
