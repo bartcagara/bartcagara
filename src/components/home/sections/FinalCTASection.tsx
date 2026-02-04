@@ -19,7 +19,7 @@ export function FinalCTASection({
           {headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
-        <p className="text-2xl md:text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
+        <p className="text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
           {subheadline}
         </p>
         <CTAButton href={ctaLink} variant="light">

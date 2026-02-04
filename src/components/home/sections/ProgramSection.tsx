@@ -19,7 +19,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
               </span>
             ))}
           </h2>
-          <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
             {subtitle}
           </p>
         </div>
@@ -50,7 +50,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                 </div>
 
                 {/* PROTOCOL */}
-                <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
+                <ul className="text-2xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
                   {phase.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
                       <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>

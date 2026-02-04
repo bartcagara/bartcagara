@@ -27,7 +27,7 @@ export function SectionHeader({ title, subtitle, variant = 'dark' }: SectionHead
           </span>
         ))}
       </h2>
-      <h3 className={`text-2xl md:text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
+      <h3 className={`text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
         {subtitle.split('\n').map((line, i) => (
           <span key={i}>
             {line}
