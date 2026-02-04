@@ -21,9 +21,9 @@ export const HOMEPAGE_CONTENT = {
     title: "DIFFERENT SIGNALS.\nNOTHING CONNECTS.",
     subtitle: "Three experts. None of them seeing the full picture.",
     items: [
-      "Your therapist is clueless about your nutrition or training.",
+      "Your therapist can't build your nutrition or training.",
       "Your PT doesn't understand your stress or your schedule.",
-      "Your nutritionist doesn't know how to accelerate training results.",
+      "Your nutritionist doesn't know how to maximize training results.",
     ],
     afterText: "So you try to piece it together yourself. And every time your schedule gets heavy, the whole thing collapses.",
     outcome: "The outcome? More tired, more fat, more isolated - dependent on protocols that were never designed for you.",
