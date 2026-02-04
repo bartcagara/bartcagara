@@ -17,14 +17,14 @@ export function AboutSection({
   credentials
 }: AboutSectionProps) {
   return (
-    <section id="about" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
+    <section id="about" className="py-16 md:py-24 lg:py-32 border-b-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-20">
+        <div className="mb-12 md:mb-16">
           <SectionBadge>The Coach</SectionBadge>
-          <h2 id="about-title" className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
+          <h2 id="about-title" className="text-[2rem] sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-bleu-nuit">
             {title}<br />{subtitle}
           </h2>
-          <p className="text-xl md:text-2xl lg:text-3xl font-medium text-bleu-nuit/70 mt-6 md:mt-8 max-w-2xl">
+          <p className="text-base md:text-lg lg:text-xl font-medium text-bleu-nuit/70 mt-4 md:mt-6 max-w-2xl">
             {subhead}
           </p>
         </div>
@@ -46,7 +46,7 @@ export function AboutSection({
 
           {/* Content (Right) */}
           <div>
-            <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
+            <div className="space-y-5 md:space-y-6 text-base md:text-lg lg:text-xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith("So I built something different.");
                 return (
@@ -57,13 +57,13 @@ export function AboutSection({
               })}
             </div>
 
-            <div className="mt-16 flex flex-col md:flex-row gap-8">
+            <div className="mt-10 md:mt-12 flex flex-col md:flex-row gap-6 md:gap-8">
               {credentials.map((credential, index) => (
-                <div key={index} className="flex items-center gap-4">
+                <div key={index} className="flex items-center gap-3 md:gap-4">
                   <div className="p-1 bg-bleu-accent rounded-full text-white">
-                    <Check className="w-5 h-5" strokeWidth={4} aria-hidden="true" />
+                    <Check className="w-4 h-4 md:w-5 md:h-5" strokeWidth={4} aria-hidden="true" />
                   </div>
-                  <span className="font-bold uppercase tracking-tighter text-lg">{credential}</span>
+                  <span className="font-bold uppercase tracking-tighter text-sm md:text-base">{credential}</span>
                 </div>
               ))}
             </div>

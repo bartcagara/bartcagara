@@ -13,13 +13,13 @@ export function FinalCTASection({
   ctaLink
 }: FinalCTASectionProps) {
   return (
-    <section className="py-20 md:py-32 lg:py-48 bg-bleu-nuit overflow-hidden" aria-labelledby="final-cta-title">
+    <section className="py-16 md:py-24 lg:py-32 bg-bleu-nuit overflow-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 id="final-cta-title" className="text-5xl sm:text-6xl md:text-7xl lg:text-[8rem] font-black uppercase tracking-tighter mb-8 md:mb-12 leading-[0.85] text-white max-w-5xl">
+        <h2 id="final-cta-title" className="text-[3.25rem] sm:text-6xl md:text-7xl lg:text-[7rem] font-black uppercase tracking-tighter mb-6 md:mb-10 leading-[0.9] text-white max-w-5xl">
           {headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-3 md:px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
-        <p className="text-lg md:text-xl lg:text-2xl font-medium text-white/80 mb-10 md:mb-16 max-w-3xl leading-relaxed">
+        <p className="text-base md:text-lg lg:text-xl font-medium text-white/80 mb-8 md:mb-12 max-w-3xl leading-relaxed">
           {subheadline}
         </p>
         <CTAButton href={ctaLink} variant="light">
