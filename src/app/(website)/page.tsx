@@ -54,7 +54,8 @@ export default function Home() {
           <DiagnosisSection
             title={HOMEPAGE_CONTENT.diagnosis.title}
             subtitle={HOMEPAGE_CONTENT.diagnosis.subtitle}
-            pillars={HOMEPAGE_CONTENT.diagnosis.pillars}
+            items={HOMEPAGE_CONTENT.diagnosis.items}
+            afterText={HOMEPAGE_CONTENT.diagnosis.afterText}
             outcome={HOMEPAGE_CONTENT.diagnosis.outcome}
           />
         </ErrorBoundary>
@@ -64,7 +65,8 @@ export default function Home() {
           <SolutionSection
             title={HOMEPAGE_CONTENT.solution.title}
             subtitle={HOMEPAGE_CONTENT.solution.subtitle}
-            pillars={HOMEPAGE_CONTENT.solution.pillars}
+            items={HOMEPAGE_CONTENT.solution.items}
+            afterText={HOMEPAGE_CONTENT.solution.afterText}
             outcome={HOMEPAGE_CONTENT.solution.outcome}
           />
         </ErrorBoundary>
@@ -92,6 +94,7 @@ export default function Home() {
             subtitle={HOMEPAGE_CONTENT.about.subtitle}
             imageSrc={HOMEPAGE_CONTENT.about.imageSrc}
             imageAlt={HOMEPAGE_CONTENT.about.imageAlt}
+            subhead={HOMEPAGE_CONTENT.about.subhead}
             paragraphs={HOMEPAGE_CONTENT.about.paragraphs}
             credentials={HOMEPAGE_CONTENT.about.credentials}
           />

@@ -49,20 +49,16 @@ export interface HeroSectionProps {
 export interface DiagnosisSectionProps {
   title: string;
   subtitle: string;
-  pillars: readonly {
-    readonly title: string;
-    readonly items: readonly string[];
-  }[];
+  items: readonly string[];
+  afterText: string;
   outcome: string;
 }
 
 export interface SolutionSectionProps {
   title: string;
   subtitle: string;
-  pillars: readonly {
-    readonly title: string;
-    readonly items: readonly string[];
-  }[];
+  items: readonly string[];
+  afterText: string;
   outcome: string;
 }
 
@@ -77,6 +73,7 @@ export interface AboutSectionProps {
   subtitle: string;
   imageSrc: string;
   imageAlt: string;
+  subhead: string;
   paragraphs: readonly string[];
   credentials: readonly string[];
 }

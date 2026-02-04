@@ -21,9 +21,9 @@ export function ResultsSection() {
                         The Results
                     </div>
                     <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-[var(--bleu-nuit)] mb-8">
-                        THESE GUYS DIDN’T<br />FIND MORE TIME.
+                        THESE GUYS DIDN'T<br />FIND MORE TIME.
                     </h2>
-                    <p className="text-xl md:text-3xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
+                    <p className="text-3xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
                         {results.subheadline}
                     </p>
                 </div>
