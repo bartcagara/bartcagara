@@ -6,8 +6,8 @@
 
 export const HOMEPAGE_CONTENT = {
   hero: {
-    headline: "You've built the career.",
-    highlightedText: "Your body pays the price.",
+    headline: "Executive schedule.",
+    highlightedText: "Athletic body.",
     subheadline: "For the former athlete who traded his health for success.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",

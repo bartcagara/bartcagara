@@ -14,16 +14,16 @@ export function ResultsSection() {
     const { results } = HOMEPAGE_CONTENT;
 
     return (
-        <div id="results" className="py-16 md:py-24 lg:py-32 bg-white">
+        <div id="results" className="py-24 md:py-32 bg-white">
             <div className="max-w-7xl mx-auto px-6">
-                <div className="mb-12 md:mb-16">
-                    <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-6 md:mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
+                <div className="mb-20">
+                    <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
                         The Results
                     </div>
-                    <h2 className="text-[2rem] sm:text-4xl md:text-5xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-[var(--bleu-nuit)] mb-4 md:mb-6">
+                    <h2 className="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.85] text-[var(--bleu-nuit)] mb-6">
                         THESE GUYS DIDN'T<br />FIND MORE TIME.
                     </h2>
-                    <p className="text-base md:text-lg lg:text-xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
+                    <p className="text-xl md:text-2xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
                         {results.subheadline}
                     </p>
                 </div>
