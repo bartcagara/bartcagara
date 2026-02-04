@@ -15,11 +15,11 @@ export function FinalCTASection({
   return (
     <section className="py-24 md:py-48 bg-bleu-nuit overflow-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 id="final-cta-title" className="text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white max-w-5xl">
+        <h2 id="final-cta-title" className="text-7xl md:text-[8rem] font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white max-w-5xl">
           {headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
-        <p className="text-lg md:text-xl font-medium text-white/80 mb-16 max-w-3xl leading-relaxed">
+        <p className="text-2xl md:text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
           {subheadline}
         </p>
         <CTAButton href={ctaLink} variant="light">
