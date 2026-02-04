@@ -9,7 +9,7 @@ export function HeroSection({ content }: HeroSectionProps) {
   return (
     <section className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden" role="banner">
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
-        <h1 className="text-7xl md:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-white max-w-5xl">
+        <h1 className="text-5xl md:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-white max-w-5xl">
           {content.headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{content.highlightedText}</span>
         </h1>

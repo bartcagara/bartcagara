@@ -21,7 +21,7 @@ export function AboutSection({
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-20">
           <SectionBadge>The Coach</SectionBadge>
-          <h2 id="about-title" className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
+          <h2 id="about-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
             {title}<br />{subtitle}
           </h2>
           <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">

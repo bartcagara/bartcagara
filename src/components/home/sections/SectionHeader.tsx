@@ -19,7 +19,7 @@ export function SectionHeader({ title, subtitle, variant = 'dark' }: SectionHead
 
   return (
     <>
-      <h2 className={`text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] ${titleClass} mb-8`}>
+      <h2 className={`text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] ${titleClass} mb-8`}>
         {title.split('\n').map((line, i) => (
           <span key={i}>
             {line}
