@@ -112,9 +112,9 @@ export const HOMEPAGE_CONTENT = {
   },
 
   finalCta: {
-    headline: "What Happens",
-    highlightedText: "In 6 Months?",
-    subheadline: "You're okay being in the same spot? Cool. But if that thought sits wrong, let's have a conversation. You'll walk away with clarity - whether we work together or not.",
+    headline: "Fast-forward",
+    highlightedText: "6 months",
+    subheadline: "Are you okay being in the same spot? Cool. But if that thought sits wrong, let's have a conversation. You'll walk away with clarity - whether we work together or not.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
