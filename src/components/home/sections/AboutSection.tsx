@@ -48,7 +48,7 @@ export function AboutSection({
           <div>
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
-                const isBold = paragraph.startsWith("That's why") || paragraph.startsWith("A system that integrates");
+                const isBold = paragraph.startsWith("So I built something different.");
                 return (
                   <p key={index} className={isBold ? "text-bleu-nuit font-bold" : ""}>
                     {paragraph}

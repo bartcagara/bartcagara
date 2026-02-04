@@ -6,9 +6,9 @@
 
 export const HOMEPAGE_CONTENT = {
   hero: {
-    headline: "You Built The Career.",
-    highlightedText: "Your Body Paid The Price.",
-    subheadline: "For the former-athlete executive who traded his health for success.",
+    headline: "You've built the career.",
+    highlightedText: "Your body pays the price.",
+    subheadline: "For the former athlete who traded his health for success.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
@@ -33,17 +33,17 @@ export const HOMEPAGE_CONTENT = {
     title: "BODY. MIND. SCHEDULE.\nINTEGRATED.",
     subtitle: "One coach who sees the full picture.",
     items: [
-      "Your nutrition adapts to travel and dining out.",
-      "Your training adjusts to your changing schedule.",
-      "Your stress response improves because you finally recover.",
+      "Your training adapts to your schedule.",
+      "Your nutrition works with travel and dining out.",
+      "Your stress goes down with proper recovery.",
     ],
-    afterText: "You get to work with someone where you can dump the weight, understand the patterns, regroup, and keep moving.",
+    afterText: "You finally work with someone where you can dump the weight, understand the patterns, regroup, and keep moving.",
     outcome: "The outcome? You get fit, feel sharp, and adapt to chaos intuitively - without rigid protocols holding you hostage.",
   },
 
   results: {
     headline: "THESE GUYS DIDN'T\nFIND MORE TIME.",
-    subheadline: "They fixed a broken system.",
+    subheadline: "They fixed a broken approach.",
     sections: {
       transformations: "Client Photos",
       interviews: "Client Interviews",
@@ -102,14 +102,11 @@ export const HOMEPAGE_CONTENT = {
     imageAlt: "Bart Cagara and son flexing",
     subhead: "Fair question.",
     paragraphs: [
-      "I was an athletic kid. Played sports my whole life. Wasn't good enough to go pro, but the obsession with performance never left.",
+      "I played sports as a kid. Wasn't good enough to go pro, but the obsession with performance never left.",
       "So I spent years mastering nutrition and strength training - first for myself, then for clients.",
-      "Over time, a pattern emerged. I started connecting with former athletes. Guys who'd built impressive careers but let their bodies fall apart. Guys who'd tried everything and couldn't make it stick.",
-      "I started noticing what was actually breaking them. It wasn't discipline. It was noise. Rigid approaches designed for people with perfect schedules and low stress.",
-      "So I built something different.",
-      "A system that integrates nutrition, training, and mental support in the context of an executive lifestyle - high-stakes dinners, heavy travel, and zero room for \"perfect world\" routines.",
-      "It's led to amazing relationships with guys who've always been strong - just carrying too much to do it alone.",
-      "That's why it works.",
+      "Over time, a pattern emerged. The clients I hit it off with most were former athletes. Guys who'd built impressive careers but let their bodies fall apart. Guys who'd tried everything and couldn't make it stick.",
+      "What was breaking them wasn't discipline. It was noise. Rigid approaches designed for people with perfect schedules and low stress.",
+      "So I built something different. A system that integrates nutrition, training, and mental support in the context of an executive lifestyle - high-stakes dinners, heavy travel, and zero room for \"perfect world\" routines.",
     ],
     credentials: ["Sports Nutritionist", "Performance Coach"],
   },
