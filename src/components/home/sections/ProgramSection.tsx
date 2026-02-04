@@ -11,7 +11,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge variant="light">The Program</SectionBadge>
-          <h2 id="program-title" className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
+          <h2 id="program-title" className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-6 md:mb-8">
             {title.split('\n').map((line, i) => (
               <span key={i}>
                 {line}
@@ -19,7 +19,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
               </span>
             ))}
           </h2>
-          <p className="text-xl md:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-3xl font-medium text-white/70 max-w-3xl leading-relaxed">
             {subtitle}
           </p>
         </div>
@@ -31,11 +31,11 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
 
           {phases.map((phase, index) => (
             <div key={phase.number} className={`relative pl-20 md:pl-32 ${index < phases.length - 1 ? 'mb-20' : ''}`}>
-              <span className="absolute left-0 top-[-10px] text-5xl md:text-7xl font-black text-bleu-accent bg-bleu-nuit leading-none z-10 pr-2" aria-label={`Phase ${phase.number}`}>
+              <span className="absolute left-0 top-[-10px] text-4xl md:text-5xl lg:text-7xl font-black text-bleu-accent bg-bleu-nuit leading-none z-10 pr-2" aria-label={`Phase ${phase.number}`}>
                 {phase.number}
               </span>
               <div className={index < phases.length - 1 ? "border-b-2 border-white/10 pb-12" : ""}>
-                <h3 className="text-4xl font-black uppercase mb-4 text-white leading-none">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black uppercase mb-4 text-white leading-none">
                   {phase.title}
                   <span className="text-bleu-accent text-2xl block mt-2 font-bold tracking-tighter">
                     ({phase.weeks})

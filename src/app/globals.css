@@ -224,11 +224,17 @@
     padding: 0;
   }
 
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    position: relative;
+    width: 100%;
   }
 }
