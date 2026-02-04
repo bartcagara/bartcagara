@@ -112,10 +112,10 @@ export const HOMEPAGE_CONTENT = {
   },
 
   finalCta: {
-    headline: "Get Back In",
-    highlightedText: "The Game.",
-    subheadline: "The best athletes get smarter with age. Let's build a system for the man you are today.",
-    ctaText: "Book Discovery Call",
+    headline: "What Happens",
+    highlightedText: "In 6 Months?",
+    subheadline: "You're okay being in the same spot? Cool. But if that thought sits wrong, let's have a conversation. You'll walk away with clarity - whether we work together or not.",
+    ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
 } as const;
