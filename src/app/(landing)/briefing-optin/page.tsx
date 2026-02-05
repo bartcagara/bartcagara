@@ -75,7 +75,7 @@ export default function BriefingOptinPage() {
                         </h1>
                         {/* SUBHEAD - Lighter weight, cleaner size */}
                         <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                            For the former athlete who traded his health for a career.
+                            For the former athlete who traded his health for success.
                         </p>
                     </div>
                 </div>

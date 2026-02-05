@@ -76,7 +76,7 @@ export const HOMEPAGE_CONTENT = {
         items: [
           "**Targeted Training** - Build a body that's lean, strong, and capable",
           "**Travel Protocols** - Unfamiliar restaurants and hotel gyms, handled",
-          "**Bloodwork Intel** - Optimize from data, not guesswork",
+          "**Bloodwork Intel** - Lipids, hormones - optimized",
         ],
         win: "CLOTHES FIT DIFFERENT. PEOPLE START NOTICING.",
       },
@@ -86,9 +86,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 13-24",
         focus: "FULL AUTONOMY",
         items: [
-          "**Intuitive Eating** - No tracking, no pointless restrictions",
+          "**Intuitive Eating** - No more overthinking food",
           "**Longevity Focus** - Optimize for the decades ahead",
-          "**Life Integration** - Weddings, vacations, chaos - nothing derails you",
+          "**Life Integration** - Weekends, vacations, chaos - nothing derails you",
         ],
         win: "YOU FIRE ME. YOU OWN THE SYSTEM.",
       },
