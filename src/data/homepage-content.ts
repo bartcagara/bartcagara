@@ -75,7 +75,7 @@ export const HOMEPAGE_CONTENT = {
         focus: "PHYSIQUE & SYSTEMS",
         items: [
           "**Targeted Training** - Build a body that's lean, strong, and capable",
-          "**Travel Protocols** - Unfamiliar restaurants and hotel gyms, handled",
+          "**Travel Protocols** - Unfamiliar restaurants and hotel gyms - handled",
           "**Bloodwork Intel** - Lipids, hormones - optimized",
         ],
         win: "CLOTHES FIT DIFFERENT. PEOPLE START NOTICING.",
