@@ -136,7 +136,7 @@ export default function BriefingOptinPage() {
                             These guys didn't <br className="md:hidden" /> find more time.
                         </h3>
                         <p className="text-xl md:text-3xl font-bold text-bleu-accent uppercase tracking-tighter">
-                            They fixed a broken system.
+                            They ditched the scattered approach.
                         </p>
                     </div>
                     {/* Masonry Grid */}

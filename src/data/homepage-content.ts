@@ -43,7 +43,7 @@ export const HOMEPAGE_CONTENT = {
 
   results: {
     headline: "THESE GUYS DIDN'T\nFIND MORE TIME.",
-    subheadline: "They fixed a broken approach.",
+    subheadline: "They ditched the scattered approach.",
     sections: {
       transformations: "Client Photos",
       interviews: "Client Interviews",
