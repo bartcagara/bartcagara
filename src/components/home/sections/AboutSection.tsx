@@ -19,7 +19,7 @@ export function AboutSection({
   return (
     <section id="about" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-20">
+        <div className="mb-24">
           <SectionBadge>The Coach</SectionBadge>
           <h2 id="about-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
             {title}<br />{subtitle}
