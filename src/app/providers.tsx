@@ -10,6 +10,18 @@ if (typeof window !== 'undefined') {
     person_profiles: 'identified_only',
     capture_pageview: false,
     persistence: 'localStorage',
+    loaded: (ph) => {
+      const ua = navigator.userAgent;
+      if (
+        navigator.webdriver ||
+        !ua ||
+        /bot|crawl|spider|slurp|facebookexternalhit|baiduspider|yandex|duckduckbot|sogou|exabot|ia_archiver|semrush|ahref|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|applebot|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|slack|pingdom|uptimerobot|headlesschrome|phantomjs|prerender|lighthouse|chrome-lighthouse|screaming frog/i.test(
+          ua
+        )
+      ) {
+        ph.opt_out_capturing();
+      }
+    },
   });
 
   // Manual toolbar loader for static sites - handles URL hash parameters
