@@ -1,46 +1,17 @@
 @import "tailwindcss";
 
-
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
+  /* Core shadcn/UI colors (used by ErrorReporter) */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
   --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  /* Font families */
+  --font-sans: var(--font-inter), sans-serif;
 
   /* Semantic Colors */
   --color-background-primary: var(--background-primary);
@@ -55,42 +26,17 @@
   --color-bleu-accent: var(--bleu-accent);
   --color-bleu-fumee: var(--bleu-fumee);
   --color-grey-light: var(--grey-light);
-  --color-gray-50: var(--gray-50);
 }
 
 :root {
-  --radius: 0.625rem;
+  /* Core UI tokens (used by ErrorReporter global-error page) */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 
   /* Global Design Tokens - Neo-Brutalist Style */
   --bleu-nuit: #09071D;
@@ -100,7 +46,6 @@
   --bleu-fumee: #E8EFF5;
   --white: #FFFFFF;
   --grey-light: #64748b;
-  --gray-50: #F3F4F6;
 
   /* Semantic Design System */
   --background-primary: var(--white);
@@ -108,19 +53,12 @@
   --text-secondary: var(--grey-light);
   --accent-primary: var(--bleu-nuit);
 
-  --border-thick: 2px solid var(--bleu-nuit);
-  --shadow-rest: 4px 4px 0px var(--bleu-nuit);
-  --shadow-hover: 8px 8px 0px var(--bleu-nuit);
+  /* Shared tokens */
   --font-main: var(--font-inter), sans-serif;
-  --max-width: 1200px;
   --transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-
   /* Custom scrollbar hiding utility */
   .scrollbar-hide {
     scrollbar-width: none;
@@ -129,12 +67,6 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
-  }
-
-  /* Full width block display utility */
-  .block-full {
-    display: block;
-    width: 100%;
   }
 
   /* Neo-Brutalist Shadow Utilities */
@@ -150,10 +82,6 @@
     box-shadow: 12px 12px 0px 0px var(--bleu-nuit);
   }
 
-  .shadow-brutal-nuit-sm {
-    box-shadow: 4px 4px 0px 0px var(--bleu-nuit);
-  }
-
   .shadow-brutal-white-sm {
     box-shadow: 4px 4px 0px 0px white;
   }
@@ -163,25 +91,6 @@
     box-shadow: none;
   }
 
-  /* Section Badge Utility */
-  .section-badge {
-    display: inline-block;
-    background-color: var(--bleu-accent);
-    color: white;
-    font-family: var(--font-mono, ui-monospace, monospace);
-    font-size: 0.75rem;
-    line-height: 1rem;
-    text-transform: uppercase;
-    letter-spacing: -0.05em;
-    padding: 0.25rem 0.75rem;
-    margin-bottom: 2rem;
-    box-shadow: 4px 4px 0px 0px var(--bleu-nuit);
-  }
-
-  .section-badge-light {
-    box-shadow: 4px 4px 0px 0px white;
-  }
-
   /* Transition Utilities */
   .transition-brutal {
     transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -189,30 +98,6 @@
 
   .hover-translate-brutal:hover {
     transform: translate(3px, 3px);
-  }
-
-  /* Screen Reader Only - Accessibility */
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
-  }
-
-  .focus\:not-sr-only:focus {
-    position: fixed;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
   }
 }
 

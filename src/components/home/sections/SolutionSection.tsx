@@ -13,9 +13,7 @@ export function SolutionSection({ title, subtitle, items, afterText, outcome }: 
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge variant="light">The Solution</SectionBadge>
-          <div id="solution-title">
-            <SectionHeader title={title} subtitle={subtitle} variant="light" />
-          </div>
+          <SectionHeader id="solution-title" title={title} subtitle={subtitle} variant="light" />
         </div>
 
         <div className="max-w-4xl">

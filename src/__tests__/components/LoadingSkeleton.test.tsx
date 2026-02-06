@@ -54,11 +54,11 @@ describe('SectionSkeleton', () => {
     expect(skeleton).toHaveAttribute('aria-label', 'Loading section...');
   });
 
-  it('renders with custom minHeight', () => {
-    render(<SectionSkeleton minHeight="400px" />);
+  it('renders with custom minHeight class', () => {
+    render(<SectionSkeleton minHeight="min-h-[400px]" />);
 
     const skeleton = screen.getByRole('status');
-    expect(skeleton).toHaveStyle({ minHeight: '400px' });
+    expect(skeleton).toHaveClass('min-h-[400px]');
   });
 
   it('renders with custom bgColor', () => {

@@ -6,31 +6,31 @@ import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 // Lazy load heavy below-the-fold sections to improve initial page load
 const TrustedBy = dynamic(() => import("@/components/home/TrustedBy").then(mod => ({ default: mod.TrustedBy })), {
-  loading: () => <SectionSkeleton minHeight="100px" bgColor="bg-bleu-nuit" />
+  loading: () => <SectionSkeleton minHeight="min-h-[100px]" bgColor="bg-bleu-nuit" />
 });
 
 const DiagnosisSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.DiagnosisSection })), {
-  loading: () => <SectionSkeleton minHeight="600px" bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-white" />
 });
 
 const SolutionSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.SolutionSection })), {
-  loading: () => <SectionSkeleton minHeight="600px" bgColor="bg-gray-50" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
-  loading: () => <SectionSkeleton minHeight="600px" bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-white" />
 });
 
 const ProgramSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProgramSection })), {
-  loading: () => <SectionSkeleton minHeight="600px" bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-white" />
 });
 
 const AboutSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.AboutSection })), {
-  loading: () => <SectionSkeleton minHeight="600px" bgColor="bg-gray-50" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const FinalCTASection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FinalCTASection })), {
-  loading: () => <SectionSkeleton minHeight="400px" bgColor="bg-white" />
+  loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-white" />
 });
 
 /**
@@ -40,7 +40,7 @@ const FinalCTASection = dynamic(() => import("@/components/home/sections").then(
  */
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
+    <div className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
         {/* 1. HERO SECTION */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
@@ -72,11 +72,9 @@ export default function Home() {
         </ErrorBoundary>
 
         {/* 4. THE RESULTS */}
-        <section className="border-b-2 border-bleu-nuit">
-          <ErrorBoundary>
-            <ResultsSection />
-          </ErrorBoundary>
-        </section>
+        <ErrorBoundary>
+          <ResultsSection />
+        </ErrorBoundary>
 
         {/* 5. THE PROGRAM */}
         <ErrorBoundary>
@@ -110,6 +108,6 @@ export default function Home() {
             ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
           />
         </ErrorBoundary>
-    </main>
+    </div>
   );
 }

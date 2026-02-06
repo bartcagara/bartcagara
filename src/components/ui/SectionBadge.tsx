@@ -11,8 +11,8 @@ export function SectionBadge({ children, variant = 'dark' }: SectionBadgeProps) 
     : 'shadow-[4px_4px_0px_0px_var(--bleu-nuit)]';
 
   return (
-    <div className={`${baseClasses} ${shadowClass}`}>
+    <span className={`${baseClasses} ${shadowClass}`}>
       {children}
-    </div>
+    </span>
   );
 }

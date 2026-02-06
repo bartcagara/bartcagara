@@ -7,7 +7,7 @@ import type { HeroSectionProps } from "@/components/home/types";
  */
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden" role="banner">
+    <section className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden" aria-label="Hero">
       <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
         <h1 className="text-[15.5vw] md:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-white max-w-5xl">
           {content.headline}<br />

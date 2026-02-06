@@ -45,7 +45,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                 {/* FOCUS */}
                 <div className="mb-6">
                   <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
-                    // FOCUS: {phase.focus}
+                    <span aria-hidden="true">// </span>FOCUS: {phase.focus}
                   </span>
                 </div>
 

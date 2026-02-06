@@ -1,0 +1,88 @@
+/* =================================================================
+   ConvertKit (Kit) Form State Overrides
+   Scoped to the specific form UID to avoid style collisions
+   ================================================================= */
+
+/* Success message styling */
+.formkit-form[data-uid="8a3adb8456"] .formkit-alert-success {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: transparent;
+  border: none;
+}
+
+.formkit-form[data-uid="8a3adb8456"] .formkit-alert-success::before {
+  content: "\2713";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: 1.5rem;
+  background: var(--bleu-accent);
+  border-radius: 50%;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Error message styling */
+.formkit-form[data-uid="8a3adb8456"] .formkit-alert-error:not(:empty) {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: rgb(254 242 242);
+  border: 2px solid rgb(239 68 68);
+  color: rgb(185 28 28);
+  font-size: 0.875rem;
+  font-weight: 700;
+  list-style: none;
+}
+
+/* Hide form fields on success */
+.formkit-form[data-uid="8a3adb8456"][data-state="success"] .formkit-fields {
+  display: none !important;
+}
+
+/* Loading state */
+.formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] .formkit-spinner {
+  display: flex !important;
+  gap: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+.formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  animation: formkit-bounce 1.4s infinite ease-in-out both;
+}
+
+.formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+@keyframes formkit-bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+/* Hide powered by */
+.formkit-form[data-uid="8a3adb8456"] .formkit-powered-by-convertkit-container {
+  display: none !important;
+}

@@ -13,9 +13,7 @@ export function DiagnosisSection({ title, subtitle, items, afterText, outcome }:
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge>The Diagnosis</SectionBadge>
-          <div id="diagnosis-title">
-            <SectionHeader title={title} subtitle={subtitle} variant="dark" />
-          </div>
+          <SectionHeader id="diagnosis-title" title={title} subtitle={subtitle} variant="dark" />
         </div>
 
         <div className="max-w-4xl">

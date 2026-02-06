@@ -57,16 +57,16 @@ export const metadata: Metadata = {
 
 export default function BriefingOptinPage() {
     return (
-        <main className="min-h-screen bg-white flex flex-col">
+        <div className="min-h-screen bg-white flex flex-col">
             <div className="flex flex-col md:flex-row min-h-screen">
                 {/* Left Column: Heading Only */}
                 <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
                     <div className="absolute inset-0 opacity-10 bg-[url('/noise.png')]"></div>
                     <div className="relative z-10 max-w-xl">
                         {/* BADGE */}
-                        <div className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
+                        <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
                             The Newsletter
-                        </div>
+                        </span>
                         {/* HEADLINE - Optical alignment tweaks */}
                         <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-8">
                             Executive <br />
@@ -158,6 +158,6 @@ export default function BriefingOptinPage() {
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
     );
 }
