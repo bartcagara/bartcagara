@@ -36,7 +36,7 @@ export function LoadingSkeleton({
  * SectionSkeleton - Full section loading placeholder with content hints
  */
 export function SectionSkeleton({
-  minHeight = "600px",
+  minHeight = "min-h-[600px]",
   bgColor = "bg-white"
 }: {
   minHeight?: string;
@@ -44,8 +44,7 @@ export function SectionSkeleton({
 }) {
   return (
     <div
-      className={`${bgColor} py-16 px-4`}
-      style={{ minHeight }}
+      className={`${bgColor} ${minHeight} py-16 px-4`}
       role="status"
       aria-label="Loading section..."
     >

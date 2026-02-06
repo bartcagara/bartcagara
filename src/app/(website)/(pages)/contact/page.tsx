@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <input type="hidden" name="_blacklist" value="crypto,bitcoin,forex,casino,viagra,cialis,lottery,prize,winner,congratulations,click here,buy now,limited offer,act now,SEO services,backlinks,web traffic,make money,work from home" />
 
                 {/* FormSubmit's native honeypot */}
-                <input type="text" name="_honey" style={{ display: "none" }} />
+                <input type="text" name="_honey" className="hidden" />
 
                 {/* Custom honeypot */}
                 <div className="absolute -left-[5000px]" aria-hidden="true">

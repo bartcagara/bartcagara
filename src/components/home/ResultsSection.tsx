@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ScrollSection } from "./ScrollSection";
 import { TRANSFORMATIONS, CLIENT_INTERVIEWS, CLIENT_DMS } from "./assets";
 import { YouTubeLite } from "./YouTubeLite";
@@ -14,16 +15,19 @@ export function ResultsSection() {
     const { results } = HOMEPAGE_CONTENT;
 
     return (
-        <div id="results" className="py-24 md:py-32 bg-white">
+        <section id="results" className="py-24 md:py-32 bg-white border-b-2 border-bleu-nuit" aria-labelledby="results-title">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-24">
-                    <div className="inline-block bg-[var(--bleu-accent)] text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
-                        The Results
-                    </div>
-                    <h2 className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-[var(--bleu-nuit)] mb-8">
-                        THESE GUYS DIDN'T<br />FIND MORE TIME.
+                    <SectionBadge>The Results</SectionBadge>
+                    <h2 id="results-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
+                        {results.headline.split('\n').map((line, i) => (
+                            <span key={i}>
+                                {line}
+                                {i < results.headline.split('\n').length - 1 && <br />}
+                            </span>
+                        ))}
                     </h2>
-                    <p className="text-2xl md:text-3xl font-medium text-[var(--bleu-nuit)]/70 max-w-3xl leading-relaxed">
+                    <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 max-w-3xl leading-relaxed">
                         {results.subheadline}
                     </p>
                 </div>
@@ -34,7 +38,6 @@ export function ResultsSection() {
                             <Image
                                 src={item.src}
                                 alt={item.alt}
-
                                 width={400}
                                 height={400}
                                 loading="lazy"
@@ -72,14 +75,13 @@ export function ResultsSection() {
 
                 <ScrollSection title={results.sections.testimonials}>
                     <div
-                        className="senja-embed block-full"
+                        className="senja-embed block w-full"
                         data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
                         data-mode="shadow"
                         data-lazyload="true"
                     />
                 </ScrollSection>
             </div>
-        </div>
+        </section>
     );
 }
-

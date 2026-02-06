@@ -48,7 +48,7 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
     <div className="mb-20">
       <div className="flex justify-between items-center gap-4 mb-8">
         <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight flex-shrink min-w-0">
-          <span className="text-bleu-accent mr-2">/</span>
+          <span className="text-bleu-accent mr-2" aria-hidden="true">/</span>
           {title}
         </h3>
         <div className="flex gap-2 flex-shrink-0">

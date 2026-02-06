@@ -1,48 +1,14 @@
-/* Neo-Brutalist Landing Page Styles */
-/* CSS variables are defined in globals.css */
-/*
- * CLEANED VERSION - Only contains actively used classes.
- * Removed 60+ unused legacy classes from previous implementation.
- * Current codebase uses Tailwind CSS for most components.
- */
-
 /* =================================================================
-   LAYOUT UTILITIES
+   Homepage Module Styles
+   CSS variables are defined in globals.css
+   Only classes that can't be expressed in Tailwind belong here.
    ================================================================= */
-
-.sectionPadding {
-    padding: 6rem 0;
-}
-
-/* =================================================================
-   BUTTONS
-   ================================================================= */
-
-.btnCta {
-    display: inline-block;
-    background-color: var(--bleu-nuit);
-    color: var(--white);
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 2px solid var(--bleu-nuit);
-    border-radius: 0px;
-    transition: var(--transition);
-    cursor: pointer;
-    text-align: center;
-}
-
-.btnCta:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px var(--bleu-accent);
-}
 
 /* =================================================================
    MEDIA ELEMENTS
    ================================================================= */
 
 .transformationImage {
-    /* Desktop: fixed height, auto width */
     height: 400px;
     width: auto;
     max-width: 100%;
@@ -51,10 +17,8 @@
     box-shadow: 4px 4px 0px var(--bleu-nuit);
 }
 
-/* Mobile override - uses container query approach */
 @media (max-width: 600px) {
     .transformationImage {
-        /* Mobile: constrained to viewport with auto sizing */
         max-width: calc(100vw - 3rem);
         width: auto;
         height: auto;
@@ -101,20 +65,4 @@
     flex: 0 0 auto;
     display: flex;
     align-items: center;
-}
-
-/* =================================================================
-   RESPONSIVE BREAKPOINTS
-   ================================================================= */
-
-@media (max-width: 600px) {
-    .sectionPadding {
-        padding: 5rem 0;
-    }
-
-    .btnCta.pageSize {
-        padding: 1rem 1rem;
-        font-size: 0.95rem;
-        width: 100%;
-    }
 }
