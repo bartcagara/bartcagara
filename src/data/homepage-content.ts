@@ -18,31 +18,31 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "YOUR SCHEDULE EATS\nYOUR FITNESS.",
+    title: "YOUR SCHEDULE EATS\nYOUR FITNESS",
     subtitle: "Some weeks you're on fire. Most weeks, everything falls apart.",
     items: [
-      "Your diet works only when you eat at home",
-      "Your training plan collapses the second you travel",
-      "Your trainer has never built a company or raised kids",
+      "Your diet works only when you eat at home.",
+      "Your training plan collapses the second you travel.",
+      "Your trainer has never built a company or raised kids.",
     ],
     afterText: "",
     outcome: "The outcome? You're 30 lbs overweight, exhausted, too stuck in your head to watch your kids grow up.",
   },
 
   solution: {
-    title: "YOUR LIFESTYLE AND\nFITNESS—INTEGRATED.",
+    title: "YOUR LIFESTYLE AND\nFITNESS—INTEGRATED",
     subtitle: "You operate without thinking. Your body keeps up. Chaos doesn't derail you.",
     items: [
-      "Your nutrition handles investor dinners and family weekends",
-      "Your training is short, effective, and adapts to your schedule",
-      "Your coach spots broken patterns and adjusts for continued progress",
+      "Your nutrition handles investor dinners and family weekends.",
+      "Your training is short, effective, and adapts to your schedule.",
+      "Your coach spots broken patterns and adjusts for continued progress.",
     ],
     afterText: "",
     outcome: "The outcome? You're lean, strong, and present. Your body carries your vision.",
   },
 
   results: {
-    headline: "THESE FOUNDERS DIDN'T\nMAGICALLY GET MORE TIME.",
+    headline: "THESE GUYS DIDN'T\nWAIT TILL THINGS GOT QUIET",
     subheadline: "They invested in a system built for their pace.",
     sections: {
       transformations: "Client Photos",
@@ -62,9 +62,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 1-4",
         focus: "IMMEDIATE CONTROL",
         items: [
-          "**Stop the bleeding** - Fix the chaos eating, late-night binges, reliance on caffeine",
-          "**Build a baseline** - Training that actually fits between investor calls and product launches",
-          "**Reclaim energy** - Kill the 3pm crash so you can think clearly when it matters",
+          "**Stop the bleeding** - Fix the chaos eating, late-night binges, reliance on caffeine.",
+          "**Build a baseline** - Training that actually fits between investor calls and product launches.",
+          "**Reclaim energy** - Kill the 3pm crash so you can think clearly when it matters.",
         ],
         win: "YOU DROP 10-15 LBS. ENERGY RETURNS. YOU'RE NOT RUNNING ON FUMES ANYMORE.",
       },
@@ -74,9 +74,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Get strong and lean** - Build a body that looks like you still give a shit",
-          "**Navigate the chaos** - Eating strategies for client dinners, red-eyes, trade shows, chaos weeks",
-          "**Optimize the engine** - Bloodwork, hormones, recovery—treat yourself like the asset you are",
+          "**Get strong and lean** - Build a body that looks like you still give a shit.",
+          "**Navigate the chaos** - Eating strategies for client dinners, red-eyes, trade shows, chaos weeks.",
+          "**Optimize the engine** - Bloodwork, hormones, recovery—treat yourself like the asset you are.",
         ],
         win: "CLOTHES FIT DIFFERENT. CLIENTS NOTICE. YOU FEEL DANGEROUS AGAIN.",
       },
@@ -86,9 +86,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 13-24",
         focus: "FULL AUTONOMY",
         items: [
-          "**Intuitive everything** - No more tracking, no more overthinking food",
-          "**Play the long game** - Optimize for 20 years of building, not 90-day sprints",
-          "**Own the system** - Chaos weeks, vacations, pivots—nothing derails you",
+          "**Intuitive everything** - No more tracking, no more overthinking food.",
+          "**Play the long game** - Optimize for 20 years of building, not 90-day sprints.",
+          "**Own the system** - Chaos weeks, vacations, pivots—nothing derails you.",
         ],
         win: "YOU FIRE ME. YOU OWN THIS. FOREVER.",
       },
@@ -117,7 +117,7 @@ export const HOMEPAGE_CONTENT = {
 
   finalCta: {
     headline: "Fast-forward",
-    highlightedText: "6 months.",
+    highlightedText: "6 months",
     subheadline: "Your business will be further along. Will your body? Or will you still be running on caffeine, takeout, and borrowed time—building something great in a body that's falling apart? If that sits wrong, let's talk. You'll walk away with clarity—whether we work together or not.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
