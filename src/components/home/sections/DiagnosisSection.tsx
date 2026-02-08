@@ -28,9 +28,11 @@ export function DiagnosisSection({ title, subtitle, items, afterText, outcome }:
             ))}
           </ul>
 
-          <p className="text-2xl font-bold text-bleu-nuit/80 mt-12 leading-relaxed">
-            {afterText}
-          </p>
+          {afterText && (
+            <p className="text-2xl font-bold text-bleu-nuit/80 mt-12 leading-relaxed">
+              {afterText}
+            </p>
+          )}
         </div>
 
         <div className="mt-24 pt-12 border-t-2 border-bleu-nuit/20">

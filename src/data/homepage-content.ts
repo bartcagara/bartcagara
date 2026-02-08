@@ -18,27 +18,27 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "YOU CAN'T OUTSOURCE\nTHIS TO AN APP.",
-    subtitle: "You've tried the quick fixes. None of them stick.",
+    title: "YOUR SCHEDULE EATS\nYOUR FITNESS.",
+    subtitle: "Some weeks you're on fire. Most weeks, everything falls apart.",
     items: [
-      "Diets that don't account for last-minute client dinners",
-      "Workout programs designed for people with predictable schedules",
-      "Fitness coaches who've never built a business and don't understand the chaos",
+      "Your diet works only when you eat at home",
+      "Your training plan collapses the second you travel",
+      "Your trainer has never built a company or raised kids",
     ],
-    afterText: "So you wing it. And every time your business demands more, your health collapses.",
-    outcome: "The outcome? More tired. More fat. More isolated. Running a company you love in a body you hate.",
+    afterText: "",
+    outcome: "The outcome? You're 30 lbs overweight, exhausted, too stuck in your head to watch your kids grow up.",
   },
 
   solution: {
-    title: "A COACH WHO'S ACTUALLY\nBUILT SOMETHING.",
-    subtitle: "You need someone who gets it.",
+    title: "YOUR LIFESTYLE AND\nFITNESS—INTEGRATED.",
+    subtitle: "You operate without thinking. Your body keeps up. Chaos doesn't derail you.",
     items: [
-      "Your training adapts when a deal falls through and you're stress-eating at midnight",
-      "Your nutrition works with investor dinners, travel chaos, and family weekends",
-      "Your recovery protocols fit around 60-hour work weeks, not Instagram wellness fantasies",
+      "Your nutrition handles investor dinners and family weekends",
+      "Your training is short, effective, and adapts to your schedule",
+      "Your coach spots broken patterns and adjusts for continued progress",
     ],
-    afterText: "I've built a business from scratch. I know what it takes. I know what breaks.",
-    outcome: "The outcome? You get lean, sharp, and resilient—without rigid protocols that assume you have a normal life.",
+    afterText: "",
+    outcome: "The outcome? You're lean, strong, and present. Your body carries your vision.",
   },
 
   results: {

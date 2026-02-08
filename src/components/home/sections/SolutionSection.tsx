@@ -28,9 +28,11 @@ export function SolutionSection({ title, subtitle, items, afterText, outcome }: 
             ))}
           </ul>
 
-          <p className="text-2xl font-bold text-white/80 mt-12 leading-relaxed">
-            {afterText}
-          </p>
+          {afterText && (
+            <p className="text-2xl font-bold text-white/80 mt-12 leading-relaxed">
+              {afterText}
+            </p>
+          )}
         </div>
 
         <div className="mt-24 pt-12 border-t-2 border-white/20">
