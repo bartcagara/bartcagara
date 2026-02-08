@@ -6,7 +6,7 @@
 
 export const HOMEPAGE_CONTENT = {
   hero: {
-    headline: "Entrepreneur's workload.",
+    headline: "Founder's workload.",
     highlightedText: "Athletic body.",
     subheadline: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process.",
     ctaText: "BOOK DISCOVERY CALL",
