@@ -6,8 +6,8 @@
 
 export const HOMEPAGE_CONTENT = {
   hero: {
-    headline: "Founder's workload.",
-    highlightedText: "Athletic body.",
+    headline: "Founder's pace.",
+    highlightedText: "Athlete's body.",
     subheadline: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
@@ -74,7 +74,7 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Get strong and lean** - Build a body that looks like you still give a shit.",
+          "**Get lean and strong** - Build a body that communicates you've got your shit together.",
           "**Navigate the chaos** - Eating strategies for client dinners, red-eyes, trade shows, chaos weeks.",
           "**Optimize the engine** - Bloodwork, hormones, recovery—treat yourself like the asset you are.",
         ],
