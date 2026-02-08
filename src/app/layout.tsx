@@ -16,14 +16,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Executive Athlete OS™ | Bart Cagara",
-  description: "For the former athlete turned executive. Stop grinding like a rookie. Build a chaos-proof physical operating system without pausing your career.",
+  title: "Founder Athlete OS™ | Bart Cagara",
+  description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. Six months to reclaim your body while building your business.",
   keywords: [
-    "Executive Coaching",
-    "Weight Loss for Executives",
+    "Founder Coaching",
+    "Weight Loss for Founders",
     "High Performance Health",
     "Bart Cagara",
-    "Executive Athlete"
+    "Founder Athlete"
   ],
   authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
@@ -37,22 +37,22 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "/",
-    siteName: "Executive Athlete OS",
-    title: "Executive Athlete OS™",
-    description: "We don't manage the decline. We stop it. Engineered for the former athlete turned executive who is winning at work but losing the physical battle.",
+    siteName: "Founder Athlete OS",
+    title: "Founder Athlete OS™",
+    description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. A coach who's actually built something.",
     images: [
       {
         url: "/opengraph-image.png",
         width: 1200,
         height: 630,
-        alt: "Executive Athlete OS™ - Bart Cagara"
+        alt: "Founder Athlete OS™ - Bart Cagara"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Executive Athlete OS™",
-    description: "We don't manage the decline. We stop it. Engineered for the former athlete turned executive who is winning at work but losing the physical battle.",
+    title: "Founder Athlete OS™",
+    description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. A coach who's actually built something.",
     images: ["/opengraph-image.png"],
     creator: "@bartcagara",
     site: "@bartcagara"

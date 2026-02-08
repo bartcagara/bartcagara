@@ -35,7 +35,7 @@ const FinalCTASection = dynamic(() => import("@/components/home/sections").then(
 
 /**
  * Home Page
- * Main landing page for Executive Athlete OS
+ * Main landing page for Founder Athlete OS
  * Optimized with component modularity, accessibility, and performance best practices
  */
 export default function Home() {
