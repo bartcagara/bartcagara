@@ -108,7 +108,7 @@ export const HOMEPAGE_CONTENT = {
       "Over time, a pattern emerged. The clients I connected with most were founders who used to be athletes. Guys who played D1 ball, then chose to build companies—and let their bodies fall apart in the process.",
       "I got them because I understood what they valued: building over politics, freedom over bureaucracy.",
       "Their problem wasn't discipline. It was rigid protocols designed for people with low stress and predictable schedules.",
-      "So I built something different. A system that works when you forget to eat between investor meetings and end up inhaling snacks—while planning your next move during a family weekend.",
+      "So I built something different. A system that works when you forget to eat between investor meetings and end up inhaling snacks during a family weekend.",
       "I've built my business from scratch. Been coaching founders and executives since 2019. I know the chaos. I know what breaks.",
       "And I know how to fix it so your body can carry your vision.",
     ],
