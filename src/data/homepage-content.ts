@@ -103,11 +103,11 @@ export const HOMEPAGE_CONTENT = {
       },
     ],
     methodology: {
-      headline: "ALL DELIVERED THROUGH THE ART OF CONVERSATION.",
+      headline: "All delivered in high-touch coaching environment.",
       body: [
-        "High-touch environment. Continuous communication.",
-        "I don't believe in chest-beating, cold plunging, or yelling at you every week.",
-        "I believe in two mission-driven men sitting down, dropping their guard, picking apart broken patterns, and doing the inner work that drives true and lasting transformation.",
+        "I don't believe in hype, chest-beating, or yelling at you every week.",
+        "**I believe in the art of conversation.**",
+        "Two mission-driven men sitting down, dropping their guard, picking apart broken patterns, and doing the inner work that drives true and lasting transformation.",
       ],
     },
   },

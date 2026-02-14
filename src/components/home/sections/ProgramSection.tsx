@@ -84,17 +84,26 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
         </div>
 
         {/* METHODOLOGY SEPARATOR */}
-        <div className="mt-24 pt-12 border-t-2 border-white/20">
-          <p className="text-2xl md:text-4xl font-black text-white leading-tight max-w-4xl">
+        <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
+          <p className="text-2xl md:text-4xl font-black text-white leading-tight">
             {methodology.headline}
           </p>
-          <div className="space-y-6 mt-8 max-w-3xl">
-            {methodology.body.map((paragraph, index) => (
-              <p key={index} className="text-xl md:text-2xl font-medium text-white/70 leading-relaxed">
-                {paragraph}
+          {methodology.body.map((paragraph, index) => {
+            const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
+            const text = isBold ? paragraph.slice(2, -2) : paragraph;
+            return (
+              <p
+                key={index}
+                className={
+                  isBold
+                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
+                    : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
+                }
+              >
+                {text}
               </p>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </div>
     </section>
