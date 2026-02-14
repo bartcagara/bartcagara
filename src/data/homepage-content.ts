@@ -110,7 +110,7 @@ export const HOMEPAGE_CONTENT = {
       body: [
         "I don't believe in hype, chest-beating, or yelling at you every week.",
         "**I believe in the art of conversation.**",
-        "Two mission-driven men sitting down, dropping their guard, picking apart broken patterns, and doing the inner work that drives true and lasting transformation.",
+        "Two mission-driven men sitting together, dropping their guard, picking apart broken patterns, and doing the inner work that drives true transformation.",
       ],
     },
   },
