@@ -74,7 +74,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                   <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">
                     THE WIN:
                   </span>
-                  <span className="font-black text-white tracking-tighter text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
                     {phase.win}
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
 
         {/* METHODOLOGY SEPARATOR */}
         <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
-          <p className="text-2xl md:text-4xl font-black text-white leading-tight">
+          <p className="text-xl md:text-2xl font-black text-white leading-tight">
             {methodology.headline}
           </p>
           {methodology.body.map((paragraph, index) => {

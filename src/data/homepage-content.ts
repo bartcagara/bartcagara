@@ -14,7 +14,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   trustedBy: {
-    title: "Trusted by founders from:",
+    title: "Trusted by guys building:",
   },
 
   diagnosis: {
@@ -54,7 +54,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   results: {
-    headline: "THESE FOUNDERS DIDN'T\nWAIT TILL THINGS GOT QUIET",
+    headline: "THESE GUYS DIDN'T\nWAIT TILL THINGS GOT QUIET",
     subheadline: "They invested in a system built for their pace.",
     sections: {
       transformations: "Client Photos",
@@ -78,7 +78,7 @@ export const HOMEPAGE_CONTENT = {
           "**Training baseline** - You master form and gain the strength foundation.",
           "**Pattern recognition** - We study what made you quit before and build momentum.",
         ],
-        win: "You drop 10-15 lbs. Your energy returns. You understand why you've been failing.",
+        win: "You break old patterns. You drop 10-15 lbs. Your energy returns.",
       },
       {
         number: "02",
