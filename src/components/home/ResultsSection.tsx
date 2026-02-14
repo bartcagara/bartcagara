@@ -20,10 +20,10 @@ export function ResultsSection() {
                 <div className="mb-24">
                     <SectionBadge>The Results</SectionBadge>
                     <h2 id="results-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
-                        {results.headline.split('\n').map((line, i) => (
+                        {results.headline.split('\n').map((line, i, arr) => (
                             <span key={i}>
                                 {line}
-                                {i < results.headline.split('\n').length - 1 && <br />}
+                                {i < arr.length - 1 && <br />}
                             </span>
                         ))}
                     </h2>

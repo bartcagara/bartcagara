@@ -55,8 +55,6 @@ export default function Home() {
             title={HOMEPAGE_CONTENT.diagnosis.title}
             subtitle={HOMEPAGE_CONTENT.diagnosis.subtitle}
             items={HOMEPAGE_CONTENT.diagnosis.items}
-            afterText={HOMEPAGE_CONTENT.diagnosis.afterText}
-            outcome={HOMEPAGE_CONTENT.diagnosis.outcome}
           />
         </ErrorBoundary>
 
@@ -66,8 +64,6 @@ export default function Home() {
             title={HOMEPAGE_CONTENT.solution.title}
             subtitle={HOMEPAGE_CONTENT.solution.subtitle}
             items={HOMEPAGE_CONTENT.solution.items}
-            afterText={HOMEPAGE_CONTENT.solution.afterText}
-            outcome={HOMEPAGE_CONTENT.solution.outcome}
           />
         </ErrorBoundary>
 
@@ -82,6 +78,7 @@ export default function Home() {
             title={HOMEPAGE_CONTENT.program.title}
             subtitle={HOMEPAGE_CONTENT.program.subtitle}
             phases={HOMEPAGE_CONTENT.program.phases}
+            methodology={HOMEPAGE_CONTENT.program.methodology}
           />
         </ErrorBoundary>
 

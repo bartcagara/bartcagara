@@ -50,22 +50,24 @@ export interface DiagnosisSectionProps {
   title: string;
   subtitle: string;
   items: readonly string[];
-  afterText: string;
-  outcome: string;
 }
 
 export interface SolutionSectionProps {
   title: string;
   subtitle: string;
   items: readonly string[];
-  afterText: string;
-  outcome: string;
+}
+
+export interface ProgramMethodology {
+  readonly headline: string;
+  readonly body: readonly string[];
 }
 
 export interface ProgramSectionProps {
   title: string;
   subtitle: string;
   phases: readonly ProgramPhase[];
+  methodology: ProgramMethodology;
 }
 
 export interface AboutSectionProps {
