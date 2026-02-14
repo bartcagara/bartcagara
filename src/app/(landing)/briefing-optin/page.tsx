@@ -75,7 +75,7 @@ export default function BriefingOptinPage() {
                         </h1>
                         {/* SUBHEAD - Lighter weight, cleaner size */}
                         <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                            For the former athlete who traded his health for success.
+                            For the former-athlete founder who&apos;s building the business he loves in a body he hates.
                         </p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function BriefingOptinPage() {
                         <div className="mb-10">
                             <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
                                 <span className="block text-bleu-nuit/40 mb-2 font-medium">No basic fitness tips. No 5-minute workouts. No high-protein recipes.</span>
-                                <span className="block text-bleu-nuit">Just real stories and insights from coaching former athletes like:</span>
+                                <span className="block text-bleu-nuit">Just the real stuff like:</span>
                             </p>
                         </div>
 
@@ -95,32 +95,21 @@ export default function BriefingOptinPage() {
                         <div className="space-y-8 mb-12">
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Ryan, Sales Executive
+                                    Client Breakthroughs
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Flies 3 days a week. Lost 120 lbs. Calls it the most sustainable thing he's ever done.
+                                    How Drew—entrepreneur, father of two—went from spinning his wheels with diets and workouts to traveling the country in an RV, training in a different gym every week, dropping 34 lbs, and reclaiming his athletic identity.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Adrian, CFO
+                                    Personal Insights
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit golf handicap.
+                                    On fitness, guilt, shame, and workaholism—and how I work through them to become a better father, coach, and business owner.
                                 </span>
                             </div>
-
-                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Drew, Entrepreneur
-                                </span>
-                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    2 little kids. Down 34 lbs. Rebuilt his body, his stress response, and his identity.
-                                </span>
-                            </div>
-
-
                         </div>
 
                         <OptinForm />
