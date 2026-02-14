@@ -98,7 +98,7 @@ export default function BriefingOptinPage() {
                                     Client Breakthroughs
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    How a guy like Drew—entrepreneur and father of two—was stuck being out of shape despite working out and following different diets... Then life got more intense: traveling the country, on client calls all day, training in a different gym every week... Drops 34 lbs, builds the best physique ever, and reclaims his athletic identity.
+                                    How a guy like Drew—entrepreneur, former athlete, father of two—couldn't get back in shape no matter what he tried. Then his schedule got even more chaotic, he started traveling, and everything clicked. 34 lbs down, best shape of his life.
                                 </span>
                             </div>
 
