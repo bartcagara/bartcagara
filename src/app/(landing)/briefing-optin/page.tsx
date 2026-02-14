@@ -107,7 +107,7 @@ export default function BriefingOptinPage() {
                                     Personal Insights
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    On fitness, guilt, shame, and workaholism—and how I work through them to become a better father, coach, and business owner.
+                                    It&apos;s the only space online where I don&apos;t pull any punches. On fitness, life, guilt, shame, workaholism... and how I battle them daily to become a better father, coach, and business owner.
                                 </span>
                             </div>
                         </div>
