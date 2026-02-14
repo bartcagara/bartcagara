@@ -35,7 +35,7 @@ const FinalCTASection = dynamic(() => import("@/components/home/sections").then(
 
 /**
  * Home Page
- * Main landing page for Executive Athlete OS
+ * Main landing page for Founder Athlete OS
  * Optimized with component modularity, accessibility, and performance best practices
  */
 export default function Home() {
@@ -103,7 +103,7 @@ export default function Home() {
           <FinalCTASection
             headline={HOMEPAGE_CONTENT.finalCta.headline}
             highlightedText={HOMEPAGE_CONTENT.finalCta.highlightedText}
-            subheadline={HOMEPAGE_CONTENT.finalCta.subheadline}
+            body={HOMEPAGE_CONTENT.finalCta.body}
             ctaText={HOMEPAGE_CONTENT.finalCta.ctaText}
             ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
           />

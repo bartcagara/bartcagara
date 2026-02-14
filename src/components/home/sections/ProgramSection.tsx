@@ -1,11 +1,14 @@
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import type { ProgramSectionProps } from "@/components/home/types";
 
 /**
- * ProgramSection - EXECUTIVE ATHLETE OS program details
- * Shows the 4-phase program structure
+ * ProgramSection - FOUNDER ATHLETE OS program details
+ * Shows the 3-phase program structure with methodology separator
  */
 export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps) {
+  const { methodology } = HOMEPAGE_CONTENT.program;
+
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -78,6 +81,29 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
               </div>
             </div>
           ))}
+        </div>
+
+        {/* METHODOLOGY SEPARATOR */}
+        <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
+          <p className="text-xl md:text-2xl font-black text-white leading-tight">
+            {methodology.headline}
+          </p>
+          {methodology.body.map((paragraph, index) => {
+            const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
+            const text = isBold ? paragraph.slice(2, -2) : paragraph;
+            return (
+              <p
+                key={index}
+                className={
+                  isBold
+                    ? "text-xl md:text-2xl font-black text-white leading-tight"
+                    : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
+                }
+              >
+                {text}
+              </p>
+            );
+          })}
         </div>
       </div>
     </section>

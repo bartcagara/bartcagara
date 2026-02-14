@@ -28,14 +28,16 @@ export function SectionHeader({ id, title, subtitle, variant = 'dark' }: Section
           </span>
         ))}
       </h2>
-      <p className={`text-2xl md:text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
-        {subtitle.split('\n').map((line, i) => (
-          <span key={i}>
-            {line}
-            {i < subtitle.split('\n').length - 1 && <br />}
-          </span>
-        ))}
-      </p>
+      {subtitle && (
+        <p className={`text-2xl md:text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
+          {subtitle.split('\n').map((line, i) => (
+            <span key={i}>
+              {line}
+              {i < subtitle.split('\n').length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      )}
     </>
   );
 }

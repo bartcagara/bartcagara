@@ -10,7 +10,7 @@ export const Footer = memo(() => (
         <div className="space-y-4">
           <Link href="/" className="block group">
             <h3 className="text-xl font-bold text-gray-900 group-hover:opacity-80 transition-opacity">Bart Cagara</h3>
-            <p className="text-gray-600 text-sm group-hover:opacity-80 transition-opacity">Executive Athlete OS</p>
+            <p className="text-gray-600 text-sm group-hover:opacity-80 transition-opacity">Founder Athlete OS</p>
           </Link>
           <p className="text-gray-500 text-xs mt-4">
             &copy; {new Date().getFullYear()} Dad with Style OÜ

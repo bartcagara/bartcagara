@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Executive Athlete Briefing | Weekly Newsletter for Former-Athlete Executives",
-    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete executives. Read it in 2 minutes.",
+    title: "Founder Athlete Briefing | Weekly Newsletter for Former-Athlete Founders",
+    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete founders. Read it in 2 minutes.",
     keywords: [
-        "Executive Newsletter",
+        "Founder Newsletter",
         "Business Travel Fitness",
-        "Executive Health",
+        "Founder Health",
         "Former Athletes",
-        "Executive Performance",
+        "Founder Performance",
         "Bart Cagara Newsletter"
     ],
     authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         url: "/briefing-optin",
-        siteName: "Executive Athlete OS",
-        title: "Executive Athlete Briefing",
-        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on an executive schedule.",
+        siteName: "Founder Athlete OS",
+        title: "Founder Athlete Briefing",
+        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on a founder's schedule.",
         images: [
             {
                 url: "/opengraph-briefing.png",
                 width: 1200,
                 height: 630,
-                alt: "Executive Athlete Briefing - Weekly Newsletter by Bart Cagara"
+                alt: "Founder Athlete Briefing - Weekly Newsletter by Bart Cagara"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Executive Athlete Briefing",
+        title: "Founder Athlete Briefing",
         description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight.",
         images: ["/opengraph-briefing.png"],
         creator: "@bartcagara"
@@ -69,13 +69,13 @@ export default function BriefingOptinPage() {
                         </span>
                         {/* HEADLINE - Optical alignment tweaks */}
                         <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-8">
-                            Executive <br />
+                            Founder <br />
                             Athlete <br />
                             <span className="text-bleu-accent">Briefing</span>
                         </h1>
                         {/* SUBHEAD - Lighter weight, cleaner size */}
                         <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                            For the former athlete who traded his health for success.
+                            For the former-athlete founder who&apos;s building the business he loves in a body he hates.
                         </p>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ export default function BriefingOptinPage() {
                         <div className="mb-10">
                             <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
                                 <span className="block text-bleu-nuit/40 mb-2 font-medium">No basic fitness tips. No 5-minute workouts. No high-protein recipes.</span>
-                                <span className="block text-bleu-nuit">Just real stories and insights from coaching former athletes like:</span>
+                                <span className="block text-bleu-nuit">Just the real stuff like:</span>
                             </p>
                         </div>
 
@@ -95,32 +95,21 @@ export default function BriefingOptinPage() {
                         <div className="space-y-8 mb-12">
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Ryan, Sales Executive
+                                    Client Breakthroughs
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Flies 3 days a week. Lost 120 lbs. Calls it the most sustainable thing he's ever done.
+                                    How a guy like Drew—entrepreneur, former athlete, father of two—couldn't get back in shape no matter what he tried. Then his schedule got even more chaotic, he started traveling, and everything clicked. 34 lbs down, best shape of his life.
                                 </span>
                             </div>
 
                             <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
                                 <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Adrian, CFO
+                                    Personal Insights
                                 </span>
                                 <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    Reversed 20 years of neglect. 12% body fat. Finally hit a single-digit golf handicap.
+                                    It&apos;s the only space online where I don&apos;t pull any punches. On fitness, life, guilt, shame, workaholism... and how I battle them daily to become a better father, coach, and business owner.
                                 </span>
                             </div>
-
-                            <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                <span className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                    Drew, Entrepreneur
-                                </span>
-                                <span className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                    2 little kids. Down 34 lbs. Rebuilt his body, his stress response, and his identity.
-                                </span>
-                            </div>
-
-
                         </div>
 
                         <OptinForm />
@@ -145,7 +134,7 @@ export default function BriefingOptinPage() {
                             <div key={i} className="break-inside-avoid">
                                 <Image
                                     src={`/images/briefing/dm${i}.jpg`}
-                                    alt={`Client transformation result ${i} - Executive Athlete coaching testimonial`}
+                                    alt={`Client transformation result ${i} - Founder Athlete coaching testimonial`}
                                     width={400}
                                     height={500}
                                     loading={i <= 3 ? "eager" : "lazy"}
