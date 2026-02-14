@@ -54,7 +54,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   results: {
-    headline: "THESE GUYS DIDN'T\nWAIT TILL THINGS GOT QUIET",
+    headline: "THESE GUYS DIDN'T\nWAIT FOR LIFE TO SLOW DOWN",
     subheadline: "They invested in a system built for their pace.",
     sections: {
       transformations: "Client Photos",
