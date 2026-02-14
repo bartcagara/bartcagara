@@ -51,7 +51,7 @@ export function AboutSection({
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
                 const text = isBold ? paragraph.slice(2, -2) : paragraph;
                 return (
-                  <p key={index} className={isBold ? "text-bleu-nuit font-bold" : ""}>
+                  <p key={index} className={isBold ? "text-bleu-nuit font-black" : ""}>
                     {text}
                   </p>
                 );

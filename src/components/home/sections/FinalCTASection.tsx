@@ -28,8 +28,8 @@ export function FinalCTASection({
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
-                    : "text-2xl md:text-3xl font-medium text-white/70 leading-relaxed"
+                    ? "text-xl md:text-2xl font-black text-white leading-tight"
+                    : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
                 }
               >
                 {text}
