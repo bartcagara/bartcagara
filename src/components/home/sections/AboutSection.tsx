@@ -48,10 +48,11 @@ export function AboutSection({
           <div>
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
-                const isBold = paragraph.startsWith("So I built something different.");
+                const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
+                const text = isBold ? paragraph.slice(2, -2) : paragraph;
                 return (
                   <p key={index} className={isBold ? "text-bleu-nuit font-bold" : ""}>
-                    {paragraph}
+                    {text}
                   </p>
                 );
               })}

@@ -8,7 +8,7 @@ import type { FinalCTASectionProps } from "@/components/home/types";
 export function FinalCTASection({
   headline,
   highlightedText,
-  subheadline,
+  body,
   ctaText,
   ctaLink
 }: FinalCTASectionProps) {
@@ -19,9 +19,24 @@ export function FinalCTASection({
           {headline}<br />
           <span className="inline-block bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
-        <p className="text-2xl md:text-3xl font-medium text-white/70 mb-16 max-w-3xl leading-relaxed">
-          {subheadline}
-        </p>
+        <div className="mb-16 max-w-3xl space-y-6">
+          {body.map((paragraph, index) => {
+            const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
+            const text = isBold ? paragraph.slice(2, -2) : paragraph;
+            return (
+              <p
+                key={index}
+                className={
+                  isBold
+                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
+                    : "text-2xl md:text-3xl font-medium text-white/70 leading-relaxed"
+                }
+              >
+                {text}
+              </p>
+            );
+          })}
+        </div>
         <CTAButton href={ctaLink} variant="light">
           {ctaText}
         </CTAButton>

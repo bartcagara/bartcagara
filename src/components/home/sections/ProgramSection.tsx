@@ -1,11 +1,14 @@
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import type { ProgramSectionProps } from "@/components/home/types";
 
 /**
- * ProgramSection - EXECUTIVE ATHLETE OS program details
- * Shows the 4-phase program structure
+ * ProgramSection - FOUNDER ATHLETE OS program details
+ * Shows the 3-phase program structure with methodology separator
  */
 export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps) {
+  const { methodology } = HOMEPAGE_CONTENT.program;
+
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -71,13 +74,27 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                   <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">
                     THE WIN:
                   </span>
-                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
+                  <span className="font-black text-white tracking-tighter text-lg md:text-xl leading-tight block">
                     {phase.win}
                   </span>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* METHODOLOGY SEPARATOR */}
+        <div className="mt-24 pt-12 border-t-2 border-white/20">
+          <p className="text-2xl md:text-4xl font-black text-white leading-tight max-w-4xl">
+            {methodology.headline}
+          </p>
+          <div className="space-y-6 mt-8 max-w-3xl">
+            {methodology.body.map((paragraph, index) => (
+              <p key={index} className="text-xl md:text-2xl font-medium text-white/70 leading-relaxed">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </section>

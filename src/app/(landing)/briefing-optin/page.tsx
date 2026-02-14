@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Executive Athlete Briefing | Weekly Newsletter for Former-Athlete Executives",
-    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete executives. Read it in 2 minutes.",
+    title: "Founder Athlete Briefing | Weekly Newsletter for Former-Athlete Founders",
+    description: "Every Sunday, get one client-tested insight to stay lean and sharp in schedule chaos. Join 200+ former-athlete founders. Read it in 2 minutes.",
     keywords: [
-        "Executive Newsletter",
+        "Founder Newsletter",
         "Business Travel Fitness",
-        "Executive Health",
+        "Founder Health",
         "Former Athletes",
-        "Executive Performance",
+        "Founder Performance",
         "Bart Cagara Newsletter"
     ],
     authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         url: "/briefing-optin",
-        siteName: "Executive Athlete OS",
-        title: "Executive Athlete Briefing",
-        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on an executive schedule.",
+        siteName: "Founder Athlete OS",
+        title: "Founder Athlete Briefing",
+        description: "Most fitness advice assumes you have time. This briefing assumes you don't. Client-tested systems to stay fit on a founder's schedule.",
         images: [
             {
                 url: "/opengraph-briefing.png",
                 width: 1200,
                 height: 630,
-                alt: "Executive Athlete Briefing - Weekly Newsletter by Bart Cagara"
+                alt: "Founder Athlete Briefing - Weekly Newsletter by Bart Cagara"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Executive Athlete Briefing",
+        title: "Founder Athlete Briefing",
         description: "Most fitness advice assumes you have time. This briefing assumes you don't. Every Sunday, get one client-tested insight.",
         images: ["/opengraph-briefing.png"],
         creator: "@bartcagara"
@@ -69,7 +69,7 @@ export default function BriefingOptinPage() {
                         </span>
                         {/* HEADLINE - Optical alignment tweaks */}
                         <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-8">
-                            Executive <br />
+                            Founder <br />
                             Athlete <br />
                             <span className="text-bleu-accent">Briefing</span>
                         </h1>
@@ -145,7 +145,7 @@ export default function BriefingOptinPage() {
                             <div key={i} className="break-inside-avoid">
                                 <Image
                                     src={`/images/briefing/dm${i}.jpg`}
-                                    alt={`Client transformation result ${i} - Executive Athlete coaching testimonial`}
+                                    alt={`Client transformation result ${i} - Founder Athlete coaching testimonial`}
                                     width={400}
                                     height={500}
                                     loading={i <= 3 ? "eager" : "lazy"}

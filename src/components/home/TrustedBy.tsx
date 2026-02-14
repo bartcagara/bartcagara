@@ -4,7 +4,7 @@ import { TRUST_LOGOS } from "./assets";
 
 /**
  * TrustedBy Section - Displays client company logos
- * Shows social proof from executive clients
+ * Shows social proof from founder clients
  */
 export function TrustedBy() {
     const { trustedBy } = HOMEPAGE_CONTENT;

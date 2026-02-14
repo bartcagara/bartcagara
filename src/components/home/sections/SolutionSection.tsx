@@ -1,13 +1,12 @@
-import { Check } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { SectionHeader } from "./SectionHeader";
 import type { SolutionSectionProps } from "@/components/home/types";
 
 /**
  * SolutionSection - "The Solution" section
- * Shows the integrated approach with one coach
+ * Shows the integrated approach narrative
  */
-export function SolutionSection({ title, subtitle, items, afterText, outcome }: SolutionSectionProps) {
+export function SolutionSection({ title, subtitle, items }: SolutionSectionProps) {
   return (
     <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="solution-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -16,29 +15,23 @@ export function SolutionSection({ title, subtitle, items, afterText, outcome }: 
           <SectionHeader id="solution-title" title={title} subtitle={subtitle} variant="light" />
         </div>
 
-        <div className="max-w-4xl">
-          <ul className="space-y-8">
-            {items.map((item, index) => (
-              <li key={index} className="group">
-                <div className="flex items-start gap-4 mb-2">
-                  <Check className="w-8 h-8 text-green-400 flex-shrink-0" strokeWidth={3} aria-hidden="true" />
-                  <span className="text-2xl font-bold">{item}</span>
-                </div>
-              </li>
-            ))}
-          </ul>
-
-          {afterText && (
-            <p className="text-2xl font-bold text-white/80 mt-12 leading-relaxed">
-              {afterText}
-            </p>
-          )}
-        </div>
-
-        <div className="mt-24 pt-12 border-t-2 border-white/20">
-          <p className="text-2xl md:text-4xl font-black text-white leading-tight max-w-4xl">
-            {outcome}
-          </p>
+        <div className="max-w-4xl space-y-6">
+          {items.map((item, index) => {
+            const isBold = item.startsWith('**') && item.endsWith('**');
+            const text = isBold ? item.slice(2, -2) : item;
+            return (
+              <p
+                key={index}
+                className={
+                  isBold
+                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
+                    : "text-xl md:text-2xl font-medium text-white/80 leading-relaxed"
+                }
+              >
+                {text}
+              </p>
+            );
+          })}
         </div>
       </div>
     </section>

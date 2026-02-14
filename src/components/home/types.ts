@@ -81,7 +81,7 @@ export interface AboutSectionProps {
 export interface FinalCTASectionProps {
   headline: string;
   highlightedText: string;
-  subheadline: string;
+  body: readonly string[];
   ctaText: string;
   ctaLink: string;
 }

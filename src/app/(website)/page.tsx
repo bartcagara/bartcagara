@@ -103,7 +103,7 @@ export default function Home() {
           <FinalCTASection
             headline={HOMEPAGE_CONTENT.finalCta.headline}
             highlightedText={HOMEPAGE_CONTENT.finalCta.highlightedText}
-            subheadline={HOMEPAGE_CONTENT.finalCta.subheadline}
+            body={HOMEPAGE_CONTENT.finalCta.body}
             ctaText={HOMEPAGE_CONTENT.finalCta.ctaText}
             ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
           />
