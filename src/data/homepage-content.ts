@@ -31,8 +31,6 @@ export const HOMEPAGE_CONTENT = {
       "So you sit there. Phone in hand. Watching your kids grow up from the sidelines.",
       "**Not because you're busy. Because your body won't let you be present.**",
     ],
-    afterText: "",
-    outcome: "",
   },
 
   solution: {
@@ -49,8 +47,6 @@ export const HOMEPAGE_CONTENT = {
       "**Your recovery keeps you sharp instead of restless.**",
       "Because your body and mind are finally aligned—carrying your vision instead of holding it back.",
     ],
-    afterText: "",
-    outcome: "",
   },
 
   results: {

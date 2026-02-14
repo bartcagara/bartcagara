@@ -21,19 +21,19 @@ export function SectionHeader({ id, title, subtitle, variant = 'dark' }: Section
   return (
     <>
       <h2 id={id} className={`text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] ${titleClass} mb-8`}>
-        {title.split('\n').map((line, i) => (
+        {title.split('\n').map((line, i, arr) => (
           <span key={i}>
             {line}
-            {i < title.split('\n').length - 1 && <br />}
+            {i < arr.length - 1 && <br />}
           </span>
         ))}
       </h2>
       {subtitle && (
         <p className={`text-2xl md:text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
-          {subtitle.split('\n').map((line, i) => (
+          {subtitle.split('\n').map((line, i, arr) => (
             <span key={i}>
               {line}
-              {i < subtitle.split('\n').length - 1 && <br />}
+              {i < arr.length - 1 && <br />}
             </span>
           ))}
         </p>

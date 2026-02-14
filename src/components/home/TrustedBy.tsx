@@ -12,23 +12,21 @@ export function TrustedBy() {
     return (
         <section className="py-8 bg-bleu-nuit border-b-2 border-white/10">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="mt-0">
                     <p className="text-center font-bold uppercase text-white/50 tracking-tighter mb-8 text-sm">
-                        {trustedBy.title}
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-500">
-                        {TRUST_LOGOS.map((logo) => (
-                            <div key={logo.name} className="relative h-8 w-24 md:h-10 md:w-32">
-                                <Image
-                                    src={logo.src}
-                                    alt={`${logo.name} company logo`}
-                                    fill
-                                    className="object-contain"
-                                    sizes="(max-width: 768px) 96px, 128px"
-                                />
-                            </div>
-                        ))}
-                    </div>
+                    {trustedBy.title}
+                </p>
+                <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-500">
+                    {TRUST_LOGOS.map((logo) => (
+                        <div key={logo.name} className="relative h-8 w-24 md:h-10 md:w-32">
+                            <Image
+                                src={logo.src}
+                                alt={`${logo.name} company logo`}
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 96px, 128px"
+                            />
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

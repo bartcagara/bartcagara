@@ -1,13 +1,11 @@
 import { SectionBadge } from "@/components/ui/SectionBadge";
-import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import type { ProgramSectionProps } from "@/components/home/types";
 
 /**
  * ProgramSection - FOUNDER ATHLETE OS program details
  * Shows the 3-phase program structure with methodology separator
  */
-export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps) {
-  const { methodology } = HOMEPAGE_CONTENT.program;
+export function ProgramSection({ title, subtitle, phases, methodology }: ProgramSectionProps) {
 
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
@@ -15,10 +13,10 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
         <div className="mb-24">
           <SectionBadge variant="light">The Program</SectionBadge>
           <h2 id="program-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
-            {title.split('\n').map((line, i) => (
+            {title.split('\n').map((line, i, arr) => (
               <span key={i}>
                 {line}
-                {i < title.split('\n').length - 1 && <br />}
+                {i < arr.length - 1 && <br />}
               </span>
             ))}
           </h2>
