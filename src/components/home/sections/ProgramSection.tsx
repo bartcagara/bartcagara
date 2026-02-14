@@ -85,7 +85,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
 
         {/* METHODOLOGY SEPARATOR */}
         <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
-          <p className="text-2xl md:text-3xl font-black text-white leading-tight">
+          <p className="text-xl md:text-2xl font-black text-white leading-tight">
             {methodology.headline}
           </p>
           {methodology.body.map((paragraph, index) => {
@@ -96,7 +96,7 @@ export function ProgramSection({ title, subtitle, phases }: ProgramSectionProps)
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
+                    ? "text-xl md:text-2xl font-black text-white leading-tight"
                     : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
                 }
               >

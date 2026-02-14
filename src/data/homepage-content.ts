@@ -27,7 +27,7 @@ export const HOMEPAGE_CONTENT = {
       "But you never do.",
       "You tell yourself it's because you're thinking about work. Noble excuse—it supports the family.",
       "**But the truth?**",
-      "You're too fucking self-conscious about how out of shape you are to take your shirt off.",
+      "You're too fucking self-conscious to take your shirt off.",
       "So you sit there. Phone in hand. Watching your kids grow up from the sidelines.",
       "**Not because you're busy. Because your body won't let you be present.**",
     ],

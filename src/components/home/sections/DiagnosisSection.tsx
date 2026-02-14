@@ -24,7 +24,7 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-bleu-nuit leading-tight"
+                    ? "text-xl md:text-2xl font-black text-bleu-nuit leading-tight"
                     : "text-xl md:text-2xl font-medium text-bleu-nuit/80 leading-relaxed"
                 }
               >
