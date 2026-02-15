@@ -63,7 +63,7 @@ export function ResultsSection() {
                         <div key={src} className={styles.scrollItemDm}>
                             <Image
                                 src={src}
-                                alt={`Client testimonial direct message ${index + 1}`}
+                                alt={`Former athlete founder client testimonial ${index + 1}`}
                                 width={300}
                                 height={500}
                                 loading="lazy"

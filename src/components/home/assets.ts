@@ -39,31 +39,31 @@ export const TRUST_LOGOS = [
 
 export const TRANSFORMATIONS = [
   {
-    alt: "Client Transformation: 24 weeks progress",
+    alt: "Former athlete founder transformation - 24 weeks",
     src: "/images/transformations/transformation-1.webp"
   },
   {
-    alt: "Client Transformation: 15 weeks progress",
+    alt: "Former athlete founder transformation - 15 weeks",
     src: "/images/transformations/transformation-2.webp"
   },
   {
-    alt: "Client Transformation: 14 months progress",
+    alt: "Former athlete founder transformation - 14 months",
     src: "/images/transformations/transformation-3.webp"
   },
   {
-    alt: "Client Transformation: 4 weeks progress",
+    alt: "Former athlete founder transformation - 4 weeks",
     src: "/images/transformations/transformation-4.webp"
   },
   {
-    alt: "Client Transformation: 24 weeks progress",
+    alt: "Former athlete founder transformation - 24 weeks",
     src: "/images/transformations/transformation-5.webp"
   },
   {
-    alt: "Client Transformation: 3 weeks progress",
+    alt: "Former athlete founder transformation - 3 weeks",
     src: "/images/transformations/transformation-6.webp"
   },
   {
-    alt: "Client Transformation: 12 weeks progress",
+    alt: "Former athlete founder transformation - 12 weeks",
     src: "/images/transformations/transformation-7.webp"
   }
 ];

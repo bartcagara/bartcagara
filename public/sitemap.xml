@@ -5,31 +5,31 @@
   <!-- Homepage -->
   <url>
     <loc>https://bartcagara.com</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://bartcagara.com/opengraph-image.png</image:loc>
-      <image:title>Executive Athlete OS - Bart Cagara</image:title>
+      <image:loc>https://bartcagara.com/images/og-image.jpg</image:loc>
+      <image:title>Founder Athlete OS - Health Coaching for Former-Athlete Founders</image:title>
     </image:image>
   </url>
 
   <!-- Newsletter Opt-in -->
   <url>
     <loc>https://bartcagara.com/briefing-optin</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://bartcagara.com/opengraph-briefing.png</image:loc>
-      <image:title>Executive Athlete Briefing - Weekly Newsletter</image:title>
+      <image:loc>https://bartcagara.com/images/briefing-og-image.jpg</image:loc>
+      <image:title>Founder Athlete Briefing - Weekly Newsletter</image:title>
     </image:image>
   </url>
 
   <!-- Contact Page -->
   <url>
     <loc>https://bartcagara.com/contact</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
