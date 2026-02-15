@@ -5,8 +5,8 @@ import Link from "next/link";
 import Script from "next/script";
 
 export const metadata: Metadata = {
-    title: "Founder Athlete Briefing | Weekly Newsletter for Former-Athlete Founders",
-    description: "Get real client breakthroughs and personal insights on fitness, guilt, shame, and workaholism. For former-athlete founders. One email every Sunday. Read in 2 minutes.",
+    title: "Founder Athlete Briefing | Weekly Newsletter",
+    description: "Real client breakthroughs and personal insights on fitness, guilt, and workaholism. For former-athlete founders. One email every Sunday.",
     keywords: [
         "Founder Newsletter",
         "Business Travel Fitness",
