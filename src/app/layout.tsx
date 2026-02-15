@@ -16,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
-  description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity. No rigid protocols.",
+  title: "Founder Athlete OS | Coaching for Former Athletes",
+  description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity.",
   keywords: [
     "Founder Coaching",
     "Weight Loss for Founders",
@@ -40,20 +40,20 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bartcagara.com",
     siteName: "Founder Athlete OS",
-    title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
+    title: "Founder Athlete OS | Coaching for Former Athletes",
     description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Founder Athlete OS - Health coaching for former-athlete founders"
+        alt: "Founder Athlete OS - Coaching for former-athlete founders"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
+    title: "Founder Athlete OS | Coaching for Former Athletes",
     description: "For former-athlete founders building a business they love in a body they hate.",
     images: ["/images/og-image.jpg"],
     creator: "@bartcagara",
