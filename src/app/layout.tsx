@@ -16,14 +16,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Founder Athlete OS™ | Bart Cagara",
-  description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. Six months to reclaim your body while building your business.",
+  title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
+  description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity. No rigid protocols.",
   keywords: [
     "Founder Coaching",
     "Weight Loss for Founders",
     "High Performance Health",
     "Bart Cagara",
-    "Founder Athlete"
+    "Founder Athlete",
+    "Health Coaching for Founders",
+    "Former Athlete Fitness",
   ],
   authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
@@ -36,24 +38,24 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "/",
+    url: "https://bartcagara.com",
     siteName: "Founder Athlete OS",
-    title: "Founder Athlete OS™",
-    description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. A coach who's actually built something.",
+    title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
+    description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity.",
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Founder Athlete OS™ - Bart Cagara"
+        alt: "Founder Athlete OS - Health coaching for former-athlete founders"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Founder Athlete OS™",
-    description: "For the former-athlete founder who chose freedom over corporate—and sacrificed his body in the process. A coach who's actually built something.",
-    images: ["/opengraph-image.png"],
+    title: "Founder Athlete OS | Health Coaching for Former-Athlete Founders",
+    description: "For former-athlete founders building a business they love in a body they hate.",
+    images: ["/images/og-image.jpg"],
     creator: "@bartcagara",
     site: "@bartcagara"
   },
@@ -68,6 +70,21 @@ export const metadata: Metadata = {
       "max-snippet": -1
     }
   }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Founder Athlete OS",
+  "description": "Health and performance coaching for former-athlete founders",
+  "url": "https://bartcagara.com",
+  "founder": {
+    "@type": "Person",
+    "name": "Bart Cagara",
+    "jobTitle": "Health Coach"
+  },
+  "areaServed": "Worldwide",
+  "priceRange": "$$$$"
 };
 
 export default function RootLayout({
@@ -87,6 +104,12 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://e.bartcagara.com" />
         <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
+
+        {/* Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>

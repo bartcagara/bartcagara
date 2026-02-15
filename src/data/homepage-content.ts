@@ -114,7 +114,7 @@ export const HOMEPAGE_CONTENT = {
     title: "WHO THE FUCK",
     subtitle: "IS BART?",
     imageSrc: "/images/home/bart-and-son.jpg",
-    imageAlt: "Bart Cagara and son flexing",
+    imageAlt: "Bart Cagara with son - founder athlete health coach",
     subhead: "Fair question.",
     paragraphs: [
       "I was the athletic kid. Not good enough to go pro, but the obsession with performance never left.",
