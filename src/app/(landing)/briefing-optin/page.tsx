@@ -137,33 +137,27 @@ export default function BriefingOptinPage() {
                     </div>
                 </div>
 
-                {/* Bottom Section: Masonry Grid of DMs */}
-                <div className="px-6 py-12 md:p-16 bg-white border-t-2 border-bleu-nuit">
-                    <div className="max-w-7xl mx-auto">
-                        <div className="text-center mb-12 md:mb-16">
+                {/* Newsletter Subscriber Testimonial */}
+                <div className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit">
+                    <div className="max-w-4xl mx-auto">
+                        <div className="text-center mb-16 md:mb-20">
                             <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight mb-4">
-                                These guys didn&apos;t <br className="md:hidden" /> find more time.
+                                &ldquo;Your shit really speaks to me.&rdquo;
                             </h2>
-                            <p className="text-xl md:text-3xl font-bold text-bleu-accent uppercase tracking-tighter">
-                                They ditched the scattered approach.
+                            <p className="text-lg md:text-2xl font-medium text-bleu-nuit/60">
+                                DM from a founder-athlete who reads the Briefing every Sunday.
                             </p>
                         </div>
-                        {/* Masonry Grid */}
-                        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-                            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].map((i) => (
-                                <div key={i} className="break-inside-avoid">
-                                    <Image
-                                        src={`/images/briefing/dm${i}.jpg`}
-                                        alt={`Former athlete founder client testimonial ${i} - Founder Athlete coaching result`}
-                                        width={400}
-                                        height={500}
-                                        loading={i <= 3 ? "eager" : "lazy"}
-                                        quality={85}
-                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                                        className="w-full h-auto shadow-[4px_4px_0px_0px_var(--bleu-nuit)] md:shadow-[8px_8px_0px_0px_var(--bleu-nuit)] border-2 border-bleu-nuit hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-[2px_2px_0px_0px_var(--bleu-nuit)] transition-all duration-200"
-                                    />
-                                </div>
-                            ))}
+                        <div className="flex justify-center">
+                            <Image
+                                src="/images/newsletter-subscriber-dm.jpg"
+                                alt="Unsolicited DM from newsletter subscriber - founder-athlete testimonial"
+                                width={800}
+                                height={1000}
+                                quality={90}
+                                className="w-full max-w-[800px] h-auto shadow-[4px_4px_0px_0px_var(--bleu-nuit)] md:shadow-[8px_8px_0px_0px_var(--bleu-nuit)] border-2 border-bleu-nuit"
+                                sizes="(max-width: 768px) 100vw, 800px"
+                            />
                         </div>
                     </div>
                 </div>
