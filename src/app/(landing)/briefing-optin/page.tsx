@@ -145,7 +145,7 @@ export default function BriefingOptinPage() {
                                 &ldquo;Your shit really speaks to me.&rdquo;
                             </h2>
                             <p className="text-lg md:text-2xl font-medium text-bleu-nuit/60">
-                                DM from a founder-athlete who reads the Briefing every Sunday.
+                                DM from a founder who reads the Briefing every Sunday.
                             </p>
                         </div>
                         <div className="flex justify-center">
