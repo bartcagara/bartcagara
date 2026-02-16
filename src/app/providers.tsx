@@ -24,6 +24,18 @@ if (typeof window !== 'undefined') {
         return;
       }
 
+      // Load toolbar if launched from PostHog (must run inside loaded callback
+      // so PostHog is fully initialized and ui_host is respected)
+      const hash = window.location.hash.substring(1);
+      const toolbarJSON = new URLSearchParams(hash).get('__posthog');
+      if (toolbarJSON) {
+        try {
+          ph.loadToolbar(JSON.parse(toolbarJSON));
+        } catch (e) {
+          console.error('Failed to load PostHog toolbar:', e);
+        }
+      }
+
       // Only start session recording after real user interaction.
       // Bots produce zero clicks/scrolls/mouse movement, so they never trigger this.
       let recordingStarted = false;
@@ -41,16 +53,6 @@ if (typeof window !== 'undefined') {
       );
     },
   });
-
-  // Manual toolbar loader for static sites - handles URL hash parameters
-  const toolbarJSON = new URLSearchParams(window.location.hash.substring(1)).get('__posthog');
-  if (toolbarJSON) {
-    try {
-      posthog.loadToolbar(JSON.parse(toolbarJSON));
-    } catch (e) {
-      console.error('Failed to load PostHog toolbar:', e);
-    }
-  }
 }
 
 export function PostHogProviderClient({ children }: { children: React.ReactNode }) {
