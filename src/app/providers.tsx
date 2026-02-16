@@ -10,6 +10,7 @@ if (typeof window !== 'undefined') {
     person_profiles: 'identified_only',
     capture_pageview: false,
     persistence: 'localStorage',
+    disable_session_recording: true, // Start disabled; enabled on real user interaction
     loaded: (ph) => {
       const ua = navigator.userAgent;
       if (
@@ -20,7 +21,24 @@ if (typeof window !== 'undefined') {
         )
       ) {
         ph.opt_out_capturing();
+        return;
       }
+
+      // Only start session recording after real user interaction.
+      // Bots produce zero clicks/scrolls/mouse movement, so they never trigger this.
+      let recordingStarted = false;
+      const startRecording = () => {
+        if (recordingStarted) return;
+        recordingStarted = true;
+        ph.startSessionRecording();
+        interactionEvents.forEach((evt) =>
+          window.removeEventListener(evt, startRecording, { capture: true })
+        );
+      };
+      const interactionEvents = ['mousemove', 'click', 'scroll', 'keydown', 'touchstart'];
+      interactionEvents.forEach((evt) =>
+        window.addEventListener(evt, startRecording, { capture: true, once: false, passive: true })
+      );
     },
   });
 
