@@ -41,7 +41,7 @@ export const HOMEPAGE_CONTENT = {
       "You're scaling your business. Still working hard, still meeting investors, still traveling...",
       "But something's different.",
       "You're not second-guessing yourself anymore. You walk into rooms with quiet confidence. Your body matches the vision you're building.",
-      "At home? You're back. You have the energy. You're present. No longer guilt-tripping yourself about not watching your kids grow up.",
+      "At home? You're back. You have the energy. You're present. No longer the chubby, exhausted dad watching from the sidelines.",
       "**Here's what changed:**",
       "Your nutrition fuels the work without making you sluggish. Your training fits your schedule—short, effective, targeted. Your recovery keeps you sharp instead of restless.",
       "**Your body and mind are finally aligned—carrying your vision instead of holding it back.**",
