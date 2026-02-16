@@ -44,7 +44,7 @@ export const HOMEPAGE_CONTENT = {
       "At home? You're back. You have the energy. You're present. No longer guilt-tripping yourself about not watching your kids grow up.",
       "**Here's what changed:**",
       "Your nutrition fuels the work without making you sluggish. Your training fits your schedule—short, effective, targeted. Your recovery keeps you sharp instead of restless.",
-      "Your body and mind finally aligned—carrying your vision instead of holding it back.",
+      "**Your body and mind finally aligned—carrying your vision instead of holding it back.**",
     ],
   },
 
