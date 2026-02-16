@@ -16,7 +16,8 @@
  * 9. In Workers Routes, add a route: e.bartcagara.com/* -> your worker
  */
 
-const POSTHOG_HOST = "https://eu.i.posthog.com";
+const POSTHOG_API = "https://eu.i.posthog.com";
+const POSTHOG_ASSETS = "https://eu-assets.i.posthog.com";
 const ALLOWED_ORIGIN = "https://bartcagara.com";
 const MAX_BODY_SIZE = 1048576; // 1MB limit
 const ALLOWED_METHODS = ["GET", "POST", "OPTIONS"];
@@ -54,8 +55,10 @@ export default {
       });
     }
 
-    // Construct the PostHog URL
-    const posthogUrl = POSTHOG_HOST + url.pathname + url.search;
+    // Route /static/* to the assets CDN (toolbar, array.js, etc.)
+    // Everything else goes to the ingestion/API server
+    const targetHost = url.pathname.startsWith("/static/") ? POSTHOG_ASSETS : POSTHOG_API;
+    const posthogUrl = targetHost + url.pathname + url.search;
 
     // Filter headers - only forward safe ones
     const safeHeaders = new Headers();
