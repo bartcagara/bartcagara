@@ -163,9 +163,9 @@ export default function RootLayout({
             `}
           </Script>
 
-          <main className="min-h-screen flex flex-col">
+          <div className="min-h-screen flex flex-col">
             {children}
-          </main>
+          </div>
         </PostHogProviderClient>
       </body>
     </html>

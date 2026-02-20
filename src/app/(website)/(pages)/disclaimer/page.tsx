@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function DisclaimerPage() {
     return (
-        <div className="prose prose-slate text-gray-800">
+        <article className="prose prose-slate text-gray-800">
             <h1 className="text-4xl font-bold mb-6 text-gray-900">Disclaimer</h1>
             <p className="text-sm text-gray-500 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
 
@@ -26,6 +26,6 @@ export default function DisclaimerPage() {
             <p className="mb-4 leading-relaxed">
                 The Site may contain testimonials by users of our products and/or services. These testimonials reflect the real-life experiences and opinions of such users. However, the experiences are personal to those particular users, and may not necessarily be representative of all users of our products and/or services. We do not claim, and you should not assume, that all users will have the same experiences. YOUR INDIVIDUAL RESULTS MAY VARY.
             </p>
-        </div>
+        </article>
     );
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
     return (
-        <div className="prose prose-slate text-gray-800">
+        <article className="prose prose-slate text-gray-800">
             <h1 className="text-4xl font-bold mb-6 text-gray-900">Terms of Service</h1>
             <p className="text-sm text-gray-500 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
 
@@ -41,6 +41,6 @@ export default function TermsPage() {
             <p className="mb-4 leading-relaxed">
                 In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us via the form on our <Link href="/contact" className="text-blue-600 underline">contact page</Link>.
             </p>
-        </div>
+        </article>
     );
 }

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
     return (
-        <div className="prose prose-slate text-gray-800">
+        <article className="prose prose-slate text-gray-800">
             <h1 className="text-4xl font-bold mb-6 text-gray-900">Privacy Policy</h1>
             <p className="text-sm text-gray-500 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
 
@@ -70,6 +70,6 @@ export default function PrivacyPage() {
             <p className="mb-4 leading-relaxed">
                 If you have questions or comments about this Privacy Policy, please contact us by filling out the form on our <Link href="/contact" className="text-blue-600 underline">contact page</Link>.
             </p>
-        </div>
+        </article>
     );
 }

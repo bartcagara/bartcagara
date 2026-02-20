@@ -97,47 +97,54 @@ export const Navbar = memo(() => {
           aria-label="Navigation menu"
           className="fixed inset-0 top-[72px] bg-gray-50 z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
         >
-          <div className="flex flex-col gap-8 text-center -mt-20" role="list" aria-label="Mobile navigation">
-            <Link
-              href="/#results"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
-            >
-              Client Wins
-            </Link>
-            <Link
-              href="/#program"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
-            >
-              Coaching
-            </Link>
-            <Link
-              href="/#about"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
-            >
-              About Me
-            </Link>
-            <Link
-              href="/briefing-optin"
-              onClick={() => setIsMenuOpen(false)}
-              className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
-            >
-              The Briefing
-            </Link>
-
-            <div className="mt-8">
+          <ul className="flex flex-col gap-8 text-center -mt-20 list-none" aria-label="Mobile navigation">
+            <li>
+              <Link
+                href="/#results"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+              >
+                Client Wins
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#program"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+              >
+                Coaching
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/#about"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+              >
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/briefing-optin"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+              >
+                The Briefing
+              </Link>
+            </li>
+            <li className="mt-8">
               <Link
                 href="https://cal.com/bartcagara/discovery-call"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
+                className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-brutal-sm focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
               >
                 Book Call
               </Link>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       )}
     </nav>

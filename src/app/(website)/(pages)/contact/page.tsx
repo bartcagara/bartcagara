@@ -79,6 +79,7 @@ export default function ContactPage() {
                         id="name"
                         name="name"
                         required
+                        autoComplete="name"
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
                         placeholder="Your name"
                     />
@@ -93,6 +94,7 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         required
+                        autoComplete="email"
                         className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
                         placeholder="your@email.com"
                     />
