@@ -47,9 +47,7 @@
 }
 
 .scrollItemDm {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
+    composes: scrollItem;
 }
 
 .scrollItemDm img {
@@ -59,10 +57,4 @@
     border: 2px solid var(--bleu-nuit);
     box-shadow: 4px 4px 0px var(--bleu-nuit);
     display: block;
-}
-
-.scrollItemTransformation {
-    flex: 0 0 auto;
-    display: flex;
-    align-items: center;
 }

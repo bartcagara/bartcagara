@@ -34,7 +34,7 @@ export function ResultsSection() {
 
                 <ScrollSection title={results.sections.transformations}>
                     {TRANSFORMATIONS.map((item) => (
-                        <div key={item.src} className={styles.scrollItemTransformation}>
+                        <div key={item.src} className={styles.scrollItem}>
                             <Image
                                 src={item.src}
                                 alt={item.alt}

@@ -9,7 +9,9 @@ export default function WebsiteLayout({
     return (
         <>
             <Navbar />
-            {children}
+            <main className="flex-1">
+                {children}
+            </main>
             <Footer />
         </>
     );

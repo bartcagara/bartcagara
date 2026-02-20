@@ -2,7 +2,6 @@ import { OptinForm } from "@/components/newsletter/OptinForm";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 
 export const metadata: Metadata = {
     title: "Founder Athlete Briefing | Weekly Newsletter",
@@ -72,8 +71,7 @@ const jsonLd = {
 export default function BriefingOptinPage() {
     return (
         <>
-            <Script
-                id="briefing-jsonld"
+            <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
@@ -81,7 +79,7 @@ export default function BriefingOptinPage() {
                 <div className="flex flex-col md:flex-row min-h-screen">
                     {/* Left Column: Heading Only */}
                     <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-10 bg-[url('/noise.png')]"></div>
+                        <div className="absolute inset-0 opacity-10" aria-hidden="true"></div>
                         <div className="relative z-10 max-w-xl">
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
@@ -138,10 +136,10 @@ export default function BriefingOptinPage() {
                 </div>
 
                 {/* Newsletter Subscriber Testimonial */}
-                <div className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit">
+                <section className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit" aria-labelledby="testimonial-title">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-16 md:mb-20">
-                            <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight mb-4">
+                            <h2 id="testimonial-title" className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight mb-4">
                                 &ldquo;Your shit really speaks to me.&rdquo;
                             </h2>
                             <p className="text-lg md:text-2xl font-medium text-bleu-nuit/60">
@@ -160,14 +158,14 @@ export default function BriefingOptinPage() {
                             />
                         </div>
                     </div>
-                </div>
+                </section>
 
                 {/* Back to Main Site */}
-                <div className="py-6 text-center border-t border-bleu-nuit/10">
+                <nav className="py-6 text-center border-t border-bleu-nuit/10" aria-label="Back to main site">
                     <Link href="/" className="text-sm text-bleu-nuit/50 hover:text-bleu-accent transition-colors font-medium">
                         &larr; Founder Athlete OS
                     </Link>
-                </div>
+                </nav>
             </div>
         </>
     );

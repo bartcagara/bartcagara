@@ -110,28 +110,34 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
               An unexpected error occurred. Please try refreshing the page.
             </p>
           </div>
-          <div className="space-y-2">
-            {process.env.NODE_ENV === "development" && (
-              <details className="mt-4 text-left">
-                <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground">
-                  Error details
-                </summary>
-                <pre className="mt-2 text-xs bg-muted p-2 rounded overflow-auto">
-                  {error.message}
-                  {error.stack && (
-                    <div className="mt-2 text-muted-foreground">
-                      {error.stack}
-                    </div>
-                  )}
-                  {error.digest && (
-                    <div className="mt-2 text-muted-foreground">
-                      Digest: {error.digest}
-                    </div>
-                  )}
-                </pre>
-              </details>
-            )}
-          </div>
+          {reset && (
+            <button
+              onClick={reset}
+              className="px-6 py-3 bg-foreground text-background font-bold rounded hover:opacity-90 transition-opacity"
+            >
+              Try Again
+            </button>
+          )}
+          {process.env.NODE_ENV === "development" && (
+            <details className="mt-4 text-left">
+              <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground">
+                Error details
+              </summary>
+              <pre className="mt-2 text-xs bg-muted p-2 rounded overflow-auto">
+                {error.message}
+                {error.stack && (
+                  <div className="mt-2 text-muted-foreground">
+                    {error.stack}
+                  </div>
+                )}
+                {error.digest && (
+                  <div className="mt-2 text-muted-foreground">
+                    Digest: {error.digest}
+                  </div>
+                )}
+              </pre>
+            </details>
+          )}
         </div>
       </body>
     </html>
