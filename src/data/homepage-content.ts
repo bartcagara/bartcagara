@@ -37,7 +37,7 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Fast-forward 6 months.",
       "Schedule's still crazy. But something's different.",
-      "**You walk into meetings feeling sharp. Your energy lights up the room. Your kids get the best version of you.**",
+      "**You walk into meetings looking sharp. Your energy lights up the room. Your kids get the best version of you.**",
       "* Your training adjusts to your schedule. You keep building muscle instead of punishing yourself for missing sessions.",
       "* Your nutrition works on the road. No more protocols that can't survive your week. You stop overthinking food.",
       "**The athlete and the founder are finally the same guy.**",
