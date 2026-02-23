@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
                                         Client Breakthroughs
                                     </h2>
                                     <p className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                        How a guy like Drew—entrepreneur, former athlete, father of two—couldn&apos;t get back in shape no matter what he tried. Then his schedule got even more chaotic, he started traveling, and everything clicked. 34 lbs down, best shape of his life.
+                                        Real stories from former-athlete founders who cracked it. Like Drew - father of two - couldn&apos;t get back in shape no matter what he tried. Then his schedule got even more chaotic. He started traveling more. That&apos;s when everything clicked. 34 lbs down. Best shape of his life.
                                     </p>
                                 </div>
 
@@ -125,7 +125,7 @@ export default function BriefingOptinPage() {
                                         Personal Insights
                                     </h2>
                                     <p className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                        It&apos;s the only space online where I don&apos;t pull any punches. On fitness, life, guilt, shame, workaholism... and how I battle them daily to become a better father, coach, and business owner.
+                                        On fitness, life, guilt, shame, workaholism - and how I deal with it all to become a better founder, father, and coach. No &apos;look at me&apos; garbage. Just the unfiltered truth.
                                     </p>
                                 </div>
                             </div>
