@@ -27,7 +27,7 @@ export const HOMEPAGE_CONTENT = {
       "* Diets don't stick. You forget to eat between meetings and inhale everything at night.",
       "* Hiring a trainer feels absurd. Getting lectured on consistency by someone who's never built a business gets old fast.",
       "**So you wait until things slow down.**",
-      "They never do. Not with the life you've chosen.",
+      "But they never do. Not with the life you've chosen.",
     ],
   },
 
@@ -102,7 +102,7 @@ export const HOMEPAGE_CONTENT = {
       body: [
         "I don't believe in hype, chest-beating, or yelling at you every week.",
         "I believe in the art of conversation. Two men sitting down, dropping their guard, getting to the bottom of what's actually broken.",
-        "**The program adapts to your schedule. The nutrition works on the road. But it's the identity work - done in those sessions - that makes any of it last.**",
+        "**The training adapts to your schedule. The nutrition works on the road. But it's the identity work - done in those sessions - that makes any of it last.**",
       ],
     },
   },
