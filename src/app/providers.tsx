@@ -36,8 +36,9 @@ if (typeof window !== 'undefined') {
         }
       }
 
-      // Only start session recording after real user interaction.
-      // Bots produce zero clicks/scrolls/mouse movement, so they never trigger this.
+      // Only start session recording after deliberate user interaction.
+      // mousemove/scroll fire passively (cursor on page, scroll restoration),
+      // so use only events that require intentional action.
       let recordingStarted = false;
       const startRecording = () => {
         if (recordingStarted) return;
@@ -47,7 +48,7 @@ if (typeof window !== 'undefined') {
           window.removeEventListener(evt, startRecording, { capture: true })
         );
       };
-      const interactionEvents = ['mousemove', 'click', 'scroll', 'keydown', 'touchstart'];
+      const interactionEvents = ['click', 'keydown', 'touchstart', 'pointerdown', 'wheel'];
       interactionEvents.forEach((evt) =>
         window.addEventListener(evt, startRecording, { capture: true, once: false, passive: true })
       );
