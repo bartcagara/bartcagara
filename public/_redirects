@@ -1,0 +1,3 @@
+# Redirect /home to root (Cloudflare Pages)
+/home / 301
+/home/ / 301
