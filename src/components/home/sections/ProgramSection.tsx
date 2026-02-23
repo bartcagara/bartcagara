@@ -83,9 +83,11 @@ export function ProgramSection({ title, subtitle, phases, methodology }: Program
 
         {/* METHODOLOGY SEPARATOR */}
         <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
-          <p className="text-2xl md:text-3xl font-black text-white leading-tight">
-            {methodology.headline}
-          </p>
+          {methodology.headline && (
+            <p className="text-2xl md:text-3xl font-black text-white leading-tight">
+              {methodology.headline}
+            </p>
+          )}
           {methodology.body.map((paragraph, index) => {
             const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
             const text = isBold ? paragraph.slice(2, -2) : paragraph;
