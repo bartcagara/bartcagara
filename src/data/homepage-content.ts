@@ -18,7 +18,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "TAKING YOUR SHIRT OFF\nSHOULDN'T COST YOU STATUS",
+    title: "Taking your shirt off ruins the whole thing",
     subtitle: "",
     items: [
       "Your kids call you to join them in the pool.",
@@ -32,12 +32,12 @@ export const HOMEPAGE_CONTENT = {
   },
 
   solution: {
-    title: "YOUR BODY COMMUNICATES\nWHO YOU REALLY ARE",
+    title: "Your body proves you still got it",
     subtitle: "",
     items: [
       "Fast-forward 6 months.",
       "Schedule's still crazy. But something's different.",
-      "**You walk into meetings feeling sharp. Your energy lights up the room. Your kids get the best version of you.**",
+      "**You walk into meetings looking sharp. Your energy lights up the room. Your kids get the best version of you.**",
       "* Your training adjusts to your schedule. You keep building muscle instead of punishing yourself for missing sessions.",
       "* Your nutrition works on the road. No more protocols that can't survive your week. You stop overthinking food.",
       "**The athlete and the founder are finally the same guy.**",
