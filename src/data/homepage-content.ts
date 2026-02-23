@@ -23,9 +23,9 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Your kids call you to join them in the pool.",
       "You wave. \"I'll come in later.\" You never do.",
-      "Not because you don't want to. Because taking your shirt off in public would instantly lower your status.",
+      "**Not because you don't want to. Because taking your shirt off in public would instantly lower your status.**",
       "* Diets don't stick. You forget to eat between meetings and inhale everything at night.",
-      "* Hiring a trainer feels absurd. Getting lectured on consistency by someone who's never built anything gets old fast.",
+      "* Hiring a trainer feels absurd. Getting lectured on consistency by someone who's never built a business gets old fast.",
       "**So you wait until things slow down.**",
       "They never do. Not with the life you've chosen.",
     ],
@@ -37,9 +37,9 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Fast-forward 6 months.",
       "Schedule's still crazy. But something's different.",
-      "You walk into meetings feeling sharp. Clothes fit. Energy lights up the room.",
+      "**You walk into meetings feeling sharp. Your energy lights up the room. Your kids get the best version of you.**",
       "* Your training adjusts to your schedule. You keep building muscle instead of punishing yourself for missing sessions.",
-      "* Your nutrition works on the road. No protocols that can't survive your week. You stop overthinking food.",
+      "* Your nutrition works on the road. No more protocols that can't survive your week. You stop overthinking food.",
       "**The athlete and the founder are finally the same guy.**",
       "You didn't wait for things to slow down.",
     ],
