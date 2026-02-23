@@ -58,7 +58,7 @@ export const HOMEPAGE_CONTENT = {
 
   program: {
     title: "FOUNDER\nATHLETE OS",
-    subtitle: "Six months to reclaim your body and rebuild your identity.",
+    subtitle: "Six months to reclaim your body and your identity.",
     phases: [
       {
         number: "01",
@@ -66,9 +66,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 1-4",
         focus: "IMMEDIATE CONTROL",
         items: [
-          "**Nutrition Baseline** - You start eating the way you like—and get results",
-          "**Training Baseline** - You build strength and master form—no wasted time in the gym",
-          "**Pattern Recognition** - We study what made you quit before and build momentum",
+          "**Nutrition Baseline** - You start eating the way you like and getting results",
+          "**Training Baseline** - You build strength and master form. No wasted time in the gym.",
+          "**Pattern Recognition** - We figure out exactly what made you quit before and cut it off at the source",
         ],
         win: "You drop 10-15 lbs. Your energy returns. You understand why you've been failing.",
       },
@@ -78,9 +78,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Physique Construction** - Your training evolves. Your body starts looking athletic",
-          "**Travel-Proofing** - Restaurants, airports, hotel gyms—handled",
-          "**Bloodwork Optimization** - We go beyond basic improvements. We optimize for performance and longevity",
+          "**Physique Construction** - Your training evolves. Your body starts looking athletic again",
+          "**Travel-Proofing** - Restaurants, airports, hotel gyms. Handled.",
+          "**Bloodwork Optimization** - We optimize for performance and longevity, not just basic improvements",
         ],
         win: "Clothes fit different. People notice. You feel like yourself again.",
       },
@@ -90,19 +90,19 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 13-24",
         focus: "FULL AUTONOMY",
         items: [
-          "**Life Integration** - Vacations, pivots, chaos—nothing derails you",
-          "**Training Refinement** - We address weak points and adjust your program for the future",
-          "**Mindset Mastery** - Future-proofing and continuous identity work",
+          "**Life Integration** - Vacations, pivots, chaos. Nothing derails you.",
+          "**Training Refinement** - We eliminate weak points and build a program that outlasts our work together",
+          "**Identity Work** - You close the gap between who you are and how you show up. For good.",
         ],
         win: "You fire me. You own this. Forever.",
       },
     ],
     methodology: {
-      headline: "All delivered in a high-touch coaching environment.",
+      headline: "",
       body: [
         "I don't believe in hype, chest-beating, or yelling at you every week.",
-        "**I believe in the art of conversation.**",
-        "Two men sitting down, dropping their guard, picking apart what's broken, and doing the work that actually changes things.",
+        "I believe in the art of conversation. Two men sitting down, dropping their guard, getting to the bottom of what's actually broken.",
+        "**The program adapts to your schedule. The nutrition works on the road. But it's the identity work - done in those sessions - that makes any of it last.**",
       ],
     },
   },
