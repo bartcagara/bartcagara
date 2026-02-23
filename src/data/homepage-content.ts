@@ -18,7 +18,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "TAKING YOUR SHIRT OFF\nSHOULDN'T COST YOU STATUS",
+    title: "Taking your shirt off ruins the whole thing",
     subtitle: "",
     items: [
       "Your kids call you to join them in the pool.",
@@ -32,7 +32,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   solution: {
-    title: "YOUR BODY COMMUNICATES\nWHO YOU REALLY ARE",
+    title: "Your body proves you still got it",
     subtitle: "",
     items: [
       "Fast-forward 6 months.",
