@@ -18,18 +18,18 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "YOUR BODY CAN'T\nCARRY YOUR VISION",
+    title: "TAKING YOUR SHIRT OFF\nSHOULDN'T COST YOU STATUS",
     subtitle: "",
     items: [
-      "You're on vacation with your family.",
       "Your kids call you to join them in the pool.",
       "You wave. \"I'll come in later.\"",
-      "But you never do.",
-      "You tell yourself it's work. Noble excuse. It supports the family.",
-      "**But the truth?**",
-      "You're too self-conscious to take your shirt off.",
-      "So you sit there. Phone in hand. Watching your kids grow up from the sidelines.",
-      "**Not because you're busy. Because your body won't let you be present.**",
+      "You never do.",
+      "Not because you don't want to.",
+      "**Because taking your shirt off in public would instantly lower your status.**",
+      "You used to be someone whose body communicated work ethic.",
+      "That guy is still in there. The mirror just stopped showing him.",
+      "**And that gap — between who you are and how you show up — bleeds into everything.**",
+      "The work. The marriage. The kids.",
     ],
   },
 
