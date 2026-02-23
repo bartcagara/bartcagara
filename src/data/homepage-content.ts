@@ -132,9 +132,9 @@ export const HOMEPAGE_CONTENT = {
     highlightedText: "6 months.",
     body: [
       "Your business will be further along. Will your body?",
-      "Or will you still be running on caffeine, takeout, and borrowed time—watching your kids from the sidelines because you're too self-conscious to join them?",
+      "Or will you still be drained, self-conscious, watching your kids from the sidelines?",
       "**If that sits wrong, let's talk.**",
-      "You'll walk away with clarity—whether we work together or not.",
+      "You'll walk away with clarity - whether we work together or not.",
     ],
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
