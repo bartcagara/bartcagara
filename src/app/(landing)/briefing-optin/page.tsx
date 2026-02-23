@@ -104,8 +104,8 @@ export default function BriefingOptinPage() {
                             {/* INTRO COPY - Direct Value Proposition */}
                             <div className="mb-10">
                                 <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                    <span className="block text-bleu-nuit/40 mb-2 font-medium">No basic fitness tips. No 5-minute workouts. No high-protein recipes.</span>
-                                    <span className="block text-bleu-nuit">Just the real stuff like:</span>
+                                    <span className="block text-bleu-nuit/40 mb-2 font-medium">You&apos;ve tried the basic fitness tips. They never stick.</span>
+                                    <span className="block text-bleu-nuit">Here&apos;s what I actually cover:</span>
                                 </p>
                             </div>
 

@@ -162,8 +162,6 @@ export function OptinForm() {
 
         <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
           One email every Sunday. No punches pulled.
-          <br />
-          Read in 2 minutes.
         </p>
       </form>
     </div>
