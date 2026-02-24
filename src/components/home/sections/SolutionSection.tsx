@@ -26,9 +26,7 @@ export function SolutionSection({ title, subtitle, items }: SolutionSectionProps
             if (isBullet) {
               return (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex-shrink-0 p-1 bg-green-500 rounded-full text-white">
-                    <Check className="w-5 h-5" strokeWidth={3} aria-hidden="true" />
-                  </div>
+                  <Check className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
                   <p className="text-xl md:text-2xl font-medium text-white/80 leading-relaxed">
                     {text}
                   </p>
