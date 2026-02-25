@@ -26,9 +26,7 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
             if (isBullet) {
               return (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="mt-1 flex-shrink-0 p-1 bg-red-500 rounded-full text-white">
-                    <X className="w-5 h-5" strokeWidth={3} aria-hidden="true" />
-                  </div>
+                  <X className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
                   <p className="text-xl md:text-2xl font-medium text-bleu-nuit/80 leading-relaxed">
                     {text}
                   </p>
