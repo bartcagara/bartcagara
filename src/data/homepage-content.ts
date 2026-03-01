@@ -43,7 +43,7 @@ export const HOMEPAGE_CONTENT = {
       "**Not calculating. Not managing. Just there.**",
       "Your wife sees it. So do the other wives.",
       "You didn't notice when it happened.",
-      "**That's how you know it's real.**",
+      "**That's how you know it's real this time.**",
     ],
   },
 
