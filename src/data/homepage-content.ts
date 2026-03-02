@@ -41,7 +41,7 @@ export const HOMEPAGE_CONTENT = {
       "**You just look up and realize the noise is gone.**",
       "You're on the beach with your kids. Shirt's off. You're already in the game before they finish asking.",
       "**Not calculating. Not managing. Just there.**",
-      "Your wife sees it. Other women notice.",
+      "Your wife sees it. So do the other wives.",
       "You didn't notice when it happened.",
       "**That's how you know it's real this time.**",
     ],
