@@ -116,19 +116,19 @@ export default function BriefingOptinPage() {
                             {/* BULLETS */}
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
-                                        Documented stories of founders who lost 30+ lbs &mdash; after every program failed them.
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
+                                        Documented stories of founders &amp; execs who finally lost 30+ lbs &mdash; after every program failed them.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
                                         The identity shifts &mdash; not habit hacks &mdash; that survive real crises and drive lasting transformations.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
                                         Me &mdash; raw, dealing with my own bullshit, guilt as a father, and fear as a provider.
                                     </p>
                                 </div>
