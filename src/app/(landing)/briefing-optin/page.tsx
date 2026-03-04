@@ -117,13 +117,13 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
-                                        How clients &mdash; founders &amp; execs whose schedule destroyed every diet and program &mdash; finally lost 30+ lbs.
+                                        Real stories of founders &amp; execs &mdash; whose schedule destroyed every diet and program &mdash; finally losing 30+ lbs.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
-                                        The identity shifts &mdash; not habit hacks &mdash; that survive real crisis
+                                        The identity shifts &mdash; not habit hacks &mdash; that survive real crises and drive lasting transformations.
                                     </p>
                                 </div>
 
