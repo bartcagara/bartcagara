@@ -101,31 +101,35 @@ export default function BriefingOptinPage() {
                     {/* Right Column: Content & Form */}
                     <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                         <div className="max-w-md w-full">
-                            {/* INTRO COPY - Direct Value Proposition */}
+                            {/* WARNING */}
+                            <p className="text-lg md:text-xl text-bleu-nuit/40 font-bold leading-tight mb-10">
+                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
+                            </p>
+
+                            {/* INTRO COPY */}
                             <div className="mb-10">
-                                <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                    <span className="block text-bleu-nuit/40 mb-2 font-medium">You&apos;ve tried the basic fitness tips. They never stick.</span>
-                                    <span className="block text-bleu-nuit">Here&apos;s what I actually cover:</span>
+                                <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                    What you get:
                                 </p>
                             </div>
 
-                            {/* BULLETS - Clean, High-Contrast */}
-                            <div className="space-y-8 mb-12">
-                                <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                    <h2 className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                        Client Breakthroughs
-                                    </h2>
-                                    <p className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                        Real stories from former-athlete founders who cracked it. Like Drew - father of two - couldn&apos;t get back in shape no matter what he tried. Then his schedule got even more chaotic. He started traveling more. That&apos;s when everything clicked. 34 lbs down. Best shape of his life.
+                            {/* BULLETS */}
+                            <div className="space-y-6 mb-12">
+                                <div className="pl-6 border-l-4 border-bleu-nuit">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                        Real stories of founders &amp; execs &mdash; whose schedule destroyed every diet and program &mdash; finally losing 30+ lbs.
                                     </p>
                                 </div>
 
-                                <div className="pl-6 border-l-4 border-bleu-nuit group hover:border-bleu-accent transition-colors duration-300">
-                                    <h2 className="text-xl md:text-2xl text-bleu-nuit font-black uppercase tracking-tighter block mb-1 group-hover:text-bleu-accent transition-colors">
-                                        Personal Insights
-                                    </h2>
-                                    <p className="text-base text-bleu-nuit/70 font-medium leading-relaxed">
-                                        On fitness, life, guilt, shame, workaholism - and how I deal with it all to become a better founder, father, and coach. No &apos;look at me&apos; garbage. Just the unfiltered truth.
+                                <div className="pl-6 border-l-4 border-bleu-nuit">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                        The identity shifts &mdash; not habit hacks &mdash; that survive real crises and drive lasting transformations.
+                                    </p>
+                                </div>
+
+                                <div className="pl-6 border-l-4 border-bleu-nuit">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                        Me &mdash; raw, dealing with my own bullshit, guilt as a father, and fear as a provider.
                                     </p>
                                 </div>
                             </div>
