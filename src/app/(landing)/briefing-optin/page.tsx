@@ -104,10 +104,6 @@ export default function BriefingOptinPage() {
                             {/* INTRO COPY */}
                             <div className="mb-10">
                                 <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                    <span className="block text-bleu-nuit/40 mb-2 font-medium uppercase tracking-tighter text-base md:text-base">Warning</span>
-                                    You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
-                                </p>
-                                <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight mt-4">
                                     What you get:
                                 </p>
                             </div>
@@ -115,27 +111,32 @@ export default function BriefingOptinPage() {
                             {/* BULLETS */}
                             <div className="space-y-6 mb-10">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-base text-bleu-nuit/80 font-medium leading-relaxed">
-                                        How clients &mdash; whose schedule destroyed every diet and program &mdash; finally lost 30+ lbs.
+                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
+                                        How clients &mdash; founders &amp; execs whose schedule destroyed every diet and program &mdash; finally lost 30+ lbs.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-base text-bleu-nuit/80 font-medium leading-relaxed">
+                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
                                         The identity shifts &mdash; not habit hacks &mdash; that survive real crisis
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-base text-bleu-nuit/80 font-medium leading-relaxed">
+                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
                                         Me &mdash; raw, dealing with my own limitations, guilt as a father, fear as a provider
                                     </p>
                                 </div>
                             </div>
 
                             {/* CLOSING LINE */}
-                            <p className="text-base text-bleu-nuit/60 font-medium leading-relaxed mb-12">
+                            <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight mb-6">
                                 The real shit. Not the perfect world nobody sticks to for more than a few weeks.
+                            </p>
+
+                            {/* WARNING */}
+                            <p className="text-xl md:text-2xl text-bleu-nuit/40 font-bold leading-tight mb-12">
+                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
                             </p>
 
                             <OptinForm />
