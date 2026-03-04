@@ -101,43 +101,38 @@ export default function BriefingOptinPage() {
                     {/* Right Column: Content & Form */}
                     <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                         <div className="max-w-md w-full">
+                            {/* WARNING */}
+                            <p className="text-lg md:text-xl text-bleu-nuit/40 font-bold leading-tight mb-10">
+                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
+                            </p>
+
                             {/* INTRO COPY */}
                             <div className="mb-10">
-                                <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
+                                <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
                                     What you get:
                                 </p>
                             </div>
 
                             {/* BULLETS */}
-                            <div className="space-y-6 mb-10">
+                            <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
                                         How clients &mdash; founders &amp; execs whose schedule destroyed every diet and program &mdash; finally lost 30+ lbs.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
                                         The identity shifts &mdash; not habit hacks &mdash; that survive real crisis
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight">
-                                        Me &mdash; raw, dealing with my own limitations, guilt as a father, fear as a provider
+                                    <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                        Me &mdash; raw, dealing with my own bullshit, guilt as a father, and fear as a provider.
                                     </p>
                                 </div>
                             </div>
-
-                            {/* CLOSING LINE */}
-                            <p className="text-xl md:text-2xl text-bleu-nuit font-bold leading-tight mb-6">
-                                The real shit. Not the perfect world nobody sticks to for more than a few weeks.
-                            </p>
-
-                            {/* WARNING */}
-                            <p className="text-xl md:text-2xl text-bleu-nuit/40 font-bold leading-tight mb-12">
-                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
-                            </p>
 
                             <OptinForm />
                         </div>
