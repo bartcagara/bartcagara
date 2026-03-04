@@ -103,7 +103,7 @@ export default function BriefingOptinPage() {
                         <div className="max-w-md w-full">
                             {/* WARNING */}
                             <p className="text-lg md:text-xl text-bleu-nuit/40 font-bold leading-tight mb-10">
-                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting office workouts, recipes no one sticks with, or cheap lectures about consistency.
+                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting protein recipes, office workouts, or cheap lectures about consistency.
                             </p>
 
                             {/* INTRO COPY */}
