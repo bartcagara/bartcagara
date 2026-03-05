@@ -123,7 +123,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        The identity shifts &mdash; not habit hacks &mdash; that survive real crises and drive lasting transformations.
+                                        The identity shifts &mdash; not habit hacks &mdash; that resurrect you after years of neglect and outlast any schedule crisis.
                                     </p>
                                 </div>
 
