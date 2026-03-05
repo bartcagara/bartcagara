@@ -129,7 +129,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        Me &mdash; unfiltered, sharing insights from almost a decade coaching high performers, dealing with my own BS like guilt as a father and fear as a provider.
+                                        Me &mdash; still fighting the battles every high performer faces privately: obsession with work, lack of presence, fear of failing the people who depend on you.
                                     </p>
                                 </div>
                             </div>
