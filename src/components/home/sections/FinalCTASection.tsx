@@ -1,4 +1,4 @@
-import { CTAButton } from "@/components/ui/CTAButton";
+import { CalendarEmbed } from "@/components/home/CalendarEmbed";
 import type { FinalCTASectionProps } from "@/components/home/types";
 
 /**
@@ -9,11 +9,9 @@ export function FinalCTASection({
   headline,
   highlightedText,
   body,
-  ctaText,
-  ctaLink
 }: FinalCTASectionProps) {
   return (
-    <section className="py-24 md:py-48 bg-bleu-nuit overflow-hidden" aria-labelledby="final-cta-title">
+    <section id="calendar-section" className="py-24 md:py-48 bg-bleu-nuit overflow-x-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
         <h2 id="final-cta-title" className="text-[15.5vw] md:text-[8rem] font-black uppercase tracking-tighter mb-12 leading-[0.85] text-white max-w-5xl">
           {headline}<br />
@@ -37,9 +35,9 @@ export function FinalCTASection({
             );
           })}
         </div>
-        <CTAButton href={ctaLink} variant="light">
-          {ctaText}
-        </CTAButton>
+        <div className="mt-12">
+          <CalendarEmbed />
+        </div>
       </div>
     </section>
   );
