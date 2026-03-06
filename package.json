@@ -12,6 +12,7 @@
         "test:coverage": "jest --coverage"
     },
     "dependencies": {
+        "@calcom/embed-react": "^1.5.3",
         "lucide-react": "^0.552.0",
         "next": "^16.1.1",
         "posthog-js": "^1.336.0",
