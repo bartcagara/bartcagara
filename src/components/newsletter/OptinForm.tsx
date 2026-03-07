@@ -83,7 +83,7 @@ export function OptinForm() {
       {/* Kit's form script - handles UTM tracking automatically */}
       <Script
         src="https://f.convertkit.com/ckjs/ck.5.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
       />
 
       <form
