@@ -1,7 +1,32 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { TransformationModal } from "@/components/home/TransformationModal";
 import type { AboutSectionProps } from "@/components/home/types";
+
+const TRANSFORMATION_MARKER = "{{transformation-link}}";
+
+function renderParagraphWithLink(text: string, onLinkClick: () => void) {
+  const parts = text.split(TRANSFORMATION_MARKER);
+  if (parts.length === 1) return text;
+
+  return (
+    <>
+      {parts[0]}
+      <button
+        type="button"
+        onClick={onLinkClick}
+        className="underline underline-offset-4 decoration-bleu-accent hover:text-bleu-accent transition-colors cursor-pointer"
+      >
+        (here&apos;s my actual transformation)
+      </button>
+      {parts[1]}
+    </>
+  );
+}
 
 /**
  * AboutSection - About Bart section
@@ -14,8 +39,11 @@ export function AboutSection({
   imageAlt,
   subhead,
   paragraphs,
+  transformationImage,
   credentials
 }: AboutSectionProps) {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section id="about" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -50,9 +78,10 @@ export function AboutSection({
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
                 const text = isBold ? paragraph.slice(2, -2) : paragraph;
+                const hasLink = text.includes(TRANSFORMATION_MARKER);
                 return (
                   <p key={index} className={isBold ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight" : ""}>
-                    {text}
+                    {hasLink ? renderParagraphWithLink(text, () => setModalOpen(true)) : text}
                   </p>
                 );
               })}
@@ -71,6 +100,15 @@ export function AboutSection({
           </div>
         </div>
       </div>
+
+      {transformationImage && (
+        <TransformationModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          imageSrc={transformationImage}
+          imageAlt="Bart Cagara's personal transformation"
+        />
+      )}
     </section>
   );
 }

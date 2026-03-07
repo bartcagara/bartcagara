@@ -120,11 +120,12 @@ export const HOMEPAGE_CONTENT = {
       "College changed that. Training fell off. By the time I graduated, the body was different.",
       "Then came years of trying to build businesses. No mission. No purpose. Everything I touched failed. The body was just the part that showed it on the outside.",
       "Tail between my legs, I took a job at a fitness startup.",
-      "It rebuilt me. Surrounded by coaches and nutritionists who knew things I didn't, I went after it - the body, the mind, the sense of purpose I'd lost. For the first time in years, I recognized myself again.",
+      "It rebuilt me. Surrounded by coaches and nutritionists who knew things I didn't, I went after it - the body, the mind, the sense of purpose I'd lost. For the first time in years, I recognized myself again {{transformation-link}}.",
       "That's when I built this.",
       "**I've been coaching founders and former athletes since 2019. The guys I always hit it off with were like me - athletic kids who built a business, body paid the price, not quite themselves in their own skin. Privately fighting demons that slowly kill their presence and their confidence.**",
       "**My son is watching. I built this so he grows up with a dad who's actually himself.**",
     ],
+    transformationImage: "/images/home/bart-transformation.jpg",
     credentials: ["Sports Nutritionist", "Performance Coach"],
   },
 
