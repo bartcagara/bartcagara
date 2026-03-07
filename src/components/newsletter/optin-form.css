@@ -86,3 +86,9 @@
 .formkit-form[data-uid="8a3adb8456"] .formkit-powered-by-convertkit-container {
   display: none !important;
 }
+
+/* Prevent Kit from showing overlay/modal/backdrop on this inline form */
+.formkit-overlay,
+.formkit-close {
+  display: none !important;
+}
