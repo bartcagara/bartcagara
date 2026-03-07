@@ -125,7 +125,7 @@ export const HOMEPAGE_CONTENT = {
       "**I've been coaching founders and former athletes since 2019. The guys I always hit it off with were like me - athletic kids who built a business, body paid the price, not quite themselves in their own skin. Privately fighting demons that slowly kill their presence and their confidence.**",
       "**My son is watching. I built this so he grows up with a dad who's actually himself.**",
     ],
-    transformationImage: "/images/home/bart-transformation.jpg",
+    transformationImage: "/images/transformations/bart-transformation.webp",
     credentials: ["Sports Nutritionist", "Performance Coach"],
   },
 
