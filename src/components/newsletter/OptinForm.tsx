@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
 import { usePostHog } from "posthog-js/react";
 import { ArrowRight } from "lucide-react";
 import Script from "next/script";
@@ -8,12 +8,14 @@ import "./optin-form.css";
 
 export function OptinForm() {
   const posthog = usePostHog();
-  const [referrer, setReferrer] = useState("");
+  const referrerRef = useRef<HTMLInputElement>(null);
 
   // Capture referrer (full page URL with UTM params) on mount
+  // Use a ref to avoid re-rendering, which would strip Kit's event handlers
   useEffect(() => {
-    // Use full page URL as referrer so Kit can parse UTM params from it
-    setReferrer(window.location.href);
+    if (referrerRef.current) {
+      referrerRef.current.value = window.location.href;
+    }
   }, []);
 
   // Track form submission via Kit's custom event
@@ -104,7 +106,7 @@ export function OptinForm() {
         ></ul>
 
         {/* Hidden referrer field with full page URL for UTM tracking */}
-        <input type="hidden" name="referrer" value={referrer} />
+        <input type="hidden" name="referrer" ref={referrerRef} defaultValue="" />
 
         <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-6">
           {/* First Name */}
