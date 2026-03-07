@@ -112,7 +112,7 @@ export const HOMEPAGE_CONTENT = {
   about: {
     title: "WHO THE FUCK",
     subtitle: "IS BART?",
-    imageSrc: "/images/home/bart-and-son-2.jpg",
+    imageSrc: "/images/home/bart-and-son-2.webp",
     imageAlt: "Bart Cagara with his son",
     subhead: "Fair question.",
     paragraphs: [
