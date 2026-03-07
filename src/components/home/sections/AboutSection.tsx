@@ -21,7 +21,7 @@ function renderParagraphWithLink(text: string, onLinkClick: () => void) {
         onClick={onLinkClick}
         className="underline underline-offset-4 decoration-bleu-accent hover:text-bleu-accent transition-colors cursor-pointer"
       >
-        (here&apos;s my actual transformation)
+        here it is
       </button>
       {parts[1]}
     </>
@@ -77,10 +77,17 @@ export function AboutSection({
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-                const text = isBold ? paragraph.slice(2, -2) : paragraph;
+                const isFootnote = paragraph.startsWith('*') && !isBold;
+                const text = isBold ? paragraph.slice(2, -2) : isFootnote ? paragraph : paragraph;
                 const hasLink = text.includes(TRANSFORMATION_MARKER);
                 return (
-                  <p key={index} className={isBold ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight" : ""}>
+                  <p key={index} className={
+                    isBold
+                      ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight"
+                      : isFootnote
+                        ? "text-base md:text-lg text-bleu-nuit/60 italic"
+                        : ""
+                  }>
                     {hasLink ? renderParagraphWithLink(text, () => setModalOpen(true)) : text}
                   </p>
                 );

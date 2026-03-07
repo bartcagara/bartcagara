@@ -33,7 +33,7 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-2 sm:p-4"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
@@ -41,13 +41,13 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
     >
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 z-10 p-2 text-white hover:text-white/70 transition-colors"
+        className="absolute top-3 right-3 sm:top-6 sm:right-6 z-10 p-2 text-white hover:text-white/70 transition-colors"
         aria-label="Close"
       >
-        <X className="w-8 h-8" strokeWidth={2.5} />
+        <X className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={2.5} />
       </button>
       <div
-        className="relative max-w-3xl w-full max-h-[90vh]"
+        className="relative w-full h-full flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
         <Image
@@ -55,7 +55,7 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
           alt={imageAlt}
           width={1080}
           height={1080}
-          className="w-full h-auto max-h-[90vh] object-contain rounded"
+          className="max-w-full max-h-[calc(100vh-2rem)] sm:max-h-[90vh] object-contain rounded"
           priority
         />
       </div>
