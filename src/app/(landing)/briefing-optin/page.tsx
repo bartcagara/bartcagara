@@ -163,6 +163,51 @@ export default function BriefingOptinPage() {
                     </div>
                 </section>
 
+                {/* About Section */}
+                <section className="py-24 md:py-32 border-t-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
+                    <div className="max-w-7xl mx-auto px-6">
+                        <div className="mb-24">
+                            <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_var(--bleu-nuit)]">
+                                The Coach
+                            </span>
+                            <h2 id="about-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
+                                WHO THE FUCK<br />IS BART?
+                            </h2>
+                            <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
+                                Fair question.
+                            </p>
+                        </div>
+
+                        <div className="grid md:grid-cols-2 gap-12 md:gap-32 items-start">
+                            {/* Image */}
+                            <div className="p-4 border-2 border-bleu-nuit bg-white shadow-[8px_8px_0px_0px_var(--bleu-nuit)]">
+                                <div className="aspect-[4/5] relative border-2 border-bleu-nuit">
+                                    <Image
+                                        src="/images/home/bart-and-son-briefing.jpg"
+                                        alt="Bart Cagara with his son"
+                                        fill
+                                        loading="lazy"
+                                        className="object-cover"
+                                        sizes="(max-width: 768px) 100vw, 50vw"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
+                                <p>I was an athletic kid. Sports was identity.</p>
+                                <p>College changed that. Training fell off. By the time I graduated, the body was different.</p>
+                                <p>Then came years of trying to build businesses. No mission. No purpose. Everything I touched failed. The body was just the part that showed it on the outside.</p>
+                                <p>Tail between my legs, I took a job at a fitness startup.</p>
+                                <p>It rebuilt me. Surrounded by coaches and nutritionists who knew things I didn&apos;t, I went after it - the body, the mind, the sense of purpose I&apos;d lost. For the first time in years, I recognized myself again.</p>
+                                <p>That&apos;s when I built this.</p>
+                                <p className="text-2xl md:text-3xl text-bleu-nuit font-black leading-tight">I&apos;ve been coaching founders and former athletes since 2019. The guys I always hit it off with were like me - athletic kids who built a business, body paid the price, not quite themselves in their own skin. Privately fighting demons that slowly kill their presence and their confidence.</p>
+                                <p className="text-2xl md:text-3xl text-bleu-nuit font-black leading-tight">My son is watching. I built this so he grows up with a dad who&apos;s actually himself.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 {/* Back to Main Site */}
                 <nav className="py-6 text-center border-t border-bleu-nuit/10" aria-label="Back to main site">
                     <Link href="/" className="text-sm text-bleu-nuit/50 hover:text-bleu-accent transition-colors font-medium">
