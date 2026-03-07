@@ -79,6 +79,8 @@ export function ResultsSection() {
                         data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
                         data-mode="shadow"
                         data-lazyload="true"
+                        role="region"
+                        aria-label="Client testimonials"
                     />
                 </ScrollSection>
             </div>

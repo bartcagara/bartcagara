@@ -118,10 +118,11 @@ export function OptinForm() {
             <button
               type="submit"
               disabled={status === "submitting"}
+              aria-busy={status === "submitting"}
               className="formkit-submit w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "submitting" && (
-                <div className="formkit-spinner" style={{ display: "flex" }}>
+                <div className="formkit-spinner flex">
                   <div></div>
                   <div></div>
                   <div></div>

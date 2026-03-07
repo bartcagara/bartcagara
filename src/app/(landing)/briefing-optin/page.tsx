@@ -78,9 +78,8 @@ export default function BriefingOptinPage() {
             <div className="min-h-screen bg-white flex flex-col">
                 <div className="flex flex-col md:flex-row min-h-screen">
                     {/* Left Column: Heading Only */}
-                    <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24 relative overflow-hidden">
-                        <div className="absolute inset-0 opacity-10" aria-hidden="true"></div>
-                        <div className="relative z-10 max-w-xl">
+                    <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
+                        <div className="max-w-xl">
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
                                 The Newsletter
