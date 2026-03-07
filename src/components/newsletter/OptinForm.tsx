@@ -1,112 +1,74 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useRef, useState } from "react";
 import { usePostHog } from "posthog-js/react";
 import { ArrowRight } from "lucide-react";
-import Script from "next/script";
 import "./optin-form.css";
 
 export function OptinForm() {
   const posthog = usePostHog();
-  const referrerRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  // Capture referrer (full page URL with UTM params) on mount
-  // Use a ref to avoid re-rendering, which would strip Kit's event handlers
-  useEffect(() => {
-    if (referrerRef.current) {
-      referrerRef.current.value = window.location.href;
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (status === "submitting") return;
+
+    const form = formRef.current;
+    if (!form) return;
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    const formData = new FormData(form);
+    // Add referrer for UTM tracking
+    formData.set("referrer", window.location.href);
+
+    try {
+      const res = await fetch("https://app.kit.com/forms/8922850/subscriptions", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        posthog?.capture("newsletter_signup_completed");
+      } else {
+        setStatus("error");
+        setErrorMessage("Something went wrong. Please try again.");
+      }
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Please check your connection and try again.");
     }
-  }, []);
+  }
 
-  // Track form submission via Kit's custom event
-  useEffect(() => {
-    const handleKitSuccess = () => {
-      posthog?.capture("newsletter_signup_completed");
-    };
-
-    // Kit fires this event on successful submission
-    window.addEventListener("ck:form:success", handleKitSuccess);
-    return () => {
-      window.removeEventListener("ck:form:success", handleKitSuccess);
-    };
-  }, [posthog]);
-
-  const dataOptions = JSON.stringify({
-    settings: {
-      after_subscribe: {
-        action: "message",
-        success_message: "Success! Now check your email to confirm your subscription.",
-        redirect_url: "",
-      },
-      analytics: {
-        google: null,
-        fathom: null,
-        facebook: null,
-        segment: null,
-        pinterest: null,
-        sparkloop: null,
-        googletagmanager: null,
-      },
-      modal: {
-        trigger: "none",
-        scroll_percentage: null,
-        timer: null,
-        devices: "all",
-        show_once_every: 15,
-      },
-      powered_by: {
-        show: false,
-        url: "https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic",
-      },
-      recaptcha: { enabled: false },
-      return_visitor: { action: "show", custom_content: "" },
-      slide_in: {
-        display_in: "bottom_right",
-        trigger: "none",
-        scroll_percentage: null,
-        timer: null,
-        devices: "all",
-        show_once_every: 15,
-      },
-      sticky_bar: {
-        display_in: "top",
-        trigger: "none",
-        scroll_percentage: null,
-        timer: null,
-        devices: "all",
-        show_once_every: 15,
-      },
-    },
-    version: "5",
-  });
+  if (status === "success") {
+    return (
+      <div className="w-full">
+        <div className="formkit-alert formkit-alert-success">
+          Success! Now check your email to confirm your subscription.
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full">
-      {/* Kit's form script - handles UTM tracking automatically */}
-      <Script
-        src="https://f.convertkit.com/ckjs/ck.5.js"
-        strategy="afterInteractive"
-      />
-
       <form
-        action="https://app.kit.com/forms/8922850/subscriptions"
-        method="post"
-        data-sv-form="8922850"
-        data-uid="8a3adb8456"
-        data-format="inline"
-        data-version="5"
-        data-options={dataOptions}
+        ref={formRef}
+        onSubmit={handleSubmit}
         className="seva-form formkit-form space-y-6"
+        data-uid="8a3adb8456"
       >
-        {/* Kit's error container */}
-        <ul
-          className="formkit-alert formkit-alert-error hidden"
-          data-element="errors"
-          data-group="alert"
-        ></ul>
-
-        {/* Hidden referrer field with full page URL for UTM tracking */}
-        <input type="hidden" name="referrer" ref={referrerRef} defaultValue="" />
+        {/* Error message */}
+        {status === "error" && errorMessage && (
+          <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert">
+            <li>{errorMessage}</li>
+          </ul>
+        )}
 
         <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-6">
           {/* First Name */}
@@ -147,17 +109,18 @@ export function OptinForm() {
           <div className="pt-6">
             <button
               type="submit"
-              data-element="submit"
+              disabled={status === "submitting"}
               className="formkit-submit w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {/* Kit's loading spinner */}
-              <div className="formkit-spinner hidden">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-              <span>Get The Briefing</span>
-              <ArrowRight className="w-6 h-6" />
+              {status === "submitting" && (
+                <div className="formkit-spinner" style={{ display: "flex" }}>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              )}
+              <span>{status === "submitting" ? "Subscribing..." : "Get The Briefing"}</span>
+              {status !== "submitting" && <ArrowRight className="w-6 h-6" />}
             </button>
           </div>
         </div>
