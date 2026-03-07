@@ -47,10 +47,18 @@ export function OptinForm() {
 
   if (status === "success") {
     return (
-      <div className="w-full">
-        <div className="formkit-alert formkit-alert-success">
-          Success! Now check your email to confirm your subscription.
+      <div className="w-full flex flex-col items-center justify-center py-12 text-center">
+        <div className="flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 border-bleu-nuit shadow-brutal-sm">
+          <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
         </div>
+        <p className="text-2xl font-black uppercase tracking-tighter text-bleu-nuit">
+          You&apos;re in.
+        </p>
+        <p className="mt-2 text-base font-bold text-bleu-nuit/70">
+          Now check your email to confirm your subscription.
+        </p>
       </div>
     );
   }
