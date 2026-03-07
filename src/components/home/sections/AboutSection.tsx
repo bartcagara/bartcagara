@@ -85,7 +85,7 @@ export function AboutSection({
                     isBold
                       ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight"
                       : isFootnote
-                        ? "text-base md:text-lg text-bleu-nuit/60 italic"
+                        ? "text-xl md:text-2xl text-bleu-nuit/60 italic"
                         : ""
                   }>
                     {hasLink ? renderParagraphWithLink(text, () => setModalOpen(true)) : text}

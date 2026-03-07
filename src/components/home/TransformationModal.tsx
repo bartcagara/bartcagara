@@ -39,23 +39,23 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
       aria-modal="true"
       aria-label="Transformation photo"
     >
-      <button
-        onClick={onClose}
-        className="absolute top-3 right-3 sm:top-6 sm:right-6 z-10 p-2 text-white hover:text-white/70 transition-colors"
-        aria-label="Close"
-      >
-        <X className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={2.5} />
-      </button>
       <div
-        className="relative w-full h-full flex items-center justify-center"
+        className="relative flex flex-col items-end max-w-3xl w-full"
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          onClick={onClose}
+          className="mb-2 p-1 text-white hover:text-white/70 transition-colors"
+          aria-label="Close"
+        >
+          <X className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={2.5} />
+        </button>
         <Image
           src={imageSrc}
           alt={imageAlt}
           width={1080}
           height={1080}
-          className="max-w-full max-h-[calc(100vh-2rem)] sm:max-h-[90vh] object-contain rounded"
+          className="w-full h-auto max-h-[calc(100vh-4rem)] sm:max-h-[85vh] object-contain rounded"
           priority
         />
       </div>
