@@ -32,13 +32,13 @@ export function AboutSection({
         <div className="grid md:grid-cols-2 gap-12 md:gap-32 items-start">
           {/* Image (Left) w/ Frame */}
           <div className="p-4 border-2 border-bleu-nuit bg-white shadow-brutal-lg">
-            <div className="aspect-[4/5] relative border-2 border-bleu-nuit">
+            <div className="aspect-[2/3] relative border-2 border-bleu-nuit">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 fill
                 loading="lazy"
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
