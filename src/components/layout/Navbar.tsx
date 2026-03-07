@@ -77,9 +77,7 @@ export const Navbar = memo(() => {
         {/* DESKTOP CTA - Right */}
         <div className="hidden md:block">
           <Link
-            href="https://cal.com/bartcagara/discovery-call"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#calendar-section"
             className="bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[3px_3px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] tracking-tighter transition-all"
           >
             Book Call
@@ -136,9 +134,8 @@ export const Navbar = memo(() => {
             </li>
             <li className="mt-8">
               <Link
-                href="https://cal.com/bartcagara/discovery-call"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/#calendar-section"
+                onClick={() => setIsMenuOpen(false)}
                 className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-brutal-sm focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
               >
                 Book Call
