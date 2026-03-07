@@ -1,34 +1,7 @@
 /* =================================================================
-   ConvertKit (Kit) Form State Overrides
+   Kit Form Style Overrides
    Scoped to the specific form UID to avoid style collisions
    ================================================================= */
-
-/* Success message styling */
-.formkit-form[data-uid="8a3adb8456"] .formkit-alert-success {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem 1.5rem;
-  text-align: center;
-  background: transparent;
-  border: none;
-}
-
-.formkit-form[data-uid="8a3adb8456"] .formkit-alert-success::before {
-  content: "\2713";
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 4rem;
-  height: 4rem;
-  margin-bottom: 1.5rem;
-  background: var(--bleu-accent);
-  border-radius: 50%;
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-}
 
 /* Error message styling */
 .formkit-form[data-uid="8a3adb8456"] .formkit-alert-error:not(:empty) {
@@ -44,23 +17,7 @@
   list-style: none;
 }
 
-/* Hide form fields on success */
-.formkit-form[data-uid="8a3adb8456"][data-state="success"] .formkit-fields {
-  display: none !important;
-}
-
-/* Loading state */
-.formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] {
-  opacity: 0.7;
-  cursor: not-allowed;
-}
-
-.formkit-form[data-uid="8a3adb8456"] .formkit-submit[data-active] .formkit-spinner {
-  display: flex !important;
-  gap: 0.25rem;
-  margin-right: 0.5rem;
-}
-
+/* Spinner dots */
 .formkit-form[data-uid="8a3adb8456"] .formkit-spinner > div {
   width: 8px;
   height: 8px;
@@ -82,12 +39,7 @@
   40% { transform: scale(1); }
 }
 
-/* Hide powered by */
-.formkit-form[data-uid="8a3adb8456"] .formkit-powered-by-convertkit-container {
-  display: none !important;
-}
-
-/* Prevent Kit from showing overlay/modal/backdrop on this inline form */
+/* Prevent Kit from showing overlay/modal/backdrop */
 .formkit-overlay,
 .formkit-close {
   display: none !important;

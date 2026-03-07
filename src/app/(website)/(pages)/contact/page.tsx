@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, FormEvent } from "react";
+import { useState, useRef, FormEvent } from "react";
 import { usePostHog } from "posthog-js/react";
 
 export default function ContactPage() {
     const [honeypot, setHoneypot] = useState("");
-    const [formStartTime] = useState(Date.now());
+    const formStartTime = useRef(Date.now());
     const posthog = usePostHog();
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -19,7 +19,7 @@ export default function ContactPage() {
         }
 
         // Check if form was filled too quickly (less than 3 seconds = likely bot)
-        const timeElapsed = Date.now() - formStartTime;
+        const timeElapsed = Date.now() - formStartTime.current;
         if (timeElapsed < 3000) {
             e.preventDefault();
             posthog?.capture('spam_detected', {

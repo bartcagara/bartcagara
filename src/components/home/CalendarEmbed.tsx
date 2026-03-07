@@ -21,7 +21,7 @@ export function CalendarEmbed() {
   return (
     <div
       id="my-cal-inline-discovery-call"
-      style={{ width: '100%', minHeight: '700px' }}
+      className="w-full min-h-[700px]"
     />
   )
 }

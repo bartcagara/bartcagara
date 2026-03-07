@@ -18,7 +18,7 @@ export const Footer = memo(() => (
         </div>
 
         {/* Column 2: Navigation */}
-        <div>
+        <nav aria-label="Footer navigation">
           <h4 className="font-semibold text-gray-900 mb-4">Navigation</h4>
           <ul className="space-y-2 text-sm text-gray-600">
             <li><Link href="/#results" className="hover:text-blue-600 transition-colors">Client Wins</Link></li>
@@ -32,17 +32,17 @@ export const Footer = memo(() => (
               </Link>
             </li>
           </ul>
-        </div>
+        </nav>
 
         {/* Column 3: Legal */}
-        <div>
+        <nav aria-label="Legal links">
           <h4 className="font-semibold text-gray-900 mb-4">Legal</h4>
           <ul className="space-y-2 text-sm text-gray-600">
             <li><Link href="/privacy" className="hover:text-blue-600 transition-colors">Privacy Policy</Link></li>
             <li><Link href="/terms" className="hover:text-blue-600 transition-colors">Terms of Service</Link></li>
             <li><Link href="/disclaimer" className="hover:text-blue-600 transition-colors">Disclaimer</Link></li>
           </ul>
-        </div>
+        </nav>
 
         {/* Column 4: Connect */}
         <div>
