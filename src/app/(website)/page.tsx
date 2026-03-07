@@ -91,6 +91,7 @@ export default function Home() {
             imageAlt={HOMEPAGE_CONTENT.about.imageAlt}
             subhead={HOMEPAGE_CONTENT.about.subhead}
             paragraphs={HOMEPAGE_CONTENT.about.paragraphs}
+            transformationImage={HOMEPAGE_CONTENT.about.transformationImage}
             credentials={HOMEPAGE_CONTENT.about.credentials}
           />
         </ErrorBoundary>

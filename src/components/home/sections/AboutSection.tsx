@@ -1,7 +1,32 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Check } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { TransformationModal } from "@/components/home/TransformationModal";
 import type { AboutSectionProps } from "@/components/home/types";
+
+const TRANSFORMATION_MARKER = "{{transformation-link}}";
+
+function renderParagraphWithLink(text: string, onLinkClick: () => void) {
+  const parts = text.split(TRANSFORMATION_MARKER);
+  if (parts.length === 1) return text;
+
+  return (
+    <>
+      {parts[0]}
+      <button
+        type="button"
+        onClick={onLinkClick}
+        className="underline underline-offset-4 decoration-bleu-accent hover:text-bleu-accent transition-colors cursor-pointer"
+      >
+        here it is
+      </button>
+      {parts[1]}
+    </>
+  );
+}
 
 /**
  * AboutSection - About Bart section
@@ -14,8 +39,11 @@ export function AboutSection({
   imageAlt,
   subhead,
   paragraphs,
+  transformationImage,
   credentials
 }: AboutSectionProps) {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <section id="about" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white text-bleu-nuit" aria-labelledby="about-title">
       <div className="max-w-7xl mx-auto px-6">
@@ -32,13 +60,13 @@ export function AboutSection({
         <div className="grid md:grid-cols-2 gap-12 md:gap-32 items-start">
           {/* Image (Left) w/ Frame */}
           <div className="p-4 border-2 border-bleu-nuit bg-white shadow-brutal-lg">
-            <div className="aspect-[4/5] relative border-2 border-bleu-nuit">
+            <div className="aspect-[2/3] relative border-2 border-bleu-nuit">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
                 fill
                 loading="lazy"
-                className="object-cover"
+                className="object-contain"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -49,10 +77,18 @@ export function AboutSection({
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-                const text = isBold ? paragraph.slice(2, -2) : paragraph;
+                const isFootnote = paragraph.startsWith('*') && !isBold;
+                const text = isBold ? paragraph.slice(2, -2) : isFootnote ? paragraph : paragraph;
+                const hasLink = text.includes(TRANSFORMATION_MARKER);
                 return (
-                  <p key={index} className={isBold ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight" : ""}>
-                    {text}
+                  <p key={index} className={
+                    isBold
+                      ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight"
+                      : isFootnote
+                        ? "text-xl md:text-2xl text-bleu-nuit/60 italic"
+                        : ""
+                  }>
+                    {hasLink ? renderParagraphWithLink(text, () => setModalOpen(true)) : text}
                   </p>
                 );
               })}
@@ -71,6 +107,15 @@ export function AboutSection({
           </div>
         </div>
       </div>
+
+      {transformationImage && (
+        <TransformationModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+          imageSrc={transformationImage}
+          imageAlt="Bart Cagara's personal transformation"
+        />
+      )}
     </section>
   );
 }

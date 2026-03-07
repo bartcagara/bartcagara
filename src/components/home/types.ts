@@ -77,6 +77,7 @@ export interface AboutSectionProps {
   imageAlt: string;
   subhead: string;
   paragraphs: readonly string[];
+  transformationImage?: string;
   credentials: readonly string[];
 }
 
