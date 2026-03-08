@@ -10,7 +10,6 @@ if (typeof window !== 'undefined') {
     person_profiles: 'identified_only',
     capture_pageview: false,
     persistence: 'localStorage',
-    disable_session_recording: true, // Start disabled; enabled on real user interaction
     loaded: (ph) => {
       const ua = navigator.userAgent;
       if (
@@ -36,22 +35,6 @@ if (typeof window !== 'undefined') {
         }
       }
 
-      // Only start session recording after deliberate user interaction.
-      // mousemove/scroll fire passively (cursor on page, scroll restoration),
-      // so use only events that require intentional action.
-      let recordingStarted = false;
-      const startRecording = () => {
-        if (recordingStarted) return;
-        recordingStarted = true;
-        ph.startSessionRecording();
-        interactionEvents.forEach((evt) =>
-          window.removeEventListener(evt, startRecording, { capture: true })
-        );
-      };
-      const interactionEvents = ['click', 'keydown', 'touchstart', 'pointerdown', 'wheel'];
-      interactionEvents.forEach((evt) =>
-        window.addEventListener(evt, startRecording, { capture: true, once: false, passive: true })
-      );
     },
   });
 }
