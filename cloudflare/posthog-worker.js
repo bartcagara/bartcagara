@@ -108,6 +108,7 @@ function getCorsHeaders(origin) {
   // Allow localhost for development, and production domain
   const allowedOrigins = [
     ALLOWED_ORIGIN,
+    "https://www.bartcagara.com",
     "http://localhost:3000",
     "http://localhost:3001",
   ];
