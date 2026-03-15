@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "Founder's pace.",
     highlightedText: "Athlete's body.",
-    subheadline: "For the former-athlete founder who built a business he loves in a body he hates.",
+    subheadline: "For the former-athlete founder leading in a body that doesn't represent him.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },

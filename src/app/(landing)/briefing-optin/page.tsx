@@ -92,7 +92,7 @@ export default function BriefingOptinPage() {
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
                             <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                                For the former-athlete founder who built a business he loves in a body he hates.
+                                For the former-athlete founder leading in a body that doesn't represent him.
                             </p>
                         </div>
                     </div>
