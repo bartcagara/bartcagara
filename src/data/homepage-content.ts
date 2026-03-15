@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "Founder's pace.",
     highlightedText: "Athlete's body.",
-    subheadline: "For the former-athlete founder building a business he loves in a body he hates.",
+    subheadline: "For the former-athlete founder who built a business he loves in a body he hates.",
     ctaText: "BOOK DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
@@ -38,10 +38,10 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "6 months from now, it just stops.",
       "Not because you hit a number. Not because you crossed a finish line.",
-      "**You just look up and realize the noise is gone.**",
+      "**Because the noise in your head is gone.**",
       "You're on the beach with your kids. Shirt's off. You're already in the game before they finish asking.",
       "**Not calculating. Not managing. Just there.**",
-      "Your wife sees it. So do the other wives.",
+      "Your wife is into you again.",
       "You didn't notice when it happened.",
       "**That's how you know it's real this time.**",
     ],
@@ -68,9 +68,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 1-4",
         focus: "IMMEDIATE CONTROL",
         items: [
-          "**Nutrition Baseline** - You start eating the way you like and getting results",
+          "**Nutrition Baseline** - You start eating the way you like and getting results.",
           "**Training Baseline** - You build strength and master form. No wasted time in the gym.",
-          "**Pattern Recognition** - We figure out exactly what made you quit before and cut it off at the source",
+          "**Pattern Recognition** - We figure out exactly what made you quit before and cut it off at the source.",
         ],
         win: "You drop 10-15 lbs. Your energy returns. You understand why you've been failing.",
       },
@@ -80,9 +80,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Physique Construction** - Your training evolves. Your body starts looking athletic again",
+          "**Physique Construction** - Your training evolves. Your body starts looking athletic again.",
           "**Travel-Proofing** - Restaurants, airports, hotel gyms. Handled.",
-          "**Bloodwork Optimization** - We optimize for performance and longevity, not just basic improvements",
+          "**Bloodwork Optimization** - We optimize for performance and longevity, not just basic improvements.",
         ],
         win: "Clothes fit different. People notice. You feel like yourself again.",
       },
@@ -93,7 +93,7 @@ export const HOMEPAGE_CONTENT = {
         focus: "FULL AUTONOMY",
         items: [
           "**Life Integration** - Vacations, pivots, chaos. Nothing derails you.",
-          "**Training Refinement** - We eliminate weak points and build a program that outlasts our work together",
+          "**Training Refinement** - We eliminate weak points and build a program that outlasts our work together.",
           "**Identity Work** - You close the gap between who you are and how you show up. For good.",
         ],
         win: "You fire me. You own this. Forever.",
@@ -103,7 +103,7 @@ export const HOMEPAGE_CONTENT = {
       headline: "",
       body: [
         "I don't believe in hype, chest-beating, or yelling at you every week.",
-        "I believe in the art of conversation. Two men sitting down, dropping their guard, getting to the bottom of what's actually broken.",
+        "I believe in the art of conversation. Two men sitting down, raw truth on the table, getting to the bottom of what's actually broken.",
         "**The training adapts to your schedule. The nutrition works on the road. But it's the identity work - done in those sessions - that makes any of it last.**",
       ],
     },
