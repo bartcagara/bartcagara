@@ -22,8 +22,21 @@ const ALLOWED_ORIGIN = "https://bartcagara.com";
 const MAX_BODY_SIZE = 1048576; // 1MB limit
 const ALLOWED_METHODS = ["GET", "POST", "OPTIONS"];
 
-// Headers safe to forward to PostHog
-const SAFE_HEADERS = ["content-type", "user-agent", "accept", "accept-encoding", "accept-language"];
+// Headers safe to forward to PostHog. Origin/Referer are required for PostHog's
+// "Authorized URLs" host allowlist check — without them PostHog returns
+// "Host not in allowlist" and the SDK can fall back to direct hosts, defeating
+// the proxy. Cookie is forwarded so identified users persist across the proxy.
+const SAFE_HEADERS = [
+  "content-type",
+  "user-agent",
+  "accept",
+  "accept-encoding",
+  "accept-language",
+  "origin",
+  "referer",
+  "cookie",
+  "x-requested-with",
+];
 
 export default {
   async fetch(request, env, ctx) {

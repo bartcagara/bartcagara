@@ -9,6 +9,10 @@ if (typeof window !== 'undefined') {
     ui_host: 'https://eu.posthog.com', // CRITICAL: PostHog's actual domain for toolbar
     person_profiles: 'identified_only',
     capture_pageview: false,
+    // capture_pageleave defaults to 'if_capture_pageview', which disables it
+    // when capture_pageview is false. We fire $pageview manually via
+    // PostHogPageView, so opt in to $pageleave explicitly.
+    capture_pageleave: true,
     persistence: 'localStorage',
     loaded: (ph) => {
       const ua = navigator.userAgent;
