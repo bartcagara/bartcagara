@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Founder Athlete Briefing | Weekly Newsletter",
-    description: "Real client breakthroughs and personal insights on fitness, guilt, and workaholism. For former-athlete founders. One email every Sunday.",
+    description: "You've built a business. Your body's lagging behind. For former-athlete founders done with fad diets, meal plans, and fitness challenges. One email every Sunday.",
     keywords: [
         "Founder Newsletter",
         "Business Travel Fitness",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "https://bartcagara.com/briefing-optin",
         siteName: "Founder Athlete OS",
         title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "Real client breakthroughs and personal insights. For former-athlete founders. One email every Sunday.",
+        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
         images: [
             {
                 url: "/images/briefing-og-image.jpg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "Real client breakthroughs and personal insights. For former-athlete founders. One email every Sunday.",
+        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
         images: ["/images/briefing-og-image.jpg"],
         creator: "@bartcagara"
     },
@@ -60,7 +60,7 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsletterService",
     "name": "Founder Athlete Briefing",
-    "description": "Weekly newsletter with client breakthroughs and personal insights for former-athlete founders",
+    "description": "Weekly newsletter for former-athlete founders who've built a business but whose body's lagging behind",
     "provider": {
         "@type": "Person",
         "name": "Bart Cagara"
@@ -82,17 +82,16 @@ export default function BriefingOptinPage() {
                         <div className="max-w-xl">
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
-                                The Newsletter
+                                Founder Athlete Briefing
                             </span>
                             {/* HEADLINE - Optical alignment tweaks */}
-                            <h1 className="text-[2.75rem] md:text-6xl lg:text-7xl font-black uppercase tracking-tighter leading-[0.9] text-white mb-6 md:mb-8">
-                                Founder <br />
-                                Athlete <br />
-                                <span className="text-bleu-accent">Briefing</span>
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
+                                You&apos;ve built a business.{" "}
+                                <span className="text-bleu-accent">Your body&apos;s lagging behind.</span>
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
-                            <p className="text-lg md:text-2xl text-bleu-fumee/90 font-medium leading-relaxed max-w-sm md:max-w-md">
-                                For the former-athlete founder leading in a body that doesn't represent him.
+                            <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
+                                For the former-athlete founder done with fad diets, meal plans, and fitness challenges. It&apos;s where eating, training and recovery finally fit the man you&apos;ve become.
                             </p>
                         </div>
                     </div>
@@ -100,15 +99,10 @@ export default function BriefingOptinPage() {
                     {/* Right Column: Content & Form */}
                     <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                         <div className="max-w-md w-full">
-                            {/* WARNING */}
-                            <p className="text-lg md:text-xl text-bleu-nuit/40 font-bold leading-tight mb-10">
-                                <span className="uppercase tracking-tighter">Warning:</span> You aren&apos;t getting protein recipes, office workouts, or cheap lectures about consistency.
-                            </p>
-
                             {/* INTRO COPY */}
                             <div className="mb-10">
                                 <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
-                                    What you get:
+                                    Every Sunday, expect:
                                 </p>
                             </div>
 
@@ -116,19 +110,19 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        Documented stories of founders &amp; execs who finally lost 30+ lbs &mdash; after every program failed them.
+                                        Real <strong>challenges and breakthroughs</strong> from coaching guys like you - putting out fires at work, parachuting in at home, carrying it alone.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        The identity shifts &mdash; not habit hacks &mdash; that resurrect you after years of neglect and outlast any schedule crisis.
+                                        The <strong>diagnosis behind every failed restart</strong> - the stress that never stops, the body you&apos;ve traded for the company, the belief you can&apos;t run both at once.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        Me &mdash; still fighting the battles every high performer faces privately: obsession with work, lack of presence, fear of failing the people who depend on you.
+                                        The <strong>voice of a veteran teammate</strong> in a locker room - sharing what I see, watching your back, telling it straight.
                                     </p>
                                 </div>
                             </div>
