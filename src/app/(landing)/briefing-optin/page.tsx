@@ -122,7 +122,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        The <strong>voice of a teammate</strong> in a locker room - never lecturing but telling you like it is.
+                                        The <strong>voice of a veteran teammate</strong> in a locker room - sharing what I see, watching your back, telling it straight.
                                     </p>
                                 </div>
                             </div>
