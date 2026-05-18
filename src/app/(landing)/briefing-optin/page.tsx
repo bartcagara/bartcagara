@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Founder Athlete Briefing | Weekly Newsletter",
-    description: "You've built a good business. Your body's the one thing you can't crack. For former-athlete founders done with fad diets and fitness challenges. One email every Sunday.",
+    description: "You've built a business. Your body's lagging behind. For former-athlete founders done with fad diets, meal plans, and fitness challenges. One email every Sunday.",
     keywords: [
         "Founder Newsletter",
         "Business Travel Fitness",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
         url: "https://bartcagara.com/briefing-optin",
         siteName: "Founder Athlete OS",
         title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "You've built a good business. Your body's the one thing you can't crack. For former-athlete founders. One email every Sunday.",
+        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
         images: [
             {
                 url: "/images/briefing-og-image.jpg",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "You've built a good business. Your body's the one thing you can't crack. For former-athlete founders. One email every Sunday.",
+        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
         images: ["/images/briefing-og-image.jpg"],
         creator: "@bartcagara"
     },
@@ -60,7 +60,7 @@ const jsonLd = {
     "@context": "https://schema.org",
     "@type": "NewsletterService",
     "name": "Founder Athlete Briefing",
-    "description": "Weekly newsletter for former-athlete founders who've built a good business but can't crack the body problem",
+    "description": "Weekly newsletter for former-athlete founders who've built a business but whose body's lagging behind",
     "provider": {
         "@type": "Person",
         "name": "Bart Cagara"
@@ -86,12 +86,12 @@ export default function BriefingOptinPage() {
                             </span>
                             {/* HEADLINE - Optical alignment tweaks */}
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
-                                You&apos;ve built a good business.{" "}
-                                <span className="text-bleu-accent">Your body&apos;s the one thing you can&apos;t crack.</span>
+                                You&apos;ve built a business.{" "}
+                                <span className="text-bleu-accent">Your body&apos;s lagging behind.</span>
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
                             <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
-                                For the former-athlete founder done with fad diets, meal plans, and fitness challenges. It&apos;s where eating and training finally fit the man you&apos;ve become.
+                                For the former-athlete founder done with fad diets, meal plans, and fitness challenges. It&apos;s where eating, training and recovery finally fit the man you&apos;ve become.
                             </p>
                         </div>
                     </div>
