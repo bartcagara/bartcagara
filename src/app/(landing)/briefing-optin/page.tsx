@@ -82,7 +82,7 @@ export default function BriefingOptinPage() {
                         <div className="max-w-xl">
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
-                                The Newsletter
+                                Founder Athlete Briefing
                             </span>
                             {/* HEADLINE - Optical alignment tweaks */}
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
