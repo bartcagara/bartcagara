@@ -1,19 +1,5 @@
-/* =================================================================
-   Newsletter opt-in form styling
-   The form HTML is React/Tailwind. Only the rules below cover stuff
-   we don't render in JSX: any modal/overlay variants Kit's ck.5.js
-   might try to mount, and the error alert (in case Kit ever injects
-   into the .formkit-alert-error <ul> we render).
-   ================================================================= */
-
-/* Suppress any modal/overlay variants of any Kit form on the page */
-.formkit-overlay,
-.formkit-close {
-  display: none !important;
-}
-
-/* Error alert styling */
-.formkit-form .formkit-alert-error:not(:empty) {
+/* Error alert styling for the newsletter opt-in form */
+.newsletter-error {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
