@@ -72,21 +72,26 @@ export function OptinForm() {
   return (
     <div className="w-full">
       {/* Hidden tracker - Kit's JS embed injects its form here and
-          fires the visitor pixel. Off-screen positioning (vs.
-          display:none) so Kit's ck.5.js still sees a painted form
-          with non-zero geometry and counts the page view. */}
+          fires the visitor pixel. Uses the standard "visually hidden
+          but in viewport" pattern: 1x1 absolute-positioned inside
+          normal flow, clipped to nothing, opacity 0. ck.5.js sees a
+          painted form inside the viewport (so IntersectionObserver-
+          based pixel firing counts) but the user never sees it. */}
       <div
         ref={trackerRef}
         aria-hidden="true"
         style={{
           position: "absolute",
-          left: "-9999px",
-          top: 0,
           width: "1px",
           height: "1px",
+          margin: "-1px",
+          padding: 0,
           overflow: "hidden",
-          pointerEvents: "none",
+          clip: "rect(0, 0, 0, 0)",
+          whiteSpace: "nowrap",
+          border: 0,
           opacity: 0,
+          pointerEvents: "none",
         }}
         data-kit-tracker
       />
