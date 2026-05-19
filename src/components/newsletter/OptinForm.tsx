@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { usePostHog } from "posthog-js/react";
 import "./optin-form.css";
 
 const KIT_FORM_ID = "9460021";
@@ -14,6 +15,7 @@ type Status = "idle" | "submitting" | "success" | "error";
 export function OptinForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
+  const posthog = usePostHog();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
@@ -54,6 +56,9 @@ export function OptinForm() {
         return;
       }
       setStatus("success");
+      posthog?.capture("newsletter_signup_completed", {
+        form_uid: KIT_FORM_UID,
+      });
     } catch {
       setStatus("error");
       setErrorMessage("Network error. Please check your connection.");
