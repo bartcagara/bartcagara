@@ -1,4 +1,22 @@
-/* Error alert styling for the newsletter opt-in form */
+/* Newsletter opt-in form */
+
+/* Kit visitor tracker: visually hidden but rendered in viewport
+   so ck.5.js's tracking pixel fires. Standard sr-only pattern. */
+.kit-tracker {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Form-level error message */
 .newsletter-error {
   display: flex;
   align-items: flex-start;
