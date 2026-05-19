@@ -136,7 +136,7 @@ export default function BriefingOptinPage() {
                 <section className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit" aria-labelledby="testimonial-title">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-16 md:mb-20">
-                            <h2 id="testimonial-title" className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight">
+                            <h2 id="testimonial-title" className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight">
                                 These guys didn&apos;t learn discipline. They&apos;ve built an operating system.
                             </h2>
                         </div>
