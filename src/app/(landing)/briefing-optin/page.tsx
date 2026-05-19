@@ -1,6 +1,6 @@
 import { OptinForm } from "@/components/newsletter/OptinForm";
 import type { Metadata } from "next";
-import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -132,28 +132,25 @@ export default function BriefingOptinPage() {
                     </div>
                 </div>
 
-                {/* Newsletter Subscriber Testimonial */}
+                {/* Testimonials */}
                 <section className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit" aria-labelledby="testimonial-title">
                     <div className="max-w-4xl mx-auto">
                         <div className="text-center mb-16 md:mb-20">
-                            <h2 id="testimonial-title" className="text-2xl md:text-5xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight mb-4">
-                                &ldquo;Your shit really speaks to me.&rdquo;
+                            <h2 id="testimonial-title" className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight">
+                                These guys didn&apos;t learn discipline. They&apos;ve built an operating system.
                             </h2>
-                            <p className="text-lg md:text-2xl font-medium text-bleu-nuit/60">
-                                DM from a founder who reads the Briefing every Sunday.
-                            </p>
                         </div>
-                        <div className="flex justify-center">
-                            <Image
-                                src="/images/newsletter-subscriber-dm.jpg"
-                                alt="Unsolicited DM from newsletter subscriber - founder-athlete testimonial"
-                                width={800}
-                                height={1000}
-                                quality={90}
-                                className="w-full max-w-[800px] h-auto shadow-[4px_4px_0px_0px_var(--bleu-nuit)] md:shadow-[8px_8px_0px_0px_var(--bleu-nuit)] border-2 border-bleu-nuit"
-                                sizes="(max-width: 768px) 100vw, 800px"
-                            />
-                        </div>
+                        <Script
+                            src="https://widget.senja.io/widget/6740d28e-90df-4998-b38b-6c0a7d2f6f52/platform.js"
+                            strategy="lazyOnload"
+                        />
+                        <div
+                            className="senja-embed"
+                            data-id="6740d28e-90df-4998-b38b-6c0a7d2f6f52"
+                            data-mode="shadow"
+                            data-lazyload="false"
+                            style={{ display: "block", width: "100%" }}
+                        />
                     </div>
                 </section>
 
