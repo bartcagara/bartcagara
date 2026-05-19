@@ -1,9 +1,182 @@
 /* =================================================================
-   Kit Form Style Overrides
+   Kit Form Brutalist Overrides
+   Scoped to the embed UID to avoid leaking into any other Kit forms.
    ================================================================= */
 
-/* Prevent Kit from showing overlay/modal/backdrop */
+/* Hide any modal/overlay variants of the embed */
 .formkit-overlay,
-.formkit-close {
+.formkit-close,
+.formkit-form[data-uid="c2655decfb"] .formkit-powered-by,
+.formkit-form[data-uid="c2655decfb"] .formkit-powered-by-convertkit,
+.formkit-form[data-uid="c2655decfb"] .formkit-powered-by-kit {
   display: none !important;
+}
+
+/* Wrapper - kill Kit's default background, border, padding */
+.formkit-form[data-uid="c2655decfb"] {
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  font-family: inherit !important;
+}
+
+/* Hide Kit's own heading/intro/description - the page already has copy */
+.formkit-form[data-uid="c2655decfb"] .formkit-header,
+.formkit-form[data-uid="c2655decfb"] .formkit-subheader,
+.formkit-form[data-uid="c2655decfb"] [data-element="heading"] {
+  display: none !important;
+}
+
+/* Fields stack */
+.formkit-form[data-uid="c2655decfb"] .formkit-fields,
+.formkit-form[data-uid="c2655decfb"] [data-element="fields"] {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-field {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Email input - bottom-border-only brutalist style */
+.formkit-form[data-uid="c2655decfb"] .formkit-input {
+  width: 100% !important;
+  padding: 1rem 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 4px solid rgba(9, 7, 29, 0.4) !important; /* bleu-nuit / 40 */
+  border-radius: 0 !important;
+  color: var(--bleu-nuit) !important;
+  font-size: 1.25rem !important; /* text-xl */
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  outline: none !important;
+  box-shadow: none !important;
+  transition: border-color 0.2s ease !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-input::placeholder {
+  color: rgba(9, 7, 29, 0.3) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-input:focus {
+  border-bottom-color: var(--bleu-accent) !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-input:focus::placeholder {
+  color: rgba(9, 7, 29, 0.5) !important;
+}
+
+/* Submit button - brutalist block with hard shadow */
+.formkit-form[data-uid="c2655decfb"] .formkit-submit {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.75rem !important;
+  width: 100% !important;
+  margin-top: 1.5rem !important;
+  padding: 1.25rem 1.5rem !important;
+  background: var(--bleu-nuit) !important;
+  border: 2px solid var(--bleu-nuit) !important;
+  border-radius: 0 !important;
+  color: white !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+  cursor: pointer !important;
+  box-shadow: 4px 4px 0px 0px var(--bleu-accent) !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+@media (min-width: 768px) {
+  .formkit-form[data-uid="c2655decfb"] .formkit-submit {
+    padding: 1.5rem 2.5rem !important;
+    box-shadow: 6px 6px 0px 0px var(--bleu-accent) !important;
+  }
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-submit:hover {
+  transform: translate(4px, 4px) !important;
+  box-shadow: none !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-submit:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-submit > span {
+  color: white !important;
+  font-family: inherit !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Loading spinner */
+.formkit-form[data-uid="c2655decfb"] .formkit-spinner > div {
+  width: 8px !important;
+  height: 8px !important;
+  background: white !important;
+  border-radius: 50% !important;
+}
+
+/* Error alert */
+.formkit-form[data-uid="c2655decfb"] .formkit-alert-error:not(:empty) {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 0.75rem !important;
+  padding: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  background: rgb(254, 242, 242) !important;
+  border: 2px solid rgb(239, 68, 68) !important;
+  border-radius: 0 !important;
+  color: rgb(185, 28, 28) !important;
+  font-size: 0.875rem !important;
+  font-weight: 700 !important;
+  list-style: none !important;
+}
+
+/* Microcopy / guarantee line under the button */
+.formkit-form[data-uid="c2655decfb"] .formkit-guarantee,
+.formkit-form[data-uid="c2655decfb"] [data-element="guarantee"] {
+  margin-top: 1.5rem !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: rgba(9, 7, 29, 0.6) !important;
+  font-size: 0.75rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.01em !important;
+  text-align: center !important;
+}
+
+.formkit-form[data-uid="c2655decfb"] .formkit-guarantee p {
+  margin: 0 !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+
+/* Success state after subscribing */
+.formkit-form[data-uid="c2655decfb"] .formkit-success {
+  padding: 3rem 0 !important;
+  background: transparent !important;
+  color: var(--bleu-nuit) !important;
+  font-size: 1.25rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase !important;
+  letter-spacing: -0.025em !important;
+  text-align: center !important;
 }
