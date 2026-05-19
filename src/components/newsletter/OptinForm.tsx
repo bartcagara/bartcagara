@@ -1,103 +1,82 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { usePostHog } from "posthog-js/react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import "./optin-form.css";
 
+const KIT_FORM_ID = "9460021";
+const KIT_FORM_UID = "c2655decfb";
+const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`;
+const KIT_EMBED_URL = `https://bartcagara.kit.com/${KIT_FORM_UID}/index.js`;
+
+type Status = "idle" | "submitting" | "success" | "error";
+
 export function OptinForm() {
-  const posthog = usePostHog();
   const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const trackerRef = useRef<HTMLDivElement>(null);
+  const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Kit visitor tracking: hidden but in-viewport so ck.5.js fires
+  // the pixel. Our visible form has no formkit-* attrs, so ck.5.js
+  // ignores it and React's onSubmit owns submission.
+  useEffect(() => {
+    const container = trackerRef.current;
+    if (!container || container.dataset.kitLoaded) return;
+    container.dataset.kitLoaded = "true";
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = KIT_EMBED_URL;
+    script.setAttribute("data-uid", KIT_FORM_UID);
+    container.appendChild(script);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (status === "submitting") return;
-
-    const form = formRef.current;
-    if (!form) return;
+    if (status === "submitting" || !formRef.current) return;
 
     setStatus("submitting");
     setErrorMessage("");
 
-    const formData = new FormData(form);
-    // Add referrer for UTM tracking
+    const formData = new FormData(formRef.current);
     formData.set("referrer", window.location.href);
 
     try {
-      const res = await fetch("https://app.kit.com/forms/8922850/subscriptions", {
+      const res = await fetch(KIT_SUBSCRIBE_URL, {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
       });
-
-      if (res.ok) {
-        setStatus("success");
-        posthog?.capture("newsletter_signup_completed");
-      } else {
+      if (!res.ok) {
         setStatus("error");
         setErrorMessage("Something went wrong. Please try again.");
+        return;
       }
+      setStatus("success");
     } catch {
       setStatus("error");
-      setErrorMessage("Network error. Please check your connection and try again.");
+      setErrorMessage("Network error. Please check your connection.");
     }
   }
 
-  if (status === "success") {
-    return (
-      <div className="w-full flex flex-col items-center justify-center py-12 text-center">
-        <div className="flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 border-bleu-nuit shadow-brutal-sm">
-          <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <p className="text-2xl font-black uppercase tracking-tighter text-bleu-nuit">
-          You&apos;re in.
-        </p>
-        <p className="mt-2 text-base font-bold text-bleu-nuit/70">
-          Now check your email to confirm your subscription.
-        </p>
-      </div>
-    );
-  }
+  if (status === "success") return <SuccessState />;
+
+  const isSubmitting = status === "submitting";
 
   return (
     <div className="w-full">
-      <form
-        ref={formRef}
-        onSubmit={handleSubmit}
-        className="seva-form formkit-form space-y-6"
-        data-uid="8a3adb8456"
-      >
-        {/* Error message */}
+      <div ref={trackerRef} aria-hidden="true" className="kit-tracker" />
+
+      <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
         {status === "error" && errorMessage && (
-          <ul className="formkit-alert formkit-alert-error" data-element="errors" data-group="alert">
+          <ul className="newsletter-error">
             <li>{errorMessage}</li>
           </ul>
         )}
 
-        <div data-element="fields" data-stacked="true" className="seva-fields formkit-fields space-y-6">
-          {/* First Name */}
-          <div className="formkit-field">
-            <label htmlFor="fields_first_name" className="sr-only">
-              First Name
-            </label>
-            <input
-              id="fields_first_name"
-              type="text"
-              name="fields[first_name]"
-              aria-label="First Name"
-              placeholder="FIRST NAME"
-              required
-              autoComplete="given-name"
-              className="formkit-input w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
-            />
-          </div>
-
-          {/* Email */}
-          <div className="formkit-field">
+        <div className="space-y-6">
+          <div>
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
@@ -109,35 +88,57 @@ export function OptinForm() {
               placeholder="EMAIL ADDRESS"
               required
               autoComplete="email"
-              className="formkit-input w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
+              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
             />
           </div>
 
-          {/* Submit Button */}
           <div className="pt-6">
             <button
               type="submit"
-              disabled={status === "submitting"}
-              aria-busy={status === "submitting"}
-              className="formkit-submit w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={isSubmitting}
+              aria-busy={isSubmitting}
+              className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {status === "submitting" && (
-                <div className="formkit-spinner flex">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              )}
-              <span>{status === "submitting" ? "Subscribing..." : "Get The Briefing"}</span>
-              {status !== "submitting" && <ArrowRight className="w-6 h-6" />}
+              <span>{isSubmitting ? "Subscribing..." : "Get The Briefing"}</span>
+              {!isSubmitting && <ArrowRight className="w-6 h-6" />}
             </button>
           </div>
         </div>
-
-        <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-          2 minutes every Sunday. Flip your perspective for the week.
-        </p>
       </form>
+
+      <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
+        2 minutes every Sunday.
+        <br />
+        Fresh perspective for the week.
+      </p>
+    </div>
+  );
+}
+
+function SuccessState() {
+  return (
+    <div className="w-full flex flex-col items-center justify-center py-12 text-center">
+      <div className="flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 border-bleu-nuit shadow-brutal-sm">
+        <svg
+          className="w-8 h-8 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={3}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M5 13l4 4L19 7"
+          />
+        </svg>
+      </div>
+      <p className="text-2xl font-black uppercase tracking-tighter text-bleu-nuit">
+        You&apos;re in.
+      </p>
+      <p className="mt-2 text-base font-bold text-bleu-nuit/70">
+        Now check your email to confirm your subscription.
+      </p>
     </div>
   );
 }
