@@ -1,18 +1,19 @@
 /* =================================================================
-   Kit form essentials
-   The form HTML is our own React/Tailwind - these rules cover only
-   the elements Kit's ck.5.js manages directly: spinner, error alert,
-   and any modal/overlay variants we want suppressed.
+   Newsletter opt-in form styling
+   The form HTML is React/Tailwind. Only the rules below cover stuff
+   we don't render in JSX: any modal/overlay variants Kit's ck.5.js
+   might try to mount, and the error alert (in case Kit ever injects
+   into the .formkit-alert-error <ul> we render).
    ================================================================= */
 
-/* Hide modal/overlay variants of any Kit form */
+/* Suppress any modal/overlay variants of any Kit form on the page */
 .formkit-overlay,
 .formkit-close {
   display: none !important;
 }
 
-/* Error alert styling (shown by ck.5.js on validation/submit errors) */
-.formkit-form[data-uid="c2655decfb"] .formkit-alert-error:not(:empty) {
+/* Error alert styling */
+.formkit-form .formkit-alert-error:not(:empty) {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -24,26 +25,4 @@
   font-size: 0.875rem;
   font-weight: 700;
   list-style: none;
-}
-
-/* Spinner dots animation (shown by ck.5.js during submit) */
-.formkit-form[data-uid="c2655decfb"] .formkit-spinner > div {
-  width: 8px;
-  height: 8px;
-  background: white;
-  border-radius: 50%;
-  animation: formkit-bounce 1.4s infinite ease-in-out both;
-}
-
-.formkit-form[data-uid="c2655decfb"] .formkit-spinner > div:nth-child(1) {
-  animation-delay: -0.32s;
-}
-
-.formkit-form[data-uid="c2655decfb"] .formkit-spinner > div:nth-child(2) {
-  animation-delay: -0.16s;
-}
-
-@keyframes formkit-bounce {
-  0%, 80%, 100% { transform: scale(0); }
-  40% { transform: scale(1); }
 }
