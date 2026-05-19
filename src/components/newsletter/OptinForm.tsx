@@ -1,18 +1,39 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import "./optin-form.css";
 
 const KIT_FORM_ID = "9460021";
+const KIT_FORM_UID = "c2655decfb";
 const KIT_ACTION = `https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`;
+const KIT_EMBED_SRC = `https://bartcagara.kit.com/${KIT_FORM_UID}/index.js`;
 
 export function OptinForm() {
   const formRef = useRef<HTMLFormElement>(null);
+  const trackerRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  // Hidden Kit embed for visitor tracking only.
+  // The Kit JS injects its form into the (display:none) container,
+  // registers it in window.__sv_forms, loads ck.5.js, and ck.5.js
+  // fires the visitor pixel. ck.5.js leaves our visible React form
+  // below alone because it has no formkit-* attributes.
+  useEffect(() => {
+    const container = trackerRef.current;
+    if (!container) return;
+    if (container.dataset.kitLoaded === "true") return;
+    container.dataset.kitLoaded = "true";
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = KIT_EMBED_SRC;
+    script.setAttribute("data-uid", KIT_FORM_UID);
+    container.appendChild(script);
+  }, []);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -50,6 +71,16 @@ export function OptinForm() {
 
   return (
     <div className="w-full">
+      {/* Hidden tracker - Kit's JS embed injects its form here and
+          fires the visitor pixel. display:none keeps it invisible
+          while still running scripts. */}
+      <div
+        ref={trackerRef}
+        aria-hidden="true"
+        style={{ display: "none" }}
+        data-kit-tracker
+      />
+
       {status === "success" ? (
         <div className="flex flex-col items-center justify-center py-12 text-center">
           <div className="flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 border-bleu-nuit shadow-brutal-sm">
