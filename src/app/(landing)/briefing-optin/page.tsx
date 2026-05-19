@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        The <strong>diagnosis behind every failed restart</strong> - the stress that never stops, the body you&apos;ve traded for the company, the belief you can&apos;t run both at once.
+                                        The <strong>diagnosis behind every failed restart</strong> - the stress that never stops, the eating to decompress, the belief it&apos;s the body or the company.
                                     </p>
                                 </div>
 
