@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Client results broken down</strong> &mdash; CEO losing 120 lbs sustainably, traveling CFO reaching 12% body fat after 20 years of neglect, former athletes rebuilding their identity.
+                                        <strong>Client results broken down</strong> &mdash; CEO losing 140 lbs sustainably, traveling CFO reaching 12% body fat after 20 years of neglect, former athletes rebuilding their identity.
                                     </p>
                                 </div>
 
