@@ -110,19 +110,19 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Symptoms most coaches don&apos;t understand</strong> &mdash; the stress affecting decision making, the 10pm decompression snacking, the idle weekend trap killing your progress.
+                                        <strong>Symptoms most coaches don&apos;t understand</strong> &mdash; the stress-driven decision making, the 10pm decompression snacking, the weekend progress sabotage.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Real client results broken down</strong> &mdash; CEO losing 120 lbs, traveling CFO reaching 12% body fat after 20 years of neglect, former athletes rebuilding their identity.
+                                        <strong>Client results broken down</strong> &mdash; CEO losing 120 lbs sustainably, traveling CFO reaching 12% body fat after 20 years of neglect, former athletes rebuilding their identity.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Why every program you&apos;ve tried fails long-term</strong> &mdash; and the inner work that finally makes it stick.
+                                        <strong>Why most programs fail long-term</strong> &mdash; and the inner work that finally makes the new operating system stick.
                                     </p>
                                 </div>
                             </div>
