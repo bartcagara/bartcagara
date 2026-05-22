@@ -110,19 +110,19 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Symptoms most coaches don&apos;t understand</strong> &mdash; the stress-driven decision making, the 10pm decompression snacking, the weekend progress sabotage.
+                                        <strong>Symptoms</strong> &mdash; 10pm decompression snacking. Weekend progress sabotage. Stress decisions you only see in hindsight.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Client results broken down</strong> &mdash; CEO losing 140 lbs sustainably, traveling CFO reaching 12% body fat after 20 years of neglect, former athletes rebuilding their identity.
+                                        <strong>Proof</strong> &mdash; a CEO down 140 lbs. A traveling CFO at 12% body fat after 20 years of neglect. Former athletes back in their bodies.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Why most programs fail long-term</strong> &mdash; and the inner work that finally makes the new operating system stick.
+                                        <strong>What sticks</strong> &mdash; why discipline-based programs keep failing, and the inner work that finally fixes it.
                                     </p>
                                 </div>
                             </div>
