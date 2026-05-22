@@ -35,7 +35,7 @@ export function FinalCTASection({
             );
           })}
         </div>
-        <div className="mt-12">
+        <div id="book-call" className="mt-12 scroll-mt-[88px] md:scroll-mt-[104px]">
           <CalendarEmbed />
         </div>
       </div>

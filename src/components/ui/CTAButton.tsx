@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import type { CTAButtonProps } from "@/components/home/types";
+import { getSamePageHashId, scrollToId } from "@/lib/scroll";
 
 /**
  * CTAButton - Reusable Call-to-Action button component
@@ -19,9 +22,18 @@ export function CTAButton({
     ? "bg-bleu-nuit text-white border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md"
     : "bg-gray-50 text-bleu-nuit border-gray-50 shadow-brutal-sm md:shadow-brutal-md";
 
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    const id = getSamePageHashId(href);
+    if (!id) return;
+    if (scrollToId(id)) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <Link
       href={href}
+      onClick={handleClick}
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
       {children}
