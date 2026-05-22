@@ -110,19 +110,19 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Symptoms</strong> &mdash; 10pm decompression snacking. Weekend progress sabotage. Stress decisions you only see in hindsight.
+                                        <strong>The symptoms</strong> &mdash; 10pm decompression snacking. Weekend progress sabotage. Stress decisions you only see in hindsight.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>Proof</strong> &mdash; a CEO down 140 lbs. A traveling CFO at 12% body fat after 20 years of neglect. Former athletes back in their bodies.
+                                        <strong>The fix</strong> &mdash; why discipline-based programs keep failing, and the inner work that finally makes it stick.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>What sticks</strong> &mdash; why discipline-based programs keep failing, and the inner work that finally fixes it.
+                                        <strong>The proof</strong> &mdash; a CEO down 140 lbs. A traveling CFO at 12% body fat after 20 years of neglect. Former athletes back in their bodies.
                                     </p>
                                 </div>
                             </div>
