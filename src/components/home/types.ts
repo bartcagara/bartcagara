@@ -34,6 +34,11 @@ export interface CTAButtonProps {
   variant?: 'dark' | 'light';
   icon?: boolean;
   className?: string;
+  /**
+   * When true, render as a button that opens the Cal.com "discovery-call"
+   * popup on click (via data-cal-* attributes) instead of a link.
+   */
+  cal?: boolean;
 }
 
 export interface HeroSectionProps {
