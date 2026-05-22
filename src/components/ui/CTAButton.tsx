@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar } from "lucide-react";
 import type { CTAButtonProps } from "@/components/home/types";
 import { getSamePageHashId, scrollToId } from "@/lib/scroll";
 
@@ -25,6 +25,8 @@ export function CTAButton({
     ? "bg-bleu-nuit text-white border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md"
     : "bg-gray-50 text-bleu-nuit border-gray-50 shadow-brutal-sm md:shadow-brutal-md";
 
+  const IconEl = cal ? Calendar : ArrowRight;
+
   if (cal) {
     return (
       <button
@@ -34,8 +36,8 @@ export function CTAButton({
         data-cal-config={CAL_CONFIG}
         className={`${baseClasses} ${variantClasses} ${className}`}
       >
+        {icon && <IconEl className="w-5 h-5 md:w-6 md:h-6" />}
         {children}
-        {icon && <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />}
       </button>
     );
   }
@@ -55,7 +57,7 @@ export function CTAButton({
       className={`${baseClasses} ${variantClasses} ${className}`}
     >
       {children}
-      {icon && <ArrowRight className="w-5 h-5 md:w-6 md:h-6" />}
+      {icon && <IconEl className="w-5 h-5 md:w-6 md:h-6" />}
     </Link>
   );
 }

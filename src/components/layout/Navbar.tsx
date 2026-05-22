@@ -3,7 +3,7 @@
 import { memo, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Calendar } from "lucide-react";
 
 const CAL_CONFIG = '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}';
 
@@ -84,8 +84,9 @@ export const Navbar = memo(() => {
             data-cal-link="bartcagara/discovery-call"
             data-cal-namespace="discovery-call"
             data-cal-config={CAL_CONFIG}
-            className="bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[3px_3px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] tracking-tighter transition-all"
+            className="inline-flex items-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm tracking-tight px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
           >
+            <Calendar className="w-4 h-4" />
             Book Call
           </button>
         </div>
@@ -145,8 +146,9 @@ export const Navbar = memo(() => {
                 data-cal-namespace="discovery-call"
                 data-cal-config={CAL_CONFIG}
                 onClick={() => setIsMenuOpen(false)}
-                className="block w-full bg-bleu-nuit text-white font-bold uppercase text-xl py-4 border-2 border-bleu-nuit shadow-brutal-sm focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
+                className="inline-flex w-full items-center justify-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xl tracking-tight py-4 border-2 border-bleu-nuit shadow-brutal-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
               >
+                <Calendar className="w-5 h-5" />
                 Book Call
               </button>
             </li>
