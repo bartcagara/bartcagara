@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CalScript } from "@/components/home/CalScript";
 
 export default function WebsiteLayout({
     children,
@@ -8,6 +9,7 @@ export default function WebsiteLayout({
 }) {
     return (
         <>
+            <CalScript />
             <Navbar />
             <main className="flex-1">
                 {children}
