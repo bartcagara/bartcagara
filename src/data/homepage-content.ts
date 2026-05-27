@@ -11,7 +11,7 @@ export const HOMEPAGE_CONTENT = {
     subheadline: "For the former-athlete founder leading in a body that doesn't represent him.",
     ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
-    socialProof: "Trusted by 50+ former-athlete founders since 2019.",
+    socialProof: "Transformed 50+ former-athlete founders since 2019.",
   },
 
   trustedBy: {
@@ -147,15 +147,15 @@ export const HOMEPAGE_CONTENT = {
   objections: [
     {
       question: "I've tried fitness programs before. They never stick.",
-      answer: "Because they gave you a plan without fixing the pattern. We start with why you've been quitting — then build around the chaos you actually live in.",
+      answer: "Because they pinned you down to a plan without fixing the pattern. We start with why you've been quitting, ditch the blind compliance and rigidity, and build around your actual life.",
     },
     {
       question: "I travel constantly. How does this work on the road?",
-      answer: "Phase 2 is literally called Travel-Proofing. Restaurants, airports, hotel gyms. Every protocol is built for a founder's schedule, not a gym bro's.",
+      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. Every system is tailored for a founder's schedule, not a gym bro.",
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "You don't add time. You replace what's already failing with something that works. Most clients spend less time on health after starting — because guessing stops.",
+      answer: "I get it. But I'm not asking you to do more. We replace what's already failing with something that works — and fits in your schedule. Most clients spend less time on health after starting and 6 months is exactly what we need to make sure you never rebound again.",
     },
   ],
 } as const;

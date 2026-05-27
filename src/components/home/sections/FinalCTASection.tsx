@@ -4,7 +4,7 @@ import type { FinalCTASectionProps } from "@/components/home/types";
 
 const TRUST_SIGNALS = [
   { icon: Clock, text: "Coaching founders since 2019" },
-  { icon: Check, text: "50+ former-athlete founders transformed" },
+  { icon: Check, text: "50+ clients transformed" },
   { icon: Shield, text: "Zero obligation discovery call" },
 ];
 

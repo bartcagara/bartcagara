@@ -6,9 +6,9 @@ export function ObjectionsSection({ objections }: { objections: readonly Objecti
     <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white" aria-labelledby="objections-title">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
-          <SectionBadge>Before You Decide</SectionBadge>
-          <h2 id="objections-title" className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
-            WHAT&apos;S STOPPING YOU
+          <SectionBadge>The Questions</SectionBadge>
+          <h2 id="objections-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
+            WHAT&apos;S STOPPING YOU?
           </h2>
         </div>
 
