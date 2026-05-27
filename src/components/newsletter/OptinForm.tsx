@@ -104,7 +104,7 @@ export function OptinForm() {
               aria-busy={isSubmitting}
               className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>{isSubmitting ? "Subscribing..." : "Get The Briefing"}</span>
+              <span>{isSubmitting ? "Subscribing..." : "Get My Briefing"}</span>
               {!isSubmitting && <ArrowRight className="w-6 h-6" />}
             </button>
           </div>
@@ -140,8 +140,23 @@ function SuccessState() {
         You&apos;re in.
       </p>
       <p className="mt-2 text-base font-bold text-bleu-nuit/70">
-        Now check your email to confirm your subscription.
+        Check your email to confirm your subscription.
       </p>
+      <div className="mt-8 pt-8 border-t-2 border-bleu-nuit/10 w-full">
+        <p className="text-sm font-bold uppercase tracking-tighter text-bleu-nuit/50 mb-4">
+          Ready to move faster?
+        </p>
+        <button
+          type="button"
+          data-cal-link="bartcagara/discovery-call"
+          data-cal-namespace="discovery-call"
+          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          className="inline-flex items-center gap-2 px-6 py-3 bg-bleu-nuit text-white font-black uppercase text-sm tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm transition-brutal hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
+        >
+          <ArrowRight className="w-4 h-4" />
+          Book My Discovery Call
+        </button>
+      </div>
     </div>
   );
 }

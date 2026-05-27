@@ -9,8 +9,9 @@ export const HOMEPAGE_CONTENT = {
     headline: "Founder's pace.",
     highlightedText: "Athlete's body.",
     subheadline: "For the former-athlete founder leading in a body that doesn't represent him.",
-    ctaText: "BOOK DISCOVERY CALL",
+    ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
+    socialProof: "Trusted by 50+ former-athlete founders since 2019.",
   },
 
   trustedBy: {
@@ -139,7 +140,22 @@ export const HOMEPAGE_CONTENT = {
       "**If that sits wrong, let's talk.**",
       "You'll walk away with clarity - whether we work together or not.",
     ],
-    ctaText: "BOOK DISCOVERY CALL",
+    ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
+
+  objections: [
+    {
+      question: "I've tried fitness programs before. They never stick.",
+      answer: "Because they gave you a plan without fixing the pattern. We start with why you've been quitting — then build around the chaos you actually live in.",
+    },
+    {
+      question: "I travel constantly. How does this work on the road?",
+      answer: "Phase 2 is literally called Travel-Proofing. Restaurants, airports, hotel gyms. Every protocol is built for a founder's schedule, not a gym bro's.",
+    },
+    {
+      question: "I don't have time for a 6-month commitment.",
+      answer: "You don't add time. You replace what's already failing with something that works. Most clients spend less time on health after starting — because guessing stops.",
+    },
+  ],
 } as const;
