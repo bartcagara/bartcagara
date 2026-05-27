@@ -11,7 +11,7 @@ export const HOMEPAGE_CONTENT = {
     subheadline: "For the former-athlete founder leading in a body that doesn't represent him.",
     ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
-    socialProof: "Transformed 50+ former-athlete founders since 2019.",
+    socialProof: "Transformed 50+ founders since 2019.",
   },
 
   trustedBy: {
