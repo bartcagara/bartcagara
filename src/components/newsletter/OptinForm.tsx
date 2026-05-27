@@ -112,7 +112,7 @@ export function OptinForm() {
       </form>
 
       <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-        Coaching former-athlete founders since 2019.
+        Transformed 50+ founders since 2019.
       </p>
     </div>
   );
