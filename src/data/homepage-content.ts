@@ -147,7 +147,7 @@ export const HOMEPAGE_CONTENT = {
   objections: [
     {
       question: "I've tried fitness programs before. They never stick.",
-      answer: "Because they pinned you down to a plan without fixing the pattern. We start with why you've been quitting, ditch the blind compliance and rigidity, and build around your actual life.",
+      answer: "Because they forced you into a plan without fixing the pattern. We find why you keep quitting — then build something that works inside your actual life, not against it.",
     },
     {
       question: "I travel constantly. How does this work on the road?",
@@ -155,7 +155,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "I get it. But I'm not asking you to do more. We replace what's already failing with something that works — and fits in your schedule. Most clients spend less time on health after starting and 6 months is exactly what we need to make sure you never rebound again.",
+      answer: "I get it. But most clients actually spend less time on health after starting — because we replace the guessing with something that fits your schedule. The 6 months? That's what makes sure you never rebound again.",
     },
   ],
 } as const;
