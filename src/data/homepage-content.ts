@@ -41,7 +41,7 @@ export const HOMEPAGE_CONTENT = {
       "Not because you hit a number. Not because you crossed a finish line.",
       "**Because the noise in your head is gone.**",
       "You're on the beach with your kids. Shirt's off. You're already in the game before they finish asking.",
-      "**Not calculating. Not managing. Just there.**",
+      "**Not calculating. Just... there.**",
       "Your wife seems less worried.",
       "You didn't notice when it happened.",
       "**That's how you know it's real this time.**",
