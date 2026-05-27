@@ -29,6 +29,10 @@ const AboutSection = dynamic(() => import("@/components/home/sections").then(mod
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
+const ObjectionsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ObjectionsSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-white" />
+});
+
 const FinalCTASection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FinalCTASection })), {
   loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-white" />
 });
@@ -96,7 +100,12 @@ export default function Home() {
           />
         </ErrorBoundary>
 
-        {/* 7. FINAL CTA */}
+        {/* 7. OBJECTION PREEMPTION */}
+        <ErrorBoundary>
+          <ObjectionsSection objections={HOMEPAGE_CONTENT.objections} />
+        </ErrorBoundary>
+
+        {/* 8. FINAL CTA */}
         <ErrorBoundary>
           <FinalCTASection
             headline={HOMEPAGE_CONTENT.finalCta.headline}

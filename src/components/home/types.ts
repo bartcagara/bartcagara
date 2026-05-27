@@ -48,7 +48,13 @@ export interface HeroSectionProps {
     subheadline: string;
     ctaText: string;
     ctaLink: string;
+    socialProof: string;
   };
+}
+
+export interface ObjectionItem {
+  readonly question: string;
+  readonly answer: string;
 }
 
 export interface DiagnosisSectionProps {

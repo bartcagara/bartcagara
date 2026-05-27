@@ -87,7 +87,7 @@ export const Navbar = memo(() => {
             className="inline-flex items-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm tracking-tight px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
           >
             <Calendar className="w-4 h-4" />
-            Book Call
+            Book My Call
           </button>
         </div>
       </div>
@@ -149,7 +149,7 @@ export const Navbar = memo(() => {
                 className="inline-flex w-full items-center justify-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xl tracking-tight py-4 border-2 border-bleu-nuit shadow-brutal-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
               >
                 <Calendar className="w-5 h-5" />
-                Book Call
+                Book My Call
               </button>
             </li>
           </ul>

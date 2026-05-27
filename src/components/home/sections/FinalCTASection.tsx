@@ -1,10 +1,13 @@
+import { Check, Shield, Clock } from "lucide-react";
 import { CalendarEmbed } from "@/components/home/CalendarEmbed";
 import type { FinalCTASectionProps } from "@/components/home/types";
 
-/**
- * FinalCTASection - Final call-to-action
- * Closing pitch and CTA button
- */
+const TRUST_SIGNALS = [
+  { icon: Clock, text: "Coaching founders since 2019" },
+  { icon: Check, text: "50+ clients transformed" },
+  { icon: Shield, text: "Zero obligation discovery call" },
+];
+
 export function FinalCTASection({
   headline,
   highlightedText,
@@ -35,6 +38,16 @@ export function FinalCTASection({
             );
           })}
         </div>
+
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 mb-12">
+          {TRUST_SIGNALS.map((signal) => (
+            <div key={signal.text} className="flex items-center gap-3">
+              <signal.icon className="w-5 h-5 text-bleu-accent flex-shrink-0" strokeWidth={2.5} />
+              <span className="text-sm font-bold uppercase tracking-tighter text-white/50">{signal.text}</span>
+            </div>
+          ))}
+        </div>
+
         <div id="book-call" className="mt-12 scroll-mt-[88px] md:scroll-mt-[104px]">
           <CalendarEmbed />
         </div>

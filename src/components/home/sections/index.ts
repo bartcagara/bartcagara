@@ -9,3 +9,4 @@ export { SolutionSection } from "./SolutionSection";
 export { ProgramSection } from "./ProgramSection";
 export { AboutSection } from "./AboutSection";
 export { FinalCTASection } from "./FinalCTASection";
+export { ObjectionsSection } from "./ObjectionsSection";

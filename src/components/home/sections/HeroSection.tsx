@@ -23,6 +23,10 @@ export function HeroSection({ content }: HeroSectionProps) {
         <CTAButton href="#book-call" variant="light" cal>
           {content.ctaText}
         </CTAButton>
+
+        <p className="mt-6 text-sm font-bold uppercase tracking-tighter text-white/40">
+          {content.socialProof}
+        </p>
       </div>
     </section>
   );
