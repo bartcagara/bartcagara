@@ -116,7 +116,7 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The fix</strong> &mdash; why discipline-based programs keep failing, and the inner work that finally makes it stick.
+                                        <strong>The fix</strong> &mdash; why discipline-based programs keep failing, and the systems + inner work that finally make it stick.
                                     </p>
                                 </div>
 
