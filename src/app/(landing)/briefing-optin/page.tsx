@@ -91,7 +91,7 @@ export default function BriefingOptinPage() {
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
                             <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
-                                For the former-athlete founder done with fad diets, meal plans, and fitness challenges. It&apos;s where eating, training and recovery finally fit the man you&apos;ve become.
+                                Ditch the on-and-off fitness cycle. Run an operating system built for the former-athlete founder.
                             </p>
                         </div>
                     </div>
