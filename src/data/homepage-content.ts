@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "Founder's pace.",
     highlightedText: "Athlete's body.",
-    subheadline: "For the former-athlete founder leading in a body that doesn't represent him.",
+    subheadline: "6 months to get you lean, strong, and off the restart cycle for good. Built for the ex-athlete founder.",
     ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
     socialProof: "Transformed 50+ founders since 2019.",
