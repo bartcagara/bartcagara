@@ -91,7 +91,7 @@ export default function BriefingOptinPage() {
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
                             <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
-                                Ditch the on-and-off fitness cycle. Run an operating system built for the former-athlete founder.
+                                Every Sunday, an inside look at why the restart cycle keeps winning, and how ex-athlete founders get off it for good.
                             </p>
                         </div>
                     </div>
@@ -102,7 +102,7 @@ export default function BriefingOptinPage() {
                             {/* INTRO COPY */}
                             <div className="mb-10">
                                 <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
-                                    Every Sunday, expect:
+                                    Inside every issue:
                                 </p>
                             </div>
 
