@@ -23,7 +23,7 @@ export const HOMEPAGE_CONTENT = {
     subtitle: "",
     items: [
       "Your kids are in the pool, calling for you.",
-      "\"In a minute!\"",
+      "\"In a minute.\"",
       "**There is no minute.** There's a calculation: shirt off, move fast, into the water before anyone sees.",
       "It wasn't always like this. You played sports back in school. The body just worked.",
       "Then you built a company, and the body paid for it.",
@@ -37,7 +37,7 @@ export const HOMEPAGE_CONTENT = {
     title: "THE LAST RESTART",
     subtitle: "",
     items: [
-      "**6 months from now, it's a regular Tuesday**.",
+      "6 months from now, it's a regular Tuesday.",
       "Up before the alarm. Training's done by seven. **Not discipline — it's just what you do now.**",
       "Your son hits you at the door at full speed. You catch him, throw him over your shoulder, take the stairs two at a time.",
       "The business still eats whole weeks. **It doesn't take the body with it anymore.**",
@@ -71,7 +71,7 @@ export const HOMEPAGE_CONTENT = {
         items: [
           "**Nutrition Baseline** — You eat food you actually like. The weight moves anyway.",
           "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
-          "**Pattern Recognition** — We find what killed every January and cut it off at the source.",
+          "**Pattern Recognition** — We find what kills every attempt and cut it off at the source.",
         ],
         win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
       },
@@ -115,7 +115,7 @@ export const HOMEPAGE_CONTENT = {
     subtitle: "IS BART?",
     imageSrc: "/images/home/bart-and-son-2.webp",
     imageAlt: "Bart Cagara with his son",
-    subhead: "Fair question.",
+    subhead: "",
     paragraphs: [
       "I was an athletic kid. Sports was the whole thing.",
       "By the end of college, the athlete was gone.",
@@ -123,9 +123,9 @@ export const HOMEPAGE_CONTENT = {
       "Tail between my legs, I took a job at a fitness startup.",
       "It rebuilt me. The body first, then everything attached to it. For the first time in years, I recognized myself again.",
       "**That's when I built this.**",
-      "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports as a kid, built something real, body paid for it.",
+      "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports back in school, built something real, body paid for it.",
       "**My son is watching.** I built this so he grows up with a dad who's actually himself.",
-      "*(I bet you're curious about my before-after. {{transformation-link}}.)",
+      "I bet you're curious about my before-after. {{transformation-link}}.",
     ],
     transformationImage: "/images/transformations/bart-transformation.webp",
     credentials: ["Sports Nutritionist", "Performance Coach"],
@@ -161,7 +161,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "You're already spending the time. The calculating, the renegotiating every meal, the restarting every January — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
+      answer: "You're already spending the time. The calculating, the renegotiating every meal, the starting over — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
     },
     {
       question: "I travel constantly. How does this work on the road?",

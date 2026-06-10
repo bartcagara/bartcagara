@@ -8,9 +8,7 @@ import { useEffect } from "react";
  * - Applies brand theming
  *
  * Inline embeds and click-to-open popups consume this same namespace,
- * so this must be mounted before they render. The floating button is a
- * separate React component (CalFloatingButton) so its visibility can be
- * scoped per-route.
+ * so this must be mounted before they render.
  */
 export function CalScript() {
   useEffect(() => {
