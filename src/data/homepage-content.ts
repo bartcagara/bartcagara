@@ -6,12 +6,12 @@
 
 export const HOMEPAGE_CONTENT = {
   hero: {
-    headline: "Founder's pace.",
-    highlightedText: "Athlete's body.",
-    subheadline: "6 months to get you lean, strong, and off the restart cycle for good. Built for the ex-athlete founder.",
-    ctaText: "BOOK MY DISCOVERY CALL",
+    headline: "Become your kid's",
+    highlightedText: "Favorite athlete.",
+    subheadline: "6 months to get you lean, strong and off the restart cycle. For good.",
+    ctaText: "BOOK MY RESTART AUDIT",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
-    socialProof: "Transformed 50+ founders since 2019.",
+    socialProof: "50+ founders coached since 2019",
   },
 
   trustedBy: {
