@@ -132,13 +132,13 @@ export const HOMEPAGE_CONTENT = {
   },
 
   finalCta: {
-    headline: "Fast-forward",
-    highlightedText: "6 months.",
+    headline: "Make this the",
+    highlightedText: "Last restart",
     body: [
-      "Your business will be further along. Will your body?",
-      "Or will you still be drained, self-conscious, watching your kids from the sidelines?",
+      "Six months from now, your business will be further along. Will your body?",
+      "You already know how this goes if nothing changes. **You've restarted enough times to know.**",
       "**If that sits wrong, let's talk.**",
-      "You'll walk away with clarity — whether we work together or not.",
+      "45 minutes, you and me. You leave knowing exactly why it never stuck, whether we work together or not.",
     ],
     ctaText: "BOOK MY DISCOVERY CALL",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
