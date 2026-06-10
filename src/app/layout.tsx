@@ -16,17 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Founder Athlete OS | Coaching for Former Athletes",
-  description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity.",
-  keywords: [
-    "Founder Coaching",
-    "Weight Loss for Founders",
-    "High Performance Health",
-    "Bart Cagara",
-    "Founder Athlete",
-    "Health Coaching for Founders",
-    "Former Athlete Fitness",
-  ],
+  title: "Founder Athlete OS | 1:1 Health Coaching for Founders",
+  description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
   authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
   publisher: "Bart Cagara",
@@ -40,21 +31,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bartcagara.com",
     siteName: "Founder Athlete OS",
-    title: "Founder Athlete OS | Coaching for Former Athletes",
-    description: "For former-athlete founders building a business they love in a body they hate. Six months to reclaim your body and rebuild your identity.",
+    title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
+    description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Founder Athlete OS - Coaching for former-athlete founders"
+        alt: "Founder Athlete OS - Become your kid's favorite athlete"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Founder Athlete OS | Coaching for Former Athletes",
-    description: "For former-athlete founders building a business they love in a body they hate.",
+    title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
+    description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: ["/images/og-image.jpg"],
     creator: "@bartcagara",
     site: "@bartcagara"

@@ -41,6 +41,21 @@ const BriefingSection = dynamic(() => import("@/components/home/sections").then(
   loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-bleu-nuit" />
 });
 
+// FAQPage structured data sourced from the live "WHAT'S STOPPING YOU?" section
+// so the JSON-LD always matches the on-page copy verbatim
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": HOMEPAGE_CONTENT.objections.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+    },
+  })),
+};
+
 /**
  * Home Page
  * Main landing page for Founder Athlete OS
@@ -49,6 +64,11 @@ const BriefingSection = dynamic(() => import("@/components/home/sections").then(
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
+        {/* Schema.org FAQPage JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
         {/* 1. HERO SECTION */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
