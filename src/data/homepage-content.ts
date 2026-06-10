@@ -15,7 +15,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   trustedBy: {
-    title: "Trusted by guys building:",
+    title: "Trusted by the guys who built:",
   },
 
   diagnosis: {
