@@ -173,7 +173,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "What actually happens on the Restart Audit?",
-      answer: "45 minutes, you and me. We find what's been killing your restarts and what it would take to end the cycle for good. If we're a fit, I'll tell you. If we're not, I'll tell you that too. Worst case, you leave knowing exactly why it never stuck. That alone beats another January.",
+      answer: "45 minutes, you and me. We find what's been killing your restarts and what it would take to end the cycle for good. If we're a fit, I'll tell you. If we're not, I'll tell you that too. Worst case, you leave knowing exactly why it never stuck. That alone beats another restart.",
     },
   ],
 } as const;
