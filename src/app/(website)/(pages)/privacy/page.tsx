@@ -4,6 +4,24 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Privacy Policy | Bart Cagara",
     description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information.",
+    alternates: {
+        canonical: "/privacy"
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://bartcagara.com/privacy",
+        siteName: "Founder Athlete OS",
+        title: "Privacy Policy | Bart Cagara",
+        description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information."
+    },
+    twitter: {
+        card: "summary",
+        title: "Privacy Policy | Bart Cagara",
+        description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information.",
+        creator: "@bartcagara",
+        site: "@bartcagara"
+    }
 };
 
 export default function PrivacyPage() {

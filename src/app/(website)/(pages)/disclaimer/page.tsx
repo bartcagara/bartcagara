@@ -4,6 +4,24 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Disclaimer | Bart Cagara",
     description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services.",
+    alternates: {
+        canonical: "/disclaimer"
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://bartcagara.com/disclaimer",
+        siteName: "Founder Athlete OS",
+        title: "Disclaimer | Bart Cagara",
+        description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services."
+    },
+    twitter: {
+        card: "summary",
+        title: "Disclaimer | Bart Cagara",
+        description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services.",
+        creator: "@bartcagara",
+        site: "@bartcagara"
+    }
 };
 
 export default function DisclaimerPage() {

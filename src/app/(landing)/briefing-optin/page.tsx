@@ -3,16 +3,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-    title: "Founder Athlete Briefing | Weekly Newsletter",
-    description: "You've built a business. Your body's lagging behind. For former-athlete founders done with fad diets, meal plans, and fitness challenges. One email every Sunday.",
-    keywords: [
-        "Founder Newsletter",
-        "Business Travel Fitness",
-        "Founder Health",
-        "Former Athletes",
-        "Founder Performance",
-        "Bart Cagara Newsletter"
-    ],
+    title: "The Founder Athlete Briefing | One Email, Every Sunday",
+    description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
     authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
     creator: "Bart Cagara",
     publisher: "Bart Cagara",
@@ -24,23 +16,24 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: "https://bartcagara.com/briefing-optin",
         siteName: "Founder Athlete OS",
-        title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
+        title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
+        description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
         images: [
             {
                 url: "/images/briefing-og-image.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder Athlete Briefing - Weekly newsletter for former-athlete founders"
+                alt: "The Founder Athlete Briefing - one email, every Sunday"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "Founder Athlete Briefing | Weekly Newsletter",
-        description: "You've built a business. Your body's lagging behind. For former-athlete founders. One email every Sunday.",
+        title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
+        description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
         images: ["/images/briefing-og-image.jpg"],
-        creator: "@bartcagara"
+        creator: "@bartcagara",
+        site: "@bartcagara"
     },
     robots: {
         index: true,
@@ -55,16 +48,24 @@ export const metadata: Metadata = {
     }
 };
 
+// "Periodical" is the schema.org type for serial publications like newsletters
+// ("NewsletterService" is not part of the schema.org vocabulary)
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsletterService",
-    "name": "Founder Athlete Briefing",
-    "description": "Weekly newsletter for former-athlete founders who've built a business but whose body's lagging behind",
-    "provider": {
+    "@type": "Periodical",
+    "name": "The Founder Athlete Briefing",
+    "description": "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+    "url": "https://bartcagara.com/briefing-optin",
+    "inLanguage": "en",
+    "publisher": {
         "@type": "Person",
-        "name": "Bart Cagara"
+        "name": "Bart Cagara",
+        "url": "https://bartcagara.com"
     },
-    "audience": "Former-athlete founders and entrepreneurs"
+    "audience": {
+        "@type": "Audience",
+        "audienceType": "Former-athlete founders and entrepreneurs"
+    }
 };
 
 export default function BriefingOptinPage() {

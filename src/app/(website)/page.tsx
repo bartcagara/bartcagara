@@ -41,6 +41,39 @@ const BriefingSection = dynamic(() => import("@/components/home/sections").then(
   loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-bleu-nuit" />
 });
 
+const businessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Founder Athlete OS",
+  "description": "Health and performance coaching for former-athlete founders",
+  "url": "https://bartcagara.com",
+  "image": "https://bartcagara.com/images/og-image.jpg",
+  "sameAs": ["https://x.com/bartcagara"],
+  "founder": {
+    "@type": "Person",
+    "name": "Bart Cagara",
+    "jobTitle": "Health Coach",
+    "url": "https://bartcagara.com"
+  },
+  "areaServed": "Worldwide",
+  "priceRange": "$$$$"
+};
+
+// FAQPage structured data sourced from the live "WHAT'S STOPPING YOU?" section
+// so the JSON-LD always matches the on-page copy verbatim
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": HOMEPAGE_CONTENT.objections.map((item) => ({
+    "@type": "Question",
+    "name": item.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": item.answer,
+    },
+  })),
+};
+
 /**
  * Home Page
  * Main landing page for Founder Athlete OS
@@ -49,6 +82,15 @@ const BriefingSection = dynamic(() => import("@/components/home/sections").then(
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
+        {/* Schema.org JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
         {/* 1. HERO SECTION */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
