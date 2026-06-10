@@ -43,7 +43,15 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
                     : "text-xl md:text-2xl font-medium text-bleu-nuit/80 leading-relaxed"
                 }
               >
-                {text}
+                {isBold
+                  ? text
+                  : text.split(/(\*\*.*?\*\*)/).map((part, i) =>
+                      part.startsWith('**') && part.endsWith('**') ? (
+                        <strong key={i} className="font-bold text-bleu-nuit">{part.slice(2, -2)}</strong>
+                      ) : (
+                        part
+                      )
+                    )}
               </p>
             );
           })}

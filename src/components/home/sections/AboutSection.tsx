@@ -9,6 +9,16 @@ import type { AboutSectionProps } from "@/components/home/types";
 
 const TRANSFORMATION_MARKER = "{{transformation-link}}";
 
+function renderInlineBold(text: string) {
+  return text.split(/(\*\*.*?\*\*)/).map((part, i) =>
+    part.startsWith('**') && part.endsWith('**') ? (
+      <strong key={i} className="font-bold text-bleu-nuit">{part.slice(2, -2)}</strong>
+    ) : (
+      part
+    )
+  );
+}
+
 function renderParagraphWithLink(text: string, onLinkClick: () => void) {
   const parts = text.split(TRANSFORMATION_MARKER);
   if (parts.length === 1) return text;
@@ -21,7 +31,7 @@ function renderParagraphWithLink(text: string, onLinkClick: () => void) {
         onClick={onLinkClick}
         className="underline underline-offset-4 decoration-bleu-accent hover:text-bleu-accent transition-colors cursor-pointer"
       >
-        here it is
+        Here it is
       </button>
       {parts[1]}
     </>
@@ -77,8 +87,12 @@ export function AboutSection({
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-                const isFootnote = paragraph.startsWith('*') && !isBold;
-                const text = isBold ? paragraph.slice(2, -2) : isFootnote ? paragraph : paragraph;
+                const isFootnote = paragraph.startsWith('*') && !paragraph.startsWith('**');
+                const text = isBold
+                  ? paragraph.slice(2, -2)
+                  : isFootnote
+                    ? paragraph.slice(1)
+                    : paragraph;
                 const hasLink = text.includes(TRANSFORMATION_MARKER);
                 return (
                   <p key={index} className={
@@ -88,7 +102,11 @@ export function AboutSection({
                         ? "text-xl md:text-2xl text-bleu-nuit/60 italic"
                         : ""
                   }>
-                    {hasLink ? renderParagraphWithLink(text, () => setModalOpen(true)) : text}
+                    {hasLink
+                      ? renderParagraphWithLink(text, () => setModalOpen(true))
+                      : isBold
+                        ? text
+                        : renderInlineBold(text)}
                   </p>
                 );
               })}

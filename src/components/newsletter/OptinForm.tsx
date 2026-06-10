@@ -12,12 +12,26 @@ const KIT_EMBED_URL = `https://bartcagara.kit.com/${KIT_FORM_UID}/index.js`;
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function OptinForm() {
+type Variant = "light" | "dark";
+
+interface OptinFormProps {
+  submitLabel?: string;
+  showFootnote?: boolean;
+  variant?: Variant;
+}
+
+export function OptinForm({
+  submitLabel = "Get My Briefing",
+  showFootnote = true,
+  variant = "light",
+}: OptinFormProps = {}) {
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
   const posthog = usePostHog();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const isDark = variant === "dark";
 
   // Kit visitor tracking: hidden but in-viewport so ck.5.js fires
   // the pixel. Our visible form has no formkit-* attrs, so ck.5.js
@@ -65,9 +79,21 @@ export function OptinForm() {
     }
   }
 
-  if (status === "success") return <SuccessState />;
+  if (status === "success") return <SuccessState isDark={isDark} />;
 
   const isSubmitting = status === "submitting";
+
+  const inputClass = `w-full px-0 py-4 bg-transparent border-b-4 text-xl font-bold placeholder:font-bold outline-none focus:border-bleu-accent transition-all rounded-none ${
+    isDark
+      ? "border-white/40 text-white placeholder:text-white/40 focus:placeholder:text-white/60"
+      : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/30 focus:placeholder:text-bleu-nuit/50"
+  }`;
+
+  const buttonClass = `w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl font-black uppercase tracking-tighter border-2 shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed ${
+    isDark
+      ? "bg-white text-bleu-nuit border-white"
+      : "bg-bleu-nuit text-white border-bleu-nuit"
+  }`;
 
   return (
     <div className="w-full">
@@ -93,7 +119,7 @@ export function OptinForm() {
               placeholder="EMAIL ADDRESS"
               required
               autoComplete="email"
-              className="w-full px-0 py-4 bg-transparent border-b-4 border-bleu-nuit/40 text-xl font-bold text-bleu-nuit placeholder:text-bleu-nuit/30 placeholder:font-bold outline-none focus:border-bleu-accent focus:placeholder:text-bleu-nuit/50 transition-all rounded-none"
+              className={inputClass}
             />
           </div>
 
@@ -102,26 +128,28 @@ export function OptinForm() {
               type="submit"
               disabled={isSubmitting}
               aria-busy={isSubmitting}
-              className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
+              className={buttonClass}
             >
-              <span>{isSubmitting ? "Subscribing..." : "Get My Briefing"}</span>
+              <span>{isSubmitting ? "Subscribing..." : submitLabel}</span>
               {!isSubmitting && <ArrowRight className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </form>
 
-      <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-        Transformed 50+ founders since 2019.
-      </p>
+      {showFootnote && (
+        <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
+          Transformed 50+ founders since 2019.
+        </p>
+      )}
     </div>
   );
 }
 
-function SuccessState() {
+function SuccessState({ isDark }: { isDark: boolean }) {
   return (
     <div className="w-full flex flex-col items-center justify-center py-12 text-center">
-      <div className="flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 border-bleu-nuit shadow-brutal-sm">
+      <div className={`flex items-center justify-center w-16 h-16 mb-6 bg-bleu-accent rounded-full border-2 shadow-brutal-sm ${isDark ? "border-white" : "border-bleu-nuit"}`}>
         <svg
           className="w-8 h-8 text-white"
           fill="none"
@@ -136,14 +164,14 @@ function SuccessState() {
           />
         </svg>
       </div>
-      <p className="text-2xl font-black uppercase tracking-tighter text-bleu-nuit">
+      <p className={`text-2xl font-black uppercase tracking-tighter ${isDark ? "text-white" : "text-bleu-nuit"}`}>
         You&apos;re in.
       </p>
-      <p className="mt-2 text-base font-bold text-bleu-nuit/70">
+      <p className={`mt-2 text-base font-bold ${isDark ? "text-white/70" : "text-bleu-nuit/70"}`}>
         Check your email to confirm your subscription.
       </p>
-      <div className="mt-8 pt-8 border-t-2 border-bleu-nuit/10 w-full">
-        <p className="text-sm font-bold uppercase tracking-tighter text-bleu-nuit/50 mb-4">
+      <div className={`mt-8 pt-8 border-t-2 w-full ${isDark ? "border-white/10" : "border-bleu-nuit/10"}`}>
+        <p className={`text-sm font-bold uppercase tracking-tighter mb-4 ${isDark ? "text-white/50" : "text-bleu-nuit/50"}`}>
           Ready to move faster?
         </p>
         <button
@@ -151,7 +179,7 @@ function SuccessState() {
           data-cal-link="bartcagara/discovery-call"
           data-cal-namespace="discovery-call"
           data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          className="inline-flex items-center gap-2 px-6 py-3 bg-bleu-nuit text-white font-black uppercase text-sm tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm transition-brutal hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
+          className={`inline-flex items-center gap-2 px-6 py-3 font-black uppercase text-sm tracking-tighter border-2 shadow-brutal-sm transition-brutal hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] ${isDark ? "bg-white text-bleu-nuit border-white" : "bg-bleu-nuit text-white border-bleu-nuit"}`}
         >
           <ArrowRight className="w-4 h-4" />
           Book My Discovery Call

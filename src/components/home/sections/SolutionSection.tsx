@@ -43,7 +43,15 @@ export function SolutionSection({ title, subtitle, items }: SolutionSectionProps
                     : "text-xl md:text-2xl font-medium text-white/80 leading-relaxed"
                 }
               >
-                {text}
+                {isBold
+                  ? text
+                  : text.split(/(\*\*.*?\*\*)/).map((part, i) =>
+                      part.startsWith('**') && part.endsWith('**') ? (
+                        <strong key={i} className="font-bold text-white">{part.slice(2, -2)}</strong>
+                      ) : (
+                        part
+                      )
+                    )}
               </p>
             );
           })}

@@ -3,9 +3,9 @@ import type { ProgramSectionProps } from "@/components/home/types";
 
 /**
  * ProgramSection - FOUNDER ATHLETE OS program details
- * Shows the 3-phase program structure with methodology separator
+ * Shows the 3-phase program structure and the delivery block
  */
-export function ProgramSection({ title, subtitle, phases, methodology }: ProgramSectionProps) {
+export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSectionProps) {
 
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
@@ -81,29 +81,28 @@ export function ProgramSection({ title, subtitle, phases, methodology }: Program
           ))}
         </div>
 
-        {/* METHODOLOGY SEPARATOR */}
-        <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
-          {methodology.headline && (
-            <p className="text-2xl md:text-3xl font-black text-white leading-tight">
-              {methodology.headline}
-            </p>
-          )}
-          {methodology.body.map((paragraph, index) => {
-            const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-            const text = isBold ? paragraph.slice(2, -2) : paragraph;
-            return (
-              <p
-                key={index}
-                className={
-                  isBold
-                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
-                    : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
-                }
-              >
-                {text}
-              </p>
-            );
-          })}
+        {/* DELIVERY */}
+        <div className="mt-24 max-w-3xl">
+          <div className="mb-6">
+            <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+              <span aria-hidden="true">// </span>{delivery.heading}
+            </span>
+          </div>
+          <ul className="text-xl text-white/80 leading-relaxed font-medium max-w-3xl space-y-2">
+            {delivery.items.map((item, itemIndex) => (
+              <li key={itemIndex} className="flex items-start">
+                <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
+                <span>
+                  {item.split(/(\*\*.*?\*\*)/).map((part, i) => {
+                    if (part.startsWith('**') && part.endsWith('**')) {
+                      return <strong key={i} className="text-white">{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

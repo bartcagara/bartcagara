@@ -47,17 +47,6 @@ export function ResultsSection() {
                     ))}
                 </ScrollSection>
 
-                <ScrollSection title={results.sections.interviews}>
-                    {CLIENT_INTERVIEWS.map((id) => (
-                        <div key={id} className={styles.scrollItem}>
-                            <YouTubeLite
-                                videoId={id}
-                                title={`Client Interview video ${id}`}
-                            />
-                        </div>
-                    ))}
-                </ScrollSection>
-
                 <ScrollSection title={results.sections.dms}>
                     {CLIENT_DMS.map((src, index) => (
                         <div key={src} className={styles.scrollItemDm}>
@@ -68,6 +57,17 @@ export function ResultsSection() {
                                 height={500}
                                 loading="lazy"
                                 className="w-auto h-[500px]"
+                            />
+                        </div>
+                    ))}
+                </ScrollSection>
+
+                <ScrollSection title={results.sections.interviews}>
+                    {CLIENT_INTERVIEWS.map((id) => (
+                        <div key={id} className={styles.scrollItem}>
+                            <YouTubeLite
+                                videoId={id}
+                                title={`Client Interview video ${id}`}
                             />
                         </div>
                     ))}
