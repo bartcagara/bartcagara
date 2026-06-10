@@ -1,7 +1,6 @@
 import { OptinForm } from "@/components/newsletter/OptinForm";
 import type { Metadata } from "next";
-import Script from "next/script";
-import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
     title: "Founder Athlete Briefing | Weekly Newsletter",
@@ -80,18 +79,27 @@ export default function BriefingOptinPage() {
                     {/* Left Column: Heading Only */}
                     <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
                         <div className="max-w-xl">
+                            {/* HEADSHOT */}
+                            <Image
+                                src="/images/bart-headshot.jpg"
+                                alt="Bart Cagara"
+                                width={224}
+                                height={224}
+                                priority
+                                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-white shadow-brutal-white-sm mb-8"
+                            />
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
                                 Founder Athlete Briefing
                             </span>
                             {/* HEADLINE - Optical alignment tweaks */}
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
-                                You&apos;ve built a business.{" "}
-                                <span className="text-bleu-accent">Your body&apos;s lagging behind.</span>
+                                The same stuff I tell{" "}
+                                <span className="text-bleu-accent">the men who pay me.</span>
                             </h1>
                             {/* SUBHEAD - Lighter weight, cleaner size */}
                             <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
-                                Every Sunday, an inside look at why the restart cycle keeps winning, and how ex-athlete founders get off it for good.
+                                One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.
                             </p>
                         </div>
                     </div>
@@ -110,56 +118,27 @@ export default function BriefingOptinPage() {
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The symptoms</strong> &mdash; 10pm decompression snacking. Weekend progress sabotage. Stress decisions you only see in hindsight.
+                                        <strong>The symptoms</strong> &mdash; 10pm decompression snacking. Weekend sabotage. Stress decisions you only see in hindsight.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The fix</strong> &mdash; why discipline-based programs keep failing, and the systems + inner work that finally make it stick.
+                                        <strong>The fix</strong> &mdash; why discipline keeps losing, and what actually holds when the business eats a week.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The proof</strong> &mdash; CEO down 140 lbs. Traveling CFO at 12% body fat after 20 years of neglect. Former athletes getting their energy back.
+                                        <strong>The proof</strong> &mdash; CEO down 140 lbs. A CFO at 12% body fat who flies weekly. Founders getting their energy back.
                                     </p>
                                 </div>
                             </div>
 
-                            <OptinForm />
+                            <OptinForm submitLabel="Send Me The Briefing" />
                         </div>
                     </div>
                 </div>
-
-                {/* Testimonials */}
-                <section className="px-6 py-16 md:py-20 bg-white border-t-2 border-bleu-nuit" aria-labelledby="testimonial-title">
-                    <div className="max-w-4xl mx-auto">
-                        <div className="text-center mb-16 md:mb-20">
-                            <h2 id="testimonial-title" className="text-2xl md:text-4xl font-black uppercase tracking-tighter text-bleu-nuit leading-tight">
-                                These guys didn&apos;t learn discipline. They&apos;ve built an operating system.
-                            </h2>
-                        </div>
-                        <Script
-                            src="https://widget.senja.io/widget/6740d28e-90df-4998-b38b-6c0a7d2f6f52/platform.js"
-                            strategy="lazyOnload"
-                        />
-                        <div
-                            className="senja-embed"
-                            data-id="6740d28e-90df-4998-b38b-6c0a7d2f6f52"
-                            data-mode="shadow"
-                            data-lazyload="false"
-                            style={{ display: "block", width: "100%" }}
-                        />
-                    </div>
-                </section>
-
-                {/* Back to Main Site */}
-                <nav className="py-6 text-center border-t border-bleu-nuit/10" aria-label="Back to main site">
-                    <Link href="/" className="text-sm text-bleu-nuit/50 hover:text-bleu-accent transition-colors font-medium">
-                        &larr; Founder Athlete OS
-                    </Link>
-                </nav>
             </div>
         </>
     );

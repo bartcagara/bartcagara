@@ -139,7 +139,7 @@ export function OptinForm({
 
       {showFootnote && (
         <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-          Transformed 50+ founders since 2019.
+          50+ founders coached since 2019
         </p>
       )}
     </div>
