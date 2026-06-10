@@ -151,11 +151,11 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "You're already spending the time. The calculating, the renegotiating every meal, the restarting every January - that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
+      answer: "You're already spending the time. The calculating, the renegotiating every meal, the restarting every January — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
     },
     {
       question: "I travel constantly. How does this work on the road?",
-      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly - he's at 12% body fat after 20 years of neglect.",
+      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly — he's at 12% body fat after 20 years of neglect.",
     },
     {
       question: "What does it cost?",
