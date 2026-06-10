@@ -86,7 +86,7 @@ export default function BriefingOptinPage() {
                                 width={224}
                                 height={224}
                                 priority
-                                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-white shadow-brutal-md mb-8"
+                                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-white shadow-brutal-white-sm mb-8"
                             />
                             {/* BADGE */}
                             <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
