@@ -63,21 +63,6 @@ export const metadata: Metadata = {
   }
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Founder Athlete OS",
-  "description": "Health and performance coaching for former-athlete founders",
-  "url": "https://bartcagara.com",
-  "founder": {
-    "@type": "Person",
-    "name": "Bart Cagara",
-    "jobTitle": "Health Coach"
-  },
-  "areaServed": "Worldwide",
-  "priceRange": "$$$$"
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -95,12 +80,6 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="dns-prefetch" href="https://e.bartcagara.com" />
         <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
-
-        {/* Schema.org JSON-LD */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>

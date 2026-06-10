@@ -6,14 +6,6 @@ import Link from "next/link";
 export const metadata: Metadata = {
     title: "The Founder Athlete Briefing | One Email, Every Sunday",
     description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
-    keywords: [
-        "Founder Newsletter",
-        "Business Travel Fitness",
-        "Founder Health",
-        "Former Athletes",
-        "Founder Performance",
-        "Bart Cagara Newsletter"
-    ],
     authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
     creator: "Bart Cagara",
     publisher: "Bart Cagara",
@@ -41,7 +33,8 @@ export const metadata: Metadata = {
         title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
         description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
         images: ["/images/briefing-og-image.jpg"],
-        creator: "@bartcagara"
+        creator: "@bartcagara",
+        site: "@bartcagara"
     },
     robots: {
         index: true,
@@ -56,16 +49,24 @@ export const metadata: Metadata = {
     }
 };
 
+// "Periodical" is the schema.org type for serial publications like newsletters
+// ("NewsletterService" is not part of the schema.org vocabulary)
 const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsletterService",
-    "name": "Founder Athlete Briefing",
-    "description": "Weekly newsletter for former-athlete founders who've built a business but whose body's lagging behind",
-    "provider": {
+    "@type": "Periodical",
+    "name": "The Founder Athlete Briefing",
+    "description": "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+    "url": "https://bartcagara.com/briefing-optin",
+    "inLanguage": "en",
+    "publisher": {
         "@type": "Person",
-        "name": "Bart Cagara"
+        "name": "Bart Cagara",
+        "url": "https://bartcagara.com"
     },
-    "audience": "Former-athlete founders and entrepreneurs"
+    "audience": {
+        "@type": "Audience",
+        "audienceType": "Former-athlete founders and entrepreneurs"
+    }
 };
 
 export default function BriefingOptinPage() {

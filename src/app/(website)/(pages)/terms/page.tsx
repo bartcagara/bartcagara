@@ -4,6 +4,24 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
     title: "Terms of Service | Bart Cagara",
     description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services.",
+    alternates: {
+        canonical: "/terms"
+    },
+    openGraph: {
+        type: "website",
+        locale: "en_US",
+        url: "https://bartcagara.com/terms",
+        siteName: "Founder Athlete OS",
+        title: "Terms of Service | Bart Cagara",
+        description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services."
+    },
+    twitter: {
+        card: "summary",
+        title: "Terms of Service | Bart Cagara",
+        description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services.",
+        creator: "@bartcagara",
+        site: "@bartcagara"
+    }
 };
 
 export default function TermsPage() {
