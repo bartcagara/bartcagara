@@ -11,7 +11,7 @@ interface BriefingSectionProps {
 /**
  * BriefingSection - Newsletter opt-in block
  * Dark section that reuses the /briefing-optin email signup form
- * (hosted on a light card so the existing light-styled form stays legible)
+ * (dark variant so the form reads on the navy background)
  */
 export function BriefingSection({ label, heading, body, submitLabel }: BriefingSectionProps) {
   return (
@@ -29,8 +29,8 @@ export function BriefingSection({ label, heading, body, submitLabel }: BriefingS
               </p>
             ))}
           </div>
-          <div className="bg-gray-50 border-2 border-bleu-nuit p-6 md:p-10 shadow-brutal-md max-w-md">
-            <OptinForm submitLabel={submitLabel} showFootnote={false} />
+          <div className="max-w-md">
+            <OptinForm submitLabel={submitLabel} showFootnote={false} variant="dark" />
           </div>
         </div>
       </div>
