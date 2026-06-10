@@ -71,7 +71,7 @@ export const HOMEPAGE_CONTENT = {
         items: [
           "**Nutrition Baseline** — You eat food you actually like. The weight moves anyway.",
           "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
-          "**Pattern Recognition** — We find what killed every January and cut it off at the source.",
+          "**Pattern Recognition** — We find what kills every attempt and cut it off at the source.",
         ],
         win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
       },
@@ -161,7 +161,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "You're already spending the time. The calculating, the renegotiating every meal, the restarting every January — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
+      answer: "You're already spending the time. The calculating, the renegotiating every meal, the starting over — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
     },
     {
       question: "I travel constantly. How does this work on the road?",
