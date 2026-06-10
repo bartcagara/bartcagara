@@ -144,6 +144,16 @@ export const HOMEPAGE_CONTENT = {
     ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
 
+  briefing: {
+    label: "The Briefing",
+    heading: "Not booking today? Fair.",
+    body: [
+      "Most of the men I coach read for months before they ever said a word.",
+      "One email, every Sunday. The same stuff I tell the men who pay me.",
+    ],
+    submitLabel: "Send me the briefing",
+  },
+
   objections: [
     {
       question: "I've tried fitness programs before. They never stick.",

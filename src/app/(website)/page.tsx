@@ -37,6 +37,10 @@ const FinalCTASection = dynamic(() => import("@/components/home/sections").then(
   loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-white" />
 });
 
+const BriefingSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.BriefingSection })), {
+  loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-bleu-nuit" />
+});
+
 /**
  * Home Page
  * Main landing page for Founder Athlete OS
@@ -113,6 +117,16 @@ export default function Home() {
             body={HOMEPAGE_CONTENT.finalCta.body}
             ctaText={HOMEPAGE_CONTENT.finalCta.ctaText}
             ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
+          />
+        </ErrorBoundary>
+
+        {/* 9. THE BRIEFING */}
+        <ErrorBoundary>
+          <BriefingSection
+            label={HOMEPAGE_CONTENT.briefing.label}
+            heading={HOMEPAGE_CONTENT.briefing.heading}
+            body={HOMEPAGE_CONTENT.briefing.body}
+            submitLabel={HOMEPAGE_CONTENT.briefing.submitLabel}
           />
         </ErrorBoundary>
     </div>

@@ -12,7 +12,15 @@ const KIT_EMBED_URL = `https://bartcagara.kit.com/${KIT_FORM_UID}/index.js`;
 
 type Status = "idle" | "submitting" | "success" | "error";
 
-export function OptinForm() {
+interface OptinFormProps {
+  submitLabel?: string;
+  showFootnote?: boolean;
+}
+
+export function OptinForm({
+  submitLabel = "Get My Briefing",
+  showFootnote = true,
+}: OptinFormProps = {}) {
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
   const posthog = usePostHog();
@@ -104,16 +112,18 @@ export function OptinForm() {
               aria-busy={isSubmitting}
               className="w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl bg-bleu-nuit text-white font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              <span>{isSubmitting ? "Subscribing..." : "Get My Briefing"}</span>
+              <span>{isSubmitting ? "Subscribing..." : submitLabel}</span>
               {!isSubmitting && <ArrowRight className="w-6 h-6" />}
             </button>
           </div>
         </div>
       </form>
 
-      <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
-        Transformed 50+ founders since 2019.
-      </p>
+      {showFootnote && (
+        <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
+          Transformed 50+ founders since 2019.
+        </p>
+      )}
     </div>
   );
 }
