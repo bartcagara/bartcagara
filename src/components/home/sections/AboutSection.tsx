@@ -62,9 +62,11 @@ export function AboutSection({
           <h2 id="about-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
             {title}<br />{subtitle}
           </h2>
-          <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
-            {subhead}
-          </p>
+          {subhead && (
+            <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
+              {subhead}
+            </p>
+          )}
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-32 items-start">

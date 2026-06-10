@@ -78,7 +78,7 @@ export function ResultsSection() {
                         className="senja-embed block w-full"
                         data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
                         data-mode="shadow"
-                        data-lazyload="true"
+                        data-lazyload="false"
                         role="region"
                         aria-label="Client testimonials"
                     />
