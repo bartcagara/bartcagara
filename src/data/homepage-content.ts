@@ -37,8 +37,8 @@ export const HOMEPAGE_CONTENT = {
     title: "THE LAST RESTART",
     subtitle: "",
     items: [
-      "**6 months from now, it's a regular Tuesday.**",
-      "Up before the alarm. Training's done by seven. Not discipline — it's just what you do now.",
+      "**6 months from now, it's a regular Tuesday**.",
+      "Up before the alarm. Training's done by seven. **Not discipline — it's just what you do now.**",
       "Your son hits you at the door at full speed. You catch him, throw him over your shoulder, take the stairs two at a time.",
       "The business still eats whole weeks. **It doesn't take the body with it anymore.**",
       "Your wife stops worrying out loud.",
