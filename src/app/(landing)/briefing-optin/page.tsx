@@ -129,13 +129,6 @@ export default function BriefingOptinPage() {
                         </div>
                     </div>
                 </div>
-
-                {/* Closing line */}
-                <section className="px-6 py-16 md:py-20 bg-white">
-                    <p className="max-w-md mx-auto text-center text-base md:text-lg text-bleu-nuit/60 font-medium leading-relaxed">
-                        Most of the men I coach read for months before they ever said a word.
-                    </p>
-                </section>
             </div>
         </>
     );
