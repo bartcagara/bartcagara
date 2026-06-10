@@ -147,15 +147,23 @@ export const HOMEPAGE_CONTENT = {
   objections: [
     {
       question: "I've tried fitness programs before. They never stick.",
-      answer: "Because they forced you into a plan without fixing the pattern. We find why you keep quitting — then build something that works inside your actual life, not against it.",
-    },
-    {
-      question: "I travel constantly. How does this work on the road?",
-      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. Every system is tailored for a founder's schedule, not a gym bro.",
+      answer: "Because they handed you a plan and never asked why the last three failed. The reason you quit is specific, findable, and it was never discipline. Finding it is half of what the Restart Audit does.",
     },
     {
       question: "I don't have time for a 6-month commitment.",
-      answer: "I get it. But most clients actually spend less time on health after starting — because we replace the guessing with something that fits your schedule. The 6 months? That's what makes sure you never rebound again.",
+      answer: "You're already spending the time. The calculating, the renegotiating every meal, the restarting every January - that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
+    },
+    {
+      question: "I travel constantly. How does this work on the road?",
+      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly - he's at 12% body fat after 20 years of neglect.",
+    },
+    {
+      question: "What does it cost?",
+      answer: "It's a serious investment. We talk exact numbers on the call, once I know what you actually need. Payment plans exist. If you're shopping for the cheapest way to lose weight, this isn't it. If you're done restarting, it is.",
+    },
+    {
+      question: "What actually happens on the Restart Audit?",
+      answer: "45 minutes, you and me. We find what's been killing your restarts and what it would take to end the cycle for good. If we're a fit, I'll tell you. If we're not, I'll tell you that too. Worst case, you leave knowing exactly why it never stuck. That alone beats another January.",
     },
   ],
 } as const;
