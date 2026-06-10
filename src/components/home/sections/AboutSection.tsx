@@ -87,7 +87,7 @@ export function AboutSection({
             <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-                const isFootnote = paragraph.startsWith('*') && !isBold;
+                const isFootnote = paragraph.startsWith('*') && !paragraph.startsWith('**');
                 const text = isBold
                   ? paragraph.slice(2, -2)
                   : isFootnote

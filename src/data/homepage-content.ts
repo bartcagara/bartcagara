@@ -125,7 +125,7 @@ export const HOMEPAGE_CONTENT = {
       "**That's when I built this.**",
       "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports as a kid, built something real, body paid for it.",
       "**My son is watching.** I built this so he grows up with a dad who's actually himself.",
-      "*I bet you're curious about my before-after. {{transformation-link}}.",
+      "*(I bet you're curious about my before-after. {{transformation-link}}.)",
     ],
     transformationImage: "/images/transformations/bart-transformation.webp",
     credentials: ["Sports Nutritionist", "Performance Coach"],
