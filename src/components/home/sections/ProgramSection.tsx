@@ -5,7 +5,7 @@ import type { ProgramSectionProps } from "@/components/home/types";
  * ProgramSection - FOUNDER ATHLETE OS program details
  * Shows the 3-phase program structure with methodology separator
  */
-export function ProgramSection({ title, subtitle, phases, methodology }: ProgramSectionProps) {
+export function ProgramSection({ title, subtitle, phases, delivery, methodology }: ProgramSectionProps) {
 
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
@@ -79,6 +79,30 @@ export function ProgramSection({ title, subtitle, phases, methodology }: Program
               </div>
             </div>
           ))}
+        </div>
+
+        {/* DELIVERY */}
+        <div className="mt-24 max-w-3xl">
+          <div className="mb-6">
+            <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+              <span aria-hidden="true">// </span>{delivery.heading}
+            </span>
+          </div>
+          <ul className="text-xl text-white/80 leading-relaxed font-medium max-w-3xl space-y-2">
+            {delivery.items.map((item, itemIndex) => (
+              <li key={itemIndex} className="flex items-start">
+                <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
+                <span>
+                  {item.split(/(\*\*.*?\*\*)/).map((part, i) => {
+                    if (part.startsWith('**') && part.endsWith('**')) {
+                      return <strong key={i} className="text-white">{part.slice(2, -2)}</strong>;
+                    }
+                    return part;
+                  })}
+                </span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         {/* METHODOLOGY SEPARATOR */}

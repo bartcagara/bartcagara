@@ -61,7 +61,7 @@ export const HOMEPAGE_CONTENT = {
 
   program: {
     title: "FOUNDER\nATHLETE OS",
-    subtitle: "Six months to reclaim your body and your identity.",
+    subtitle: "Six months. Three phases. One outcome: you never start over again.",
     phases: [
       {
         number: "01",
@@ -69,11 +69,11 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 1-4",
         focus: "IMMEDIATE CONTROL",
         items: [
-          "**Nutrition Baseline** — You start eating the way you like and getting results.",
+          "**Nutrition Baseline** — You eat food you actually like. The weight moves anyway.",
           "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
-          "**Pattern Recognition** — We figure out exactly what made you quit before and cut it off at the source.",
+          "**Pattern Recognition** — We find what killed every January and cut it off at the source.",
         ],
-        win: "You drop 10-15 lbs. Your energy returns. You understand why you've been failing.",
+        win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
       },
       {
         number: "02",
@@ -81,9 +81,9 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Physique Construction** — Your training evolves. Your body starts looking athletic again.",
+          "**Physique Construction** — The body starts looking athletic again. Not gym-big. Athlete.",
           "**Travel-Proofing** — Restaurants, airports, hotel gyms. Handled.",
-          "**Bloodwork Optimization** — We optimize for performance and longevity, not just basic improvements.",
+          "**Bloodwork** — Full panel, real analysis. The inside catches up with the outside.",
         ],
         win: "Clothes fit different. People notice. You feel like yourself again.",
       },
@@ -94,18 +94,27 @@ export const HOMEPAGE_CONTENT = {
         focus: "FULL AUTONOMY",
         items: [
           "**Life Integration** — Vacations, pivots, chaos. Nothing derails you.",
-          "**Training Refinement** — We eliminate weak points and build a program that outlasts our work together.",
-          "**Identity Work** — You close the gap between who you are and how you show up. For good.",
+          "**Training Refinement** — We eliminate weak points and build the program that outlasts me.",
+          "**The Handoff** — The programming, the nutrition calls, the adjustments. All of it moves from my head to yours.",
         ],
         win: "You fire me. You own this. Forever.",
       },
     ],
+    delivery: {
+      heading: "HOW IT RUNS",
+      items: [
+        "**Weekly Calls** — You and me, every week. This is where the real work happens.",
+        "**WhatsApp, 24/7** — Stuck at an airport, staring at a menu, lost a week? Message me. I'm there.",
+        "**The App** — Your program, built around the equipment you actually have. Home rack, hotel gym, full club.",
+      ],
+    },
     methodology: {
       headline: "",
       body: [
         "I don't believe in hype, chest-beating, or yelling at you every week.",
         "I believe in the art of conversation. Two men sitting down, raw truth on the table, getting to the bottom of what's actually broken.",
-        "**The training adapts to your schedule. The nutrition works on the road. But it's the identity work — done in those sessions — that makes any of it last.**",
+        "**The training adapts to your schedule. The nutrition works on the road. But it's the identity work, done in those conversations, that makes any of it last.**",
+        "**Founder's pace. Athlete's body.**",
       ],
     },
   },
