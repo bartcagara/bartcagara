@@ -3,9 +3,9 @@ import type { ProgramSectionProps } from "@/components/home/types";
 
 /**
  * ProgramSection - FOUNDER ATHLETE OS program details
- * Shows the 3-phase program structure with methodology separator
+ * Shows the 3-phase program structure and the delivery block
  */
-export function ProgramSection({ title, subtitle, phases, delivery, methodology }: ProgramSectionProps) {
+export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSectionProps) {
 
   return (
     <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
@@ -103,31 +103,6 @@ export function ProgramSection({ title, subtitle, phases, delivery, methodology 
               </li>
             ))}
           </ul>
-        </div>
-
-        {/* METHODOLOGY SEPARATOR */}
-        <div className="mt-24 pt-12 border-t-2 border-white/20 max-w-4xl space-y-6">
-          {methodology.headline && (
-            <p className="text-2xl md:text-3xl font-black text-white leading-tight">
-              {methodology.headline}
-            </p>
-          )}
-          {methodology.body.map((paragraph, index) => {
-            const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
-            const text = isBold ? paragraph.slice(2, -2) : paragraph;
-            return (
-              <p
-                key={index}
-                className={
-                  isBold
-                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
-                    : "text-xl md:text-2xl font-medium text-white/70 leading-relaxed"
-                }
-              >
-                {text}
-              </p>
-            );
-          })}
         </div>
       </div>
     </section>

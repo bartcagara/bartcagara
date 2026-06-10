@@ -83,7 +83,6 @@ export default function Home() {
             subtitle={HOMEPAGE_CONTENT.program.subtitle}
             phases={HOMEPAGE_CONTENT.program.phases}
             delivery={HOMEPAGE_CONTENT.program.delivery}
-            methodology={HOMEPAGE_CONTENT.program.methodology}
           />
         </ErrorBoundary>
 

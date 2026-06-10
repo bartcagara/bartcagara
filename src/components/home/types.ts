@@ -69,11 +69,6 @@ export interface SolutionSectionProps {
   items: readonly string[];
 }
 
-export interface ProgramMethodology {
-  readonly headline: string;
-  readonly body: readonly string[];
-}
-
 export interface ProgramDelivery {
   readonly heading: string;
   readonly items: readonly string[];
@@ -84,7 +79,6 @@ export interface ProgramSectionProps {
   subtitle: string;
   phases: readonly ProgramPhase[];
   delivery: ProgramDelivery;
-  methodology: ProgramMethodology;
 }
 
 export interface AboutSectionProps {

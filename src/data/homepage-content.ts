@@ -103,18 +103,9 @@ export const HOMEPAGE_CONTENT = {
     delivery: {
       heading: "HOW IT RUNS",
       items: [
-        "**Weekly Calls** — You and me, every week. This is where the real work happens.",
+        "**Weekly Calls** — You and me, every week. The program fixes the body. The calls fix what kept breaking it.",
         "**WhatsApp, 24/7** — Stuck at an airport, staring at a menu, lost a week? Message me. I'm there.",
         "**The App** — Your program, built around the equipment you actually have. Home rack, hotel gym, full club.",
-      ],
-    },
-    methodology: {
-      headline: "",
-      body: [
-        "I don't believe in hype, chest-beating, or yelling at you every week.",
-        "I believe in the art of conversation. Two men sitting down, raw truth on the table, getting to the bottom of what's actually broken.",
-        "**The training adapts to your schedule. The nutrition works on the road. But it's the identity work, done in those conversations, that makes any of it last.**",
-        "**Founder's pace. Athlete's body.**",
       ],
     },
   },
