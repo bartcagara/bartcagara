@@ -49,8 +49,8 @@ export const HOMEPAGE_CONTENT = {
   },
 
   results: {
-    headline: "THESE GUYS DIDN'T\nWAIT FOR LIFE TO SLOW DOWN",
-    subheadline: "They built something that worked with their chaos, not against it.",
+    headline: "THEY DIDN'T HAVE TIME EITHER",
+    subheadline: "Founders in their forties. Companies, kids, travel weeks.",
     sections: {
       transformations: "Client Photos",
       interviews: "Client Interviews",

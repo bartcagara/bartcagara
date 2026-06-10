@@ -81,9 +81,11 @@ export const CLIENT_INTERVIEWS = [
 ];
 
 export const CLIENT_DMS = [
-  "/images/testimonials/dm-1.jpg",
+  // Lead with three specific screenshots: lipid-panel results (dm-2),
+  // "I'm not the same guy anymore" (dm-3), long business-trip recap (dm-1).
   "/images/testimonials/dm-2.jpg",
   "/images/testimonials/dm-3.jpg",
+  "/images/testimonials/dm-1.jpg",
   "/images/testimonials/dm-4.jpg",
   "/images/testimonials/dm-5.jpg",
   "/images/testimonials/dm-6.jpg",
