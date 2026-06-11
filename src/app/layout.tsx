@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Founder Athlete OS | 1:1 Health Coaching for Founders",
-  description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+  description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
   authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
   publisher: "Bart Cagara",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     url: "https://bartcagara.com",
     siteName: "Founder Athlete OS",
     title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
-    description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+    description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: [
       {
         url: "/images/og-home.jpg",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
-    description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+    description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: ["/images/og-home.jpg"],
     creator: "@bartcagara",
     site: "@bartcagara"
