@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "Become your kid's",
     highlightedText: "Favorite athlete.",
-    subheadline: "6 months to get you lean, strong and off the restart cycle. For good.",
+    subheadline: "6 months to get you lean, athletic and off the restart cycle. For good.",
     ctaText: "BOOK MY RESTART AUDIT",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
     socialProof: "50+ founders coached since 2019",
