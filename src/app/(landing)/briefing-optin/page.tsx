@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
         images: [
             {
-                url: "/images/briefing-og-image.jpg",
+                url: "/images/og-briefing.jpg",
                 width: 1200,
                 height: 630,
                 alt: "The Founder Athlete Briefing - one email, every Sunday"
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
         description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
-        images: ["/images/briefing-og-image.jpg"],
+        images: ["/images/og-briefing.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     },

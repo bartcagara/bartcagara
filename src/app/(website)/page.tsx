@@ -47,7 +47,7 @@ const businessJsonLd = {
   "name": "Founder Athlete OS",
   "description": "Health and performance coaching for former-athlete founders",
   "url": "https://bartcagara.com",
-  "image": "https://bartcagara.com/images/og-image.jpg",
+  "image": "https://bartcagara.com/images/og-home.jpg",
   "sameAs": ["https://x.com/bartcagara"],
   "founder": {
     "@type": "Person",

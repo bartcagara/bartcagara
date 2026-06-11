@@ -16,7 +16,7 @@ export const metadata: Metadata = {
         description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message and get a reply within 24 hours.",
         images: [
             {
-                url: "/images/og-image.jpg",
+                url: "/images/og-home.jpg",
                 width: 1200,
                 height: 630,
                 alt: "Founder Athlete OS - Become your kid's favorite athlete"
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: "Contact | Bart Cagara",
         description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message and get a reply within 24 hours.",
-        images: ["/images/og-image.jpg"],
+        images: ["/images/og-home.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     }

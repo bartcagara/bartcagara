@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/og-home.jpg",
         width: 1200,
         height: 630,
         alt: "Founder Athlete OS - Become your kid's favorite athlete"
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
     description: "Become your kid's favorite athlete. 6 months to get you lean, strong and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/og-home.jpg"],
     creator: "@bartcagara",
     site: "@bartcagara"
   },
