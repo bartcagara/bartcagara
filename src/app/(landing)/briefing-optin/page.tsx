@@ -125,13 +125,13 @@ export default function BriefingOptinPage() {
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The fix</strong> &mdash; why discipline keeps losing, and what actually holds when the business eats a week.
+                                        <strong>The diagnosis</strong> &mdash; why discipline keeps losing, and what actually holds when the business eats a week.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
                                     <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The proof</strong> &mdash; CEO down 140 lbs. A CFO at 12% body fat who flies weekly. Founders getting their energy back.
+                                        <strong>The outcome</strong> &mdash; CEO down 140 lbs. A CFO at 12% body fat who flies weekly. Founders getting their energy back.
                                     </p>
                                 </div>
                             </div>
