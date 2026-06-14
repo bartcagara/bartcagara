@@ -13,7 +13,9 @@ export function FinalCTASection({
         <SectionBadge>The Decision</SectionBadge>
         <h2 id="final-cta-title" className="text-display mb-12 text-bleu-nuit max-w-5xl">
           {headline}<br />
-          <span className="inline-block bg-bleu-nuit text-white px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
+          {/* Hug the phrase: wrap-and-hug on mobile (w-min), single-line hug on
+              desktop where it fits (md:w-fit). */}
+          <span className="inline-block w-min md:w-fit max-w-full bg-bleu-nuit text-white px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
         <div className="mb-16 max-w-3xl space-y-6">
           {body.map((paragraph, index) => {
