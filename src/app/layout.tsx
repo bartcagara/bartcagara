@@ -78,7 +78,9 @@ export default function RootLayout({
 
         {/* Resource Hints - Only critical for initial load */}
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://e.bartcagara.com" />
+        {/* PostHog proxy: preconnect (not just dns-prefetch) so the session-replay
+            recorder and first events establish their connection sooner. */}
+        <link rel="preconnect" href="https://e.bartcagara.com" />
         <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
