@@ -26,10 +26,10 @@ describe('Navbar', () => {
     expect(screen.getByText('The Briefing')).toBeInTheDocument();
   });
 
-  it('renders the Book Call CTA button', () => {
+  it('renders the Book My Call CTA button', () => {
     render(<Navbar />);
-    // Get all Book Call buttons (desktop and mobile)
-    const bookCallButtons = screen.getAllByText('Book Call');
+    // Get all Book My Call buttons (desktop and mobile)
+    const bookCallButtons = screen.getAllByText('Book My Call');
     expect(bookCallButtons.length).toBeGreaterThan(0);
   });
 

@@ -1,4 +1,5 @@
 import { CalendarEmbed } from "@/components/home/CalendarEmbed";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { FinalCTASectionProps } from "@/components/home/types";
 
 export function FinalCTASection({
@@ -9,6 +10,7 @@ export function FinalCTASection({
   return (
     <section id="calendar-section" className="py-24 md:py-48 bg-white text-bleu-nuit overflow-x-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
+        <SectionBadge>The Decision</SectionBadge>
         <h2 id="final-cta-title" className="text-display mb-12 text-bleu-nuit max-w-5xl">
           {headline}<br />
           <span className="inline-block bg-bleu-nuit text-white px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>

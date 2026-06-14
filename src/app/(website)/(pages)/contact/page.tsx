@@ -37,8 +37,8 @@ export default function ContactPage() {
     return (
         <div className="max-w-xl mx-auto">
             <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold mb-6 text-gray-900">Contact Us</h1>
-                <p className="text-xl text-gray-600">
+                <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-bleu-nuit">Contact Us</h1>
+                <p className="text-lead text-bleu-nuit/70">
                     Not ready to book a call yet? Ask your question below.
                 </p>
             </div>

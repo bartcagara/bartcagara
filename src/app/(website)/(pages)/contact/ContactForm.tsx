@@ -63,7 +63,7 @@ export function ContactForm() {
             </div>
 
             <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="name" className="block text-sm font-bold uppercase tracking-tight text-bleu-nuit mb-2">
                     Name
                 </label>
                 <input
@@ -72,13 +72,13 @@ export function ContactForm() {
                     name="name"
                     required
                     autoComplete="name"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 border-2 border-bleu-nuit/15 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
                     placeholder="Your name"
                 />
             </div>
 
             <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="email" className="block text-sm font-bold uppercase tracking-tight text-bleu-nuit mb-2">
                     Email
                 </label>
                 <input
@@ -87,13 +87,13 @@ export function ContactForm() {
                     name="email"
                     required
                     autoComplete="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 border-2 border-bleu-nuit/15 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
                     placeholder="your@email.com"
                 />
             </div>
 
             <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label htmlFor="message" className="block text-sm font-bold uppercase tracking-tight text-bleu-nuit mb-2">
                     Message
                 </label>
                 <textarea
@@ -101,7 +101,7 @@ export function ContactForm() {
                     name="message"
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 border-2 border-bleu-nuit/15 rounded-md focus:ring-2 focus:ring-bleu-accent focus:border-bleu-accent outline-none transition-colors"
                     placeholder="How can we help you?"
                 ></textarea>
             </div>
