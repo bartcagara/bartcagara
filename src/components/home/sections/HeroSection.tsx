@@ -12,6 +12,10 @@ import type { HeroSectionProps } from "@/components/home/types";
  * scale is continuous across viewports and centralized in one place.
  */
 export function HeroSection({ content }: HeroSectionProps) {
+  // Render the first word on its own line and keep the remainder ("your kid's")
+  // together on a single line at every breakpoint.
+  const [headlineLead, ...headlineRestParts] = content.headline.split(" ");
+  const headlineRest = headlineRestParts.join(" ");
   return (
     <section
       className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden"
@@ -22,9 +26,15 @@ export function HeroSection({ content }: HeroSectionProps) {
         <p className="text-eyebrow text-white/70 mb-6">{content.socialProof}</p>
 
         <h1 className="text-display text-white max-w-5xl mb-10">
-          {content.headline}
+          {headlineLead}
+          {headlineRest && (
+            <>
+              <br />
+              <span className="whitespace-nowrap">{headlineRest}</span>
+            </>
+          )}
           <br />
-          <span className="inline-block max-w-full bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
+          <span className="inline-block w-min max-w-full bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
             {content.highlightedText}
           </span>
         </h1>
