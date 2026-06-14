@@ -24,7 +24,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   diagnosis: {
-    title: "TAKING YOUR SHIRT OFF RUINS THE WHOLE THING",
+    title: "SHIRT OFF RUINS THE WHOLE THING",
     subtitle: "",
     items: [
       "Your kids are in the pool, calling for you.",
