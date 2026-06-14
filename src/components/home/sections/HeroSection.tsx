@@ -1,4 +1,5 @@
 import { CTAButton } from "@/components/ui/CTAButton";
+import { TiltedLabel } from "@/components/ui/TiltedLabel";
 import type { HeroSectionProps } from "@/components/home/types";
 
 /**
@@ -35,9 +36,9 @@ export function HeroSection({ content }: HeroSectionProps) {
           )}
           <br />
           {/* w-min hugs the box to its own phrase (widest word) at every size. */}
-          <span className="inline-block w-min max-w-full bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
+          <TiltedLabel className="bg-gray-50 text-bleu-nuit">
             {content.highlightedText}
-          </span>
+          </TiltedLabel>
         </h1>
 
         <div className="border-l-4 border-bleu-accent pl-5 md:pl-8 max-w-2xl mb-10">

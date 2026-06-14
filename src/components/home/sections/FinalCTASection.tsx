@@ -1,5 +1,6 @@
 import { CalendarEmbed } from "@/components/home/CalendarEmbed";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { TiltedLabel } from "@/components/ui/TiltedLabel";
 import type { FinalCTASectionProps } from "@/components/home/types";
 
 export function FinalCTASection({
@@ -15,7 +16,7 @@ export function FinalCTASection({
           {headline}<br />
           {/* Hug the phrase: wrap-and-hug on mobile (w-min), single-line hug on
               desktop where it fits (md:w-fit). */}
-          <span className="inline-block w-min md:w-fit max-w-full bg-bleu-nuit text-white px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
+          <TiltedLabel widthClassName="w-min md:w-fit" className="bg-bleu-nuit text-white">{highlightedText}</TiltedLabel>
         </h2>
         <div className="mb-16 max-w-3xl space-y-6">
           {body.map((paragraph, index) => {
