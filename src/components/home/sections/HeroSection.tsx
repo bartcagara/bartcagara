@@ -34,7 +34,10 @@ export function HeroSection({ content }: HeroSectionProps) {
             </>
           )}
           <br />
-          <span className="inline-block w-min max-w-full bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
+          {/* max-w in em tracks the clamped display font, so the box matches the
+              width of the "your kid's" line above it at every breakpoint (no
+              poke-out, no sprawl). */}
+          <span className="block w-full max-w-[5.6em] bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
             {content.highlightedText}
           </span>
         </h1>
