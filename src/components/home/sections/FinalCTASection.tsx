@@ -8,7 +8,7 @@ export function FinalCTASection({
   body,
 }: FinalCTASectionProps) {
   return (
-    <section id="calendar-section" className="py-24 md:py-48 bg-white text-bleu-nuit overflow-x-hidden" aria-labelledby="final-cta-title">
+    <section id="calendar-section" className="py-24 md:py-32 bg-white text-bleu-nuit overflow-x-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
         <SectionBadge>The Decision</SectionBadge>
         <h2 id="final-cta-title" className="text-display mb-12 text-bleu-nuit max-w-5xl">
