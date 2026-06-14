@@ -49,8 +49,6 @@ export interface HeroSectionProps {
     ctaText: string;
     ctaLink: string;
     socialProof: string;
-    /** Risk-reversal microcopy shown directly under the primary CTA. */
-    riskReversal: string;
   };
 }
 

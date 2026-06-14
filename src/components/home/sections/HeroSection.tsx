@@ -36,11 +36,6 @@ export function HeroSection({ content }: HeroSectionProps) {
         <CTAButton href="#book-call" variant="light" cal>
           {content.ctaText}
         </CTAButton>
-
-        {/* Risk reversal: lowers the cost of clicking the CTA */}
-        <p className="mt-5 text-base text-white/70 max-w-md">
-          {content.riskReversal}
-        </p>
       </div>
     </section>
   );

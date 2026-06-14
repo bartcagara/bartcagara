@@ -94,13 +94,12 @@ split — OKLCh is **internal-only** (body defaults + ErrorReporter), `--bleu-*`
 without changing the brand look:
 
 - **Conversion-first hierarchy:** social-proof eyebrow → headline → subheadline →
-  **one** primary CTA → risk-reversal microcopy ("45 minutes, 1:1 with me. No pitch
-  if we're not a fit.") placed exactly where hesitation peaks — right under the button.
+  a single, unmissable primary CTA. One clear path to booking, no competing actions.
 - Consumes the new `text-display` / `text-lead` / `text-eyebrow` utilities.
 - Contrast, focus, and mobile padding fixed; the rotated highlight span is constrained
   so it can't clip on small screens.
-- Copy still lives in `src/data/homepage-content.ts` (new `riskReversal` field) — the
-  content-as-code discipline is preserved.
+- Copy still lives in `src/data/homepage-content.ts` — the content-as-code discipline
+  is preserved.
 
 ---
 
