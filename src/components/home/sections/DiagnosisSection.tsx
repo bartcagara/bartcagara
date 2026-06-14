@@ -27,7 +27,7 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
               return (
                 <div key={index} className="flex items-start gap-4">
                   <X className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
-                  <p className="text-xl md:text-2xl font-medium text-bleu-nuit/80 leading-relaxed">
+                  <p className="text-lead font-medium text-bleu-nuit/80 leading-relaxed">
                     {text}
                   </p>
                 </div>
@@ -39,8 +39,8 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-bleu-nuit leading-tight"
-                    : "text-xl md:text-2xl font-medium text-bleu-nuit/80 leading-relaxed"
+                    ? "text-lead-lg font-black text-bleu-nuit leading-tight"
+                    : "text-lead font-medium text-bleu-nuit/80 leading-relaxed"
                 }
               >
                 {isBold

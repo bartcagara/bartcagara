@@ -7,7 +7,7 @@ export function ObjectionsSection({ objections }: { objections: readonly Objecti
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-16">
           <SectionBadge variant="light">The Questions</SectionBadge>
-          <h2 id="objections-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white">
+          <h2 id="objections-title" className="text-h2 text-white">
             WHAT&apos;S STOPPING YOU?
           </h2>
         </div>
@@ -15,7 +15,7 @@ export function ObjectionsSection({ objections }: { objections: readonly Objecti
         <div className="max-w-3xl space-y-12">
           {objections.map((item, index) => (
             <div key={index} className="border-l-4 border-bleu-accent pl-8">
-              <p className="text-xl md:text-2xl font-black text-white leading-tight mb-3">
+              <p className="text-lead font-black text-white leading-tight mb-3">
                 &ldquo;{item.question}&rdquo;
               </p>
               <p className="text-lg md:text-xl font-medium text-white/70 leading-relaxed">

@@ -59,11 +59,11 @@ export function AboutSection({
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-24">
           <SectionBadge>The Coach</SectionBadge>
-          <h2 id="about-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit">
+          <h2 id="about-title" className="text-h2 text-bleu-nuit">
             {title}<br />{subtitle}
           </h2>
           {subhead && (
-            <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
+            <p className="text-lead-lg font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
               {subhead}
             </p>
           )}
@@ -86,7 +86,7 @@ export function AboutSection({
 
           {/* Content (Right) */}
           <div>
-            <div className="space-y-8 text-xl md:text-2xl font-medium leading-relaxed text-bleu-nuit/80">
+            <div className="space-y-8 text-lead font-medium leading-relaxed text-bleu-nuit/80">
               {paragraphs.map((paragraph, index) => {
                 const isBold = paragraph.startsWith('**') && paragraph.endsWith('**');
                 const isFootnote = paragraph.startsWith('*') && !paragraph.startsWith('**');
@@ -99,9 +99,9 @@ export function AboutSection({
                 return (
                   <p key={index} className={
                     isBold
-                      ? "text-2xl md:text-3xl text-bleu-nuit font-black leading-tight"
+                      ? "text-lead-lg text-bleu-nuit font-black leading-tight"
                       : isFootnote
-                        ? "text-xl md:text-2xl text-bleu-nuit/60 italic"
+                        ? "text-lead text-bleu-nuit/70 italic"
                         : ""
                   }>
                     {hasLink

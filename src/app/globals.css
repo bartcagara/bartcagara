@@ -36,9 +36,11 @@
    and lives in exactly ONE place. Components reference these by
    name instead of copy-pasting arbitrary Tailwind strings.
 
-   Each utility bakes in size + line-height + tracking + weight +
-   transform. Color and max-width stay as element-level utilities
-   because they legitimately vary by section/variant.
+   Heading roles (display/h2/eyebrow) bake in the full recipe — size,
+   line-height, tracking, weight, transform — because they are invariant.
+   Body roles (lead/lead-lg) are SIZE-ONLY and pair with font-weight and
+   line-height utilities.
+   Color and max-width always stay as element-level utilities.
 
    clamp(MIN, BASE + vw, MAX), tuned for ~360px–1440px viewports.
    ========================================================= */
@@ -61,18 +63,19 @@
   text-transform: uppercase;
 }
 
+/* text-lead / text-lead-lg are SIZE-ONLY tokens: the same body size is
+   used with different weights (regular copy vs. bold emphasis) and
+   line-heights across sections, so pair these with `font-*` and
+   `leading-*` utilities rather than baking weight in. */
+
 @utility text-lead {
-  /* Subheadlines / lead paragraphs. Replaces text-xl md:text-2xl. */
+  /* Body / subheadlines. Replaces text-xl md:text-2xl. */
   font-size: clamp(1.125rem, 0.95rem + 0.9vw, 1.5rem); /* 18px → 24px */
-  line-height: 1.5;
-  font-weight: 500;
 }
 
 @utility text-lead-lg {
-  /* Emphasis body (e.g. Final-CTA). Replaces text-2xl md:text-3xl. */
+  /* Larger subheadlines / emphasis body. Replaces text-2xl md:text-3xl. */
   font-size: clamp(1.5rem, 1.1rem + 1.6vw, 1.875rem); /* 24px → 30px */
-  line-height: 1.2;
-  font-weight: 900;
 }
 
 @utility text-eyebrow {

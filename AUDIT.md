@@ -103,12 +103,25 @@ without changing the brand look:
 
 ---
 
-## Rollout (next, after sign-off on the hero)
+## Rollout — completed
 
-The foundation makes the rest mechanical:
+The foundation made the rest mechanical, and it's now done across the site:
 
-1. Swap the hardcoded type strings in `FinalCTASection`, `SectionHeader`, and the
-   remaining ~8 sections to `text-display` / `text-h2` / `text-lead*`.
-2. Convert the 26 testimonial JPGs (~2.4 MB) to WebP.
-3. Sweep remaining low-contrast utilities (`/40`, `/60` on small text) site-wide.
-4. Consider Cloudflare Image Resizing to drop `unoptimized` for true responsive srcset.
+1. ✅ **Type system propagated.** Every section (`HeroSection`, `FinalCTASection`,
+   `SectionHeader`, `ResultsSection`, `ProgramSection`, `AboutSection`,
+   `DiagnosisSection`, `SolutionSection`, `ObjectionsSection`, `BriefingSection`)
+   now uses `text-display` / `text-h2` / `text-lead` / `text-lead-lg`. The
+   copy-pasted `text-5xl md:text-8xl …` and `text-[15.5vw] md:text-[8rem]` strings
+   are gone. Note: `text-lead*` are **size-only** tokens — they pair with the
+   existing `font-*` / `leading-*` so regular copy vs. bold emphasis is preserved.
+2. ✅ **Testimonials → WebP.** All 26 `dm-*.jpg` converted to WebP and capped at
+   1100px tall (they render ~500px): **2.59 MB → 1.61 MB (−38%)**, text fully legible.
+   The JPGs were removed and `assets.ts` rewired.
+3. ✅ **Contrast sweep.** Low-contrast small text bumped to ≥`/70` across
+   `TrustedBy`, `SectionHeader`, `AboutSection`, and `OptinForm` (labels, disclaimer,
+   and input placeholders).
+
+### Still open (deferred, infra-level)
+
+- Drop `images.unoptimized` via Cloudflare Image Resizing for true responsive
+  `srcset` / AVIF — a deployment-config change, out of scope for this code pass.

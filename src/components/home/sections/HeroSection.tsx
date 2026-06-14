@@ -30,7 +30,9 @@ export function HeroSection({ content }: HeroSectionProps) {
         </h1>
 
         <div className="border-l-4 border-bleu-accent pl-5 md:pl-8 max-w-2xl mb-10">
-          <p className="text-lead text-white/80">{content.subheadline}</p>
+          <p className="text-lead font-medium leading-relaxed text-white/80">
+            {content.subheadline}
+          </p>
         </div>
 
         <CTAButton href="#book-call" variant="light" cal>

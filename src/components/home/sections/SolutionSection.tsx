@@ -27,7 +27,7 @@ export function SolutionSection({ title, subtitle, items }: SolutionSectionProps
               return (
                 <div key={index} className="flex items-start gap-4">
                   <Check className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
-                  <p className="text-xl md:text-2xl font-medium text-white/80 leading-relaxed">
+                  <p className="text-lead font-medium text-white/80 leading-relaxed">
                     {text}
                   </p>
                 </div>
@@ -39,8 +39,8 @@ export function SolutionSection({ title, subtitle, items }: SolutionSectionProps
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-white leading-tight"
-                    : "text-xl md:text-2xl font-medium text-white/80 leading-relaxed"
+                    ? "text-lead-lg font-black text-white leading-tight"
+                    : "text-lead font-medium text-white/80 leading-relaxed"
                 }
               >
                 {isBold

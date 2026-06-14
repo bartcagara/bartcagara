@@ -12,7 +12,7 @@ export function TrustedBy() {
     return (
         <section className="py-8 bg-bleu-nuit border-b-2 border-white/10" aria-label="Trusted by">
             <div className="max-w-7xl mx-auto px-4">
-                    <p className="text-center font-bold uppercase text-white/50 tracking-tighter mb-8 text-sm">
+                    <p className="text-center font-bold uppercase text-white/70 tracking-tighter mb-8 text-sm">
                     {trustedBy.title}
                 </p>
                 <div className="flex flex-wrap justify-center gap-8 md:gap-16 items-center brightness-0 invert opacity-50 hover:opacity-100 transition-all duration-500">

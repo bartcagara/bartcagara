@@ -19,12 +19,12 @@ export function BriefingSection({ label, heading, body, submitLabel }: BriefingS
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl">
           <SectionBadge variant="light">{label}</SectionBadge>
-          <h2 id="briefing-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-white mb-8">
+          <h2 id="briefing-title" className="text-h2 text-white mb-8">
             {heading}
           </h2>
           <div className="space-y-6 mb-12 max-w-2xl">
             {body.map((paragraph, index) => (
-              <p key={index} className="text-xl md:text-2xl font-medium text-white/70 leading-relaxed">
+              <p key={index} className="text-lead font-medium text-white/70 leading-relaxed">
                 {paragraph}
               </p>
             ))}

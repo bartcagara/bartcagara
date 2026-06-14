@@ -19,7 +19,7 @@ export function ResultsSection() {
             <div className="max-w-7xl mx-auto px-6">
                 <div className="mb-24">
                     <SectionBadge>The Results</SectionBadge>
-                    <h2 id="results-title" className="text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] text-bleu-nuit mb-8">
+                    <h2 id="results-title" className="text-h2 text-bleu-nuit mb-8">
                         {results.headline.split('\n').map((line, i, arr) => (
                             <span key={i}>
                                 {line}
@@ -27,7 +27,7 @@ export function ResultsSection() {
                             </span>
                         ))}
                     </h2>
-                    <p className="text-2xl md:text-3xl font-medium text-bleu-nuit/70 max-w-3xl leading-relaxed">
+                    <p className="text-lead-lg font-medium text-bleu-nuit/70 max-w-3xl leading-relaxed">
                         {results.subheadline}
                     </p>
                 </div>

@@ -85,8 +85,8 @@ export function OptinForm({
 
   const inputClass = `w-full px-0 py-4 bg-transparent border-b-4 text-xl font-bold placeholder:font-bold outline-none focus:border-bleu-accent transition-all rounded-none ${
     isDark
-      ? "border-white/40 text-white placeholder:text-white/40 focus:placeholder:text-white/60"
-      : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/30 focus:placeholder:text-bleu-nuit/50"
+      ? "border-white/40 text-white placeholder:text-white/60 focus:placeholder:text-white/80"
+      : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/50 focus:placeholder:text-bleu-nuit/70"
   }`;
 
   const buttonClass = `w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl font-black uppercase tracking-tighter border-2 shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed ${
@@ -138,7 +138,7 @@ export function OptinForm({
       </form>
 
       {showFootnote && (
-        <p className="text-xs text-bleu-nuit/60 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
+        <p className="text-xs text-bleu-nuit/70 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
           50+ founders coached since 2019
         </p>
       )}
@@ -171,7 +171,7 @@ function SuccessState({ isDark }: { isDark: boolean }) {
         Check your email to confirm your subscription.
       </p>
       <div className={`mt-8 pt-8 border-t-2 w-full ${isDark ? "border-white/10" : "border-bleu-nuit/10"}`}>
-        <p className={`text-sm font-bold uppercase tracking-tighter mb-4 ${isDark ? "text-white/50" : "text-bleu-nuit/50"}`}>
+        <p className={`text-sm font-bold uppercase tracking-tighter mb-4 ${isDark ? "text-white/70" : "text-bleu-nuit/70"}`}>
           Ready to move faster?
         </p>
         <button

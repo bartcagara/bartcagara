@@ -9,7 +9,7 @@ export function FinalCTASection({
   return (
     <section id="calendar-section" className="py-24 md:py-48 bg-white text-bleu-nuit overflow-x-hidden" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 id="final-cta-title" className="text-[15.5vw] md:text-[8rem] font-black uppercase tracking-tighter mb-12 leading-[0.85] text-bleu-nuit max-w-5xl">
+        <h2 id="final-cta-title" className="text-display mb-12 text-bleu-nuit max-w-5xl">
           {headline}<br />
           <span className="inline-block bg-bleu-nuit text-white px-4 -rotate-1 shadow-brutal-sm">{highlightedText}</span>
         </h2>
@@ -22,8 +22,8 @@ export function FinalCTASection({
                 key={index}
                 className={
                   isBold
-                    ? "text-2xl md:text-3xl font-black text-bleu-nuit leading-tight"
-                    : "text-xl md:text-2xl font-medium text-bleu-nuit/70 leading-relaxed"
+                    ? "text-lead-lg font-black text-bleu-nuit leading-tight"
+                    : "text-lead font-medium text-bleu-nuit/70 leading-relaxed"
                 }
               >
                 {isBold
@@ -44,7 +44,7 @@ export function FinalCTASection({
           <CalendarEmbed />
         </div>
 
-        <p className="mt-8 max-w-3xl text-xl md:text-2xl font-medium text-bleu-nuit/70 leading-relaxed">
+        <p className="mt-8 max-w-3xl text-lead font-medium text-bleu-nuit/70 leading-relaxed">
           I coach every client myself. 1:1, never group. When the roster&apos;s full, it&apos;s a waitlist.
         </p>
       </div>

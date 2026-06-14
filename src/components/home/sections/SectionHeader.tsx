@@ -15,12 +15,12 @@ export function SectionHeader({ id, title, subtitle, variant = 'dark' }: Section
     : 'text-white';
 
   const subtitleClass = variant === 'dark'
-    ? 'text-bleu-nuit/60'
-    : 'text-white/60';
+    ? 'text-bleu-nuit/70'
+    : 'text-white/70';
 
   return (
     <>
-      <h2 id={id} className={`text-5xl md:text-8xl font-black uppercase tracking-tighter leading-[0.85] ${titleClass} mb-8`}>
+      <h2 id={id} className={`text-h2 ${titleClass} mb-8`}>
         {title.split('\n').map((line, i, arr) => (
           <span key={i}>
             {line}
@@ -29,7 +29,7 @@ export function SectionHeader({ id, title, subtitle, variant = 'dark' }: Section
         ))}
       </h2>
       {subtitle && (
-        <p className={`text-2xl md:text-3xl font-medium ${subtitleClass} max-w-3xl leading-tight`}>
+        <p className={`text-lead-lg font-medium ${subtitleClass} max-w-3xl leading-tight`}>
           {subtitle.split('\n').map((line, i, arr) => (
             <span key={i}>
               {line}
