@@ -3,29 +3,43 @@ import type { HeroSectionProps } from "@/components/home/types";
 
 /**
  * HeroSection - Main hero section of the homepage
- * Features the primary headline and CTA
+ *
+ * Conversion-first hierarchy, top to bottom:
+ *   eyebrow social proof → H1 headline → subheadline → single primary
+ *   CTA → risk-reversal microcopy. One clear path to booking.
+ *
+ * Typography uses the fluid `text-*` utilities (globals.css) so the
+ * scale is continuous across viewports and centralized in one place.
  */
 export function HeroSection({ content }: HeroSectionProps) {
   return (
-    <section className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden" aria-label="Hero">
-      <div className="max-w-7xl mx-auto px-6 pt-32 pb-24 md:pt-48 md:pb-32">
-        <h1 className="text-[15.5vw] md:text-[8rem] font-black uppercase tracking-tighter leading-[0.85] mb-12 text-white max-w-5xl">
-          {content.headline}<br />
-          <span className="inline-block md:w-fit bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">{content.highlightedText}</span>
+    <section
+      className="border-b-2 border-white/10 bg-bleu-nuit overflow-hidden"
+      aria-label="Hero"
+    >
+      <div className="max-w-7xl mx-auto px-6 pt-28 pb-24 md:pt-48 md:pb-32">
+        {/* Social proof as the opening trust anchor */}
+        <p className="text-eyebrow text-white/70 mb-6">{content.socialProof}</p>
+
+        <h1 className="text-display text-white max-w-5xl mb-10">
+          {content.headline}
+          <br />
+          <span className="inline-block max-w-full bg-gray-50 text-bleu-nuit px-4 -rotate-1 shadow-brutal-sm">
+            {content.highlightedText}
+          </span>
         </h1>
 
-        <div className="border-l-4 border-bleu-accent pl-8 max-w-2xl mb-12">
-          <p className="text-xl md:text-2xl font-medium text-white/80 leading-relaxed">
-            {content.subheadline}
-          </p>
+        <div className="border-l-4 border-bleu-accent pl-5 md:pl-8 max-w-2xl mb-10">
+          <p className="text-lead text-white/80">{content.subheadline}</p>
         </div>
 
         <CTAButton href="#book-call" variant="light" cal>
           {content.ctaText}
         </CTAButton>
 
-        <p className="mt-6 text-sm font-bold uppercase tracking-tighter text-white/40">
-          {content.socialProof}
+        {/* Risk reversal: lowers the cost of clicking the CTA */}
+        <p className="mt-5 text-base text-white/70 max-w-md">
+          {content.riskReversal}
         </p>
       </div>
     </section>

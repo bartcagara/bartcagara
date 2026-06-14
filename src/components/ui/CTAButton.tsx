@@ -19,7 +19,7 @@ export function CTAButton({
   className = '',
   cal = false,
 }: CTAButtonProps) {
-  const baseClasses = "inline-flex items-center gap-3 px-6 py-4 text-base md:px-10 md:py-6 md:text-xl font-black uppercase tracking-tighter border-2 transition-brutal hover-shadow-none hover-translate-brutal";
+  const baseClasses = "inline-flex items-center gap-3 px-6 py-4 text-base md:px-10 md:py-6 md:text-xl font-black uppercase tracking-tighter border-2 transition-brutal hover-shadow-none hover-translate-brutal focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bleu-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bleu-nuit";
 
   const variantClasses = variant === 'dark'
     ? "bg-bleu-nuit text-white border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md"

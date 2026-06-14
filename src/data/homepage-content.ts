@@ -12,6 +12,7 @@ export const HOMEPAGE_CONTENT = {
     ctaText: "BOOK MY RESTART AUDIT",
     ctaLink: "https://cal.com/bartcagara/discovery-call",
     socialProof: "50+ founders coached since 2019",
+    riskReversal: "45 minutes, 1:1 with me. No pitch if we're not a fit.",
   },
 
   trustedBy: {
