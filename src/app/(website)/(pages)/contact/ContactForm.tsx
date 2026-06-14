@@ -1,13 +1,19 @@
 "use client";
 
-import { useState, useRef, FormEvent } from "react";
+import { useState, useRef, useEffect, FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
 import { usePostHog } from "posthog-js/react";
 
 export function ContactForm() {
     const [honeypot, setHoneypot] = useState("");
-    const formStartTime = useRef(Date.now());
+    const formStartTime = useRef(0);
     const posthog = usePostHog();
+
+    // Record when the form became interactive (mount), without calling an
+    // impure function during render.
+    useEffect(() => {
+        formStartTime.current = Date.now();
+    }, []);
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         // Check honeypot - if filled, it's a bot
