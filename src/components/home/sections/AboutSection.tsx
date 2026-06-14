@@ -63,7 +63,7 @@ export function AboutSection({
             {title}<br />{subtitle}
           </h2>
           {subhead && (
-            <p className="text-lead-lg font-medium text-bleu-nuit/70 mt-8 max-w-2xl">
+            <p className="text-lead-lg font-medium text-bleu-nuit/70 mt-8 max-w-3xl leading-tight">
               {subhead}
             </p>
           )}

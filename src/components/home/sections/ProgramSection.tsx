@@ -20,7 +20,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
               </span>
             ))}
           </h2>
-          <p className="text-lead-lg font-medium text-white/70 max-w-3xl leading-relaxed">
+          <p className="text-lead-lg font-medium text-white/70 max-w-3xl leading-tight">
             {subtitle}
           </p>
         </div>

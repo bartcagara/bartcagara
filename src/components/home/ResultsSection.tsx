@@ -27,7 +27,7 @@ export function ResultsSection() {
                             </span>
                         ))}
                     </h2>
-                    <p className="text-lead-lg font-medium text-bleu-nuit/70 max-w-3xl leading-relaxed">
+                    <p className="text-lead-lg font-medium text-bleu-nuit/70 max-w-3xl leading-tight">
                         {results.subheadline}
                     </p>
                 </div>

@@ -17,7 +17,7 @@ export function SolutionSection({ title, subtitle, items }: SolutionSectionProps
           <SectionHeader id="solution-title" title={title} subtitle={subtitle} variant="light" />
         </div>
 
-        <div className="max-w-4xl space-y-6">
+        <div className="max-w-3xl space-y-6">
           {items.map((item, index) => {
             const isBullet = item.startsWith('* ');
             const isBold = item.startsWith('**') && item.endsWith('**');

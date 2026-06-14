@@ -15,7 +15,7 @@ interface BriefingSectionProps {
  */
 export function BriefingSection({ label, heading, body, submitLabel }: BriefingSectionProps) {
   return (
-    <section className="py-20 md:py-28 bg-bleu-nuit text-white" aria-labelledby="briefing-title">
+    <section className="py-24 md:py-32 bg-bleu-nuit text-white" aria-labelledby="briefing-title">
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl">
           <SectionBadge variant="light">{label}</SectionBadge>

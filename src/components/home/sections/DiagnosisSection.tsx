@@ -17,7 +17,7 @@ export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionPro
           <SectionHeader id="diagnosis-title" title={title} subtitle={subtitle} variant="dark" />
         </div>
 
-        <div className="max-w-4xl space-y-6">
+        <div className="max-w-3xl space-y-6">
           {items.map((item, index) => {
             const isBullet = item.startsWith('* ');
             const isBold = item.startsWith('**') && item.endsWith('**');

@@ -49,6 +49,7 @@ export interface HeroSectionProps {
     ctaText: string;
     ctaLink: string;
     socialProof: string;
+    stats: readonly { value: string; label: string }[];
   };
 }
 

@@ -6,7 +6,7 @@ import type { HeroSectionProps } from "@/components/home/types";
  *
  * Conversion-first hierarchy, top to bottom:
  *   eyebrow social proof → H1 headline → subheadline → single primary
- *   CTA → risk-reversal microcopy. One clear path to booking.
+ *   CTA → proof stats bar. One clear path to booking.
  *
  * Typography uses the fluid `text-*` utilities (globals.css) so the
  * scale is continuous across viewports and centralized in one place.
@@ -38,6 +38,18 @@ export function HeroSection({ content }: HeroSectionProps) {
         <CTAButton href="#book-call" variant="light" cal>
           {content.ctaText}
         </CTAButton>
+
+        {/* Proof stats */}
+        <dl className="mt-14 grid grid-cols-3 gap-6 max-w-2xl border-t-2 border-white/10 pt-8">
+          {content.stats.map((stat) => (
+            <div key={stat.label}>
+              <dt className="text-3xl md:text-4xl font-black tracking-tighter text-white">
+                {stat.value}
+              </dt>
+              <dd className="text-eyebrow text-white/70 mt-1">{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </section>
   );
