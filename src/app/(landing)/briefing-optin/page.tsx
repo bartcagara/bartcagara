@@ -1,4 +1,5 @@
 import { OptinForm } from "@/components/newsletter/OptinForm";
+import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -90,9 +91,7 @@ export default function BriefingOptinPage() {
                                 className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-white shadow-brutal-white-sm mb-8"
                             />
                             {/* BADGE */}
-                            <span className="inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 mb-8 shadow-[4px_4px_0px_0px_white]">
-                                Founder Athlete Briefing
-                            </span>
+                            <SectionBadge variant="light">Founder Athlete Briefing</SectionBadge>
                             {/* HEADLINE - Optical alignment tweaks */}
                             <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
                                 The same stuff I tell{" "}
