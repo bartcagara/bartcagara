@@ -9,6 +9,7 @@ import { AboutAthletic } from "@/components/home/sections/variants/athletic/Abou
 import { ObjectionsAthletic } from "@/components/home/sections/variants/athletic/ObjectionsAthletic";
 import { FinalCTAAthletic } from "@/components/home/sections/variants/athletic/FinalCTAAthletic";
 import { BriefingAthletic } from "@/components/home/sections/variants/athletic/BriefingAthletic";
+import { AthleticNav, AthleticFooter } from "@/components/home/sections/variants/athletic/AthleticChrome";
 
 /**
  * DESIGN-LAB — "Bold & Athletic" full homepage mockup.
@@ -21,17 +22,21 @@ export const metadata: Metadata = {
 
 export default function AthleticHomepage() {
   return (
-    <main className="bg-bleu-nuit">
-      <HeroAthletic />
-      <TrustedByAthletic />
-      <DiagnosisAthletic />
-      <SolutionAthletic />
-      <ResultsAthletic />
-      <ProgramAthletic />
-      <AboutAthletic />
-      <ObjectionsAthletic />
-      <FinalCTAAthletic />
-      <BriefingAthletic />
-    </main>
+    <>
+      <AthleticNav />
+      <main className="bg-bleu-nuit">
+        <HeroAthletic />
+        <TrustedByAthletic />
+        <DiagnosisAthletic />
+        <SolutionAthletic />
+        <ResultsAthletic />
+        <ProgramAthletic />
+        <AboutAthletic />
+        <ObjectionsAthletic />
+        <FinalCTAAthletic />
+        <BriefingAthletic />
+      </main>
+      <AthleticFooter />
+    </>
   );
 }

@@ -9,6 +9,7 @@ import { RefinedAbout } from "@/components/home/sections/variants/refined/Refine
 import { RefinedObjections } from "@/components/home/sections/variants/refined/RefinedObjections";
 import { RefinedFinalCTA } from "@/components/home/sections/variants/refined/RefinedFinalCTA";
 import { RefinedBriefing } from "@/components/home/sections/variants/refined/RefinedBriefing";
+import { RefinedNav, RefinedFooter } from "@/components/home/sections/variants/refined/RefinedChrome";
 
 // TEMPORARY design-exploration route — "Refined Brutalist" direction.
 // Not linked, not indexed.
@@ -19,17 +20,21 @@ export const metadata: Metadata = {
 
 export default function RefinedHomepage() {
   return (
-    <main>
-      <RefinedHero />
-      <RefinedTrustedBy />
-      <RefinedDiagnosis />
-      <RefinedSolution />
-      <RefinedResults />
-      <RefinedProgram />
-      <RefinedAbout />
-      <RefinedObjections />
-      <RefinedFinalCTA />
-      <RefinedBriefing />
-    </main>
+    <>
+      <RefinedNav />
+      <main>
+        <RefinedHero />
+        <RefinedTrustedBy />
+        <RefinedDiagnosis />
+        <RefinedSolution />
+        <RefinedResults />
+        <RefinedProgram />
+        <RefinedAbout />
+        <RefinedObjections />
+        <RefinedFinalCTA />
+        <RefinedBriefing />
+      </main>
+      <RefinedFooter />
+    </>
   );
 }

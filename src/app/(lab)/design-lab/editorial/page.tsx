@@ -11,6 +11,7 @@ import { EditorialAbout } from "@/components/home/sections/variants/editorial/Ed
 import { EditorialObjections } from "@/components/home/sections/variants/editorial/EditorialObjections";
 import { EditorialFinalCta } from "@/components/home/sections/variants/editorial/EditorialFinalCta";
 import { EditorialBriefing } from "@/components/home/sections/variants/editorial/EditorialBriefing";
+import { EditorialNav, EditorialFooter } from "@/components/home/sections/variants/editorial/EditorialChrome";
 
 // TEMPORARY design-exploration route — "Premium Editorial" direction.
 // Not linked, not indexed. Removed once a direction is chosen.
@@ -29,16 +30,20 @@ const fraunces = Fraunces({
 export default function EditorialHomepage() {
   return (
     <div className={fraunces.variable}>
-      <EditorialHero />
-      <EditorialTrustedBy />
-      <EditorialDiagnosis />
-      <EditorialSolution />
-      <EditorialResults />
-      <EditorialProgram />
-      <EditorialAbout />
-      <EditorialObjections />
-      <EditorialFinalCta />
-      <EditorialBriefing />
+      <EditorialNav />
+      <main>
+        <EditorialHero />
+        <EditorialTrustedBy />
+        <EditorialDiagnosis />
+        <EditorialSolution />
+        <EditorialResults />
+        <EditorialProgram />
+        <EditorialAbout />
+        <EditorialObjections />
+        <EditorialFinalCta />
+        <EditorialBriefing />
+      </main>
+      <EditorialFooter />
     </div>
   );
 }
