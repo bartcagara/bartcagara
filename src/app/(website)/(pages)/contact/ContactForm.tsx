@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, FormEvent } from "react";
+import { ArrowRight } from "lucide-react";
 import { usePostHog } from "posthog-js/react";
 
 export function ContactForm() {
@@ -109,9 +110,10 @@ export function ContactForm() {
             <div className="text-center">
                 <button
                     type="submit"
-                    className="px-8 py-4 bg-bleu-nuit text-white font-bold uppercase border-2 border-bleu-nuit hover:bg-bleu-accent hover:border-bleu-accent transition-colors"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 md:px-10 md:py-5 text-base md:text-lg font-black uppercase tracking-tighter bg-bleu-nuit text-white border-2 border-bleu-nuit shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-bleu-accent focus-visible:ring-offset-2"
                 >
                     Send Message
+                    <ArrowRight className="w-5 h-5" />
                 </button>
             </div>
         </form>
