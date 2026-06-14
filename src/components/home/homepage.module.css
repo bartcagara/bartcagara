@@ -44,6 +44,9 @@
     flex: 0 0 auto;
     display: flex;
     align-items: center;
+    /* Gentle (proximity) snap so each card swipes into place — the scroller
+       sets `snap-x` but items need an align for it to take effect. */
+    scroll-snap-align: start;
 }
 
 .scrollItemDm {
@@ -57,4 +60,15 @@
     border: 2px solid var(--bleu-nuit);
     box-shadow: 4px 4px 0px var(--bleu-nuit);
     display: block;
+}
+
+/* On mobile, fit each DM to the viewport width so it's fully visible instead of
+   overflowing / clipping mid-word (mirrors .transformationImage's mobile cap). */
+@media (max-width: 600px) {
+    .scrollItemDm img {
+        width: auto;
+        height: auto;
+        max-width: calc(100vw - 3rem);
+        max-height: 70vh;
+    }
 }

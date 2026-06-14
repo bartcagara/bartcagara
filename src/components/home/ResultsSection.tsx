@@ -56,7 +56,6 @@ export function ResultsSection() {
                                 width={300}
                                 height={500}
                                 loading="lazy"
-                                className="w-auto h-[500px]"
                             />
                         </div>
                     ))}
