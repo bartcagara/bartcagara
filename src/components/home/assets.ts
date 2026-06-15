@@ -40,43 +40,43 @@ export const TRUST_LOGOS = [
 export const TRANSFORMATIONS = [
   {
     alt: "Founder client before-and-after: leaner, more athletic after 24 weeks of coaching",
-    src: "/images/transformations/transformation-1.webp"
+    src: "/images/transformations/transformation-1.5bfd0f8b.webp"
   },
   {
     alt: "Former-athlete founder before-and-after: visible abs and an athletic build rebuilt over 14 months",
-    src: "/images/transformations/transformation-2.webp"
+    src: "/images/transformations/transformation-2.e76c02cb.webp"
   },
   {
     alt: "Founder client before-and-after: flatter midsection and athletic frame after 24 weeks",
-    src: "/images/transformations/transformation-3.webp"
+    src: "/images/transformations/transformation-3.3dba0b99.webp"
   },
   {
     alt: "Founder client before-and-after: leaner, more defined torso after 16 weeks",
-    src: "/images/transformations/transformation-4.webp"
+    src: "/images/transformations/transformation-4.78a59bb2.webp"
   },
   {
     alt: "Founder client before-and-after: early fat loss and a tighter waist in just 4 weeks",
-    src: "/images/transformations/transformation-5.webp"
+    src: "/images/transformations/transformation-5.64f8cd6f.webp"
   },
   {
     alt: "Founder client before-and-after: slimmer waist and athletic build after 12 weeks",
-    src: "/images/transformations/transformation-6.webp"
+    src: "/images/transformations/transformation-6.023fe291.webp"
   },
   {
     alt: "Founder client before-and-after: leaner and more defined in just 4 weeks",
-    src: "/images/transformations/transformation-7.webp"
+    src: "/images/transformations/transformation-7.b6909640.webp"
   },
   {
     alt: "Founder client before-and-after: flatter stomach and athletic shape after 12 weeks",
-    src: "/images/transformations/transformation-8.webp"
+    src: "/images/transformations/transformation-8.dc35624c.webp"
   },
   {
     alt: "Founder client before-and-after: major fat loss and visible muscle after 24 weeks",
-    src: "/images/transformations/transformation-9.webp"
+    src: "/images/transformations/transformation-9.22cefe81.webp"
   },
   {
     alt: "Founder client back before-and-after: leaner, more muscular back after 24 weeks",
-    src: "/images/transformations/transformation-10.webp"
+    src: "/images/transformations/transformation-10.219622d2.webp"
   }
 ];
 
