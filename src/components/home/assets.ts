@@ -39,32 +39,44 @@ export const TRUST_LOGOS = [
 
 export const TRANSFORMATIONS = [
   {
-    alt: "Former athlete founder transformation - 24 weeks",
+    alt: "Founder client before-and-after: leaner, more athletic after 24 weeks of coaching",
     src: "/images/transformations/transformation-1.webp"
   },
   {
-    alt: "Former athlete founder transformation - 15 weeks",
+    alt: "Former-athlete founder before-and-after: visible abs and an athletic build rebuilt over 14 months",
     src: "/images/transformations/transformation-2.webp"
   },
   {
-    alt: "Former athlete founder transformation - 14 months",
+    alt: "Founder client before-and-after: flatter midsection and athletic frame after 24 weeks",
     src: "/images/transformations/transformation-3.webp"
   },
   {
-    alt: "Former athlete founder transformation - 4 weeks",
+    alt: "Founder client before-and-after: leaner, more defined torso after 16 weeks",
     src: "/images/transformations/transformation-4.webp"
   },
   {
-    alt: "Former athlete founder transformation - 24 weeks",
+    alt: "Founder client before-and-after: early fat loss and a tighter waist in just 4 weeks",
     src: "/images/transformations/transformation-5.webp"
   },
   {
-    alt: "Former athlete founder transformation - 3 weeks",
+    alt: "Founder client before-and-after: slimmer waist and athletic build after 12 weeks",
     src: "/images/transformations/transformation-6.webp"
   },
   {
-    alt: "Former athlete founder transformation - 12 weeks",
+    alt: "Founder client before-and-after: leaner and more defined in just 4 weeks",
     src: "/images/transformations/transformation-7.webp"
+  },
+  {
+    alt: "Founder client before-and-after: flatter stomach and athletic shape after 12 weeks",
+    src: "/images/transformations/transformation-8.webp"
+  },
+  {
+    alt: "Founder client before-and-after: major fat loss and visible muscle after 24 weeks",
+    src: "/images/transformations/transformation-9.webp"
+  },
+  {
+    alt: "Founder client back before-and-after: leaner, more muscular back after 24 weeks",
+    src: "/images/transformations/transformation-10.webp"
   }
 ];
 
