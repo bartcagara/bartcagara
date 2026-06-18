@@ -62,13 +62,17 @@
     display: block;
 }
 
-/* On mobile, fit each DM to the viewport width so it's fully visible instead of
-   overflowing / clipping mid-word (mirrors .transformationImage's mobile cap). */
+/* On mobile, keep every DM the same height (as on desktop) and cap the width to
+   the viewport. The inherited `object-fit: contain` letterboxes wide/landscape
+   screenshots inside that fixed-height frame instead of shrinking them — so all
+   cards line up and the spacing between them stays uniform, while no screenshot
+   overflows or gets clipped mid-word. Using `height: auto` here instead made
+   wide shots render short and tall shots render full-height, leaving ragged
+   gaps once the row centered the mismatched cards. */
 @media (max-width: 600px) {
     .scrollItemDm img {
         width: auto;
-        height: auto;
+        height: 60vh;
         max-width: calc(100vw - 3rem);
-        max-height: 70vh;
     }
 }
