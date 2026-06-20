@@ -19,7 +19,7 @@ export const metadata: Metadata = {
                 url: "/images/og-home.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder Athlete OS - Become your kid's favorite athlete"
+                alt: "Founder Athlete OS - The founder's last restart"
             }
         ]
     },
