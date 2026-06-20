@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /**
- * TiltedLabel — the brand's tilted highlight label (e.g. "FAVORITE ATHLETE.").
+ * TiltedLabel — the brand's tilted highlight label (e.g. "LAST RESTART.").
  *
  * The offset accent "shadow" is rendered as a real rotated element rather than a
  * hard `box-shadow`, because a 0-blur box-shadow on a rotated element stair-steps

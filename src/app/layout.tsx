@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Founder Athlete OS | 1:1 Health Coaching for Founders",
-  description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+  description: "The founder's last restart. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
   authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
   creator: "Bart Cagara",
   publisher: "Bart Cagara",
@@ -31,21 +31,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://bartcagara.com",
     siteName: "Founder Athlete OS",
-    title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
-    description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+    title: "The Founder's Last Restart | Founder Athlete OS",
+    description: "The founder's last restart. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: [
       {
         url: "/images/og-home.jpg",
         width: 1200,
         height: 630,
-        alt: "Founder Athlete OS - Become your kid's favorite athlete"
+        alt: "Founder Athlete OS - The founder's last restart"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Become Your Kid's Favorite Athlete | Founder Athlete OS",
-    description: "Become your kid's favorite athlete. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
+    title: "The Founder's Last Restart | Founder Athlete OS",
+    description: "The founder's last restart. 6 months to get you lean, athletic and off the restart cycle. For good. 1:1 coaching for former-athlete founders.",
     images: ["/images/og-home.jpg"],
     creator: "@bartcagara",
     site: "@bartcagara"
