@@ -30,3 +30,9 @@
 
 /*.woff2
   Cache-Control: public, max-age=31536000, immutable
+
+# Service Worker - must never be served stale, or SW updates stop propagating.
+# Declared after /*.js so this more specific rule wins.
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
+  Service-Worker-Allowed: /
