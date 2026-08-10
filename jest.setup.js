@@ -19,12 +19,9 @@ jest.mock('next/navigation', () => ({
   },
 }));
 
-// Mock PostHog
-jest.mock('posthog-js/react', () => ({
-  usePostHog: () => ({
-    capture: jest.fn(),
-  }),
-}));
+// PostHog needs no mock: posthog-js is imported dynamically after first paint
+// and exposed through the PostHogClientContext in src/lib/posthog-context.ts,
+// which defaults to null outside a provider. Consumers already null-check.
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

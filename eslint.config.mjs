@@ -14,6 +14,7 @@ const eslintConfig = [
       'next-env.d.ts',
       // Infra files with their own (non-Next) runtimes/conventions:
       'cloudflare/**', // Cloudflare Worker (export default { fetch }, worker args)
+      'public/sw.js', // Service worker (ServiceWorkerGlobalScope, not a bundled module)
       'jest.config.js',
       'jest.setup.js',
     ],

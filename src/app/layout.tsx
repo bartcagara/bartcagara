@@ -5,6 +5,7 @@ import ErrorReporter from "@/components/ui/ErrorReporter";
 import Script from "next/script";
 import { PostHogProviderClient } from "./providers";
 import { PostHogPageView } from "@/components/analytics/PostHogPageView";
+import { ServiceWorkerRegistrar } from "@/components/pwa/ServiceWorkerRegistrar";
 import { Suspense } from "react";
 
 const inter = Inter({
@@ -89,6 +90,7 @@ export default function RootLayout({
             <PostHogPageView />
           </Suspense>
           <ErrorReporter />
+          <ServiceWorkerRegistrar />
 
           {/* Senja Widget Script - Deferred to reduce initial load */}
           <Script

@@ -9,7 +9,10 @@ export default function manifest(): MetadataRoute.Manifest {
     description: "Health and performance coaching for former-athlete founders",
     start_url: "/",
     display: "standalone",
-    background_color: "#FFFFFF",
+    // Matches the app's dark theme (and the theme-color meta in layout.tsx).
+    // iOS paints this behind the launch screen, so a light value flashed white
+    // every time the home-screen app was relaunched.
+    background_color: "#09071D",
     theme_color: "#09071D",
     icons: [
       {
