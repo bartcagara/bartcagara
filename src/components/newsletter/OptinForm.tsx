@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Mail, Calendar } from "lucide-react";
-import { usePostHog } from "posthog-js/react";
+import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
 
 const KIT_FORM_ID = "9460021";
@@ -27,7 +27,7 @@ export function OptinForm({
 }: OptinFormProps = {}) {
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
-  const posthog = usePostHog();
+  const posthog = usePostHogClient();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 

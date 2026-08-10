@@ -2,12 +2,12 @@
 
 import { useState, useRef, useEffect, FormEvent } from "react";
 import { ArrowRight } from "lucide-react";
-import { usePostHog } from "posthog-js/react";
+import { usePostHogClient } from "@/lib/posthog-context";
 
 export function ContactForm() {
     const [honeypot, setHoneypot] = useState("");
     const formStartTime = useRef(0);
-    const posthog = usePostHog();
+    const posthog = usePostHogClient();
 
     // Record when the form became interactive (mount), without calling an
     // impure function during render.
