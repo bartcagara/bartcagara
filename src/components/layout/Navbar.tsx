@@ -4,6 +4,7 @@ import { memo, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Calendar } from "lucide-react";
+import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
 
 const CAL_CONFIG = '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}';
 
@@ -21,24 +22,23 @@ export const Navbar = memo(() => {
     }
   }, [isMenuOpen]);
 
-  // Close menu on route change
-  useEffect(() => {
+  // Close menu on route change. Adjusting state during render (instead of in
+  // an effect) avoids the extra committed frame with the stale menu open.
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
     setIsMenuOpen(false);
-  }, [pathname]);
+  }
 
-
-  // Add/remove ESC key listener
+  // While the menu is open: listen for ESC and hold the body scroll lock
   useEffect(() => {
-    if (isMenuOpen) {
-      document.addEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!isMenuOpen) return;
+    document.addEventListener("keydown", handleKeyDown);
+    lockBodyScroll();
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
-      document.body.style.overflow = "";
+      unlockBodyScroll();
     };
   }, [isMenuOpen, handleKeyDown]);
 
@@ -100,9 +100,12 @@ export const Navbar = memo(() => {
           role="dialog"
           aria-modal="true"
           aria-label="Navigation menu"
-          className="fixed inset-0 top-[72px] bg-gray-50 z-40 md:hidden flex flex-col justify-center p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
+          className="fixed inset-0 top-[72px] bg-gray-50 z-40 md:hidden flex flex-col overflow-y-auto p-6 animate-in slide-in-from-top-5 duration-200 border-t-2 border-bleu-nuit"
         >
-          <ul className="flex flex-col gap-8 text-center -mt-20 list-none" aria-label="Mobile navigation">
+          {/* my-auto centers when there's room but keeps the top reachable
+              (unlike justify-center) when a short landscape viewport makes
+              the list taller than the overlay. */}
+          <ul className="flex flex-col gap-8 text-center list-none my-auto py-4" aria-label="Mobile navigation">
             <li>
               <Link
                 href="/#results"
