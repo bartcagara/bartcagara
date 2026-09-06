@@ -194,6 +194,15 @@
     overflow-x: hidden;
   }
 
+  /* Site-wide keyboard focus indicator. :where() keeps specificity at zero,
+     so any element-level focus-visible utilities (e.g. CTAButton's ring)
+     still win. Mouse clicks don't trigger :focus-visible, so this only
+     shows for keyboard/AT users. */
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+    outline: 3px solid var(--bleu-accent);
+    outline-offset: 2px;
+  }
+
   /* Respect users who opt out of motion: neutralize smooth scroll,
      the neo-brutalist hover translate, and any transitions/animations. */
   @media (prefers-reduced-motion: reduce) {
