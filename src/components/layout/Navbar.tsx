@@ -3,10 +3,9 @@
 import { memo, useState, useEffect, useCallback, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Calendar } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { CTAButton } from "@/components/ui/CTAButton";
 import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
-
-const CAL_CONFIG = '{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}';
 
 export const Navbar = memo(() => {
   const pathname = usePathname();
@@ -71,24 +70,15 @@ export const Navbar = memo(() => {
 
         {/* DESKTOP LINKS - Center */}
         <div className="hidden md:flex gap-10 absolute left-1/2 -translate-x-1/2">
-          <Link href="/#results" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Client Wins</Link>
-          <Link href="/#program" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">Coaching</Link>
-          <Link href="/#about" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">About Me</Link>
-          <Link href="/briefing-optin" className="text-bleu-nuit font-black uppercase text-[15px] tracking-tighter hover:text-bleu-accent transition-colors duration-200">The Briefing</Link>
+          <Link href="/#results" className="text-bleu-nuit font-black uppercase text-sm tracking-tighter hover:text-bleu-accent transition-colors duration-200">Client Wins</Link>
+          <Link href="/#program" className="text-bleu-nuit font-black uppercase text-sm tracking-tighter hover:text-bleu-accent transition-colors duration-200">Coaching</Link>
+          <Link href="/#about" className="text-bleu-nuit font-black uppercase text-sm tracking-tighter hover:text-bleu-accent transition-colors duration-200">About Me</Link>
+          <Link href="/briefing-optin" className="text-bleu-nuit font-black uppercase text-sm tracking-tighter hover:text-bleu-accent transition-colors duration-200">The Briefing</Link>
         </div>
 
         {/* DESKTOP CTA - Right */}
         <div className="hidden md:block">
-          <button
-            type="button"
-            data-cal-link="bartcagara/discovery-call"
-            data-cal-namespace="discovery-call"
-            data-cal-config={CAL_CONFIG}
-            className="inline-flex items-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xs md:text-sm tracking-tight px-4 py-3 md:px-6 md:py-3 border-2 border-bleu-nuit shadow-[4px_4px_0px_0px_var(--bleu-accent)] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-          >
-            <Calendar className="w-4 h-4" />
-            Book My Call
-          </button>
+          <CTAButton cal size="sm">Book My Call</CTAButton>
         </div>
       </div>
 
@@ -110,7 +100,7 @@ export const Navbar = memo(() => {
               <Link
                 href="/#results"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
               >
                 Client Wins
               </Link>
@@ -119,7 +109,7 @@ export const Navbar = memo(() => {
               <Link
                 href="/#program"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
               >
                 Coaching
               </Link>
@@ -128,7 +118,7 @@ export const Navbar = memo(() => {
               <Link
                 href="/#about"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
               >
                 About Me
               </Link>
@@ -137,23 +127,15 @@ export const Navbar = memo(() => {
               <Link
                 href="/briefing-optin"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2 rounded"
+                className="text-bleu-nuit font-black uppercase text-3xl tracking-tight"
               >
                 The Briefing
               </Link>
             </li>
             <li className="mt-8">
-              <button
-                type="button"
-                data-cal-link="bartcagara/discovery-call"
-                data-cal-namespace="discovery-call"
-                data-cal-config={CAL_CONFIG}
-                onClick={() => setIsMenuOpen(false)}
-                className="inline-flex w-full items-center justify-center gap-2 bg-bleu-nuit text-white font-black uppercase text-xl tracking-tight py-4 border-2 border-bleu-nuit shadow-brutal-sm hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all focus:outline-none focus:ring-2 focus:ring-bleu-accent focus:ring-offset-2"
-              >
-                <Calendar className="w-5 h-5" />
+              <CTAButton cal onClick={() => setIsMenuOpen(false)} className="w-full justify-center">
                 Book My Call
-              </button>
+              </CTAButton>
             </li>
           </ul>
         </div>

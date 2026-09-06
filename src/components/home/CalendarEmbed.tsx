@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useRef } from 'react'
+import { CAL_LINK, CAL_NAMESPACE } from '@/lib/cal'
 
-const CAL_NAMESPACE = 'discovery-call'
 const EMBED_ELEMENT_ID = 'my-cal-inline-discovery-call'
 
 type CalNamespace = (action: string, options: Record<string, unknown>) => void
@@ -30,7 +30,7 @@ export function CalendarEmbed() {
         ns('inline', {
           elementOrSelector: `#${EMBED_ELEMENT_ID}`,
           config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true' },
-          calLink: 'bartcagara/discovery-call',
+          calLink: CAL_LINK,
         })
         return
       }
