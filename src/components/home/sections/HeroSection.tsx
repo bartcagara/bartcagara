@@ -47,7 +47,7 @@ export function HeroSection({ content }: HeroSectionProps) {
           </p>
         </div>
 
-        <CTAButton href="#book-call" variant="light" cal>
+        <CTAButton variant="light" cal>
           {content.ctaText}
         </CTAButton>
 

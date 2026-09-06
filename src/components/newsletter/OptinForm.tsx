@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Mail, Calendar } from "lucide-react";
+import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
 
@@ -86,10 +87,10 @@ export function OptinForm({
   const inputClass = `w-full px-0 py-4 bg-transparent border-b-4 text-xl font-bold placeholder:font-bold outline-none focus:border-bleu-accent transition-all rounded-none ${
     isDark
       ? "border-white/40 text-white placeholder:text-white/60 focus:placeholder:text-white/80"
-      : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/50 focus:placeholder:text-bleu-nuit/70"
+      : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/70 focus:placeholder:text-bleu-nuit/90"
   }`;
 
-  const buttonClass = `w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl font-black uppercase tracking-tighter border-2 shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px] disabled:opacity-50 disabled:cursor-not-allowed ${
+  const buttonClass = `w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl font-black uppercase tracking-tighter border-2 shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover-translate-brutal disabled:opacity-50 disabled:cursor-not-allowed ${
     isDark
       ? "bg-white text-bleu-nuit border-white"
       : "bg-bleu-nuit text-white border-bleu-nuit"
@@ -176,10 +177,8 @@ function SuccessState({ isDark }: { isDark: boolean }) {
         </p>
         <button
           type="button"
-          data-cal-link="bartcagara/discovery-call"
-          data-cal-namespace="discovery-call"
-          data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
-          className={`inline-flex items-center gap-2 px-6 py-3 font-black uppercase text-sm tracking-tighter border-2 shadow-brutal-sm transition-brutal hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px] ${isDark ? "bg-white text-bleu-nuit border-white" : "bg-bleu-nuit text-white border-bleu-nuit"}`}
+          {...CAL_POPUP_ATTRIBUTES}
+          className={`inline-flex items-center gap-2 px-6 py-3 font-black uppercase text-sm tracking-tighter border-2 shadow-brutal-sm transition-brutal hover:shadow-none hover-translate-brutal ${isDark ? "bg-white text-bleu-nuit border-white" : "bg-bleu-nuit text-white border-bleu-nuit"}`}
         >
           <Calendar className="w-4 h-4" />
           Book My Restart Audit

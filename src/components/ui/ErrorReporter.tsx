@@ -65,7 +65,11 @@ export default function ErrorReporter({ error, reset }: ReporterProps) {
 
     window.addEventListener("error", onError);
     window.addEventListener("unhandledrejection", onReject);
-    pollRef.current = setInterval(pollOverlay, 1000);
+    // The overlay being polled for is Next's dev-mode error dialog — it never
+    // exists in production, so don't burn a 1s interval there.
+    if (process.env.NODE_ENV === "development") {
+      pollRef.current = setInterval(pollOverlay, 1000);
+    }
 
     return () => {
       window.removeEventListener("error", onError);

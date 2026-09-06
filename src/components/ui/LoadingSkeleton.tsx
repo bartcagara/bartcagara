@@ -44,7 +44,9 @@ export function SectionSkeleton({
 }) {
   return (
     <div
-      className={`${bgColor} ${minHeight} py-16 px-4`}
+      // Match the real sections' py-24 md:py-32 so the swap-in on hydration
+      // doesn't shift the page vertically.
+      className={`${bgColor} ${minHeight} py-24 md:py-32 px-4`}
       role="status"
       aria-label="Loading section..."
     >

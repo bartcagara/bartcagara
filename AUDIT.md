@@ -125,3 +125,54 @@ The foundation made the rest mechanical, and it's now done across the site:
 
 - Drop `images.unoptimized` via Cloudflare Image Resizing for true responsive
   `srcset` / AVIF — a deployment-config change, out of scope for this code pass.
+
+---
+
+## Phase 2 — functional & consistency pass (`claude/eloquent-mendel-344ndn`)
+
+A second audit verified phase 1 held (build/tests green, no inline styles, no
+oversized images, PostHog off the critical path) and then closed the gaps the
+first pass left at the edges — the Navbar, Footer, forms, legal pages, and 404
+had never adopted the system.
+
+**Functional fixes** (things that could actually misbehave):
+- `CalendarEmbed` retries until the Cal.com loader is ready instead of
+  silently rendering an empty box on the booking path.
+- Mobile menu scrolls on short viewports; body scroll lock is now a shared,
+  reference-counted helper (`src/lib/scroll-lock.ts`) instead of two
+  components fighting over `body.style.overflow`.
+- `TransformationModal`: focus moves in, Tab is trapped, focus restores to
+  the opener; `dvh` units for iOS.
+- A global `:focus-visible` outline (zero-specificity `:where()`) gives every
+  link and button a visible keyboard focus state.
+- Carousel arrows advance one measured card (was 350px vs 445px cards);
+  disabled arrows visible at `opacity-40`.
+- `YouTubeLite` cards cap to the viewport on small screens.
+- `ErrorReporter` dev-overlay polling no longer runs in production;
+  `ContactForm`'s redirect follows the submitting origin.
+
+**Consistency fixes** (the system, finished):
+- **One CTA.** `CTAButton` (now with `size="sm" | "md"`, `onClick`) renders
+  every booking button — hero, navbar desktop + mobile, 404. The six
+  hand-rolled button recipes with five padding scales and three hover
+  distances are gone; `hover-translate-brutal` (3px) is the only hover move.
+- **One Cal.com config.** `src/lib/cal.ts` owns the event link, namespace,
+  and embed config that were duplicated across four files.
+- **Type scale completed.** New `text-title` token for subpage h1s (legal ×3,
+  contact, briefing opt-in); 404 rebuilt on `text-h2`/`text-eyebrow`/
+  `text-lead`; `ProgramSection` lists, `ObjectionsSection` answers, and
+  briefing bullets moved to `text-lead`; `TrustedBy` label to `text-eyebrow`;
+  navbar links off `text-[15px]` onto `text-sm`.
+- **Contrast floor enforced.** Footer icons/text off default grays onto
+  `bleu-nuit/70`+ (was ~2.5:1), "THE WIN:" labels to full white on accent
+  (was ~2:1), opt-in placeholder and legal-page date lines to `/70`.
+- **Footer on-brand & semantic.** Whole footer moved from Tailwind default
+  grays + `blue-600` hovers onto `bleu-*` tokens; decorative `h3`/`h4` fixed
+  (`p` for the brand name, `h2` for column headings).
+- **Shadows tokenized.** `shadow-brutal-nuit-sm` added; `SectionBadge` and
+  the navbar CTA now use named shadow utilities — zero literal `shadow-[…]`
+  left in components.
+- **Dead code removed.** Unused `ctaLink` props/content, `FinalCTASection`'s
+  never-read `ctaText`/`ctaLink`, `TRUST_LOGOS` width/height, the redundant
+  `hover-shadow-none` utility; `SectionSkeleton` padding now matches real
+  sections so lazy swaps don't shift the page.

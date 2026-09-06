@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { X } from "lucide-react";
+import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
 
 interface TransformationModalProps {
   isOpen: boolean;
@@ -12,20 +13,32 @@ interface TransformationModalProps {
 }
 
 export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: TransformationModalProps) {
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!isOpen) return;
 
-    const original = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    lockBodyScroll();
+
+    // Move focus into the dialog; restore it to the opener on close.
+    const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    closeButtonRef.current?.focus();
 
     function handleKey(e: KeyboardEvent) {
       if (e.key === "Escape") onClose();
+      // The close button is the dialog's only focusable element, so trapping
+      // focus means keeping Tab from leaving it.
+      if (e.key === "Tab") {
+        e.preventDefault();
+        closeButtonRef.current?.focus();
+      }
     }
     window.addEventListener("keydown", handleKey);
 
     return () => {
-      document.body.style.overflow = original;
+      unlockBodyScroll();
       window.removeEventListener("keydown", handleKey);
+      opener?.focus();
     };
   }, [isOpen, onClose]);
 
@@ -44,6 +57,7 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
         onClick={(e) => e.stopPropagation()}
       >
         <button
+          ref={closeButtonRef}
           onClick={onClose}
           className="mb-2 p-1 text-white hover:text-white/70 transition-colors"
           aria-label="Close"
@@ -55,7 +69,7 @@ export function TransformationModal({ isOpen, onClose, imageSrc, imageAlt }: Tra
           alt={imageAlt}
           width={1080}
           height={1080}
-          className="w-full h-auto max-h-[calc(100vh-4rem)] sm:max-h-[85vh] object-contain rounded"
+          className="w-full h-auto max-h-[calc(100dvh-4rem)] sm:max-h-[85dvh] object-contain rounded"
           priority
         />
       </div>
