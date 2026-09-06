@@ -29,16 +29,21 @@ export interface SectionBadgeProps {
 }
 
 export interface CTAButtonProps {
-  href: string;
+  /** Link target. Ignored when `cal` is set (the popup handles the click). */
+  href?: string;
   children: React.ReactNode;
   variant?: 'dark' | 'light';
+  /** 'md' is the hero/section scale; 'sm' fits chrome like the navbar. */
+  size?: 'md' | 'sm';
   icon?: boolean;
   className?: string;
   /**
-   * When true, render as a button that opens the Cal.com "discovery-call"
-   * popup on click (via data-cal-* attributes) instead of a link.
+   * When true, render as a button that opens the Cal.com booking popup on
+   * click (via data-cal-* attributes) instead of a link.
    */
   cal?: boolean;
+  /** Extra click handler (e.g. closing the mobile menu). */
+  onClick?: () => void;
 }
 
 export interface HeroSectionProps {
@@ -47,7 +52,6 @@ export interface HeroSectionProps {
     highlightedText: string;
     subheadline: string;
     ctaText: string;
-    ctaLink: string;
     socialProof: string;
     stats: readonly { value: string; label: string }[];
   };
@@ -97,6 +101,4 @@ export interface FinalCTASectionProps {
   headline: string;
   highlightedText: string;
   body: readonly string[];
-  ctaText: string;
-  ctaLink: string;
 }
