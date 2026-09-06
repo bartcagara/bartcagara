@@ -7,6 +7,7 @@ import { usePostHogClient } from "@/lib/posthog-context";
 export function ContactForm() {
     const [honeypot, setHoneypot] = useState("");
     const formStartTime = useRef(0);
+    const nextUrlRef = useRef<HTMLInputElement>(null);
     const posthog = usePostHogClient();
 
     // Record when the form became interactive (mount), without calling an
@@ -36,6 +37,12 @@ export function ContactForm() {
             return;
         }
 
+        // Return the visitor to the origin they actually submitted from, so
+        // preview deploys don't bounce to production after the redirect.
+        if (nextUrlRef.current) {
+            nextUrlRef.current.value = `${window.location.origin}/contact`;
+        }
+
         // Track successful form submission
         posthog?.capture('contact_form_submitted');
     };
@@ -49,7 +56,7 @@ export function ContactForm() {
         >
             <input type="hidden" name="_subject" value="New Website Lead!" />
             <input type="hidden" name="_captcha" value="true" />
-            <input type="hidden" name="_next" value="https://bartcagara.com/contact" />
+            <input type="hidden" name="_next" ref={nextUrlRef} defaultValue="https://bartcagara.com/contact" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_autoresponse" value="Thanks for reaching out! I'll get back to you within 24 hours. - Bart" />
             <input type="hidden" name="_blacklist" value="crypto,bitcoin,forex,casino,viagra,cialis,lottery,prize,winner,congratulations,click here,buy now,limited offer,act now,SEO services,backlinks,web traffic,make money,work from home" />
