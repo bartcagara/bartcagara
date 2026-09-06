@@ -93,7 +93,7 @@ export default function BriefingOptinPage() {
                             {/* BADGE */}
                             <SectionBadge variant="light">Founder Athlete Briefing</SectionBadge>
                             {/* HEADLINE - Optical alignment tweaks */}
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter leading-tight text-white mb-6 md:mb-8">
+                            <h1 className="text-title text-white mb-6 md:mb-8">
                                 The same stuff I tell{" "}
                                 <span className="text-bleu-accent">the men who pay me.</span>
                             </h1>
@@ -109,7 +109,7 @@ export default function BriefingOptinPage() {
                         <div className="max-w-md w-full">
                             {/* INTRO COPY */}
                             <div className="mb-10">
-                                <p className="text-lg md:text-xl text-bleu-nuit font-bold leading-tight">
+                                <p className="text-lead text-bleu-nuit font-bold leading-tight">
                                     Inside every issue:
                                 </p>
                             </div>
@@ -117,19 +117,19 @@ export default function BriefingOptinPage() {
                             {/* BULLETS */}
                             <div className="space-y-6 mb-12">
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
+                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
                                         <strong>The symptoms</strong> &mdash; 10pm decompression snacking. Weekend sabotage. Stress decisions you only see in hindsight.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
+                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
                                         <strong>The diagnosis</strong> &mdash; why discipline keeps losing, and what actually holds when the business eats a week.
                                     </p>
                                 </div>
 
                                 <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lg md:text-xl text-bleu-nuit font-semibold leading-tight">
+                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
                                         <strong>The outcome</strong> &mdash; CEO down 140 lbs. A CFO at 12% body fat who flies weekly. Founders getting their energy back.
                                     </p>
                                 </div>

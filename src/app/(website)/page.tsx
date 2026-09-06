@@ -157,8 +157,6 @@ export default function Home() {
             headline={HOMEPAGE_CONTENT.finalCta.headline}
             highlightedText={HOMEPAGE_CONTENT.finalCta.highlightedText}
             body={HOMEPAGE_CONTENT.finalCta.body}
-            ctaText={HOMEPAGE_CONTENT.finalCta.ctaText}
-            ctaLink={HOMEPAGE_CONTENT.finalCta.ctaLink}
           />
         </ErrorBoundary>
 
