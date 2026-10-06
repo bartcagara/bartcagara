@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const TITLE = "Founder's Fitness Brief | For the founder whose life eats every fitness plan";
 const DESCRIPTION =
-    "Your last decade has been one giant restart. One email a week on staying in shape through travel, mergers and kids getting sick.";
+    "Your last decade has been one giant restart. The Brief is one email a week on making this the last one.";
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -118,7 +118,7 @@ export default function BriefingOptinPage() {
                             </h1>
 
                             <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
-                                Your last decade has been one giant restart. One email a week on staying in shape through travel, mergers and kids getting sick.
+                                Your last decade has been one giant restart. The Brief is one email a week on making this the last one.
                             </p>
 
                             <div className="mt-10 md:mt-12">
