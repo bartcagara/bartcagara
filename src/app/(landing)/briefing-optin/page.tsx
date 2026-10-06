@@ -122,13 +122,17 @@ export default function BriefingOptinPage() {
                             </p>
 
                             <div className="mt-8 md:mt-10">
-                                <OptinForm submitLabel="Get the Brief" layout="joined" />
+                                <OptinForm
+                                    submitLabel="Get the Brief"
+                                    layout="joined"
+                                    note={
+                                        <p className="mt-6 md:mt-8 text-[15px] leading-relaxed text-bleu-nuit/60 max-w-[34em]">
+                                            <span className="font-black uppercase tracking-tight text-bleu-nuit">Warning:</span>{" "}
+                                            if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
+                                        </p>
+                                    }
+                                />
                             </div>
-
-                            <p className="mt-6 md:mt-8 text-[15px] leading-relaxed text-bleu-nuit/60 max-w-[34em]">
-                                <span className="font-black uppercase tracking-tight text-bleu-nuit">Warning:</span>{" "}
-                                if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
-                            </p>
                         </div>
 
                         <figure className="w-full max-w-[400px] mx-auto lg:mx-0">

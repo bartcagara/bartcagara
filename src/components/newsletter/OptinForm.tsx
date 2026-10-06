@@ -23,6 +23,8 @@ interface OptinFormProps {
   showFootnote?: boolean;
   variant?: Variant;
   layout?: Layout;
+  /** Shown under the form until signup succeeds (joined layout only). */
+  note?: React.ReactNode;
 }
 
 export function OptinForm({
@@ -30,6 +32,7 @@ export function OptinForm({
   showFootnote = true,
   variant = "light",
   layout = "stacked",
+  note,
 }: OptinFormProps = {}) {
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
@@ -137,6 +140,8 @@ export function OptinForm({
             </button>
           </div>
         </form>
+
+        {note}
       </div>
     );
   }
