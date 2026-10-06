@@ -117,7 +117,8 @@ export function OptinForm({
             </ul>
           )}
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-0 sm:shadow-brutal-md">
+          {/* One object: a single border and offset shadow around field + button */}
+          <div className="flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit shadow-[6px_6px_0_0_var(--bleu-accent)] focus-within:border-bleu-accent transition-colors">
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
@@ -129,13 +130,13 @@ export function OptinForm({
               placeholder="Your email"
               required
               autoComplete="email"
-              className="w-full min-w-0 sm:flex-1 h-14 md:h-16 px-5 bg-white text-bleu-nuit text-lg font-medium placeholder:text-bleu-nuit/40 border-2 border-bleu-nuit sm:border-r-0 rounded-none outline-none focus:bg-bleu-fumee/40 transition-colors"
+              className="w-full min-w-0 sm:flex-1 h-14 md:h-16 px-5 bg-transparent text-bleu-nuit text-lg font-medium placeholder:text-bleu-nuit/40 rounded-none outline-none"
             />
             <button
               type="submit"
               disabled={isSubmitting}
               aria-busy={isSubmitting}
-              className="h-14 md:h-16 px-8 whitespace-nowrap bg-bleu-nuit text-white text-lg font-black uppercase tracking-tighter border-2 border-bleu-nuit shadow-brutal-sm sm:shadow-none hover:bg-bleu-charron hover:border-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="h-14 md:h-16 px-8 whitespace-nowrap bg-bleu-nuit text-white text-lg font-black uppercase tracking-tighter hover:bg-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {isSubmitting ? "Subscribing..." : submitLabel}
             </button>
