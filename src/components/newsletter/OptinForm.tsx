@@ -136,7 +136,7 @@ export function OptinForm({
               type="submit"
               disabled={isSubmitting}
               aria-busy={isSubmitting}
-              className="h-14 md:h-16 px-8 inline-flex items-center justify-center gap-3 whitespace-nowrap bg-bleu-nuit text-white text-lg font-black uppercase tracking-tighter hover:bg-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="h-14 md:h-16 px-8 inline-flex items-center justify-center gap-3 whitespace-nowrap bg-bleu-nuit text-white text-lg font-black uppercase tracking-tight hover:bg-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {/* Heavier stroke so the line weight sits with the black caps */}
               {!isSubmitting && <Mail className="w-5 h-5 md:w-6 md:h-6 shrink-0" strokeWidth={2.5} aria-hidden="true" />}

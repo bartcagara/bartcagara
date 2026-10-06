@@ -110,24 +110,24 @@ export default function BriefingOptinPage() {
                 </header>
 
                 <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-20 md:py-16">
-                    <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_400px] gap-16 lg:gap-24 items-center">
+                    <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_400px] gap-16 xl:gap-24 items-center">
                         <div className="max-w-[600px]">
-                            <h1 className="text-[2.375rem] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
+                            <h1 className="text-[clamp(2rem,9.6vw,2.375rem)] md:text-[3.5rem] lg:text-[3rem] xl:text-[4rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
                                 For the founder whose life eats{" "}
                                 <span className="block text-bleu-accent">every fitness plan.</span>
                             </h1>
 
-                            <p className="mt-6 md:mt-8 text-lg md:text-[1.375rem] leading-relaxed font-medium text-bleu-nuit/75 max-w-[30em]">
+                            <p className="mt-4 md:mt-6 text-lg md:text-[1.375rem] leading-[1.45] font-medium text-bleu-nuit/75 max-w-[30em]">
                                 Your last decade has been one giant restart. The Brief is one email a week on making this the last one.
                             </p>
 
-                            <div className="mt-8 md:mt-10">
+                            <div className="mt-10 md:mt-12">
                                 <OptinForm
                                     submitLabel="Get the Brief"
                                     layout="joined"
                                     note={
-                                        <p className="mt-6 md:mt-8 text-[15px] leading-relaxed text-bleu-nuit/60 max-w-[34em]">
-                                            <span className="font-black uppercase tracking-tight text-bleu-nuit">Warning:</span>{" "}
+                                        <p className="mt-6 text-sm leading-normal text-bleu-nuit/60 max-w-[34em]">
+                                            <span className="font-bold uppercase text-bleu-nuit">Warning:</span>{" "}
                                             if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
                                         </p>
                                     }
@@ -136,7 +136,7 @@ export default function BriefingOptinPage() {
                         </div>
 
                         <figure className="w-full max-w-[400px] mx-auto lg:mx-0">
-                            <figcaption className="mb-4 text-eyebrow text-bleu-nuit/60">
+                            <figcaption className="mb-3 text-eyebrow text-bleu-nuit/60">
                                 DM from one of my readers
                             </figcaption>
                             <Image
