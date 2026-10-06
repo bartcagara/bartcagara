@@ -117,7 +117,7 @@ export default function BriefingOptinPage() {
                                 <span className="block text-bleu-accent">every fitness plan.</span>
                             </h1>
 
-                            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] font-medium text-bleu-nuit/75 max-w-[30em]">
+                            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
                                 Your last decade has been one giant restart. The Brief is one email a week on making this the last one.
                             </p>
 
@@ -126,7 +126,7 @@ export default function BriefingOptinPage() {
                                     submitLabel="Get the Brief"
                                     layout="joined"
                                     note={
-                                        <p className="mt-6 text-sm leading-normal text-bleu-nuit/60 max-w-[34em]">
+                                        <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
                                             if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
                                         </p>
