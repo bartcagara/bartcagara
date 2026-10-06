@@ -128,7 +128,7 @@ export default function BriefingOptinPage() {
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
-                                            if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
+                                            if you&apos;re after basic fitness tips and high-protein recipes, this ain&apos;t it.
                                         </p>
                                     }
                                 />
