@@ -3,9 +3,13 @@ import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { Metadata } from "next";
 import Image from "next/image";
 
+const TITLE = "Founder's Fitness Brief | For the founder whose life eats every fitness plan";
+const DESCRIPTION =
+    "Your last decade has been one giant restart. The Brief is one email a week on making this the last one.";
+
 export const metadata: Metadata = {
-    title: "The Founder Athlete Briefing | One Email, Every Sunday",
-    description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+    title: TITLE,
+    description: DESCRIPTION,
     authors: [{ name: "Bart Cagara", url: "https://bartcagara.com" }],
     creator: "Bart Cagara",
     publisher: "Bart Cagara",
@@ -17,21 +21,21 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: "https://bartcagara.com/briefing-optin",
         siteName: "Founder Athlete OS",
-        title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
-        description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+        title: TITLE,
+        description: DESCRIPTION,
         images: [
             {
                 url: "/images/og-briefing.jpg",
                 width: 1200,
                 height: 630,
-                alt: "The Founder Athlete Briefing - one email, every Sunday"
+                alt: "Founder's Fitness Brief"
             }
         ]
     },
     twitter: {
         card: "summary_large_image",
-        title: "The Founder Athlete Briefing | The Same Stuff I Tell the Men Who Pay Me",
-        description: "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+        title: TITLE,
+        description: DESCRIPTION,
         images: ["/images/og-briefing.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
@@ -54,8 +58,8 @@ export const metadata: Metadata = {
 const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Periodical",
-    "name": "The Founder Athlete Briefing",
-    "description": "The same stuff I tell the men who pay me. One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.",
+    "name": "Founder's Fitness Brief",
+    "description": DESCRIPTION,
     "url": "https://bartcagara.com/briefing-optin",
     "inLanguage": "en",
     "publisher": {
@@ -69,6 +73,14 @@ const jsonLd = {
     }
 };
 
+const READER_DM_ALT =
+    "A LinkedIn message from a reader: \"I know I'm not a client. But your shit really speaks to me. Not sure you wanna hear that but it's true!! And one of my fav things is being a shredded dad on my summer hols.\" Below it, his mirror selfie.";
+
+/**
+ * The signup page picks up where the LinkedIn post that sent the reader here
+ * left off: same promise, same warning, same reader DM. The copy is Bart's,
+ * except the sentence saying what the Brief is.
+ */
 export default function BriefingOptinPage() {
     return (
         <>
@@ -76,69 +88,67 @@ export default function BriefingOptinPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-            <div className="min-h-screen bg-white flex flex-col">
-                <div className="flex flex-col md:flex-row min-h-screen">
-                    {/* Left Column: Heading Only */}
-                    <div className="w-full md:w-1/2 bg-bleu-nuit flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
-                        <div className="max-w-xl">
-                            {/* HEADSHOT */}
+            <div className="min-h-screen flex flex-col bg-gray-50 text-bleu-nuit">
+                <header className="px-6 md:px-12">
+                    <div className="max-w-6xl mx-auto h-[72px] md:h-24 flex items-center justify-between border-b-2 border-bleu-nuit">
+                        {/* SectionBadge carries mb-8 for section stacks; zero it in the bar */}
+                        <div className="leading-none [&>span]:mb-0">
+                            <SectionBadge>Founder&apos;s Fitness Brief</SectionBadge>
+                        </div>
+                        <span className="flex items-center gap-3 text-sm font-semibold">
+                            <span className="hidden sm:inline">Bart Cagara</span>
                             <Image
                                 src="/images/bart-headshot.jpg"
                                 alt="Bart Cagara"
                                 width={224}
                                 height={224}
                                 priority
-                                className="w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28 rounded-full object-cover border-2 border-white shadow-brutal-white-sm mb-8"
+                                className="w-10 h-10 rounded-full object-cover border-2 border-bleu-nuit"
                             />
-                            {/* BADGE */}
-                            <SectionBadge variant="light">Founder Athlete Briefing</SectionBadge>
-                            {/* HEADLINE - Optical alignment tweaks */}
-                            <h1 className="text-title text-white mb-6 md:mb-8">
-                                The same stuff I tell{" "}
-                                <span className="text-bleu-accent">the men who pay me.</span>
+                        </span>
+                    </div>
+                </header>
+
+                <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-20 md:py-16">
+                    <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_400px] gap-16 lg:gap-24 items-center">
+                        <div className="max-w-[600px]">
+                            <h1 className="text-[2.375rem] md:text-[3.5rem] lg:text-[4rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
+                                For the founder whose life eats{" "}
+                                <span className="block text-bleu-accent">every fitness plan.</span>
                             </h1>
-                            {/* SUBHEAD - Lighter weight, cleaner size */}
-                            <p className="text-base md:text-lg text-bleu-fumee/90 font-medium leading-relaxed max-w-md md:max-w-lg">
-                                One email, every Sunday, on the restart cycle: why it keeps winning and what actually ends it.
+
+                            <p className="mt-6 md:mt-8 text-lg md:text-[1.375rem] leading-relaxed font-medium text-bleu-nuit/75 max-w-[30em]">
+                                Your last decade has been one giant restart. The Brief is one email a week on making this the last one.
                             </p>
-                        </div>
-                    </div>
 
-                    {/* Right Column: Content & Form */}
-                    <div className="w-full md:w-1/2 bg-gray-50 flex flex-col justify-center px-6 py-12 md:p-16 lg:p-24">
-                        <div className="max-w-md w-full">
-                            {/* INTRO COPY */}
-                            <div className="mb-10">
-                                <p className="text-lead text-bleu-nuit font-bold leading-tight">
-                                    Inside every issue:
-                                </p>
+                            <div className="mt-8 md:mt-10">
+                                <OptinForm
+                                    submitLabel="Get the Brief"
+                                    layout="joined"
+                                    note={
+                                        <p className="mt-6 md:mt-8 text-[15px] leading-relaxed text-bleu-nuit/60 max-w-[34em]">
+                                            <span className="font-black uppercase tracking-tight text-bleu-nuit">Warning:</span>{" "}
+                                            if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
+                                        </p>
+                                    }
+                                />
                             </div>
-
-                            {/* BULLETS */}
-                            <div className="space-y-6 mb-12">
-                                <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The symptoms</strong> &mdash; 10pm decompression snacking. Weekend sabotage. Stress decisions you only see in hindsight.
-                                    </p>
-                                </div>
-
-                                <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The diagnosis</strong> &mdash; why discipline keeps losing, and what actually holds when the business eats a week.
-                                    </p>
-                                </div>
-
-                                <div className="pl-6 border-l-4 border-bleu-nuit">
-                                    <p className="text-lead text-bleu-nuit font-semibold leading-tight">
-                                        <strong>The outcome</strong> &mdash; CEO down 140 lbs. A CFO at 12% body fat who flies weekly. Founders getting their energy back.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <OptinForm submitLabel="Send Me The Briefing" />
                         </div>
+
+                        <figure className="w-full max-w-[400px] mx-auto lg:mx-0">
+                            <figcaption className="mb-4 text-[15px] font-bold">
+                                A DM from one of my readers:
+                            </figcaption>
+                            <Image
+                                src="/images/testimonials/reader-dm.webp"
+                                alt={READER_DM_ALT}
+                                width={900}
+                                height={1038}
+                                className="block w-full h-auto border-2 border-bleu-nuit shadow-brutal-md"
+                            />
+                        </figure>
                     </div>
-                </div>
+                </main>
             </div>
         </>
     );
