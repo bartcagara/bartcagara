@@ -13,7 +13,7 @@ export const HOMEPAGE_CONTENT = {
     stats: [
       { value: "50+", label: "Founders coached" },
       { value: "1:1", label: "Never group" },
-      { value: "6 mo", label: "To never restart" },
+      { value: "6 mo", label: "Then no more restarts" },
     ],
   },
 
@@ -74,7 +74,7 @@ export const HOMEPAGE_CONTENT = {
         items: [
           "**Nutrition Baseline** — You eat food you actually like. The weight moves anyway.",
           "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
-          "**Pattern Recognition** — We find what kills every attempt and cut it off at the source.",
+          "**The Pattern** — We find what kills every attempt and cut it off at the source.",
         ],
         win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
       },
@@ -84,7 +84,7 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 5-12",
         focus: "PERFORMANCE UNDER PRESSURE",
         items: [
-          "**Physique Construction** — The body starts looking athletic again. Not gym-big. Athlete.",
+          "**Physique** — The body starts looking athletic again. Not gym-big. Athlete.",
           "**Travel-Proofing** — Restaurants, airports, hotel gyms. Handled.",
           "**Bloodwork** — Full panel, real analysis. The inside catches up with the outside.",
         ],
@@ -96,11 +96,11 @@ export const HOMEPAGE_CONTENT = {
         weeks: "Weeks 13-24",
         focus: "FULL AUTONOMY",
         items: [
-          "**Life Integration** — Vacations, pivots, chaos. Nothing derails you.",
-          "**Training Refinement** — We eliminate weak points and build the program that outlasts me.",
+          "**Real Life** — Vacations, pivots, sick kids. The plan holds.",
+          "**Your Program** — We eliminate weak points and build the program that outlasts me.",
           "**The Handoff** — The programming, the nutrition calls, the adjustments. All of it moves from my head to yours.",
         ],
-        win: "You fire me. You own this. Forever.",
+        win: "You fire me. You own this.",
       },
     ],
     delivery: {
@@ -108,7 +108,7 @@ export const HOMEPAGE_CONTENT = {
       items: [
         "**Weekly Calls** — You and me, every week. The program fixes the body. The calls fix what kept breaking it.",
         "**WhatsApp, 24/7** — Stuck at an airport, staring at a menu, lost a week? Message me. I'm there.",
-        "**The App** — Your program, built around the equipment you actually have. Home rack, hotel gym, full club.",
+        "**The App** — Food, training, sleep and steps, connected. It shows you what to fix first, so you're never cutting calories when the real problem is your sleep.",
       ],
     },
   },
@@ -139,7 +139,7 @@ export const HOMEPAGE_CONTENT = {
     highlightedText: "Last restart",
     body: [
       "Six months from now, your business will be further along. Will your body?",
-      "You already know how this goes if nothing changes. **You've restarted enough times to know.**",
+      "You know how this goes if nothing changes. **You've restarted enough times.**",
       "**If that sits wrong, let's talk.**",
       "45 minutes, you and me. You leave knowing exactly why it never stuck, whether we work together or not.",
     ],
@@ -166,7 +166,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I travel constantly. How does this work on the road?",
-      answer: "A big chunk of Phase 2 is literally Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly — he's at 12% body fat after 20 years of neglect.",
+      answer: "A big chunk of Phase 2 is Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly — he's at 12% body fat after 20 years of neglect.",
     },
     {
       question: "What does it cost?",
