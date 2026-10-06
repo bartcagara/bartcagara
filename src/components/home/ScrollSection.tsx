@@ -4,7 +4,8 @@ import { memo, useRef, useState, useEffect, useCallback } from "react";
 import type { ScrollSectionProps } from "./types";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
-const SCROLL_AMOUNT_PX = 350;
+/* Fallback when the row is empty and a card can't be measured. */
+const FALLBACK_SCROLL_PX = 350;
 
 export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -35,13 +36,18 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
     }
   }, [checkScroll]);
 
+  // Advance by exactly one card (first item's width + the row gap), measured
+  // at click time so it tracks the responsive card size.
   const scroll = useCallback((direction: number) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction * SCROLL_AMOUNT_PX,
-        behavior: "smooth",
-      });
-    }
+    const el = scrollRef.current;
+    if (!el) return;
+    const firstCard = el.firstElementChild;
+    const gap = parseFloat(getComputedStyle(el).columnGap) || 0;
+    const amount =
+      firstCard instanceof HTMLElement
+        ? firstCard.offsetWidth + gap
+        : FALLBACK_SCROLL_PX;
+    el.scrollBy({ left: direction * amount, behavior: "smooth" });
   }, []);
 
   return (
@@ -54,7 +60,7 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
         <div className="flex gap-2 flex-shrink-0">
           <button
             onClick={() => scroll(-1)}
-            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showLeft ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
+            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showLeft ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
             disabled={!showLeft}
             aria-label="Scroll left"
           >
@@ -62,7 +68,7 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
           </button>
           <button
             onClick={() => scroll(1)}
-            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showRight ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
+            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showRight ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
             disabled={!showRight}
             aria-label="Scroll right"
           >

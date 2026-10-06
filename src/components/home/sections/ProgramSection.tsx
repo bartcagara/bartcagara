@@ -51,7 +51,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
                 </div>
 
                 {/* PROTOCOL */}
-                <ul className="text-xl text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
+                <ul className="text-lead text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
                   {phase.items.map((item, itemIndex) => (
                     <li key={itemIndex} className="flex items-start">
                       <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
@@ -69,7 +69,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
 
                 {/* THE WIN */}
                 <div className="inline-block bg-bleu-accent p-4 shadow-brutal-white-sm">
-                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm opacity-70">
+                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm">
                     THE WIN:
                   </span>
                   <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
@@ -88,7 +88,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
               <span aria-hidden="true">{"// "}</span>{delivery.heading}
             </span>
           </div>
-          <ul className="text-xl text-white/80 leading-relaxed font-medium max-w-3xl space-y-2">
+          <ul className="text-lead text-white/80 leading-relaxed font-medium max-w-3xl space-y-2">
             {delivery.items.map((item, itemIndex) => (
               <li key={itemIndex} className="flex items-start">
                 <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>

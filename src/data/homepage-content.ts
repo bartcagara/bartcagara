@@ -10,7 +10,6 @@ export const HOMEPAGE_CONTENT = {
     highlightedText: "Last restart.",
     subheadline: "6 months to get you lean, athletic and off the restart cycle. For good.",
     ctaText: "BOOK MY RESTART AUDIT",
-    ctaLink: "https://cal.com/bartcagara/discovery-call",
     socialProof: "50+ founders coached since 2019",
     stats: [
       { value: "50+", label: "Founders coached" },
@@ -145,8 +144,6 @@ export const HOMEPAGE_CONTENT = {
       "**If that sits wrong, let's talk.**",
       "45 minutes, you and me. You leave knowing exactly why it never stuck, whether we work together or not.",
     ],
-    ctaText: "BOOK MY DISCOVERY CALL",
-    ctaLink: "https://cal.com/bartcagara/discovery-call",
   },
 
   briefing: {

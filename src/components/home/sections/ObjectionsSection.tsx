@@ -18,7 +18,7 @@ export function ObjectionsSection({ objections }: { objections: readonly Objecti
               <p className="text-lead font-black text-white leading-tight mb-3">
                 &ldquo;{item.question}&rdquo;
               </p>
-              <p className="text-lg md:text-xl font-medium text-white/70 leading-relaxed">
+              <p className="text-lead font-medium text-white/70 leading-relaxed">
                 {item.answer}
               </p>
             </div>

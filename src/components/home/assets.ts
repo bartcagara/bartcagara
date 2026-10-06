@@ -1,39 +1,27 @@
 export const TRUST_LOGOS = [
   {
     name: "Lever",
-    src: "/images/logos/lever.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/lever.png"
   },
   {
     name: "ESL",
-    src: "/images/logos/esl.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/esl.png"
   },
   {
     name: "Nordstrom",
-    src: "/images/logos/nordstrom.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/nordstrom.png"
   },
   {
     name: "SingleStore",
-    src: "/images/logos/singlestore.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/singlestore.png"
   },
   {
     name: "Beckhoff",
-    src: "/images/logos/beckhoff.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/beckhoff.png"
   },
   {
     name: "WP Engine",
-    src: "/images/logos/wpengine.png",
-    width: 80,
-    height: 24
+    src: "/images/logos/wpengine.png"
   }
 ];
 

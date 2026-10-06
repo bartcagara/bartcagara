@@ -27,8 +27,8 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
-            <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter mb-6 text-bleu-nuit">Privacy Policy</h1>
-            <p className="text-sm text-bleu-nuit/50 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
+            <h1 className="text-title mb-6 text-bleu-nuit">Privacy Policy</h1>
+            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
 
             <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">1. Introduction</h2>
             <p className="mb-4 leading-relaxed">

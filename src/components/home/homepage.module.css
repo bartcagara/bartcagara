@@ -36,6 +36,17 @@
     box-shadow: 4px 4px 0px var(--bleu-nuit);
 }
 
+/* Cap to the viewport on small screens (same treatment as the other card
+   types above/below) — otherwise the fixed 445px card renders clipped
+   inside a 360px container. aspect-ratio preserves the 16:9 frame. */
+@media (max-width: 600px) {
+    .youtubeLite {
+        width: calc(100vw - 3rem);
+        height: auto;
+        aspect-ratio: 445 / 250;
+    }
+}
+
 /* =================================================================
    HORIZONTAL SCROLL SECTIONS
    ================================================================= */
