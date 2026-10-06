@@ -95,7 +95,7 @@ export default function BriefingOptinPage() {
                         <div className="leading-none [&>span]:mb-0">
                             <SectionBadge>Founder&apos;s Fitness Brief</SectionBadge>
                         </div>
-                        <span className="flex items-center gap-3 text-eyebrow">
+                        <span className="flex items-center gap-3 text-sm font-bold uppercase tracking-[-0.02em]">
                             <span className="hidden sm:inline">Bart Cagara</span>
                             <Image
                                 src="/images/bart-headshot.jpg"
@@ -117,7 +117,7 @@ export default function BriefingOptinPage() {
                                 <span className="block text-bleu-accent">every fitness plan.</span>
                             </h1>
 
-                            <p className="mt-4 md:mt-6 text-lg md:text-[1.375rem] leading-[1.45] font-medium text-bleu-nuit/75 max-w-[30em]">
+                            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] font-medium text-bleu-nuit/75 max-w-[30em]">
                                 Your last decade has been one giant restart. The Brief is one email a week on making this the last one.
                             </p>
 
@@ -127,7 +127,7 @@ export default function BriefingOptinPage() {
                                     layout="joined"
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-bleu-nuit/60 max-w-[34em]">
-                                            <span className="font-bold uppercase text-bleu-nuit">Warning:</span>{" "}
+                                            <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
                                             if you&apos;re after fitness tips and how much protein you should be eating, this ain&apos;t it.
                                         </p>
                                     }
@@ -136,7 +136,7 @@ export default function BriefingOptinPage() {
                         </div>
 
                         <figure className="w-full max-w-[400px] mx-auto lg:mx-0">
-                            <figcaption className="mb-3 text-eyebrow text-bleu-nuit/60">
+                            <figcaption className="mb-3 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">
                                 DM from one of my readers
                             </figcaption>
                             <Image
