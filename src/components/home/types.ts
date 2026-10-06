@@ -52,7 +52,6 @@ export interface HeroSectionProps {
     highlightedText: string;
     subheadline: string;
     ctaText: string;
-    socialProof: string;
     stats: readonly { value: string; label: string }[];
   };
 }

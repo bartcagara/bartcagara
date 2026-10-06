@@ -10,7 +10,6 @@ export const HOMEPAGE_CONTENT = {
     highlightedText: "Last restart.",
     subheadline: "6 months to get you lean, athletic and off the restart cycle. For good.",
     ctaText: "BOOK MY RESTART AUDIT",
-    socialProof: "50+ founders coached since 2019",
     stats: [
       { value: "50+", label: "Founders coached" },
       { value: "1:1", label: "Never group" },
@@ -147,13 +146,13 @@ export const HOMEPAGE_CONTENT = {
   },
 
   briefing: {
-    label: "The Briefing",
+    label: "Founder's Fitness Brief",
     heading: "Not booking today? Fair.",
     body: [
       "Most of the men I coach read for months before they ever said a word.",
-      "One email, every Sunday. The same stuff I tell the men who pay me.",
+      "The Brief is one email a week on making this restart your last.",
     ],
-    submitLabel: "Send me the briefing",
+    submitLabel: "Get the Brief",
   },
 
   objections: [

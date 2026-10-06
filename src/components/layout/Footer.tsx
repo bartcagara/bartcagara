@@ -29,7 +29,7 @@ export const Footer = memo(() => (
                 href="/briefing-optin"
                 className="hover:text-bleu-accent transition-colors"
               >
-                The Briefing
+                The Brief
               </Link>
             </li>
           </ul>

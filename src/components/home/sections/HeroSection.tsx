@@ -6,7 +6,7 @@ import type { HeroSectionProps } from "@/components/home/types";
  * HeroSection - Main hero section of the homepage
  *
  * Conversion-first hierarchy, top to bottom:
- *   eyebrow social proof → H1 headline → subheadline → single primary
+ *   H1 headline → subheadline → single primary
  *   CTA → proof stats bar. One clear path to booking.
  *
  * Typography uses the fluid `text-*` utilities (globals.css) so the
@@ -23,9 +23,6 @@ export function HeroSection({ content }: HeroSectionProps) {
       aria-label="Hero"
     >
       <div className="max-w-7xl mx-auto px-6 pt-28 pb-24 md:pt-48 md:pb-32">
-        {/* Social proof as the opening trust anchor */}
-        <p className="text-eyebrow text-white/70 mb-6">{content.socialProof}</p>
-
         <h1 className="text-display text-white max-w-5xl mb-10">
           {headlineLead}
           {headlineRest && (
