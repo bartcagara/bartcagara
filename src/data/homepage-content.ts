@@ -53,7 +53,7 @@ export const HOMEPAGE_CONTENT = {
 
   results: {
     headline: "THEY DIDN'T HAVE TIME EITHER",
-    subheadline: "Founders in their forties. Companies, kids, travel weeks.",
+    subheadline: "Founders in their forties. Travel, mergers, kids getting sick.",
     sections: {
       transformations: "Client Photos",
       interviews: "Client Interviews",
@@ -126,7 +126,7 @@ export const HOMEPAGE_CONTENT = {
       "Tail between my legs, I took a job at a fitness startup.",
       "It rebuilt me. The body first, then everything attached to it. For the first time in years, I recognized myself again.",
       "**That's when I built this.**",
-      "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports back in school, built something real, body paid for it.",
+      "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports back in school, built a company, body paid for it.",
       "**My son is watching.** I built this so he grows up with a dad who's actually himself.",
       "I bet you're curious about my before-after. {{transformation-link}}.",
     ],
