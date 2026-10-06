@@ -137,7 +137,7 @@ export default function BriefingOptinPage() {
 
                         <figure className="w-full max-w-[400px] mx-auto lg:mx-0">
                             <figcaption className="mb-4 text-eyebrow text-bleu-nuit/60">
-                                A DM from one of my readers
+                                DM from one of my readers
                             </figcaption>
                             <Image
                                 src="/images/testimonials/reader-dm.webp"
