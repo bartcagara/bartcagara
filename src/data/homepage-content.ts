@@ -12,7 +12,7 @@ export const HOMEPAGE_CONTENT = {
     ctaText: "BOOK MY RESTART AUDIT",
     stats: [
       { value: "50+", label: "Founders coached" },
-      { value: "1:1", label: "Never group" },
+      { value: "1:1", label: "You and me" },
       { value: "6 mo", label: "Then no more restarts" },
     ],
   },
