@@ -95,7 +95,7 @@ export default function BriefingOptinPage() {
                         <div className="leading-none [&>span]:mb-0">
                             <SectionBadge>Founder&apos;s Fitness Brief</SectionBadge>
                         </div>
-                        <span className="flex items-center gap-3 text-sm font-semibold">
+                        <span className="flex items-center gap-3 text-eyebrow">
                             <span className="hidden sm:inline">Bart Cagara</span>
                             <Image
                                 src="/images/bart-headshot.jpg"
