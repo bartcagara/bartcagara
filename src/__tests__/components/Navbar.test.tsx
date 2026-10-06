@@ -23,7 +23,7 @@ describe('Navbar', () => {
     expect(screen.getByText('Client Wins')).toBeInTheDocument();
     expect(screen.getByText('Coaching')).toBeInTheDocument();
     expect(screen.getByText('About Me')).toBeInTheDocument();
-    expect(screen.getByText('The Briefing')).toBeInTheDocument();
+    expect(screen.getByText('The Brief')).toBeInTheDocument();
   });
 
   it('renders the Book My Call CTA button', () => {
