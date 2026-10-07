@@ -90,7 +90,7 @@ export default function BriefingOptinPage() {
             />
             <div className="min-h-screen flex flex-col bg-gray-50 text-bleu-nuit">
                 <header className="px-6 md:px-12">
-                    <div className="max-w-6xl mx-auto h-[72px] md:h-24 flex items-center justify-between border-b-2 border-bleu-nuit">
+                    <div className="max-w-6xl mx-auto h-[72px] md:h-24 [@media(max-height:500px)]:h-16 flex items-center justify-between border-b-2 border-bleu-nuit">
                         {/* SectionBadge carries mb-8 for section stacks; zero it in the bar */}
                         <div className="leading-none [&>span]:mb-0">
                             <SectionBadge>Founder&apos;s Fitness Brief</SectionBadge>
@@ -109,19 +109,19 @@ export default function BriefingOptinPage() {
                     </div>
                 </header>
 
-                <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-20 md:py-16">
+                <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-20 md:py-16 [@media(max-height:500px)]:py-6">
                     <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_400px] gap-16 xl:gap-24 items-center">
                         <div className="max-w-[600px]">
-                            <h1 className="text-[clamp(2rem,9.6vw,2.375rem)] md:text-[3.5rem] lg:text-[3rem] xl:text-[4rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
+                            <h1 className="text-[clamp(1.75rem,9.4vw,2.375rem)] md:text-[3.5rem] lg:text-[3rem] xl:text-[4rem] [@media(max-height:500px)]:text-[2.25rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
                                 For the founder whose life eats{" "}
                                 <span className="block text-bleu-accent">every fitness plan.</span>
                             </h1>
 
-                            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
+                            <p className="mt-4 md:mt-6 text-lg md:text-2xl [@media(max-height:500px)]:mt-3 [@media(max-height:500px)]:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
                                 Your last decade has been one giant restart. The Brief is one email a week on making this your last.
                             </p>
 
-                            <div className="mt-10 md:mt-12">
+                            <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
                                 <OptinForm
                                     submitLabel="Get the Brief"
                                     layout="joined"
@@ -135,7 +135,7 @@ export default function BriefingOptinPage() {
                             </div>
                         </div>
 
-                        <figure className="w-full max-w-[400px] mx-auto lg:mx-0">
+                        <figure className="w-full max-w-[400px]">
                             <figcaption className="mb-3 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">
                                 DM from one of my readers
                             </figcaption>
