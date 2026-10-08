@@ -118,7 +118,8 @@ export default function BriefingOptinPage() {
                             </h1>
 
                             <p className="mt-4 md:mt-6 text-lg md:text-2xl [@media(max-height:500px)]:mt-3 [@media(max-height:500px)]:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
-                                Your last decade has been one giant restart. The Brief is one email a week on making this your last.
+                                Your last decade has been one giant restart.{" "}
+                                <strong className="block mt-1 font-bold text-bleu-nuit">The Brief is one email a week on making this your last.</strong>
                             </p>
 
                             <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
