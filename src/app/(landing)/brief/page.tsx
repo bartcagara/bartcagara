@@ -7,8 +7,7 @@ const TITLE = "Founder's Fitness Brief | Get in shape one last time";
 const DESCRIPTION =
     "For the founder whose life eats every fitness plan. One email, every Sunday: cut through the noise, get your mind right, know what to do next.";
 
-// TODO: the new Kit form from Bart
-const KIT_FORM = { id: "TODO", uid: "TODO" };
+const KIT_FORM = { id: "10022301", uid: "66c36550de" };
 
 export const metadata: Metadata = {
     title: TITLE,
