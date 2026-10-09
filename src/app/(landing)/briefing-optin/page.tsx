@@ -25,10 +25,10 @@ export const metadata: Metadata = {
         description: DESCRIPTION,
         images: [
             {
-                url: "/images/og-briefing.jpg",
+                url: "/images/og-briefing-optin.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief"
+                alt: "Founder's Fitness Brief: For the founder whose life eats every fitness plan. Your last decade has been one giant restart."
             }
         ]
     },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
-        images: ["/images/og-briefing.jpg"],
+        images: ["/images/og-briefing-optin.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     },
