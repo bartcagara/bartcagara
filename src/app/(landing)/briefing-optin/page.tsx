@@ -28,7 +28,7 @@ export const metadata: Metadata = {
                 url: "/images/og-briefing-optin.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief: For the founder whose life eats every fitness plan. Your last decade has been one giant restart."
+                alt: "Founder's Fitness Brief: For the founder whose life eats every fitness plan. Make this restart your last."
             }
         ]
     },
