@@ -153,7 +153,7 @@
     display: none;
   }
 
-  /* Neo-Brutalist Shadow Utilities: kept subtle (halved Oct 2026) */
+  /* Neo-Brutalist Shadow Utilities, kept subtle: 2px on labels and buttons, 3px on images, cards and the joined form */
   .shadow-brutal-sm {
     box-shadow: 2px 2px 0px 0px var(--bleu-accent);
   }
@@ -163,7 +163,7 @@
   }
 
   .shadow-brutal-lg {
-    box-shadow: 6px 6px 0px 0px var(--bleu-nuit);
+    box-shadow: 3px 3px 0px 0px var(--bleu-nuit);
   }
 
   .shadow-brutal-nuit-sm {
