@@ -70,9 +70,9 @@ export function AboutSection({
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 md:gap-32 items-start">
-          {/* Image (Left) w/ Frame */}
-          <div className="p-4 border-2 border-bleu-nuit bg-white shadow-brutal-lg">
-            <div className="aspect-[2/3] relative border-2 border-bleu-nuit">
+          {/* Image (Left): black line and offset shadow, like the site's other photos */}
+          <div>
+            <div className="aspect-[2/3] relative border-2 border-bleu-nuit shadow-brutal-lg">
               <Image
                 src={imageSrc}
                 alt={imageAlt}
