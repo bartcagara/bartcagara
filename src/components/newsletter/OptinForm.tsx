@@ -26,6 +26,8 @@ interface OptinFormProps {
   note?: React.ReactNode;
   /** Kit form to subscribe into; defaults to the /briefing-optin form. */
   kitForm?: { id: string; uid: string };
+  /** Joined layout only: a smaller 3px offset shadow instead of 6px (/brief). */
+  subtleShadow?: boolean;
 }
 
 export function OptinForm({
@@ -35,6 +37,7 @@ export function OptinForm({
   layout = "stacked",
   note,
   kitForm = DEFAULT_KIT_FORM,
+  subtleShadow = false,
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
@@ -122,7 +125,7 @@ export function OptinForm({
           )}
 
           {/* One object: a single border and offset shadow around field + button */}
-          <div className="flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit shadow-[6px_6px_0_0_var(--bleu-accent)] focus-within:border-bleu-accent transition-colors">
+          <div className={`flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit focus-within:border-bleu-accent transition-colors ${subtleShadow ? "shadow-[3px_3px_0_0_var(--bleu-accent)]" : "shadow-[6px_6px_0_0_var(--bleu-accent)]"}`}>
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
@@ -140,7 +143,7 @@ export function OptinForm({
               type="submit"
               disabled={isSubmitting}
               aria-busy={isSubmitting}
-              className="h-14 md:h-16 px-8 inline-flex items-center justify-center gap-3 whitespace-nowrap bg-bleu-nuit text-white text-lg font-black uppercase tracking-tight hover:bg-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="h-14 md:h-16 px-5 sm:px-8 inline-flex items-center justify-center gap-3 whitespace-nowrap bg-bleu-nuit text-white text-base sm:text-lg font-black uppercase tracking-tight hover:bg-bleu-charron transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {/* Heavier stroke so the line weight sits with the black caps */}
               {!isSubmitting && <Mail className="w-5 h-5 md:w-6 md:h-6 shrink-0" strokeWidth={2.5} aria-hidden="true" />}

@@ -1,5 +1,4 @@
 import { OptinForm } from "@/components/newsletter/OptinForm";
-import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { Metadata } from "next";
 import Image from "next/image";
 
@@ -93,10 +92,8 @@ export default function BriefPage() {
             <div className="min-h-screen flex flex-col bg-gray-50 text-bleu-nuit">
                 <header className="px-6 md:px-12">
                     <div className="max-w-6xl mx-auto h-[72px] md:h-24 [@media(max-height:500px)]:h-16 flex items-center justify-between border-b-2 border-bleu-nuit">
-                        {/* SectionBadge carries mb-8 for section stacks; zero it in the bar */}
-                        <div className="leading-none [&>span]:mb-0">
-                            <SectionBadge>Founder&apos;s Fitness Brief</SectionBadge>
-                        </div>
+                        {/* SectionBadge's label with a 2px shadow instead of 4px */}
+                        <span className="inline-block whitespace-nowrap bg-bleu-accent text-white font-mono text-xs uppercase tracking-tighter px-3 py-1 shadow-[2px_2px_0_0_var(--bleu-nuit)]">Founder&apos;s Fitness Brief</span>
                         <span className="flex items-center gap-3 text-sm font-bold uppercase tracking-[-0.02em]">
                             <span className="hidden sm:flex flex-col items-end gap-1">
                                 Bart Cagara
@@ -129,9 +126,10 @@ export default function BriefPage() {
 
                             <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
                                 <OptinForm
-                                    submitLabel="Get the Brief"
+                                    submitLabel="Send me Sunday’s Brief"
                                     layout="joined"
                                     kitForm={KIT_FORM}
+                                    subtleShadow
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
@@ -151,7 +149,7 @@ export default function BriefPage() {
                                 alt={READER_DM_ALT}
                                 width={900}
                                 height={1038}
-                                className="block w-full h-auto border-2 border-bleu-nuit shadow-brutal-md"
+                                className="block w-full h-auto border-2 border-bleu-nuit shadow-[4px_4px_0_0_var(--bleu-accent)]"
                             />
                         </figure>
                     </div>
