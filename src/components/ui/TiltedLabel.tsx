@@ -24,7 +24,7 @@ export function TiltedLabel({
     <span className={`relative inline-block max-w-full ${widthClassName}`}>
       <span
         aria-hidden
-        className="pointer-events-none absolute inset-0 -rotate-1 translate-x-1 translate-y-1 bg-bleu-accent"
+        className="pointer-events-none absolute inset-0 -rotate-1 translate-x-0.5 translate-y-0.5 bg-bleu-accent"
       />
       <span className={`relative block px-4 -rotate-1 ${className}`}>
         {children}

@@ -153,25 +153,25 @@
     display: none;
   }
 
-  /* Neo-Brutalist Shadow Utilities */
+  /* Neo-Brutalist Shadow Utilities: kept subtle (halved Oct 2026) */
   .shadow-brutal-sm {
-    box-shadow: 4px 4px 0px 0px var(--bleu-accent);
+    box-shadow: 2px 2px 0px 0px var(--bleu-accent);
   }
 
   .shadow-brutal-md {
-    box-shadow: 6px 6px 0px 0px var(--bleu-accent);
+    box-shadow: 3px 3px 0px 0px var(--bleu-accent);
   }
 
   .shadow-brutal-lg {
-    box-shadow: 12px 12px 0px 0px var(--bleu-nuit);
+    box-shadow: 6px 6px 0px 0px var(--bleu-nuit);
   }
 
   .shadow-brutal-nuit-sm {
-    box-shadow: 4px 4px 0px 0px var(--bleu-nuit);
+    box-shadow: 2px 2px 0px 0px var(--bleu-nuit);
   }
 
   .shadow-brutal-white-sm {
-    box-shadow: 4px 4px 0px 0px white;
+    box-shadow: 2px 2px 0px 0px white;
   }
 
   /* Transition Utilities */
@@ -180,7 +180,7 @@
   }
 
   .hover-translate-brutal:hover {
-    transform: translate(3px, 3px);
+    transform: translate(2px, 2px);
   }
 }
 
