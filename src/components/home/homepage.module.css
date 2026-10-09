@@ -14,7 +14,7 @@
     max-width: 100%;
     object-fit: contain;
     border: 2px solid var(--bleu-nuit);
-    box-shadow: 4px 4px 0px var(--bleu-nuit);
+    box-shadow: 2px 2px 0px var(--bleu-nuit);
 }
 
 @media (max-width: 600px) {
@@ -33,7 +33,7 @@
     height: 250px;
     cursor: pointer;
     border: 2px solid var(--bleu-nuit);
-    box-shadow: 4px 4px 0px var(--bleu-nuit);
+    box-shadow: 2px 2px 0px var(--bleu-nuit);
 }
 
 /* Cap to the viewport on small screens (same treatment as the other card
@@ -69,7 +69,7 @@
     height: 500px;
     object-fit: contain;
     border: 2px solid var(--bleu-nuit);
-    box-shadow: 4px 4px 0px var(--bleu-nuit);
+    box-shadow: 2px 2px 0px var(--bleu-nuit);
     display: block;
 }
 

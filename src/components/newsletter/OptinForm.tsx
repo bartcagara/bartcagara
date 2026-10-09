@@ -26,8 +26,6 @@ interface OptinFormProps {
   note?: React.ReactNode;
   /** Kit form to subscribe into; defaults to the /briefing-optin form. */
   kitForm?: { id: string; uid: string };
-  /** Joined layout only: a smaller 3px offset shadow instead of 6px (/brief). */
-  subtleShadow?: boolean;
 }
 
 export function OptinForm({
@@ -37,7 +35,6 @@ export function OptinForm({
   layout = "stacked",
   note,
   kitForm = DEFAULT_KIT_FORM,
-  subtleShadow = false,
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
@@ -125,7 +122,7 @@ export function OptinForm({
           )}
 
           {/* One object: a single border and offset shadow around field + button */}
-          <div className={`flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit focus-within:border-bleu-accent transition-colors ${subtleShadow ? "shadow-[3px_3px_0_0_var(--bleu-accent)]" : "shadow-[6px_6px_0_0_var(--bleu-accent)]"}`}>
+          <div className={`flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit focus-within:border-bleu-accent transition-colors shadow-[3px_3px_0_0_var(--bleu-accent)]`}>
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>

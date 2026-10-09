@@ -2,7 +2,7 @@ import { OptinForm } from "@/components/newsletter/OptinForm";
 import type { Metadata } from "next";
 import Image from "next/image";
 
-const TITLE = "Founder's Fitness Brief | Get in shape one last time";
+const TITLE = "Get in shape one last time | Founder's Fitness Brief";
 const DESCRIPTION =
     "For the founder whose life eats every fitness plan. One email every Sunday to cut through the noise, get your mind right and know what to do next.";
 
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
         description: DESCRIPTION,
         images: [
             {
-                url: "/images/og-briefing.jpg",
+                url: "/images/og-brief.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief"
+                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder whose life eats every fitness plan."
             }
         ]
     },
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
-        images: ["/images/og-briefing.jpg"],
+        images: ["/images/og-brief.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     },
@@ -129,7 +129,6 @@ export default function BriefPage() {
                                     submitLabel="Send me Sunday’s Brief"
                                     layout="joined"
                                     kitForm={KIT_FORM}
-                                    subtleShadow
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
@@ -149,7 +148,7 @@ export default function BriefPage() {
                                 alt={READER_DM_ALT}
                                 width={900}
                                 height={1038}
-                                className="block w-full h-auto border-2 border-bleu-nuit shadow-[4px_4px_0_0_var(--bleu-accent)]"
+                                className="block w-full h-auto border-2 border-bleu-nuit shadow-brutal-md"
                             />
                         </figure>
                     </div>
