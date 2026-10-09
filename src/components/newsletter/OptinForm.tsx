@@ -6,10 +6,8 @@ import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
 
-const KIT_FORM_ID = "9460021";
-const KIT_FORM_UID = "c2655decfb";
-const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${KIT_FORM_ID}/subscriptions`;
-const KIT_EMBED_URL = `https://bartcagara.kit.com/${KIT_FORM_UID}/index.js`;
+/** The /briefing-optin form; pages with their own Kit form pass `kitForm`. */
+const DEFAULT_KIT_FORM = { id: "9460021", uid: "c2655decfb" };
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -26,6 +24,8 @@ interface OptinFormProps {
   layout?: Layout;
   /** Shown under the form until signup succeeds (joined layout only). */
   note?: React.ReactNode;
+  /** Kit form to subscribe into; defaults to the /briefing-optin form. */
+  kitForm?: { id: string; uid: string };
 }
 
 export function OptinForm({
@@ -34,7 +34,11 @@ export function OptinForm({
   variant = "light",
   layout = "stacked",
   note,
+  kitForm = DEFAULT_KIT_FORM,
 }: OptinFormProps = {}) {
+  const KIT_FORM_UID = kitForm.uid;
+  const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
+  const KIT_EMBED_URL = `https://bartcagara.kit.com/${kitForm.uid}/index.js`;
   const formRef = useRef<HTMLFormElement>(null);
   const trackerRef = useRef<HTMLDivElement>(null);
   const posthog = usePostHogClient();
@@ -56,7 +60,7 @@ export function OptinForm({
     script.src = KIT_EMBED_URL;
     script.setAttribute("data-uid", KIT_FORM_UID);
     container.appendChild(script);
-  }, []);
+  }, [KIT_EMBED_URL, KIT_FORM_UID]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
