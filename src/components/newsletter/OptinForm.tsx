@@ -6,8 +6,8 @@ import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
 
-/** The /briefing-optin form; pages with their own Kit form pass `kitForm`. */
-const DEFAULT_KIT_FORM = { id: "9460021", uid: "c2655decfb" };
+/** The /brief form, used site-wide; /briefing-optin passes its own older form. */
+const DEFAULT_KIT_FORM = { id: "10022301", uid: "66c36550de" };
 
 type Status = "idle" | "submitting" | "success" | "error";
 
@@ -24,8 +24,10 @@ interface OptinFormProps {
   layout?: Layout;
   /** Shown under the form until signup succeeds (joined layout only). */
   note?: React.ReactNode;
-  /** Kit form to subscribe into; defaults to the /briefing-optin form. */
+  /** Kit form to subscribe into; defaults to the /brief form. */
   kitForm?: { id: string; uid: string };
+  /** PostHog event fired on signup; /brief uses its own so it can be compared with /briefing-optin. */
+  trackingEvent?: string;
 }
 
 export function OptinForm({
@@ -35,6 +37,7 @@ export function OptinForm({
   layout = "stacked",
   note,
   kitForm = DEFAULT_KIT_FORM,
+  trackingEvent = "newsletter_signup_completed",
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
@@ -84,7 +87,7 @@ export function OptinForm({
         return;
       }
       setStatus("success");
-      posthog?.capture("newsletter_signup_completed", {
+      posthog?.capture(trackingEvent, {
         form_uid: KIT_FORM_UID,
       });
     } catch {

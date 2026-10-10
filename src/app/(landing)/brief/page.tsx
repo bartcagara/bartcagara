@@ -6,7 +6,6 @@ const TITLE = "Get in shape one last time | Founder's Fitness Brief";
 const DESCRIPTION =
     "For the founder whose life eats every fitness plan. One email every Sunday to cut through the noise, get your mind right and know what to do next.";
 
-const KIT_FORM = { id: "10022301", uid: "66c36550de" };
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -128,7 +127,7 @@ export default function BriefPage() {
                                 <OptinForm
                                     submitLabel="Send me Sunday’s Brief"
                                     layout="joined"
-                                    kitForm={KIT_FORM}
+                                    trackingEvent="brief_signup_completed"
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}
