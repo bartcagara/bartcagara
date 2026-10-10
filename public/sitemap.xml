@@ -16,13 +16,13 @@
 
   <!-- Newsletter Opt-in -->
   <url>
-    <loc>https://bartcagara.com/briefing-optin</loc>
-    <lastmod>2026-06-10</lastmod>
+    <loc>https://bartcagara.com/brief</loc>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
-      <image:loc>https://bartcagara.com/images/og-briefing-optin.jpg</image:loc>
-      <image:title>The Founder Athlete Briefing - one email, every Sunday</image:title>
+      <image:loc>https://bartcagara.com/images/og-brief.jpg</image:loc>
+      <image:title>Founder's Fitness Brief - Get in shape one last time</image:title>
     </image:image>
   </url>
 

@@ -126,6 +126,7 @@ export default function BriefingOptinPage() {
                                 <OptinForm
                                     submitLabel="Get the Brief"
                                     layout="joined"
+                                    kitForm={{ id: "9460021", uid: "c2655decfb" }}
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}

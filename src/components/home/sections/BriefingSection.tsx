@@ -10,7 +10,7 @@ interface BriefingSectionProps {
 
 /**
  * BriefingSection - Newsletter opt-in block
- * Dark section that reuses the /briefing-optin email signup form
+ * Dark section that reuses the /brief email signup form
  * (dark variant so the form reads on the navy background)
  */
 export function BriefingSection({ label, heading, body, submitLabel }: BriefingSectionProps) {

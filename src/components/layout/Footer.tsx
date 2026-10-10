@@ -26,7 +26,7 @@ export const Footer = memo(() => (
             <li><Link href="/#program" className="hover:text-bleu-accent transition-colors">Coaching</Link></li>
             <li>
               <Link
-                href="/briefing-optin"
+                href="/brief"
                 className="hover:text-bleu-accent transition-colors"
               >
                 The Brief
