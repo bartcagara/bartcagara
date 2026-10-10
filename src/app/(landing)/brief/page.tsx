@@ -127,6 +127,7 @@ export default function BriefPage() {
                                 <OptinForm
                                     submitLabel="Send me Sunday’s Brief"
                                     layout="joined"
+                                    trackingEvent="brief_signup_completed"
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
                                             <span className="font-bold uppercase tracking-[-0.02em] text-bleu-nuit">Warning:</span>{" "}

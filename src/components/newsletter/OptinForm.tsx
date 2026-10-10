@@ -26,6 +26,8 @@ interface OptinFormProps {
   note?: React.ReactNode;
   /** Kit form to subscribe into; defaults to the /brief form. */
   kitForm?: { id: string; uid: string };
+  /** PostHog event fired on signup; /brief uses its own so it can be compared with /briefing-optin. */
+  trackingEvent?: string;
 }
 
 export function OptinForm({
@@ -35,6 +37,7 @@ export function OptinForm({
   layout = "stacked",
   note,
   kitForm = DEFAULT_KIT_FORM,
+  trackingEvent = "newsletter_signup_completed",
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
@@ -84,7 +87,7 @@ export function OptinForm({
         return;
       }
       setStatus("success");
-      posthog?.capture("newsletter_signup_completed", {
+      posthog?.capture(trackingEvent, {
         form_uid: KIT_FORM_UID,
       });
     } catch {
