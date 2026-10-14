@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TITLE = "Get in shape one last time | Founder's Fitness Brief";
 const DESCRIPTION =
-    "For the founder whose schedule killed every fitness plan. Finally get a body that matches what you’ve built.";
+    "For the founder whose schedule killed every fitness plan. Finally get the body that matches what you’ve built.";
 
 
 export const metadata: Metadata = {
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
                 url: "/images/og-brief-2.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder whose schedule killed every fitness plan. Finally get a body that matches what you’ve built."
+                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder whose schedule killed every fitness plan. Finally get the body that matches what you’ve built."
             }
         ]
     },
@@ -120,7 +120,7 @@ export default function BriefPage() {
 
                             <p className="mt-4 md:mt-6 text-lg md:text-2xl [@media(max-height:500px)]:mt-3 [@media(max-height:500px)]:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
                                 <strong className="block mb-1 font-bold text-bleu-nuit">For the founder whose schedule killed every fitness plan.</strong>
-                                Finally get a body that matches what you’ve built.
+                                Finally get the body that matches what you’ve built.
                             </p>
 
                             <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
