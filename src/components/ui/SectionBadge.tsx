@@ -5,7 +5,7 @@ import type { SectionBadgeProps } from "@/components/home/types";
  * Used throughout the homepage for section headers
  */
 export function SectionBadge({ children, variant = 'dark' }: SectionBadgeProps) {
-  const baseClasses = "inline-block bg-bleu-accent text-white font-sans font-bold text-xs uppercase tracking-[0.12em] px-3 py-1 mb-8";
+  const baseClasses = "inline-block bg-bleu-accent text-white font-mono text-xs uppercase tracking-normal px-3 py-1 mb-8";
   const shadowClass = variant === 'light'
     ? 'shadow-brutal-white-sm'
     : 'shadow-brutal-nuit-sm';
