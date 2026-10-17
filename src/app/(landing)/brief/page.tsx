@@ -92,7 +92,7 @@ export default function BriefPage() {
                 <header className="px-6 md:px-12">
                     <div className="max-w-6xl mx-auto h-[72px] md:h-24 [@media(max-height:500px)]:h-16 flex items-center justify-between border-b-2 border-bleu-nuit">
                         {/* SectionBadge's label with a 2px shadow instead of 4px */}
-                        <span className="inline-block whitespace-nowrap bg-bleu-accent text-white font-sans font-bold text-xs uppercase tracking-[0.12em] px-3 py-1 shadow-[2px_2px_0_0_var(--bleu-nuit)]">Founder&apos;s Fitness Brief</span>
+                        <span className="inline-block whitespace-nowrap bg-bleu-accent text-white font-mono text-xs uppercase tracking-normal px-3 py-1 shadow-[2px_2px_0_0_var(--bleu-nuit)]">Founder&apos;s Fitness Brief</span>
                         <span className="flex items-center gap-3 text-sm font-bold uppercase tracking-[-0.02em]">
                             <span className="hidden sm:flex flex-col items-end gap-1">
                                 Bart Cagara
