@@ -45,7 +45,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
 
                 {/* FOCUS */}
                 <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+                  <span className="font-sans font-bold text-bleu-accent tracking-[0.12em] uppercase text-sm bg-white/5 px-2 py-1 inline-block">
                     <span aria-hidden="true">{"// "}</span>FOCUS: {phase.focus}
                   </span>
                 </div>
@@ -84,7 +84,7 @@ export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSec
         {/* DELIVERY */}
         <div className="mt-24 max-w-3xl">
           <div className="mb-6">
-            <span className="font-mono text-bleu-accent tracking-tighter uppercase text-sm bg-white/5 px-2 py-1 inline-block">
+            <span className="font-sans font-bold text-bleu-accent tracking-[0.12em] uppercase text-sm bg-white/5 px-2 py-1 inline-block">
               <span aria-hidden="true">{"// "}</span>{delivery.heading}
             </span>
           </div>
