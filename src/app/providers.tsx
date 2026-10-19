@@ -42,6 +42,13 @@ function loadPostHog(): Promise<PostHog | null> {
             return;
           }
 
+          // Remember which post brought this visitor. Every LinkedIn link is
+          // tagged utm_term=<post slug>; registering it as `post` stamps it on
+          // every later event (signup, booked call), even pages later. The
+          // newest tagged visit wins.
+          const post = new URLSearchParams(window.location.search).get('utm_term');
+          if (post) ph.register({ post });
+
           // Load toolbar if launched from PostHog (must run inside loaded callback
           // so PostHog is fully initialized and ui_host is respected)
           const hash = window.location.hash.substring(1);
