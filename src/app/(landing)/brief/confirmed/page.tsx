@@ -81,7 +81,7 @@ export default function BriefConfirmedPage() {
                             </h2>
                             <div className="mt-6 md:mt-8 space-y-5 text-lg md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
                                 <p>
-                                    <strong className="font-bold text-bleu-nuit">I coach founders who played sport and whose body no longer matches the man they are.</strong>
+                                    <strong className="font-bold text-bleu-nuit">I coach founders who played sports and whose body no longer matches the man they are.</strong>
                                 </p>
                                 <p>
                                     It&apos;s six months, one-to-one. Training that fits your schedule. Food that fits how you already eat, restaurants and travel included. Built to keep working after we&apos;re done.
@@ -96,7 +96,7 @@ export default function BriefConfirmedPage() {
                         </section>
                     </div>
 
-                    <div id="book-call" className="mt-6 md:mt-4">
+                    <div id="book-call" className="mt-12 md:mt-10">
                         <CalendarEmbed />
                     </div>
                 </div>
