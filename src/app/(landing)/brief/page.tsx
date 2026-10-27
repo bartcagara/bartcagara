@@ -77,9 +77,9 @@ const READER_DM_ALT =
     "A LinkedIn message from a reader: \"I know I'm not a client. But your shit really speaks to me. Not sure you wanna hear that but it's true!! And one of my fav things is being a shredded dad on my summer hols.\" Below it, his mirror selfie.";
 
 /**
- * Kyle-coached iteration of /briefing-optin. The signup page picks up where the LinkedIn post that sent the reader here
- * left off: same promise, same warning, same reader DM. The copy is Bart's,
- * except the sentence saying what the Brief is.
+ * The newsletter signup page (/briefing-optin redirects here). It picks up
+ * where the LinkedIn post that sent the reader here left off: same promise,
+ * same warning, same reader DM. The copy is Bart's.
  */
 export default function BriefPage() {
     return (
