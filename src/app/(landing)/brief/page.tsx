@@ -28,7 +28,7 @@ export const metadata: Metadata = {
                 url: "/images/og-brief-3.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder whose presence shrinks the moment his shirt comes off."
+                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder who blames himself for every failed fitness plan."
             }
         ]
     },
