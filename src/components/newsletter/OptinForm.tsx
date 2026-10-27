@@ -6,7 +6,7 @@ import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
 
-/** The /brief form, used site-wide; /briefing-optin passes its own older form. */
+/** The /brief form, used site-wide. */
 const DEFAULT_KIT_FORM = { id: "10022301", uid: "66c36550de" };
 
 type Status = "idle" | "submitting" | "success" | "error";

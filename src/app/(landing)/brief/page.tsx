@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const TITLE = "Get in shape one last time | Founder's Fitness Brief";
 const DESCRIPTION =
-    "For the founder whose schedule killed every fitness plan. Finally get the body that matches what you’ve built.";
+    "For the founder whose presence shrinks the moment his shirt comes off. You’re sure the problem is you. But not a single plan you tried could survive your schedule.";
 
 
 export const metadata: Metadata = {
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
         type: "website",
         locale: "en_US",
         url: "https://bartcagara.com/brief",
-        siteName: "Founder Athlete OS",
+        siteName: "Founder's Fitness Brief",
         title: TITLE,
         description: DESCRIPTION,
         images: [
             {
-                url: "/images/og-brief-2.jpg",
+                url: "/images/og-brief-3.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder whose schedule killed every fitness plan. Finally get the body that matches what you’ve built."
+                alt: "Founder's Fitness Brief: Get in shape one last time. For the founder who blames himself for every failed fitness plan."
             }
         ]
     },
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
-        images: ["/images/og-brief-2.jpg"],
+        images: ["/images/og-brief-3.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     },
@@ -77,9 +77,9 @@ const READER_DM_ALT =
     "A LinkedIn message from a reader: \"I know I'm not a client. But your shit really speaks to me. Not sure you wanna hear that but it's true!! And one of my fav things is being a shredded dad on my summer hols.\" Below it, his mirror selfie.";
 
 /**
- * Kyle-coached iteration of /briefing-optin. The signup page picks up where the LinkedIn post that sent the reader here
- * left off: same promise, same warning, same reader DM. The copy is Bart's,
- * except the sentence saying what the Brief is.
+ * The newsletter signup page (/briefing-optin redirects here). It picks up
+ * where the LinkedIn post that sent the reader here left off: same promise,
+ * same warning, same reader DM. The copy is Bart's.
  */
 export default function BriefPage() {
     return (
@@ -119,8 +119,8 @@ export default function BriefPage() {
                             </h1>
 
                             <p className="mt-4 md:mt-6 text-lg md:text-2xl [@media(max-height:500px)]:mt-3 [@media(max-height:500px)]:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75 max-w-[30em]">
-                                <strong className="block mb-1 font-bold text-bleu-nuit">For the founder whose schedule killed every fitness plan.</strong>
-                                Finally get the body that matches what you’ve built.
+                                <strong className="block mb-1 font-bold text-bleu-nuit">For the founder whose presence shrinks the moment his shirt comes off.</strong>
+                                You’re sure the problem is you. But not a single plan you tried could survive your schedule.
                             </p>
 
                             <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
