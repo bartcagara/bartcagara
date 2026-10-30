@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/bartcagara/Desktop/HQ",
+      "/Users/bartcagara/Projects/stack-app", "/Users/bartcagara/Projects/stack-site"
+    ]
+  },
+  "env": {
+    "CLAUDE_CODE_ADDITIONAL_DIRECTORIES_CLAUDE_MD": "1"
+  }
+}
