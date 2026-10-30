@@ -4,14 +4,14 @@ bartcagara.com and the newsletter signup page bartcagara.com/brief (Next.js, src
 
 Shared with every folder (HQ, stack-app, bartcagara, stack-site):
 
-@~/Desktop/HQ/Foundation/map.md
+@~/Desktop/HQ/09\ System/Foundation/map.md
 
 Who reads this site and what moves him:
 
-@~/Desktop/HQ/Foundation/business.md
+@~/Desktop/HQ/09\ System/Foundation/business.md
 
 How site copy is written:
 
-@~/Desktop/HQ/Foundation/brand-voice.md
+@~/Desktop/HQ/09\ System/Foundation/brand-voice.md
 
-Bart is non-technical: plain words in everything written to him (`~/Desktop/HQ/Foundation/working-preferences.md`). A page or screenshot made for Bart is saved into `~/Desktop/HQ/[04] Stack/evidence/<YYYY-MM>/` when it is about Stack, never left loose.
+Bart is non-technical: plain words in everything written to him (`~/Desktop/HQ/09 System/Foundation/working-preferences.md`). A page or screenshot made for Bart is saved into `~/Desktop/HQ/05 Stack/evidence/<YYYY-MM>/` when it is about Stack, never left loose.
