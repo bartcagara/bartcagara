@@ -17,7 +17,3 @@
 # Older newsletter links (LinkedIn posts) -> /brief
 /briefing /brief 301
 /briefing/ /brief 301
-
-# Old booking link in 2025 emails -> the Restart Audit booking page
-/book https://cal.com/bartcagara/discovery-call 301
-/book/ https://cal.com/bartcagara/discovery-call 301
