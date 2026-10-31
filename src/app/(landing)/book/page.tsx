@@ -2,9 +2,9 @@ import { CalendarEmbed } from "@/components/home/CalendarEmbed";
 import type { Metadata } from "next";
 import Image from "next/image";
 
-const TITLE = "Book a Restart Audit | Bart Cagara";
+const TITLE = "Book your Restart Audit | Bart Cagara";
 const DESCRIPTION =
-    "45 minutes, one-to-one, with Bart Cagara. We'll see where it keeps breaking and whether we're a good fit.";
+    "45 minutes, you and me. You leave knowing exactly why it never sticks, whether we work together or not. For former-athlete founders.";
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
         description: DESCRIPTION,
         images: [
             {
-                url: "/images/og-home.jpg",
+                url: "/images/og-book.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Bart Cagara, fitness coach to founders"
+                alt: "Restart Audit: 45 minutes, you and me. You leave knowing exactly why it never sticks, whether we work together or not."
             }
         ]
     },
@@ -35,9 +35,19 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
-        images: ["/images/og-home.jpg"],
+        images: ["/images/og-book.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
+    },
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1
+        }
     }
 };
 
