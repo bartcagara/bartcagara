@@ -28,7 +28,11 @@ function loadPostHog(): Promise<PostHog | null> {
         // when capture_pageview is false. We fire $pageview manually via
         // PostHogPageView, so opt in to $pageleave explicitly.
         capture_pageleave: true,
-        persistence: 'localStorage',
+        // Nothing of PostHog's is stored on the visitor's device (no cookie,
+        // no localStorage), so EU rules need no consent banner. Same rule as
+        // the Stack app and getstack.to (Bart, 2026-10-31). The cost, accepted:
+        // a visitor is one person only until he closes the tab.
+        persistence: 'memory',
         loaded: (ph) => {
           const ua = navigator.userAgent;
           if (
