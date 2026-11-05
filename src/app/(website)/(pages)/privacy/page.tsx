@@ -40,12 +40,15 @@ export default function PrivacyPage() {
 
             <H2>Visiting this website</H2>
             <P>
-                We use PostHog (EU) to learn which pages and links work: the pages you open, the post or link that brought you, which buttons you click and their words, your browser, device and language, and your internet address. PostHog stores nothing on your device, and visitors aren&rsquo;t identified by name. The page also loads services from Kit (newsletter forms), Cal.com (booking), Senja (testimonials) and YouTube (video images, and the video when you press play), which see your internet address; Kit and Senja can store an identifier on your device. Cloudflare delivers the site. We rely on our legitimate interest in running and improving the site (Article 6(1)(f)).
+                We use PostHog (EU) to learn which pages and links work: the pages you open, the post or link that brought you, your browser, device and language, and your internet address. It stores nothing on your device and never reads the words on buttons or what you type, and visitors aren&rsquo;t identified by name. Cloudflare delivers the site and protects it against attacks. We rely on our legitimate interest in running and improving the site (Article 6(1)(f)), and you can object.
+            </P>
+            <P>
+                Cal.com loads when you open a booking calendar, or scroll to one, and YouTube when you press play on a video. Each sees your internet address and works under its own terms. Cal.com sets a security cookie and runs its own error tracking and analytics.
             </P>
 
             <H2>Writing to us</H2>
             <P>
-                The contact form sends your name, email address and message to us through FormSubmit, so that we can answer. Our legitimate interest in replying is the basis (Article 6(1)(f)).
+                If you email us, we use your message and address to answer you. Our legitimate interest in replying is the basis (Article 6(1)(f)).
             </P>
 
             <H2>The newsletter</H2>
@@ -88,7 +91,7 @@ export default function PrivacyPage() {
             <H2>How long we keep it</H2>
             <UL>
                 <li><strong>Website visits:</strong> available to us for one year.</li>
-                <li><strong>Messages through the contact form:</strong> 24 months.</li>
+                <li><strong>Emails to us:</strong> 24 months.</li>
                 <li><strong>Newsletter:</strong> until you unsubscribe, and a record of that so we don&rsquo;t email you again.</li>
                 <li><strong>Sales calls, if you don&rsquo;t become a client:</strong> 24 months after our last contact.</li>
                 <li><strong>Coaching records:</strong> 24 months after coaching ends, unless you come back or ask us to delete them sooner. A dated note that a call took place, and with whom, stays as our business record unless you ask us to delete it too.</li>
