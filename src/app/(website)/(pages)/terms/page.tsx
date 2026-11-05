@@ -1,64 +1,59 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const TITLE = "Website Terms | Founder Athlete OS";
+const DESCRIPTION = "The terms for using this website, run by Dad with Style OÜ.";
+
 export const metadata: Metadata = {
-    title: "Terms of Service | Bart Cagara",
-    description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services.",
-    alternates: {
-        canonical: "/terms"
-    },
+    title: TITLE,
+    description: DESCRIPTION,
+    alternates: { canonical: "/terms" },
     openGraph: {
         type: "website",
         locale: "en_US",
         url: "https://bartcagara.com/terms",
         siteName: "Founder Athlete OS",
-        title: "Terms of Service | Bart Cagara",
-        description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services."
+        title: TITLE,
+        description: DESCRIPTION,
     },
-    twitter: {
-        card: "summary",
-        title: "Terms of Service | Bart Cagara",
-        description: "Terms of Service for Dad with Style OÜ. Read our terms and conditions for using our website and services.",
-        creator: "@bartcagara",
-        site: "@bartcagara"
-    }
+    twitter: { card: "summary", title: TITLE, description: DESCRIPTION },
 };
+
+const H2 = ({ children }: { children: React.ReactNode }) => (
+    <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">{children}</h2>
+);
+const P = ({ children }: { children: React.ReactNode }) => <p className="mb-4 leading-relaxed">{children}</p>;
 
 export default function TermsPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
-            <h1 className="text-title mb-6 text-bleu-nuit">Terms of Service</h1>
-            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
+            <h1 className="text-title mb-6 text-bleu-nuit">Website Terms</h1>
+            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">1. Agreement to Terms</h2>
-            <p className="mb-4 leading-relaxed">
-                These Terms of Service constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Dad with Style OÜ ("we", "us", or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").
-            </p>
-            <p className="mb-4 leading-relaxed">
-                <strong>Company Details:</strong><br />
-                Dad with Style OÜ<br />
-                Sepapaja 6, 15551 Tallinn, Estonia
-            </p>
+            <H2>Who we are</H2>
+            <P>
+                This website is run by Dad with Style OÜ, Sepapaja tn 6, Tallinn 15551, Estonia (registry code 14696867). These terms cover your use of the website. Coaching is governed by your coaching agreement, and the Stack app by <a href="https://getstack.to/terms" className="underline">its own terms</a>.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">2. Intellectual Property Rights</h2>
-            <p className="mb-4 leading-relaxed">
-                Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws and various other intellectual property rights and unfair competition laws of Estonia, foreign jurisdictions, and international conventions.
-            </p>
+            <H2>Using the website</H2>
+            <P>
+                You may read and share what is here for your own, non-commercial use. Don&rsquo;t misuse the site, try to break into it, or copy its content in bulk or with automated tools. The site&rsquo;s text, images, videos and marks belong to us or those who license them to us.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">3. User Representations</h2>
-            <p className="mb-4 leading-relaxed">
-                By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms of Service; (4) you are not a minor in the jurisdiction in which you reside; (5) you will not access the Site through automated or non-human means, whether through a bot, script or otherwise; (6) you will not use the Site for any illegal or unauthorized purpose; and (7) your use of the Site will not violate any applicable law or regulation.
-            </p>
+            <H2>Information only</H2>
+            <P>
+                What you read here is general information, not medical advice or a promise of results. Our <Link href="/disclaimer" className="underline">disclaimer</Link> says more. Our <Link href="/privacy" className="underline">privacy notice</Link> says how we handle personal data.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">4. Governing Law</h2>
-            <p className="mb-4 leading-relaxed">
-                These Terms shall be governed by and defined following the laws of Estonia. Dad with Style OÜ and yourself irrevocably consent that the courts of Estonia shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.
-            </p>
+            <H2>Our responsibility</H2>
+            <P>
+                We work to keep the site accurate and available, but we can&rsquo;t promise it always is. We are fully responsible for harm we cause on purpose or through gross negligence, for death or injury we cause through our fault, and wherever the law doesn&rsquo;t let us limit it. Beyond that, as far as the law allows, we aren&rsquo;t responsible for loss arising from your use of this free website.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">5. Contact Us</h2>
-            <p className="mb-4 leading-relaxed">
-                In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us via the form on our <Link href="/contact" className="text-bleu-accent underline font-semibold">contact page</Link>.
-            </p>
+            <H2>Law and disputes</H2>
+            <P>
+                Estonian law applies. If you use the site as a consumer, you keep the protections of the law where you live and can take a claim to the courts there. Write to us first through the <Link href="/contact" className="underline">contact page</Link> and we&rsquo;ll try to put it right.
+            </P>
         </article>
     );
 }

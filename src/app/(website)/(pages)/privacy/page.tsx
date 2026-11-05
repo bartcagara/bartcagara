@@ -1,93 +1,109 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 
+const TITLE = "Privacy Notice | Founder Athlete OS";
+const DESCRIPTION = "How Dad with Style OÜ handles personal data for this website, the newsletter, sales calls and Founder Athlete OS coaching.";
+
 export const metadata: Metadata = {
-    title: "Privacy Policy | Bart Cagara",
-    description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information.",
-    alternates: {
-        canonical: "/privacy"
-    },
+    title: TITLE,
+    description: DESCRIPTION,
+    alternates: { canonical: "/privacy" },
     openGraph: {
         type: "website",
         locale: "en_US",
         url: "https://bartcagara.com/privacy",
         siteName: "Founder Athlete OS",
-        title: "Privacy Policy | Bart Cagara",
-        description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information."
+        title: TITLE,
+        description: DESCRIPTION,
     },
-    twitter: {
-        card: "summary",
-        title: "Privacy Policy | Bart Cagara",
-        description: "Privacy Policy for Dad with Style OÜ. Learn how we collect, use, and protect your personal information.",
-        creator: "@bartcagara",
-        site: "@bartcagara"
-    }
+    twitter: { card: "summary", title: TITLE, description: DESCRIPTION },
 };
+
+const H2 = ({ children }: { children: React.ReactNode }) => (
+    <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">{children}</h2>
+);
+const P = ({ children }: { children: React.ReactNode }) => <p className="mb-4 leading-relaxed">{children}</p>;
+const UL = ({ children }: { children: React.ReactNode }) => <ul className="list-disc pl-6 mb-4 space-y-2">{children}</ul>;
 
 export default function PrivacyPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
-            <h1 className="text-title mb-6 text-bleu-nuit">Privacy Policy</h1>
-            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
+            <h1 className="text-title mb-6 text-bleu-nuit">Privacy Notice</h1>
+            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">1. Introduction</h2>
-            <p className="mb-4 leading-relaxed">
-                Dad with Style OÜ ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.
-            </p>
-            <p className="mb-4 leading-relaxed">
-                We are the Data Controller of your personal data.
-            </p>
-            <p className="mb-4 leading-relaxed">
-                <strong>Company Details:</strong><br />
-                Dad with Style OÜ<br />
-                Sepapaja 6, 15551 Tallinn, Estonia
-            </p>
+            <H2>Who we are</H2>
+            <P>
+                This website, the Founder&rsquo;s Fitness Brief newsletter and Founder Athlete OS coaching are run by Dad with Style OÜ, Sepapaja tn 6, Tallinn 15551, Estonia (registry code 14696867). We are the controller of the personal data described here under the EU General Data Protection Regulation (GDPR). Reach us through our <Link href="/contact" className="underline">contact page</Link> or at that address. We answer within one month.
+            </P>
+            <P>
+                Coaching clients use the Stack app, which we also make. Its <a href="https://getstack.to/privacy" className="underline">privacy policy</a> covers the app; this notice covers the coaching around it. Our services are for adults, and we don&rsquo;t knowingly hold data about anyone under 18.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">2. Collection of Your Information</h2>
-            <p className="mb-4 leading-relaxed">
-                We may collect information about you in a variety of ways. The information we may collect on the Site includes:
-            </p>
-            <ul>
-                <li><strong>Personal Data:</strong> Personally identifiable information, such as your name, shipping address, email address, and telephone number, and demographic information, such as your age, gender, hometown, and interests, that you voluntarily give to us when you register with the Site or when you choose to participate in various activities related to the Site.</li>
-                <li><strong>Derivative Data:</strong> Information our servers automatically collect when you access the Site, such as your IP address, your browser type, your operating system, your access times, and the pages you have viewed directly before and after accessing the Site.</li>
-            </ul>
+            <H2>Visiting this website</H2>
+            <P>
+                We use PostHog (EU) to learn which pages and links work: the pages you open, the post or link that brought you, your browser, device and language, and your internet address. PostHog stores nothing on your device, and visitors aren&rsquo;t identified by name. The page also loads services from Kit (newsletter forms), Cal.com (booking), Senja (testimonials) and YouTube (video images, and the video when you press play), which see your internet address; Kit and Senja can store an identifier on your device. Cloudflare delivers the site. We rely on our legitimate interest in running and improving the site (Article 6(1)(f)).
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">3. Use of Your Information</h2>
-            <p className="mb-4 leading-relaxed">
-                Having accurate information about you permits us to provide you with a smooth, efficient, and customized experience. Specifically, we may use information collected about you via the Site to:
-            </p>
-            <ul>
-                <li>Create and manage your account.</li>
-                <li>Email you regarding your account or order.</li>
-                <li>Fulfill and manage purchases, orders, payments, and other transactions related to the Site.</li>
-                <li>Respond to product and customer service requests.</li>
-            </ul>
+            <H2>Writing to us</H2>
+            <P>
+                The contact form sends your name, email address and message to us through FormSubmit, so that we can answer. Our legitimate interest in replying is the basis (Article 6(1)(f)).
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">4. Disclosure of Your Information</h2>
-            <p className="mb-4 leading-relaxed">
-                We may share information we have collected about you in certain situations. Your information may be disclosed as follows:
-            </p>
-            <ul>
-                <li><strong>By Law or to Protect Rights:</strong> If we believe the release of information about you is necessary to respond to legal process, to investigate or remedy potential violations of our policies, or to protect the rights, property, and safety of others, we may share your information as permitted or required by any applicable law, rule, or regulation.</li>
-            </ul>
+            <H2>The newsletter</H2>
+            <P>
+                When you sign up, Kit receives your email address and the page you signed up on. You confirm by email, and we send you the newsletter and related emails on the basis of your consent (Article 6(1)(a)). We record what you open and click, to judge what is useful. Every email has an unsubscribe link, which takes effect at once.
+            </P>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">5. GDPR Rights</h2>
-            <p className="mb-4 leading-relaxed">
-                If you are located in the European Economic Area (EEA), you have certain rights regarding your personal data, including:
-            </p>
-            <ul>
-                <li>The right to access, update, or delete the information we have on you.</li>
-                <li>The right of rectification.</li>
-                <li>The right to object.</li>
-                <li>The right of restriction.</li>
-                <li>The right to data portability.</li>
-                <li>The right to withdraw consent.</li>
-            </ul>
+            <H2>Booking a Restart Audit call</H2>
+            <UL>
+                <li><strong>What you give us:</strong> your name, email address and your answers on the booking form, including how you are doing physically and mentally, which can be health data. Cal.com holds the booking. We handle health data in your answers on the basis of the explicit consent you give when you book (Article 9(2)(a)); the rest is to take steps you asked for before a possible contract (Article 6(1)(b)).</li>
+                <li><strong>What happens next:</strong> Google Calendar and Google Meet hold the event, Zapier passes your email address to Kit, and Kit sends you reminders about the call.</li>
+                <li><strong>How we prepare:</strong> an AI assistant (Claude, by Anthropic) writes a short brief for the call from your booking answers, your public LinkedIn profile, earlier emails and bookings with us, and whether you read our newsletter. It works under our Claude subscription on Anthropic&rsquo;s consumer terms, not a data processing agreement, with the setting that lets Anthropic train on it switched off. The brief is kept in our Google Drive. This is our legitimate interest in preparing for a useful call (Article 6(1)(f)), and you can object. No decision about you is made by software.</li>
+                <li><strong>The call:</strong> we tell you at the start if the call is recorded. Google records and transcribes it and writes notes in our Google Workspace account, and we keep them to prepare for later calls and improve how we work.</li>
+                <li><strong>A do-not-contact list:</strong> we keep a short list of people we have agreed not to contact or work with.</li>
+            </UL>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">6. Contact Us</h2>
-            <p className="mb-4 leading-relaxed">
-                If you have questions or comments about this Privacy Policy, please contact us by filling out the form on our <Link href="/contact" className="text-bleu-accent underline font-semibold">contact page</Link>.
-            </p>
+            <H2>If you are a coaching client</H2>
+            <UL>
+                <li><strong>Your contract and payment:</strong> your name and email address, and your payment through Stripe. Stripe passes your name and email address to Zapier, which asks Stack to make your account and send your invite. Our contract with you (Article 6(1)(b)) and our accounting duties (Article 6(1)(c)).</li>
+                <li><strong>Your coach sees your data.</strong> In the coaching console your coach sees everything you enter in Stack, photos included, and keeps notes about you that the app doesn&rsquo;t show you.</li>
+                <li><strong>Calls:</strong> recorded and transcribed by Google in our Google Workspace account, as you are told when you join. If you switch on call notes in Stack, Stack also sends the transcript to Anthropic under a data processing agreement, and keeps only the coaching points. To switch them off, tell your coach or write to us.</li>
+                <li><strong>Messages:</strong> your WhatsApp messages with your coach are saved to your coaching record. WhatsApp handles them under its own terms.</li>
+                <li><strong>Call preparation and coaching work:</strong> before each call, your coach reads a brief written by an AI assistant (Claude, by Anthropic). It reads your records in Stack, your call notes, your coach&rsquo;s notes, your WhatsApp messages and your call transcripts. Your daily steps from Apple Health are included only if you said yes in the iPhone app. The same assistant helps with other coaching work, such as a summary of your week or a letter to you. Working files are kept on our computer and in Apple iCloud; notes and messages are also kept in Stack&rsquo;s database in Ireland, locked so that no login can open them and only the assistant reads them. This runs on Anthropic&rsquo;s consumer terms, not a data processing agreement: training is switched off, and conversations stay until we delete them and are removed within 30 days after that. You can object at any time; your coach then prepares without it and nothing else changes.</li>
+                <li><strong>Quality checks on the app:</strong> an AI assistant on the same terms checks what Stack showed you, to find mistakes in the app. It reads what Stack showed over the past week and the figures behind it, your last two call summaries, your goal and target history, any diary row you flagged, and your problem reports, with initials in place of your name. It also sees which buttons were tapped and whether they responded, and whether entries reached our servers. Its notes use initials or an internal number and are kept in GitHub. You can object by writing to us.</li>
+                <li><strong>Our content:</strong> we write our posts and newsletter from what we learn in coaching. With your consent, an AI assistant on the same terms may read your calls, messages and records to find themes. Anything we publish never names you, and we use your photo, a screenshot or your words only with your separate written consent. You can say no or withdraw at any time, with no effect on your coaching.</li>
+            </UL>
+            <P>
+                Your health data, including what you say on calls and in messages, is handled on the basis of your explicit consent (Article 9(2)(a)), which you can withdraw at any time. Withdrawing it ends the parts of coaching that depend on it.
+            </P>
+
+            <H2>Who receives your data</H2>
+            <P>
+                Only the companies named above and those who run Stack, listed in <a href="https://getstack.to/subprocessors.html" className="underline">its list of service providers</a>, and authorities where the law requires it. We never sell your data.
+            </P>
+            <P>
+                Several of these companies are based in the United States. Those transfers rest on the European Commission&rsquo;s standard contractual clauses or the EU&ndash;US Data Privacy Framework, except where a company works under consumer terms as this notice says; those transfers rest on your consent or objection rights as described, and we send details on request.
+            </P>
+
+            <H2>How long we keep it</H2>
+            <UL>
+                <li><strong>Website visits:</strong> available to us for one year.</li>
+                <li><strong>Messages through the contact form:</strong> 24 months.</li>
+                <li><strong>Newsletter:</strong> until you unsubscribe, and a record of that so we don&rsquo;t email you again.</li>
+                <li><strong>Sales calls, if you don&rsquo;t become a client:</strong> 24 months after our last contact.</li>
+                <li><strong>Coaching records:</strong> 24 months after coaching ends, unless you come back or ask us to delete them sooner. A dated note that a call took place, and with whom, stays as our business record unless you ask us to delete it too.</li>
+                <li><strong>Accounting records:</strong> as long as Estonian accounting law requires, currently seven years.</li>
+            </UL>
+
+            <H2>Your rights</H2>
+            <P>
+                You can ask for a copy of your data, in a file other apps can read; ask us to correct or delete it; restrict how we use it; object to anything we do on our legitimate interest; and withdraw consent at any time, without affecting what was done before. Write to us through the <Link href="/contact" className="underline">contact page</Link>. You can complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, Tatari 39, 10134 Tallinn, aki.ee) or the data protection authority where you live.
+            </P>
+
+            <H2>Changes to this notice</H2>
+            <P>
+                When this notice changes, the date at the top changes. If a change affects clients, we tell them before it applies.
+            </P>
         </article>
     );
 }
