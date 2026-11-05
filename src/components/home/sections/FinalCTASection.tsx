@@ -46,7 +46,7 @@ export function FinalCTASection({
         </div>
 
         <div id="book-call" className="mt-12 scroll-mt-[88px] md:scroll-mt-[104px]">
-          <CalendarEmbed />
+          <CalendarEmbed loadWhenNear />
         </div>
 
         <p className="mt-8 max-w-3xl text-lead font-medium text-bleu-nuit/70 leading-relaxed">

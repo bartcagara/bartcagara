@@ -1,27 +1,48 @@
 "use client";
 
 import { useEffect } from "react";
-import { CAL_NAMESPACE, CAL_ORIGIN } from "@/lib/cal";
+import { CAL_ORIGIN, bootCal, getCalNamespace, onCalBooted } from "@/lib/cal";
 
 /**
- * CalScript - Initializes Cal.com embed script once per session.
- * - Loads the embed.js loader and inits the "discovery-call" namespace
- * - Applies brand theming
+ * CalScript - Loads Cal.com on the first press of a booking button, and not
+ * before: until then nothing is requested from Cal.com.
  *
- * Inline embeds and click-to-open popups consume this same namespace,
- * so this must be mounted before they render.
+ * embed.js has its own click listener for [data-cal-link], but it cannot see
+ * the press that loaded it, so that first press opens the popup here, with the
+ * same call embed.js makes. Later presses are embed.js's own; a press while it
+ * is still loading is ignored, the popup being already queued.
  */
 export function CalScript() {
   useEffect(() => {
-    if (document.getElementById("cal-init-script")) return;
-    const script = document.createElement("script");
-    script.id = "cal-init-script";
-    script.textContent = `
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "${CAL_ORIGIN}/embed/embed.js", "init");
-      Cal("init", "${CAL_NAMESPACE}", {origin:"${CAL_ORIGIN}"});
-      Cal.ns["${CAL_NAMESPACE}"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#09071D"},"dark":{"cal-brand":"#F9FAFB"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    `;
-    document.head.appendChild(script);
+    let booted = false;
+    const cancel = onCalBooted(() => {
+      booted = true;
+    });
+
+    const onClick = (event: MouseEvent) => {
+      if (booted || !(event.target instanceof Element)) return;
+      const button = event.target.closest<HTMLElement>("[data-cal-link]");
+      if (!button) return;
+
+      let config = {};
+      try {
+        config = JSON.parse(button.dataset.calConfig ?? "");
+      } catch {
+        // embed.js treats a bad config the same way.
+      }
+      bootCal();
+      getCalNamespace()?.("modal", {
+        calLink: button.dataset.calLink,
+        config,
+        calOrigin: CAL_ORIGIN,
+      });
+    };
+
+    document.addEventListener("click", onClick);
+    return () => {
+      cancel();
+      document.removeEventListener("click", onClick);
+    };
   }, []);
 
   return null;

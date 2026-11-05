@@ -1,10 +1,8 @@
 'use client';
 
 import { useEffect } from 'react';
-import { CAL_NAMESPACE } from '@/lib/cal';
+import { getCalNamespace, onCalBooted } from '@/lib/cal';
 import { usePostHogClient } from '@/lib/posthog-context';
-
-type CalNamespace = (action: string, options: Record<string, unknown>) => void;
 
 /** The one booked-call event. Carries `post` (registered on landing) like every other event. */
 export const CALL_BOOKED_EVENT = 'call_booked';
@@ -20,14 +18,15 @@ let lastFiredAt = 0;
  *
  * Cal.com emits both `bookingSuccessfulV2` and the older `bookingSuccessful`
  * for one booking; a short time guard keeps it to one event.
+ *
+ * Cal.com loads only when wanted (lib/cal.ts), so this attaches at that moment,
+ * however late in the visit.
  */
 export function CalBookingTracker(): null {
   const posthog = usePostHogClient();
 
   useEffect(() => {
     if (!posthog || attached) return;
-    let cancelled = false;
-    let attempts = 0;
 
     const onBooked = () => {
       const now = Date.now();
@@ -36,24 +35,13 @@ export function CalBookingTracker(): null {
       posthog.capture(CALL_BOOKED_EVENT, { booked_from: window.location.pathname });
     };
 
-    const tryAttach = () => {
-      if (cancelled || attached) return;
-      const cal = (window as { Cal?: { ns?: Record<string, CalNamespace> } }).Cal;
-      const ns = cal?.ns?.[CAL_NAMESPACE];
-      if (ns) {
-        attached = true;
-        ns('on', { action: 'bookingSuccessfulV2', callback: onBooked });
-        ns('on', { action: 'bookingSuccessful', callback: onBooked });
-        return;
-      }
-      attempts += 1;
-      if (attempts < 150) setTimeout(tryAttach, 200);
-    };
-
-    tryAttach();
-    return () => {
-      cancelled = true;
-    };
+    return onCalBooted(() => {
+      const ns = getCalNamespace();
+      if (!ns || attached) return;
+      attached = true;
+      ns('on', { action: 'bookingSuccessfulV2', callback: onBooked });
+      ns('on', { action: 'bookingSuccessful', callback: onBooked });
+    });
   }, [posthog]);
 
   return null;
