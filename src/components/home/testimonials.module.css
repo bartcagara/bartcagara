@@ -1,0 +1,199 @@
+/* The testimonials row. Values measured from the Senja widget it replaces
+   (2026-11-05): 300px slots, 284px cards, the widget's type and colours. Its
+   "DM Sans" never loaded here, so the system stack is what visitors saw. */
+
+.marquee {
+  width: 100%;
+  flex: none;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+  /* Where the widget's "Collect testimonials with Senja" badge sat. */
+  padding-bottom: 44px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.marquee:active {
+  cursor: grabbing;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.slot {
+  flex: none;
+  width: 300px;
+  padding: 0 8px 4px;
+  display: flex;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid rgb(230 230 230);
+  box-shadow: 4px 4px 0 0 #09071c;
+  text-align: left;
+}
+
+.endorser {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.avatar {
+  flex: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 9999px;
+  object-fit: cover;
+  background: rgba(128, 128, 128, 0.14);
+}
+
+.who {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.tagline {
+  color: hsl(217 19% 37%);
+  font-size: 14px;
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.networkIcon {
+  flex: none;
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.stars {
+  display: flex;
+  gap: 1.6px;
+  margin: 4px 0;
+  color: #fbbf24;
+}
+
+.text {
+  color: #374151;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  white-space: pre-line;
+  overflow: hidden;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 12;
+  -webkit-box-orient: vertical;
+}
+
+.text mark {
+  background-color: #ffcd3640;
+  color: #374151;
+  border-radius: 4px;
+  padding: 0 2px;
+}
+
+.readMore {
+  align-self: flex-start;
+  margin-top: -7px;
+  color: #374151;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.025em;
+  opacity: 0.8;
+  transform: scale(0.95);
+  transform-origin: left top;
+  cursor: pointer;
+}
+
+.readMore:hover {
+  opacity: 1;
+}
+
+.videoCard {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: #000;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 0 #09071c;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: auto 0 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 48px 16px 16px;
+  color: #fff;
+  background: linear-gradient(to top, rgb(0 0 0 / 0.7), transparent);
+  pointer-events: none;
+}
+
+.videoOverlay button {
+  pointer-events: auto;
+}
+
+.videoStars {
+  display: flex;
+  gap: 1.6px;
+  margin-bottom: 4px;
+  color: #fbbf24;
+}
+
+.videoName {
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.videoTagline {
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.8;
+}
+
+.playButton {
+  flex: none;
+  margin-left: auto;
+  padding: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.playButton:hover {
+  background: rgb(255 255 255 / 0.2);
+}
