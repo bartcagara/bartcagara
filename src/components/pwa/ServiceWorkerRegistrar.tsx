@@ -2,8 +2,34 @@
 
 import { useEffect } from 'react';
 
+function isInstalledApp(): boolean {
+  return (
+    (navigator as { standalone?: boolean }).standalone === true ||
+    window.matchMedia('(display-mode: standalone)').matches
+  );
+}
+
+/** Removes the worker and its caches from a browser that got them before this rule. */
+function removeFromBrowser(): void {
+  navigator.serviceWorker
+    .getRegistrations()
+    .then((registrations) => Promise.all(registrations.map((r) => r.unregister())))
+    .catch(() => undefined);
+  if ('caches' in window) {
+    caches
+      .keys()
+      .then((keys) =>
+        Promise.all(keys.filter((key) => key.startsWith('faos-')).map((key) => caches.delete(key)))
+      )
+      .catch(() => undefined);
+  }
+}
+
 /**
- * Registers the service worker in `public/sw.js`.
+ * Registers the service worker in `public/sw.js`, in the installed home-screen
+ * app only. A visitor in a browser gets no worker and no caches, because the
+ * site stores nothing on a visitor's device until he chooses to use something;
+ * installing the app is that choice.
  *
  * The worker precaches the app shell so the installed home-screen PWA paints
  * from cache when iOS relaunches it after evicting the page, instead of waiting
@@ -17,6 +43,11 @@ export function ServiceWorkerRegistrar(): null {
     // HTML and mask hot reloads.
     if (process.env.NODE_ENV !== 'production') return;
     if (typeof navigator === 'undefined' || !('serviceWorker' in navigator)) return;
+
+    if (!isInstalledApp()) {
+      removeFromBrowser();
+      return;
+    }
 
     let cancelled = false;
     let active: ServiceWorkerRegistration | null = null;
