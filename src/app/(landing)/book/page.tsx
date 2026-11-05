@@ -94,6 +94,10 @@ export default function BookPage() {
                         <Link href="/privacy" className="underline underline-offset-2 hover:text-bleu-accent transition-colors">
                             Privacy notice
                         </Link>
+                        <span aria-hidden="true" className="mx-2">·</span>
+                        <a href="https://getstack.to/health-data.html" className="underline underline-offset-2 hover:text-bleu-accent transition-colors">
+                            Consumer Health Data Privacy Policy
+                        </a>
                     </p>
                 </div>
             </div>
