@@ -47,12 +47,12 @@ export default function TermsPage() {
 
             <H2>Our responsibility</H2>
             <P>
-                We work to keep the site accurate and available, but we can&rsquo;t promise it always is. We are fully responsible for harm we cause on purpose or through gross negligence, for death or injury we cause through our fault, and wherever the law doesn&rsquo;t let us limit it. Beyond that, as far as the law allows, we aren&rsquo;t responsible for loss arising from your use of this free website.
+                We work to keep the site accurate and available, but we can&rsquo;t promise it always is. Nothing in these terms limits responsibility that the law doesn&rsquo;t let us limit, such as for harm caused on purpose or by gross negligence, or death or injury caused by our fault. Beyond that, as far as the law allows, we aren&rsquo;t responsible for loss arising from your use of this free website.
             </P>
 
             <H2>Law and disputes</H2>
             <P>
-                Estonian law applies. If you use the site as a consumer, you keep the protections of the law where you live and can take a claim to the courts there. Write to us first through the <Link href="/contact" className="underline">contact page</Link> and we&rsquo;ll try to put it right.
+                Estonian law applies. If you use the site as a consumer, you keep the protections of the law where you live and can take a claim to the courts there. Write to us first at <a href="mailto:support@getstack.to" className="underline">support@getstack.to</a> and we&rsquo;ll try to put it right.
             </P>
         </article>
     );

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 
 const TITLE = "Privacy Notice | Founder Athlete OS";
@@ -33,7 +32,7 @@ export default function PrivacyPage() {
 
             <H2>Who we are</H2>
             <P>
-                This website, the Founder&rsquo;s Fitness Brief newsletter and Founder Athlete OS coaching are run by Dad with Style OÜ, Sepapaja tn 6, Tallinn 15551, Estonia (registry code 14696867). We are the controller of the personal data described here under the EU General Data Protection Regulation (GDPR). Reach us through our <Link href="/contact" className="underline">contact page</Link> or at that address. We answer within one month.
+                This website, the Founder&rsquo;s Fitness Brief newsletter and Founder Athlete OS coaching are run by Dad with Style OÜ, Sepapaja tn 6, Tallinn 15551, Estonia (registry code 14696867). We are the controller of the personal data described here under the EU General Data Protection Regulation (GDPR). Write to <a href="mailto:support@getstack.to" className="underline">support@getstack.to</a> or to that address. We answer within one month.
             </P>
             <P>
                 Coaching clients use the Stack app, which we also make. Its <a href="https://getstack.to/privacy" className="underline">privacy policy</a> covers the app; this notice covers the coaching around it. Our services are for adults, and we don&rsquo;t knowingly hold data about anyone under 18.
@@ -41,7 +40,7 @@ export default function PrivacyPage() {
 
             <H2>Visiting this website</H2>
             <P>
-                We use PostHog (EU) to learn which pages and links work: the pages you open, the post or link that brought you, your browser, device and language, and your internet address. PostHog stores nothing on your device, and visitors aren&rsquo;t identified by name. The page also loads services from Kit (newsletter forms), Cal.com (booking), Senja (testimonials) and YouTube (video images, and the video when you press play), which see your internet address; Kit and Senja can store an identifier on your device. Cloudflare delivers the site. We rely on our legitimate interest in running and improving the site (Article 6(1)(f)).
+                We use PostHog (EU) to learn which pages and links work: the pages you open, the post or link that brought you, which buttons you click and their words, your browser, device and language, and your internet address. PostHog stores nothing on your device, and visitors aren&rsquo;t identified by name. The page also loads services from Kit (newsletter forms), Cal.com (booking), Senja (testimonials) and YouTube (video images, and the video when you press play), which see your internet address; Kit and Senja can store an identifier on your device. Cloudflare delivers the site. We rely on our legitimate interest in running and improving the site (Article 6(1)(f)).
             </P>
 
             <H2>Writing to us</H2>
@@ -56,11 +55,12 @@ export default function PrivacyPage() {
 
             <H2>Booking a Restart Audit call</H2>
             <UL>
-                <li><strong>What you give us:</strong> your name, email address and your answers on the booking form, including how you are doing physically and mentally, which can be health data. Cal.com holds the booking. We handle health data in your answers on the basis of the explicit consent you give when you book (Article 9(2)(a)); the rest is to take steps you asked for before a possible contract (Article 6(1)(b)).</li>
-                <li><strong>What happens next:</strong> Google Calendar and Google Meet hold the event, Zapier passes your email address to Kit, and Kit sends you reminders about the call.</li>
-                <li><strong>How we prepare:</strong> an AI assistant (Claude, by Anthropic) writes a short brief for the call from your booking answers, your public LinkedIn profile, earlier emails and bookings with us, and whether you read our newsletter. It works under our Claude subscription on Anthropic&rsquo;s consumer terms, not a data processing agreement, with the setting that lets Anthropic train on it switched off. The brief is kept in our Google Drive. This is our legitimate interest in preparing for a useful call (Article 6(1)(f)), and you can object. No decision about you is made by software.</li>
-                <li><strong>The call:</strong> we tell you at the start if the call is recorded. Google records and transcribes it and writes notes in our Google Workspace account, and we keep them to prepare for later calls and improve how we work.</li>
-                <li><strong>A do-not-contact list:</strong> we keep a short list of people we have agreed not to contact or work with.</li>
+                <li><strong>What you give us:</strong> your name, email address and your answers on the booking form, including how you are doing physically and mentally, which can be health data. Cal.com holds the booking. We handle health data in your answers, and what you say about your health on the call, on the explicit consent you give when you book (Article 9(2)(a)); the rest is to take steps you asked for before a possible contract (Article 6(1)(b)).</li>
+                <li><strong>What happens next:</strong> Google Calendar and Google Meet hold the event, Zapier receives your booking details, without your answers about your health, and passes your email address to Kit, which sends you reminders about the call. Booking doesn&rsquo;t sign you up for the newsletter.</li>
+                <li><strong>How we prepare:</strong> an AI assistant (Claude, by Anthropic) writes a short brief for the call from your booking answers, your LinkedIn profile as our own signed-in account sees it, earlier emails, bookings and LinkedIn messages with us, and whether you read our newsletter. A copy of the profile is kept with the brief. It works under our Claude subscription on Anthropic&rsquo;s consumer terms, not a data processing agreement, with the setting that lets Anthropic train on it switched off. The brief is kept in our Google Drive. This is our legitimate interest in preparing for a useful call (Article 6(1)(f)), and you can object. No decision about you is made by software.</li>
+                <li><strong>The call:</strong> we tell you at the start if the call is recorded. Google records and transcribes it and writes notes in our Google Workspace account (older calls were recorded by Fathom), and we keep them to prepare for later calls and improve how we work.</li>
+                <li><strong>A do-not-contact list:</strong> we keep a short list of people we won&rsquo;t contact or work with, with the reason and date.</li>
+                <li><strong>Our content:</strong> what you tell us by email, on a call or in a message may shape what we write, always without your name and never using what you say about your health. This is our legitimate interest, and you can object.</li>
             </UL>
 
             <H2>If you are a coaching client</H2>
@@ -69,9 +69,9 @@ export default function PrivacyPage() {
                 <li><strong>Your coach sees your data.</strong> In the coaching console your coach sees everything you enter in Stack, photos included, and keeps notes about you that the app doesn&rsquo;t show you.</li>
                 <li><strong>Calls:</strong> recorded and transcribed by Google in our Google Workspace account, as you are told when you join. If you switch on call notes in Stack, Stack also sends the transcript to Anthropic under a data processing agreement, and keeps only the coaching points. To switch them off, tell your coach or write to us.</li>
                 <li><strong>Messages:</strong> your WhatsApp messages with your coach are saved to your coaching record. WhatsApp handles them under its own terms.</li>
-                <li><strong>Call preparation and coaching work:</strong> before each call, your coach reads a brief written by an AI assistant (Claude, by Anthropic). It reads your records in Stack, your call notes, your coach&rsquo;s notes, your WhatsApp messages and your call transcripts. Your daily steps from Apple Health are included only if you said yes in the iPhone app. The same assistant helps with other coaching work, such as a summary of your week or a letter to you. Working files are kept on our computer and in Apple iCloud; notes and messages are also kept in Stack&rsquo;s database in Ireland, locked so that no login can open them and only the assistant reads them. This runs on Anthropic&rsquo;s consumer terms, not a data processing agreement: training is switched off, and conversations stay until we delete them and are removed within 30 days after that. You can object at any time; your coach then prepares without it and nothing else changes.</li>
-                <li><strong>Quality checks on the app:</strong> an AI assistant on the same terms checks what Stack showed you, to find mistakes in the app. It reads what Stack showed over the past week and the figures behind it, your last two call summaries, your goal and target history, any diary row you flagged, and your problem reports, with initials in place of your name. It also sees which buttons were tapped and whether they responded, and whether entries reached our servers. Its notes use initials or an internal number and are kept in GitHub. You can object by writing to us.</li>
-                <li><strong>Our content:</strong> we write our posts and newsletter from what we learn in coaching. With your consent, an AI assistant on the same terms may read your calls, messages and records to find themes. Anything we publish never names you, and we use your photo, a screenshot or your words only with your separate written consent. You can say no or withdraw at any time, with no effect on your coaching.</li>
+                <li><strong>Call preparation and coaching work:</strong> before each call, your coach reads a brief written by an AI assistant (Claude, by Anthropic). It reads your records in Stack, your call notes, your coach&rsquo;s notes, your WhatsApp messages and your call transcripts. Your daily steps from Apple Health are included only if you said yes in the iPhone app. The same assistant helps with other coaching work, such as a summary of your week or a letter to you. Working files are kept on our computer and in Apple iCloud; notes and messages are also kept in Stack&rsquo;s database in Ireland, locked so that no login can open them and only the assistant reads them. This runs on Anthropic&rsquo;s consumer terms, not a data processing agreement: training is switched off, and conversations stay until we delete them and are removed within 30 days after that. It rests on the explicit consent you give when you start coaching (Article 9(2)(a)). You can withdraw it at any time; your coach then prepares without it and nothing else changes.</li>
+                <li><strong>Quality checks on the app:</strong> an AI assistant on the same terms checks what Stack showed you, to find mistakes in the app. It reads what Stack showed over the past week and the figures behind it, your last two call summaries, your goal and target history, any diary row you flagged, and your problem reports, with initials in place of your name. It also sees which buttons were tapped and whether they responded, and whether entries reached our servers. Its notes use initials or an internal number and are kept in GitHub. Apple Health figures reach it only if you said yes in the iPhone app. It rests on the same consent.</li>
+                <li><strong>Our content:</strong> we write our posts and newsletter from what we learn in coaching. With your consent, an AI assistant on the same terms may read your calls, messages and records to find themes. Anything we publish never names you, except a testimonial you approved, and we use your photo, a screenshot or your words only with your separate written consent. Apple Health data is never used for this. You can say no or withdraw at any time, with no effect on your coaching. We also draw on clients&rsquo; situations, without names, to prepare for sales calls.</li>
             </UL>
             <P>
                 Your health data, including what you say on calls and in messages, is handled on the basis of your explicit consent (Article 9(2)(a)), which you can withdraw at any time. Withdrawing it ends the parts of coaching that depend on it.
@@ -79,10 +79,10 @@ export default function PrivacyPage() {
 
             <H2>Who receives your data</H2>
             <P>
-                Only the companies named above and those who run Stack, listed in <a href="https://getstack.to/subprocessors.html" className="underline">its list of service providers</a>, and authorities where the law requires it. We never sell your data.
+                Only the companies named above, our accountants (Xolo), who receive accounting records, and those who run Stack, listed in <a href="https://getstack.to/subprocessors.html" className="underline">its list of service providers</a>, and authorities where the law requires it. We never sell your data.
             </P>
             <P>
-                Several of these companies are based in the United States. Those transfers rest on the European Commission&rsquo;s standard contractual clauses or the EU&ndash;US Data Privacy Framework, except where a company works under consumer terms as this notice says; those transfers rest on your consent or objection rights as described, and we send details on request.
+                Several of these companies are based in the United States. Those transfers rest on the European Commission&rsquo;s standard contractual clauses or the EU&ndash;US Data Privacy Framework, except where a company works under consumer terms as this notice says. There, no such contract exists, and the transfer rests only on your explicit consent, given after being told of that risk (Article 49(1)(a)).
             </P>
 
             <H2>How long we keep it</H2>
@@ -92,12 +92,14 @@ export default function PrivacyPage() {
                 <li><strong>Newsletter:</strong> until you unsubscribe, and a record of that so we don&rsquo;t email you again.</li>
                 <li><strong>Sales calls, if you don&rsquo;t become a client:</strong> 24 months after our last contact.</li>
                 <li><strong>Coaching records:</strong> 24 months after coaching ends, unless you come back or ask us to delete them sooner. A dated note that a call took place, and with whom, stays as our business record unless you ask us to delete it too.</li>
+                <li><strong>The do-not-contact list:</strong> at most five years, and you can ask us to review it.</li>
+                <li><strong>Notes from the quality checks:</strong> 12 months.</li>
                 <li><strong>Accounting records:</strong> as long as Estonian accounting law requires, currently seven years.</li>
             </UL>
 
             <H2>Your rights</H2>
             <P>
-                You can ask for a copy of your data, in a file other apps can read; ask us to correct or delete it; restrict how we use it; object to anything we do on our legitimate interest; and withdraw consent at any time, without affecting what was done before. Write to us through the <Link href="/contact" className="underline">contact page</Link>. You can complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, Tatari 39, 10134 Tallinn, aki.ee) or the data protection authority where you live.
+                You can ask for a copy of your data, in a file other apps can read; ask us to correct or delete it; restrict how we use it; object to anything we do on our legitimate interest; and withdraw consent at any time, without affecting what was done before. Write to <a href="mailto:support@getstack.to" className="underline">support@getstack.to</a>. You can complain to the Estonian Data Protection Inspectorate (Andmekaitse Inspektsioon, Tatari 39, 10134 Tallinn, aki.ee) or the data protection authority where you live.
             </P>
 
             <H2>Changes to this notice</H2>
