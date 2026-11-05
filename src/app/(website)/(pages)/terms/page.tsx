@@ -47,12 +47,12 @@ export default function TermsPage() {
 
             <H2>Our responsibility</H2>
             <P>
-                We work to keep the site accurate and available, but we can&rsquo;t promise it always is. Nothing in these terms limits responsibility that the law doesn&rsquo;t let us limit, such as for harm caused on purpose or by gross negligence, or death or injury caused by our fault. Beyond that, as far as the law allows, we aren&rsquo;t responsible for loss arising from your use of this free website.
+                We work to keep the site accurate and available, but we can&rsquo;t promise it always is. Nothing in these terms limits responsibility that the law doesn&rsquo;t let us limit, such as for harm caused on purpose or by gross negligence, or death or injury. Beyond that, as far as the law allows, we aren&rsquo;t responsible for loss arising from your use of this free website.
             </P>
 
             <H2>Law and disputes</H2>
             <P>
-                Estonian law applies. If you use the site as a consumer, you keep the protections of the law where you live and can take a claim to the courts there. Write to us first at <a href="mailto:support@getstack.to" className="underline">support@getstack.to</a> and we&rsquo;ll try to put it right.
+                Estonian law applies. If you use the site as a consumer, you keep the protections of the law where you live and can take a claim to the courts there. If we can&rsquo;t settle a complaint, you can take it to the Consumer Disputes Committee (Tarbijavaidluste komisjon) at Estonia&rsquo;s Consumer Protection and Technical Regulatory Authority, Endla 10A, 10122 Tallinn, ttja.ee. It&rsquo;s free. Write to us first at <a href="mailto:support@getstack.to" className="underline">support@getstack.to</a> and we&rsquo;ll try to put it right.
             </P>
         </article>
     );
