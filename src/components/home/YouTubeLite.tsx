@@ -10,7 +10,8 @@ interface YouTubeLiteProps {
 
 /**
  * YouTubeLite - Lazy-loading YouTube embed component
- * Displays thumbnail initially, loads full iframe only on user click
+ * Displays a self-hosted thumbnail initially (nothing reaches YouTube on page
+ * view), loads the full iframe only on user click
  * Saves ~300KB per video on initial page load
  */
 export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLiteProps) {
@@ -37,7 +38,7 @@ export function YouTubeLite({ videoId, title = "YouTube video" }: YouTubeLitePro
             aria-label={`Play ${title}`}
         >
             <img
-                src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+                src={`/images/client-interviews/${videoId}.jpg`}
                 alt=""
                 className="w-full h-full object-cover"
                 loading="lazy"
