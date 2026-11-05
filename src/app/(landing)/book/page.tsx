@@ -1,6 +1,7 @@
 import { CalendarEmbed } from "@/components/home/CalendarEmbed";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 const TITLE = "Book your Restart Audit | Bart Cagara";
 const DESCRIPTION =
@@ -89,6 +90,11 @@ export default function BookPage() {
                     <div id="book-call">
                         <CalendarEmbed forwardUtm />
                     </div>
+                    <p className="mt-6 text-center text-xs text-bleu-nuit/60">
+                        <Link href="/privacy" className="underline underline-offset-2 hover:text-bleu-accent transition-colors">
+                            Privacy notice
+                        </Link>
+                    </p>
                 </div>
             </div>
         </div>

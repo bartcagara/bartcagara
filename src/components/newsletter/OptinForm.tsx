@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
+import Link from "next/link";
 import { Mail, Calendar } from "lucide-react";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
@@ -41,29 +42,12 @@ export function OptinForm({
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
-  const KIT_EMBED_URL = `https://bartcagara.kit.com/${kitForm.uid}/index.js`;
   const formRef = useRef<HTMLFormElement>(null);
-  const trackerRef = useRef<HTMLDivElement>(null);
   const posthog = usePostHogClient();
   const [status, setStatus] = useState<Status>("idle");
   const [errorMessage, setErrorMessage] = useState("");
 
   const isDark = variant === "dark";
-
-  // Kit visitor tracking: hidden but in-viewport so ck.5.js fires
-  // the pixel. Our visible form has no formkit-* attrs, so ck.5.js
-  // ignores it and React's onSubmit owns submission.
-  useEffect(() => {
-    const container = trackerRef.current;
-    if (!container || container.dataset.kitLoaded) return;
-    container.dataset.kitLoaded = "true";
-
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = KIT_EMBED_URL;
-    script.setAttribute("data-uid", KIT_FORM_UID);
-    container.appendChild(script);
-  }, [KIT_EMBED_URL, KIT_FORM_UID]);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -99,6 +83,14 @@ export function OptinForm({
 
   if (status === "success") return <SuccessState isDark={isDark} />;
 
+  const privacyLink = (
+    <p className={`mt-3 text-xs ${isDark ? "text-white/60" : "text-bleu-nuit/60"}`}>
+      <Link href="/privacy" className="underline underline-offset-2 hover:text-bleu-accent transition-colors">
+        Privacy notice
+      </Link>
+    </p>
+  );
+
   const isSubmitting = status === "submitting";
 
   const inputClass = `w-full px-0 py-4 bg-transparent border-b-4 text-xl font-bold placeholder:font-bold outline-none focus:border-bleu-accent transition-all rounded-none ${
@@ -116,8 +108,6 @@ export function OptinForm({
   if (layout === "joined") {
     return (
       <div className="w-full">
-        <div ref={trackerRef} aria-hidden="true" className="kit-tracker" />
-
         <form ref={formRef} onSubmit={handleSubmit}>
           {status === "error" && errorMessage && (
             <ul className="newsletter-error">
@@ -154,14 +144,13 @@ export function OptinForm({
         </form>
 
         {note}
+        {privacyLink}
       </div>
     );
   }
 
   return (
     <div className="w-full">
-      <div ref={trackerRef} aria-hidden="true" className="kit-tracker" />
-
       <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
         {status === "error" && errorMessage && (
           <ul className="newsletter-error">
@@ -199,6 +188,8 @@ export function OptinForm({
           </div>
         </div>
       </form>
+
+      {privacyLink}
 
       {showFootnote && (
         <p className="text-xs text-bleu-nuit/70 font-black uppercase tracking-tight text-center mt-6 selection:bg-bleu-accent selection:text-white">
