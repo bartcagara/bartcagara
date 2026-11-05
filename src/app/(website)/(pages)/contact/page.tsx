@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { ContactForm } from "./ContactForm";
+import { ContactEmailLink } from "./ContactEmailLink";
 
 export const metadata: Metadata = {
     title: "Contact | Bart Cagara",
-    description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message and get a reply within 24 hours.",
+    description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message.",
     alternates: {
         canonical: "/contact"
     },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
         url: "https://bartcagara.com/contact",
         siteName: "Founder Athlete OS",
         title: "Contact | Bart Cagara",
-        description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message and get a reply within 24 hours.",
+        description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message.",
         images: [
             {
                 url: "/images/og-home.jpg",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     twitter: {
         card: "summary_large_image",
         title: "Contact | Bart Cagara",
-        description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message and get a reply within 24 hours.",
+        description: "Have a question about Founder Athlete OS or 1:1 coaching? Send Bart a message.",
         images: ["/images/og-home.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 </p>
             </div>
 
-            <ContactForm />
+            <ContactEmailLink />
         </div>
     );
 }
