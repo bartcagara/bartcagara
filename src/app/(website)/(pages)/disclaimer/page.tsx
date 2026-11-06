@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Disclaimer | Bart Cagara",
+    title: "Disclaimer | Founder Athlete OS",
     description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services.",
     alternates: {
         canonical: "/disclaimer"
@@ -11,15 +11,13 @@ export const metadata: Metadata = {
         locale: "en_US",
         url: "https://bartcagara.com/disclaimer",
         siteName: "Founder Athlete OS",
-        title: "Disclaimer | Bart Cagara",
+        title: "Disclaimer | Founder Athlete OS",
         description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services."
     },
     twitter: {
         card: "summary",
-        title: "Disclaimer | Bart Cagara",
-        description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services.",
-        creator: "@bartcagara",
-        site: "@bartcagara"
+        title: "Disclaimer | Founder Athlete OS",
+        description: "Website and professional disclaimer for Dad with Style OÜ fitness and nutrition services."
     }
 };
 
@@ -27,7 +25,7 @@ export default function DisclaimerPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
             <h1 className="text-title mb-6 text-bleu-nuit">Disclaimer</h1>
-            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated: {new Date().toLocaleDateString()}</p>
+            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
 
             <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">1. Website Disclaimer</h2>
             <p className="mb-4 leading-relaxed">

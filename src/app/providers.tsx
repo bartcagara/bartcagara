@@ -14,8 +14,25 @@ import { PostHogClientContext } from '@/lib/posthog-context';
  */
 let postHogPromise: Promise<PostHog | null> | null = null;
 
+const BOT_USER_AGENT =
+  /bot|crawl|spider|slurp|facebookexternalhit|baiduspider|yandex|duckduckbot|sogou|exabot|ia_archiver|semrush|ahref|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|applebot|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|slack|pingdom|uptimerobot|headlesschrome|phantomjs|prerender|lighthouse|chrome-lighthouse|screaming frog/i;
+
+/**
+ * Bots and link previews get no analytics at all. Not via opt_out_capturing():
+ * that writes its flag to localStorage, and this site stores nothing.
+ */
+function isBot(): boolean {
+  const ua = navigator.userAgent;
+  return (
+    navigator.webdriver ||
+    !ua ||
+    BOT_USER_AGENT.test(ua)
+  );
+}
+
 function loadPostHog(): Promise<PostHog | null> {
   if (postHogPromise) return postHogPromise;
+  if (isBot()) return Promise.resolve(null);
 
   postHogPromise = import('posthog-js')
     .then(({ default: posthog }) => {
@@ -33,19 +50,16 @@ function loadPostHog(): Promise<PostHog | null> {
         // the Stack app and getstack.to (Bart, 2026-10-31). The cost, accepted:
         // a visitor is one person only until he closes the tab.
         persistence: 'memory',
+        // The PostHog project has recording switched on for this website; this
+        // keeps it off whatever the project says (the Stack app does the same).
+        disable_session_recording: true,
+        // No screen text leaves with a click, and no attribute that carries
+        // words or a typed value: the Stack app's rule. The click itself stays.
+        mask_all_text: true,
+        autocapture: {
+          element_attribute_ignorelist: ['aria-label', 'title', 'alt', 'value', 'placeholder'],
+        },
         loaded: (ph) => {
-          const ua = navigator.userAgent;
-          if (
-            navigator.webdriver ||
-            !ua ||
-            /bot|crawl|spider|slurp|facebookexternalhit|baiduspider|yandex|duckduckbot|sogou|exabot|ia_archiver|semrush|ahref|mj12bot|dotbot|petalbot|bytespider|gptbot|claudebot|applebot|twitterbot|linkedinbot|whatsapp|telegrambot|discordbot|slack|pingdom|uptimerobot|headlesschrome|phantomjs|prerender|lighthouse|chrome-lighthouse|screaming frog/i.test(
-              ua
-            )
-          ) {
-            ph.opt_out_capturing();
-            return;
-          }
-
           // Remember which post brought this visitor. Every LinkedIn link is
           // tagged utm_term=<post slug>; registering it as `post` stamps it on
           // every later event (signup, booked call), even pages later. The

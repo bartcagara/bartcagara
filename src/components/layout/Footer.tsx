@@ -39,8 +39,10 @@ export const Footer = memo(() => (
         <nav aria-label="Legal links">
           <h2 className="text-base font-semibold text-bleu-nuit mb-4">Legal</h2>
           <ul className="space-y-2 text-sm text-bleu-nuit/70">
-            <li><Link href="/privacy" className="hover:text-bleu-accent transition-colors">Privacy Policy</Link></li>
+            <li><Link href="/privacy" className="hover:text-bleu-accent transition-colors">Privacy Notice</Link></li>
             <li><Link href="/terms" className="hover:text-bleu-accent transition-colors">Terms of Service</Link></li>
+            {/* Washington's My Health My Data Act: Stack's consumer health data policy lives on getstack.to. */}
+            <li><a href="https://getstack.to/health-data.html" className="hover:text-bleu-accent transition-colors">Consumer Health Data Privacy Policy</a></li>
             <li><Link href="/disclaimer" className="hover:text-bleu-accent transition-colors">Disclaimer</Link></li>
           </ul>
         </nav>

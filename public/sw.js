@@ -11,6 +11,10 @@
  * round-trip (HTML is served `max-age=0, must-revalidate`, so a cold launch
  * otherwise always waits for the network).
  *
+ * Registered only inside the installed home-screen app (ServiceWorkerRegistrar),
+ * never for someone visiting in a browser: the site stores nothing on a visitor's
+ * device.
+ *
  * Strategies:
  *   - navigations      -> stale-while-revalidate (instant paint, refreshed in background)
  *   - /_next/static/*  -> cache-first (content-hashed, immutable)
@@ -39,8 +43,7 @@ const STATIC_ASSET_PATTERN =
 /**
  * Paths the worker must never touch. Everything cross-origin is already
  * excluded (see the fetch handler), which covers PostHog (e.bartcagara.com,
- * eu.i.posthog.com), the Senja widget, Cal.com and ConvertKit/Kit. These are the
- * same-origin exceptions.
+ * eu.i.posthog.com), Cal.com and Kit. These are the same-origin exceptions.
  */
 const BYPASS_PATH_PREFIXES = ['/cdn-cgi/'];
 

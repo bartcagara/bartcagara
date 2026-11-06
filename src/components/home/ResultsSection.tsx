@@ -4,6 +4,7 @@ import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ScrollSection } from "./ScrollSection";
 import { TRANSFORMATIONS, CLIENT_INTERVIEWS, CLIENT_DMS } from "./assets";
 import { YouTubeLite } from "./YouTubeLite";
+import { TestimonialsMarquee } from "./TestimonialsMarquee";
 import styles from "./homepage.module.css";
 
 /**
@@ -73,14 +74,7 @@ export function ResultsSection() {
                 </ScrollSection>
 
                 <ScrollSection title={results.sections.testimonials}>
-                    <div
-                        className="senja-embed block w-full"
-                        data-id="fc88ed05-b40d-4ef9-ad5e-1592601df582"
-                        data-mode="shadow"
-                        data-lazyload="false"
-                        role="region"
-                        aria-label="Client testimonials"
-                    />
+                    <TestimonialsMarquee />
                 </ScrollSection>
             </div>
         </section>

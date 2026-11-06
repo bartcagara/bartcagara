@@ -1,58 +1,63 @@
 'use client'
 import { useEffect, useRef } from 'react'
-import { CAL_LINK, CAL_NAMESPACE } from '@/lib/cal'
+import { CAL_LINK, bootCal, getCalNamespace } from '@/lib/cal'
 
 const EMBED_ELEMENT_ID = 'my-cal-inline-discovery-call'
-
-type CalNamespace = (action: string, options: Record<string, unknown>) => void
+/* Cal's booker takes a couple of seconds to draw; start about a screen ahead. */
+const NEAR_MARGIN = '800px 0px'
 
 /**
- * Renders the inline Cal.com calendar. Assumes <CalScript /> has been mounted
- * higher in the tree (the namespace + UI config live there).
+ * Renders the inline Cal.com calendar, loading Cal.com itself: on /book and
+ * /brief/confirmed at once, the calendar being what the visitor came for.
+ * bootCal() defines the namespace synchronously.
  *
- * CalScript loads via its own effect, so the namespace may not exist yet the
- * moment this mounts — we retry until it appears instead of checking once and
- * silently rendering an empty box.
+ * `loadWhenNear` (the home page's last section) waits until the visitor has
+ * scrolled close to it, so it is ready when he arrives and nothing goes to
+ * Cal.com for anyone who doesn't get there.
  *
  * `forwardUtm` hands the page's utm_* parameters to the booker, so Cal.com
  * keeps them on the booking (/book uses it).
  */
-export function CalendarEmbed({ forwardUtm = false }: { forwardUtm?: boolean } = {}) {
+export function CalendarEmbed({
+  forwardUtm = false,
+  loadWhenNear = false,
+}: { forwardUtm?: boolean; loadWhenNear?: boolean } = {}) {
   const initialized = useRef(false)
 
   useEffect(() => {
-    let cancelled = false
-    let attempts = 0
-
-    const tryInit = () => {
-      if (cancelled || initialized.current) return
-      const cal = (window as { Cal?: { ns?: Record<string, CalNamespace> } }).Cal
-      const ns = cal?.ns?.[CAL_NAMESPACE]
-      if (ns) {
-        initialized.current = true
-        const utm = forwardUtm
-          ? Object.fromEntries(
-              [...new URLSearchParams(window.location.search)].filter(([key]) => key.startsWith('utm_'))
-            )
-          : {}
-        ns('inline', {
-          elementOrSelector: `#${EMBED_ELEMENT_ID}`,
-          config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true', ...utm },
-          calLink: CAL_LINK,
-        })
-        return
-      }
-      // Retry for up to ~30s (CalScript defines the queue shim synchronously
-      // in its own effect, so in practice this resolves within a tick or two).
-      attempts += 1
-      if (attempts < 150) setTimeout(tryInit, 200)
+    const load = () => {
+      if (initialized.current) return
+      initialized.current = true
+      bootCal()
+      const utm = forwardUtm
+        ? Object.fromEntries(
+            [...new URLSearchParams(window.location.search)].filter(([key]) => key.startsWith('utm_'))
+          )
+        : {}
+      getCalNamespace()?.('inline', {
+        elementOrSelector: `#${EMBED_ELEMENT_ID}`,
+        config: { layout: 'month_view', useSlotsViewOnSmallScreen: 'true', ...utm },
+        calLink: CAL_LINK,
+      })
     }
 
-    tryInit()
-    return () => {
-      cancelled = true
+    const element = document.getElementById(EMBED_ELEMENT_ID)
+    if (!loadWhenNear || !element) {
+      load()
+      return
     }
-  }, [forwardUtm])
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          observer.disconnect()
+          load()
+        }
+      },
+      { rootMargin: NEAR_MARGIN }
+    )
+    observer.observe(element)
+    return () => observer.disconnect()
+  }, [forwardUtm, loadWhenNear])
 
   return (
     <div

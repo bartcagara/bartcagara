@@ -8,9 +8,8 @@ export default function LandingLayout({
 }) {
     return (
         <>
-            {/* Initialize the Cal.com embed so data-cal-* buttons (e.g. the
-                opt-in success CTA) open the booking popup, matching the rest
-                of the site. */}
+            {/* Makes data-cal-* buttons (e.g. the opt-in success CTA) open the
+                booking popup, loading Cal.com on that press. */}
             <CalScript />
             <CalBookingTracker />
             <main>

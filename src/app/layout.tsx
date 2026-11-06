@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import ErrorReporter from "@/components/ui/ErrorReporter";
-import Script from "next/script";
 import { PostHogProviderClient } from "./providers";
 import { PostHogPageView } from "@/components/analytics/PostHogPageView";
 import { ServiceWorkerRegistrar } from "@/components/pwa/ServiceWorkerRegistrar";
@@ -78,11 +77,10 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
         {/* Resource Hints - Only critical for initial load */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        {/* PostHog proxy: preconnect (not just dns-prefetch) so the session-replay
-            recorder and first events establish their connection sooner. */}
+        {/* PostHog proxy, our own domain: preconnect so the first events
+            establish their connection sooner. Inter is self-hosted by
+            next/font, so no font host is contacted. */}
         <link rel="preconnect" href="https://e.bartcagara.com" />
-        <link rel="dns-prefetch" href="https://eu.i.posthog.com" />
       </head>
       <body className="antialiased" suppressHydrationWarning>
         <PostHogProviderClient>
@@ -91,24 +89,6 @@ export default function RootLayout({
           </Suspense>
           <ErrorReporter />
           <ServiceWorkerRegistrar />
-
-          {/* Senja Widget Script - Deferred to reduce initial load */}
-          <Script
-            id="senja-widget"
-            strategy="lazyOnload"
-          >
-            {`
-              (function() {
-                const s = document.createElement("script");
-                s.src = "https://widget.senja.io/widget/fc88ed05-b40d-4ef9-ad5e-1592601df582/platform.js";
-                s.async = true;
-                s.onerror = () => {
-                  console.warn('Senja widget script failed to load');
-                };
-                document.head.appendChild(s);
-              })();
-            `}
-          </Script>
 
           <div className="min-h-screen flex flex-col">
             {children}
