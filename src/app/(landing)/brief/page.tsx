@@ -1,6 +1,7 @@
 import { OptinForm } from "@/components/newsletter/OptinForm";
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 const TITLE = "Get in shape one last time | Founder's Fitness Brief";
 const DESCRIPTION =
@@ -110,7 +111,7 @@ export default function BriefPage() {
                     </div>
                 </header>
 
-                <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-20 md:py-16 [@media(max-height:500px)]:py-6">
+                <main className="flex-1 flex items-center px-6 md:px-12 pt-10 pb-12 md:py-16 [@media(max-height:500px)]:py-6">
                     <div className="w-full max-w-6xl mx-auto grid lg:grid-cols-[minmax(0,1fr)_400px] gap-16 xl:gap-24 items-center">
                         <div className="max-w-[600px]">
                             <h1 className="text-[clamp(1.75rem,9.4vw,2.375rem)] md:text-[3.5rem] lg:text-[3rem] xl:text-[4rem] [@media(max-height:500px)]:text-[2.25rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
@@ -151,6 +152,17 @@ export default function BriefPage() {
                         </figure>
                     </div>
                 </main>
+
+                {/* The legal links sit out of the signup's way: one quiet line at the foot (Bart, 2026-11-08). */}
+                <footer className="px-6 md:px-12">
+                    <div className="max-w-6xl mx-auto py-6 flex items-center justify-between gap-6 border-t border-bleu-nuit/10 text-xs text-bleu-nuit/50">
+                        <span>&copy; {new Date().getFullYear()} Dad with Style OÜ</span>
+                        <nav aria-label="Legal" className="flex items-center gap-5">
+                            <Link href="/privacy" className="hover:text-bleu-nuit transition-colors">Privacy</Link>
+                            <Link href="/terms" className="hover:text-bleu-nuit transition-colors">Terms</Link>
+                        </nav>
+                    </div>
+                </footer>
             </div>
         </>
     );

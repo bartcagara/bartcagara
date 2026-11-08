@@ -6,11 +6,11 @@ describe('OptinForm', () => {
     global.fetch = jest.fn().mockResolvedValue({ ok: true }) as unknown as typeof fetch;
   });
 
-  it('loads no script from Kit and links to the privacy notice', () => {
+  it('loads no script from Kit and keeps legal links out of the signup (they sit in the page footer)', () => {
     const { container } = render(<OptinForm />);
     expect(container.querySelector('script')).toBeNull();
     expect(document.querySelector('script[src*="kit.com"]')).toBeNull();
-    expect(screen.getByRole('link', { name: 'Privacy notice' })).toHaveAttribute('href', '/privacy');
+    expect(screen.queryByRole('link', { name: /privacy/i })).toBeNull();
   });
 
   it("posts straight to Kit's form endpoint and shows the confirm-your-email message", async () => {
