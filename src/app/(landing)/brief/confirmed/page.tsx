@@ -54,7 +54,7 @@ export default function BriefConfirmedPage() {
                             <ul className="mt-4 space-y-3 text-lg md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
                                 <li className="flex gap-3">
                                     <span aria-hidden="true" className="mt-[0.6em] shrink-0 w-2 h-2 bg-bleu-accent" />
-                                    <span>Founder&apos;s Fitness Brief lands in your inbox every Sunday.</span>
+                                    <span>Founder&apos;s Fitness Brief lands in your inbox every Thursday.</span>
                                 </li>
                                 <li className="flex gap-3">
                                     <span aria-hidden="true" className="mt-[0.6em] shrink-0 w-2 h-2 bg-bleu-accent" />

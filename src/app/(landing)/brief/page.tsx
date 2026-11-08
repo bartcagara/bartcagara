@@ -125,7 +125,7 @@ export default function BriefPage() {
 
                             <div className="mt-10 md:mt-12 [@media(max-height:500px)]:mt-6">
                                 <OptinForm
-                                    submitLabel="Send me Sunday’s Brief"
+                                    submitLabel="Send me Thursday’s Brief"
                                     layout="joined"
                                     note={
                                         <p className="mt-6 text-sm leading-normal text-pretty text-bleu-nuit/60 max-w-[34em]">
