@@ -28,7 +28,7 @@ export default function PrivacyPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
             <h1 className="text-title mb-6 text-bleu-nuit">Privacy Notice</h1>
-            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
+            <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 15, 2026.</p>
 
             <H2>Who we are</H2>
             <P>
@@ -74,7 +74,7 @@ export default function PrivacyPage() {
                 <li><strong>Messages:</strong> your WhatsApp messages with your coach are saved to your coaching record. WhatsApp handles them under its own terms.</li>
                 <li><strong>Call preparation and your record:</strong> before each call, your coach reads a short brief, and after each call your coaching record is updated. Stack&rsquo;s own server writes both with an AI model (Claude, by Anthropic, under a data processing agreement, with no training on it), from your records in Stack, your call notes, your coach&rsquo;s notes, your WhatsApp messages and your call transcripts. Your figures in the brief come from Stack itself, and your Apple Health steps only if you said yes in the iPhone app. If you haven&rsquo;t switched on call notes, nothing of yours is sent to the model and your brief holds only your numbers.</li>
                 <li><strong>Our own working files:</strong> your coach keeps working files on our computer, in encrypted Apple iCloud storage, and may use an AI assistant (Claude, by Anthropic) for coaching work, such as a summary of your week or a letter to you. That assistant works on Anthropic&rsquo;s standard terms, with training switched off; deleted conversations are removed within 30 days. You can object at any time, and your coach then works without it.</li>
-                <li><strong>Quality checks on the app:</strong> they work on test accounts and on counts with nothing about who, as Stack&rsquo;s privacy policy says. To fix a food problem, an AI tool may look at food entries without your name.</li>
+                <li><strong>Quality checks on the app:</strong> they work on test accounts and on counts with nothing about who, as Stack&rsquo;s privacy policy says. Your coach can also ask an AI tool (Claude, on Anthropic&rsquo;s consumer terms, with training off) to read your food diary, to answer a coaching question or fix a food problem.</li>
                 <li><strong>Our content:</strong> we write our posts and newsletter from what we learn in coaching. Only if you agree, Stack&rsquo;s server reads your calls and messages to find themes, with names, figures and health details taken out. We ask your written permission before anything about you is published, such as your words, a result or a screenshot of your progress, and it never names you or shows your face. Apple Health data is never used for this. You can say no or withdraw at any time, with no effect on your coaching.</li>
             </UL>
             <P>
