@@ -22,21 +22,11 @@ const ALLOWED_ORIGIN = "https://bartcagara.com";
 const MAX_BODY_SIZE = 1048576; // 1MB limit
 const ALLOWED_METHODS = ["GET", "POST", "OPTIONS"];
 
-// Headers safe to forward to PostHog. Origin/Referer are required for PostHog's
-// "Authorized URLs" host allowlist check — without them PostHog returns
-// "Host not in allowlist" and the SDK can fall back to direct hosts, defeating
-// the proxy. Cookie is forwarded so identified users persist across the proxy.
-const SAFE_HEADERS = [
-  "content-type",
-  "user-agent",
-  "accept",
-  "accept-encoding",
-  "accept-language",
-  "origin",
-  "referer",
-  "cookie",
-  "x-requested-with",
-];
+// Headers safe to forward to PostHog. (This is the set live since the worker
+// was first deployed; an August 2026 draft also forwarded cookie, origin,
+// referer and x-requested-with, but it was never deployed, and the site works
+// without them. See git history before adding any back.)
+const SAFE_HEADERS = ["content-type", "user-agent", "accept", "accept-encoding", "accept-language"];
 
 export default {
   async fetch(request, env, ctx) {
@@ -80,6 +70,13 @@ export default {
       if (value) safeHeaders.set(header, value);
     });
 
+    // Pass the visitor's real address so PostHog can work out country and city
+    // (PostHog's documented Cloudflare proxy setup). Without it PostHog sees
+    // only Cloudflare's own address: every visit "US, no city", and the
+    // "exclude Poland" filter cannot work.
+    const visitorIp = request.headers.get("CF-Connecting-IP");
+    if (visitorIp) safeHeaders.set("X-Forwarded-For", visitorIp);
+
     // Create a new request with the PostHog URL
     const newRequest = new Request(posthogUrl, {
       method: request.method,
@@ -121,7 +118,6 @@ function getCorsHeaders(origin) {
   // Allow localhost for development, and production domain
   const allowedOrigins = [
     ALLOWED_ORIGIN,
-    "https://www.bartcagara.com",
     "http://localhost:3000",
     "http://localhost:3001",
   ];
