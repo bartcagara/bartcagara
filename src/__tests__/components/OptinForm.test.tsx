@@ -25,4 +25,29 @@ describe('OptinForm', () => {
     expect(init.method).toBe('POST');
     expect((init.body as FormData).get('email_address')).toBe('a@example.com');
   });
+
+  it('with firstName and hiddenFields (the quiz gate), posts the first name and the result fields to Kit', async () => {
+    const onSuccess = jest.fn();
+    render(
+      <OptinForm
+        layout="joined"
+        firstName
+        submitLabel="Show me"
+        hiddenFields={{ quiz_result: 'C', quiz_second: 'E' }}
+        onSuccess={onSuccess}
+        successContent={<p>This week</p>}
+      />
+    );
+    fireEvent.change(screen.getByLabelText('First Name'), { target: { value: 'Sam' } });
+    fireEvent.change(screen.getByLabelText('Email Address'), { target: { value: 'a@example.com' } });
+    fireEvent.click(screen.getByRole('button', { name: /show me/i }));
+
+    await waitFor(() => expect(screen.getByText('This week')).toBeInTheDocument());
+    expect(onSuccess).toHaveBeenCalledTimes(1);
+
+    const body = (global.fetch as jest.Mock).mock.calls[0][1].body as FormData;
+    expect(body.get('fields[first_name]')).toBe('Sam');
+    expect(body.get('fields[quiz_result]')).toBe('C');
+    expect(body.get('fields[quiz_second]')).toBe('E');
+  });
 });
