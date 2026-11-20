@@ -37,7 +37,7 @@ export const QUESTIONS: QuizQuestion[] = [
   },
   {
     id: "q2",
-    text: "Think about your last good run. What ended it?",
+    text: "Think about the last time you were on track. What ended it?",
     answers: [
       { letter: "a", text: "I went on a trip or work got heavy, and I never got back on.", points: { C: 4 } },
       { letter: "b", text: "I had one bad weekend and then wrote off the rest of the month.", points: { A: 4 } },
@@ -190,18 +190,18 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     slug: "finish-line",
     name: "The Finish Line",
     nameInSentence: "the Finish Line",
-    headline: "Your best runs ended when the program did.",
+    headline: "Every time you got in shape, it ended when the program did.",
     body: [
       "When things went well, something was holding it together, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
       "Then it ended and the routine went with it, because you'd been following someone else's plan and nobody showed you how to run your own.",
       "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
     ],
     thisWeek: [
-      "Think back to your best run and pick the one or two things you actually enjoyed, maybe the morning lifts or the long walks. **Forget the rest of the program and do just those this week.**",
-      "Keep them small enough that skipping them would feel silly. You're not chasing results yet. You're proving to yourself that you can stick to something with nobody making you, because you decided to and you like doing it. Once that holds, there's time to build on it.",
+      "Think back to the last time you were in good shape and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long weekend walk with your wife. **Forget everything else and do just those this week.**",
+      "Keep them small enough that skipping would feel silly. By Sunday you'll have stuck to something with nobody checking, only because you wanted to, and that feels different from anything a program ever gave you.",
     ],
     secondLine:
-      "Your answers point to a second thing as well, which is that your best runs had someone or something else holding them together, and they ended when that did.",
+      "Your answers point to a second thing as well, which is that every time you got in shape, someone or something else was holding it together, and it ended when they did.",
   },
   E: {
     type: "E",
@@ -233,11 +233,11 @@ export const YEARS_LINES: Record<string, string> = {
 
 /** [LAST RUN], from Q2. Same paragraph, right after [YEARS]. */
 export const LAST_RUN_LINES: Record<string, string> = {
-  a: "Your last good run ended with a trip or a heavy stretch at work, and you never got back on.",
-  b: "Your last good run ended with one bad weekend, and then you wrote off the month.",
-  c: "Your last good run lasted as long as the program did, and then you drifted.",
-  d: "Nothing in particular ended your last good run. You just ran out of gas.",
-  e: "Your last good run ended when you got hurt or sick.",
+  a: "The last time you were on track, a trip or a heavy stretch at work ended it, and you never got back on.",
+  b: "The last time you were on track, one bad weekend ended it, and then you wrote off the month.",
+  c: "The last time you were on track, it lasted as long as the program did, and then you drifted.",
+  d: "Nothing in particular ended it the last time you were on track. You just ran out of gas.",
+  e: "The last time you were on track, getting hurt or sick ended it.",
 };
 
 /** [DISRUPTION] in result C, from Q5. */
@@ -289,7 +289,7 @@ export const BOOK_BUTTON = "Book a Restart Audit";
 
 export const COPY = {
   headerLabel: "The Restart Quiz",
-  startHeadline: "Find out what keeps ending your good runs.",
+  startHeadline: "Find out why you keep starting over.",
   startLine:
     "It takes two minutes, and at the end I'll tell you what's most likely behind it and what I'd change first.",
   startButton: "Start",
