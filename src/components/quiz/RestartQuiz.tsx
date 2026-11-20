@@ -21,7 +21,7 @@ import { scoreQuiz, type QuizScore } from "@/lib/quiz-score";
 import { usePostHogClient } from "@/lib/posthog-context";
 import { OptinForm } from "@/components/newsletter/OptinForm";
 import { BookButton } from "./BookButton";
-import { PROSE, ResultHeading, ThisWeek, fillBody } from "./ResultParts";
+import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "./ResultParts";
 
 /** 0 is the start screen, 1 to 8 the questions, 9 the result. */
 const RESULT_STEP = QUESTIONS.length + 1;
@@ -236,16 +236,25 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
         <article>
             <ResultHeading result={result} />
 
-            <div className={`mt-8 ${PROSE}`}>
-                <p>
-                    {YEARS_LINES[score.years]} {LAST_RUN_LINES[score.lastRun]}
-                </p>
-                {score.weakSignal && <p>{WEAK_SIGNAL_LINE}</p>}
-                {body.map((p) => (
-                    <p key={p}>{p}</p>
-                ))}
-                {second && <p>{second}</p>}
-            </div>
+            <section className="mt-10">
+                <MicroHeading>{COPY.toldMeHeading}</MicroHeading>
+                <div className={PROSE}>
+                    <p>
+                        {YEARS_LINES[score.years]} {LAST_RUN_LINES[score.lastRun]}
+                    </p>
+                    {score.weakSignal && <p>{WEAK_SIGNAL_LINE}</p>}
+                </div>
+            </section>
+
+            <section className="mt-10">
+                <MicroHeading>{COPY.goingOnHeading}</MicroHeading>
+                <div className={PROSE}>
+                    {body.map((p) => (
+                        <Para key={p} text={p} />
+                    ))}
+                    {second && <p>{second}</p>}
+                </div>
+            </section>
 
             <div className="mt-10">
                 {gated ? (
@@ -259,6 +268,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
             </div>
 
             <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book a Restart Audit">
+                <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
                 <div className={PROSE}>
                     <p>{STAKE_LINES[score.stake]}</p>
                     <p>{BRIDGE}</p>

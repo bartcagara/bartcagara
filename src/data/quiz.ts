@@ -134,9 +134,13 @@ export interface QuizResult {
   /** The name inside a sentence (the gate line). */
   nameInSentence: string;
   headline: string;
-  /** Paragraphs after the echo lines. `{disruption}` is filled from Q5. */
+  /**
+   * Paragraphs after the echo lines. `{disruption}` is filled from Q5.
+   * Words between **double stars** show in bold (one or two key lines per
+   * result); the stars never show on the page.
+   */
   body: string[];
-  /** "This week", behind the gate. */
+  /** "This week", behind the gate. **Double stars** mark bold, as in body. */
   thisWeek: string[];
   /** The [SECOND] line when this type is the runner-up. */
   secondLine: string;
@@ -151,13 +155,13 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     headline: "Your plan only works in a calm week.",
     body: [
       "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then {disruption}, and your plan has no version for a week like that, so it stops and you wait for things to calm down before starting again.",
-      "You've probably put that down to not having the time. I'd look at the plan instead, because every plan you've tried was competing with your schedule, and your schedule always wins.",
+      "You've probably put that down to not having the time. I'd look at the plan instead, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
-      "Don't wait for a good week to start. Here's a workout that fits into your worst one, because it takes about 10 to 15 minutes and you don't need a gym.",
+      "**Don't wait for a good week to start.** Here's a workout that fits into your worst one, because it takes about 10 to 15 minutes and you don't need a gym.",
       "Do push-ups, then inverted rows, then squats, taking every set close to the point where you can't do another rep. Rest for a minute and go through the circuit a second time. If you have the time and the strength left, do a third. For the inverted rows, lie under a sturdy table, hold the edge and pull your chest up to it, or set a pull-up bar low in a door frame and do the same.",
       "Do it tomorrow morning and pay attention to the rest of your day. You'll probably find that once you've started the day like that, you don't want to undo it, and the small decisions at lunch and dinner get a lot easier.",
-      "Then find the worst week in your calendar for the next month and plan to do this workout two or three times in it. Anything you add after that should pass one test: would it survive my worst week?",
+      "Then find the worst week in your calendar for the next month and plan to do this workout two or three times in it. Anything you add after that should pass one test: **would it survive my worst week?**",
     ],
     secondLine:
       "Your answers point to a second thing as well, which is your weeks. A trip or a busy stretch knocks you off and getting back takes a long time, so whatever you do next has to hold up in a bad week too.",
@@ -170,11 +174,11 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     headline: "You're either all in or all out.",
     body: [
       "Starting has never been your problem. You go all in on a Monday, and for a few weeks it works.",
-      "Then something small, like a dinner out or a few drinks, breaks the streak. The plan only counted when you did all of it, so one miss feels like the end, and “I'll start again Monday” often turns into a month.",
+      "Then something small, like a dinner out or a few drinks, breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
       "The harder you go during the week, the worse those moments get. After five days of eating as little as you can, you sit down to Friday dinner starving, and the decision has been made for you.",
     ],
     thisWeek: [
-      "This one might feel backwards. For the next seven days, eat proper meals throughout the day, every day, including the days you'd usually try to be good, and stop saving anything up for the weekend.",
+      "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good, and stop saving anything up for the weekend.",
       "Sleep, train if you have the energy, and then pay attention to what happens when you sit down at the dinner or the night out that usually knocks you off. When you've fed yourself properly all week, you aren't fighting anything at that table. You're rested, you're not starving, and for once you're in a position to make a decision that's actually good for you.",
       "If you do it properly, you'll feel the difference within a few days.",
     ],
@@ -190,10 +194,10 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     body: [
       "When things went well, something was holding it together, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
       "Then it ended and the routine went with it, because you'd been following someone else's plan and nobody showed you how to run your own.",
-      "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and what you never had was a way of doing this that's yours.",
+      "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
     ],
     thisWeek: [
-      "Think back to your best run and pick the one or two things you actually enjoyed, maybe the morning lifts or the long walks. Forget the rest of the program and do just those this week.",
+      "Think back to your best run and pick the one or two things you actually enjoyed, maybe the morning lifts or the long walks. **Forget the rest of the program and do just those this week.**",
       "Keep them small enough that skipping them would feel silly. You're not chasing results yet. You're proving to yourself that you can stick to something with nobody making you, because you decided to and you like doing it. Once that holds, there's time to build on it.",
     ],
     secondLine:
@@ -207,10 +211,10 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     headline: "By 9:30 at night you have nothing left.",
     body: [
       "I'd guess you barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
-      "Every plan you've tried asked you to be strongest at the hour you have the least left, so when it didn't hold, you blamed yourself. I'd look at what you ate before 3pm instead.",
+      "**Every plan you've tried asked you to be strongest at the hour you have the least left**, so when it didn't hold, you blamed yourself. I'd look at what you ate before 3pm instead.",
     ],
     thisWeek: [
-      "Eat a bigger lunch every workday this week, a proper meal with protein, vegetables and some carbs, and leave everything else as it is. Think of it as an investment in the second half of your day. You'll get through the afternoon on steady energy and sit down to dinner hungry but not starving, with enough left to actually be there for the people at the table instead of eating fast and checking out.",
+      "**Eat a bigger lunch every workday this week**, a proper meal with protein, vegetables and some carbs, and leave everything else as it is. Think of it as an investment in the second half of your day. You'll get through the afternoon on steady energy and sit down to dinner hungry but not starving, with enough left to actually be there for the people at the table instead of eating fast and checking out.",
     ],
     secondLine:
       "Your answers point to a second thing as well, which is that you get through your days on very little food, and the evenings are where it shows.",
@@ -291,7 +295,11 @@ export const COPY = {
   startButton: "Start",
   back: "Back",
   resultLabel: "What kills your restarts",
+  /** Small headings on the result, in order. "This week" is the big one behind the gate. */
+  toldMeHeading: "What you told me",
+  goingOnHeading: "What's going on",
   thisWeekHeading: "This week",
+  nextStepHeading: "Your next step",
   gateHeading: "Want to know what I'd do first?",
   /** `{type}` is the result's nameInSentence. */
   gateLine:

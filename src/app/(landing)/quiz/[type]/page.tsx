@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BRIDGE, DISRUPTION, RESULTS, RESULT_TYPES, type QuizResult } from "@/data/quiz";
+import { BRIDGE, COPY, DISRUPTION, RESULTS, RESULT_TYPES, type QuizResult } from "@/data/quiz";
 import { QuizFrame } from "@/components/quiz/QuizFrame";
-import { PROSE, ResultHeading, ThisWeek, fillBody } from "@/components/quiz/ResultParts";
+import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "@/components/quiz/ResultParts";
 import { ResultPageBookButton } from "@/components/quiz/ResultPageBookButton";
 
 /**
@@ -44,15 +44,19 @@ export default async function QuizResultPage({ params }: { params: Promise<{ typ
         <QuizFrame>
             <article>
                 <ResultHeading result={result} />
-                <div className={`mt-8 ${PROSE}`}>
-                    {body.map((p) => (
-                        <p key={p}>{p}</p>
-                    ))}
-                </div>
+                <section className="mt-10">
+                    <MicroHeading>{COPY.goingOnHeading}</MicroHeading>
+                    <div className={PROSE}>
+                        {body.map((p) => (
+                            <Para key={p} text={p} />
+                        ))}
+                    </div>
+                </section>
                 <div className="mt-10">
                     <ThisWeek result={result} />
                 </div>
                 <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book a Restart Audit">
+                    <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
                     <div className={PROSE}>
                         <p>{BRIDGE}</p>
                     </div>
