@@ -233,7 +233,7 @@ export const YEARS_LINES: Record<string, string> = {
 
 /** [LAST RUN], from Q2. Same paragraph, right after [YEARS]. */
 export const LAST_RUN_LINES: Record<string, string> = {
-  a: "The last time you were on track, a trip or a heavy stretch at work ended it, and you never got back on track.",
+  a: "The last time you were on track, a trip or a heavy stretch at work ended it, and you never got going again.",
   b: "The last time you were on track, one bad weekend ended it, and then you wrote off the month.",
   c: "The last time you were on track, it lasted as long as the program did, and then you drifted.",
   d: "Nothing in particular ended it the last time you were on track. You just ran out of gas.",
