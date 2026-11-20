@@ -43,7 +43,7 @@ export default function BriefPausedPage() {
                         Got it.
                     </h1>
                     <div className="mt-8 md:mt-10 space-y-5 text-lg md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                        <p>I won&apos;t send you any more of these.</p>
+                        <p>I&apos;ve paused these emails.</p>
                         <p>You&apos;ll still get the Brief every Thursday.</p>
                     </div>
                 </div>
