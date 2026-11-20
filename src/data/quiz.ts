@@ -307,7 +307,6 @@ export const COPY = {
   gateButton: "Show me",
   gateNote:
     "You'll also get my newsletter, the Founder's Fitness Brief, every Thursday. It's one email a week and you can unsubscribe any time.",
-  afterEmail: "I've sent this to your inbox too. Confirm your email there so the rest reaches you.",
 } as const;
 
 /**

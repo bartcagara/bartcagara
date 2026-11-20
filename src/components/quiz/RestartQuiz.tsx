@@ -258,10 +258,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 
             <div className="mt-10">
                 {gated ? (
-                    <ThisWeek
-                        result={result}
-                        note={<p className="mt-4 text-base font-bold text-bleu-nuit/70">{COPY.afterEmail}</p>}
-                    />
+                    <ThisWeek result={result} />
                 ) : (
                     <Gate score={score} onGated={onGated} />
                 )}
