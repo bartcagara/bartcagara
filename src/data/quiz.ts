@@ -146,8 +146,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
   C: {
     type: "C",
     slug: "calm-week",
-    name: "The Calm-Week Plan",
-    nameInSentence: "the Calm-Week Plan",
+    name: "The Calm\u2011Week Plan",
+    nameInSentence: "the Calm\u2011Week Plan",
     headline: "Your plan only works in a calm week.",
     body: [
       "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then {disruption}, and your plan has no version for a week like that, so it stops and you wait for things to calm down before starting again.",
@@ -303,11 +303,8 @@ export const COPY = {
 } as const;
 
 /**
- * The Kit form the quiz gate posts to.
- *
- * TODO before launch: the quiz form (`opt-in - quiz`) replaces this. Until it
- * exists in Kit, it is the /brief form, so a test signup lands on the
- * newsletter list like any /brief signup (the hidden quiz fields are ignored
- * by a form that does not know them).
+ * The Kit form the quiz gate posts to: `opt-in - quiz` (created 20 Nov 2026).
+ * Its automation `quiz - sort` (2288789) tags `entry - quiz`, the type tag and
+ * the pain tag from the hidden fields quiz_result and quiz_stake.
  */
-export const QUIZ_KIT_FORM = { id: "10022301", uid: "66c36550de" } as const;
+export const QUIZ_KIT_FORM = { id: "10217601", uid: "4589be8ab7" } as const;
