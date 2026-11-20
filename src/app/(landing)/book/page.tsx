@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const TITLE = "Book your Restart Audit | Bart Cagara";
 const DESCRIPTION =
-    "45 minutes, you and me. You leave knowing exactly why it never sticks, whether we work together or not. For former-athlete founders.";
+    "45 minutes with me. Tell me the whole story, and I'll give you my honest read on what it takes to make this your last restart.";
 
 export const metadata: Metadata = {
     title: TITLE,
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
                 url: "/images/og-book.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Restart Audit: 45 minutes, you and me. You leave knowing exactly why it never sticks, whether we work together or not."
+                alt: "Restart Audit: 45 minutes, you and me. Tell me the whole story, and I'll give you my honest read on what it takes to make this your last restart."
             }
         ]
     },
