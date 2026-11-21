@@ -309,3 +309,57 @@ Short names: `home` = `src/data/homepage-content.ts`; `testimonials` = `src/data
 - **MJ H.'s video:** I read the captions, I did not watch it. A good frame for the poster has to be picked by eye.
 - **Phone layout:** I counted words and planned screens. Nobody has looked at this on a phone yet.
 - Still as flagged in round 5: the conference dates behind Ben F.'s name line, and "two out of three".
+
+---
+---
+
+# Section 5, with the program breakdown
+
+Replaces section 5 in Part 1. Bart, 21 Nov: "where is my program breakdown, dude?" The three phases are back, as three steps, and the four rows are folded into them so nothing is said twice. Heading 5 + 105 words = 110 (phase names and weeks counted, name lines and the button not). Page total moves from 423 to 468.
+
+**Leads: a client message about one call.** [`public/images/testimonials/dm-15.webp`, as before.]
+Drew W., CEO, the day after a call
+
+## Six months, you and me.
+
+A call every week. WhatsApp in between.
+
+[Three numbered steps. On a phone: one under the other, a thin line joining 01 to 02 to 03, each step one card with the number large, the name, the weeks, one line, then the items as short rows. On a wide screen: three columns.]
+
+**01 · The Reset** · Weeks 1-4
+You see why it never stuck.
+- Two to four short sessions a week
+- No meal plan. Food you actually like.
+- We find what kills every attempt.
+
+**02 · The Build** · Weeks 5-12
+We make it hold on the road.
+- A hotel-gym version for trips
+- Restaurants and airports, handled
+- Before a client dinner, send me the menu
+
+**03 · The Exit** · Weeks 13-24
+You run it yourself.
+- Vacations, pivots, sick kids. The plan holds.
+- The decisions move from my head to yours.
+
+**Then you fire me.**
+
+[Screenshot: HQ `02_clients/_private/dms/image-49.png`, cropped as before.]
+Adrian K., Group CFO
+This hit my phone 9 months after we finished. Nobody was checking in.
+
+[Book a Restart Audit]
+
+## Notes
+
+- **Bart's words, kept:** the three names and the weeks; "see why it never stuck" (his phase 1 win); "food you actually like"; "We find what kills every attempt"; "Restaurants, airports, hotel gyms. Handled."; "Vacations, pivots, sick kids. The plan holds."; "moves from my head to yours"; "You fire me."
+- **Dropped as unbacked or unprovable:** "10-15 lbs down", "Energy back", "The weight moves anyway", "The body starts looking athletic again", "Clothes fit different. People notice.", "No wasted time in the gym", the bloodwork item (not confirmed that every client gets a full panel), "24/7".
+- **Dropped as labels or repeats:** "Founder Athlete OS", the focus labels in capitals ("IMMEDIATE CONTROL" and the other two), the bold feature labels, "You own this", the app item, "The program fixes the body. The calls fix what kept breaking it."
+- **Merged:** the four rows from the earlier section 5 now sit inside the phases (sessions and no meal plan in 01, hotel gym and the menu in 02, making the decisions yourself in 03). The weekly call is the one line above the steps because it runs through all three.
+- **Not confirmed:** that sessions are two to four a week from week 1 (the files say it for the program as a whole).
+
+## Lead's edit to the breakdown (21 Nov)
+- Phase 1 outcome "You see why it never stuck." → "It fits the week you already have." ("never stuck" is a cousin of the retired "never sticks"; the old line also repeated item 3.)
+- Phase 1 item 3 "We find what kills every attempt." → "We find what ended every attempt before this one." (past tense: it ends here.)
+Sent to the builder as final.
