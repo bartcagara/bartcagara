@@ -48,10 +48,6 @@ export function FinalCTASection({
         <div id="book-call" className="mt-12 scroll-mt-[88px] md:scroll-mt-[104px]">
           <CalendarEmbed loadWhenNear />
         </div>
-
-        <p className="mt-8 max-w-3xl text-lead font-medium text-bleu-nuit/70 leading-relaxed">
-          I coach every client myself. 1:1, never group. When the roster&apos;s full, it&apos;s a waitlist.
-        </p>
       </div>
     </section>
   );

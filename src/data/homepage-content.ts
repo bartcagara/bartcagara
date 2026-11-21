@@ -142,7 +142,6 @@ export const HOMEPAGE_CONTENT = {
       "Six months from now, your business will be further along. Will your body?",
       "You know how this goes if nothing changes. **You've restarted enough times.**",
       "**If that sits wrong, let's talk.**",
-      "45 minutes, you and me. You leave knowing exactly why it never stuck, whether we work together or not.",
     ],
   },
 
