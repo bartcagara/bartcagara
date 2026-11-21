@@ -26,6 +26,18 @@
     </image:image>
   </url>
 
+  <!-- The Restart Quiz -->
+  <url>
+    <loc>https://bartcagara.com/quiz</loc>
+    <lastmod>2026-11-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://bartcagara.com/images/og-quiz.jpg</image:loc>
+      <image:title>The Restart Quiz - Find out why you keep starting over</image:title>
+    </image:image>
+  </url>
+
   <!-- Contact Page -->
   <url>
     <loc>https://bartcagara.com/contact</loc>

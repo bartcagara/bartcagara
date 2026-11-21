@@ -8,9 +8,8 @@ const DESCRIPTION = COPY.startLine;
 
 /**
  * The restart quiz (design: HQ 03_content/ideas/2026-11-20_design_restart-quiz.md).
- * Hidden until launch: noindex, not in the sitemap, linked from nowhere.
- * Before launch: add it to public/sitemap.xml, switch robots to index, and
- * swap QUIZ_KIT_FORM in src/data/quiz.ts for the quiz's own Kit form.
+ * Live since 21 Nov 2026: indexed and in public/sitemap.xml; the result
+ * pages (/quiz/<slug>) stay noindex.
  */
 export const metadata: Metadata = {
     title: TITLE,
@@ -43,8 +42,8 @@ export const metadata: Metadata = {
         site: "@bartcagara"
     },
     robots: {
-        index: false,
-        follow: false
+        index: true,
+        follow: true
     }
 };
 
