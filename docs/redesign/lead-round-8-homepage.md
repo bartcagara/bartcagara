@@ -44,11 +44,11 @@ LABEL: AT THE DOCTOR'S — "Now my doctor can shut up about putting me on statin
 [Headshot]
 Who the fuck is Bart?
 I played sports my whole childhood. By the end of college, the athlete was gone.
-Then I did what you've probably done. Paleo, Primal, keto, all by the book. I lost weight every time, and I ate lunch at my desk out of a container while my team went out.
-Then a blood test showed me what it was costing.
+Then I did what you've probably done. Paleo, Primal, keto, all by the book. At the fitness startup I'd just joined, I ate lunch at my desk out of a container while everyone else went out.
+I lost weight every time. I also lost muscle, strength and my libido. So I got my blood checked. LDL cholesterol at 360. Testosterone at 330.
+I asked the nutritionists I worked with for help, and they coached me properly.
 [Card: LDL cholesterol 360 → 118 a year later. Testosterone 330 → 540 a year later. Header row: "Then" / "A year later".]
-I asked the nutritionists I worked with for help, and they coached me properly. Today I lift four days a week, I eat out, and I've held 12 to 15% body fat for years.
-I'm a dad now, and **my son is watching.**
+Today I lift four days a week, I eat out, and I've held 12 to 15% body fat for years. **I can sit down at any table, be fine, and focus on the people around me.**
 [I bet you're curious about my before-after. See it here.]
 (Facts: 12 Nov newsletter `03_content/published/2026-11/newsletters/2026-11-12_newsletter_low-carb-coach.md`.)
 
@@ -60,3 +60,4 @@ I'm a dad now, and **my son is watching.**
 
 ## Fable's slide check (applied 21 Nov)
 Pool moved before the last line and into past tense; "six months" introduced; quiz moved under the section 4 button; the doubled "places it used to end" line cut; one list of places in sections 2-4; Matt B. to section 5.
+Section 7 per Fable: a reason for the blood test, the startup named so the nutritionists make sense, card after the fix, ends on his own 12 Nov line instead of "my son is watching".
