@@ -12,32 +12,30 @@ I'm Bart, a founder and a dad. I coach founders who played sports. We plan your 
 
 ## 2. Him
 You've gotten in shape before.
-Three good weeks, maybe three good months. Then a conference, a heavy month at work, a vacation, and you're back where you started.
-Every time, it's harder to start again.
-In July your kids are in the pool, calling for you.
+Three good weeks, maybe three good months. Then a conference, a week in a hotel, a vacation, and you're back where you started.
+Last summer your kids were in the pool, calling for you.
 "In a minute."
-You're waiting until nobody's looking.
+You were waiting until nobody was looking.
+Every time, it's harder to start again.
 
 ## 3. Why it kept ending
 Every plan you tried needed a calm week.
-You don't get many. So we start in the busy stretch and plan around it: the conference, the client dinners, the trip. Six months is long enough that all of them happen while I'm still with you.
-**Those are the places it used to end.**
-Not sure where yours ends? [Take the 2-minute quiz.] (link to /quiz)
+You don't get many. So we start in the busy stretch and plan around the conference, the hotel week, the vacation. We work together for six months, long enough that all of them happen while I'm still with you.
 
 ## 4. The proof, at those places
-Where it used to end.
+The places that used to put you back at the start.
 LABEL: AT A CONFERENCE
 "Ate poorly at the closing party. **Weight stayed at exactly 200.**" Ben F., founder, the day after flying home
 LABEL: IN A HOTEL ALL WEEK
 "I lost weight this week while in a hotel ALL week in Chicago!" Drew W., CEO [screenshot dm-18]
 LABEL: ON VACATION
 "I'm not embarrassed to take my shirt off anymore!" Phil D. [screenshot dm-27] [before/afters: transformation-9, transformation-2]
-LABEL: AT THE DOCTOR'S
-"Now my doctor can shut up about putting me on statins!" Matt B. [dm-2 first bubble + dm-29]
 [Book Restart Audit]
+Not ready to book? [Take the 2-minute quiz.] (link to /quiz)
 
 ## 5. More of them
 They didn't have time either.
+LABEL: AT THE DOCTOR'S — "Now my doctor can shut up about putting me on statins!" Matt B. [dm-2 first bubble + dm-29] (moved here from section 4: a result, not a place it ended)
 [MJ H. video + quote "Looking forward to going to the pool and taking my shirt off." MJ H., co-founder, former college athlete] [8 interviews, names] [Client photos / messages / testimonials rows]
 
 ## 6. The offer (as round 7: dm-15 lead, "Six months, you and me.", the three steps, "Then you fire me.", LABEL 9 MONTHS AFTER WE FINISHED + Adrian K. dm-28, "Nobody was checking in.", [Book Restart Audit])
@@ -59,3 +57,6 @@ I'm a dad now, and **my son is watching.**
 ## 9. The close (as round 7: LABEL AT THE LAKE WITH HIS SONS + dm-6 + "It was exactly the reason why I wanted to change my life." / "Think back 24 weeks." ... / "Let's start with 45 minutes." / [Book Restart Audit] / "You tell me what's been going on. I tell you what I'd change.")
 
 ## Footer (as round 7)
+
+## Fable's slide check (applied 21 Nov)
+Pool moved before the last line and into past tense; "six months" introduced; quiz moved under the section 4 button; the doubled "places it used to end" line cut; one list of places in sections 2-4; Matt B. to section 5.
