@@ -44,12 +44,23 @@ export interface ObjectionItem {
   readonly answer: string;
 }
 
-/** A client message screenshot and the name line under it. */
-export interface MessageShotContent {
+/** A client message screenshot. */
+export interface ShotContent {
   readonly src: string;
   readonly width: number;
   readonly height: number;
   readonly alt: string;
-  readonly caption: string;
+}
+
+/** The repeating device: place label, one client sentence, the screenshot, the name line. */
+export interface MomentContent {
+  readonly label: string;
+  readonly quote: string;
+  /** Words before the big sentence, set small (Ben F.'s "Ate poorly..."). */
+  readonly lead?: string;
+  readonly name?: string;
   readonly note?: string;
+  readonly shots?: readonly ShotContent[];
+  /** Screenshot above the sentence instead of under it. */
+  readonly shotsFirst?: boolean;
 }

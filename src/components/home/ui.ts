@@ -36,3 +36,11 @@ export const FRAME = "border-2 border-bleu-nuit shadow-brutal-md";
 /** The navy button: full width on a phone, as /quiz's start button. */
 export const BUTTON =
   "w-full sm:w-auto inline-flex items-center justify-center gap-3 min-h-14 px-10 py-4 bg-bleu-nuit text-white border-2 border-bleu-nuit text-lg font-black uppercase tracking-tight shadow-brutal-sm transition-brutal hover:shadow-none hover-translate-brutal cursor-pointer";
+
+/** The quiz's label chip: monospace caps on the accent, offset shadow. */
+export const CHIP =
+  "inline-block whitespace-nowrap bg-bleu-accent text-white font-mono text-xs uppercase tracking-normal px-3 py-1 shadow-[2px_2px_0_0_var(--bleu-nuit)]";
+
+/** One client sentence, very large: the size of /brief's headline, a step down on wide screens. */
+export const QUOTE =
+  "text-[clamp(2rem,9vw,2.625rem)] md:text-[3rem] lg:text-[3.5rem] font-black tracking-[-0.04em] leading-[1.02] text-balance text-bleu-nuit";

@@ -57,7 +57,7 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - [x] Proof: MJ H. video (new poster, looking at camera), 8-face interview wall (3TQgTpzlrJA = MJ H., left out), 2 before/afters, dm-18 (Chicago, cropped), dm-15, dm-27/dm-28 from HQ; dm-6, dm-7, dm-10 out of the rows
 - [x] `book_click` with `location` on the four Book buttons (+ test)
 - [x] lint, test, build pass; shots in `docs/redesign/shots/current/` and `build1/`
-- [ ] Final copy from the Lead (Bart's "last 24 weeks vs next 24 weeks" spine) swapped into `homepage-content.ts`
+- [x] Final copy (Fable round 7, spine "same places, the other way") swapped into `homepage-content.ts`: seven label + big-sentence moments, header chip "Bart Cagara", dm-29 (Matt B. scan), dm-6 lake crop, dm-2 first bubble, two questions, interview grid 2 columns on phone; shots in `build2/`
 - [ ] Push branch, Cloudflare preview link for Bart's phone
 
 ## Found along the way
@@ -66,3 +66,4 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - 2026-11-21: deploy = Cloudflare Pages builds from main (git history "Retry the Pages build"); README's "Netlify" is out of date. A push to main is a deploy. Branch previews: confirm the Pages project name before the preview step.
 - 2026-11-21: header label on the homepage set to "Founder Athlete OS" (placeholder; Fable had dropped it as a program label). Lead to pick.
 - 2026-11-21: the final section now has the Book button only; the inline Cal.com calendar and "I coach every client myself" line are gone (copy cut them). Worth watching in the booking numbers.
+- 2026-11-21: round 7 treats dm-2 (lipid panel) and dm-29 (calcium scan) as one man, Matt B.; only dm-29 is on file as his. The lake message (dm-6) has no name line until Bart says who sent it.

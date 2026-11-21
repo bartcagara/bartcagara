@@ -11,6 +11,14 @@ const DiagnosisSection = dynamic(() => import("@/components/home/sections").then
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
+const FirstProofSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FirstProofSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
+const GetsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.GetsSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
 const PatternSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.PatternSection })), {
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
@@ -90,8 +98,13 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-        {/* 1. FIRST SCREEN: the message, the photo, the first proof, the quiz door */}
+        {/* 1. FIRST SCREEN: the promise and the button */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
+
+        {/* AT A CONFERENCE: Ben F., Bart and his son, the quiz door */}
+        <ErrorBoundary>
+          <FirstProofSection content={HOMEPAGE_CONTENT.firstProof} />
+        </ErrorBoundary>
 
         {/* 2. THIS IS YOU */}
         <ErrorBoundary>
@@ -103,27 +116,32 @@ export default function Home() {
           <PatternSection content={HOMEPAGE_CONTENT.pattern} />
         </ErrorBoundary>
 
-        {/* 4. PROOF */}
+        {/* 4. WHAT HE GETS: on vacation, two bodies, at the doctor's */}
+        <ErrorBoundary>
+          <GetsSection content={HOMEPAGE_CONTENT.gets} />
+        </ErrorBoundary>
+
+        {/* 5. THE MEN */}
         <ErrorBoundary>
           <ResultsSection />
         </ErrorBoundary>
 
-        {/* 5. THE OFFER */}
+        {/* 6. THE OFFER */}
         <ErrorBoundary>
           <ProgramSection content={HOMEPAGE_CONTENT.program} />
         </ErrorBoundary>
 
-        {/* 6. BART */}
+        {/* 7. BART */}
         <ErrorBoundary>
           <AboutSection content={HOMEPAGE_CONTENT.about} />
         </ErrorBoundary>
 
-        {/* 7. QUESTIONS */}
+        {/* 8. QUESTIONS */}
         <ErrorBoundary>
           <ObjectionsSection title={HOMEPAGE_CONTENT.objectionsTitle} objections={HOMEPAGE_CONTENT.objections} />
         </ErrorBoundary>
 
-        {/* 8. THE CALL */}
+        {/* 9. THE CALL */}
         <ErrorBoundary>
           <FinalCTASection content={HOMEPAGE_CONTENT.finalCta} />
         </ErrorBoundary>
@@ -137,7 +155,7 @@ export default function Home() {
           />
         </ErrorBoundary>
 
-        <HomeFooter />
+        <HomeFooter tagline={HOMEPAGE_CONTENT.briefing.tagline} />
     </div>
   );
 }

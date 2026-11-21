@@ -58,11 +58,10 @@ export const CLIENT_INTERVIEWS = [
 ] as const;
 
 // Left out: dm-6 (sender not on file), dm-7 (shows a client's full name),
-// dm-10 (same message as dm-5), dm-15 and dm-18 (shown large above the rows).
+// dm-10 (same message as dm-5), dm-2, dm-15 and dm-18 (shown large on the page).
 export const CLIENT_DMS = [
-  // Lead with three specific screenshots: lipid-panel results (dm-2),
-  // "I'm not the same guy anymore" (dm-3), long business-trip recap (dm-1).
-  "/images/testimonials/dm-2.webp",
+  // Lead with "I'm not the same guy anymore" (dm-3) and the long
+  // business-trip recap (dm-1).
   "/images/testimonials/dm-3.webp",
   "/images/testimonials/dm-1.webp",
   "/images/testimonials/dm-4.webp",

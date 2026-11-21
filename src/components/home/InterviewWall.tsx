@@ -19,7 +19,7 @@ export function InterviewWall() {
 
   return (
     <>
-      <ul className="grid grid-cols-4 gap-x-3 gap-y-5 md:gap-x-6 md:gap-y-8 list-none" aria-label="Client interviews">
+      <ul className="grid grid-cols-2 md:grid-cols-4 gap-x-5 gap-y-7 md:gap-x-6 md:gap-y-8 list-none" aria-label="Client interviews">
         {CLIENT_INTERVIEWS.map((item) => (
           <li key={item.id}>
             <button
@@ -34,16 +34,16 @@ export function InterviewWall() {
                   alt=""
                   fill
                   loading="lazy"
-                  sizes="(max-width: 768px) 25vw, 300px"
+                  sizes="(max-width: 768px) 50vw, 300px"
                   className="object-cover"
                 />
-                <span className="absolute right-1 bottom-1 md:right-2 md:bottom-2 flex items-center justify-center w-6 h-6 md:w-10 md:h-10 bg-bleu-nuit text-white" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" className="w-3 h-3 md:w-5 md:h-5 ml-0.5" fill="currentColor">
+                <span className="absolute right-2 bottom-2 flex items-center justify-center w-9 h-9 md:w-10 md:h-10 bg-bleu-nuit text-white" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="w-4 h-4 md:w-5 md:h-5 ml-0.5" fill="currentColor">
                     <polygon points="6 3 20 12 6 21 6 3" />
                   </svg>
                 </span>
               </span>
-              <span className="block mt-2 md:mt-3 text-[0.8125rem] md:text-base font-bold uppercase tracking-[-0.02em] text-bleu-nuit leading-none">
+              <span className="block mt-3 text-sm md:text-base font-bold uppercase tracking-[-0.02em] text-bleu-nuit leading-none">
                 {item.name}
               </span>
             </button>

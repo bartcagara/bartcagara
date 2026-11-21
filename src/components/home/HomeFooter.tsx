@@ -2,11 +2,14 @@ import Link from "next/link";
 import { CONTAINER, GUTTER } from "./ui";
 
 /** /brief's quiet footer line, with the homepage's few extra links. */
-export function HomeFooter() {
+export function HomeFooter({ tagline }: { tagline: string }) {
   return (
     <footer className={GUTTER}>
       <div className={`${CONTAINER} py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6 border-t border-bleu-nuit/10 text-xs text-bleu-nuit/50`}>
-        <span>&copy; {new Date().getFullYear()} Dad with Style OÜ</span>
+        <span>
+          <span className="block mb-1 font-bold text-bleu-nuit/70">{tagline}</span>
+          &copy; {new Date().getFullYear()} Dad with Style OÜ
+        </span>
         <nav aria-label="Legal" className="flex flex-wrap items-center gap-x-5 gap-y-2">
           <Link href="/contact" className="hover:text-bleu-nuit transition-colors">Contact</Link>
           <Link href="/privacy" className="hover:text-bleu-nuit transition-colors">Privacy</Link>

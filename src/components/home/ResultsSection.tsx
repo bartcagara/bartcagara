@@ -5,19 +5,17 @@ import { TRANSFORMATIONS, CLIENT_DMS } from "./assets";
 import { TestimonialsMarquee } from "./TestimonialsMarquee";
 import { FeaturedVideo } from "./FeaturedVideo";
 import { InterviewWall } from "./InterviewWall";
-import { MessageShot } from "./MessageShot";
-import { CONTAINER, FRAME, GUTTER, H2, SECTION } from "./ui";
+import { CONTAINER, GUTTER, H2, SECTION } from "./ui";
 import styles from "./homepage.module.css";
 
 /**
- * The proof, staged largest first: one client video, the wall of interview
- * faces, two before/afters, one message, then the rows to swipe. No words of
- * Bart's here, only the title.
+ * The men: one client video large, the wall of interview faces, then the
+ * rows to swipe. No words of Bart's here, only the title.
  */
 export function ResultsSection() {
   const { results } = HOMEPAGE_CONTENT;
-  // The two before/afters shown large are not repeated in the row.
-  const shownLarge = new Set<string>(results.beforeAfters.map((b) => b.src));
+  // The two before/afters shown large in the section above are not repeated in the row.
+  const shownLarge = new Set<string>(HOMEPAGE_CONTENT.gets.beforeAfters.map((b) => b.src));
   const rowPhotos = TRANSFORMATIONS.filter((t) => !shownLarge.has(t.src));
 
   return (
@@ -31,23 +29,6 @@ export function ResultsSection() {
             <InterviewWall />
           </div>
         </div>
-
-        <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-8 lg:gap-10">
-          {results.beforeAfters.map((item) => (
-            <Image
-              key={item.src}
-              src={item.src}
-              alt={item.alt}
-              width={940}
-              height={788}
-              loading="lazy"
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className={`block w-full h-auto ${FRAME}`}
-            />
-          ))}
-        </div>
-
-        <MessageShot message={results.message} className="mt-16 md:mt-24 max-w-[560px]" />
 
         <div className="mt-16 md:mt-24 space-y-12 md:space-y-16">
           <ScrollSection title={results.sections.transformations}>

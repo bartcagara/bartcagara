@@ -1,7 +1,8 @@
 /**
  * The client testimonials on the home page, self-hosted so that showing them
  * sends nothing to any outside company. Taken word for word from the Senja
- * widget "Homepage testimonials" on 2026-11-05, in its order. `<mark>` is the
+ * widget "Homepage testimonials" on 2026-11-05, in its order, except Dan W.,
+ * moved first (round-7 copy, 21 Nov). `<mark>` is the
  * widget's highlight. Names and photos are as they already appeared publicly.
  */
 export type Testimonial =
@@ -27,6 +28,15 @@ export type Testimonial =
 
 export const TESTIMONIALS: readonly Testimonial[] = [
   {
+    "id": "e8875797",
+    "name": "Dan White",
+    "tagline": "Head of CX Strategy & Operations",
+    "kind": "text",
+    "avatar": "/images/testimonials/avatars/dan-white.webp",
+    "linkedin": "https://www.linkedin.com/in/bartcagara/",
+    "text": "I worked with Bart as a coaching client after a real health scare.\n\nIt forced me to rethink how I was living. It was a wake-up call, and I knew I needed a different way forward, not another short-term plan.\n\nA few weeks later, I met Bart early one morning during a free assessment. The conversation felt easy, and I trusted him quickly.\n\nBefore Bart, I had tried a lot of systems.\nDiets. Challenges. Apps. Programs. Meetings.\nSome worked briefly, but none stuck.\n\nHere’s what made Bart different for me:\n* His approach was personalized to my actual life.\n* He coached me through tough choices I’d been avoiding.\n* He slowed me down when I wanted to sprint.\n* He kept everything simple and doable.\n* He helped me build habits that are still working for me today.\n\nTwo moments that really stand out for me from our 6 months of coaching:\n\nBefore Bart, when I traveled for work, I never had a plan. After Bart, when I traveled for a big work event, I came home exactly where I started weight-wise. That had never happened before. The best part was that I enjoyed the trip + had good food and drinks, without stressing out. Bart helped me plan, not panic.\n\nLater in our coaching, I hit a weight goal I’d been chasing. As I reached it, I realized I wasn’t grinding anymore. The nutrition and training we’d built together felt automatic. That shift came from Bart’s steady coaching.\n\nThrough our weekly calls, Bart didn’t just coach & analyze my workouts. He helped me rethink food, stress, sleep, travel, and routines. We talked about real life. Work dinners. Late nights. Cravings. Hotel gyms. How to stay steady without being rigid. Those conversations made all the difference for me.\n\nWorking with Bart was the best money I’ve ever spent on my health and I’d do it again without hesitation.\n\nIf you want a coach who is steady, practical, available, deeply knowledgeable, and fully invested in your success, Bart is your guy. Plus he’s a great hang too. Ask him for his best music and show recommendations and thank me later."
+  },
+  {
     "id": "39701388",
     "name": "Mark Van Den Broeke",
     "tagline": "VP Construction at Wisconsin Housing Preservation Corp.",
@@ -43,15 +53,6 @@ export const TESTIMONIALS: readonly Testimonial[] = [
     "avatar": "/images/testimonials/avatars/brian-hurd.webp",
     "linkedin": "https://www.linkedin.com/in/bartcagara/",
     "text": "I hired Bart last year to be my health coach. \nAlthough hesitant at first to understand how I could fully benefit from hiring a coach on-line that I would never meet in person it was one of my best decisions. Some investments have a greater return than others and is this one of those for me. \nI was in a place where my desire and need to make changes in my health was great, but my knowledge and discipline continued to be stumbling blocks to reach my goals. \nWithin the first two weeks of working with Bart, I was already experiencing a complete shift in my mindset based on his coaching. I had outlined my real goals for wanting to get in shape and a very clear \"why\" and from there received personalized coaching every step of the way. I no longer had to try and figure it out on my own, I just needed to show-up and be open to real coaching by someone who had the experience and passion for helping clients succeed. Along the way not only with a shift in my mindset I now have the tools, framework and equipping to live a healthy lifestyle regardless of what obstacles might surface. I am very thankful and grateful for what I have received by becoming a client of Bart!"
-  },
-  {
-    "id": "e8875797",
-    "name": "Dan White",
-    "tagline": "Head of CX Strategy & Operations",
-    "kind": "text",
-    "avatar": "/images/testimonials/avatars/dan-white.webp",
-    "linkedin": "https://www.linkedin.com/in/bartcagara/",
-    "text": "I worked with Bart as a coaching client after a real health scare.\n\nIt forced me to rethink how I was living. It was a wake-up call, and I knew I needed a different way forward, not another short-term plan.\n\nA few weeks later, I met Bart early one morning during a free assessment. The conversation felt easy, and I trusted him quickly.\n\nBefore Bart, I had tried a lot of systems.\nDiets. Challenges. Apps. Programs. Meetings.\nSome worked briefly, but none stuck.\n\nHere’s what made Bart different for me:\n* His approach was personalized to my actual life.\n* He coached me through tough choices I’d been avoiding.\n* He slowed me down when I wanted to sprint.\n* He kept everything simple and doable.\n* He helped me build habits that are still working for me today.\n\nTwo moments that really stand out for me from our 6 months of coaching:\n\nBefore Bart, when I traveled for work, I never had a plan. After Bart, when I traveled for a big work event, I came home exactly where I started weight-wise. That had never happened before. The best part was that I enjoyed the trip + had good food and drinks, without stressing out. Bart helped me plan, not panic.\n\nLater in our coaching, I hit a weight goal I’d been chasing. As I reached it, I realized I wasn’t grinding anymore. The nutrition and training we’d built together felt automatic. That shift came from Bart’s steady coaching.\n\nThrough our weekly calls, Bart didn’t just coach & analyze my workouts. He helped me rethink food, stress, sleep, travel, and routines. We talked about real life. Work dinners. Late nights. Cravings. Hotel gyms. How to stay steady without being rigid. Those conversations made all the difference for me.\n\nWorking with Bart was the best money I’ve ever spent on my health and I’d do it again without hesitation.\n\nIf you want a coach who is steady, practical, available, deeply knowledgeable, and fully invested in your success, Bart is your guy. Plus he’s a great hang too. Ask him for his best music and show recommendations and thank me later."
   },
   {
     "id": "2a93f639",
