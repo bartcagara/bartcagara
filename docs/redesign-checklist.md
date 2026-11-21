@@ -61,6 +61,8 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - [ ] Push branch, Cloudflare preview link for Bart's phone
 
 ## Found along the way
+- 2026-11-21: new default page title/description ("Get in shape one last time | Bart Cagara" + first-screen subhead) also shows on pages without their own; give each page its own before go-live.
+- Preview: https://claude-website-redesign-16cb.bartcagara.pages.dev (build 5f00b98, Lead checked on a 375 phone screen incl. the lake crop and title). Put to Bart (board B-13).
 - 2026-11-21 (HQ Lead): client names in docs as First L. only (docs go to GitHub); private client words live in `docs/redesign/_private-*` (gitignored). Before any client line goes live: one-line question to Bart, "Ask <client> if this line can go on the homepage, without his name?" (voice.md rule 13). Early commits with full names squashed before any push.
 - 2026-11-21: no named event on the Book buttons (autocapture only). Add `book_click` with the button's place on the page in the new build, so the new page can be compared click for click.
 - 2026-11-21: deploy = Cloudflare Pages builds from main (git history "Retry the Pages build"); README's "Netlify" is out of date. A push to main is a deploy. Branch previews: confirm the Pages project name before the preview step.
