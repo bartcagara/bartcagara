@@ -21,7 +21,7 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 
 ## 3. Bart's picks (one at a time, each with my pick)
 - [x] Pick 1 put to Bart (2026-11-21): the hero, keep the headline, new line under it, proof on the first screen (board B-9). Bart asked whether it had been judged by the masters → Fable round 2 (`docs/redesign/fable-round-2-hero.md`), new pick put to him: "Get in shape one last time."
-- [ ] First-screen proof: Ben F.'s conference message (23 Oct: closing party, long flight, weight held), Dan W.'s work-trip line as the fallback (already public). Ben's mirror voice note (20 Nov) for lower on the page. Waiting on Ben's OK, nameless (board B-10). Client words: HQ `02_clients/_private/testimonials/2026-11-21_homepage-proof-candidates.md` and `2026-11-20_ben-f_voice-note_mirror.md`
+- [ ] First-screen proof: Ben F.'s conference message (23 Oct: closing party, long flight, weight held), Dan W.'s work-trip line as the fallback (already public). Ben's mirror voice note (20 Nov) for lower on the page. Bart, 21 Nov: no need to ask Ben; nameless, trimmed by cutting only (board B-10). Client words: HQ `02_clients/_private/testimonials/2026-11-21_homepage-proof-candidates.md` and `2026-11-20_ben-f_voice-note_mirror.md`
 - [ ] Pick 2: the big idea and the line that stays (nine-months screenshot on the site, or Drew W.'s line)
 - [ ] Pick 3: page order, incl. new "why it kept ending" section and "when things calm down" answer
 - [ ] Pick 4: quiz as second door (yes; link under hero button + block after "why it kept ending")
