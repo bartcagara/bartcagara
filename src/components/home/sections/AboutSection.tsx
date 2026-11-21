@@ -20,20 +20,23 @@ function renderInlineBold(text: string) {
 }
 
 function renderParagraphWithLink(text: string, onLinkClick: () => void) {
-  const parts = text.split(TRANSFORMATION_MARKER);
-  if (parts.length === 1) return text;
+  // "{{transformation-link}}" shows "Here it is"; "{{transformation-link|label}}" shows the label.
+  const match = text.match(/\{\{transformation-link(?:\|([^}]*))?\}\}/);
+  if (!match || match.index === undefined) return text;
+  const before = text.slice(0, match.index);
+  const after = text.slice(match.index + match[0].length);
 
   return (
     <>
-      {parts[0]}
+      {before}
       <button
         type="button"
         onClick={onLinkClick}
         className="underline underline-offset-4 decoration-bleu-accent hover:text-bleu-accent transition-colors cursor-pointer"
       >
-        Here it is
+        {match[1] ?? "Here it is"}
       </button>
-      {parts[1]}
+      {after}
     </>
   );
 }
@@ -95,7 +98,7 @@ export function AboutSection({
                   : isFootnote
                     ? paragraph.slice(1)
                     : paragraph;
-                const hasLink = text.includes(TRANSFORMATION_MARKER);
+                const hasLink = text.includes(TRANSFORMATION_MARKER.slice(0, -2));
                 return (
                   <p key={index} className={
                     isBold
