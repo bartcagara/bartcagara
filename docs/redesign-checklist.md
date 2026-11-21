@@ -37,7 +37,7 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - [ ] Fable rewrites every section
 - [ ] Cold reviewer: ten tests and the 17 slop tells on every line
 - [ ] Every number, quote and claim traced to a source
-- [ ] Each client line on the page: Bart asks the client, nameless (one question per client)
+- [x] Each client line on the page: Bart, 21 Nov: "We can use anything to make the website the best possible." Client lines from private chats stay nameless.
 - [ ] Retired lines replaced: `src/data/homepage-content.ts` 145 ("never sticks") and 178 ("for good")
 
 ## 6. Live
