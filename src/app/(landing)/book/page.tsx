@@ -86,7 +86,7 @@ export default function BookPage() {
             <div className="flex-1 px-6 md:px-12 pt-8 pb-20 md:pt-10 md:pb-24">
                 <div className="max-w-6xl mx-auto">
                     {/* No visible copy, by Bart's choice: header, then the booker. */}
-                    <h1 className="sr-only">Book a Restart Audit</h1>
+                    <h1 className="sr-only">Book your Restart Audit</h1>
                     <div id="book-call">
                         <CalendarEmbed forwardUtm />
                     </div>

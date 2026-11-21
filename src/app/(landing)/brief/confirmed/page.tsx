@@ -90,7 +90,7 @@ export default function BriefConfirmedPage() {
                                     If you&apos;ve started over more times than you can count, and the business eats every plan you try, this is for you.
                                 </p>
                                 <p>
-                                    Book a Restart Audit below. In 45 minutes we&apos;ll see where it keeps breaking and whether we&apos;re a good fit.
+                                    Book your Restart Audit below. In 45 minutes we&apos;ll see where it keeps breaking and whether we&apos;re a good fit.
                                 </p>
                             </div>
                         </section>
