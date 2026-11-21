@@ -48,7 +48,7 @@ export function Para({ text }: { text: string }) {
 }
 
 /** Small label, the name, the headline. */
-export function ResultHeading({ result }: { result: QuizResult }) {
+export function ResultHeading({ result, headline }: { result: QuizResult; headline?: string }) {
     return (
         <>
             <p className={MICRO}>{COPY.resultLabel}</p>
@@ -56,7 +56,7 @@ export function ResultHeading({ result }: { result: QuizResult }) {
                 {result.name}
             </h1>
             <p className="mt-4 text-[clamp(1.375rem,6vw,1.75rem)] md:text-[2rem] font-black tracking-[-0.03em] leading-[1.1] text-bleu-accent text-balance">
-                {result.headline}
+                {headline ?? result.headline}
             </p>
         </>
     );

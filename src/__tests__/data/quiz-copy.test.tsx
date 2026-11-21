@@ -48,10 +48,13 @@ describe('result copy', () => {
   });
 });
 
-describe('hurt or sick (Q2 e)', () => {
-  it('finds the sentence it drops and the workout line it follows', () => {
-    const { HURT } = jest.requireActual('@/data/quiz');
+describe('final spec swaps (21 Nov)', () => {
+  it('finds the sentences the hurt and lunch swaps replace', () => {
+    const { HURT, LUNCH } = jest.requireActual('@/data/quiz');
     expect(RESULTS.C.body.some((p) => p.includes(HURT.bodyFrom))).toBe(true);
-    expect(RESULTS.C.thisWeek.filter((p) => p.includes('inverted rows'))).toHaveLength(1);
+    expect(RESULTS.E.body.some((p) => p.includes(LUNCH.bodyFrom))).toBe(true);
+  });
+  it('puts the safety line in the workout for everyone', () => {
+    expect(RESULTS.C.thisWeek.some((p) => p.includes('keep every rep pain-free'))).toBe(true);
   });
 });

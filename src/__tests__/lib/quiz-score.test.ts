@@ -60,15 +60,6 @@ describe('scoreQuiz: tie-breakers', () => {
     expect(r.secondary).toBe('A');
   });
 
-  it('Q2 "hurt or sick" (A2, C1) breaks a tie toward All In, All Out', () => {
-    // C 8 (Q2 e 1, Q3 c 3, Q5 a 4), A 8 (Q2 e 2, Q6 c 3, Q7 d 3)
-    const r = scoreQuiz(a('a', 'eceacd', 'a'));
-    expect(r.totals.C).toBe(8);
-    expect(r.totals.A).toBe(8);
-    expect(r.primary).toBe('A');
-    expect(r.tieBroken).toBe(true);
-  });
-
   it('when Q2 does not settle it, his "how do you start again" answer does', () => {
     // A 6 and E 6 tie; Q2 points to C (not tied); Q3 a points to A
     const r = scoreQuiz(a('a', 'aaacca', 'a'));
@@ -129,9 +120,10 @@ describe('scoreQuiz: the weak-signal rule', () => {
     expect(r.secondary).toBe('A');
   });
 
-  it('exactly 8 points is not a weak signal', () => {
-    const r = scoreQuiz(a('a', 'aacace', 'a'));
-    expect(r.totals.C).toBe(8);
+  it('exactly 10 points is not a weak signal', () => {
+    // C: Q2 a 4, Q3 c 3, Q4 b 1, Q5 e 2
+    const r = scoreQuiz(a('a', 'acbeee', 'a'));
+    expect(r.totals.C).toBe(10);
     expect(r.weakSignal).toBe(false);
   });
 
@@ -139,6 +131,28 @@ describe('scoreQuiz: the weak-signal rule', () => {
     // Only Q2 a, Q3 a and Q5 e score: C 6, A 3
     const r = scoreQuiz(a('a', 'aaeeee', 'a'));
     expect(r.primary).toBe('C');
+    expect(r.weakSignal).toBe(true);
+  });
+});
+
+describe('final spec rules (21 Nov)', () => {
+  const s = (a: string) => scoreQuiz(a.split('') as AnswerLetter[]);
+  it('Q2 "hurt or sick" scores nothing', () => {
+    const r = s('aeaaaaaa');
+    const base = s('aaaaaaaa');
+    expect(r.totals.C).toBe(base.totals.C - 4);
+  });
+  it('Q6 "evenings are fine" keeps Running on Empty from winning or coming second', () => {
+    const r = s('ddda' + 'c' + 'e' + 'ec');
+    expect(r.primary).not.toBe('E');
+    expect(r.secondary).not.toBe('E');
+  });
+  it('Q5 f means being away is not what throws him off', () => {
+    expect(s('aaaaf' + 'aaa').rarelyAway).toBe(true);
+  });
+  it('weak signal is under 10 points', () => {
+    const r = s('aecebeec');
+    expect(r.totals[r.primary]).toBeLessThan(10);
     expect(r.weakSignal).toBe(true);
   });
 });

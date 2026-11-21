@@ -5,7 +5,8 @@ import {
   SECONDARY_MIN_POINTS,
   SECONDARY_MIN_SHARE,
   WEAK_SIGNAL_BELOW,
-  RARELY_AWAY_ANSWER,
+  AT_HOME_ANSWERS,
+  EVENINGS_FINE_ANSWER,
   type AnswerLetter,
   type Points,
   type QuizType,
@@ -26,8 +27,10 @@ export interface QuizScore {
   lastRun: AnswerLetter;
   /** Q8 answer: what bothers him most. */
   stake: AnswerLetter;
-  /** Q5 said he is rarely away from home. */
+  /** Q5 said being away isn't what throws him off (rarely away, or it holds up fine). */
   rarelyAway: boolean;
+  /** Q4 answer: what he has eaten by 3pm. */
+  lunch: AnswerLetter;
 }
 
 function pointsFor(questionIndex: number, letter: AnswerLetter): Points {
@@ -59,8 +62,10 @@ export function scoreQuiz(answers: AnswerLetter[]): QuizScore {
     for (const type of TIE_ORDER) totals[type] += points[type] ?? 0;
   });
 
-  const top = Math.max(...TIE_ORDER.map((t) => totals[t]));
-  const tied = TIE_ORDER.filter((t) => totals[t] === top);
+  // Evenings are fine (Q6 e): Running on Empty can't win or come second.
+  const eligible = TIE_ORDER.filter((t) => !(t === "E" && answers[Q.evenings] === EVENINGS_FINE_ANSWER));
+  const top = Math.max(...eligible.map((t) => totals[t]));
+  const tied = eligible.filter((t) => totals[t] === top);
 
   // Tie-breakers: the type of his Q2 answer, then of his Q3 answer, then TIE_ORDER.
   let primary: QuizType = tied[0];
@@ -73,7 +78,7 @@ export function scoreQuiz(answers: AnswerLetter[]): QuizScore {
   }
 
   // Runner-up: highest of the rest, ties going by TIE_ORDER.
-  const rest = TIE_ORDER.filter((t) => t !== primary);
+  const rest = eligible.filter((t) => t !== primary);
   const runnerUp = rest.reduce((best, t) => (totals[t] > totals[best] ? t : best), rest[0]);
   const secondary =
     totals[runnerUp] >= SECONDARY_MIN_POINTS && totals[runnerUp] >= totals[primary] * SECONDARY_MIN_SHARE
@@ -89,6 +94,7 @@ export function scoreQuiz(answers: AnswerLetter[]): QuizScore {
     years: answers[Q.years],
     lastRun: answers[Q.lastRun],
     stake: answers[Q.stake],
-    rarelyAway: answers[Q.away] === RARELY_AWAY_ANSWER,
+    rarelyAway: AT_HOME_ANSWERS.includes(answers[Q.away]),
+    lunch: answers[Q.lunch],
   };
 }

@@ -39,11 +39,11 @@ export const QUESTIONS: QuizQuestion[] = [
     id: "q2",
     text: "Think about the last time you were on track. What ended it?",
     answers: [
-      { letter: "a", text: "I went on a trip or work got heavy, and I never got back on track.", points: { C: 4 } },
+      { letter: "a", text: "I went on a trip, or work or home got heavy, and I never got back on track.", points: { C: 4 } },
       { letter: "b", text: "I had one bad weekend and then wrote off the rest of the month.", points: { A: 4 } },
       { letter: "c", text: "The challenge, the trainer or the goal date ended, and I drifted after that.", points: { F: 4 } },
       { letter: "d", text: "Nothing really happened. I just ran out of gas.", points: { E: 4 } },
-      { letter: "e", text: "I got hurt or sick.", points: { A: 2, C: 1 } },
+      { letter: "e", text: "I got hurt or sick.", points: {} },
     ],
   },
   {
@@ -76,6 +76,7 @@ export const QUESTIONS: QuizQuestion[] = [
       { letter: "c", text: "I barely eat during the day and then make up for it at dinner.", points: { E: 3 } },
       { letter: "d", text: "I'm fine if someone's checking on me, but on my own I let it go.", points: { F: 3 } },
       { letter: "e", text: "I'm rarely away. My weeks fall apart at home.", points: { C: 2 } },
+      { letter: "f", text: "It holds up fine. Being away isn't what throws me off.", points: {} },
     ],
   },
   {
@@ -114,7 +115,7 @@ export const QUESTIONS: QuizQuestion[] = [
 ];
 
 /** Index of each question in QUESTIONS that the scoring reads by name. */
-export const Q = { years: 0, lastRun: 1, restart: 2, away: 4, stake: 7 } as const;
+export const Q = { years: 0, lastRun: 1, restart: 2, lunch: 3, away: 4, evenings: 5, stake: 7 } as const;
 
 /** When the top scores tie and neither tie-breaker settles it: most common first on calls. */
 export const TIE_ORDER: QuizType[] = ["C", "A", "E", "F"];
@@ -124,7 +125,7 @@ export const SECONDARY_MIN_POINTS = 6;
 /** ...and at least this share of the winner's points. */
 export const SECONDARY_MIN_SHARE = 0.5;
 /** A winner under this many points gets the weak-signal opening. */
-export const WEAK_SIGNAL_BELOW = 8;
+export const WEAK_SIGNAL_BELOW = 10;
 /** "I'm fairly sure" shows only from this many points up (cold reader, 21 Nov: 9 points from answers that barely fit read as overconfident). */
 export const CONFIDENT_FROM = 12;
 
@@ -156,18 +157,18 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     nameInSentence: "the Calm\u2011Week Plan",
     headline: "Your plan only works in a calm week.",
     body: [
-      "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
+      "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
       "You've probably put that down to not having the time. I'd look at the plan instead, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
       "**Don't wait for a good week.** I've got a workout that fits into your worst one. It takes ten to fifteen minutes and you don't need a gym.",
-      "Do push-ups, then inverted rows, then squats. For the rows, lie under a sturdy table, hold the edge and pull your chest up to it. Take every set close to the point where you can't do another rep, rest a minute and go through it again. If you have the time and the strength left, do a third round.",
+      "Do push-ups, then inverted rows, then squats. For the rows, lie under a sturdy table, hold the edge and pull your chest up to it. Take every set close to the point where you can't do another rep, rest a minute and go through it again. If you have the time and the strength left, do a third round. If something's hurting, or you're coming back from being sick, keep every rep pain-free and stop a few reps short.",
       "Do it tomorrow morning, before work. You'll walk in feeling tighter, like a guy who already did something hard today, and you won't want to waste that.",
       "At lunch you'll want a real meal. Start the plate with a good piece of protein, then add vegetables and some slow carbs like rice or potatoes. By dinner you've made good decisions all day, so you don't overeat, and you actually talk with the people at the table.",
       "Next time you pick a plan, **ask yourself if it would survive your worst week.**",
     ],
     secondLine:
-      "Your answers point to a second thing as well, which is busy weeks. A trip or a busy stretch throws you off and getting back takes a long time, so whatever you do next has to work in a bad week too.",
+      "Your answers point to a second thing as well. Busy weeks throw you off, so whatever you do next has to work in a bad week too.",
   },
   A: {
     type: "A",
@@ -176,9 +177,9 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     nameInSentence: "All In, All Out",
     headline: "You're either all in or all out.",
     body: [
-      "Starting has never been your problem. You go all in on a Monday, and for a few weeks it works.",
-      "Then something small, like a dinner out or a few drinks, breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
-      "The harder you go during the week, the worse those moments get. After five days of eating as little as you can, you sit down to Friday dinner starving, and you overeat.",
+      "When you're on, you're all in, and for a few weeks it works.",
+      "Most times it's something small, like a dinner out or a few drinks, that breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
+      "The harder you go during the week, the worse those moments get. If you've spent five days eating as little as you can, you sit down to Friday dinner starving, and you overeat.",
     ],
     thisWeek: [
       "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
@@ -195,15 +196,15 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     headline: "Every time you got in shape, it ended when the program did.",
     body: [
       "When things went well, something was keeping you on track, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
-      "Then it ended and the routine went with it, because you'd been following someone else's plan and nobody showed you how to make your own.",
+      "Without it, the routine didn't last, because you'd been following someone else's plan and nobody showed you how to make your own.",
       "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
     ],
     thisWeek: [
-      "Think back to the last time you were in good shape and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long weekend walk with your wife. **Forget everything else and do just those this week.**",
-      "Keep them small enough that skipping would feel silly. By Sunday you'll have stuck to something with nobody checking, only because you wanted to, and no program ever gave you that.",
+      "Think back to the last time you were on track and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long walk you took every weekend. **Forget everything else and do just those this week.**",
+      "Keep them small enough that skipping would feel silly. A week from now you'll have stuck to something with nobody checking, only because you wanted to, and no program ever gave you that.",
     ],
     secondLine:
-      "Your answers point to a second thing as well, which is that every time you got in shape, someone or something else was keeping you on track, and it ended when they did.",
+      "Your answers point to a second thing as well, which is that you do well while someone or something else is keeping you on track, and it ends when they do.",
   },
   E: {
     type: "E",
@@ -220,7 +221,7 @@ export const RESULTS: Record<QuizType, QuizResult> = {
       "Think of that lunch as an investment in the second half of your day. You get through the afternoon on steady energy, and you sit down to dinner hungry but not starving, with enough left to talk with the people at the table.",
     ],
     secondLine:
-      "Your answers point to a second thing as well, which is that you get through your days on very little food, and by evening you're starving.",
+      "Your answers point to a second thing as well, which is that by the evening you're running low, on food, on energy or both. Whatever you do next has to deal with that too.",
   },
 };
 
@@ -236,11 +237,11 @@ export const YEARS_LINES: Record<string, string> = {
 
 /** [LAST RUN], from Q2. Same paragraph, right after [YEARS]. */
 export const LAST_RUN_LINES: Record<string, string> = {
-  a: "The last time you were on track, a trip or a heavy stretch at work ended it, and you never got going again.",
+  a: "The last time you were on track, a trip or a heavy stretch at work or at home ended it, and you never got going again.",
   b: "The last time you were on track, one bad weekend ended it, and then you wrote off the month.",
   c: "The last time you were on track, it lasted as long as the program did, and then you drifted.",
   d: "Nothing in particular ended it the last time you were on track. You just ran out of gas.",
-  e: "The last time you were on track, getting hurt or sick ended it.",
+  e: "The last time you were on track, getting hurt or sick ended it. I can't judge that from a quiz, so I went by your other answers.",
 };
 
 /** [DISRUPTION] in result C, from Q5. */
@@ -249,28 +250,37 @@ export const DISRUPTION = {
   rarelyAway: "work takes over for a week or something at home needs all of you",
 } as const;
 
-/** Q5 answer that means he is rarely away. */
-export const RARELY_AWAY_ANSWER: AnswerLetter = "e";
+/** Q5 answers that mean being away isn't what throws him off (rarely away, or it holds up fine). */
+export const AT_HOME_ANSWERS: AnswerLetter[] = ["e", "f"];
+
+/** Q6 "Evenings aren't a problem for me": Running on Empty can't win or be second (Fable, 21 Nov). */
+export const EVENINGS_FINE_ANSWER: AnswerLetter = "e";
+
+/** Q4 "A proper lunch, most days" with Running on Empty: body[0] says what he told us instead. */
+export const LUNCH = {
+  answer: "e",
+  bodyFrom: "I'd guess you barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once.",
+  bodyTo: "You told me you eat a proper lunch most days. I'd guess it's still not enough to get you through the day, because by the evening you're hungry and worn out at once.",
+} as const;
 
 /** [SECOND] when there is no secondary type. */
 /**
  * When Q2 is "I got hurt or sick" (Bart, 21 Nov, after the cold reader): the
- * Calm-Week workout gets a safety line after the circuit, and the body drops
+ * body drops
  * "You've probably put that down to not having the time", which would
  * contradict what he just said.
  */
 export const HURT = {
   lastRun: "e",
-  workoutLine: "If something's hurting, keep every rep pain-free and stop a few reps short.",
   bodyFrom: "You've probably put that down to not having the time. I'd look at the plan instead, because ",
-  bodyTo: "I'd look at the plan, because ",
+  bodyTo: "The way I see it, ",
 } as const;
 
-export const NO_SECOND_LINE = "Your answers all point the same way, so I'm fairly sure about this one.";
+export const NO_SECOND_LINE = "Most of your answers point the same way, so I'm fairly sure about this one.";
 
 /** Weak signal: first in the body; the no-secondary line is left out. */
 export const WEAK_SIGNAL_LINE =
-  "Your answers don't point strongly at any one thing, which usually means you have less to fix than most. This is the nearest match, so take what fits and leave the rest.";
+  "Nothing in your answers points strongly at one thing, so take what fits below and leave the rest.";
 
 /** [STAKE], from Q8, just before the bridge. */
 export const STAKE_LINES: Record<string, string> = {
@@ -307,19 +317,19 @@ export const COPY = {
   headerLabel: "The Restart Quiz",
   startHeadline: "Find out why you keep starting over.",
   startLine:
-    "It takes two minutes, and at the end I'll tell you what's most likely behind it and what I'd change first.",
+    "It takes two minutes, and at the end I'll tell you what's most likely behind it.",
   startButton: "Start",
   back: "Back",
   resultLabel: "What kills your restarts",
+  /** In place of the result's headline when the signal is weak. */
+  weakHeadline: "This is the closest match, but I'm not sure about it.",
   /** Small headings on the result, in order. "This week" is the big one behind the gate. */
   toldMeHeading: "What you told me",
   goingOnHeading: "What's going on",
   thisWeekHeading: "This week",
   nextStepHeading: "Your next step",
   gateHeading: "Want to know what I'd do first?",
-  /** `{type}` is the result's nameInSentence. */
-  gateLine:
-    "Leave your first name and email and I'll show you the one thing I'd change this week for {type}.",
+  gateLine: "Leave your first name and email and I'll show you what I'd do this week if I were you.",
   gateButton: "Show me",
   gateNote:
     "You'll also get my newsletter, the Founder's Fitness Brief, every Thursday. It's one email a week and you can unsubscribe any time.",

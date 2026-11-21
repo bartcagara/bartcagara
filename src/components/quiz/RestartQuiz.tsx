@@ -7,6 +7,7 @@ import {
     COPY,
     DISRUPTION,
     HURT,
+    LUNCH,
     LAST_RUN_LINES,
     NO_SECOND_LINE,
     QUESTIONS,
@@ -224,13 +225,15 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
     const result = RESULTS[score.primary];
     const hurt = score.lastRun === HURT.lastRun;
     const body = fillBody(result, score.rarelyAway ? DISRUPTION.rarelyAway : DISRUPTION.travels).map((p) =>
-        hurt ? p.replace(HURT.bodyFrom, HURT.bodyTo) : p
-    );
-    // The workout line is the one with the circuit (Calm-Week only).
-    const thisWeek = hurt
-        ? result.thisWeek.flatMap((p) => (p.includes("inverted rows") ? [p, HURT.workoutLine] : [p]))
-        : result.thisWeek;
-    const second = score.secondary ? RESULTS[score.secondary].secondLine : score.totals[score.primary] >= CONFIDENT_FROM ? NO_SECOND_LINE : null;
+        (hurt ? p.replace(HURT.bodyFrom, HURT.bodyTo) : p)
+    ).map((p) => (score.lunch === LUNCH.answer ? p.replace(LUNCH.bodyFrom, LUNCH.bodyTo) : p));
+    const second = score.weakSignal
+        ? null
+        : score.secondary
+          ? RESULTS[score.secondary].secondLine
+          : score.totals[score.primary] >= CONFIDENT_FROM
+            ? NO_SECOND_LINE
+            : null;
 
     // quiz_fix_viewed when "This week" shows.
     const fixSent = useRef(false);
@@ -243,7 +246,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 
     return (
         <article>
-            <ResultHeading result={result} />
+            <ResultHeading result={result} headline={score.weakSignal ? COPY.weakHeadline : undefined} />
 
             <section className="mt-10">
                 <MicroHeading>{COPY.toldMeHeading}</MicroHeading>
@@ -267,7 +270,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 
             <div className="mt-10">
                 {gated ? (
-                    <ThisWeek result={result} lines={thisWeek} />
+                    <ThisWeek result={result} />
                 ) : (
                     <Gate score={score} onGated={onGated} />
                 )}
@@ -293,7 +296,6 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 /** The light blue box with the navy bar on top, as at the foot of every newsletter issue. */
 function Gate({ score, onGated }: { score: QuizScore; onGated: () => void }) {
     const posthog = usePostHogClient();
-    const result = RESULTS[score.primary];
     const boxRef = useRef<HTMLDivElement>(null);
     const shownSent = useRef(false);
 
@@ -318,7 +320,7 @@ function Gate({ score, onGated }: { score: QuizScore; onGated: () => void }) {
         <div ref={boxRef} className="bg-bleu-fumee border-t-4 border-bleu-nuit px-5 py-6 md:px-8 md:py-8">
             <h2 className="text-xl md:text-2xl font-black tracking-[-0.03em] leading-tight">{COPY.gateHeading}</h2>
             <p className="mt-3 text-base md:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                {COPY.gateLine.replace("{type}", result.nameInSentence)}
+                {COPY.gateLine}
             </p>
             <div className="mt-6">
                 <OptinForm
