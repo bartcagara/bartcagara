@@ -1,5 +1,7 @@
 # Website redesign checklist (Website Lead, started 2026-11-21)
 
+**STOPPED by Bart, 21 Nov 2026:** "Let's stop this project ... I don't want to waste any more tokens on this." The live site is unchanged; this branch and its preview stay unmerged. Kept: the call count (HQ `02_clients/_private/2026-11-21_what-men-raise-on-calls.md`, business.md updated), the copywriting lens web section. Possible later, only if Bart asks: tidy the current homepage where it's busy (he mentioned navy section backgrounds help the flow); one button wording on /brief/confirmed and /book ("Book Restart Audit") is fixed on this branch only.
+
 Brief: `docs/redesign-brief.md` (8 Nov) and HQ Lead's task of 21 Nov (Bart: "Yes, start it", board B-8).
 Branch: `claude/website-redesign-16cbf0`. Nothing goes live or to main without Bart's yes.
 Method copied from getstack.to: `~/Desktop/hq/05_stack/evidence/2026-11/landing-claude-design/`.
