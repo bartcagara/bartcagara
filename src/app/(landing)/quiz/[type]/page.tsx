@@ -29,6 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ type: str
         description: result.headline,
         alternates: { canonical: `/quiz/${result.slug}` },
         robots: { index: false, follow: false },
+        openGraph: { images: [{ url: "/images/og-quiz.jpg", width: 1200, height: 630 }] },
+        twitter: { card: "summary_large_image", images: ["/images/og-quiz.jpg"] },
     };
 }
 

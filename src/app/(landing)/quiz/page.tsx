@@ -25,13 +25,12 @@ export const metadata: Metadata = {
         siteName: "Bart Cagara",
         title: TITLE,
         description: DESCRIPTION,
-        // No quiz share card yet: /book's stands in.
         images: [
             {
-                url: "/images/og-book.jpg",
+                url: "/images/og-quiz.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Restart Audit: 45 minutes, you and me. Tell me the whole story, and I'll give you my honest read on what it takes to make this your last restart."
+                alt: "The Restart Quiz: find out why you keep starting over. It takes two minutes, and at the end I'll tell you what's most likely behind it."
             }
         ]
     },
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
         card: "summary_large_image",
         title: TITLE,
         description: DESCRIPTION,
-        images: ["/images/og-book.jpg"],
+        images: ["/images/og-quiz.jpg"],
         creator: "@bartcagara",
         site: "@bartcagara"
     },
