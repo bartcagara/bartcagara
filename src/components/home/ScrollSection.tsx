@@ -51,34 +51,33 @@ export const ScrollSection = memo(({ title, children }: ScrollSectionProps) => {
   }, []);
 
   return (
-    <div className="mb-20">
-      <div className="flex justify-between items-center gap-4 mb-8">
-        <h3 className="text-2xl md:text-3xl font-black uppercase tracking-tight flex-shrink min-w-0">
-          <span className="text-bleu-accent mr-2" aria-hidden="true">/</span>
+    <div>
+      <div className="flex justify-between items-center gap-4 mb-5 md:mb-6">
+        <h3 className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70 flex-shrink min-w-0">
           {title}
         </h3>
         <div className="flex gap-2 flex-shrink-0">
           <button
             onClick={() => scroll(-1)}
-            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showLeft ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
+            className={`w-11 h-11 bg-white border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showLeft ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
             disabled={!showLeft}
             aria-label="Scroll left"
           >
-            <ArrowLeft className="w-6 h-6" />
+            <ArrowLeft className="w-5 h-5" strokeWidth={2.5} />
           </button>
           <button
             onClick={() => scroll(1)}
-            className={`w-12 h-12 border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showRight ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
+            className={`w-11 h-11 bg-white border-2 border-bleu-nuit flex items-center justify-center transition-all hover:bg-bleu-nuit hover:text-white ${!showRight ? 'opacity-40 cursor-not-allowed' : 'opacity-100'}`}
             disabled={!showRight}
             aria-label="Scroll right"
           >
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
           </button>
         </div>
       </div>
 
       <div
-        className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide snap-x"
+        className="flex gap-5 md:gap-6 overflow-x-auto scrollbar-hide snap-x pb-2 pr-1"
         ref={scrollRef}
       >
         {children}

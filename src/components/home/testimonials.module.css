@@ -38,8 +38,8 @@
   gap: 8px;
   padding: 16px;
   background: #fff;
-  border: 1px solid rgb(230 230 230);
-  box-shadow: 4px 4px 0 0 #09071c;
+  border: 2px solid var(--bleu-nuit);
+  box-shadow: 3px 3px 0 0 var(--bleu-accent);
   text-align: left;
 }
 
@@ -139,7 +139,7 @@
   min-height: 100%;
   background: #000;
   overflow: hidden;
-  box-shadow: 4px 4px 0 0 #09071c;
+  box-shadow: 3px 3px 0 0 var(--bleu-accent);
 }
 
 .video {

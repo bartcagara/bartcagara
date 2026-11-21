@@ -1,108 +1,69 @@
-import { SectionBadge } from "@/components/ui/SectionBadge";
-import type { ProgramSectionProps } from "@/components/home/types";
+import { HomeBookButton } from "@/components/home/HomeBookButton";
+import { MessageShot } from "@/components/home/MessageShot";
+import { CONTAINER, FRAME, GUTTER, H2, H3, MICRO, SECTION } from "@/components/home/ui";
+import type { HomepageContent } from "@/components/home/types";
 
 /**
- * ProgramSection - FOUNDER ATHLETE OS program details
- * Shows the 3-phase program structure and the delivery block
+ * The offer. A client's message about one call, the title, then the six
+ * months as three step cards: one under the other on a phone, joined by a
+ * thin line; three across on a wide screen. "Then you fire me." closes it,
+ * with the message that came 9 months after coaching ended.
  */
-export function ProgramSection({ title, subtitle, phases, delivery }: ProgramSectionProps) {
-
+export function ProgramSection({ content }: { content: HomepageContent["program"] }) {
   return (
-    <section id="program" className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="program-title">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-24">
-          <SectionBadge variant="light">The Program</SectionBadge>
-          <h2 id="program-title" className="text-h2 text-white mb-8">
-            {title.split('\n').map((line, i, arr) => (
-              <span key={i}>
-                {line}
-                {i < arr.length - 1 && <br />}
-              </span>
-            ))}
-          </h2>
-          <p className="text-lead-lg font-medium text-white/70 max-w-3xl leading-tight">
-            {subtitle}
-          </p>
+    <section id="program" className={GUTTER} aria-labelledby="program-title">
+      <div className={`${CONTAINER} ${SECTION}`}>
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_400px] gap-12 xl:gap-24 items-start">
+          <MessageShot message={content.message} className="lg:order-2 lg:mt-2 max-w-[440px]" />
+          <div className="lg:order-1">
+            <h2 id="program-title" className={H2}>{content.title}</h2>
+            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] font-bold text-bleu-nuit text-balance">{content.subtitle}</p>
+          </div>
         </div>
 
-        {/* VERTICAL TIMELINE */}
-        <div className="relative mt-24">
-          {/* Vertical Line */}
-          <div className="absolute left-[19px] top-4 bottom-0 w-0.5 bg-white/20 md:left-[2.5rem]" aria-hidden="true"></div>
-
-          {phases.map((phase, index) => (
-            <div key={phase.number} className={`relative pl-20 md:pl-32 ${index < phases.length - 1 ? 'mb-20' : ''}`}>
-              <span className="absolute left-0 top-[-10px] text-5xl md:text-7xl font-black text-bleu-accent bg-bleu-nuit leading-none z-10 pr-2" aria-label={`Phase ${phase.number}`}>
-                {phase.number}
-              </span>
-              <div className={index < phases.length - 1 ? "border-b-2 border-white/10 pb-12" : ""}>
-                <h3 className="text-2xl md:text-4xl font-black uppercase mb-4 text-white leading-none">
-                  {phase.title}
-                  <span className="text-bleu-accent text-lg md:text-2xl block mt-2 font-bold tracking-tighter">
-                    ({phase.weeks})
+        <ol className="mt-14 md:mt-20 grid gap-10 md:grid-cols-3 md:gap-6 lg:gap-8 list-none">
+          {content.steps.map((step, i) => (
+            <li key={step.number} className="relative">
+              {/* the thin line joining one step to the next (phone) */}
+              {i < content.steps.length - 1 && (
+                <span className="md:hidden absolute left-8 -bottom-10 h-10 w-0.5 bg-bleu-nuit" aria-hidden="true" />
+              )}
+              <div className={`h-full bg-white p-6 md:p-7 ${FRAME}`}>
+                <div className="flex items-baseline justify-between gap-4">
+                  <span className="text-5xl md:text-6xl font-black tracking-[-0.04em] leading-none text-bleu-accent" aria-hidden="true">
+                    {step.number}
                   </span>
-                </h3>
-
-                {/* FOCUS */}
-                <div className="mb-6">
-                  <span className="font-mono text-bleu-accent tracking-normal uppercase text-sm bg-white/5 px-2 py-1 inline-block">
-                    <span aria-hidden="true">{"// "}</span>FOCUS: {phase.focus}
-                  </span>
+                  <span className={MICRO}>{step.weeks}</span>
                 </div>
-
-                {/* PROTOCOL */}
-                <ul className="text-lead text-white/80 leading-relaxed font-medium mb-8 max-w-3xl space-y-2">
-                  {phase.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start">
-                      <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
-                      <span>
-                        {item.split(/(\*\*.*?\*\*)/).map((part, i) => {
-                          if (part.startsWith('**') && part.endsWith('**')) {
-                            return <strong key={i} className="text-white">{part.slice(2, -2)}</strong>;
-                          }
-                          return part;
-                        })}
-                      </span>
+                <h3 className={`mt-5 ${H3} text-bleu-nuit`}>
+                  <span className="sr-only">Step {step.number}: </span>
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-lg md:text-xl font-bold leading-snug text-bleu-nuit text-pretty">{step.outcome}</p>
+                <ul className="mt-5 pt-5 border-t-2 border-bleu-nuit/10 space-y-3 list-none">
+                  {step.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-base md:text-lg font-medium leading-snug text-bleu-nuit/75">
+                      <span className="mt-[0.55em] h-1.5 w-1.5 shrink-0 bg-bleu-accent" aria-hidden="true" />
+                      <span className="text-pretty">{item}</span>
                     </li>
                   ))}
                 </ul>
-
-                {/* THE WIN */}
-                <div className="inline-block bg-bleu-accent p-4 shadow-brutal-white-sm">
-                  <span className="font-black text-white uppercase tracking-tighter block mb-1 text-sm">
-                    THE WIN:
-                  </span>
-                  <span className="font-black text-white uppercase tracking-tighter text-lg md:text-xl leading-tight block">
-                    {phase.win}
-                  </span>
-                </div>
               </div>
-            </div>
+            </li>
           ))}
-        </div>
+        </ol>
 
-        {/* DELIVERY */}
-        <div className="mt-24 max-w-3xl">
-          <div className="mb-6">
-            <span className="font-mono text-bleu-accent tracking-normal uppercase text-sm bg-white/5 px-2 py-1 inline-block">
-              <span aria-hidden="true">{"// "}</span>{delivery.heading}
-            </span>
+        <div className="mt-16 md:mt-24 grid lg:grid-cols-[minmax(0,1fr)_480px] gap-10 xl:gap-24 items-start">
+          <div>
+            <p className={H2}>{content.closer}</p>
+            <div className="mt-8 md:mt-10 hidden lg:block">
+              <HomeBookButton location="offer">{content.ctaText}</HomeBookButton>
+            </div>
           </div>
-          <ul className="text-lead text-white/80 leading-relaxed font-medium max-w-3xl space-y-2">
-            {delivery.items.map((item, itemIndex) => (
-              <li key={itemIndex} className="flex items-start">
-                <span className="text-bleu-accent mr-4 font-black" aria-hidden="true">/</span>
-                <span>
-                  {item.split(/(\*\*.*?\*\*)/).map((part, i) => {
-                    if (part.startsWith('**') && part.endsWith('**')) {
-                      return <strong key={i} className="text-white">{part.slice(2, -2)}</strong>;
-                    }
-                    return part;
-                  })}
-                </span>
-              </li>
-            ))}
-          </ul>
+          <MessageShot message={content.afterMessage} className="max-w-[520px]" />
+          <div className="lg:hidden">
+            <HomeBookButton location="offer">{content.ctaText}</HomeBookButton>
+          </div>
         </div>
       </div>
     </section>

@@ -1,36 +1,26 @@
-import { SectionBadge } from "@/components/ui/SectionBadge";
 import { OptinForm } from "@/components/newsletter/OptinForm";
+import { CONTAINER, GUTTER, H2, PROSE, SECTION } from "@/components/home/ui";
 
 interface BriefingSectionProps {
-  label: string;
   heading: string;
   body: readonly string[];
   submitLabel: string;
 }
 
-/**
- * BriefingSection - Newsletter opt-in block
- * Dark section that reuses the /brief email signup form
- * (dark variant so the form reads on the navy background)
- */
-export function BriefingSection({ label, heading, body, submitLabel }: BriefingSectionProps) {
+/** Not booking today: /brief's signup, joined form and all. */
+export function BriefingSection({ heading, body, submitLabel }: BriefingSectionProps) {
   return (
-    <section className="py-24 md:py-32 bg-bleu-nuit text-white" aria-labelledby="briefing-title">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl">
-          <SectionBadge variant="light">{label}</SectionBadge>
-          <h2 id="briefing-title" className="text-h2 text-white mb-8">
-            {heading}
-          </h2>
-          <div className="space-y-6 mb-12 max-w-2xl">
-            {body.map((paragraph, index) => (
-              <p key={index} className="text-lead font-medium text-white/70 leading-relaxed">
-                {paragraph}
-              </p>
+    <section className={GUTTER} aria-labelledby="briefing-title">
+      <div className={`${CONTAINER} ${SECTION}`}>
+        <div className="max-w-[600px]">
+          <h2 id="briefing-title" className={H2}>{heading}</h2>
+          <div className={`mt-4 md:mt-6 ${PROSE}`}>
+            {body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <div className="max-w-md">
-            <OptinForm submitLabel={submitLabel} showFootnote={false} variant="dark" />
+          <div className="mt-8 md:mt-10">
+            <OptinForm submitLabel={submitLabel} layout="joined" showFootnote={false} />
           </div>
         </div>
       </div>

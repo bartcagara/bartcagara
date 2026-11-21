@@ -1,27 +1,31 @@
-import { SectionBadge } from "@/components/ui/SectionBadge";
+import { Plus } from "lucide-react";
+import { CONTAINER, GUTTER, H2, PROSE, SECTION } from "@/components/home/ui";
 import type { ObjectionItem } from "@/components/home/types";
 
-export function ObjectionsSection({ objections }: { objections: readonly ObjectionItem[] }) {
+/**
+ * The questions, closed, as /quiz's answer cards. On a phone he sees the
+ * title and three lines, and taps the one he has.
+ */
+export function ObjectionsSection({ title, objections }: { title: string; objections: readonly ObjectionItem[] }) {
   return (
-    <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-bleu-nuit text-white" aria-labelledby="objections-title">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-24">
-          <SectionBadge variant="light">The Questions</SectionBadge>
-          <h2 id="objections-title" className="text-h2 text-white">
-            WHAT&apos;S STOPPING YOU?
-          </h2>
-        </div>
-
-        <div className="max-w-3xl space-y-12">
-          {objections.map((item, index) => (
-            <div key={index} className="border-l-4 border-bleu-accent pl-8">
-              <p className="text-lead font-black text-white leading-tight mb-3">
-                &ldquo;{item.question}&rdquo;
-              </p>
-              <p className="text-lead font-medium text-white/70 leading-relaxed">
-                {item.answer}
-              </p>
-            </div>
+    <section className={GUTTER} aria-labelledby="objections-title">
+      <div className={`${CONTAINER} ${SECTION}`}>
+        <h2 id="objections-title" className={`${H2} max-w-3xl`}>{title}</h2>
+        <div className="mt-10 md:mt-12 max-w-3xl space-y-4">
+          {objections.map((item) => (
+            <details key={item.question} className="group bg-white border-2 border-bleu-nuit shadow-brutal-sm">
+              <summary className="flex items-center justify-between gap-5 min-h-14 px-5 py-4 md:px-6 md:py-5 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+                <span className="text-lg md:text-xl font-bold leading-snug text-bleu-nuit text-pretty">
+                  &ldquo;{item.question}&rdquo;
+                </span>
+                <Plus
+                  className="w-6 h-6 shrink-0 text-bleu-accent transition-transform duration-200 group-open:rotate-45"
+                  strokeWidth={3}
+                  aria-hidden="true"
+                />
+              </summary>
+              <p className={`${PROSE} px-5 pb-5 md:px-6 md:pb-6 -mt-1`}>{item.answer}</p>
+            </details>
           ))}
         </div>
       </div>

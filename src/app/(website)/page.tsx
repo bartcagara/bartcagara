@@ -1,28 +1,26 @@
 import dynamic from "next/dynamic";
 import { HeroSection } from "@/components/home/sections";
+import { HomeHeader } from "@/components/home/HomeHeader";
+import { HomeFooter } from "@/components/home/HomeFooter";
 import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
 import { SectionSkeleton } from "@/components/ui/LoadingSkeleton";
 import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 // Lazy load heavy below-the-fold sections to improve initial page load
-const TrustedBy = dynamic(() => import("@/components/home/TrustedBy").then(mod => ({ default: mod.TrustedBy })), {
-  loading: () => <SectionSkeleton minHeight="min-h-[100px]" bgColor="bg-bleu-nuit" />
-});
-
 const DiagnosisSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.DiagnosisSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
-const SolutionSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.SolutionSection })), {
+const PatternSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.PatternSection })), {
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const ProgramSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProgramSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const AboutSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.AboutSection })), {
@@ -30,15 +28,15 @@ const AboutSection = dynamic(() => import("@/components/home/sections").then(mod
 });
 
 const ObjectionsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ObjectionsSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const FinalCTASection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FinalCTASection })), {
-  loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-white" />
+  loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-gray-50" />
 });
 
 const BriefingSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.BriefingSection })), {
-  loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-bleu-nuit" />
+  loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-gray-50" />
 });
 
 const businessJsonLd = {
@@ -59,7 +57,7 @@ const businessJsonLd = {
   "priceRange": "$$$$"
 };
 
-// FAQPage structured data sourced from the live "WHAT'S STOPPING YOU?" section
+// FAQPage structured data sourced from the questions section
 // so the JSON-LD always matches the on-page copy verbatim
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -82,6 +80,7 @@ const faqJsonLd = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50 text-bleu-nuit font-sans selection:bg-bleu-accent selection:text-white">
+        <HomeHeader label={HOMEPAGE_CONTENT.headerLabel} />
         {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
@@ -91,84 +90,54 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-        {/* 1. HERO SECTION */}
+        {/* 1. FIRST SCREEN: the message, the photo, the first proof, the quiz door */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
-        {/* TRUSTED BY */}
+        {/* 2. THIS IS YOU */}
         <ErrorBoundary>
-          <TrustedBy />
+          <DiagnosisSection content={HOMEPAGE_CONTENT.diagnosis} />
         </ErrorBoundary>
 
-        {/* 2. THE DIAGNOSIS */}
+        {/* 3. WHY IT KEPT ENDING */}
         <ErrorBoundary>
-          <DiagnosisSection
-            title={HOMEPAGE_CONTENT.diagnosis.title}
-            subtitle={HOMEPAGE_CONTENT.diagnosis.subtitle}
-            items={HOMEPAGE_CONTENT.diagnosis.items}
-          />
+          <PatternSection content={HOMEPAGE_CONTENT.pattern} />
         </ErrorBoundary>
 
-        {/* 3. THE SOLUTION */}
-        <ErrorBoundary>
-          <SolutionSection
-            title={HOMEPAGE_CONTENT.solution.title}
-            subtitle={HOMEPAGE_CONTENT.solution.subtitle}
-            items={HOMEPAGE_CONTENT.solution.items}
-          />
-        </ErrorBoundary>
-
-        {/* 4. THE RESULTS */}
+        {/* 4. PROOF */}
         <ErrorBoundary>
           <ResultsSection />
         </ErrorBoundary>
 
-        {/* 5. THE PROGRAM */}
+        {/* 5. THE OFFER */}
         <ErrorBoundary>
-          <ProgramSection
-            title={HOMEPAGE_CONTENT.program.title}
-            subtitle={HOMEPAGE_CONTENT.program.subtitle}
-            phases={HOMEPAGE_CONTENT.program.phases}
-            delivery={HOMEPAGE_CONTENT.program.delivery}
-          />
+          <ProgramSection content={HOMEPAGE_CONTENT.program} />
         </ErrorBoundary>
 
-        {/* 6. ABOUT */}
+        {/* 6. BART */}
         <ErrorBoundary>
-          <AboutSection
-            title={HOMEPAGE_CONTENT.about.title}
-            subtitle={HOMEPAGE_CONTENT.about.subtitle}
-            imageSrc={HOMEPAGE_CONTENT.about.imageSrc}
-            imageAlt={HOMEPAGE_CONTENT.about.imageAlt}
-            subhead={HOMEPAGE_CONTENT.about.subhead}
-            paragraphs={HOMEPAGE_CONTENT.about.paragraphs}
-            transformationImage={HOMEPAGE_CONTENT.about.transformationImage}
-            credentials={HOMEPAGE_CONTENT.about.credentials}
-          />
+          <AboutSection content={HOMEPAGE_CONTENT.about} />
         </ErrorBoundary>
 
-        {/* 7. OBJECTION PREEMPTION */}
+        {/* 7. QUESTIONS */}
         <ErrorBoundary>
-          <ObjectionsSection objections={HOMEPAGE_CONTENT.objections} />
+          <ObjectionsSection title={HOMEPAGE_CONTENT.objectionsTitle} objections={HOMEPAGE_CONTENT.objections} />
         </ErrorBoundary>
 
-        {/* 8. FINAL CTA */}
+        {/* 8. THE CALL */}
         <ErrorBoundary>
-          <FinalCTASection
-            headline={HOMEPAGE_CONTENT.finalCta.headline}
-            highlightedText={HOMEPAGE_CONTENT.finalCta.highlightedText}
-            body={HOMEPAGE_CONTENT.finalCta.body}
-          />
+          <FinalCTASection content={HOMEPAGE_CONTENT.finalCta} />
         </ErrorBoundary>
 
-        {/* 9. THE BRIEFING */}
+        {/* NOT BOOKING TODAY: THE BRIEF */}
         <ErrorBoundary>
           <BriefingSection
-            label={HOMEPAGE_CONTENT.briefing.label}
             heading={HOMEPAGE_CONTENT.briefing.heading}
             body={HOMEPAGE_CONTENT.briefing.body}
             submitLabel={HOMEPAGE_CONTENT.briefing.submitLabel}
           />
         </ErrorBoundary>
+
+        <HomeFooter />
     </div>
   );
 }

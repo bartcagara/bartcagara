@@ -1,181 +1,214 @@
 /**
  * Homepage Content - The Golden Copy
- * All text, headlines, and copy for the homepage
- * This ensures content integrity and makes updates instant
+ * All words, and the proof each section leads with, for the homepage.
+ * Components only lay these out, so the copy can be swapped here alone.
+ *
+ * Source: docs/redesign/fable-round-6-homepage.md, Part 1, with "Section 5,
+ * with the program breakdown" and the Lead's edit to it (21 Nov 2026).
+ *
+ * Markup in strings: a line wrapped in ** is a key line (bold and larger);
+ * **words** inside a line are bold in place.
  */
 
-export const HOMEPAGE_CONTENT = {
-  hero: {
-    headline: "The founder's",
-    highlightedText: "Last restart.",
-    subheadline: "6 months to get you lean, athletic and off the restart cycle. For good.",
-    ctaText: "BOOK MY RESTART AUDIT",
-    stats: [
-      { value: "50+", label: "Founders coached" },
-      { value: "1:1", label: "You and me" },
-      { value: "6 mo", label: "Then no more restarts" },
-    ],
-  },
+export const BOOK_LABEL = "Book Restart Audit";
 
-  trustedBy: {
-    title: "Trusted by the guys who built:",
+export const HOMEPAGE_CONTENT = {
+  /** The label in the header, as "The Restart Quiz" on /quiz. */
+  headerLabel: "Founder Athlete OS",
+
+  hero: {
+    headline: "Get in shape",
+    highlightedText: "one last time.",
+    subheadline:
+      "I'm Bart, a founder and a dad. I coach founders who played sports. We plan your trips and client dinners before they happen, so a stressful month doesn't set you back.",
+    ctaText: BOOK_LABEL,
+    ctaNote: "45 minutes, on video, with me.",
+    imageSrc: "/images/home/bart-and-son-2.webp",
+    imageAlt: "Bart Cagara in a suit, his son beside him looking up at him",
+    proof: {
+      lead: "Ate poorly at the closing party.",
+      bold: "Weight stayed at exactly 200.",
+      name: "Ben F., founder, the day after flying home from a conference",
+    },
+    quizLink: {
+      text: "Find out why you keep starting over.",
+      href: "/quiz",
+    },
   },
 
   diagnosis: {
-    title: "SHIRT OFF RUINS THE WHOLE THING",
-    subtitle: "",
+    title: "Shirt off ruins the whole thing.",
     items: [
       "Your kids are in the pool, calling for you.",
-      "\"In a minute.\"",
-      "**There is no minute.** There's a calculation: shirt off, move fast, into the water before anyone sees.",
-      "It wasn't always like this. You played sports back in school. The body just worked.",
-      "Then you built a company, and the body paid for it.",
-      "You've tried. Every January, three good weeks, the business eats a month, back to zero. **Every restart harder than the last.**",
-      "You blame your discipline. **It was never the problem.**",
-      "And lately, a voice: **maybe this is just your forties now.**",
-      "**You're reading this because you don't believe that.**",
+      "**\"In a minute.\"**",
+      "There is no minute. You're waiting until nobody's looking.",
+      "Back in school you were the athlete. Then you built a company, and **the body paid for it.**",
     ],
   },
 
-  solution: {
-    title: "THE LAST RESTART",
-    subtitle: "",
-    items: [
-      "6 months from now, it's a regular Tuesday.",
-      "Up before the alarm. Training's done by seven. **It's just what you do now.**",
-      "Your son hits you at the door at full speed. You catch him, throw him over your shoulder, take the stairs two at a time.",
-      "The business still eats whole weeks. **You feel good and look strong anyway.**",
-      "Your wife stops worrying out loud.",
-      "January comes and goes. **Nothing to restart.**",
-      "Then one day you overhear your kid bragging about you to his friends.",
-      "**He's not exaggerating.**",
+  pattern: {
+    title: "Every plan you tried only worked in a calm week.",
+    message: {
+      src: "/images/testimonials/dm-18-chicago.webp",
+      width: 770,
+      height: 272,
+      alt: "Client message: \"Man I am so pumped. I lost weight this week while in a hotel ALL week in Chicago!\" and \"I love that I'm learning how to be bulletproof while on the road.\"",
+      caption: "Drew W., CEO",
+    },
+    body: [
+      "Every January you get three good weeks. Then a trip comes up or work takes over, the plan stops, and you wait for a quieter month.",
+      "So this takes six months, long enough that the heavy weeks at work happen while I'm still around.",
+      "Start in the busy stretch. **That's what we're solving.**",
     ],
+    ctaText: BOOK_LABEL,
   },
 
   results: {
-    headline: "THEY DIDN'T HAVE TIME EITHER",
-    subheadline: "Founders in their forties. Travel, mergers, kids getting sick.",
+    headline: "They didn't have time either.",
+    featuredVideo: {
+      src: "/videos/mj-hurley-testimonial.mp4",
+      captions: "/videos/mj-hurley-testimonial.vtt",
+      poster: "/images/testimonials/mj-hurley-poster.webp",
+      title: "MJ H., client interview",
+      quote: "Looking forward to going to the pool and taking my shirt off.",
+      name: "MJ H., co-founder, former college athlete",
+    },
+    beforeAfters: [
+      {
+        src: "/images/transformations/transformation-9.22cefe81.webp",
+        alt: "Client before-and-after: major fat loss and visible muscle after 24 weeks",
+      },
+      {
+        src: "/images/transformations/transformation-2.e76c02cb.webp",
+        alt: "Client before-and-after: an athletic build rebuilt over 14 months",
+      },
+    ],
+    message: {
+      src: "/images/testimonials/dm-27.webp",
+      width: 1169,
+      height: 640,
+      alt: "Client message: \"I feel much more confident on the beach... I'm not embarrassed to take my shirt off anymore!\"",
+      caption: "Phil D., on vacation",
+    },
     sections: {
       transformations: "Client Photos",
-      interviews: "Client Interviews",
-      dms: "Client DMs",
+      dms: "Client Messages",
       testimonials: "Client Testimonials",
     },
   },
 
   program: {
-    title: "FOUNDER\nATHLETE OS",
-    subtitle: "Six months. Three phases. One outcome: you never start over again.",
-    phases: [
+    message: {
+      src: "/images/testimonials/dm-15.webp",
+      width: 670,
+      height: 688,
+      alt: "Client message: \"I really felt like you uncovered some big areas that were causing me to add way more calories than I realized... huge pieces to the puzzle that we uncovered in one call!\"",
+      caption: "Drew W., CEO, the day after a call",
+    },
+    title: "Six months, you and me.",
+    subtitle: "A call every week. WhatsApp in between.",
+    steps: [
       {
         number: "01",
         title: "The Reset",
         weeks: "Weeks 1-4",
-        focus: "IMMEDIATE CONTROL",
+        outcome: "It fits the week you already have.",
         items: [
-          "**Nutrition Baseline** — You eat food you actually like. The weight moves anyway.",
-          "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
-          "**The Pattern** — We find what kills every attempt and cut it off at the source.",
+          "Two to four short sessions a week",
+          "No meal plan. Food you actually like.",
+          "We find what ended every attempt before this one.",
         ],
-        win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
       },
       {
         number: "02",
         title: "The Build",
         weeks: "Weeks 5-12",
-        focus: "PERFORMANCE UNDER PRESSURE",
+        outcome: "We make it hold on the road.",
         items: [
-          "**Physique** — The body starts looking athletic again. Not gym-big. Athlete.",
-          "**Travel-Proofing** — Restaurants, airports, hotel gyms. Handled.",
-          "**Bloodwork** — Full panel, real analysis. The inside catches up with the outside.",
+          "A hotel-gym version for trips",
+          "Restaurants and airports, handled",
+          "Before a client dinner, send me the menu",
         ],
-        win: "Clothes fit different. People notice. You feel like yourself again.",
       },
       {
         number: "03",
         title: "The Exit",
         weeks: "Weeks 13-24",
-        focus: "FULL AUTONOMY",
+        outcome: "You run it yourself.",
         items: [
-          "**Real Life** — Vacations, pivots, sick kids. The plan holds.",
-          "**Your Program** — We eliminate weak points and build the program that outlasts me.",
-          "**The Handoff** — The programming, the nutrition calls, the adjustments. All of it moves from my head to yours.",
+          "Vacations, pivots, sick kids. The plan holds.",
+          "The decisions move from my head to yours.",
         ],
-        win: "You fire me. You own this.",
       },
     ],
-    delivery: {
-      heading: "HOW IT RUNS",
-      items: [
-        "**Weekly Calls** — You and me, every week. The program fixes the body. The calls fix what kept breaking it.",
-        "**WhatsApp, 24/7** — Stuck at an airport, staring at a menu, lost a week? Message me. I'm there.",
-        "**The App** — Food, training, sleep and steps, connected. It shows you what to fix first, so you're never cutting calories when the real problem is your sleep.",
-      ],
+    closer: "Then you fire me.",
+    afterMessage: {
+      src: "/images/testimonials/dm-28.webp",
+      width: 738,
+      height: 385,
+      alt: "Client message: \"Returned same weight as departed with extensive trying of local cuisine. No limits, no restrictions, just understanding and awareness = recipe for fun. Proud to saw my 11yo to ask for steamed rice instead of fries, same as Daddy did\"",
+      caption: "Adrian K., Group CFO",
+      note: "This hit my phone 9 months after we finished. Nobody was checking in.",
     },
+    ctaText: BOOK_LABEL,
   },
 
   about: {
-    title: "WHO THE FUCK",
-    subtitle: "IS BART?",
-    imageSrc: "/images/home/bart-and-son-2.webp",
-    imageAlt: "Bart Cagara with his son",
-    subhead: "",
+    title: "Who the fuck is Bart?",
+    imageSrc: "/images/bart-headshot.jpg",
+    imageAlt: "Bart Cagara",
     paragraphs: [
-      "I was an athletic kid. Sports was the whole thing.",
       "By the end of college, the athlete was gone.",
-      "I spent years trying to build businesses. **Everything I touched failed.** The body was just the part you could see.",
-      "Tail between my legs, I took a job at a fitness startup.",
-      "It rebuilt me. The body first, then everything attached to it. For the first time in years, I recognized myself again.",
-      "**That's when I built this.**",
-      "Since 2019 I've coached 50+ founders and execs. The ones I hit it off with were always the same guy: played sports back in school, built a company, body paid for it.",
-      "**My son is watching.** I built this so he grows up with a dad who's actually himself.",
-      "I bet you're curious about my before-after. {{transformation-link}}.",
+      "I did Paleo, Primal and keto by the book, and ate lunch at my desk out of a container.",
     ],
+    card: {
+      columns: ["Then", "A year later"],
+      rows: [
+        { label: "LDL cholesterol", then: "360", now: "118" },
+        { label: "Testosterone", then: "330", now: "540" },
+      ],
+    },
+    paragraphsAfter: [
+      "Now I lift four days a week, eat out, and have held 12 to 15% body fat for years.",
+      "**My son is watching.**",
+    ],
+    transformationLink: {
+      lead: "I bet you're curious about my before-after.",
+      link: "See it here.",
+    },
     transformationImage: "/images/transformations/bart-transformation.webp",
-    credentials: ["Sports Nutritionist", "Performance Coach"],
   },
 
-  finalCta: {
-    headline: "Make this the",
-    highlightedText: "Last restart",
-    body: [
-      "Six months from now, your business will be further along. Will your body?",
-      "You know how this goes if nothing changes. **You've restarted enough times.**",
-      "**If that sits wrong, let's talk.**",
-      "45 minutes, you and me. You leave knowing exactly why it never stuck, whether we work together or not.",
-    ],
-  },
-
-  briefing: {
-    label: "Founder's Fitness Brief",
-    heading: "Not booking today? Fair.",
-    body: [
-      "Most of the men I coach read for months before they ever said a word.",
-      "The Brief is one email a week on making this restart your last.",
-    ],
-    submitLabel: "Get the Brief",
-  },
+  objectionsTitle: "What men ask me before they book.",
 
   objections: [
     {
-      question: "I've tried fitness programs before. They never stick.",
-      answer: "Because they handed you a plan and never asked why the last three failed. The reason you quit is specific, findable, and it was never discipline. Finding it is half of what the Restart Audit does.",
-    },
-    {
-      question: "I don't have time for a 6-month commitment.",
-      answer: "You're already spending the time. The calculating, the renegotiating every meal, the starting over — that's the expensive version. This replaces it with a few hours a week and a plan that fits the calendar you actually have.",
-    },
-    {
-      question: "I travel constantly. How does this work on the road?",
-      answer: "A big chunk of Phase 2 is Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly — he's at 12% body fat after 20 years of neglect.",
+      question: "I know what to do. I just need to do it.",
+      answer: "Two out of three men tell me that on the call. What they haven't had is someone who sees the week changing and adjusts on the fly.",
     },
     {
       question: "What does it cost?",
-      answer: "It's a serious investment. We talk exact numbers on the call, once I know what you actually need. Payment plans exist. If you're shopping for the cheapest way to lose weight, this isn't it. If you're done restarting, it is.",
+      answer: "$7,000 paid in full, or about $7,500 split into payments. Same as on the booking form.",
     },
     {
-      question: "What actually happens on the Restart Audit?",
-      answer: "45 minutes, you and me. We find what's been killing your restarts and what it would take to end the cycle for good. If we're a fit, I'll tell you. If we're not, I'll tell you that too. Worst case, you leave knowing exactly why it never stuck. That alone beats another restart.",
+      question: "What happens on the Restart Audit?",
+      answer: "You tell me what's been going on and where you'd like to be. I tell you what I'd change. If we're not a fit, I'll say so.",
     },
   ],
+
+  finalCta: {
+    headline: "Six months from now, your business will be further along.",
+    highlightedText: "Will your body?",
+    body: [
+      "One day you overhear your kid bragging about you to his friends.",
+      "**He's not exaggerating.**",
+    ],
+    ctaText: BOOK_LABEL,
+  },
+
+  briefing: {
+    heading: "Not booking today?",
+    body: ["I send one email a week."],
+    submitLabel: "Get the Brief",
+  },
 } as const;

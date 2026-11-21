@@ -1,3 +1,5 @@
+import type { HOMEPAGE_CONTENT } from "@/data/homepage-content";
+
 /**
  * Homepage Component Types
  * Type definitions for homepage components
@@ -6,18 +8,6 @@
 export interface ScrollSectionProps {
   title: string;
   children: React.ReactNode;
-}
-
-/**
- * Program/System Phase
- */
-export interface ProgramPhase {
-  readonly number: string;
-  readonly title: string;
-  readonly weeks: string;
-  readonly focus: string;
-  readonly items: readonly string[];
-  readonly win: string;
 }
 
 /**
@@ -46,58 +36,20 @@ export interface CTAButtonProps {
   onClick?: () => void;
 }
 
-export interface HeroSectionProps {
-  content: {
-    headline: string;
-    highlightedText: string;
-    subheadline: string;
-    ctaText: string;
-    stats: readonly { value: string; label: string }[];
-  };
-}
+/** Section content comes straight from src/data/homepage-content.ts. */
+export type HomepageContent = typeof HOMEPAGE_CONTENT;
 
 export interface ObjectionItem {
   readonly question: string;
   readonly answer: string;
 }
 
-export interface DiagnosisSectionProps {
-  title: string;
-  subtitle: string;
-  items: readonly string[];
-}
-
-export interface SolutionSectionProps {
-  title: string;
-  subtitle: string;
-  items: readonly string[];
-}
-
-export interface ProgramDelivery {
-  readonly heading: string;
-  readonly items: readonly string[];
-}
-
-export interface ProgramSectionProps {
-  title: string;
-  subtitle: string;
-  phases: readonly ProgramPhase[];
-  delivery: ProgramDelivery;
-}
-
-export interface AboutSectionProps {
-  title: string;
-  subtitle: string;
-  imageSrc: string;
-  imageAlt: string;
-  subhead: string;
-  paragraphs: readonly string[];
-  transformationImage?: string;
-  credentials: readonly string[];
-}
-
-export interface FinalCTASectionProps {
-  headline: string;
-  highlightedText: string;
-  body: readonly string[];
+/** A client message screenshot and the name line under it. */
+export interface MessageShotContent {
+  readonly src: string;
+  readonly width: number;
+  readonly height: number;
+  readonly alt: string;
+  readonly caption: string;
+  readonly note?: string;
 }

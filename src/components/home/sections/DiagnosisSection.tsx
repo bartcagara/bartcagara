@@ -1,61 +1,14 @@
-import { X } from "lucide-react";
-import { SectionBadge } from "@/components/ui/SectionBadge";
-import { SectionHeader } from "./SectionHeader";
-import type { DiagnosisSectionProps } from "@/components/home/types";
+import { CONTAINER, GUTTER, H2, SECTION } from "@/components/home/ui";
+import { Paragraphs } from "./RichText";
+import type { HomepageContent } from "@/components/home/types";
 
-/**
- * DiagnosisSection - "The Problem" section
- * Displays narrative copy that paints the pain point
- * Bullet items (prefixed with "* ") render with red X icons
- */
-export function DiagnosisSection({ title, subtitle, items }: DiagnosisSectionProps) {
+/** "This is you": only type and space, so the picture is the reader's own kids. */
+export function DiagnosisSection({ content }: { content: HomepageContent["diagnosis"] }) {
   return (
-    <section className="py-24 md:py-32 border-b-2 border-bleu-nuit bg-white" aria-labelledby="diagnosis-title">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-24">
-          <SectionBadge>The Diagnosis</SectionBadge>
-          <SectionHeader id="diagnosis-title" title={title} subtitle={subtitle} variant="dark" />
-        </div>
-
-        <div className="max-w-3xl space-y-6">
-          {items.map((item, index) => {
-            const isBullet = item.startsWith('* ');
-            const isBold = item.startsWith('**') && item.endsWith('**');
-            const text = isBold ? item.slice(2, -2) : isBullet ? item.slice(2) : item;
-
-            if (isBullet) {
-              return (
-                <div key={index} className="flex items-start gap-4">
-                  <X className="w-8 h-8 text-red-500 flex-shrink-0 mt-1" strokeWidth={3} aria-hidden="true" />
-                  <p className="text-lead font-medium text-bleu-nuit/80 leading-relaxed">
-                    {text}
-                  </p>
-                </div>
-              );
-            }
-
-            return (
-              <p
-                key={index}
-                className={
-                  isBold
-                    ? "text-lead-lg font-black text-bleu-nuit leading-tight"
-                    : "text-lead font-medium text-bleu-nuit/80 leading-relaxed"
-                }
-              >
-                {isBold
-                  ? text
-                  : text.split(/(\*\*.*?\*\*)/).map((part, i) =>
-                      part.startsWith('**') && part.endsWith('**') ? (
-                        <strong key={i} className="font-bold text-bleu-nuit">{part.slice(2, -2)}</strong>
-                      ) : (
-                        part
-                      )
-                    )}
-              </p>
-            );
-          })}
-        </div>
+    <section className={GUTTER} aria-labelledby="diagnosis-title">
+      <div className={`${CONTAINER} ${SECTION}`}>
+        <h2 id="diagnosis-title" className={`${H2} max-w-3xl`}>{content.title}</h2>
+        <Paragraphs items={content.items} className="mt-8 md:mt-10" />
       </div>
     </section>
   );

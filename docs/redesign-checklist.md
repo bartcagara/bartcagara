@@ -47,11 +47,22 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 ## 6. Live
 - [ ] Bart's final yes
 - [ ] Merge, deploy (confirm how: Cloudflare), verify live on phone and desktop
-- [ ] Quiz door on the homepage: /quiz live since 21 Nov (main 633b91e); place it in the build (round-6 copy: link under the first screen and in "why it kept ending")
-- [ ] One button wording site-wide: "Book Restart Audit" (Bart's quiz ruling); fix /brief/confirmed and /book's hidden heading in the build
+- [x] Quiz door on the homepage: /quiz live since 21 Nov (main 633b91e); placed in the build under the first screen's proof
+- [x] One button wording site-wide: "Book Restart Audit" (Bart's quiz ruling); homepage, navbar, /brief/confirmed, /book's hidden heading, opt-in success button
 - [ ] Measure bookings for two weeks after; report to Bart and HQ Lead
+
+## 7. Build 1 (real code, 21 Nov)
+- [x] Merge origin/main (quiz) into the branch, clean
+- [x] Homepage rebuilt in the /quiz and /brief language (Bart, 21 Nov: "bold, confident, but clean"): own label + headshot header, pale ground, sentence-case heavy headlines, navy buttons, 2px frames with accent shadow; round-6 copy as placeholder in `src/data/homepage-content.ts`
+- [x] Proof: MJ H. video (new poster, looking at camera), 8-face interview wall (3TQgTpzlrJA = MJ H., left out), 2 before/afters, dm-18 (Chicago, cropped), dm-15, dm-27/dm-28 from HQ; dm-6, dm-7, dm-10 out of the rows
+- [x] `book_click` with `location` on the four Book buttons (+ test)
+- [x] lint, test, build pass; shots in `docs/redesign/shots/current/` and `build1/`
+- [ ] Final copy from the Lead (Bart's "last 24 weeks vs next 24 weeks" spine) swapped into `homepage-content.ts`
+- [ ] Push branch, Cloudflare preview link for Bart's phone
 
 ## Found along the way
 - 2026-11-21 (HQ Lead): client names in docs as First L. only (docs go to GitHub); private client words live in `docs/redesign/_private-*` (gitignored). Before any client line goes live: one-line question to Bart, "Ask <client> if this line can go on the homepage, without his name?" (voice.md rule 13). Early commits with full names squashed before any push.
 - 2026-11-21: no named event on the Book buttons (autocapture only). Add `book_click` with the button's place on the page in the new build, so the new page can be compared click for click.
 - 2026-11-21: deploy = Cloudflare Pages builds from main (git history "Retry the Pages build"); README's "Netlify" is out of date. A push to main is a deploy. Branch previews: confirm the Pages project name before the preview step.
+- 2026-11-21: header label on the homepage set to "Founder Athlete OS" (placeholder; Fable had dropped it as a program label). Lead to pick.
+- 2026-11-21: the final section now has the Book button only; the inline Cal.com calendar and "I coach every client myself" line are gone (copy cut them). Worth watching in the booking numbers.

@@ -5,7 +5,7 @@
 
 export { HeroSection } from "./HeroSection";
 export { DiagnosisSection } from "./DiagnosisSection";
-export { SolutionSection } from "./SolutionSection";
+export { PatternSection } from "./PatternSection";
 export { ProgramSection } from "./ProgramSection";
 export { AboutSection } from "./AboutSection";
 export { FinalCTASection } from "./FinalCTASection";

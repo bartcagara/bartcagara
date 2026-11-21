@@ -1,30 +1,3 @@
-export const TRUST_LOGOS = [
-  {
-    name: "Lever",
-    src: "/images/logos/lever.png"
-  },
-  {
-    name: "ESL",
-    src: "/images/logos/esl.png"
-  },
-  {
-    name: "Nordstrom",
-    src: "/images/logos/nordstrom.png"
-  },
-  {
-    name: "SingleStore",
-    src: "/images/logos/singlestore.png"
-  },
-  {
-    name: "Beckhoff",
-    src: "/images/logos/beckhoff.png"
-  },
-  {
-    name: "WP Engine",
-    src: "/images/logos/wpengine.png"
-  }
-];
-
 export const TRANSFORMATIONS = [
   {
     alt: "Founder client before-and-after: leaner, more athletic after 24 weeks of coaching",
@@ -68,18 +41,24 @@ export const TRANSFORMATIONS = [
   }
 ];
 
+/**
+ * Client interviews on YouTube (names from the video titles, first name and
+ * last initial). 3TQgTpzlrJA is left out: it is MJ H., whose video leads the
+ * proof section. faces/ holds the client's half of each call thumbnail.
+ */
 export const CLIENT_INTERVIEWS = [
-  "X-q9G1tEupw",
-  "3TQgTpzlrJA",
-  "6ldl6X36pX4",
-  "YFyHdu7fnT0",
-  "dJQt6Syuzvo",
-  "trU9VKrIr7M",
-  "1gdITHTTunc",
-  "7fkauGV0pUY",
-  "p4jJTFZwybc"
-];
+  { id: "X-q9G1tEupw", name: "Dan W." },
+  { id: "6ldl6X36pX4", name: "Matt B." },
+  { id: "YFyHdu7fnT0", name: "Adrian K." },
+  { id: "dJQt6Syuzvo", name: "Drew W." },
+  { id: "trU9VKrIr7M", name: "Conor M." },
+  { id: "1gdITHTTunc", name: "Rob V." },
+  { id: "7fkauGV0pUY", name: "Matt C." },
+  { id: "p4jJTFZwybc", name: "Peter B." },
+] as const;
 
+// Left out: dm-6 (sender not on file), dm-7 (shows a client's full name),
+// dm-10 (same message as dm-5), dm-15 and dm-18 (shown large above the rows).
 export const CLIENT_DMS = [
   // Lead with three specific screenshots: lipid-panel results (dm-2),
   // "I'm not the same guy anymore" (dm-3), long business-trip recap (dm-1).
@@ -88,19 +67,14 @@ export const CLIENT_DMS = [
   "/images/testimonials/dm-1.webp",
   "/images/testimonials/dm-4.webp",
   "/images/testimonials/dm-5.webp",
-  "/images/testimonials/dm-6.webp",
-  "/images/testimonials/dm-7.webp",
   "/images/testimonials/dm-8.webp",
   "/images/testimonials/dm-9.webp",
-  "/images/testimonials/dm-10.webp",
   "/images/testimonials/dm-11.webp",
   "/images/testimonials/dm-12.webp",
   "/images/testimonials/dm-13.webp",
   "/images/testimonials/dm-14.webp",
-  "/images/testimonials/dm-15.webp",
   "/images/testimonials/dm-16.webp",
   "/images/testimonials/dm-17.webp",
-  "/images/testimonials/dm-18.webp",
   "/images/testimonials/dm-19.webp",
   "/images/testimonials/dm-20.webp",
   "/images/testimonials/dm-21.webp",

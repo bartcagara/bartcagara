@@ -1,82 +1,83 @@
 import Image from "next/image";
 import { HOMEPAGE_CONTENT } from "@/data/homepage-content";
-import { SectionBadge } from "@/components/ui/SectionBadge";
 import { ScrollSection } from "./ScrollSection";
-import { TRANSFORMATIONS, CLIENT_INTERVIEWS, CLIENT_DMS } from "./assets";
-import { YouTubeLite } from "./YouTubeLite";
+import { TRANSFORMATIONS, CLIENT_DMS } from "./assets";
 import { TestimonialsMarquee } from "./TestimonialsMarquee";
+import { FeaturedVideo } from "./FeaturedVideo";
+import { InterviewWall } from "./InterviewWall";
+import { MessageShot } from "./MessageShot";
+import { CONTAINER, FRAME, GUTTER, H2, SECTION } from "./ui";
 import styles from "./homepage.module.css";
 
 /**
- * ResultsSection - Client social proof
- * Displays transformation photos, client interviews, DMs, and testimonials
- * Optimized with lazy loading for images and YouTube embeds
+ * The proof, staged largest first: one client video, the wall of interview
+ * faces, two before/afters, one message, then the rows to swipe. No words of
+ * Bart's here, only the title.
  */
 export function ResultsSection() {
-    const { results } = HOMEPAGE_CONTENT;
+  const { results } = HOMEPAGE_CONTENT;
+  // The two before/afters shown large are not repeated in the row.
+  const shownLarge = new Set<string>(results.beforeAfters.map((b) => b.src));
+  const rowPhotos = TRANSFORMATIONS.filter((t) => !shownLarge.has(t.src));
 
-    return (
-        <section id="results" className="py-24 md:py-32 bg-white border-b-2 border-bleu-nuit" aria-labelledby="results-title">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="mb-24">
-                    <SectionBadge>The Results</SectionBadge>
-                    <h2 id="results-title" className="text-h2 text-bleu-nuit mb-8">
-                        {results.headline.split('\n').map((line, i, arr) => (
-                            <span key={i}>
-                                {line}
-                                {i < arr.length - 1 && <br />}
-                            </span>
-                        ))}
-                    </h2>
-                    <p className="text-lead-lg font-medium text-bleu-nuit/70 max-w-3xl leading-tight">
-                        {results.subheadline}
-                    </p>
-                </div>
+  return (
+    <section id="results" className={GUTTER} aria-labelledby="results-title">
+      <div className={`${CONTAINER} ${SECTION}`}>
+        <h2 id="results-title" className={`${H2} max-w-3xl`}>{results.headline}</h2>
 
-                <ScrollSection title={results.sections.transformations}>
-                    {TRANSFORMATIONS.map((item) => (
-                        <div key={item.src} className={styles.scrollItem}>
-                            <Image
-                                src={item.src}
-                                alt={item.alt}
-                                width={400}
-                                height={400}
-                                loading="lazy"
-                                className={`${styles.transformationImage} w-auto h-[400px]`}
-                            />
-                        </div>
-                    ))}
-                </ScrollSection>
+        <div className="mt-10 md:mt-14 max-w-4xl">
+          <FeaturedVideo video={results.featuredVideo} />
+          <div className="mt-12 md:mt-16">
+            <InterviewWall />
+          </div>
+        </div>
 
-                <ScrollSection title={results.sections.dms}>
-                    {CLIENT_DMS.map((src, index) => (
-                        <div key={src} className={styles.scrollItemDm}>
-                            <Image
-                                src={src}
-                                alt={`Former athlete founder client testimonial ${index + 1}`}
-                                width={300}
-                                height={500}
-                                loading="lazy"
-                            />
-                        </div>
-                    ))}
-                </ScrollSection>
+        <div className="mt-16 md:mt-24 grid md:grid-cols-2 gap-8 lg:gap-10">
+          {results.beforeAfters.map((item) => (
+            <Image
+              key={item.src}
+              src={item.src}
+              alt={item.alt}
+              width={940}
+              height={788}
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className={`block w-full h-auto ${FRAME}`}
+            />
+          ))}
+        </div>
 
-                <ScrollSection title={results.sections.interviews}>
-                    {CLIENT_INTERVIEWS.map((id) => (
-                        <div key={id} className={styles.scrollItem}>
-                            <YouTubeLite
-                                videoId={id}
-                                title={`Client Interview video ${id}`}
-                            />
-                        </div>
-                    ))}
-                </ScrollSection>
+        <MessageShot message={results.message} className="mt-16 md:mt-24 max-w-[560px]" />
 
-                <ScrollSection title={results.sections.testimonials}>
-                    <TestimonialsMarquee />
-                </ScrollSection>
-            </div>
-        </section>
-    );
+        <div className="mt-16 md:mt-24 space-y-12 md:space-y-16">
+          <ScrollSection title={results.sections.transformations}>
+            {rowPhotos.map((item) => (
+              <div key={item.src} className={styles.scrollItem}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  width={400}
+                  height={400}
+                  loading="lazy"
+                  className={`${styles.transformationImage} w-auto h-[360px]`}
+                />
+              </div>
+            ))}
+          </ScrollSection>
+
+          <ScrollSection title={results.sections.dms}>
+            {CLIENT_DMS.map((src, index) => (
+              <div key={src} className={styles.scrollItemDm}>
+                <Image src={src} alt={`Client message ${index + 1}`} width={300} height={500} loading="lazy" />
+              </div>
+            ))}
+          </ScrollSection>
+
+          <ScrollSection title={results.sections.testimonials}>
+            <TestimonialsMarquee />
+          </ScrollSection>
+        </div>
+      </div>
+    </section>
+  );
 }
