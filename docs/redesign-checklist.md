@@ -44,7 +44,8 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 ## 6. Live
 - [ ] Bart's final yes
 - [ ] Merge, deploy (confirm how: Cloudflare), verify live on phone and desktop
-- [ ] Quiz door added to the homepage once /quiz is live (footer chat owns /quiz until then)
+- [ ] Quiz door on the homepage: /quiz live since 21 Nov (main 633b91e); place it in the build (round-6 copy: link under the first screen and in "why it kept ending")
+- [ ] One button wording site-wide: "Book Restart Audit" (Bart's quiz ruling); fix /brief/confirmed and /book's hidden heading in the build
 - [ ] Measure bookings for two weeks after; report to Bart and HQ Lead
 
 ## Found along the way
