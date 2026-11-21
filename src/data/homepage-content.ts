@@ -9,7 +9,7 @@ export const HOMEPAGE_CONTENT = {
     headline: "The founder's",
     highlightedText: "Last restart.",
     subheadline: "6 months to get you lean, athletic and off the restart cycle. For good.",
-    ctaText: "BOOK MY RESTART AUDIT",
+    ctaText: "BOOK RESTART AUDIT",
     stats: [
       { value: "50+", label: "Founders coached" },
       { value: "1:1", label: "You and me" },
@@ -27,12 +27,12 @@ export const HOMEPAGE_CONTENT = {
     items: [
       "Your kids are in the pool, calling for you.",
       "\"In a minute.\"",
-      "**There is no minute.** There's a calculation: shirt off, move fast, into the water before anyone sees.",
+      "There is no minute. There's a calculation: shirt off, move fast, into the water before anyone sees.",
       "It wasn't always like this. You played sports back in school. The body just worked.",
       "Then you built a company, and the body paid for it.",
-      "You've tried. Every January, three good weeks, the business eats a month, back to zero. **Every restart harder than the last.**",
+      "You've tried. Every January, three good weeks, the business eats a month, back to zero. Every restart harder than the last.",
       "You blame your discipline. **It was never the problem.**",
-      "And lately, a voice: **maybe this is just your forties now.**",
+      "And lately, a voice: maybe this is just your forties now.",
       "**You're reading this because you don't believe that.**",
     ],
   },
@@ -42,9 +42,9 @@ export const HOMEPAGE_CONTENT = {
     subtitle: "",
     items: [
       "6 months from now, it's a regular Tuesday.",
-      "Up before the alarm. Training's done by seven. **It's just what you do now.**",
+      "Up before the alarm. Training's done by seven. It's just what you do now.",
       "Your son hits you at the door at full speed. You catch him, throw him over your shoulder, take the stairs two at a time.",
-      "The business still eats whole weeks. **You feel good and look strong anyway.**",
+      "The business still eats whole weeks. You feel good and look strong anyway.",
       "Your wife stops worrying out loud.",
       "January comes and goes. **Nothing to restart.**",
       "Then one day you overhear your kid bragging about you to his friends.",
@@ -77,7 +77,7 @@ export const HOMEPAGE_CONTENT = {
           "**Training Baseline** — You build strength and master form. No wasted time in the gym.",
           "**The Pattern** — We find what kills every attempt and cut it off at the source.",
         ],
-        win: "10-15 lbs down. Energy back. And you finally see why it never stuck.",
+        win: "Up to 10 lbs down. Energy back. And you finally see why it never stuck.",
       },
       {
         number: "02",
@@ -174,7 +174,7 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "What actually happens on the Restart Audit?",
-      answer: "45 minutes, you and me. We find what's been killing your restarts and what it would take to end the cycle for good. If we're a fit, I'll tell you. If we're not, I'll tell you that too. Worst case, you leave knowing exactly why it never stuck. That alone beats another restart.",
+      answer: "45 minutes, you and me. Tell me the whole story, and I'll give you my honest read on what it takes to make this your last restart. If we're a fit, I'll tell you. If we're not, I'll tell you that too.",
     },
   ],
 } as const;

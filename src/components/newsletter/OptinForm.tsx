@@ -260,7 +260,7 @@ function SuccessState({ isDark }: { isDark: boolean }) {
           className={`inline-flex items-center gap-2 px-6 py-3 font-black uppercase text-sm tracking-tighter border-2 shadow-brutal-sm transition-brutal hover:shadow-none hover-translate-brutal ${isDark ? "bg-white text-bleu-nuit border-white" : "bg-bleu-nuit text-white border-bleu-nuit"}`}
         >
           <Calendar className="w-4 h-4" />
-          Book My Restart Audit
+          Book Restart Audit
         </button>
       </div>
     </div>

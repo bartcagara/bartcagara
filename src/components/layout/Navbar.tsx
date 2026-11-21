@@ -78,7 +78,7 @@ export const Navbar = memo(() => {
 
         {/* DESKTOP CTA - Right */}
         <div className="hidden md:block">
-          <CTAButton cal size="sm">Book My Call</CTAButton>
+          <CTAButton cal size="sm">Book Restart Audit</CTAButton>
         </div>
       </div>
 
@@ -134,7 +134,7 @@ export const Navbar = memo(() => {
             </li>
             <li className="mt-8">
               <CTAButton cal onClick={() => setIsMenuOpen(false)} className="w-full justify-center">
-                Book My Call
+                Book Restart Audit
               </CTAButton>
             </li>
           </ul>

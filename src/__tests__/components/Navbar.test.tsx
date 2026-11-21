@@ -26,10 +26,10 @@ describe('Navbar', () => {
     expect(screen.getByText('The Brief')).toBeInTheDocument();
   });
 
-  it('renders the Book My Call CTA button', () => {
+  it('renders the Book Restart Audit CTA button', () => {
     render(<Navbar />);
-    // Get all Book My Call buttons (desktop and mobile)
-    const bookCallButtons = screen.getAllByText('Book My Call');
+    // Get all Book Restart Audit buttons (desktop and mobile)
+    const bookCallButtons = screen.getAllByText('Book Restart Audit');
     expect(bookCallButtons.length).toBeGreaterThan(0);
   });
 
