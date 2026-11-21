@@ -158,10 +158,11 @@ export const RESULTS: Record<QuizType, QuizResult> = {
       "You've probably put that down to not having the time. I'd look at the plan instead, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
-      "**Don't wait for a good week to start.** Here's a workout that fits into your worst one, because it takes about 10 to 15 minutes and you don't need a gym.",
-      "Do push-ups, then inverted rows, then squats, taking every set close to the point where you can't do another rep. Rest for a minute and go through the circuit a second time. If you have the time and the strength left, do a third. For the inverted rows, lie under a sturdy table, hold the edge and pull your chest up to it, or set a pull-up bar low in a door frame and do the same.",
-      "Do it tomorrow morning and pay attention to the rest of your day. You'll probably find that once you've started the day like that, you don't want to undo it, and you pick a better lunch and don't overeat at dinner.",
-      "Then find the worst week in your calendar for the next month and plan to do this workout two or three times in it. Anything you add after that should pass one test: **would it survive my worst week?**",
+      "**Don't wait for a good week.** I've got a workout that fits into your worst one. It takes ten to fifteen minutes and you don't need a gym.",
+      "Do push-ups, then inverted rows, then squats. For the rows, lie under a sturdy table, hold the edge and pull your chest up to it. Take every set close to the point where you can't do another rep, rest a minute and go through it again. If you have the time and the strength left, do a third round.",
+      "Do it tomorrow morning, before work. You'll walk in feeling tighter, like a guy who already did something hard today, and you won't want to waste that.",
+      "At lunch you'll want a real meal. Start the plate with a good piece of protein, then add vegetables and some slow carbs like rice or potatoes. By dinner you've made good decisions all day, so you don't overeat, and you actually talk with the people at the table.",
+      "Next time you pick a plan, **ask yourself if it would survive your worst week.**",
     ],
     secondLine:
       "Your answers point to a second thing as well, which is busy weeks. A trip or a busy stretch throws you off and getting back takes a long time, so whatever you do next has to work in a bad week too.",
@@ -178,9 +179,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
       "The harder you go during the week, the worse those moments get. After five days of eating as little as you can, you sit down to Friday dinner starving, and you overeat.",
     ],
     thisWeek: [
-      "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good, and stop saving anything up for the weekend.",
-      "Sleep, train if you have the energy, and then pay attention to what happens when you sit down at the dinner or the night out that usually throws you off. You're rested, you're not starving, and for once you're in a position to make a decision that's actually good for you.",
-      "If you do it properly, you'll feel the difference within a few days.",
+      "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
+      "When you fuel yourself properly all week, you sleep better and you have the energy to train. Then you sit down at the dinner that usually throws you off, rested and not starving. You're in a position to make a good decision for yourself, and to actually talk with the people at the table.",
     ],
     secondLine:
       "Your answers point to a second thing as well, which is that you only count it when it's perfect. One slip and you write off the week, so keep an eye on that.",
@@ -214,7 +214,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
       "**Every plan you've tried asked you to say no at night, when you're hungry and worn out**, so when it didn't work, you blamed yourself. I'd look at what you ate before 3pm instead.",
     ],
     thisWeek: [
-      "**Eat a bigger lunch every workday this week**, a proper meal with protein, vegetables and some carbs, and leave everything else as it is. Think of it as an investment in the second half of your day. You'll get through the afternoon on steady energy and sit down to dinner hungry but not starving, with enough left to talk with the people at the table.",
+      "**Starting tomorrow, eat a bigger lunch every workday** and leave everything else as it is. The plate starts with a good piece of protein, then vegetables and some slow carbs like rice or potatoes.",
+      "Think of that lunch as an investment in the second half of your day. You get through the afternoon on steady energy, and you sit down to dinner hungry but not starving, with enough left to talk with the people at the table.",
     ],
     secondLine:
       "Your answers point to a second thing as well, which is that you get through your days on very little food, and by evening you're starving.",
