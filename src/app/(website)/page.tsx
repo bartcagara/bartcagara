@@ -11,11 +11,7 @@ const DiagnosisSection = dynamic(() => import("@/components/home/sections").then
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
-const FirstProofSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FirstProofSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
-});
-
-const GetsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.GetsSection })), {
+const ProofSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProofSection })), {
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
@@ -98,15 +94,10 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
-        {/* 1. FIRST SCREEN: the promise and the button */}
+        {/* 1. FIRST SCREEN: the promise, the button, Bart and his son */}
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
-        {/* AT A CONFERENCE: Ben F., Bart and his son, the quiz door */}
-        <ErrorBoundary>
-          <FirstProofSection content={HOMEPAGE_CONTENT.firstProof} />
-        </ErrorBoundary>
-
-        {/* 2. THIS IS YOU */}
+        {/* 2. HIM */}
         <ErrorBoundary>
           <DiagnosisSection content={HOMEPAGE_CONTENT.diagnosis} />
         </ErrorBoundary>
@@ -116,9 +107,9 @@ export default function Home() {
           <PatternSection content={HOMEPAGE_CONTENT.pattern} />
         </ErrorBoundary>
 
-        {/* 4. WHAT HE GETS: on vacation, two bodies, at the doctor's */}
+        {/* 4. WHERE IT USED TO END: the proof at those places */}
         <ErrorBoundary>
-          <GetsSection content={HOMEPAGE_CONTENT.gets} />
+          <ProofSection content={HOMEPAGE_CONTENT.proof} />
         </ErrorBoundary>
 
         {/* 5. THE MEN */}

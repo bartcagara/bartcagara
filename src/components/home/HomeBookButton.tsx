@@ -8,7 +8,7 @@ import { BUTTON } from "./ui";
 /** Named event on every homepage Book button; `location` says which one. */
 export const BOOK_CLICK_EVENT = "book_click";
 
-export type BookLocation = "hero" | "why" | "offer" | "final";
+export type BookLocation = "hero" | "proof" | "offer" | "final";
 
 /**
  * The homepage's Book button: /quiz's navy button, opening the Cal.com

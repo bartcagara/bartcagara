@@ -5,17 +5,18 @@ import { TRANSFORMATIONS, CLIENT_DMS } from "./assets";
 import { TestimonialsMarquee } from "./TestimonialsMarquee";
 import { FeaturedVideo } from "./FeaturedVideo";
 import { InterviewWall } from "./InterviewWall";
+import { Moment } from "./Moment";
 import { CONTAINER, GUTTER, H2, SECTION } from "./ui";
 import styles from "./homepage.module.css";
 
 /**
- * The men: one client video large, the wall of interview faces, then the
- * rows to swipe. No words of Bart's here, only the title.
+ * More of them: Matt B. at the doctor's, one client video large, the wall of
+ * interview faces, then the rows to swipe. No words of Bart's, only the title.
  */
 export function ResultsSection() {
   const { results } = HOMEPAGE_CONTENT;
   // The two before/afters shown large in the section above are not repeated in the row.
-  const shownLarge = new Set<string>(HOMEPAGE_CONTENT.gets.beforeAfters.map((b) => b.src));
+  const shownLarge = new Set<string>(HOMEPAGE_CONTENT.proof.beforeAfters.map((b) => b.src));
   const rowPhotos = TRANSFORMATIONS.filter((t) => !shownLarge.has(t.src));
 
   return (
@@ -23,7 +24,9 @@ export function ResultsSection() {
       <div className={`${CONTAINER} ${SECTION}`}>
         <h2 id="results-title" className={`${H2} max-w-3xl`}>{results.headline}</h2>
 
-        <div className="mt-10 md:mt-14 max-w-4xl">
+        <Moment moment={results.doctor} className="mt-12 md:mt-16" />
+
+        <div className="mt-16 md:mt-24 max-w-4xl">
           <FeaturedVideo video={results.featuredVideo} />
           <div className="mt-12 md:mt-16">
             <InterviewWall />

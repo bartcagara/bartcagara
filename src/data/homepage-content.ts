@@ -3,7 +3,8 @@
  * All words, and the proof each section leads with, for the homepage.
  * Components only lay these out, so the copy can be swapped here alone.
  *
- * Source: docs/redesign/fable-round-7-homepage.md, Part 1 (21 Nov 2026).
+ * Source: docs/redesign/lead-round-8-homepage.md (21 Nov 2026), which keeps
+ * round 7's offer, questions and close (docs/redesign/fable-round-7-homepage.md).
  *
  * Markup in strings: a line wrapped in ** is a key line (bold and larger);
  * **words** inside a line are bold in place.
@@ -70,53 +71,43 @@ export const HOMEPAGE_CONTENT = {
       "I'm Bart, a founder and a dad. I coach founders who played sports. We plan your trips and client dinners before they happen, so a stressful month doesn't set you back.",
     ctaText: BOOK_LABEL,
     ctaNote: "45 minutes, on video, with me.",
+    imageSrc: "/images/home/bart-and-son-2.webp",
+    imageAlt: "Bart Cagara in a suit, his son beside him looking up at him",
   },
 
-  /** Its own screen, straight under the first: Ben F., then Bart and his son. */
-  firstProof: {
-    moment: {
+  diagnosis: {
+    title: "You've gotten in shape before.",
+    items: [
+      "Three good weeks, maybe three good months. Then a conference, a week in a hotel, a vacation, and you're back where you started.",
+      "Last summer your kids were in the pool, calling for you.",
+      "**\"In a minute.\"**",
+      "You were waiting until nobody was looking.",
+      "Every time, it's harder to start again.",
+    ],
+  },
+
+  pattern: {
+    title: "Every plan you tried needed a calm week.",
+    body: [
+      "You don't get many. So we start in the busy stretch and plan around the conference, the hotel week, the vacation. We work together for six months, long enough that all of them happen while I'm still with you.",
+    ],
+  },
+
+  /** The proof, at the places named above, each under its place label. */
+  proof: {
+    title: "The places that used to put you back at the start.",
+    conference: {
       label: "At a conference",
       lead: "Ate poorly at the closing party.",
       quote: "Weight stayed at exactly 200.",
       name: "Ben F., founder, the day after flying home",
     },
-    imageSrc: "/images/home/bart-and-son-2.webp",
-    imageAlt: "Bart Cagara in a suit, his son beside him looking up at him",
-    quizLink: {
-      text: "Find out why you keep starting over.",
-      href: "/quiz",
-    },
-  },
-
-  diagnosis: {
-    title: "You've started over more times than you can count.",
-    items: [
-      "Every January you get three good weeks. Then a conference comes up, or a month where work takes over, and you're back where you started.",
-      "In July your kids are in the pool, calling for you.",
-      "**\"In a minute.\"**",
-      "You're waiting until nobody's looking.",
-      "**It's getting tougher with age.**",
-    ],
-  },
-
-  pattern: {
-    title: "Every plan you tried only worked in a calm week.",
-    body: [
-      "You don't get many of those.",
-      "So this takes six months, long enough that the trips and the heavy weeks at work happen while I'm still around.",
-      "Don't wait for January. Start in the busy stretch. **That's what we're solving.**",
-    ],
-    moment: {
-      label: "A week in a hotel",
+    hotel: {
+      label: "In a hotel all week",
       quote: "I lost weight this week while in a hotel ALL week in Chicago!",
       name: "Drew W., CEO",
       shots: [SHOT.chicago],
     },
-    ctaText: BOOK_LABEL,
-  },
-
-  gets: {
-    title: "A body you don't want to hide anywhere you go.",
     vacation: {
       label: "On vacation",
       quote: "I'm not embarrassed to take my shirt off anymore!",
@@ -133,16 +124,23 @@ export const HOMEPAGE_CONTENT = {
         alt: "Client before-and-after: an athletic build rebuilt over 14 months",
       },
     ],
+    ctaText: BOOK_LABEL,
+    quiz: {
+      lead: "Not ready to book?",
+      link: "Take the 2-minute quiz.",
+      href: "/quiz",
+    },
+  },
+
+  results: {
+    headline: "They didn't have time either.",
     doctor: {
       label: "At the doctor's",
       quote: "Now my doctor can shut up about putting me on statins!",
       name: "Matt B.",
       shots: [SHOT.lipids, SHOT.scan],
     },
-  },
 
-  results: {
-    headline: "They didn't have time either.",
     featuredVideo: {
       src: "/videos/mj-hurley-testimonial.mp4",
       captions: "/videos/mj-hurley-testimonial.vtt",
@@ -217,8 +215,10 @@ export const HOMEPAGE_CONTENT = {
     imageSrc: "/images/bart-headshot.jpg",
     imageAlt: "Bart Cagara",
     paragraphs: [
-      "By the end of college, the athlete was gone.",
-      "I did Paleo, Primal and keto by the book, and ate lunch at my desk out of a container.",
+      "I played sports my whole childhood. By the end of college, the athlete was gone.",
+      "Then I did what you've probably done. Paleo, Primal, keto, all by the book. At the fitness startup I'd just joined, I ate lunch at my desk out of a container while everyone else went out.",
+      "I lost weight every time. I also lost muscle, strength and my libido. So I got my blood checked. LDL cholesterol at 360. Testosterone at 330.",
+      "I asked the nutritionists I worked with for help, and they coached me properly.",
     ],
     card: {
       columns: ["Then", "A year later"],
@@ -228,8 +228,8 @@ export const HOMEPAGE_CONTENT = {
       ],
     },
     paragraphsAfter: [
-      "Now I lift four days a week, eat out, and have held 12 to 15% body fat for years.",
-      "**My son is watching.**",
+      "Today I lift four days a week, I eat out, and I've held 12 to 15% body fat for years.",
+      "**I can sit down at any table, be fine, and focus on the people around me.**",
     ],
     transformationLink: {
       lead: "I bet you're curious about my before-after.",
