@@ -6,6 +6,7 @@ import {
     CONFIDENT_FROM,
     COPY,
     DISRUPTION,
+    HURT,
     LAST_RUN_LINES,
     NO_SECOND_LINE,
     QUESTIONS,
@@ -221,7 +222,14 @@ function StartScreen({ onStart }: { onStart: () => void }) {
 function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: boolean; onGated: () => void }) {
     const posthog = usePostHogClient();
     const result = RESULTS[score.primary];
-    const body = fillBody(result, score.rarelyAway ? DISRUPTION.rarelyAway : DISRUPTION.travels);
+    const hurt = score.lastRun === HURT.lastRun;
+    const body = fillBody(result, score.rarelyAway ? DISRUPTION.rarelyAway : DISRUPTION.travels).map((p) =>
+        hurt ? p.replace(HURT.bodyFrom, HURT.bodyTo) : p
+    );
+    // The workout line is the one with the circuit (Calm-Week only).
+    const thisWeek = hurt
+        ? result.thisWeek.flatMap((p) => (p.includes("inverted rows") ? [p, HURT.workoutLine] : [p]))
+        : result.thisWeek;
     const second = score.secondary ? RESULTS[score.secondary].secondLine : score.totals[score.primary] >= CONFIDENT_FROM ? NO_SECOND_LINE : null;
 
     // quiz_fix_viewed when "This week" shows.
@@ -259,7 +267,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 
             <div className="mt-10">
                 {gated ? (
-                    <ThisWeek result={result} />
+                    <ThisWeek result={result} lines={thisWeek} />
                 ) : (
                     <Gate score={score} onGated={onGated} />
                 )}

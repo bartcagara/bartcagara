@@ -63,7 +63,7 @@ export function ResultHeading({ result }: { result: QuizResult }) {
 }
 
 /** "This week", the step behind the gate. */
-export function ThisWeek({ result, note }: { result: QuizResult; note?: React.ReactNode }) {
+export function ThisWeek({ result, note, lines }: { result: QuizResult; note?: React.ReactNode; lines?: string[] }) {
     return (
         <section className="border-t-2 border-bleu-nuit pt-8" aria-labelledby="this-week">
             <h2 id="this-week" className="text-[clamp(1.75rem,8vw,2.25rem)] md:text-[2.75rem] font-black tracking-[-0.04em] leading-[1.02]">
@@ -71,7 +71,7 @@ export function ThisWeek({ result, note }: { result: QuizResult; note?: React.Re
             </h2>
             {note}
             <div className={`mt-6 ${PROSE}`}>
-                {result.thisWeek.map((p) => (
+                {(lines ?? result.thisWeek).map((p) => (
                     <Para key={p} text={p} />
                 ))}
             </div>

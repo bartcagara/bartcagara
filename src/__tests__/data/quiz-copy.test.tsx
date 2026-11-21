@@ -47,3 +47,11 @@ describe('result copy', () => {
     }
   });
 });
+
+describe('hurt or sick (Q2 e)', () => {
+  it('finds the sentence it drops and the workout line it follows', () => {
+    const { HURT } = jest.requireActual('@/data/quiz');
+    expect(RESULTS.C.body.some((p) => p.includes(HURT.bodyFrom))).toBe(true);
+    expect(RESULTS.C.thisWeek.filter((p) => p.includes('inverted rows'))).toHaveLength(1);
+  });
+});

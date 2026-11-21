@@ -253,6 +253,19 @@ export const DISRUPTION = {
 export const RARELY_AWAY_ANSWER: AnswerLetter = "e";
 
 /** [SECOND] when there is no secondary type. */
+/**
+ * When Q2 is "I got hurt or sick" (Bart, 21 Nov, after the cold reader): the
+ * Calm-Week workout gets a safety line after the circuit, and the body drops
+ * "You've probably put that down to not having the time", which would
+ * contradict what he just said.
+ */
+export const HURT = {
+  lastRun: "e",
+  workoutLine: "If something's hurting, keep every rep pain-free and stop a few reps short.",
+  bodyFrom: "You've probably put that down to not having the time. I'd look at the plan instead, because ",
+  bodyTo: "I'd look at the plan, because ",
+} as const;
+
 export const NO_SECOND_LINE = "Your answers all point the same way, so I'm fairly sure about this one.";
 
 /** Weak signal: first in the body; the no-secondary line is left out. */
