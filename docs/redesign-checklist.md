@@ -30,8 +30,9 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 
 ## 4. Claude Design
 - [x] Round 1 built: A and B, desktop + phone (canvas source copied to `docs/redesign/canvas-src/`; screenshots in `docs/redesign/shots/round1/`, not in git)
-- [ ] Round 2: Fable art direction (`docs/redesign/fable-design-round-2.md`): a distinct B, A upgrades, header/duplicate fixes
+- [x] Round 2: Fable art direction (`docs/redesign/fable-design-round-2.md`): a distinct B, A upgrades, header/duplicate fixes
 - [ ] Canvas https://claude.ai/artifact/1y1dZfV5w4jmkdS61vxpad: two homepage openings side by side, desktop and phone: (A) current look elevated, (B) Fable's free proposal
+- [x] Round 2 built and checked by the Lead on phone shots (`shots/round2/`); put to Bart (board B-12)
 - [ ] Bart picks a look; it goes on every page (/brief, /book, /quiz too if B)
 - [ ] Whole page built; branch preview link for his phone
 
