@@ -29,14 +29,14 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - [ ] Pick 6: lines the records don't back ("Trusted by the guys who built", "50+ founders coached", "10-15 lbs" in weeks 1-4, CFO "12%" is 12.7%, "most of the men I coach read for months", price answer vs booking form)
 
 ## 4. Claude Design
-- [ ] Two homepage openings side by side, desktop and phone: (A) current look elevated, (B) Fable's free proposal
+- [ ] Canvas https://claude.ai/artifact/1y1dZfV5w4jmkdS61vxpad: two homepage openings side by side, desktop and phone: (A) current look elevated, (B) Fable's free proposal
 - [ ] Bart picks a look; it goes on every page (/brief, /book, /quiz too if B)
 - [ ] Whole page built; branch preview link for his phone
 
 ## 5. Full copy pass
 - [x] Fable rewrites every section (round 4 → cold review → round 5, `docs/redesign/fable-round-5-homepage.md`; facts checked by the Lead: newsletter 12 Nov numbers, objection bank 32/48, menu help in client chats)
 - [x] Cold reviewer: ten tests and the 17 slop tells on every line (`review-round-4.md`; every block fixed or kept with a reason)
-- [ ] Bart approves the page copy
+- [ ] Bart approves the page copy (round 5 rejected: "very text-heavy"; round 6 at 423 words, screen by screen, shown inside the design)
 - [ ] Every number, quote and claim traced to a source
 - [x] Each client line on the page: Bart, 21 Nov: "We can use anything to make the website the best possible." Client lines from private chats stay nameless.
 - [ ] Retired lines replaced: `src/data/homepage-content.ts` 145 ("never sticks") and 178 ("for good")

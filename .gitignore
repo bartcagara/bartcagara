@@ -21,3 +21,4 @@ tsconfig.tsbuildinfo
 
 # Private client words: never committed (real copies live in HQ 02_clients/_private)
 _private*
+docs/redesign/shots/
