@@ -29,6 +29,8 @@ Working files: `docs/redesign/`. Tick each item in the commit that finishes it; 
 - [ ] Pick 6: lines the records don't back ("Trusted by the guys who built", "50+ founders coached", "10-15 lbs" in weeks 1-4, CFO "12%" is 12.7%, "most of the men I coach read for months", price answer vs booking form)
 
 ## 4. Claude Design
+- [x] Round 1 built: A and B, desktop + phone (canvas source copied to `docs/redesign/canvas-src/`; screenshots in `docs/redesign/shots/round1/`, not in git)
+- [ ] Round 2: Fable art direction (`docs/redesign/fable-design-round-2.md`): a distinct B, A upgrades, header/duplicate fixes
 - [ ] Canvas https://claude.ai/artifact/1y1dZfV5w4jmkdS61vxpad: two homepage openings side by side, desktop and phone: (A) current look elevated, (B) Fable's free proposal
 - [ ] Bart picks a look; it goes on every page (/brief, /book, /quiz too if B)
 - [ ] Whole page built; branch preview link for his phone
