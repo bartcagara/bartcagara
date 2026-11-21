@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
     BRIDGE,
+    CONFIDENT_FROM,
     COPY,
     DISRUPTION,
     LAST_RUN_LINES,
@@ -221,7 +222,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
     const posthog = usePostHogClient();
     const result = RESULTS[score.primary];
     const body = fillBody(result, score.rarelyAway ? DISRUPTION.rarelyAway : DISRUPTION.travels);
-    const second = score.secondary ? RESULTS[score.secondary].secondLine : score.weakSignal ? null : NO_SECOND_LINE;
+    const second = score.secondary ? RESULTS[score.secondary].secondLine : score.totals[score.primary] >= CONFIDENT_FROM ? NO_SECOND_LINE : null;
 
     // quiz_fix_viewed when "This week" shows.
     const fixSent = useRef(false);

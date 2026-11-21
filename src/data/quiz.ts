@@ -125,6 +125,8 @@ export const SECONDARY_MIN_POINTS = 6;
 export const SECONDARY_MIN_SHARE = 0.5;
 /** A winner under this many points gets the weak-signal opening. */
 export const WEAK_SIGNAL_BELOW = 8;
+/** "I'm fairly sure" shows only from this many points up (cold reader, 21 Nov: 9 points from answers that barely fit read as overconfident). */
+export const CONFIDENT_FROM = 12;
 
 export interface QuizResult {
   type: QuizType;
@@ -304,7 +306,7 @@ export const COPY = {
   gateHeading: "Want to know what I'd do first?",
   /** `{type}` is the result's nameInSentence. */
   gateLine:
-    "Leave your first name and email and I'll show you the one thing I'd change this week if your result is {type}.",
+    "Leave your first name and email and I'll show you the one thing I'd change this week for {type}.",
   gateButton: "Show me",
   gateNote:
     "You'll also get my newsletter, the Founder's Fitness Brief, every Thursday. It's one email a week and you can unsubscribe any time.",
