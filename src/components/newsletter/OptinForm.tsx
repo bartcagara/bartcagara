@@ -26,6 +26,14 @@ interface OptinFormProps {
   note?: React.ReactNode;
   /** Kit form to subscribe into; defaults to the /brief form. */
   kitForm?: { id: string; uid: string };
+  /** Adds a first-name field (Kit's `fields[first_name]`) before the email (joined layout only). */
+  firstName?: boolean;
+  /** Sent with the signup as Kit custom fields: `{ quiz_result: "C" }` posts `fields[quiz_result]=C`. */
+  hiddenFields?: Record<string, string>;
+  /** Runs once Kit has accepted the signup. */
+  onSuccess?: () => void;
+  /** Replaces the default "You're in" panel after signup; `null` shows nothing. */
+  successContent?: React.ReactNode;
 }
 
 /** The one signup event, on every page. The page is in `landing_page`. */
@@ -38,6 +46,10 @@ export function OptinForm({
   layout = "stacked",
   note,
   kitForm = DEFAULT_KIT_FORM,
+  firstName = false,
+  hiddenFields,
+  onSuccess,
+  successContent,
 }: OptinFormProps = {}) {
   const KIT_FORM_UID = kitForm.uid;
   const KIT_SUBSCRIBE_URL = `https://app.kit.com/forms/${kitForm.id}/subscriptions`;
@@ -74,13 +86,16 @@ export function OptinForm({
         form_uid: KIT_FORM_UID,
         landing_page: window.location.pathname,
       });
+      onSuccess?.();
     } catch {
       setStatus("error");
       setErrorMessage("Network error. Please check your connection.");
     }
   }
 
-  if (status === "success") return <SuccessState isDark={isDark} />;
+  if (status === "success") {
+    return successContent !== undefined ? <>{successContent}</> : <SuccessState isDark={isDark} />;
+  }
 
 
   const isSubmitting = status === "submitting";
@@ -107,8 +122,30 @@ export function OptinForm({
             </ul>
           )}
 
+          {hiddenFields &&
+            Object.entries(hiddenFields).map(([key, value]) => (
+              <input key={key} type="hidden" name={`fields[${key}]`} value={value} />
+            ))}
+
           {/* One object: a single border and offset shadow around field + button */}
           <div className={`flex flex-col sm:flex-row bg-white border-2 border-bleu-nuit focus-within:border-bleu-accent transition-colors shadow-[3px_3px_0_0_var(--bleu-accent)]`}>
+            {firstName && (
+              <>
+                <label htmlFor="first_name" className="sr-only">
+                  First Name
+                </label>
+                <input
+                  id="first_name"
+                  type="text"
+                  name="fields[first_name]"
+                  aria-label="First Name"
+                  placeholder="First name"
+                  required
+                  autoComplete="given-name"
+                  className="w-full min-w-0 sm:flex-1 h-14 md:h-16 px-5 bg-transparent text-bleu-nuit text-lg font-medium placeholder:text-bleu-nuit/40 rounded-none outline-none border-b-2 sm:border-b-0 sm:border-r-2 border-bleu-nuit/10"
+                />
+              </>
+            )}
             <label htmlFor="email_address" className="sr-only">
               Email Address
             </label>
