@@ -311,7 +311,7 @@ export const YEARS_VALUE: Record<string, string> = {
 export const BRIDGE =
   "A quiz can only tell you so much, and I'd rather hear the whole story from you. On a Restart Audit you tell me what's been going on, and I'll give you my honest read on what it takes to make this your last restart. It's 45 minutes with me.";
 
-export const BOOK_BUTTON = "Book a Restart Audit";
+export const BOOK_BUTTON = "Book Restart Audit";
 
 export const COPY = {
   headerLabel: "The Restart Quiz",

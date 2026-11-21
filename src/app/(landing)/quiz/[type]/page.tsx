@@ -57,7 +57,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ typ
                 <div className="mt-10">
                     <ThisWeek result={result} />
                 </div>
-                <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book a Restart Audit">
+                <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book Restart Audit">
                     <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
                     <div className={PROSE}>
                         <p>{BRIDGE}</p>

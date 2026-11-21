@@ -276,7 +276,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
                 )}
             </div>
 
-            <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book a Restart Audit">
+            <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book Restart Audit">
                 <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
                 <div className={PROSE}>
                     <p>{STAKE_LINES[score.stake]}</p>
