@@ -54,8 +54,8 @@ const SHOT = {
   lake: {
     src: "/images/testimonials/dm-6-lake.webp",
     width: 778,
-    height: 648,
-    alt: "Client message: \"I have a trick with my eldest, where I throw him in the air and he does a backflip. Last summer I was able to do that 3-4 times and then I was done, tired/pain, couldn't lift him enough. BUT NOW, I just couldn't stop... it was exactly the reason why I wanted to change my life.\" Bart: \"Now, that's a badass dad.\"",
+    height: 866,
+    alt: "Client message: \"This was cool. Skipped the workout yesterday, but because of my 2 sons asked me to go to the lake near our house... I have a trick with my eldest, where I throw him in the air and he does a backflip. Last summer I was able to do that 3-4 times and then I was done, tired/pain, couldn't lift him enough. BUT NOW, I just couldn't stop... it was exactly the reason why I wanted to change my life.\" Bart: \"Now, that's a badass dad.\"",
   },
 } as const;
 

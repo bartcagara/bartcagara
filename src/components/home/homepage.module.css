@@ -44,26 +44,22 @@
     composes: scrollItem;
 }
 
+/* Each message card is sized to its own screenshot: no letterbox. Both sides
+   are auto, so the screenshot keeps its shape and shrinks to fit whichever
+   cap it meets first; the row centres cards of different heights. */
 .scrollItemDm img {
     width: auto;
-    height: 460px;
-    object-fit: contain;
+    height: auto;
+    max-height: 460px;
+    max-width: 480px;
     border: 2px solid var(--bleu-nuit);
     box-shadow: 3px 3px 0px var(--bleu-accent);
     display: block;
 }
 
-/* On mobile, keep every DM the same height (as on desktop) and cap the width to
-   the viewport. The inherited `object-fit: contain` letterboxes wide/landscape
-   screenshots inside that fixed-height frame instead of shrinking them — so all
-   cards line up and the spacing between them stays uniform, while no screenshot
-   overflows or gets clipped mid-word. Using `height: auto` here instead made
-   wide shots render short and tall shots render full-height, leaving ragged
-   gaps once the row centered the mismatched cards. */
 @media (max-width: 600px) {
     .scrollItemDm img {
-        width: auto;
-        height: 60vh;
+        max-height: 60vh;
         max-width: calc(100vw - 3rem);
     }
 }
