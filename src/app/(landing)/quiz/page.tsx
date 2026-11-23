@@ -29,7 +29,7 @@ export const metadata: Metadata = {
                 url: "/images/og-quiz.jpg",
                 width: 1200,
                 height: 630,
-                alt: "The Restart Quiz: find out why you keep starting over. It takes two minutes, and at the end I'll tell you what's most likely behind it."
+                alt: "The Restart Quiz: which of the 4 restart types are you? Answer 8 quick questions, and in two minutes you'll know what knocks you off track every time and what to do about it this week."
             }
         ]
     },

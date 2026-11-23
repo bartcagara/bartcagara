@@ -315,9 +315,9 @@ export const BOOK_BUTTON = "Book Restart Audit";
 
 export const COPY = {
   headerLabel: "The Restart Quiz",
-  startHeadline: "Find out why you keep starting over.",
+  startHeadline: "Which of the 4 restart types are you?",
   startLine:
-    "It takes two minutes, and at the end I'll tell you what's most likely behind it.",
+    "Answer 8 quick questions, and in two minutes you'll know what knocks you off track every time and what to do about it this week.",
   startButton: "Start",
   back: "Back",
   resultLabel: "What kills your restarts",
