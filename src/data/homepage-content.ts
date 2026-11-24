@@ -18,7 +18,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   trustedBy: {
-    title: "Trusted by the guys who built:",
+    title: "Trusted by guys leading:",
   },
 
   diagnosis: {
@@ -164,11 +164,11 @@ export const HOMEPAGE_CONTENT = {
     },
     {
       question: "I travel constantly. How does this work on the road?",
-      answer: "A big chunk of Phase 2 is Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who flies weekly — he's at 12% body fat after 20 years of neglect.",
+      answer: "A big chunk of Phase 2 is Travel-Proofing. Restaurants, airports, hotel gyms. One of my clients is a CFO who travels every month and spends a few days in a hotel each time. We turned his training into a 25-minute routine for the hotel gym's limited equipment, and he got to 12.7% body fat after 20 years of poor eating.",
     },
     {
       question: "What does it cost?",
-      answer: "It's a serious investment. We talk exact numbers on the call, once I know what you actually need. Payment plans exist. If you're shopping for the cheapest way to lose weight, this isn't it. If you're done restarting, it is.",
+      answer: "It's a serious investment. We talk exact numbers on the call, once I know what you actually need. If you're shopping for the cheapest way to lose weight, this isn't it. If you're done restarting, it is.",
     },
     {
       question: "What actually happens on the Restart Audit?",
