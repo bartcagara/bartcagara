@@ -144,6 +144,8 @@ export interface QuizResult {
   body: string[];
   /** "This week", behind the gate. **Double stars** mark bold, as in body. */
   thisWeek: string[];
+  /** End of the gate line: what that step stops for this type (Bart, 24 Nov). */
+  gateEnd: string;
 }
 
 export const RESULTS: Record<QuizType, QuizResult> = {
@@ -151,6 +153,7 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     type: "C",
     slug: "calm-week",
     name: "Fair\u2011Weather Racer",
+    gateEnd: "so the next busy week doesn't stop you again",
     headline: "Your plan only works in a calm week.",
     body: [
       "When life is quiet you train, you eat well and it works. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
@@ -169,6 +172,7 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     type: "A",
     slug: "all-in-all-out",
     name: "Lost Athlete",
+    gateEnd: "so one missed day doesn't turn into another month off",
     headline: "You're either all in or all out.",
     body: [
       "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works.",
@@ -185,6 +189,7 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     type: "F",
     slug: "finish-line",
     name: "Finish Line Chaser",
+    gateEnd: "so this time it doesn't end when the program does",
     headline: "Every time you got in shape, it ended when the program did.",
     body: [
       "When things went well, something was keeping you on track, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
@@ -200,6 +205,7 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     type: "E",
     slug: "running-on-empty",
     name: "Pit Stop Dodger",
+    gateEnd: "so 9:30 at night stops undoing your whole day",
     headline: "By 9:30 at night you have nothing left.",
     body: [
       "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
@@ -302,9 +308,9 @@ export const COPY = {
   toldMeHeading: "What you told me",
   goingOnHeading: "What's going on",
   thisWeekHeading: "This week",
-  gateHeading: "Want to know what to do first?",
-  /** {name} is his type's name. */
-  gateLine: "Leave your first name and email, and I'll show you exactly what a {name} should do this week.",
+  gateHeading: "Want to know your best next step?",
+  /** {name} is his type's name, {end} its gateEnd. */
+  gateLine: "Leave your first name and email, and I'll show you exactly what a {name} should do this week {end}.",
   gateButton: "Show me",
   gateNote:
     "You'll also get my newsletter, the Founder's Fitness Brief, every Thursday. It's one email a week and you can unsubscribe any time.",

@@ -293,7 +293,7 @@ function Gate({ score, onGated }: { score: QuizScore; onGated: () => void }) {
         <div ref={boxRef} className="bg-bleu-fumee border-t-4 border-bleu-nuit px-5 py-6 md:px-8 md:py-8">
             <h2 className="text-xl md:text-2xl font-black tracking-[-0.03em] leading-tight">{COPY.gateHeading}</h2>
             <p className="mt-3 text-base md:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                {COPY.gateLine.replace("{name}", RESULTS[score.primary].name)}
+                {COPY.gateLine.replace("{name}", RESULTS[score.primary].name).replace("{end}", RESULTS[score.primary].gateEnd)}
             </p>
             <div className="mt-6">
                 <OptinForm
