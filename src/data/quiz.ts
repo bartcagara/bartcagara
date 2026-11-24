@@ -5,7 +5,7 @@
  * certain "You are a" result and no Restart Audit ask on the result from Kyle's
  * call and Bart's yes on 24 Nov 2026 (HQ: 06_company/advisors/kyle-adams/calls/
  * 2026-11-24_momentum-quiz-names.md); headlines and bodies from the Fable round,
- * approved 24 Nov (HQ: 03_content/ideas/2026-11-24_quiz-type-descriptions.md). Change a line only on his say.
+ * approved 24 Nov (HQ: 03_content/ideas/2026-11-24_quiz-type-descriptions.md; bodies from round 2, _v02.md, from the 53 sales calls). Change a line only on his say.
  */
 
 export type QuizType = "C" | "A" | "F" | "E";
@@ -157,9 +157,9 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     gateEnd: "so the next busy week doesn't stop you again",
     headline: "You're on track in a calm week, and a busy week stops you every time.",
     body: [
-      "When life is quiet you train, you eat well and it works, so you know you can do this. Then, sooner or later, {disruption}, and training is the first thing to go.",
-      "You don't start again when that week ends. You tell yourself you'll get back to it when things calm down, and then you wait, so **a few busy days end up costing you weeks**. If things were going to calm down, they would have by now.",
-      "It feels like you don't have the time, but the problem is the plan, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
+      "When life is quiet you train, you eat well and it works, so you know you can do this. Then {disruption}, and training is the first thing to go.",
+      "You never decide to quit. You tell yourself you'll go tomorrow, and tomorrow something else comes up, so **one missed day turns into weeks**. From there you're waiting for this project to be done or this month to be over, and there's always another one.",
+      "You say you don't have the time, then you call that an excuse and get mad at yourself. The problem is the plan, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
       "**Don't wait for a good week.** I've got a workout that fits into your worst one. It takes ten to fifteen minutes and you don't need a gym.",
@@ -177,8 +177,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     headline: "You're all in until the first miss, and then you're all out.",
     body: [
       "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works. But the plan only counts when you do all of it, so part of you is already waiting to fail.",
-      "Then something small breaks the streak, like a dinner out or a few drinks. **One miss feels like the whole thing is ruined**, so you write off the rest of the week, and “I'll start again Monday” turns into a month. When you do come back, you come back stricter than the last time.",
-      "Going all in is how athletes train, and it works for them because a coach gets them back on track the morning after a bad day. **You're doing it the athlete's way with no coach**, so after a miss you stay off until you can go all in again. A strict week also makes the miss more likely, because by Friday dinner you're starving.",
+      "Then something small breaks the streak, like a dessert or a few drinks on a Saturday. **One miss feels like the whole thing is ruined**, so you tell yourself you might as well enjoy the rest of the weekend, and “I'll start again Monday” turns into a month. When you can't stand looking at yourself anymore, you go all in again, stricter than the last time.",
+      "Athletes go all in too, but they have a coach who gets them back on track the next morning. **You're doing it the athlete's way with no coach**, so after a bad night nobody tells you it was one night. The strict week also sets up the miss, because by Friday dinner you're starving.",
     ],
     thisWeek: [
       "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
@@ -192,9 +192,9 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     gateEnd: "so this time it doesn't end when the program does",
     headline: "You do the work for a challenge, a coach or a date, and you stop when they end.",
     body: [
-      "While it's on, you do everything it asks. You show up, you follow the plan, and it works.",
-      "Then the last day comes, and with nothing to answer to, you drift, until you sign up for the next thing and do it all over again.",
-      "You call that needing accountability. But someone checking on you only works while they're checking, and when you do something only because there's an end date, you stop when the date passes. **You've been on track before, but never once with nobody checking**, because it was always someone else's plan and nobody showed you how to make your own.",
+      "You're the guy who says **“tell me what to do and I'll do it,”** and you mean it. You'd never show up to a coach or a training partner with nothing done.",
+      "Then the last day comes, there's nobody left to let down, and you drift, until you sign up for the next thing and do it all over again.",
+      "You call that needing accountability. But someone checking on you only works while they're checking, and a date only works until it passes. **You've been on track before, but never once with nobody checking**, because it was always someone else's plan and nobody showed you how to make your own.",
     ],
     thisWeek: [
       "Think back to the last time you were on track and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long walk you took every weekend. **Forget everything else and do just those this week.**",
@@ -208,8 +208,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     gateEnd: "so 9:30 at night stops undoing your whole day",
     headline: "By 9:30 at night you have nothing left.",
     body: [
-      "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, then whatever's closest, if anything, because a proper meal feels like time you don't have. By the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
-      "**Every plan you've tried asked you to say no at night, when you're hungry and worn out.** When it didn't work you blamed yourself, for something that was **decided before 3pm**.",
+      "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, lunch is whatever's closest or nothing, and **part of you counts that as a win**. By the evening you're hungry and worn out at once. Dinner goes fast, and later you're in the pantry or pouring a drink without really deciding to.",
+      "The next morning you tell yourself tonight will be different, and you start on coffee again. Every plan you've tried asked you to say no at night, and when it didn't work you blamed yourself for something that was **decided before 3pm**.",
     ],
     thisWeek: [
       "**Starting tomorrow, eat a bigger lunch every workday** and leave everything else as it is. The plate starts with a good piece of protein, then vegetables and some slow carbs like rice or potatoes.",
@@ -252,18 +252,18 @@ export const EVENINGS_FINE_ANSWER: AnswerLetter = "e";
 /** Q4 "A proper lunch, most days" with Pit Stop Dodger (E): body[0] says what he told us instead. */
 export const LUNCH = {
   answer: "e",
-  bodyFrom: "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, then whatever's closest, if anything, because a proper meal feels like time you don't have. By the evening you're hungry and worn out at once.",
+  bodyFrom: "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, lunch is whatever's closest or nothing, and **part of you counts that as a win**. By the evening you're hungry and worn out at once.",
   bodyTo: "You told me you eat a proper lunch most days. It's still not enough to get you through the day, and that's what makes you a Pit Stop Dodger. By the evening you're hungry and worn out at once.",
 } as const;
 
 /**
  * When Q2 is "I got hurt or sick" (Bart, 21 Nov, after the cold reader): the
- * body drops "It feels like you don't have the time", which would contradict
+ * body drops "You say you don't have the time ... excuse", which would contradict
  * what he just said.
  */
 export const HURT = {
   lastRun: "e",
-  bodyFrom: "It feels like you don't have the time, but the problem is the plan, because ",
+  bodyFrom: "You say you don't have the time, then you call that an excuse and get mad at yourself. The problem is the plan, because ",
   bodyTo: "The problem is the plan, because ",
 } as const;
 
