@@ -29,10 +29,16 @@
   width: 300px;
   padding: 0 8px 4px;
   display: flex;
+  /* Opening one card ("Read more") grows that card only; the rest keep the
+     closed row's height, so a video never zooms to fill a tall row. 449px is
+     the closed row, measured (12 clamped lines). */
+  align-items: flex-start;
+  --row-height: 449px;
 }
 
 .card {
   width: 100%;
+  min-height: var(--row-height);
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -136,7 +142,7 @@
 .videoCard {
   position: relative;
   width: 100%;
-  min-height: 100%;
+  height: var(--row-height);
   background: #000;
   overflow: hidden;
   box-shadow: 4px 4px 0 0 #09071c;
