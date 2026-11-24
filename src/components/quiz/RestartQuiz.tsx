@@ -319,6 +319,8 @@ function Gate({ score, onGated }: { score: QuizScore; onGated: () => void }) {
                         quiz_second: score.secondary ?? "none",
                         quiz_stake: STAKE_PAIN[score.stake],
                         quiz_years: YEARS_VALUE[score.years],
+                        // E1 reads this: "proper" swaps its "you don't stop to eat" paragraph (Bart, 24 Nov).
+                        quiz_lunch: score.lunch === LUNCH.answer ? "proper" : "light",
                     }}
                     onSuccess={onGated}
                     successContent={null}

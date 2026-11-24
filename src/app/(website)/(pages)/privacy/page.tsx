@@ -56,7 +56,7 @@ export default function PrivacyPage() {
                 When you sign up, Kit receives your email address and the page you signed up on. You confirm by email, and we send you the newsletter and related emails on the basis of your consent (Article 6(1)(a)). We record what you open and click, to judge what is useful. Every email has an unsubscribe link, which takes effect at once.
             </P>
             <P>
-                If you sign up through the restart quiz, Kit also receives your first name and your quiz result: which of the four results you got, a second one if your answers pointed there too, what you said bothers you most, and how long you have been starting over. We use them to send you emails that fit your result. Your other answers are counted in our website statistics without your name or email.
+                If you sign up through the restart quiz, Kit also receives your first name and your quiz result: which of the four results you got, a second one if your answers pointed there too, what you said bothers you most, how long you have been starting over, and whether you said you eat a proper lunch. We use them to send you emails that fit your result. Your other answers are counted in our website statistics without your name or email.
             </P>
 
             <H2>Booking a Restart Audit call</H2>
