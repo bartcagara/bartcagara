@@ -1,8 +1,9 @@
 {
   "C": {
     "body": [
-      "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
-      "You've probably put that down to not having the time. I'd look at the plan instead, because every plan you've tried was competing with your schedule, and your schedule always wins."
+      "When life is quiet you train, you eat well and it works. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
+      "You know how to do this when nothing gets in the way. Nobody ever showed you how to do it in a busy week.",
+      "It feels like you don't have the time, but the problem is the plan, because every plan you've tried was competing with your schedule, and your schedule always wins."
     ],
     "thisWeek": [
       "Don't wait for a good week. I've got a workout that fits into your worst one. It takes ten to fifteen minutes and you don't need a gym.",
@@ -11,49 +12,46 @@
       "At lunch you'll want a real meal. Start the plate with a good piece of protein, then add vegetables and some slow carbs like rice or potatoes. By dinner you've made good decisions all day, so you don't overeat, and you actually talk with the people at the table.",
       "Next time you pick a plan, ask yourself if it would survive your worst week."
     ],
-    "secondLine": "Your answers point to a second thing as well. Busy weeks throw you off, so whatever you do next has to work in a bad week too.",
     "headline": "Your plan only works in a calm week.",
-    "name": "The Calm‑Week Plan"
+    "name": "Fair‑Weather Racer"
   },
   "A": {
     "body": [
-      "When you're on, you're all in, and for a few weeks it works.",
-      "Most times it's something small, like a dinner out or a few drinks, that breaks the streak. The plan only counted when you did all of it, so one miss feels like the end, and “I'll start again Monday” often turns into a month.",
+      "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works.",
+      "Then something small, like a dinner out or a few drinks, breaks the streak. The plan only counted when you did all of it, so one miss feels like the end, and “I'll start again Monday” often turns into a month.",
+      "That all-or-nothing way of training works when a coach gets you back on track the next morning. Nobody does that for you now.",
       "The harder you go during the week, the worse those moments get. If you've spent five days eating as little as you can, you sit down to Friday dinner starving, and you overeat."
     ],
     "thisWeek": [
       "This one might feel backwards. For the next seven days, eat proper meals throughout the day, every day, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
       "When you fuel yourself properly all week, you sleep better and you have the energy to train. Then you sit down at the dinner that usually throws you off, rested and not starving. You're in a position to make a good decision for yourself, and to actually talk with the people at the table."
     ],
-    "secondLine": "Your answers point to a second thing as well, which is that you only count it when it's perfect. One slip and you write off the week, so keep an eye on that.",
     "headline": "You're either all in or all out.",
-    "name": "All In, All Out"
+    "name": "Lost Athlete"
   },
   "F": {
     "body": [
       "When things went well, something was keeping you on track, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
-      "Without it, the routine didn't last, because you'd been following someone else's plan and nobody showed you how to make your own.",
-      "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and what you never had was a way of doing this that's yours."
+      "You're great with an end date in front of you. Once it passes, nothing comes next, because you'd been following someone else's plan and nobody showed you how to make your own.",
+      "Someone checking on you only works while they're checking, and what you never had was a way of doing this that's yours."
     ],
     "thisWeek": [
       "Think back to the last time you were on track and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long walk you took every weekend. Forget everything else and do just those this week.",
       "Keep them small enough that skipping would feel silly. A week from now you'll have stuck to something with nobody checking, only because you wanted to, and no program ever gave you that."
     ],
-    "secondLine": "Your answers point to a second thing as well, which is that you do well while someone or something else is keeping you on track, and it ends when they do.",
     "headline": "Every time you got in shape, it ended when the program did.",
-    "name": "The Finish Line"
+    "name": "Finish Line Chaser"
   },
   "E": {
     "body": [
-      "I'd guess you barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
-      "Every plan you've tried asked you to say no at night, when you're hungry and worn out, so when it didn't work, you blamed yourself. I'd look at what you ate before 3pm instead."
+      "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
+      "Every plan you've tried asked you to say no at night, when you're hungry and worn out, so when it didn't work, you blamed yourself. The fix is in what you eat before 3pm."
     ],
     "thisWeek": [
       "Starting tomorrow, eat a bigger lunch every workday and leave everything else as it is. The plate starts with a good piece of protein, then vegetables and some slow carbs like rice or potatoes.",
       "Think of that lunch as an investment in the second half of your day. You get through the afternoon on steady energy, and you sit down to dinner hungry but not starving, with enough left to talk with the people at the table."
     ],
-    "secondLine": "Your answers point to a second thing as well, which is that by the evening you're running low, on food, on energy or both. Whatever you do next has to deal with that too.",
     "headline": "By 9:30 at night you have nothing left.",
-    "name": "Running on Empty"
+    "name": "Pit Stop Dodger"
   }
 }

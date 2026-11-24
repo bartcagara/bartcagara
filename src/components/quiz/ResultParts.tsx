@@ -47,16 +47,16 @@ export function Para({ text }: { text: string }) {
     );
 }
 
-/** Small label, the name, the headline. */
-export function ResultHeading({ result, headline }: { result: QuizResult; headline?: string }) {
+/** Small label ("You are a"), the name, the headline. */
+export function ResultHeading({ result, label }: { result: QuizResult; label: string }) {
     return (
         <>
-            <p className={MICRO}>{COPY.resultLabel}</p>
+            <p className={MICRO}>{label}</p>
             <h1 className="mt-3 text-[clamp(2.25rem,11vw,3rem)] md:text-[4rem] font-black tracking-[-0.04em] leading-[0.98] text-balance">
                 {result.name}
             </h1>
             <p className="mt-4 text-[clamp(1.375rem,6vw,1.75rem)] md:text-[2rem] font-black tracking-[-0.03em] leading-[1.1] text-bleu-accent text-balance">
-                {headline ?? result.headline}
+                {result.headline}
             </p>
         </>
     );

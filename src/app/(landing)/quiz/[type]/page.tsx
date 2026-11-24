@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BRIDGE, COPY, DISRUPTION, RESULTS, RESULT_TYPES, type QuizResult } from "@/data/quiz";
+import { COPY, DISRUPTION, RESULTS, RESULT_TYPES, type QuizResult } from "@/data/quiz";
 import { QuizFrame } from "@/components/quiz/QuizFrame";
 import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "@/components/quiz/ResultParts";
-import { ResultPageBookButton } from "@/components/quiz/ResultPageBookButton";
 
 /**
  * One plain page per result (/quiz/calm-week and so on) for the follow-up
@@ -45,7 +44,7 @@ export default async function QuizResultPage({ params }: { params: Promise<{ typ
     return (
         <QuizFrame>
             <article>
-                <ResultHeading result={result} />
+                <ResultHeading result={result} label={COPY.typePageLabel} />
                 <section className="mt-10">
                     <MicroHeading>{COPY.goingOnHeading}</MicroHeading>
                     <div className={PROSE}>
@@ -57,15 +56,6 @@ export default async function QuizResultPage({ params }: { params: Promise<{ typ
                 <div className="mt-10">
                     <ThisWeek result={result} />
                 </div>
-                <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book Restart Audit">
-                    <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
-                    <div className={PROSE}>
-                        <p>{BRIDGE}</p>
-                    </div>
-                    <div className="mt-8">
-                        <ResultPageBookButton type={result.type} slug={result.slug} />
-                    </div>
-                </section>
             </article>
         </QuizFrame>
     );

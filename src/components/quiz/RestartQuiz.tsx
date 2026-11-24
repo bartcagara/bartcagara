@@ -2,20 +2,16 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
-    BRIDGE,
-    CONFIDENT_FROM,
     COPY,
     DISRUPTION,
     HURT,
     LUNCH,
     LAST_RUN_LINES,
-    NO_SECOND_LINE,
     QUESTIONS,
     QUIZ_KIT_FORM,
     RESULTS,
     STAKE_LINES,
     STAKE_PAIN,
-    WEAK_SIGNAL_LINE,
     YEARS_LINES,
     YEARS_VALUE,
     type AnswerLetter,
@@ -23,7 +19,6 @@ import {
 import { scoreQuiz, type QuizScore } from "@/lib/quiz-score";
 import { usePostHogClient } from "@/lib/posthog-context";
 import { OptinForm } from "@/components/newsletter/OptinForm";
-import { BookButton } from "./BookButton";
 import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "./ResultParts";
 
 /** 0 is the start screen, 1 to 8 the questions, 9 the result. */
@@ -227,13 +222,6 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
     const body = fillBody(result, score.rarelyAway ? DISRUPTION.rarelyAway : DISRUPTION.travels).map((p) =>
         (hurt ? p.replace(HURT.bodyFrom, HURT.bodyTo) : p)
     ).map((p) => (score.lunch === LUNCH.answer ? p.replace(LUNCH.bodyFrom, LUNCH.bodyTo) : p));
-    const second = score.weakSignal
-        ? null
-        : score.secondary
-          ? RESULTS[score.secondary].secondLine
-          : score.totals[score.primary] >= CONFIDENT_FROM
-            ? NO_SECOND_LINE
-            : null;
 
     // quiz_fix_viewed when "This week" shows.
     const fixSent = useRef(false);
@@ -246,7 +234,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
 
     return (
         <article>
-            <ResultHeading result={result} headline={score.weakSignal ? COPY.weakHeadline : undefined} />
+            <ResultHeading result={result} label={COPY.resultLabel} />
 
             <section className="mt-10">
                 <MicroHeading>{COPY.toldMeHeading}</MicroHeading>
@@ -254,7 +242,7 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
                     <p>
                         {YEARS_LINES[score.years]} {LAST_RUN_LINES[score.lastRun]}
                     </p>
-                    {score.weakSignal && <p>{WEAK_SIGNAL_LINE}</p>}
+                    <p>{STAKE_LINES[score.stake]}</p>
                 </div>
             </section>
 
@@ -264,7 +252,6 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
                     {body.map((p) => (
                         <Para key={p} text={p} />
                     ))}
-                    {second && <p>{second}</p>}
                 </div>
             </section>
 
@@ -275,20 +262,6 @@ function ResultScreen({ score, gated, onGated }: { score: QuizScore; gated: bool
                     <Gate score={score} onGated={onGated} />
                 )}
             </div>
-
-            <section className="mt-12 pt-10 border-t-2 border-bleu-nuit" aria-label="Book Restart Audit">
-                <MicroHeading>{COPY.nextStepHeading}</MicroHeading>
-                <div className={PROSE}>
-                    <p>{STAKE_LINES[score.stake]}</p>
-                    <p>{BRIDGE}</p>
-                </div>
-                <div className="mt-8">
-                    <BookButton
-                        slug={result.slug}
-                        onClick={() => posthog?.capture("quiz_booking_clicked", { primary: score.primary, gated })}
-                    />
-                </div>
-            </section>
         </article>
     );
 }
@@ -320,7 +293,7 @@ function Gate({ score, onGated }: { score: QuizScore; onGated: () => void }) {
         <div ref={boxRef} className="bg-bleu-fumee border-t-4 border-bleu-nuit px-5 py-6 md:px-8 md:py-8">
             <h2 className="text-xl md:text-2xl font-black tracking-[-0.03em] leading-tight">{COPY.gateHeading}</h2>
             <p className="mt-3 text-base md:text-lg leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                {COPY.gateLine}
+                {COPY.gateLine.replace("{name}", RESULTS[score.primary].name)}
             </p>
             <div className="mt-6">
                 <OptinForm

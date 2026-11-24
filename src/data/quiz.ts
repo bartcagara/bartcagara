@@ -1,8 +1,10 @@
 /**
  * The restart quiz (/quiz): every word and every weight lives here, so Bart's
  * edits are one file. The copy is Bart's, approved word for word on 20 Nov 2026
- * (HQ: 03_content/ideas/2026-11-20_design_restart-quiz.md). Change a line only
- * on his say.
+ * (HQ: 03_content/ideas/2026-11-20_design_restart-quiz.md); the type names, the
+ * certain "You are a" result and no Restart Audit ask on the result from Kyle's
+ * call and Bart's yes on 24 Nov 2026 (HQ: 06_company/advisors/kyle-adams/calls/
+ * 2026-11-24_momentum-quiz-names.md). Change a line only on his say.
  */
 
 export type QuizType = "C" | "A" | "F" | "E";
@@ -124,18 +126,15 @@ export const TIE_ORDER: QuizType[] = ["C", "A", "E", "F"];
 export const SECONDARY_MIN_POINTS = 6;
 /** ...and at least this share of the winner's points. */
 export const SECONDARY_MIN_SHARE = 0.5;
-/** A winner under this many points gets the weak-signal opening. */
+/** A winner under this many points is a weak signal (PostHog only; the page always reads as certain, Bart 24 Nov). */
 export const WEAK_SIGNAL_BELOW = 10;
-/** "I'm fairly sure" shows only from this many points up (cold reader, 21 Nov: 9 points from answers that barely fit read as overconfident). */
-export const CONFIDENT_FROM = 12;
 
 export interface QuizResult {
   type: QuizType;
-  /** The address of its own page: /quiz/<slug>. Also the booking link's utm_content. */
+  /** The address of its own page: /quiz/<slug>. Kept from the first names so Kit links and tags don't break. */
   slug: string;
+  /** Shown under "You are a". No "the", no dashes inside the name (Bart, 24 Nov). */
   name: string;
-  /** The name inside a sentence (the gate line). */
-  nameInSentence: string;
   headline: string;
   /**
    * Paragraphs after the echo lines. `{disruption}` is filled from Q5.
@@ -145,20 +144,18 @@ export interface QuizResult {
   body: string[];
   /** "This week", behind the gate. **Double stars** mark bold, as in body. */
   thisWeek: string[];
-  /** The [SECOND] line when this type is the runner-up. */
-  secondLine: string;
 }
 
 export const RESULTS: Record<QuizType, QuizResult> = {
   C: {
     type: "C",
     slug: "calm-week",
-    name: "The Calm\u2011Week Plan",
-    nameInSentence: "the Calm\u2011Week Plan",
+    name: "Fair\u2011Weather Racer",
     headline: "Your plan only works in a calm week.",
     body: [
-      "When life is quiet you train, you eat well and it works, and you've probably done it more than once. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
-      "You've probably put that down to not having the time. I'd look at the plan instead, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
+      "When life is quiet you train, you eat well and it works. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
+      "You know how to do this when nothing gets in the way. Nobody ever showed you how to do it in a busy week.",
+      "It feels like you don't have the time, but the problem is the plan, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
       "**Don't wait for a good week.** I've got a workout that fits into your worst one. It takes ten to fifteen minutes and you don't need a gym.",
@@ -167,61 +164,51 @@ export const RESULTS: Record<QuizType, QuizResult> = {
       "At lunch you'll want a real meal. Start the plate with a good piece of protein, then add vegetables and some slow carbs like rice or potatoes. By dinner you've made good decisions all day, so you don't overeat, and you actually talk with the people at the table.",
       "Next time you pick a plan, **ask yourself if it would survive your worst week.**",
     ],
-    secondLine:
-      "Your answers point to a second thing as well. Busy weeks throw you off, so whatever you do next has to work in a bad week too.",
   },
   A: {
     type: "A",
     slug: "all-in-all-out",
-    name: "All In, All Out",
-    nameInSentence: "All In, All Out",
+    name: "Lost Athlete",
     headline: "You're either all in or all out.",
     body: [
-      "When you're on, you're all in, and for a few weeks it works.",
-      "Most times it's something small, like a dinner out or a few drinks, that breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
+      "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works.",
+      "Then something small, like a dinner out or a few drinks, breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
+      "That all-or-nothing way of training works when a coach gets you back on track the next morning. Nobody does that for you now.",
       "The harder you go during the week, the worse those moments get. If you've spent five days eating as little as you can, you sit down to Friday dinner starving, and you overeat.",
     ],
     thisWeek: [
       "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
       "When you fuel yourself properly all week, you sleep better and you have the energy to train. Then you sit down at the dinner that usually throws you off, rested and not starving. You're in a position to make a good decision for yourself, and to actually talk with the people at the table.",
     ],
-    secondLine:
-      "Your answers point to a second thing as well, which is that you only count it when it's perfect. One slip and you write off the week, so keep an eye on that.",
   },
   F: {
     type: "F",
     slug: "finish-line",
-    name: "The Finish Line",
-    nameInSentence: "the Finish Line",
+    name: "Finish Line Chaser",
     headline: "Every time you got in shape, it ended when the program did.",
     body: [
       "When things went well, something was keeping you on track, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
-      "Without it, the routine didn't last, because you'd been following someone else's plan and nobody showed you how to make your own.",
-      "People will tell you that you need accountability. I see it differently. Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
+      "You're great with an end date in front of you. Once it passes, nothing comes next, because you'd been following someone else's plan and nobody showed you how to make your own.",
+      "Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
     ],
     thisWeek: [
       "Think back to the last time you were on track and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long walk you took every weekend. **Forget everything else and do just those this week.**",
       "Keep them small enough that skipping would feel silly. A week from now you'll have stuck to something with nobody checking, only because you wanted to, and no program ever gave you that.",
     ],
-    secondLine:
-      "Your answers point to a second thing as well, which is that you do well while someone or something else is keeping you on track, and it ends when they do.",
   },
   E: {
     type: "E",
     slug: "running-on-empty",
-    name: "Running on Empty",
-    nameInSentence: "Running on Empty",
+    name: "Pit Stop Dodger",
     headline: "By 9:30 at night you have nothing left.",
     body: [
-      "I'd guess you barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
-      "**Every plan you've tried asked you to say no at night, when you're hungry and worn out**, so when it didn't work, you blamed yourself. I'd look at what you ate before 3pm instead.",
+      "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
+      "**Every plan you've tried asked you to say no at night, when you're hungry and worn out**, so when it didn't work, you blamed yourself. The fix is in what you eat before 3pm.",
     ],
     thisWeek: [
       "**Starting tomorrow, eat a bigger lunch every workday** and leave everything else as it is. The plate starts with a good piece of protein, then vegetables and some slow carbs like rice or potatoes.",
       "Think of that lunch as an investment in the second half of your day. You get through the afternoon on steady energy, and you sit down to dinner hungry but not starving, with enough left to talk with the people at the table.",
     ],
-    secondLine:
-      "Your answers point to a second thing as well, which is that by the evening you're running low, on food, on energy or both. Whatever you do next has to deal with that too.",
   },
 };
 
@@ -241,7 +228,7 @@ export const LAST_RUN_LINES: Record<string, string> = {
   b: "The last time you were on track, one bad weekend ended it, and then you wrote off the month.",
   c: "The last time you were on track, it lasted as long as the program did, and then you drifted.",
   d: "Nothing in particular ended it the last time you were on track. You just ran out of gas.",
-  e: "The last time you were on track, getting hurt or sick ended it. I can't judge that from a quiz, so I went by your other answers.",
+  e: "The last time you were on track, getting hurt or sick ended it. That happens, and the rest of your answers show what's kept you from getting back.",
 };
 
 /** [DISRUPTION] in result C, from Q5. */
@@ -253,42 +240,34 @@ export const DISRUPTION = {
 /** Q5 answers that mean being away isn't what throws him off (rarely away, or it holds up fine). */
 export const AT_HOME_ANSWERS: AnswerLetter[] = ["e", "f"];
 
-/** Q6 "Evenings aren't a problem for me": Running on Empty can't win or be second (Fable, 21 Nov). */
+/** Q6 "Evenings aren't a problem for me": Pit Stop Dodger (E) can't win or be second (Fable, 21 Nov). */
 export const EVENINGS_FINE_ANSWER: AnswerLetter = "e";
 
-/** Q4 "A proper lunch, most days" with Running on Empty: body[0] says what he told us instead. */
+/** Q4 "A proper lunch, most days" with Pit Stop Dodger (E): body[0] says what he told us instead. */
 export const LUNCH = {
   answer: "e",
-  bodyFrom: "I'd guess you barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once.",
-  bodyTo: "You told me you eat a proper lunch most days. I'd guess it's still not enough to get you through the day, because by the evening you're hungry and worn out at once.",
+  bodyFrom: "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once.",
+  bodyTo: "You told me you eat a proper lunch most days, and it's still not enough to get you through the day, so by the evening you're hungry and worn out at once.",
 } as const;
 
-/** [SECOND] when there is no secondary type. */
 /**
  * When Q2 is "I got hurt or sick" (Bart, 21 Nov, after the cold reader): the
- * body drops
- * "You've probably put that down to not having the time", which would
- * contradict what he just said.
+ * body drops "It feels like you don't have the time", which would contradict
+ * what he just said.
  */
 export const HURT = {
   lastRun: "e",
-  bodyFrom: "You've probably put that down to not having the time. I'd look at the plan instead, because ",
-  bodyTo: "The way I see it, ",
+  bodyFrom: "It feels like you don't have the time, but the problem is the plan, because ",
+  bodyTo: "The problem is the plan, because ",
 } as const;
 
-export const NO_SECOND_LINE = "Most of your answers point the same way, so I'm fairly sure about this one.";
-
-/** Weak signal: first in the body; the no-secondary line is left out. */
-export const WEAK_SIGNAL_LINE =
-  "Nothing in your answers points strongly at one thing, so take what fits below and leave the rest.";
-
-/** [STAKE], from Q8, just before the bridge. */
+/** [STAKE], from Q8: the second paragraph of "What you told me". */
 export const STAKE_LINES: Record<string, string> = {
   a: "You said what bothers you most is who you are at home, and that the people you live with get what's left of you. To me that's a better reason to sort this out than anything the scale says.",
   b: "You said what bothers you most is your health, and that your doctor has started bringing things up. I'd take that seriously, because it's the one part of this that won't wait for a quieter month.",
   c: "You said what bothers you most is your energy, and that you're wiped out by the evening. That's worth fixing for its own sake, because everything else you want to change takes energy you don't have right now.",
   d: "You said what bothers you most is how you look, and that you don't recognize the guy in the photos. That matters, and it's reason enough to sort this out.",
-  e: "You said what bothers you most is that you keep failing at this one thing. I don't think you've been failing. You've been trying the same kind of plan again and again, and a plan can be changed.",
+  e: "You said what bothers you most is that you keep failing at this one thing. You haven't been failing. You've been trying the same kind of plan again and again, and a plan can be changed.",
 };
 
 /** Q8 answer to the Kit pain tag it feeds (`pain - <word>`). */
@@ -308,11 +287,6 @@ export const YEARS_VALUE: Record<string, string> = {
   d: "10+",
 };
 
-export const BRIDGE =
-  "A quiz can only tell you so much, and I'd rather hear the whole story from you. On a Restart Audit you tell me what's been going on, and I'll give you my honest read on what it takes to make this your last restart. It's 45 minutes with me.";
-
-export const BOOK_BUTTON = "Book Restart Audit";
-
 export const COPY = {
   headerLabel: "The Restart Quiz",
   startHeadline: "Which of the 4 restart types are you?",
@@ -320,16 +294,17 @@ export const COPY = {
     "Answer 8 quick questions, and in two minutes you'll know what knocks you off track every time and what to do about it this week.",
   startButton: "Start",
   back: "Back",
-  resultLabel: "What kills your restarts",
-  /** In place of the result's headline when the signal is weak. */
-  weakHeadline: "This is the closest match, but I'm not sure about it.",
+  /** Over the name on his result: "You are a" / Lost Athlete. */
+  resultLabel: "You are a",
+  /** Over the name on the plain /quiz/<slug> page, where there are no answers. */
+  typePageLabel: "Restart type",
   /** Small headings on the result, in order. "This week" is the big one behind the gate. */
   toldMeHeading: "What you told me",
   goingOnHeading: "What's going on",
   thisWeekHeading: "This week",
-  nextStepHeading: "Your next step",
-  gateHeading: "Want to know what I'd do first?",
-  gateLine: "Leave your first name and email and I'll show you what I'd do this week if I were you.",
+  gateHeading: "Want to know what to do first?",
+  /** {name} is his type's name. */
+  gateLine: "Leave your first name and email, and I'll show you exactly what a {name} should do this week.",
   gateButton: "Show me",
   gateNote:
     "You'll also get my newsletter, the Founder's Fitness Brief, every Thursday. It's one email a week and you can unsubscribe any time.",

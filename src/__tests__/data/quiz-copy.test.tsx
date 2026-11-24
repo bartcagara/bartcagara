@@ -4,12 +4,13 @@ import { Para, plainText, splitEmphasis } from '@/components/quiz/ResultParts';
 import before from './quiz-copy-before.json';
 
 /**
- * The result copy was approved word for word on 20 Nov 2026. The layout pass
+ * The result copy was approved word for word on 20 Nov 2026 (names and body
+ * reworked with Bart's yes on 24 Nov). The layout pass
  * only added **bold** marks, so with the marks taken out every line must read
  * exactly as approved (quiz-copy-before.json). When Bart changes a line,
  * change it in that file too.
  */
-type Saved = { body: string[]; thisWeek: string[]; secondLine: string; headline: string; name: string };
+type Saved = { body: string[]; thisWeek: string[]; headline: string; name: string };
 const approved = before as Record<string, Saved>;
 
 describe('result copy', () => {
@@ -18,7 +19,6 @@ describe('result copy', () => {
     const saved = approved[t];
     expect(r.body.map(plainText)).toEqual(saved.body);
     expect(r.thisWeek.map(plainText)).toEqual(saved.thisWeek);
-    expect(r.secondLine).toBe(saved.secondLine);
     expect(r.headline).toBe(saved.headline);
     expect(r.name).toBe(saved.name);
   });
@@ -44,6 +44,16 @@ describe('result copy', () => {
         expect(container.textContent).not.toContain('*');
         unmount();
       }
+    }
+  });
+});
+
+describe('a certain result with no call ask (Kyle and Bart, 24 Nov)', () => {
+  it('never hedges and never asks for a Restart Audit', () => {
+    const quiz = jest.requireActual('@/data/quiz');
+    const all = JSON.stringify(quiz);
+    for (const hedge of ["I'd guess", 'probably', 'fairly sure', 'not sure', 'second thing', 'Restart Audit']) {
+      expect(all).not.toContain(hedge);
     }
   });
 });
