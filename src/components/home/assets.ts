@@ -89,7 +89,7 @@ export const CLIENT_DMS = [
   "/images/testimonials/dm-4.webp",
   "/images/testimonials/dm-5.webp",
   "/images/testimonials/dm-6.webp",
-  "/images/testimonials/dm-7.webp",
+  "/images/testimonials/dm-7b.webp",
   "/images/testimonials/dm-8.webp",
   "/images/testimonials/dm-9.webp",
   "/images/testimonials/dm-10.webp",
