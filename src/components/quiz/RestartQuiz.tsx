@@ -19,7 +19,7 @@ import {
 import { scoreQuiz, type QuizScore } from "@/lib/quiz-score";
 import { usePostHogClient } from "@/lib/posthog-context";
 import { OptinForm } from "@/components/newsletter/OptinForm";
-import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "./ResultParts";
+import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody, splitEmphasis } from "./ResultParts";
 
 /** 0 is the start screen, 1 to 8 the questions, 9 the result. */
 const RESULT_STEP = QUESTIONS.length + 1;
@@ -207,7 +207,15 @@ function StartScreen({ onStart }: { onStart: () => void }) {
                 ))}
             </h1>
             <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                {COPY.startLine}
+                {splitEmphasis(COPY.startLine).map((part, i) =>
+                    part.bold ? (
+                        <strong key={i} className="font-bold text-bleu-nuit">
+                            {part.text}
+                        </strong>
+                    ) : (
+                        part.text
+                    )
+                )}
             </p>
             <button
                 type="button"

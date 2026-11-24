@@ -295,9 +295,10 @@ export const YEARS_VALUE: Record<string, string> = {
 
 export const COPY = {
   headerLabel: "The Restart Quiz",
+  /** startLine: the four names in **bold** (Bart, 24 Nov); plainText() strips the stars for metadata. */
   startHeadline: "You can lose the weight. You can't keep it off.",
   startLine:
-    "Every man who keeps starting over is one of 4 types: Fair\u2011Weather Racer, Lost Athlete, Finish Line Chaser or Pit Stop Dodger. Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
+    "Every man who keeps starting over is one of 4 types: **Fair\u2011Weather Racer**, **Lost Athlete**, **Finish Line Chaser** or **Pit Stop Dodger**. Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
   startButton: "Start",
   back: "Back",
   /** Over the name on his result: "You are a" / Lost Athlete. */

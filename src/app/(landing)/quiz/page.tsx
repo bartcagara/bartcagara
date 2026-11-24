@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { COPY } from "@/data/quiz";
 import { QuizFrame } from "@/components/quiz/QuizFrame";
+import { plainText } from "@/components/quiz/ResultParts";
 import { RestartQuiz } from "@/components/quiz/RestartQuiz";
 
 const TITLE = "The Restart Quiz | Bart Cagara";
-const DESCRIPTION = COPY.startLine;
+const DESCRIPTION = plainText(COPY.startLine);
 
 /**
  * The restart quiz (design: HQ 03_content/ideas/2026-11-20_design_restart-quiz.md).
