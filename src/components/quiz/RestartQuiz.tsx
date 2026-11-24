@@ -199,7 +199,12 @@ function StartScreen({ onStart }: { onStart: () => void }) {
     return (
         <div className="pt-4 md:pt-10">
             <h1 className="text-[clamp(2.25rem,11vw,3rem)] md:text-[3.5rem] font-black tracking-[-0.04em] leading-[0.98] text-balance md:[text-wrap:wrap]">
-                {COPY.startHeadline}
+                {/* One sentence per line, the second in the accent blue, as on the share card. */}
+                {COPY.startHeadline.split(/(?<=\.) /).map((sentence, i) => (
+                    <span key={sentence} className={`block text-balance ${i > 0 ? "text-bleu-accent" : ""}`}>
+                        {sentence}
+                    </span>
+                ))}
             </h1>
             <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
                 {COPY.startLine}

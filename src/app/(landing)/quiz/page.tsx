@@ -29,7 +29,7 @@ export const metadata: Metadata = {
                 url: "/images/og-quiz.jpg",
                 width: 1200,
                 height: 630,
-                alt: "The Restart Quiz: which of the 4 restart types are you? Answer 8 quick questions, and in two minutes you'll know what knocks you off track every time and what to do about it this week."
+                alt: "The Restart Quiz: You can lose the weight. You can't keep it off. Every man who keeps starting over is one of 4 types. Answer 8 quick questions, and in two minutes you'll know which one you are."
             }
         ]
     },
