@@ -4,7 +4,8 @@
  * (HQ: 03_content/ideas/2026-11-20_design_restart-quiz.md); the type names, the
  * certain "You are a" result and no Restart Audit ask on the result from Kyle's
  * call and Bart's yes on 24 Nov 2026 (HQ: 06_company/advisors/kyle-adams/calls/
- * 2026-11-24_momentum-quiz-names.md). Change a line only on his say.
+ * 2026-11-24_momentum-quiz-names.md); headlines and bodies from the Fable round,
+ * approved 24 Nov (HQ: 03_content/ideas/2026-11-24_quiz-type-descriptions.md). Change a line only on his say.
  */
 
 export type QuizType = "C" | "A" | "F" | "E";
@@ -154,10 +155,10 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     slug: "calm-week",
     name: "Fair\u2011Weather Racer",
     gateEnd: "so the next busy week doesn't stop you again",
-    headline: "Your plan only works in a calm week.",
+    headline: "You're on track in a calm week, and a busy week stops you every time.",
     body: [
-      "When life is quiet you train, you eat well and it works. Then, sooner or later, {disruption}, and your plan has nothing for a week like that, so it stops and you wait for things to calm down before starting again.",
-      "You know how to do this when nothing gets in the way. Nobody ever showed you how to do it in a busy week.",
+      "When life is quiet you train, you eat well and it works, so you know you can do this. Then, sooner or later, {disruption}, and training is the first thing to go.",
+      "You don't start again when that week ends. You tell yourself you'll get back to it when things calm down, and then you wait, so **a few busy days end up costing you weeks**. If things were going to calm down, they would have by now.",
       "It feels like you don't have the time, but the problem is the plan, because **every plan you've tried was competing with your schedule, and your schedule always wins.**",
     ],
     thisWeek: [
@@ -173,12 +174,11 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     slug: "all-in-all-out",
     name: "Lost Athlete",
     gateEnd: "so one missed day doesn't turn into another month off",
-    headline: "You're either all in or all out.",
+    headline: "You're all in until the first miss, and then you're all out.",
     body: [
-      "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works.",
-      "Then something small, like a dinner out or a few drinks, breaks the streak. **The plan only counted when you did all of it, so one miss feels like the end**, and “I'll start again Monday” often turns into a month.",
-      "That all-or-nothing way of training works when a coach gets you back on track the next morning. Nobody does that for you now.",
-      "The harder you go during the week, the worse those moments get. If you've spent five days eating as little as you can, you sit down to Friday dinner starving, and you overeat.",
+      "When you're on, you're all in, with training every day, clean food and no drinks, and for a few weeks it works. But the plan only counts when you do all of it, so part of you is already waiting to fail.",
+      "Then something small breaks the streak, like a dinner out or a few drinks. **One miss feels like the whole thing is ruined**, so you write off the rest of the week, and “I'll start again Monday” turns into a month. When you do come back, you come back stricter than the last time.",
+      "Going all in is how athletes train, and it works for them because a coach gets them back on track the morning after a bad day. **You're doing it the athlete's way with no coach**, so after a miss you stay off until you can go all in again. A strict week also makes the miss more likely, because by Friday dinner you're starving.",
     ],
     thisWeek: [
       "This one might feel backwards. **For the next seven days, eat proper meals throughout the day, every day**, including the days you'd usually try to be good. Start every plate with a good piece of protein, and don't save anything up for the weekend.",
@@ -190,11 +190,11 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     slug: "finish-line",
     name: "Finish Line Chaser",
     gateEnd: "so this time it doesn't end when the program does",
-    headline: "Every time you got in shape, it ended when the program did.",
+    headline: "You do the work for a challenge, a coach or a date, and you stop when they end.",
     body: [
-      "When things went well, something was keeping you on track, like a coach, a challenge, a training partner or a date to work toward, and while it was there you did the work.",
-      "You're great with an end date in front of you. Once it passes, nothing comes next, because you'd been following someone else's plan and nobody showed you how to make your own.",
-      "Someone checking on you only works while they're checking, and **what you never had was a way of doing this that's yours.**",
+      "While it's on, you do everything it asks. You show up, you follow the plan, and it works.",
+      "Then the last day comes, and with nothing to answer to, you drift, until you sign up for the next thing and do it all over again.",
+      "You call that needing accountability. But someone checking on you only works while they're checking, and when you do something only because there's an end date, you stop when the date passes. **You've been on track before, but never once with nobody checking**, because it was always someone else's plan and nobody showed you how to make your own.",
     ],
     thisWeek: [
       "Think back to the last time you were on track and pick the one or two small things you actually enjoyed back then, the ones that felt like nothing at the time. Maybe it was the breakfast that kept you away from the snacks all morning, or the long walk you took every weekend. **Forget everything else and do just those this week.**",
@@ -208,8 +208,8 @@ export const RESULTS: Record<QuizType, QuizResult> = {
     gateEnd: "so 9:30 at night stops undoing your whole day",
     headline: "By 9:30 at night you have nothing left.",
     body: [
-      "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
-      "**Every plan you've tried asked you to say no at night, when you're hungry and worn out**, so when it didn't work, you blamed yourself. The fix is in what you eat before 3pm.",
+      "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, then whatever's closest, if anything, because a proper meal feels like time you don't have. By the evening you're hungry and worn out at once. Dinner goes fast, you go back for more, and later you're in the pantry or pouring a drink without really deciding to.",
+      "**Every plan you've tried asked you to say no at night, when you're hungry and worn out.** When it didn't work you blamed yourself, for something that was **decided before 3pm**.",
     ],
     thisWeek: [
       "**Starting tomorrow, eat a bigger lunch every workday** and leave everything else as it is. The plate starts with a good piece of protein, then vegetables and some slow carbs like rice or potatoes.",
@@ -252,8 +252,8 @@ export const EVENINGS_FINE_ANSWER: AnswerLetter = "e";
 /** Q4 "A proper lunch, most days" with Pit Stop Dodger (E): body[0] says what he told us instead. */
 export const LUNCH = {
   answer: "e",
-  bodyFrom: "You barely eat during the day. Coffee gets you through the morning, then whatever's closest, if anything, so by the evening you're hungry and worn out at once.",
-  bodyTo: "You told me you eat a proper lunch most days, and it's still not enough to get you through the day, so by the evening you're hungry and worn out at once.",
+  bodyFrom: "You don't stop to eat during the day, and that's what makes you a Pit Stop Dodger. Coffee gets you through the morning, then whatever's closest, if anything, because a proper meal feels like time you don't have. By the evening you're hungry and worn out at once.",
+  bodyTo: "You told me you eat a proper lunch most days. It's still not enough to get you through the day, and that's what makes you a Pit Stop Dodger. By the evening you're hungry and worn out at once.",
 } as const;
 
 /**
