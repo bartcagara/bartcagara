@@ -156,7 +156,7 @@ export const HOMEPAGE_CONTENT = {
   quizInvite: {
     label: "The types",
     title: "Not ready to talk yet? Find out which restarter you are.",
-    intro: "Every man who keeps starting over is one of four types.",
+    intro: "Every man who keeps starting over is one of four types:",
     after: "Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
     types: ["Fair-Weather Racer", "Lost Athlete", "Finish Line Chaser", "Pit Stop Dodger"],
     button: "Discover your type",
