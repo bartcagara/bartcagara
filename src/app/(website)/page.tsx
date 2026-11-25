@@ -45,9 +45,6 @@ const FinalCTASection = dynamic(() => import("@/components/home/sections").then(
   loading: () => <SectionSkeleton minHeight="min-h-[400px]" bgColor="bg-white" />
 });
 
-const BriefingSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.BriefingSection })), {
-  loading: () => <SectionSkeleton minHeight="min-h-[300px]" bgColor="bg-bleu-nuit" />
-});
 
 const businessJsonLd = {
   "@context": "https://schema.org",
@@ -134,10 +131,6 @@ export default function Home() {
           <ProofSection content={HOMEPAGE_CONTENT.proof} />
         </ErrorBoundary>
 
-        <ErrorBoundary>
-          <QuizInviteSection content={HOMEPAGE_CONTENT.quizInvite} />
-        </ErrorBoundary>
-
         {/* 7. OBJECTION PREEMPTION */}
         <ErrorBoundary>
           <QuestionsSection content={HOMEPAGE_CONTENT.questions} />
@@ -152,14 +145,9 @@ export default function Home() {
           />
         </ErrorBoundary>
 
-        {/* 9. THE BRIEFING */}
+        {/* 9. THE QUIZ: the page ends on the soft option */}
         <ErrorBoundary>
-          <BriefingSection
-            label={HOMEPAGE_CONTENT.briefing.label}
-            heading={HOMEPAGE_CONTENT.briefing.heading}
-            body={HOMEPAGE_CONTENT.briefing.body}
-            submitLabel={HOMEPAGE_CONTENT.briefing.submitLabel}
-          />
+          <QuizInviteSection content={HOMEPAGE_CONTENT.quizInvite} />
         </ErrorBoundary>
     </div>
   );
