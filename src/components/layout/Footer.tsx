@@ -23,7 +23,7 @@ export const Footer = memo(() => (
           <h2 className="text-base font-semibold text-bleu-nuit mb-4">More from Bart</h2>
           <ul className="space-y-2 text-sm text-bleu-nuit/70">
             <li><Link href="/brief" className="hover:text-bleu-accent transition-colors">Founder&apos;s Fitness Brief</Link></li>
-            <li><Link href="/quiz" className="hover:text-bleu-accent transition-colors">Restart Types</Link></li>
+            <li><Link href="/quiz" className="hover:text-bleu-accent transition-colors">The 4 Restart Types</Link></li>
             <li><a href="https://getstack.to/?utm_source=bartcagara&amp;utm_medium=website&amp;utm_campaign=stack_beta&amp;utm_content=footer" className="hover:text-bleu-accent transition-colors">Stack App</a></li>
           </ul>
         </nav>
