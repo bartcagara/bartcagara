@@ -32,7 +32,7 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
 
         <Link
           href={content.href}
-          className="mt-8 inline-flex items-center justify-center w-full sm:w-auto min-h-14 px-10 py-4 bg-bleu-accent border-2 border-bleu-nuit text-white text-lg font-black uppercase tracking-tight shadow-brutal-nuit-sm transition-brutal hover:shadow-none hover-translate-brutal"
+          className="mt-8 inline-flex items-center justify-center w-full sm:w-auto min-h-14 px-10 py-4 bg-bleu-nuit border-2 border-bleu-nuit text-white text-lg font-black uppercase tracking-tight shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover-translate-brutal"
         >
           {content.button}
         </Link>
