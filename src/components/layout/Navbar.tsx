@@ -17,7 +17,7 @@ const LINKS = [
   { href: "/#results", label: "Client Wins" },
   { href: "/#program", label: "The Program" },
   { href: "/#about", label: "Your Coach" },
-  { href: "/quiz", label: "Restart Quiz" },
+  { href: "/quiz", label: "Restart Types" },
 ] as const;
 
 export const Navbar = memo(() => {

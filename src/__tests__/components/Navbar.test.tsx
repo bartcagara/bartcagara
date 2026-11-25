@@ -23,7 +23,7 @@ describe('Navbar', () => {
     expect(screen.getByText('Client Wins')).toBeInTheDocument();
     expect(screen.getByText('The Program')).toBeInTheDocument();
     expect(screen.getByText('Your Coach')).toBeInTheDocument();
-    expect(screen.getByText('Restart Quiz')).toBeInTheDocument();
+    expect(screen.getByText('Restart Types')).toBeInTheDocument();
   });
 
   it('renders the Book Restart Audit CTA button', () => {
