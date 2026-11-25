@@ -35,7 +35,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   followUp: {
-    label: "Client wins",
+    label: "The results",
     title: "Former athletes looking like themselves again.",
     intro: "Like you, they thought they knew what they were doing, until work, travel or stress got in the way.",
     photos: [
@@ -59,7 +59,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   realReason: {
-    label: "The real reason",
+    label: "The reason",
     title: "Forget the weight for a second.",
     question: "Why are you really doing this?",
     reasons: [
@@ -74,7 +74,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   coach: {
-    label: "Your coach",
+    label: "The coach",
     title: "Who the fuck is Bart?",
   },
 
@@ -141,7 +141,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   questions: {
-    label: "Questions",
+    label: "The questions",
     title: "What men ask before they book.",
     items: [
       { question: "I've tried programs before. They never stick.", answer: "You don't get a meal plan from me. You eat the food you already like, restaurants included, and train 2 to 4 short sessions a week. We talk every week and change what isn't working, and over six months you learn to run it yourself." },
@@ -154,7 +154,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   quizInvite: {
-    label: "The restart quiz",
+    label: "The types",
     title: "Not ready to talk yet? Find out which restarter you are.",
     intro: "Every man who keeps starting over is one of four types.",
     after: "Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
