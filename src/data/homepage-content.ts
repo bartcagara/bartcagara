@@ -29,7 +29,7 @@ export const HOMEPAGE_CONTENT = {
     closing: "You're sick of it. And this time, you're worried too.",
     message: {
       caption: "Client after finding his old photos",
-      image: "/images/testimonials/dm-10.webp",
+      image: "/images/testimonials/dm-10-cut.webp",
       alt: "A client's message: seeing his old photos reminded him how many times he told himself he'd start something and lose the weight, but there were never any follow-up photos, because he never made progress on his own or in group programs.",
     },
   },
@@ -67,7 +67,7 @@ export const HOMEPAGE_CONTENT = {
       { caption: "Taking your shirt off on vacation?", image: "/images/testimonials/dm-27.jpg", width: 1169, height: 964, alt: "A client's message from a beach holiday: he feels much more confident on the beach with a slimmer, toned physique and isn't embarrassed to take his shirt off anymore. The narrower waistline and almost gone love handles really helped." },
       { caption: "Being the guy others want to look like?", image: "/images/testimonials/dm-12.webp", width: 828, height: 400, alt: "A client's message: on the road for six days, in the hotel gym a guy asked how old he was. He said 60, and the guy said he could only hope." },
       { caption: "Your wife noticing?", image: "/images/testimonials/dm-17.webp", width: 1100, height: 984, alt: "A client's message: his wife started complimenting his chest and arm muscles, and he wants to be the best husband and father he can be." },
-      { caption: "Keeping up with your kids?", image: "/images/testimonials/dm-6.webp", width: 778, height: 1100, alt: "A client's message: last summer he could throw his son for a backflip three or four times before he was done. Now he couldn't stop, no pain, not tired, and it was exactly the reason he wanted to change his life." },
+      { caption: "Keeping up with your kids?", image: "/images/testimonials/dm-6-cut.webp", width: 778, height: 950, alt: "A client's message: last summer he could throw his son for a backflip three or four times before he was done. Now he couldn't stop, no pain, not tired, and it was exactly the reason he wanted to change his life." },
       { caption: "Seeing yourself in the mirror again?", image: "/images/testimonials/dm-28.jpg", width: 1170, height: 543, alt: "A client's message: today in the mirror he can see the outline of what he wants to be, and he's trying not to be too proud of himself. Bart replies: stop it, take it all in, you deserve it." },
     ],
     closing: "Whatever your reason, your body should represent the man you are.",

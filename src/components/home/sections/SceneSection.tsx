@@ -40,7 +40,7 @@ export function SceneSection({ content }: SceneSectionProps) {
               src={content.message.image}
               alt={content.message.alt}
               width={802}
-              height={1100}
+              height={946}
               sizes="(max-width: 1024px) 280px, 340px"
               className="block w-full h-auto"
             />
