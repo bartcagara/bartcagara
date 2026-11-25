@@ -52,7 +52,8 @@ export interface HeroSectionProps {
     highlightedText: string;
     subheadline: string;
     ctaText: string;
-    stats: readonly { value: string; label: string }[];
+    proof: { caption: string; image: string; alt: string };
+    logosLabel: string;
   };
 }
 
@@ -61,16 +62,111 @@ export interface ObjectionItem {
   readonly answer: string;
 }
 
-export interface DiagnosisSectionProps {
-  title: string;
-  subtitle: string;
-  items: readonly string[];
+export interface SceneSectionProps {
+  content: {
+    label: string;
+    title: string;
+    moments: string;
+    paragraphs: readonly string[];
+    closing: string;
+    message: { caption: string; image: string; alt: string };
+  };
 }
 
-export interface SolutionSectionProps {
-  title: string;
-  subtitle: string;
-  items: readonly string[];
+export interface FollowUpPhotosSectionProps {
+  content: {
+    label: string;
+    title: string;
+    intro: string;
+    photos: readonly { src: string; alt: string }[];
+  };
+}
+
+export interface WhyItNeverHeldSectionProps {
+  content: {
+    label: string;
+    title: string;
+    allIn: string;
+    message: { caption: string; image: string; alt: string };
+    trip: string;
+    closing: string;
+  };
+}
+
+export interface TheProgramSectionProps {
+  content: {
+    label: string;
+    title: string;
+    intro: string;
+    phases: readonly { number: string; weeks: string; name: string; text: string; win: string }[];
+    weekly: { label: string; items: readonly { title: string; text: string }[] };
+    message: { caption: string; image: string; width: number; height: number; crop: number; alt: string };
+  };
+}
+
+export interface ProofSectionProps {
+  content: {
+    label: string;
+    title: string;
+    intro: string;
+    captions: { videos: string; photos: string; messages: string; linkedin: string };
+    photos: readonly { src: string; alt: string }[];
+    messages: readonly { image: string; width: number; height: number; alt: string }[];
+  };
+}
+
+export interface QuestionsSectionProps {
+  content: {
+    label: string;
+    title: string;
+    items: readonly { question: string; answer: string }[];
+  };
+}
+
+export interface QuizInviteSectionProps {
+  content: {
+    label: string;
+    title: string;
+    intro: string;
+    after: string;
+    types: readonly string[];
+    button: string;
+    href: string;
+  };
+}
+
+export interface CoachSectionProps {
+  content: {
+    label: string;
+    title: string;
+    imageSrc: string;
+    imageAlt: string;
+    paragraphs: readonly string[];
+    transformationImage: string;
+    credentials: readonly string[];
+  };
+}
+
+export interface RealReasonSectionProps {
+  content: {
+    label: string;
+    title: string;
+    question: string;
+    reasons: readonly { caption: string; image: string; width: number; height: number; crop?: number; alt: string }[];
+    closing: string;
+  };
+}
+
+export interface RealLifeSectionProps {
+  content: {
+    label: string;
+    title: string;
+    road: string;
+    adjust: string;
+    payoff: string;
+    closing: string;
+    messages: readonly { caption: string; image: string; width: number; height: number; alt: string }[];
+  };
 }
 
 export interface ProgramDelivery {

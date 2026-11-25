@@ -5,32 +5,40 @@ import { SectionSkeleton } from "@/components/ui/LoadingSkeleton";
 import { ErrorBoundary } from "@/components/ui/ErrorBoundary";
 
 // Lazy load heavy below-the-fold sections to improve initial page load
-const TrustedBy = dynamic(() => import("@/components/home/TrustedBy").then(mod => ({ default: mod.TrustedBy })), {
-  loading: () => <SectionSkeleton minHeight="min-h-[100px]" bgColor="bg-bleu-nuit" />
-});
-
-const DiagnosisSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.DiagnosisSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
-});
-
-const SolutionSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.SolutionSection })), {
+const SceneSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.SceneSection })), {
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
-const ResultsSection = dynamic(() => import("@/components/home/ResultsSection").then(mod => ({ default: mod.ResultsSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
-});
-
-const ProgramSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProgramSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
-});
-
-const AboutSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.AboutSection })), {
+const FollowUpPhotosSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FollowUpPhotosSection })), {
   loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
-const ObjectionsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ObjectionsSection })), {
-  loading: () => <SectionSkeleton bgColor="bg-white" />
+const WhyItNeverHeldSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.WhyItNeverHeldSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-bleu-nuit" />
+});
+
+const RealReasonSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.RealReasonSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
+const ProofSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.ProofSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
+const TheProgramSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.TheProgramSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-bleu-nuit" />
+});
+
+const QuizInviteSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.QuizInviteSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
+const CoachSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.CoachSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
+});
+
+const QuestionsSection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.QuestionsSection })), {
+  loading: () => <SectionSkeleton bgColor="bg-gray-50" />
 });
 
 const FinalCTASection = dynamic(() => import("@/components/home/sections").then(mod => ({ default: mod.FinalCTASection })), {
@@ -95,60 +103,44 @@ export default function Home() {
         <HeroSection content={HOMEPAGE_CONTENT.hero} />
 
         {/* TRUSTED BY */}
-        <ErrorBoundary>
-          <TrustedBy />
-        </ErrorBoundary>
 
         {/* 2. THE DIAGNOSIS */}
         <ErrorBoundary>
-          <DiagnosisSection
-            title={HOMEPAGE_CONTENT.diagnosis.title}
-            subtitle={HOMEPAGE_CONTENT.diagnosis.subtitle}
-            items={HOMEPAGE_CONTENT.diagnosis.items}
-          />
+          <SceneSection content={HOMEPAGE_CONTENT.scene} />
         </ErrorBoundary>
 
-        {/* 3. THE SOLUTION */}
         <ErrorBoundary>
-          <SolutionSection
-            title={HOMEPAGE_CONTENT.solution.title}
-            subtitle={HOMEPAGE_CONTENT.solution.subtitle}
-            items={HOMEPAGE_CONTENT.solution.items}
-          />
+          <FollowUpPhotosSection content={HOMEPAGE_CONTENT.followUp} />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <WhyItNeverHeldSection content={HOMEPAGE_CONTENT.why} />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <RealReasonSection content={HOMEPAGE_CONTENT.realReason} />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <CoachSection content={{ ...HOMEPAGE_CONTENT.about, ...HOMEPAGE_CONTENT.coach }} />
+        </ErrorBoundary>
+
+        <ErrorBoundary>
+          <TheProgramSection content={HOMEPAGE_CONTENT.theProgram} />
         </ErrorBoundary>
 
         {/* 4. THE RESULTS */}
         <ErrorBoundary>
-          <ResultsSection />
+          <ProofSection content={HOMEPAGE_CONTENT.proof} />
         </ErrorBoundary>
 
-        {/* 5. THE PROGRAM */}
         <ErrorBoundary>
-          <ProgramSection
-            title={HOMEPAGE_CONTENT.program.title}
-            subtitle={HOMEPAGE_CONTENT.program.subtitle}
-            phases={HOMEPAGE_CONTENT.program.phases}
-            delivery={HOMEPAGE_CONTENT.program.delivery}
-          />
-        </ErrorBoundary>
-
-        {/* 6. ABOUT */}
-        <ErrorBoundary>
-          <AboutSection
-            title={HOMEPAGE_CONTENT.about.title}
-            subtitle={HOMEPAGE_CONTENT.about.subtitle}
-            imageSrc={HOMEPAGE_CONTENT.about.imageSrc}
-            imageAlt={HOMEPAGE_CONTENT.about.imageAlt}
-            subhead={HOMEPAGE_CONTENT.about.subhead}
-            paragraphs={HOMEPAGE_CONTENT.about.paragraphs}
-            transformationImage={HOMEPAGE_CONTENT.about.transformationImage}
-            credentials={HOMEPAGE_CONTENT.about.credentials}
-          />
+          <QuizInviteSection content={HOMEPAGE_CONTENT.quizInvite} />
         </ErrorBoundary>
 
         {/* 7. OBJECTION PREEMPTION */}
         <ErrorBoundary>
-          <ObjectionsSection objections={HOMEPAGE_CONTENT.objections} />
+          <QuestionsSection content={HOMEPAGE_CONTENT.questions} />
         </ErrorBoundary>
 
         {/* 8. FINAL CTA */}

@@ -1,0 +1,36 @@
+import Image from "next/image";
+import { SectionBadge } from "@/components/ui/SectionBadge";
+import type { WhyItNeverHeldSectionProps } from "@/components/home/types";
+
+/**
+ * "Why it never held": the news he hasn't heard. Navy band.
+ * Phone: words, then the client message, then the second paragraph and the
+ * closing line. Desktop: words on the left, the message on the right.
+ */
+export function WhyItNeverHeldSection({ content }: WhyItNeverHeldSectionProps) {
+  return (
+    <section id="why" className="bg-bleu-nuit text-white" aria-labelledby="why-title">
+      <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28 lg:grid lg:grid-cols-[minmax(0,640px)_minmax(0,1fr)] lg:gap-x-20 lg:items-center">
+        <div className="lg:col-start-1 lg:row-start-1">
+          <SectionBadge variant="light">{content.label}</SectionBadge>
+          <h2 id="why-title" className="font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)] text-balance">
+            {content.title}
+          </h2>
+          <p className="mt-6 text-lead font-medium leading-[1.45] text-white/80">{content.allIn}</p>
+        </div>
+
+        <figure className="mt-10 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
+          <figcaption className="mb-4 text-sm font-bold uppercase tracking-[-0.02em] text-white/70">{content.message.caption}</figcaption>
+          <div className="border-2 border-white shadow-[3px_3px_0_0_var(--bleu-accent)] max-w-[440px]">
+            <Image src={content.message.image} alt={content.message.alt} width={1334} height={680} sizes="(max-width: 1024px) 100vw, 440px" className="block w-full h-auto" />
+          </div>
+        </figure>
+
+        <div className="mt-10 lg:mt-8 lg:col-start-1 lg:row-start-2">
+          <p className="text-lead font-medium leading-[1.45] text-white/80">{content.trip}</p>
+          <p className="mt-10 font-black tracking-[-0.03em] leading-[1.2] text-lead-lg text-balance">{content.closing}</p>
+        </div>
+      </div>
+    </section>
+  );
+}

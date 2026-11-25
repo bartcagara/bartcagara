@@ -4,10 +4,15 @@
  */
 
 export { HeroSection } from "./HeroSection";
-export { DiagnosisSection } from "./DiagnosisSection";
-export { SolutionSection } from "./SolutionSection";
-export { ProgramSection } from "./ProgramSection";
-export { AboutSection } from "./AboutSection";
+export { SceneSection } from "./SceneSection";
+export { FollowUpPhotosSection } from "./FollowUpPhotosSection";
+export { WhyItNeverHeldSection } from "./WhyItNeverHeldSection";
+export { RealLifeSection } from "./RealLifeSection";
+export { RealReasonSection } from "./RealReasonSection";
+export { TheProgramSection } from "./TheProgramSection";
+export { QuizInviteSection } from "./QuizInviteSection";
+export { CoachSection } from "./CoachSection";
 export { FinalCTASection } from "./FinalCTASection";
-export { ObjectionsSection } from "./ObjectionsSection";
+export { QuestionsSection } from "./QuestionsSection";
 export { BriefingSection } from "./BriefingSection";
+export { ProofSection } from "./ProofSection";
