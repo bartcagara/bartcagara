@@ -273,7 +273,7 @@ export const HOMEPAGE_CONTENT = {
     label: "The decision",
     title: "Make this the last restart.",
     lead: "Six months from now, your business will be further along. Will your body?",
-    text: "45 minutes, you and me. Tell me the whole story. You'll leave knowing why it never stuck, and whether we're a good fit.",
+    text: "45 minutes, you and me. You tell me the whole story, and I'll show you what keeps ending your restarts and how to make this one your last.",
   },
 
   briefing: {
