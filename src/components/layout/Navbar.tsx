@@ -14,10 +14,10 @@ import { lockBodyScroll, unlockBodyScroll } from "@/lib/scroll-lock";
  * right that opens a full-screen navy menu.
  */
 const LINKS = [
-  { href: "/#results", label: "Client Wins" },
   { href: "/#program", label: "The Program" },
+  { href: "/#proof", label: "Client Wins" },
   { href: "/#about", label: "Your Coach" },
-  { href: "/quiz", label: "Restart Types" },
+  { href: "/quiz", label: "The 4 Restart Types" },
 ] as const;
 
 export const Navbar = memo(() => {
