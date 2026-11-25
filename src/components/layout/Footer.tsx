@@ -12,7 +12,7 @@ export const Footer = memo(() => (
             <p className="text-xl font-bold text-bleu-nuit group-hover:opacity-80 transition-opacity">Bart Cagara</p>
             <p className="text-bleu-nuit/70 text-sm group-hover:opacity-80 transition-opacity">Founder Athlete OS</p>
           </Link>
-          <p className="text-bleu-nuit/70 text-xs">Founder&apos;s pace. Athlete&apos;s body.</p>
+          <p className="text-bleu-nuit/70 text-xs">Helping founders get in shape one last time.</p>
           <p className="text-bleu-nuit/70 text-xs mt-4">
             &copy; {new Date().getFullYear()} Dad with Style OÜ
           </p>
