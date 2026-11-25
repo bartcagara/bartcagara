@@ -299,7 +299,7 @@ export const COPY = {
   startHeadline: "You can lose the weight. You can't keep it off.",
   startLine:
     "Every man who keeps starting over is one of 4 types: **Fair\u2011Weather Racer**, **Lost Athlete**, **Finish Line Chaser** or **Pit Stop Dodger**. Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
-  startButton: "Start",
+  startButton: "Discover your type",
   back: "Back",
   /** Over the name on his result: "You are a" / Lost Athlete. */
   resultLabel: "You are a",
