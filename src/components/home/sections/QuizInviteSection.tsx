@@ -13,7 +13,7 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
   return (
     <section id="quiz" className="bg-bleu-fumee text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="quiz-title">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28">
-        <div className="max-w-[760px]">
+        <div className="max-w-[720px]">
           <SectionBadge>{content.label}</SectionBadge>
           <h2 id="quiz-title" className="heading-section">
             {content.title}
@@ -30,7 +30,7 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
           ))}
         </ul>
 
-        <p className="mt-10 max-w-[760px] text-body text-bleu-nuit/75">{content.after}</p>
+        <p className="mt-10 max-w-[720px] text-body text-bleu-nuit/75">{content.after}</p>
 
         <Link
           href={content.href}

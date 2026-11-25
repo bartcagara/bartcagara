@@ -11,7 +11,7 @@ export function FinalCTASection({ content }: FinalCTASectionProps) {
   return (
     <section id="calendar-section" className="bg-bleu-nuit text-white" aria-labelledby="final-cta-title">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28">
-        <div className="max-w-[760px]">
+        <div className="max-w-[720px]">
           <SectionBadge variant="light">{content.label}</SectionBadge>
           <h2 id="final-cta-title" className="heading-section">
             {content.title}

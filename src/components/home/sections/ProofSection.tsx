@@ -68,7 +68,7 @@ export function ProofSection({ content }: ProofSectionProps) {
   return (
     <section id="proof" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="proof-title">
       <div className="py-16 lg:py-28">
-        <div className="max-w-7xl mx-auto"><div className="px-6 lg:px-12 max-w-[820px]">
+        <div className="max-w-7xl mx-auto"><div className="px-6 lg:px-12 max-w-[calc(720px+6rem)]">
           <SectionBadge>{content.label}</SectionBadge>
           <h2 id="proof-title" className="heading-section">
             {content.title}

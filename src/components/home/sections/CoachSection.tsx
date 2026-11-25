@@ -51,7 +51,7 @@ export function CoachSection({ content }: CoachSectionProps) {
       <div className="relative aspect-[2/3] border-2 border-bleu-nuit shadow-brutal-md bg-white">
         <Image src={content.imageSrc} alt={content.imageAlt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 480px" />
       </div>
-      <figcaption className="mt-4 px-6 sm:px-0 lg:px-0 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{content.credentials.join(" · ")}</figcaption>
+      <figcaption className="mt-4 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{content.credentials.join(" · ")}</figcaption>
     </figure>
   );
 
@@ -68,7 +68,7 @@ export function CoachSection({ content }: CoachSectionProps) {
           <h2 id="about-title" className="lg:mt-[60px] heading-section">
             {content.title}
           </h2>
-          <div className="lg:hidden mt-8 -mx-6 sm:mx-0">{photo}</div>
+          <div className="lg:hidden mt-8">{photo}</div>
           <div className="mt-8 space-y-5 text-body text-bleu-nuit/75">
             {paragraphs.map(renderParagraph)}
           </div>
