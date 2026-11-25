@@ -108,7 +108,7 @@ export const HOMEPAGE_CONTENT = {
   proof: {
     label: "The proof",
     title: "They were skeptical too.",
-    intro: "A CFO working across time zones. An entrepreneur running his business from an RV while traveling the country with his family. An operations leader after a real health scare. Here's what happened, in their own words.",
+    intro: "A CFO working across time zones. An entrepreneur running his business from an RV while traveling the country with his family. An operations leader after a real health scare. In their own words.",
     captions: {
       videos: "On camera",
       photos: "Before and after",
