@@ -272,9 +272,7 @@ export const HOMEPAGE_CONTENT = {
   finalCta: {
     label: "The decision",
     title: "Make this the last restart.",
-    lead: "Six months from now, your business will be further along. Will your body?",
-    text: "You know how this goes if nothing changes. **You've restarted enough times.**",
-    closing: "If that sits wrong, let's talk.",
+    intro: "Six months from now, your business will be further along. Will your body? You know how this goes if nothing changes. You've restarted enough times. If that sits wrong, let's talk.",
   },
 
   briefing: {
