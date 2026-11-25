@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ButtonArrow } from "@/components/ui/ButtonArrow";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { QuizInviteSectionProps } from "@/components/home/types";
 
@@ -33,10 +33,10 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
 
         <Link
           href={content.href}
-          className="mt-8 inline-flex items-center justify-center gap-2.5 h-12 px-6 text-[14px] md:h-14 md:px-7 md:text-[15px] bg-bleu-nuit border-2 border-bleu-nuit text-white font-extrabold uppercase tracking-[0.03em] leading-none whitespace-nowrap transition-colors duration-200 hover:bg-transparent hover:text-bleu-nuit"
+          className="group mt-8 inline-flex items-center justify-center gap-2 h-12 px-6 text-[17px] md:h-14 md:px-7 md:text-lg bg-bleu-nuit border-2 border-bleu-nuit text-white font-black tracking-[-0.02em] leading-none whitespace-nowrap shadow-[4px_4px_0_0_var(--bleu-accent)] transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]"
         >
           {content.button}
-          <ArrowRight className="w-4 h-4" strokeWidth={2.5} aria-hidden="true" />
+          <ButtonArrow />
         </Link>
       </div>
     </section>

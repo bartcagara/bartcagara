@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ButtonArrow } from "@/components/ui/ButtonArrow";
 import type { CTAButtonProps } from "@/components/home/types";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { getSamePageHashId, scrollToId } from "@/lib/scroll";
@@ -23,29 +23,27 @@ export function CTAButton({
   cal = false,
   onClick,
 }: CTAButtonProps) {
-  /* No drop shadow: the shadow frames the pictures and cards, so a button
-     wearing it read as one more card. A button is a solid block that swaps
-     to an outline under the mouse (Bart, 25 Nov). */
-  const baseClasses = "inline-flex items-center justify-center font-extrabold uppercase tracking-[0.03em] leading-none whitespace-nowrap border-2 transition-colors duration-200";
+  /* The button speaks in the headings' voice: Inter at its heaviest, tight,
+     in normal case, not small uppercase letters. The small blue shadow says
+     "press me", and the button sinks into it under the mouse (Bart, 25 Nov). */
+  const baseClasses = "group inline-flex items-center justify-center font-black tracking-[-0.02em] leading-none whitespace-nowrap border-2 transition-brutal hover:shadow-none";
 
   const sizeClasses = size === 'sm'
-    ? "gap-2 h-10 px-4 text-[13px]"
-    : "gap-2.5 h-12 px-6 text-[14px] md:h-14 md:px-7 md:text-[15px]";
+    ? "gap-2 h-10 px-4 text-[15px] shadow-[3px_3px_0_0_var(--bleu-accent)] hover:translate-x-[3px] hover:translate-y-[3px]"
+    : "gap-2 h-12 px-6 text-[17px] md:h-14 md:px-7 md:text-lg shadow-[4px_4px_0_0_var(--bleu-accent)] hover:translate-x-[4px] hover:translate-y-[4px]";
 
   const variantClasses = variant === 'dark'
-    ? "bg-bleu-nuit text-white border-bleu-nuit hover:bg-transparent hover:text-bleu-nuit"
-    : "bg-white text-bleu-nuit border-white hover:bg-transparent hover:text-white";
+    ? "bg-bleu-nuit text-white border-bleu-nuit"
+    : "bg-white text-bleu-nuit border-white";
 
   const classes = `${baseClasses} ${sizeClasses} ${variantClasses} ${className}`;
 
-  const iconSize = "w-4 h-4";
-  const IconEl = ArrowRight;
 
   if (cal) {
     return (
       <button type="button" {...CAL_POPUP_ATTRIBUTES} onClick={onClick} className={classes}>
         {children}
-        {icon && <IconEl className={iconSize} strokeWidth={2.5} />}
+        {icon && <ButtonArrow />}
       </button>
     );
   }
@@ -66,7 +64,7 @@ export function CTAButton({
       className={classes}
     >
       {children}
-      {icon && <IconEl className={iconSize} strokeWidth={2.5} />}
+      {icon && <ButtonArrow />}
     </Link>
   );
 }

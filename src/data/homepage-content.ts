@@ -9,7 +9,7 @@ export const HOMEPAGE_CONTENT = {
     headline: "The founder's",
     highlightedText: "last restart.",
     subheadline: "Six months, one-to-one, for founders who played sports and can lose the weight but never keep it.",
-    ctaText: "BOOK RESTART AUDIT",
+    ctaText: "Book Restart Audit",
     proof: {
       caption: "Client after eight days in Hawaii",
       image: "/images/testimonials/dm-22.webp",
