@@ -13,10 +13,10 @@ export function WhyItNeverHeldSection({ content }: WhyItNeverHeldSectionProps) {
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28 lg:grid lg:grid-cols-[minmax(0,640px)_minmax(0,1fr)] lg:gap-x-20 lg:items-center">
         <div className="lg:col-start-1 lg:row-start-1">
           <SectionBadge variant="light">{content.label}</SectionBadge>
-          <h2 id="why-title" className="font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)] text-balance">
+          <h2 id="why-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-6 text-lead font-medium leading-[1.45] text-white/80">{content.allIn}</p>
+          <p className="mt-6 text-body text-white/80">{content.allIn}</p>
         </div>
 
         <figure className="mt-10 lg:mt-0 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
@@ -27,8 +27,8 @@ export function WhyItNeverHeldSection({ content }: WhyItNeverHeldSectionProps) {
         </figure>
 
         <div className="mt-10 lg:mt-8 lg:col-start-1 lg:row-start-2">
-          <p className="text-lead font-medium leading-[1.45] text-white/80">{content.trip}</p>
-          <p className="mt-10 font-black tracking-[-0.03em] leading-[1.2] text-lead-lg text-balance">{content.closing}</p>
+          <p className="text-body text-white/80">{content.trip}</p>
+          <p className="mt-10 text-statement">{content.closing}</p>
         </div>
       </div>
     </section>

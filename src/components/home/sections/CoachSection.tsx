@@ -35,10 +35,10 @@ export function CoachSection({ content }: CoachSectionProps) {
     const isBold = p.startsWith("**") && p.endsWith("**");
     const text = isBold ? p.slice(2, -2) : p;
     if (i === 0) {
-      return <p key={i} className="font-black tracking-[-0.03em] leading-[1.2] text-lead-lg text-bleu-nuit">{text}</p>;
+      return <p key={i} className="text-statement text-bleu-nuit">{text}</p>;
     }
     if (isBold) {
-      return <p key={i} className="font-black tracking-[-0.03em] leading-[1.2] text-lead-lg text-bleu-nuit text-balance">{text}</p>;
+      return <p key={i} className="text-statement text-bleu-nuit text-balance">{text}</p>;
     }
     if (text.startsWith("P.S.")) {
       return <p key={i} className="text-base text-bleu-nuit/70">{withLink(text, () => setModalOpen(true))}</p>;
@@ -65,11 +65,11 @@ export function CoachSection({ content }: CoachSectionProps) {
 
         <div className="max-w-[640px]">
           <div className="lg:hidden"><SectionBadge>{content.label}</SectionBadge></div>
-          <h2 id="about-title" className="lg:mt-[60px] font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)]">
+          <h2 id="about-title" className="lg:mt-[60px] heading-section">
             {content.title}
           </h2>
           <div className="lg:hidden mt-8 -mx-6 sm:mx-0">{photo}</div>
-          <div className="mt-8 space-y-5 text-lead font-medium leading-[1.45] text-bleu-nuit/75">
+          <div className="mt-8 space-y-5 text-body text-bleu-nuit/75">
             {paragraphs.map(renderParagraph)}
           </div>
         </div>

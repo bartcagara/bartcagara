@@ -15,18 +15,18 @@ export function SceneSection({ content }: SceneSectionProps) {
       <div className="max-w-7xl mx-auto lg:px-12 lg:py-28 lg:grid lg:grid-cols-[minmax(0,640px)_minmax(0,1fr)] lg:gap-20 lg:items-end">
         <div className="px-6 pt-14 pb-12 lg:p-0">
           <SectionBadge>{content.label}</SectionBadge>
-          <h2 id="scene-title" className="font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)] text-balance">
+          <h2 id="scene-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-8 font-black tracking-[-0.03em] leading-[1.2] text-lead-lg">
+          <p className="mt-6 text-statement">
             {content.moments}
           </p>
-          <div className="mt-8 space-y-4 text-lead font-medium leading-[1.45] text-bleu-nuit/75">
+          <div className="mt-8 space-y-4 text-body text-bleu-nuit/75">
             {content.paragraphs.map((p) => (
               <p key={p}>{p}</p>
             ))}
           </div>
-          <p className="mt-8 font-black tracking-[-0.03em] leading-[1.2] text-lead-lg text-balance">
+          <p className="mt-8 text-statement">
             {content.closing}
           </p>
         </div>

@@ -10,13 +10,13 @@ import type { FollowUpPhotosSectionProps } from "@/components/home/types";
 export function FollowUpPhotosSection({ content }: FollowUpPhotosSectionProps) {
   return (
     <section id="results" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="photos-title">
-      <div className="max-w-7xl mx-auto py-14 lg:px-12 lg:py-28">
+      <div className="max-w-7xl mx-auto py-16 lg:px-12 lg:py-28">
         <div className="px-6 lg:px-0 max-w-[640px]">
           <SectionBadge>{content.label}</SectionBadge>
-          <h2 id="photos-title" className="font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)] text-balance">
+          <h2 id="photos-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-4 text-lead font-medium leading-[1.45] text-bleu-nuit/75">{content.intro}</p>
+          <p className="mt-6 text-body text-bleu-nuit/75">{content.intro}</p>
         </div>
 
         <ul

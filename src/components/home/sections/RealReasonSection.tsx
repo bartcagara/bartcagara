@@ -37,10 +37,10 @@ export function RealReasonSection({ content }: RealReasonSectionProps) {
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28">
         <div className="max-w-[720px]">
           <SectionBadge>{content.label}</SectionBadge>
-          <h2 id="real-reason-title" className="font-black tracking-[-0.04em] leading-[1.0] text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] text-balance">
+          <h2 id="real-reason-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-6 font-black tracking-[-0.03em] leading-[1.2] text-lead-lg">{content.question}</p>
+          <p className="mt-6 text-statement">{content.question}</p>
         </div>
 
         <ul className="mt-12 lg:mt-16 grid gap-12 lg:grid-cols-3 lg:gap-10 lg:items-start" aria-label="Why clients did it, in their own messages">
@@ -54,7 +54,7 @@ export function RealReasonSection({ content }: RealReasonSectionProps) {
           ))}
         </ul>
 
-        <p className="mt-16 max-w-[720px] font-black tracking-[-0.04em] leading-[1.05] text-[clamp(1.75rem,1rem+3vw,3rem)] text-balance">
+        <p className="mt-12 lg:mt-16 max-w-[720px] text-statement">
           {content.closing}
         </p>
       </div>

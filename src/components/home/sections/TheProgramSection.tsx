@@ -13,10 +13,10 @@ export function TheProgramSection({ content }: TheProgramSectionProps) {
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28">
         <div className="max-w-[720px]">
           <SectionBadge variant="light">{content.label}</SectionBadge>
-          <h2 id="program-title" className="font-black tracking-[-0.04em] leading-[1.0] text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] text-balance">
+          <h2 id="program-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-6 text-lead font-medium leading-[1.45] text-white/80">{content.intro}</p>
+          <p className="mt-6 text-body text-white/80">{content.intro}</p>
         </div>
 
         <ol className="mt-12 lg:mt-16 grid gap-6 lg:grid-cols-3 lg:gap-8">
@@ -26,7 +26,7 @@ export function TheProgramSection({ content }: TheProgramSectionProps) {
                 <p className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/60">
                   {phase.number} · {phase.weeks}
                 </p>
-                <h3 className="mt-2 font-black tracking-[-0.03em] leading-[1.1] text-[1.75rem]">{phase.name}</h3>
+                <h3 className="mt-2 heading-card">{phase.name}</h3>
                 <p className="mt-4 text-lg font-medium leading-[1.45] text-bleu-nuit/75">{phase.text}</p>
               </div>
               <p className="px-6 py-5 lg:min-h-[5.5rem] lg:flex lg:items-center bg-bleu-fumee border-t-2 border-bleu-nuit font-black tracking-[-0.02em] leading-[1.25] text-lg">
@@ -42,8 +42,8 @@ export function TheProgramSection({ content }: TheProgramSectionProps) {
             <ul className="mt-6 space-y-8">
               {content.weekly.items.map((item) => (
                 <li key={item.title} className="border-l-4 border-bleu-accent pl-5">
-                  <p className="font-black tracking-[-0.03em] leading-[1.2] text-lead-lg">{item.title}</p>
-                  <p className="mt-2 text-lead font-medium leading-[1.45] text-white/80">{item.text}</p>
+                  <p className="heading-card">{item.title}</p>
+                  <p className="mt-2 text-body text-white/80">{item.text}</p>
                 </li>
               ))}
             </ul>

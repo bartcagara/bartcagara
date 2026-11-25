@@ -88,6 +88,39 @@
   font-size: clamp(1.5rem, 1.1rem + 1.6vw, 1.875rem); /* 24px → 30px */
 }
 
+/* Homepage type system (Bart, 25 Nov): one size per role, every section.
+   heading-section: every section title.  text-statement: the bold line
+   under a title and the closing line of a section.  text-body: all running
+   text.  heading-card: titles inside cards, rows and questions. */
+@utility heading-section {
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  font-size: clamp(2.125rem, 1.2rem + 3.6vw, 3.75rem); /* 34px -> 60px */
+  text-wrap: balance;
+}
+
+@utility text-statement {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  font-size: clamp(1.375rem, 1.05rem + 1.3vw, 1.875rem); /* 22px -> 30px */
+  text-wrap: pretty;
+}
+
+@utility text-body {
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: clamp(1.0625rem, 0.95rem + 0.6vw, 1.375rem); /* 17px -> 22px */
+}
+
+@utility heading-card {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  font-size: clamp(1.25rem, 1.05rem + 0.8vw, 1.625rem); /* 20px -> 26px */
+}
+
 @utility text-eyebrow {
   /* Kickers / social proof. Replaces text-sm uppercase tracking-tighter. */
   font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem); /* 12px → 14px */

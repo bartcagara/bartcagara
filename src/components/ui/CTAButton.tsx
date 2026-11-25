@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Calendar } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { CTAButtonProps } from "@/components/home/types";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { getSamePageHashId, scrollToId } from "@/lib/scroll";
@@ -23,11 +23,11 @@ export function CTAButton({
   cal = false,
   onClick,
 }: CTAButtonProps) {
-  const baseClasses = "inline-flex items-center font-black uppercase tracking-tighter border-2 transition-brutal hover:shadow-none hover-translate-brutal";
+  const baseClasses = "inline-flex items-center justify-center font-extrabold uppercase tracking-[0.02em] leading-none whitespace-nowrap border-2 shadow-[4px_4px_0_0_var(--bleu-accent)] transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]";
 
   const sizeClasses = size === 'sm'
-    ? "gap-2 px-4 py-3 text-xs md:px-6 md:text-sm shadow-brutal-sm"
-    : "gap-3 px-6 py-4 text-base md:px-10 md:py-6 md:text-xl shadow-brutal-sm md:shadow-brutal-md";
+    ? "gap-2 h-11 px-5 text-[13px] shadow-[3px_3px_0_0_var(--bleu-accent)] hover:translate-x-[3px] hover:translate-y-[3px]"
+    : "gap-3 h-14 px-8 text-[15px] md:h-16 md:px-10 md:text-base";
 
   const variantClasses = variant === 'dark'
     ? "bg-bleu-nuit text-white border-bleu-nuit"
@@ -35,14 +35,14 @@ export function CTAButton({
 
   const classes = `${baseClasses} ${sizeClasses} ${variantClasses} ${className}`;
 
-  const iconSize = size === 'sm' ? "w-4 h-4" : "w-5 h-5 md:w-6 md:h-6";
-  const IconEl = cal ? Calendar : ArrowRight;
+  const iconSize = size === 'sm' ? "w-4 h-4" : "w-5 h-5";
+  const IconEl = ArrowRight;
 
   if (cal) {
     return (
       <button type="button" {...CAL_POPUP_ATTRIBUTES} onClick={onClick} className={classes}>
-        {icon && <IconEl className={iconSize} />}
         {children}
+        {icon && <IconEl className={iconSize} strokeWidth={2.5} />}
       </button>
     );
   }
@@ -63,7 +63,7 @@ export function CTAButton({
       className={classes}
     >
       {children}
-      {icon && <IconEl className={iconSize} />}
+      {icon && <IconEl className={iconSize} strokeWidth={2.5} />}
     </Link>
   );
 }

@@ -306,3 +306,31 @@ export function TestimonialsMarquee() {
         </div>
     );
 }
+
+/**
+ * The same cards as slides for a scroll row you move yourself (the homepage
+ * proof section's Row, with its arrows), in place of the moving marquee.
+ * Same frame as the photos and messages above them.
+ */
+export function TestimonialSlides() {
+    const [expanded, setExpanded] = useState<ReadonlySet<string>>(new Set());
+    const noop = useCallback(() => {}, []);
+    return (
+        <>
+            {TESTIMONIALS.map((item) => (
+                <div key={item.id} className={`${styles.slot} ${styles.slide} snap-start shrink-0`}>
+                    {item.kind === "text" ? (
+                        <TextCard
+                            item={item}
+                            expanded={expanded.has(item.id)}
+                            onExpand={() => setExpanded((prev) => new Set(prev).add(item.id))}
+                            tabbable
+                        />
+                    ) : (
+                        <VideoCard item={item} onPlayingChange={noop} tabbable />
+                    )}
+                </div>
+            ))}
+        </>
+    );
+}

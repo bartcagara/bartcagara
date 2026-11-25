@@ -20,7 +20,7 @@ export function HeroSection({ content }: HeroSectionProps) {
               <br />
               <TiltedLabel className="bg-gray-50 text-bleu-nuit" widthClassName="w-max mt-2">{content.highlightedText}</TiltedLabel>
             </h1>
-            <p className="mt-8 lg:mt-10 text-lead font-medium leading-[1.45] text-white/80 max-w-[30em] text-pretty">
+            <p className="mt-8 lg:mt-10 text-body text-white/80 max-w-[30em] text-pretty">
               {content.subheadline}
             </p>
             <div className="mt-8 lg:mt-10">

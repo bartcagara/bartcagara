@@ -13,10 +13,10 @@ export function FinalCTASection({ content }: FinalCTASectionProps) {
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28">
         <div className="max-w-[760px]">
           <SectionBadge variant="light">{content.label}</SectionBadge>
-          <h2 id="final-cta-title" className="font-black tracking-[-0.04em] leading-[1.0] text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] text-balance">
+          <h2 id="final-cta-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-6 text-lead font-medium leading-[1.45] text-white/80">{content.intro}</p>
+          <p className="mt-6 text-body text-white/80">{content.intro}</p>
         </div>
 
         <div id="book-call" className="mt-12 lg:mt-16 scroll-mt-[88px] md:scroll-mt-[104px] border-2 border-white bg-white shadow-[3px_3px_0_0_var(--bleu-accent)] overflow-hidden">

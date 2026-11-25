@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import { YouTubeLite } from "@/components/home/YouTubeLite";
-import { TestimonialsMarquee } from "@/components/home/TestimonialsMarquee";
+import { TestimonialSlides } from "@/components/home/TestimonialsMarquee";
 import { CLIENT_INTERVIEWS } from "@/components/home/assets";
 import type { ProofSectionProps } from "@/components/home/types";
 
@@ -67,13 +67,13 @@ function Row({ caption, children, center = false }: { caption: string; children:
 export function ProofSection({ content }: ProofSectionProps) {
   return (
     <section id="proof" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="proof-title">
-      <div className="pt-16 pb-12 lg:pt-28 lg:pb-16">
+      <div className="py-16 lg:py-28">
         <div className="max-w-7xl mx-auto"><div className="px-6 lg:px-12 max-w-[820px]">
           <SectionBadge>{content.label}</SectionBadge>
-          <h2 id="proof-title" className="font-black tracking-[-0.04em] leading-[1.0] text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] text-balance">
+          <h2 id="proof-title" className="heading-section">
             {content.title}
           </h2>
-          <p className="mt-6 text-lead font-medium leading-[1.45] text-bleu-nuit/75">{content.intro}</p>
+          <p className="mt-6 text-body text-bleu-nuit/75">{content.intro}</p>
         </div></div>
 
         <div className="mt-12 lg:mt-16">
@@ -107,15 +107,13 @@ export function ProofSection({ content }: ProofSectionProps) {
               </div>
             ))}
           </Row>
+
+          <Row caption={content.captions.linkedin}>
+            <TestimonialSlides />
+          </Row>
         </div>
       </div>
 
-      <div className="pb-16 lg:pb-28">
-        <p className="max-w-7xl mx-auto px-6 lg:px-12 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{content.captions.linkedin}</p>
-        <div className="mt-5">
-          <TestimonialsMarquee />
-        </div>
-      </div>
     </section>
   );
 }
