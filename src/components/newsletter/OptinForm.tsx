@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import { Mail, Calendar } from "lucide-react";
+import { BUTTON_BASE, BUTTON_SIZE, BUTTON_VARIANT, BUTTON_ICON, ICON_STROKE } from "@/components/ui/buttonStyle";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { usePostHogClient } from "@/lib/posthog-context";
 import "./optin-form.css";
@@ -106,11 +107,7 @@ export function OptinForm({
       : "border-bleu-nuit/40 text-bleu-nuit placeholder:text-bleu-nuit/70 focus:placeholder:text-bleu-nuit/90"
   }`;
 
-  const buttonClass = `w-full inline-flex items-center justify-center gap-3 px-6 py-5 md:px-10 md:py-6 text-xl font-black uppercase tracking-tighter border-2 shadow-brutal-sm md:shadow-brutal-md transition-brutal hover:shadow-none hover-translate-brutal disabled:opacity-50 disabled:cursor-not-allowed ${
-    isDark
-      ? "bg-white text-bleu-nuit border-white"
-      : "bg-bleu-nuit text-white border-bleu-nuit"
-  }`;
+  const buttonClass = `w-full ${BUTTON_BASE} ${BUTTON_SIZE.md} ${isDark ? BUTTON_VARIANT.light : BUTTON_VARIANT.dark}`;
 
   if (layout === "joined") {
     return (
@@ -210,7 +207,7 @@ export function OptinForm({
               aria-busy={isSubmitting}
               className={buttonClass}
             >
-              {!isSubmitting && <Mail className="w-6 h-6" />}
+              {!isSubmitting && <Mail className={BUTTON_ICON.md} strokeWidth={ICON_STROKE} aria-hidden="true" />}
               <span>{isSubmitting ? "Subscribing..." : submitLabel}</span>
             </button>
           </div>
@@ -257,9 +254,9 @@ function SuccessState({ isDark }: { isDark: boolean }) {
         <button
           type="button"
           {...CAL_POPUP_ATTRIBUTES}
-          className={`inline-flex items-center gap-2 px-6 py-3 font-black uppercase text-sm tracking-tighter border-2 shadow-brutal-sm transition-brutal hover:shadow-none hover-translate-brutal ${isDark ? "bg-white text-bleu-nuit border-white" : "bg-bleu-nuit text-white border-bleu-nuit"}`}
+          className={`${BUTTON_BASE} ${BUTTON_SIZE.sm} ${isDark ? BUTTON_VARIANT.light : BUTTON_VARIANT.dark}`}
         >
-          <Calendar className="w-4 h-4" />
+          <Calendar className={BUTTON_ICON.sm} strokeWidth={ICON_STROKE} aria-hidden="true" />
           Book Restart Audit
         </button>
       </div>

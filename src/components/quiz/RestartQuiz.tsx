@@ -1,5 +1,7 @@
 "use client";
 
+import { LayoutGrid } from "lucide-react";
+import { BUTTON_BASE, BUTTON_SIZE, BUTTON_VARIANT, BUTTON_ICON, ICON_STROKE } from "@/components/ui/buttonStyle";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
     COPY,
@@ -220,8 +222,9 @@ function StartScreen({ onStart }: { onStart: () => void }) {
             <button
                 type="button"
                 onClick={onStart}
-                className="mt-10 w-full sm:w-auto inline-flex items-center justify-center min-h-14 px-12 py-4 bg-bleu-nuit text-white border-2 border-bleu-nuit text-lg font-black uppercase tracking-tight shadow-brutal-sm transition-brutal hover:shadow-none hover-translate-brutal"
+                className={`mt-10 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
             >
+                <LayoutGrid className={BUTTON_ICON.md} strokeWidth={ICON_STROKE} aria-hidden="true" />
                 {COPY.startButton}
             </button>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { TypesIcon } from "@/components/ui/TypesIcon";
+import { LayoutGrid } from "lucide-react";
+import { BUTTON_BASE, BUTTON_SIZE, BUTTON_VARIANT, BUTTON_ICON, ICON_STROKE } from "@/components/ui/buttonStyle";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { QuizInviteSectionProps } from "@/components/home/types";
 
@@ -33,9 +34,9 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
 
         <Link
           href={content.href}
-          className="mt-8 inline-flex items-center justify-center gap-3 h-14 px-5 text-base sm:px-8 sm:text-lg md:h-16 bg-bleu-nuit border-2 border-bleu-nuit text-white font-black uppercase tracking-tight leading-none whitespace-nowrap shadow-[3px_3px_0_0_var(--bleu-accent)] transition-colors hover:bg-bleu-charron hover:border-bleu-charron"
+          className={`mt-8 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
         >
-          <TypesIcon />
+          <LayoutGrid className={BUTTON_ICON.md} strokeWidth={ICON_STROKE} aria-hidden="true" />
           {content.button}
         </Link>
       </div>
