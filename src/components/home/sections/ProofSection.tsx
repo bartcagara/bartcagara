@@ -1,62 +1,24 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionBadge } from "@/components/ui/SectionBadge";
+import { ScrollArrows, useScrollArrows } from "@/components/home/ScrollArrows";
 import { YouTubeLite } from "@/components/home/YouTubeLite";
 import { TestimonialSlides } from "@/components/home/TestimonialsMarquee";
 import { CLIENT_INTERVIEWS } from "@/components/home/assets";
 import type { ProofSectionProps } from "@/components/home/types";
 
-/** A sideways row with a small caption and two arrow buttons, on phone and desktop. */
+/** A sideways row with a small caption and the page's scroll arrows. */
 function Row({ caption, children, center = false }: { caption: string; children: React.ReactNode; center?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [canLeft, setCanLeft] = useState(false);
-  const [canRight, setCanRight] = useState(true);
-
-  const check = useCallback(() => {
-    const el = ref.current;
-    if (!el) return;
-    setCanLeft(el.scrollLeft > 10);
-    setCanRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 10);
-  }, []);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    el.scrollLeft = 0;
-    check();
-    el.addEventListener("scroll", check);
-    window.addEventListener("resize", check);
-    // The row only knows how wide it is once its pictures have loaded.
-    el.addEventListener("load", check, true);
-    const timer = window.setTimeout(check, 1500);
-    return () => {
-      el.removeEventListener("scroll", check);
-      window.removeEventListener("resize", check);
-      el.removeEventListener("load", check, true);
-      window.clearTimeout(timer);
-    };
-  }, [check]);
-
-  const scroll = (dir: number) => {
-    const el = ref.current;
-    if (!el) return;
-    const first = el.firstElementChild as HTMLElement | null;
-    el.scrollBy({ left: dir * ((first?.offsetWidth ?? 320) + 24), behavior: "smooth" });
-  };
-
-  const arrow = "w-10 h-10 lg:w-11 lg:h-11 border-2 border-bleu-nuit flex items-center justify-center transition-colors hover:bg-bleu-nuit hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-bleu-nuit";
+  const arrows = useScrollArrows(ref);
 
   return (
     <div className="mt-14 first:mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
         <p className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{caption}</p>
-        <div className="flex gap-2">
-          <button type="button" className={arrow} onClick={() => scroll(-1)} disabled={!canLeft} aria-label="Scroll left"><ArrowLeft className="w-5 h-5" /></button>
-          <button type="button" className={arrow} onClick={() => scroll(1)} disabled={!canRight} aria-label="Scroll right"><ArrowRight className="w-5 h-5" /></button>
-        </div>
+        <ScrollArrows {...arrows} />
       </div>
       <div ref={ref} className={`mt-5 flex ${center ? "items-start" : "items-start snap-x snap-proximity"} gap-6 overflow-x-auto px-6 scroll-px-6 lg:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:pr-12 lg:scroll-pl-[max(3rem,calc((100vw-80rem)/2+3rem))] pb-4 scrollbar-hide`}>
         {children}

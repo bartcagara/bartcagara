@@ -1,13 +1,19 @@
+"use client";
+
+import { useRef } from "react";
 import Image from "next/image";
+import { ScrollArrows, useScrollArrows } from "@/components/home/ScrollArrows";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { FollowUpPhotosSectionProps } from "@/components/home/types";
 
 /**
  * "The follow-up photos": the fastest proof, right after his own story.
- * Phone: a sideways row he swipes, the next photo peeking in from the edge.
+ * Phone: a sideways row with the page's scroll arrows above it.
  * Desktop: the three photos side by side. The weeks are printed on each photo.
  */
 export function FollowUpPhotosSection({ content }: FollowUpPhotosSectionProps) {
+  const ref = useRef<HTMLUListElement>(null);
+  const arrows = useScrollArrows(ref);
   return (
     <section id="results" className="bg-bleu-fumee text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="photos-title">
       <div className="max-w-7xl mx-auto py-16 lg:px-12 lg:py-28">
@@ -19,8 +25,10 @@ export function FollowUpPhotosSection({ content }: FollowUpPhotosSectionProps) {
           <p className="mt-6 text-body text-bleu-nuit/75">{content.intro}</p>
         </div>
 
+        <ScrollArrows {...arrows} className="mt-8 px-6 justify-end lg:hidden" />
         <ul
-          className="mt-10 lg:mt-14 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 px-6 pb-3 scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-0 lg:pb-0"
+          ref={ref}
+          className="mt-5 lg:mt-14 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-px-6 px-6 pb-3 scrollbar-hide lg:grid lg:grid-cols-3 lg:gap-8 lg:overflow-visible lg:px-0 lg:pb-0"
           aria-label="Before-and-after photos"
         >
           {content.photos.map((photo) => (
@@ -31,7 +39,6 @@ export function FollowUpPhotosSection({ content }: FollowUpPhotosSectionProps) {
             </li>
           ))}
         </ul>
-        <p className="px-6 mt-3 text-sm text-bleu-nuit/60 lg:hidden" aria-hidden="true">Swipe for more →</p>
 
       </div>
     </section>
