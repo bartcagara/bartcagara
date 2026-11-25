@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonIcon } from "@/components/ui/ButtonIcon";
+import { Calendar } from "lucide-react";
 import type { CTAButtonProps } from "@/components/home/types";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { getSamePageHashId, scrollToId } from "@/lib/scroll";
@@ -23,18 +23,18 @@ export function CTAButton({
   cal = false,
   onClick,
 }: CTAButtonProps) {
-  /* The button speaks in the headings' voice: Inter at its heaviest, tight,
-     in normal case, not small uppercase letters. The small blue shadow says
-     "press me", and the button sinks into it under the mouse (Bart, 25 Nov). */
-  const baseClasses = "group inline-flex items-center justify-center font-black tracking-[-0.02em] leading-none whitespace-nowrap border-2 transition-brutal hover:shadow-none";
+  /* The Brief page's button, the one Bart picked (25 Nov): Inter Black in
+     capitals, set tight, an icon in front, a fine 3px blue shadow that stays
+     put, and the colour deepens under the mouse. */
+  const baseClasses = "inline-flex items-center justify-center font-black uppercase tracking-tight leading-none whitespace-nowrap border-2 shadow-[3px_3px_0_0_var(--bleu-accent)] transition-colors";
 
   const sizeClasses = size === 'sm'
-    ? "gap-2 h-10 px-4 text-[15px] shadow-[3px_3px_0_0_var(--bleu-accent)] hover:translate-x-[3px] hover:translate-y-[3px]"
-    : "gap-2 h-12 px-6 text-[17px] md:h-14 md:px-7 md:text-lg shadow-[4px_4px_0_0_var(--bleu-accent)] hover:translate-x-[4px] hover:translate-y-[4px]";
+    ? "gap-2 h-11 px-4 text-sm"
+    : "gap-3 h-14 px-5 text-base sm:px-8 sm:text-lg md:h-16";
 
   const variantClasses = variant === 'dark'
-    ? "bg-bleu-nuit text-white border-bleu-nuit"
-    : "bg-white text-bleu-nuit border-white";
+    ? "bg-bleu-nuit text-white border-bleu-nuit hover:bg-bleu-charron hover:border-bleu-charron"
+    : "bg-white text-bleu-nuit border-white hover:bg-bleu-fumee hover:border-bleu-fumee";
 
   const classes = `${baseClasses} ${sizeClasses} ${variantClasses} ${className}`;
 
@@ -42,7 +42,7 @@ export function CTAButton({
   if (cal) {
     return (
       <button type="button" {...CAL_POPUP_ATTRIBUTES} onClick={onClick} className={classes}>
-        {icon && <ButtonIcon name="calendar" />}
+        {icon && <Calendar className={size === 'sm' ? "w-4 h-4 shrink-0" : "w-5 h-5 md:w-6 md:h-6 shrink-0"} strokeWidth={2.5} aria-hidden="true" />}
         {children}
       </button>
     );
