@@ -46,14 +46,14 @@ function Row({ caption, children, center = false }: { caption: string; children:
 
   return (
     <div className="mt-14 first:mt-0">
-      <div className="px-6 lg:px-12 flex items-center justify-between gap-4">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
         <p className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{caption}</p>
         <div className="hidden lg:flex gap-2">
           <button type="button" className={arrow} onClick={() => scroll(-1)} disabled={!canLeft} aria-label="Scroll left"><ArrowLeft className="w-5 h-5" /></button>
           <button type="button" className={arrow} onClick={() => scroll(1)} disabled={!canRight} aria-label="Scroll right"><ArrowRight className="w-5 h-5" /></button>
         </div>
       </div>
-      <div ref={ref} className={`mt-5 flex ${center ? "items-start" : "items-start snap-x snap-proximity"} gap-6 overflow-x-auto scroll-px-6 lg:scroll-px-12 px-6 lg:px-12 pb-4 scrollbar-hide`}>
+      <div ref={ref} className={`mt-5 flex ${center ? "items-start" : "items-start snap-x snap-proximity"} gap-6 overflow-x-auto px-6 scroll-px-6 lg:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:pr-12 lg:scroll-pl-[max(3rem,calc((100vw-80rem)/2+3rem))] pb-4 scrollbar-hide`}>
         {children}
       </div>
     </div>
@@ -67,14 +67,14 @@ function Row({ caption, children, center = false }: { caption: string; children:
 export function ProofSection({ content }: ProofSectionProps) {
   return (
     <section id="proof" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="proof-title">
-      <div className="max-w-7xl mx-auto pt-16 pb-12 lg:pt-28 lg:pb-16">
-        <div className="px-6 lg:px-12 max-w-[820px]">
+      <div className="pt-16 pb-12 lg:pt-28 lg:pb-16">
+        <div className="max-w-7xl mx-auto"><div className="px-6 lg:px-12 max-w-[820px]">
           <SectionBadge>{content.label}</SectionBadge>
           <h2 id="proof-title" className="font-black tracking-[-0.04em] leading-[1.0] text-[clamp(2.25rem,1.2rem+4.5vw,4.5rem)] text-balance">
             {content.title}
           </h2>
           <p className="mt-6 text-lead font-medium leading-[1.45] text-bleu-nuit/75">{content.intro}</p>
-        </div>
+        </div></div>
 
         <div className="mt-12 lg:mt-16">
           <Row caption={content.captions.videos}>
