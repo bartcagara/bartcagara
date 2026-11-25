@@ -1,7 +1,8 @@
 /**
  * The client testimonials on the home page, self-hosted so that showing them
  * sends nothing to any outside company. Taken word for word from the Senja
- * widget "Homepage testimonials" on 2026-11-05, in its order. `<mark>` is the
+ * widget "Homepage testimonials" on 2026-11-05, in its order; Darren Young's
+ * (added to Senja 25 Nov) taken the same way on 2026-11-25, first as in the widget. `<mark>` is the
  * widget's highlight. Names and photos are as they already appeared publicly.
  */
 export type Testimonial =
@@ -26,6 +27,15 @@ export type Testimonial =
     };
 
 export const TESTIMONIALS: readonly Testimonial[] = [
+  {
+    "id": "e18d2520",
+    "name": "Darren Young",
+    "tagline": "Building Cards for Hard Conversations – A tool to make hard conversations easier",
+    "kind": "text",
+    "avatar": "/images/testimonials/avatars/darren-young.webp",
+    "linkedin": "https://www.linkedin.com/in/bartcagara/",
+    "text": "I found Bart at a critical point in my life. Mid-thirties, family man, traveling long hours for work, with another kid on the way.\n\nThe problem was that I was the heaviest I've ever been in my life. I was 191 lbs and nothing was working. Arriving home at 11pm, after a grueling 6 hour drive home, I stood at the door to my house and said \"If nothing changes, I'm not gonna make it...\"\n\nI accepted that I needed help but I didn't know if I was ready to invest the time to do it. I've got family to take care of. Work is busy. I don't have hours to spend in the gym.\n\nBart shifted my belief around all of that by building a system that works for my life, even when I travel.\n\nSmall wins stacked up and for the first time in 14 years, the scale hit 175 lbs again. I better manage my stress eating. And when I travel I'm no longer overwhelmed with what to eat or starving myself to \"save the calories\".\n\nI'm full and for the first time have a system that works for me."
+  },
   {
     "id": "39701388",
     "name": "Mark Van Den Broeke",

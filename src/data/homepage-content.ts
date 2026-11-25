@@ -270,13 +270,10 @@ export const HOMEPAGE_CONTENT = {
   },
 
   finalCta: {
-    headline: "Make this the",
-    highlightedText: "Last restart",
-    body: [
-      "Six months from now, your business will be further along. Will your body?",
-      "You know how this goes if nothing changes. **You've restarted enough times.**",
-      "**If that sits wrong, let's talk.**",
-    ],
+    label: "The decision",
+    title: "Make this the last restart.",
+    lead: "Six months from now, your business will be further along. Will your body?",
+    text: "45 minutes, you and me. Tell me the whole story. You'll leave knowing why it never stuck, and whether we're a good fit.",
   },
 
   briefing: {

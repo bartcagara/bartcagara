@@ -138,11 +138,7 @@ export default function Home() {
 
         {/* 8. FINAL CTA */}
         <ErrorBoundary>
-          <FinalCTASection
-            headline={HOMEPAGE_CONTENT.finalCta.headline}
-            highlightedText={HOMEPAGE_CONTENT.finalCta.highlightedText}
-            body={HOMEPAGE_CONTENT.finalCta.body}
-          />
+          <FinalCTASection content={HOMEPAGE_CONTENT.finalCta} />
         </ErrorBoundary>
 
         {/* 9. THE QUIZ: the page ends on the soft option */}

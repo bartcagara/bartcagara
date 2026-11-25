@@ -193,7 +193,10 @@ export interface AboutSectionProps {
 }
 
 export interface FinalCTASectionProps {
-  headline: string;
-  highlightedText: string;
-  body: readonly string[];
+  content: {
+    label: string;
+    title: string;
+    lead: string;
+    text: string;
+  };
 }
