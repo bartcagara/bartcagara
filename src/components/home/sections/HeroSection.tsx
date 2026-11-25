@@ -24,7 +24,7 @@ export function HeroSection({ content }: HeroSectionProps) {
               {content.subheadline}
             </p>
             <div className="mt-8 lg:mt-10">
-              <CTAButton variant="light" cal className="w-full justify-center sm:w-auto">
+              <CTAButton variant="light" cal>
                 {content.ctaText}
               </CTAButton>
             </div>

@@ -112,7 +112,7 @@ export const Navbar = memo(() => {
             ))}
           </ul>
           <div className="mt-10">
-            <CTAButton cal variant="light" onClick={() => setIsMenuOpen(false)} className="w-full justify-center">
+            <CTAButton cal variant="light" onClick={() => setIsMenuOpen(false)}>
               Book Restart Audit
             </CTAButton>
           </div>

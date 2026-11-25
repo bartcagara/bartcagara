@@ -23,19 +23,22 @@ export function CTAButton({
   cal = false,
   onClick,
 }: CTAButtonProps) {
-  const baseClasses = "inline-flex items-center justify-center font-extrabold uppercase tracking-[0.02em] leading-none whitespace-nowrap border-2 shadow-[4px_4px_0_0_var(--bleu-accent)] transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]";
+  /* No drop shadow: the shadow frames the pictures and cards, so a button
+     wearing it read as one more card. A button is a solid block that swaps
+     to an outline under the mouse (Bart, 25 Nov). */
+  const baseClasses = "inline-flex items-center justify-center font-extrabold uppercase tracking-[0.03em] leading-none whitespace-nowrap border-2 transition-colors duration-200";
 
   const sizeClasses = size === 'sm'
-    ? "gap-2 h-11 px-5 text-[13px] shadow-[3px_3px_0_0_var(--bleu-accent)] hover:translate-x-[3px] hover:translate-y-[3px]"
-    : "gap-3 h-14 px-8 text-[15px] md:h-16 md:px-10 md:text-base";
+    ? "gap-2 h-10 px-4 text-[13px]"
+    : "gap-2.5 h-12 px-6 text-[14px] md:h-14 md:px-7 md:text-[15px]";
 
   const variantClasses = variant === 'dark'
-    ? "bg-bleu-nuit text-white border-bleu-nuit"
-    : "bg-gray-50 text-bleu-nuit border-gray-50";
+    ? "bg-bleu-nuit text-white border-bleu-nuit hover:bg-transparent hover:text-bleu-nuit"
+    : "bg-white text-bleu-nuit border-white hover:bg-transparent hover:text-white";
 
   const classes = `${baseClasses} ${sizeClasses} ${variantClasses} ${className}`;
 
-  const iconSize = size === 'sm' ? "w-4 h-4" : "w-5 h-5";
+  const iconSize = "w-4 h-4";
   const IconEl = ArrowRight;
 
   if (cal) {
