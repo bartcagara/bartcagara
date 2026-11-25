@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ButtonArrow } from "@/components/ui/ButtonArrow";
+import { ButtonIcon } from "@/components/ui/ButtonIcon";
 import { SectionBadge } from "@/components/ui/SectionBadge";
 import type { QuizInviteSectionProps } from "@/components/home/types";
 
@@ -35,8 +35,8 @@ export function QuizInviteSection({ content }: QuizInviteSectionProps) {
           href={content.href}
           className="group mt-8 inline-flex items-center justify-center gap-2 h-12 px-6 text-[17px] md:h-14 md:px-7 md:text-lg bg-bleu-nuit border-2 border-bleu-nuit text-white font-black tracking-[-0.02em] leading-none whitespace-nowrap shadow-[4px_4px_0_0_var(--bleu-accent)] transition-brutal hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]"
         >
+          <ButtonIcon name="types" />
           {content.button}
-          <ButtonArrow />
         </Link>
       </div>
     </section>

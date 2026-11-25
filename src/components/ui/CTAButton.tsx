@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonArrow } from "@/components/ui/ButtonArrow";
+import { ButtonIcon } from "@/components/ui/ButtonIcon";
 import type { CTAButtonProps } from "@/components/home/types";
 import { CAL_POPUP_ATTRIBUTES } from "@/lib/cal";
 import { getSamePageHashId, scrollToId } from "@/lib/scroll";
@@ -42,8 +42,8 @@ export function CTAButton({
   if (cal) {
     return (
       <button type="button" {...CAL_POPUP_ATTRIBUTES} onClick={onClick} className={classes}>
+        {icon && <ButtonIcon name="calendar" />}
         {children}
-        {icon && <ButtonArrow />}
       </button>
     );
   }
@@ -64,7 +64,6 @@ export function CTAButton({
       className={classes}
     >
       {children}
-      {icon && <ButtonArrow />}
     </Link>
   );
 }
