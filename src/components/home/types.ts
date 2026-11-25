@@ -197,6 +197,8 @@ export interface FinalCTASectionProps {
     label: string;
     title: string;
     lead: string;
+    /** "**bold**" marks the part set in bold. */
     text: string;
+    closing: string;
   };
 }
