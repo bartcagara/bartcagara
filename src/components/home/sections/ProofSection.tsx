@@ -9,7 +9,7 @@ import { TestimonialSlides } from "@/components/home/TestimonialsMarquee";
 import { CLIENT_INTERVIEWS } from "@/components/home/assets";
 import type { ProofSectionProps } from "@/components/home/types";
 
-/** A sideways row with a small caption and two arrow buttons (arrows only on desktop). */
+/** A sideways row with a small caption and two arrow buttons, on phone and desktop. */
 function Row({ caption, children, center = false }: { caption: string; children: React.ReactNode; center?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
   const [canLeft, setCanLeft] = useState(false);
@@ -29,9 +29,14 @@ function Row({ caption, children, center = false }: { caption: string; children:
     check();
     el.addEventListener("scroll", check);
     window.addEventListener("resize", check);
+    // The row only knows how wide it is once its pictures have loaded.
+    el.addEventListener("load", check, true);
+    const timer = window.setTimeout(check, 1500);
     return () => {
       el.removeEventListener("scroll", check);
       window.removeEventListener("resize", check);
+      el.removeEventListener("load", check, true);
+      window.clearTimeout(timer);
     };
   }, [check]);
 
@@ -42,13 +47,13 @@ function Row({ caption, children, center = false }: { caption: string; children:
     el.scrollBy({ left: dir * ((first?.offsetWidth ?? 320) + 24), behavior: "smooth" });
   };
 
-  const arrow = "w-11 h-11 border-2 border-bleu-nuit flex items-center justify-center transition-colors hover:bg-bleu-nuit hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-bleu-nuit";
+  const arrow = "w-10 h-10 lg:w-11 lg:h-11 border-2 border-bleu-nuit flex items-center justify-center transition-colors hover:bg-bleu-nuit hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-bleu-nuit";
 
   return (
     <div className="mt-14 first:mt-0">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
         <p className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{caption}</p>
-        <div className="hidden lg:flex gap-2">
+        <div className="flex gap-2">
           <button type="button" className={arrow} onClick={() => scroll(-1)} disabled={!canLeft} aria-label="Scroll left"><ArrowLeft className="w-5 h-5" /></button>
           <button type="button" className={arrow} onClick={() => scroll(1)} disabled={!canRight} aria-label="Scroll right"><ArrowRight className="w-5 h-5" /></button>
         </div>
