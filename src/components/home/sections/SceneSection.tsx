@@ -13,7 +13,7 @@ export function SceneSection({ content }: SceneSectionProps) {
   return (
     <section id="you" className="bg-gray-50 text-bleu-nuit" aria-labelledby="scene-title">
       <div className="max-w-7xl mx-auto lg:px-12 lg:py-28 lg:grid lg:grid-cols-[minmax(0,640px)_minmax(0,1fr)] lg:gap-20 lg:items-end">
-        <div className="px-6 pt-14 pb-12 lg:p-0">
+        <div className="px-6 pt-16 pb-12 lg:p-0">
           <SectionBadge>{content.label}</SectionBadge>
           <h2 id="scene-title" className="heading-section">
             {content.title}
@@ -31,7 +31,7 @@ export function SceneSection({ content }: SceneSectionProps) {
           </p>
         </div>
 
-        <figure className="bg-bleu-fumee py-10 px-6 lg:bg-transparent lg:p-0 lg:justify-self-center">
+        <figure className="px-6 pb-16 lg:p-0 lg:justify-self-center">
           <figcaption className="mb-4 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">
             {content.message.caption}
           </figcaption>

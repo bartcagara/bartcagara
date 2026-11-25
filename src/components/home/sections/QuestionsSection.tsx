@@ -7,7 +7,7 @@ import type { QuestionsSectionProps } from "@/components/home/types";
  */
 export function QuestionsSection({ content }: QuestionsSectionProps) {
   return (
-    <section id="questions" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="questions-title">
+    <section id="questions" className="bg-bleu-fumee text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="questions-title">
       <div className="max-w-7xl mx-auto px-6 py-16 lg:px-12 lg:py-28 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] lg:gap-20 lg:items-start">
         <div className="lg:sticky lg:top-32">
           <SectionBadge>{content.label}</SectionBadge>

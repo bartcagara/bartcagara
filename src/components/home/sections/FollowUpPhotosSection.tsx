@@ -9,7 +9,7 @@ import type { FollowUpPhotosSectionProps } from "@/components/home/types";
  */
 export function FollowUpPhotosSection({ content }: FollowUpPhotosSectionProps) {
   return (
-    <section id="results" className="bg-gray-50 text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="photos-title">
+    <section id="results" className="bg-bleu-fumee text-bleu-nuit border-t-2 border-bleu-nuit" aria-labelledby="photos-title">
       <div className="max-w-7xl mx-auto py-16 lg:px-12 lg:py-28">
         <div className="px-6 lg:px-0 max-w-[640px]">
           <SectionBadge>{content.label}</SectionBadge>
