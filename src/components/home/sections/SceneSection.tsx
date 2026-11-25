@@ -32,10 +32,10 @@ export function SceneSection({ content }: SceneSectionProps) {
         </div>
 
         <figure className="bg-bleu-fumee py-10 px-6 lg:bg-transparent lg:p-0 lg:justify-self-center">
-          <figcaption className="mb-4 text-center text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">
+          <figcaption className="mb-4 text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">
             {content.message.caption}
           </figcaption>
-          <div className="mx-auto w-[280px] lg:w-[340px] border-2 border-bleu-nuit shadow-brutal-md bg-[#0b141a]">
+          <div className="w-[280px] lg:w-[340px] border-2 border-bleu-nuit shadow-brutal-md bg-[#0b141a]">
             <Image
               src={content.message.image}
               alt={content.message.alt}

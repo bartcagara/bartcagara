@@ -11,7 +11,7 @@ export const HOMEPAGE_CONTENT = {
     subheadline: "Six months, one-to-one, for founders who played sports and can lose the weight but never keep it.",
     ctaText: "BOOK RESTART AUDIT",
     proof: {
-      caption: "A client after eight days in Hawaii",
+      caption: "Client after eight days in Hawaii",
       image: "/images/testimonials/dm-22.webp",
       alt: "A client's message: eight days in Hawaii, breakfast buffets, one workout, and he gained nothing. He couldn't have done that before our work together 18 to 24 months ago.",
     },
@@ -28,7 +28,7 @@ export const HOMEPAGE_CONTENT = {
     ],
     closing: "You're sick of it. And this time, you're worried too.",
     message: {
-      caption: "A client, after finding his old photos",
+      caption: "Client after finding his old photos",
       image: "/images/testimonials/dm-10.webp",
       alt: "A client's message: seeing his old photos reminded him how many times he told himself he'd start something and lose the weight, but there were never any follow-up photos, because he never made progress on his own or in group programs.",
     },
@@ -70,7 +70,7 @@ export const HOMEPAGE_CONTENT = {
       { caption: "Keeping up with your kids", image: "/images/testimonials/dm-6.webp", width: 778, height: 1100, alt: "A client's message: last summer he could throw his son for a backflip three or four times before he was done. Now he couldn't stop, no pain, not tired, and it was exactly the reason he wanted to change his life." },
       { caption: "Seeing yourself in the mirror again", image: "/images/testimonials/dm-28.jpg", width: 1170, height: 543, alt: "A client's message: today in the mirror he can see the outline of what he wants to be, and he's trying not to be too proud of himself. Bart replies: stop it, take it all in, you deserve it." },
     ],
-    closing: "Whatever your reason, the point is a body that represents the man you are.",
+    closing: "Whatever your reason, your body should represent the man you are.",
   },
 
   coach: {
@@ -96,7 +96,7 @@ export const HOMEPAGE_CONTENT = {
       ],
     },
     message: {
-      caption: "His blood work, during the Build",
+      caption: "Client's blood work during the Build",
       image: "/images/testimonials/dm-2.webp",
       width: 755,
       height: 1100,
