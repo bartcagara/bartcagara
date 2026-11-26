@@ -20,7 +20,7 @@ function Row({ caption, children, center = false }: { caption: string; children:
         <p className="text-sm font-bold uppercase tracking-[-0.02em] text-bleu-nuit/70">{caption}</p>
         <ScrollArrows {...arrows} />
       </div>
-      <div ref={ref} className={`mt-5 flex ${center ? "items-start" : "items-start snap-x snap-proximity"} gap-6 overflow-x-auto px-6 scroll-px-6 lg:pl-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:pr-12 lg:scroll-pl-[max(3rem,calc((100vw-80rem)/2+3rem))] pb-4 scrollbar-hide`}>
+      <div ref={ref} className={`mt-5 flex ${center ? "items-start" : "items-start snap-x snap-proximity"} gap-6 overflow-x-auto px-6 scroll-px-6 lg:px-[max(3rem,calc((100vw-80rem)/2+3rem))] lg:scroll-px-[max(3rem,calc((100vw-80rem)/2+3rem))] pb-4 scrollbar-hide`}>
         {children}
       </div>
     </div>
