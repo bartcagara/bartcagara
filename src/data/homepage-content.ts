@@ -79,7 +79,7 @@ export const HOMEPAGE_CONTENT = {
   },
 
   theProgram: {
-    label: "The benefit",
+    label: "The program",
     title: "In six months, you're a new man.",
     intro: "Founder Athlete OS runs in three phases. Each one gets you closer to a body you're proud of, and to keeping it without me.",
     phases: [
