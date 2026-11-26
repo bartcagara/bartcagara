@@ -299,6 +299,9 @@ export const COPY = {
   startHeadline: "You can lose the weight. You can't keep it off.",
   startLine:
     "Every man who keeps starting over is one of 4 types: **Fair\u2011Weather Racer**, **Lost Athlete**, **Finish Line Chaser** or **Pit Stop Dodger**. Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
+  /** The start screen shows the four types as cards between these two lines (Bart, 26 Nov); startLine stays for the page description. */
+  startIntro: "Every man who keeps starting over is one of 4 types:",
+  startAfter: "Answer 8 quick questions, and in two minutes you'll know which one you are, why your restarts keep ending the same way, and what to do about it this week.",
   startButton: "Discover your type",
   back: "Back",
   /** Over the name on his result: "You are a" / Lost Athlete. */

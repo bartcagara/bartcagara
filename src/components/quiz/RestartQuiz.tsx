@@ -21,7 +21,7 @@ import {
 import { scoreQuiz, type QuizScore } from "@/lib/quiz-score";
 import { usePostHogClient } from "@/lib/posthog-context";
 import { OptinForm } from "@/components/newsletter/OptinForm";
-import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody, splitEmphasis } from "./ResultParts";
+import { MicroHeading, PROSE, Para, ResultHeading, ThisWeek, fillBody } from "./ResultParts";
 
 /** 0 is the start screen, 1 to 8 the questions, 9 the result. */
 const RESULT_STEP = QUESTIONS.length + 1;
@@ -199,8 +199,8 @@ export function RestartQuiz() {
 
 function StartScreen({ onStart }: { onStart: () => void }) {
     return (
-        <div className="pt-4 md:pt-10">
-            <h1 className="text-[clamp(2.25rem,11vw,3rem)] md:text-[3.5rem] font-black tracking-[-0.04em] leading-[0.98] text-balance md:[text-wrap:wrap]">
+        <div className="md:pt-2">
+            <h1 className="text-[clamp(2rem,9.5vw,3rem)] md:text-[3.25rem] font-black tracking-[-0.04em] leading-[0.98] text-balance md:[text-wrap:wrap]">
                 {/* One sentence per line, the second in the accent blue, as on the share card. */}
                 {COPY.startHeadline.split(/(?<=\.) /).map((sentence, i) => (
                     <span key={sentence} className={`block text-balance ${i > 0 ? "text-bleu-accent" : ""}`}>
@@ -208,21 +208,21 @@ function StartScreen({ onStart }: { onStart: () => void }) {
                     </span>
                 ))}
             </h1>
-            <p className="mt-4 md:mt-6 text-lg md:text-2xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">
-                {splitEmphasis(COPY.startLine).map((part, i) =>
-                    part.bold ? (
-                        <strong key={i} className="font-bold text-bleu-nuit">
-                            {part.text}
-                        </strong>
-                    ) : (
-                        part.text
-                    )
-                )}
-            </p>
+            <p className="mt-4 md:mt-5 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startIntro}</p>
+            {/* The four types as cards, like the homepage's types section. */}
+            <ol className="mt-4 md:mt-5 grid grid-cols-2 gap-3 md:gap-4">
+                {Object.values(RESULTS).map((type, i) => (
+                    <li key={type.name} className="flex items-center gap-2.5 border-2 border-bleu-nuit bg-white shadow-brutal-md px-3 py-2.5 md:px-4 md:py-3">
+                        <span className="text-xs md:text-sm font-bold text-bleu-accent">0{i + 1}</span>
+                        <span className="font-black tracking-[-0.03em] leading-[1.15] text-base md:text-lg">{type.name}</span>
+                    </li>
+                ))}
+            </ol>
+            <p className="mt-4 md:mt-5 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startAfter}</p>
             <button
                 type="button"
                 onClick={onStart}
-                className={`mt-10 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
+                className={`mt-6 md:mt-7 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
             >
                 <LayoutGrid className={BUTTON_ICON.md} strokeWidth={ICON_STROKE} aria-hidden="true" />
                 {COPY.startButton}
