@@ -24,20 +24,20 @@ export const metadata: Metadata = {
 export default function DisclaimerPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
-            <h1 className="text-title mb-6 text-bleu-nuit">Disclaimer</h1>
+            <h1 className="heading-section mb-8 text-bleu-nuit">Disclaimer</h1>
             <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">1. Website Disclaimer</h2>
+            <h2 className="heading-card mt-10 mb-4 text-bleu-nuit">1. Website Disclaimer</h2>
             <p className="mb-4 leading-relaxed">
                 The information provided by Dad with Style OÜ ("we", "us", or "our") on this website (the "Site") is for general informational purposes only. All information on the Site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Site.
             </p>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">2. Professional Disclaimer</h2>
+            <h2 className="heading-card mt-10 mb-4 text-bleu-nuit">2. Professional Disclaimer</h2>
             <p className="mb-4 leading-relaxed">
                 The Site cannot and does not contain medical or health advice. The fitness and nutrition information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of medical or health advice. THE USE OR RELIANCE OF ANY INFORMATION CONTAINED ON THE SITE IS SOLELY AT YOUR OWN RISK.
             </p>
 
-            <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">3. Testimonials Disclaimer</h2>
+            <h2 className="heading-card mt-10 mb-4 text-bleu-nuit">3. Testimonials Disclaimer</h2>
             <p className="mb-4 leading-relaxed">
                 The Site may contain testimonials by users of our products and/or services. These testimonials reflect the real-life experiences and opinions of such users. However, the experiences are personal to those particular users, and may not necessarily be representative of all users of our products and/or services. We do not claim, and you should not assume, that all users will have the same experiences. YOUR INDIVIDUAL RESULTS MAY VARY.
             </p>

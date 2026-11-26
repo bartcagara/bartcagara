@@ -20,14 +20,14 @@ export const metadata: Metadata = {
 };
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
-    <h2 className="text-2xl font-black mt-8 mb-4 text-bleu-nuit">{children}</h2>
+    <h2 className="heading-card mt-10 mb-4 text-bleu-nuit">{children}</h2>
 );
 const P = ({ children }: { children: React.ReactNode }) => <p className="mb-4 leading-relaxed">{children}</p>;
 
 export default function TermsPage() {
     return (
         <article className="prose prose-slate text-bleu-nuit/80">
-            <h1 className="text-title mb-6 text-bleu-nuit">Website Terms</h1>
+            <h1 className="heading-section mb-8 text-bleu-nuit">Website Terms</h1>
             <p className="text-sm text-bleu-nuit/70 mb-8 italic">Last updated November 5, 2026.</p>
 
             <H2>Who we are</H2>
