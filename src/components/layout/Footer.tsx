@@ -5,7 +5,7 @@ import { Linkedin, Youtube } from "lucide-react";
 export const Footer = memo(() => (
   <footer className="bg-white border-t-2 border-accent-primary pt-16 pb-8">
     <div className="max-w-7xl mx-auto px-6 lg:px-12">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12 lg:flex lg:justify-between lg:gap-16">
         {/* Column 1: Brand */}
         <div className="space-y-4">
           <Link href="/" className="block group">
