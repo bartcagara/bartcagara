@@ -19,9 +19,9 @@ export function QuestionsSection({ content }: QuestionsSectionProps) {
         <div className="mt-10 lg:mt-[60px] border-b-2 border-bleu-nuit">
           {content.items.map((item, i) => (
             <details key={item.question} open={i === 0} className="group border-t-2 border-bleu-nuit">
-              <summary className="flex items-start justify-between gap-6 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+              <summary className="flex items-center justify-between gap-6 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
                 <span className="heading-card">{item.question}</span>
-                <span aria-hidden="true" className="mt-1 shrink-0 w-8 h-8 border-2 border-bleu-nuit flex items-center justify-center font-black text-lg leading-none group-open:bg-bleu-nuit group-open:text-white">
+                <span aria-hidden="true" className="shrink-0 w-8 h-8 border-2 border-bleu-nuit flex items-center justify-center font-black text-lg leading-none group-open:bg-bleu-nuit group-open:text-white">
                   <span className="group-open:hidden">+</span>
                   <span className="hidden group-open:inline">–</span>
                 </span>
