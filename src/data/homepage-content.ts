@@ -144,12 +144,12 @@ export const HOMEPAGE_CONTENT = {
     label: "The questions",
     title: "What men ask before they book.",
     items: [
-      { question: "I've tried programs before. They never stick.", answer: "You don't get a meal plan from me. You eat the food you already like, restaurants included, and train 2 to 4 short sessions a week. We talk every week and change what isn't working, and over six months you learn to run it yourself." },
-      { question: "I'll start when things calm down.", answer: "I hear this on most calls, and the calm month rarely comes. I'd rather start while you're busy, so what we set up fits your real weeks from day one. It takes 2 to 4 short sessions and one call with me a week." },
-      { question: "I travel constantly. How does this work on the road?", answer: "Every workout has a hotel version, so you train with whatever the hotel gym has. At a restaurant, snap a photo of the menu in the Stack app and it tells you what to order. We plan each trip on the call before you leave." },
-      { question: "Am I too old for this?", answer: "No. A man who played sports picks training back up faster than one who never did, even after years off. If you have a bad back or a bad knee, I build the training around it, and in the middle phase we look at your blood work too." },
-      { question: "What does it cost?", answer: "It's a serious investment, and it's not the cheapest way to lose weight. You get the exact number on the call, once I know what you need." },
-      { question: "What happens on the Restart Audit?", answer: "It's 45 minutes on a video call with me. You tell me the whole story, then I tell you plainly whether I can help and what the six months would look like for you. If we're not a fit, I'll say so on the call." },
+      { question: "I've tried programs before. They never stick.", answer: "Because they were built for someone else's life and held together by someone checking on you. When the checking stopped, so did you. Here, everything is built around your week: the food you already like, restaurants included, 2 to 4 short sessions, a version for every hotel. We talk every week and fix what isn't working, and by month six you run it without me." },
+      { question: "I'll start when things calm down.", answer: "They won't. There's always another launch, another trip, another quarter. That's why we start now: a plan built in a busy week works in every week after it. It takes 2 to 4 short sessions and one call with me a week." },
+      { question: "I travel constantly. How does this work on the road?", answer: "Travel is where most plans fall apart, so it's built in from day one. Every workout has a hotel version, and you snap a photo of any menu in the Stack app to know what to order. We plan each trip on our call before you leave, so you come home on track, not starting over." },
+      { question: "Am I too old for this?", answer: "No. Most of the men I coach are 35 to 55. If you played sports, your body remembers, and it comes back faster than you think. Bad back or knee? I build the training around it. And halfway through we test your blood work and adjust to what it shows." },
+      { question: "What does it cost?", answer: "It's a serious investment, and it should be: it's the last one you'll make on this. You'll get the exact number on the call, once we both know it's the right fit." },
+      { question: "What happens on the Restart Audit?", answer: "45 minutes on a video call, just you and me. You tell me the whole story, and I'll show you what keeps ending your restarts and how to make this one your last. If I'm not the right coach for you, I'll tell you." },
     ],
   },
 
