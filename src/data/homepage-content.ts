@@ -48,13 +48,13 @@ export const HOMEPAGE_CONTENT = {
   why: {
     label: "The pattern",
     title: "Every plan you tried needed a calm week.",
-    allIn: "So whenever you get one, you go all in: daily workouts and perfectly clean eating, with no idea how to build muscle and keep it.",
+    allIn: "So whenever you got one, you went all in: daily workouts and perfectly clean eating, with no idea how to build muscle and keep it.",
     message: {
       caption: "Back at an old weight, now with muscle",
       image: "/images/testimonials/dm-4-c.webp",
       alt: "A client's message: he can't remember the last time he weighed this much, but he looked nothing like this back then. Zero muscle the last time, at least 7 to 10 years ago.",
     },
-    trip: "Then one client dinner turns into four days off the rails, and you're back where you started.",
+    trip: "Then one client dinner turned into four days off the rails, and you were back where you started.",
     closing: "What works is knowing your body well enough to adjust anywhere, not another calm-week plan.",
   },
 
