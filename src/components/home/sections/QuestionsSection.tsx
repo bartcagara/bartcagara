@@ -16,7 +16,7 @@ export function QuestionsSection({ content }: QuestionsSectionProps) {
           </h2>
         </div>
 
-        <div className="mt-10 lg:mt-0 border-b-2 border-bleu-nuit">
+        <div className="mt-10 lg:mt-[60px] border-b-2 border-bleu-nuit">
           {content.items.map((item, i) => (
             <details key={item.question} open={i === 0} className="group border-t-2 border-bleu-nuit">
               <summary className="flex items-start justify-between gap-6 py-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
