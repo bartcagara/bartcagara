@@ -30,7 +30,7 @@ export const metadata: Metadata = {
                 url: "/images/og-quiz.jpg",
                 width: 1200,
                 height: 630,
-                alt: "The Restart Quiz: You can lose the weight. You can't keep it off. Every man who keeps starting over is one of 4 types. Answer 8 quick questions, and in two minutes you'll know which one you are."
+                alt: "The Restart Quiz: You can lose the weight. You can't keep it off. I've coached 50+ founders who kept starting over, and they all fit one of 4 types. Answer 8 quick questions. In two minutes you'll know which one you are."
             }
         ]
     },
