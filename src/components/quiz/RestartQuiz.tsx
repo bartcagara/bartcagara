@@ -208,21 +208,21 @@ function StartScreen({ onStart }: { onStart: () => void }) {
                     </span>
                 ))}
             </h1>
-            <p className="mt-3 md:mt-5 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startIntro}</p>
+            <p className="mt-5 md:mt-6 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startIntro}</p>
             {/* The four types as cards, like the homepage's types section. */}
-            <ol className="mt-3 md:mt-5 grid grid-cols-2 gap-3 md:gap-4">
+            <ol className="mt-5 md:mt-6 grid grid-cols-2 gap-3 md:gap-4">
                 {Object.values(RESULTS).map((type, i) => (
-                    <li key={type.name} className="flex items-center gap-2.5 border-2 border-bleu-nuit bg-white shadow-brutal-md px-3 py-2 md:px-4 md:py-3">
+                    <li key={type.name} className="flex items-center gap-2.5 border-2 border-bleu-nuit bg-white shadow-brutal-md px-3.5 py-3 md:px-4 md:py-3.5">
                         <span className="text-xs md:text-sm font-bold text-bleu-accent">0{i + 1}</span>
                         <span className="font-black tracking-[-0.03em] leading-[1.15] text-base md:text-lg">{type.name}</span>
                     </li>
                 ))}
             </ol>
-            <p className="mt-3 md:mt-5 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startAfter}</p>
+            <p className="mt-5 md:mt-6 text-[1.0625rem] md:text-xl leading-[1.45] text-pretty font-medium text-bleu-nuit/75">{COPY.startAfter}</p>
             <button
                 type="button"
                 onClick={onStart}
-                className={`mt-5 md:mt-7 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
+                className={`mt-7 md:mt-8 ${BUTTON_BASE} ${BUTTON_SIZE.md} ${BUTTON_VARIANT.dark}`}
             >
                 <LayoutGrid className={BUTTON_ICON.md} strokeWidth={ICON_STROKE} aria-hidden="true" />
                 {COPY.startButton}

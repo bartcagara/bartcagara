@@ -30,7 +30,7 @@ export function QuizFrame({ children }: { children: React.ReactNode }) {
                 </div>
             </header>
 
-            <div className="flex-1 px-6 md:px-12 pt-6 pb-16 md:pt-12 md:pb-20">
+            <div className="flex-1 px-6 md:px-12 pt-8 pb-16 md:pt-12 md:pb-20">
                 <div className="max-w-[640px] mx-auto">{children}</div>
             </div>
 
