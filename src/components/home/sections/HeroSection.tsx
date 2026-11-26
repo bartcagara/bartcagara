@@ -38,7 +38,7 @@ export function HeroSection({ content }: HeroSectionProps) {
               <Image
                 src={content.proof.image}
                 alt={content.proof.alt}
-                width={1064}
+                width={973}
                 height={658}
                 priority
                 sizes="(max-width: 1024px) 100vw, 440px"

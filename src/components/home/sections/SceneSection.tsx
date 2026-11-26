@@ -39,8 +39,8 @@ export function SceneSection({ content }: SceneSectionProps) {
             <Image
               src={content.message.image}
               alt={content.message.alt}
-              width={802}
-              height={946}
+              width={777}
+              height={943}
               sizes="(max-width: 1024px) 280px, 340px"
               className="block w-full h-auto"
             />
