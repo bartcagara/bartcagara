@@ -261,7 +261,7 @@ export const HOMEPAGE_CONTENT = {
       "What came after was a string of failed businesses and diets that left me stuck in a body I wasn't proud of.",
       "So I took a job at a fitness startup, and surrounded by coaches and nutritionists, I rebuilt myself.",
       "I got hooked, started my own coaching business, and since 2019 I've coached over 50 founders. These days I also run Stack, a fitness app for coaches and their clients. And I'm a proud father of this little guy standing next to me.",
-      "Coaching men with constant stress and travel taught me that fitness can't become your life. It has to get out of the way so you can be the father and business owner you want to be.",
+      "Coaching men with constant stress and travel taught me that fitness can't take over your life. So I find exactly where it fits, and you stop having to think about it. That way, you can take care of what matters without worrying your body is falling apart.",
       "**That's how I make sure this is your last restart.**",
       "P.S. Not big on shirtless selfies, but {{transformation-link|here's my before and after}}.",
     ],
