@@ -26,7 +26,7 @@ export const HOMEPAGE_CONTENT = {
       "Meanwhile your kids are calling you into the pool, and you're working out how to get your shirt off without anyone noticing you've gotten a little fluffy.",
       "You played sports, and the body just worked. Then the business took off and took your health with it. You've lost the weight more than once, but every tough stretch at work brought it all back.",
     ],
-    closing: "You're sick of it. And this time, you're worried too.",
+    closing: "This time, I'm guessing you're not just sick of it. You're worried.",
     message: {
       caption: "Client after finding his old photos",
       image: "/images/testimonials/dm-10-cut-c.webp",
