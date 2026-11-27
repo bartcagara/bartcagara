@@ -8,7 +8,7 @@ export const HOMEPAGE_CONTENT = {
   hero: {
     headline: "The founder's",
     highlightedText: "last restart.",
-    subheadline: "Six months, one-to-one, for founders who played sports and can lose the weight but never keep it.",
+    subheadline: "Six months, one-to-one, for founders who played sports and can lose the weight, but can't keep it off.",
     ctaText: "Book Restart Audit",
     proof: {
       caption: "Client after eight days in Hawaii",
