@@ -92,7 +92,7 @@ export const HOMEPAGE_CONTENT = {
       items: [
         { title: "A call with me", text: "The program fixes your body. The calls get your head right." },
         { title: "Between calls", text: "Struggling with anything? I'm one message away." },
-        { title: "Stack App", text: "It reads your food, training and sleep together, so you learn how your body works and never cut calories when the real problem is your sleep." },
+        { title: "Stack app", text: "It reads your food, training and sleep together, so you learn how your body works and never cut calories when the real problem is your sleep." },
       ],
     },
     message: {
